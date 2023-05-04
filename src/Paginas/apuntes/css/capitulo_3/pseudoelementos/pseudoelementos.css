@@ -1,0 +1,23 @@
+.primer_linea::first-line{
+  color: blue;
+  font-size: 1.5em;
+}
+.primerLetra::first-letter{
+  font-size: 1.5em;
+  color: blueviolet;
+}
+#modificarInput::placeholder{
+  color: wheat;
+  background-color: black;
+}
+.texto_seleccion::selection{
+  background-color: black;
+  color: wheat;
+}
+
+.oracion__parrafo::before{
+  content: "bienvenidos ";
+}
+.oracion__parrafo::after{
+  content: " programacion";
+}

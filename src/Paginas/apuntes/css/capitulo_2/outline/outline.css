@@ -1,0 +1,38 @@
+.borde_1{
+  background-color: green;
+  border: 8px solid orangered;
+  margin: auto;
+  width: 35%;
+  height: 150px;
+  color: whitesmoke;
+}
+.borde_2{
+  background-color: blue;
+  margin: auto;
+  width: 35%;
+  height: 150px;
+  color: whitesmoke;
+}
+
+.outline_1{
+  background-color: green;
+  outline: 10px solid orangered;
+  margin: auto;
+  width: 35%;
+  height: 150px;
+  color: whitesmoke;
+}
+.outline_2{
+  background-color: blue;
+  margin: auto;
+  width: 35%;
+  height: 150px;
+  color: whitesmoke;
+}
+.input_content_outline{
+  display: flex;
+  flex-direction: column;
+}
+.sin_outline{
+  outline: none;
+}

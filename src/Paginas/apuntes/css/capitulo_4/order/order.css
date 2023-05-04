@@ -1,0 +1,45 @@
+.order_content{
+  display: flex;
+  background-color: #000;
+  border: 2px solid #87d10f;
+}
+.caja1{
+  width: 20%;
+  color: #87d10f;
+  order: 2;
+  margin: 15px;
+  border: 2px solid #ff0000;
+}
+.caja2{
+  width: 20%;
+  color: #87d10f;
+  order: 1;
+  margin: 15px;
+  border: 2px solid #ff0000;
+}
+.caja3{
+  width: 20%;
+  color: #87d10f;
+  order: 4;
+  margin: 15px;
+  border: 2px solid #ff0000;
+}
+.caja4{
+  width: 20%;
+  color: #87d10f;
+  order: 3;
+  margin: 15px;
+  border: 2px solid #ff0000;
+}
+
+.min_max{
+  width: 45%;
+  height: 20vh;
+  background-color: #211a1a;
+  color: #fff;
+  margin: auto;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
+}

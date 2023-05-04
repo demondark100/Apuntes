@@ -1,0 +1,48 @@
+.contenedor-conseptos{
+  display: block;
+  padding: 1.5vh;
+  width: 95%;
+  max-width: 1800px;
+  margin: auto;
+  margin-top: 4vh;
+  background-color: #000;
+  border-image: linear-gradient(to left, #2f2a76, #000, #2f2a76) 1 / .4vh;
+  overflow: auto;
+}
+.contenedor-conseptos p{
+  color: #d2e0d9;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6em;
+  text-shadow: 0 0 3vh #aeffa0;
+}
+
+.enlacesConseptos{
+  color: #0ff;
+  font-size: 1.6em;
+  transition-duration: .5;
+}
+.enlacesConseptos:hover{
+  color: rgb(197, 246, 255);
+  font-size: 1.8em;
+  transition-duration: .5s;
+}
+@media screen and (min-width: 750px){
+  .contenedor-conseptos{
+    padding: 3%;
+    margin-top: 2%;
+    width: 78%;
+  }
+  .contenedor-conseptos p{
+    font-size: 2.1em;
+  }
+  .enlacesConseptos{
+    font-size: 1.5em;
+    transition-duration: .5s;
+  }
+  .enlacesConseptos:hover{
+    font-size: 1.9em;
+    transition-duration: .5s;
+  }
+}

@@ -1,0 +1,28 @@
+.sombrita__content{
+  box-shadow: 0 1vh 2vh 1vh #1ee1e1;
+}
+.cajita__feliz{
+  background-color: #000;
+  color: #0f0;
+  width: 35%;
+  text-align: center;
+  margin: auto;
+  padding: 2vh;
+}
+
+.caja_combreada{
+  width: 55%;
+  background-color: black;
+  color: white;
+  box-shadow: -8px 8px 15px 8px cadetblue;
+  margin: auto;
+}
+
+.sombra_de_texto{
+  background-color: black;
+  color: white;
+  height: 45px;
+  width: 55%;
+  margin: auto;
+  text-shadow: 5px 5px 15px white;
+}

@@ -1,0 +1,43 @@
+.ejemplo__1{
+  border: 2px solid blue;                 
+}
+.bordeer_1{
+  border: 2px solid blue;
+  width: 35%;
+  height: 35%;
+}
+.boton_2{
+  margin-left: 2%;
+  border: none;
+}
+.borde_1_b{
+  background-color: red;
+  color: white;
+  margin-left: 15px;
+  width: 35%;
+  margin-bottom: 12px;
+}
+.borde_2_b{
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+  margin-left: 15px;
+  width: 35%;
+  margin-bottom: 12px;
+}
+.borde_3_b{
+  background-color: red;
+  color: white;
+  border-radius: 100px;
+  margin-left: 15px;
+  width: 35%;
+}
+.caja__border{
+  width: 55%;
+  height: 12%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  border-bottom: 5px solid orangered;
+  border-left: 5px solid orangered;
+}

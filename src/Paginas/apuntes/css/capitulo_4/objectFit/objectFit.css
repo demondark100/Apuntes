@@ -1,0 +1,167 @@
+.content_imgs{
+  width: 100%;
+}
+.elegir_imagen{
+  display: flex;
+  padding: 25px;
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+}
+.btn_img{
+  background-color: transparent;
+  color: #9eb6ff;
+  border: none;
+  outline: none;
+  transition-duration: .5s;
+  user-select: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.btn_img:hover{
+  background-color: transparent;
+  color: #eee;
+  font-weight: 900;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 15px #eee;
+  text-align: center;
+}
+.imagenes{
+  display: flex;
+  justify-content: space-around;
+}
+.img_over{
+  width: 35%;
+  opacity: 0;
+  position: absolute;
+  margin-top: 15px;
+}
+.mostrar_imgss{
+  display: block;
+  margin: auto;
+  margin-top: -15px;
+  position: relative;
+  opacity: 1;
+  transition-duration: .5s;
+}
+
+
+.contain_{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.contain_ img{
+  width: 100%;
+}
+.contain{
+  margin: auto;
+  width: 85;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.contain img{
+  width: 100%;
+  object-fit: contain;
+}
+.cover_{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.cover_ img{
+  width: 100%;
+}
+.cover{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.cover img{
+  width: 100%;
+  object-fit: cover;
+}
+.none_{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.none_ img{
+  width: 100%;
+}
+.none{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.none img{
+  width: 100%;
+  object-fit: none;
+}
+
+.position{
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  display: flex;
+}
+.position img{
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+
+@media(min-width: 750px){
+  .img_over{
+    width: 20%;
+  }
+  .btn_img{
+    font-size: 2em;
+  }
+  .btn_img:hover{
+    font-size: 2.5em;
+  }
+  .contain_{
+      width: 55%;
+      height: 400px;
+  }
+  .contain{
+      width: 55%;
+      height: 400px;
+  }
+  .cover_{
+      width: 55%;
+      height: 400px;
+  }
+  .cover{
+      width: 55%;
+      height: 400px;
+  }
+  .none_{
+      width: 55%;
+      height: 400px;
+  }
+  .none{
+      width: 55%;
+      height: 400px;
+  }
+  .position{
+      width: 55%;
+      height: 400px;
+  }
+}

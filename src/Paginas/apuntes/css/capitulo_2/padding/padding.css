@@ -1,0 +1,110 @@
+.imagePadiing{
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 4%;
+  background-color: #fff;
+}
+
+.content__{
+  width: 45%;
+  margin: auto;
+  background-color: green;
+}
+.arriba{
+  display: block;
+  width: 35%;
+  height: 35%;
+  background-color: #00f;
+  padding-top: 2vh;
+  margin: auto;
+  margin-top: 1%;
+}
+.derecha{
+  display: block;
+  width: 35%;
+  height: 35%;
+  background-color: #00f;
+  padding-right: 2vw;
+  margin: auto;
+  margin-top: 1%;
+}
+.abajo{
+  display: block;
+  width: 35%;
+  height: 35%;
+  background-color: #00f;
+  padding-bottom: 2vh;
+  margin: auto;
+  margin-top: 1%;
+}
+.izquierda{
+  display: block;
+  width: 35%;
+  height: 35%;
+  background-color: #00f;
+  padding-left: 2vw;
+  margin: auto;
+  margin-top: 1%;
+}
+
+
+/* despues veremos como funciona "margin". */
+
+
+.arriba div{
+  color: wheat;
+}
+.derecha div{
+  color: wheat;
+}
+.abajo div{
+  color: wheat;
+}
+.izquierda div{
+  color: wheat;
+}
+
+.contenedor_div{
+  background-color: red;
+  padding: 15px;
+}
+.contenedor_div div {
+  background-color: blue;
+  color: white;
+}
+
+.content_a_a{
+  padding: 15px 0;
+  background-color: red;
+}
+.content_a_a div{
+  background-color: blue;
+  color: white;
+}
+
+.content_d_i{
+  background-color: red;
+  padding: 0 15px;
+}
+.content_d_i div{
+  background-color: blue;
+  color: wheat;
+}
+
+.resumen_p{
+  padding: 16px 12px 8px 6px;
+  background-color: red;
+}
+.resumen_p div{
+  background-color: blue;
+  color: white;
+}
+
+
+
+@media (min-width: 750px){
+  .imagePadiing{
+    width: 50%;
+  }
+}

@@ -1,0 +1,122 @@
+.overflow__title{
+  color: #ffa113;
+  text-shadow: 0 0 2vh #ffa113;
+  font-size: 5vh;
+  display: block;
+  text-align: center;
+}
+
+
+.overflow__texto{
+  width: 65%;
+  height: 35vh;
+  margin: auto;
+  margin-top: 4%;
+  overflow: auto;
+}
+.contenedor_o{
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: -15px;
+}
+
+.scroll1{
+  margin: auto;
+  width: 55%;
+  background-color: gray;
+  height: 120px;
+  overflow: scroll;
+}
+.scroll2{
+  margin: auto;
+  width: 25%;
+  background-color: gray;
+  height: 50px;
+  overflow: scroll;
+  color: #00f;
+}
+
+.overflow_auto{
+  margin: auto;
+  width: 55%;
+  background-color: gray;
+  height: 80px;
+  overflow: auto;
+}
+.overflowHideen{
+  margin: auto;
+  width: 55%;
+  background-color: gray;
+  height: 200px;
+  overflow: hidden;
+}
+
+
+.confirmar-container {
+  position: absolute;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #e737d2;
+  text-shadow: 0 0 2vh #e737d2;
+}
+
+.confirmar-appear {
+  opacity: 1;
+  z-index: 2;
+  transition-duration: .5s;
+}
+
+.overflow__fondo{
+  background-image: url("https://news.otakukart.com/wp-content/uploads/2020/02/Overflow-episode-5-768x430.png");
+  background-size: cover;
+  width: 55%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+.overflow__fondo p{
+  margin-bottom: 5%;
+  overflow: hidden;
+}
+.overflow__fondo__botones button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.overflow__fondo__botones button:hover{
+  text-shadow: 0 0 2vh #000;
+  
+}
+.overflow__fondo__botones button:nth-child(1){
+  margin-right: 4vh;
+}
+.overflow__fondo__botones button:nth-child(2){
+  margin-left: 4vh;
+}
+
+@media (min-width: 750px){
+  .overflow__fondo{
+    width: 45%;
+    height: 45%;
+  }
+  .overflow__texto{
+    width: 35%;
+  }
+  .overflow__title{
+    font-size: 10vh;
+  }
+}

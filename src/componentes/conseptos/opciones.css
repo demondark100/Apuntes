@@ -1,0 +1,25 @@
+.onciones{
+  margin-top: 2%;
+  background: linear-gradient(180deg,#000,transparent);
+  border: #11f7ff solid .5vh;
+  font-size: 2.5vh;
+  padding: 1.2vh;
+  width: 30vw;
+}
+.onciones:hover{
+  background-color: #11f7ff;
+  transition-duration: .5s;
+}
+.onciones a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (min-width: 750px) {
+  .onciones{
+    width: 15vw;
+    font-size: 4vh;
+  }
+}

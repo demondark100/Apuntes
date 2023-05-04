@@ -1,0 +1,23 @@
+.recordar__block{
+  display: block;
+  background-color: black;
+  color: wheat;
+}
+.recordar__linea{
+  display: inline;
+  background-color: black;
+  color: wheat;
+}
+.inlineBlock__recordar1{
+  display: inline-block;
+  background-color: black;
+  color: wheat;
+  width: 25%;
+}
+.inlineBlock__recordar2{
+  display: inline-block;
+  background-color: black;
+  color: wheat;
+  width: 25%;
+  margin-left: 2%;
+}

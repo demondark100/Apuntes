@@ -1,0 +1,83 @@
+.contentLenguaje{
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 95vw;
+  background-color: #090300;
+  overflow: auto;
+}
+
+.lenguajes{
+  width: 100%;
+  font-size: 1.2em;
+  overflow: auto;
+  max-height: 35vh;
+  max-width: 1800px;
+}
+
+
+/* scroll */
+
+.scroll::-webkit-scrollbar {
+  height: .5vh;
+  width: .5vw;
+  background-color: #0b20bf;
+  border: 15%;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #5680ea; 
+  border-radius: 15vh; 
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #424242;
+}
+
+.scroll::-webkit-scrollbar-thumb:active {
+  background-color: #15312b;
+}
+
+
+
+
+.lenguajes button{
+  font-size: 1em;
+  margin-left: 60%;
+  margin-top: 5%;
+  background-color: transparent;
+  color: #3c7f6c;
+  text-shadow: 0 0 3vh #3c7f6c;
+  transition-duration: .5s;
+}
+.lenguajes button:hover{
+  color: #9efaff;
+  text-shadow: 0 0 3vh #9efaff;
+  transition-duration: .5s;
+  font-size: 1.2em;
+}
+
+
+@media (min-width: 750px) {
+  .contentLenguaje{
+    width: 75vw;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    max-height: 1800px;
+    max-width: 1800px;
+  }
+  .lenguajes{
+    width: 100%;
+    font-size: 2em;
+  }
+  .lenguajes button{
+    margin-left: 85%;
+    margin-top: 2%;
+    font-size: 1em;
+  }
+
+  .lenguajes button:hover{
+    font-size: 1.2em;
+  }
+}

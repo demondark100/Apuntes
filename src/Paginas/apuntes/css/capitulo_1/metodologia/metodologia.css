@@ -1,0 +1,43 @@
+.formulario{
+  display: flex;
+  flex-direction: column;
+}
+.formulario__input{
+  color: green;
+}
+
+.formulario__input--diferente{
+  color: orange;
+}
+
+.botonLimpiarInput{
+  border: none;
+  margin-left: 50%;
+  color: #000;
+  margin-bottom: 2vh;
+  outline: none;
+  transition-duration: .5s;
+}
+.botonLimpiarInput:hover{
+  border-bottom: .5vh solid #000;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+
+.content{
+  color: green;
+}
+.content__p{
+  color: brown !important;
+}
+.content__p--b{
+  color: orange;
+}
+
+@media (min-width: 750px){
+  .botonLimpiarInput{
+    color: #000;
+    margin-left: 75%;
+    
+  }
+}

@@ -1,0 +1,177 @@
+.relative_1 , .relative_2 , .relative_3 {
+  width: 25%;
+  height: 125px;
+  color: wheat;
+  margin: auto;
+}
+.relative_1{
+  background-color: red;
+  position: relative;
+}
+.relative_2{
+  background-color: blue;
+  position: relative;
+  top: 25px;
+}
+.relative_3{
+  background-color: green;
+  position: relative;
+}
+
+.mover_caja{
+  margin: auto;
+  background-color: lightblue;
+  color: black;
+  width: 25%;
+  height: 125px;
+  position: relative;
+  top: -10px;
+  left: -85px;
+}
+
+.caja__relative{
+  background-color: red;
+  color: white;
+  width: 25%;
+  height: 150px;
+  position: relative;
+  bottom: 50px;
+  top: 15px;
+  left: 55px;
+  right: 200px;
+}
+
+
+/* position absolute */
+.position_1{
+  background-color: green;
+  width: 35%;
+  height: 120px;
+  position: relative;
+}
+.position_2{
+  background-color: orange;
+  width: 35%;
+  height: 120px;
+  position: relative;
+}
+.position_3{
+  background-color: yellow;
+  width: 35%;
+  height: 120px;
+  position: absolute;
+  display: none;
+}
+.position_4{
+  background-color: brown;
+  width: 35%;
+  height: 120px;
+  position: relative;
+}
+
+/* z index */
+
+.zrelative_1 , .zrelative_2 , .zrelative_3 {
+  width: 25%;
+  height: 125px;
+  color: wheat;
+  margin: auto;
+}
+.zrelative_1{
+  background-color: red;
+  position: relative;
+}
+.zrelative_2{
+  background-color: blue;
+  position: relative;
+  top: 25px;
+  z-index: 1;
+}
+.zrelative_3{
+  background-color: green;
+  position: relative;
+}
+
+/* position fixed */
+
+.todo{
+  background-color: lightblue;
+  color: black;
+  margin: auto;
+  margin-top: 15px;
+  width: 45%;
+  height: 45px;
+  opacity: 1;
+}
+.medio{
+  background-color: lightblue;
+  color: black;
+  margin: auto;
+  margin-top: 15px;
+  width: 45%;
+  height: 45px;
+  opacity: 0.5;
+}
+.nada{
+  background-color: lightblue;
+  color: black;
+  margin: auto;
+  margin-top: 15px;
+  width: 45%;
+  height: 45px;
+  opacity: 0.1;
+}
+
+
+
+/* paginas fixed */
+.body__fondo{
+  background-color: #fff;
+}
+.menu__fixed1{
+  background-color: red;
+  opacity: 0.4;
+  position: fixed;
+  width: 100%;
+  color: white;
+}
+.menu__fixed2{
+  background-color: red;
+  opacity: 0.4;
+  position: fixed;
+  width: 100%;
+  color: white;
+  margin-top: -85px;
+}
+.pagina{
+  margin-top: 85px;
+}
+
+/* sticky */
+.StickyEmilia{
+  position: sticky;
+  display: block;
+  margin: auto;
+  margin-top: 4%;
+  width: 55%;
+  top: 15vh;
+}
+
+
+.content_sticky_page{
+  background-color: #fff;
+}
+
+.menu__sticky{
+  background-color: blue;
+  color: wheat;
+  opacity: 0.5;
+  width: 100%;
+  position: sticky;
+  top: 5px;
+}
+@media (min-width: 750px){
+  .StickyEmilia{
+    width: 20%;
+  }
+}

@@ -1,0 +1,84 @@
+.content_imageCbasicos{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+}
+.content_imageCbasicos img{
+  height: 18vh;
+}
+
+
+.Content_Cbasicos{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;
+  font-size: 1.6vh;
+}
+
+
+/* margin */
+.Content_conseptosBasicos{
+  background: linear-gradient(0deg,#0000002a,#000);
+  width: 80%;
+  margin: auto;
+  border-radius: 15vh;
+  padding: 15px;
+  margin-bottom: 2%;
+}
+.Content_conseptosBasicos div{
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+.Content_conseptosBasicos h3{
+  text-align: center;
+  color: #fff;
+}
+.margin_caja1{
+  background-color: #fff;
+  width: 15%;
+  margin-right: 8%;
+}
+.margin_caja2{
+  background-color: #fff;
+  width: 15%;
+}
+
+/* border */
+.border_ejemplo{
+  width: 20%;
+  background-color: #fff;
+  margin: auto;
+  border: .5vh solid #00f;
+}
+
+
+/* padding */
+.padding_ejemplo{
+  padding: 4%;
+  background-color: #fff;
+  width: 20%;
+  margin: auto;
+}
+
+
+/* contenido */
+.contenido_ejemplo{
+  background-color: #fff;
+  width: 20%;
+  margin: auto;
+}
+
+@media (min-width: 750px){
+  .content_imageCbasicos img{
+    height: 45vh;
+  }
+  .Content_conseptosBasicos{
+    font-size: 4vh;
+  }
+  .padding_ejemplo{
+    padding: 2%;
+  }
+}

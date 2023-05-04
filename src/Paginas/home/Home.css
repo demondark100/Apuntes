@@ -1,0 +1,21 @@
+.linksGome-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));;
+  margin-top: 8%;
+  place-items: center;
+  grid-row-gap: 8vh;
+  margin: auto;
+  margin-top: 5%;
+  width: 100vw;
+  font-size: 1em;
+}
+.title_home{
+  margin-top: 5vh;
+}
+@media (min-width: 750px){
+  .linksGome-content{
+    grid-template-columns: repeat(3,1fr);
+    font-size: 2em;
+  }
+}

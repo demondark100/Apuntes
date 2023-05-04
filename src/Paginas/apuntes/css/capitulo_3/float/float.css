@@ -1,0 +1,29 @@
+.content_float1{
+  background-color: yellow;
+  width: 50%;
+  float: left;
+}
+.content_float2{
+  background-color: red;
+  width: 50%;
+  float: right;
+}
+
+.content_float_ejemplo{
+  border: 2px solid gray;
+  width: 100%;
+  margin: auto;
+  padding: 8px;
+}
+.imagen_Akame{
+  width: 50%;
+  float: right;
+  margin-right: 5px;
+  margin-top: 8px;
+}
+
+@media (min-width: 750px){
+  .content_float_ejemplo{
+    width: 45%;
+  }
+}

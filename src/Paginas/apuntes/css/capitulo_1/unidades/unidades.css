@@ -1,0 +1,149 @@
+.fontSize1{
+  font-size: 23px !important;
+}
+.medidas{
+  width: 60%;
+  margin: auto;
+  margin-top: 2%;
+  padding: 1%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: auto;
+}
+.medidas__caja{
+  width: 30%;
+  height: 180px;
+  border: 1px solid #000;
+}
+.medidas__caja--hijo{
+  width: 140px;
+  border: 1px solid #000;
+  height: 20px;
+  margin-top: 15%;
+}
+.emParrafo{
+  font-size: 18px;
+}
+.rem{
+  color: #0e52fd;
+  text-shadow: 2px 2px 15px #0e52fd;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.rem:hover{
+  color: #187dd5;
+  text-shadow: 2px 2px 15px #187dd5;
+  transition-duration: .5;
+}
+.parrafo_rem{
+  font-size: 1rem;
+}
+
+.relativa{
+  width: 60%;
+  margin: auto;
+  margin-top: 2%;
+  padding: 1%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  max-height: 150px;
+  overflow: auto;
+}
+.relativa__hijo{
+  width: 30%;
+  height: 180px;
+  border: 1px solid #000;
+}
+.relativa__hijo--caja{
+  width: 85%;
+  border: 1px solid #000;
+  height: 20px;
+  margin: auto;
+  margin-top: 15%;
+}
+.siguiente__parte{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 15%;
+}
+.siguiente__parte a{
+  color: #2c8fff;
+  text-shadow: 2px 2px 15px #2c8fff;
+  font-size: 4vh;
+  transition-duration: .5s;
+}
+.siguiente__parte a:hover{
+  color: #2fdbf1;
+  text-shadow: 2px 2px 15px #2c8fff;
+  font-size: 5vh;
+  transition-duration: .5s;
+}
+
+#cagita_roja{
+  background-color: red;
+}
+#cagita_roja p{
+  color: white;
+}
+
+.viewport{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+.viewport__hijo{
+  color: white;
+}
+
+.porcentaje{
+  width: 256px;
+  height: 256px;
+  background-color: black;
+}
+.porcentaje__hijo{
+  width: 100%;
+  height: 50%;
+  background-color: greenyellow;
+}
+
+
+.remConent{
+  position: absolute;
+  background-color: #000000ee;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  opacity: 0;
+  transition-duration: .5s;
+
+}
+.mostrarRem{
+  opacity: 1;
+  z-index: 2;
+}
+.remImage{
+  width: 75%;
+}
+
+@media (min-width: 750px) {
+  .siguiente__parte{
+    margin-top: 3%;
+  }
+  .siguiente__parte a{
+    font-size: 6vh;
+  }
+  .siguiente__parte a:hover{
+    font-size: 7vh;
+  }
+  .remImage{
+    width: 25%;
+  }
+
+}

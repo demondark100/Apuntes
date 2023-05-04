@@ -1,0 +1,10 @@
+.html_title{
+  margin: auto;
+  margin-bottom: 5vh;
+}
+
+@media screen and (min-width:750px) {
+  .capitulos_content a{
+    font-size: 4vh;
+  }
+}

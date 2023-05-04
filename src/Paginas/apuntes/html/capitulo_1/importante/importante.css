@@ -1,0 +1,35 @@
+.content_holaMundo{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  color: #fff;
+}
+.content_holaMundo button{
+  padding: 1.8vh;
+  border: .5vh solid #00f;
+  background: linear-gradient(0deg,#000,transparent);
+  color: #fff;
+  cursor: pointer;
+}
+.content_holaMundo p{
+  transition-duration: .5s;
+  color: #f00;
+  background: linear-gradient(0deg,transparent,#000);
+  text-align: center;
+
+}
+.MostrarMensaje{
+  margin-top: 8vh;
+  transition-duration: .5s;
+  color: rgb(255, 16, 16);
+  padding: 15px;
+}
+@media screen and (min-width: 750px) {
+  .main_importante{
+    height: 185vh;
+  }
+}

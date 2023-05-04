@@ -1,0 +1,25 @@
+.footer_content{
+  background: linear-gradient(0deg,#000,transparent);
+  border-top: 2px solid #574343;
+  box-shadow: 0 0 3vh #574343;
+  height: 500vh;
+  max-height: 100px;
+}
+.footer_p{
+  color: #1cc990;
+  text-shadow: 0 0 3vh #1cc990;
+  font-size: .5em;
+}
+.DanielCC{
+  color: #2bfeb7;
+  font-size: .8em;
+}
+
+@media (min-width: 750px){
+  .footer_p{
+    font-size: .5em;
+  }
+  .DanielCC{
+    font-size: 1em;
+  }
+}

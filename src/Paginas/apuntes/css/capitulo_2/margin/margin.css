@@ -1,0 +1,71 @@
+.imageMargin{
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 4%;
+}
+
+.m_content{
+  display: block;
+  margin: auto;
+}
+.m_content .arriba{
+  background-color: blue;
+  margin-top: 8px;
+}
+.m_content .derecha{
+  background-color: blue;
+  margin-right: 12px;
+}
+.m_content .abajo {
+  background-color: blue;
+  margin-bottom: 8px;
+}
+.m_content .izquierda{
+  background-color: blue;
+  margin-left: 12px;
+}
+
+.content_margin{
+  margin: auto;
+  background-color: red;
+  color:  white;
+  width: 20%;
+}
+
+.caja_1{
+  color: white;
+  background-color: blue;
+  margin: auto;
+  margin-top: 15px;
+  width: 15%;
+}
+.caja_2{
+  color: white;
+  background-color: blue;
+  margin: auto;
+  margin-top: 15px;
+  width: 15%;
+}
+.caja_3{
+  color: white;
+  background-color: blue;
+  margin: auto;
+  margin-top: 15px;
+  width: 15%;
+}
+.caja_4{
+  color: white;
+  background-color: blue;
+  margin: auto;
+  margin-top: 15px;
+  width: 15%;
+}
+
+
+
+@media (min-width: 750px){
+  .imageMargin{
+    width: 45%;
+  }
+}

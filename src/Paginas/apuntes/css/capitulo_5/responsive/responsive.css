@@ -1,0 +1,230 @@
+.responsive_content1{
+  background-color: rgb(8, 163, 54);
+}
+
+
+@media screen and (min-width: 820px){
+  .responsive_content1{
+      background-color: rgb(27, 61, 37);
+      color: #fff;
+  }
+}
+
+.content_media{
+  background-color: #000;
+  color: #ffff;
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px){
+  .content_media{
+      background-color: #ffdede;
+      color: #000;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 900px){
+  .content_media{
+      background-color: #fffb06;
+      color: #000;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1100px){
+  .content_media{
+      background-color: #ff2424;
+      color: #ffffff;
+  }
+}
+@media screen and (min-width: 1100px){
+  .content_media{
+      background-color: #00f;
+      color: #fff;
+  }
+}
+
+
+
+
+
+#bodyResponsiveEjemplo{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+#headerResponsive{
+  background-color: #000;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.logoResponsive{
+  color: #70ffff;
+  display: block;
+  margin-left: -8vw;
+}
+#headerResponsive a{
+  color: #c5ffc5;
+  margin-left: -45px;
+}
+#headerResponsive a:hover{
+  color: #468f46;
+  margin-left: -45px;
+}
+
+
+
+#mainResponsive{
+  background-color: #00000066;
+  padding: 15px;
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+}
+#mainResponsive h1{
+  color: #70ffff;
+  text-align: center;
+  font-size: 1.6em;
+}
+#mainResponsive p{
+  padding: 15px;
+  margin: 8px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+
+#asideResponsive{
+  background-color: #00000066;
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#asideResponsive h2{
+  color: #70ffff;
+  text-align: center;
+  font-size: 1.6em;
+}
+#asideResponsive p{
+  padding: 15px;
+  margin: 8px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+
+
+#footerResponsive{
+  background-color: #000000;
+  margin-top: auto;
+  width: 100%;
+}
+#footerResponsive h3{
+  color: #70ffff;
+  text-align: center;
+  font-size: 1.6em;
+}
+#footerResponsive p{
+  padding: 15px;
+  margin: 8px;
+  font-size: 0.9em;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+@media screen and (min-width: 820px) and (max-width: 1200px) {
+  .contenedorResponsive{
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 8px;
+      column-gap: 5px;
+  }
+  #headerResponsive{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 7%;
+  }
+  #headerResponsive ul{
+      display: flex;
+      justify-content: space-around;
+      width: 480px;
+  }
+  #mainResponsive{
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+  }
+  #mainResponsive h1{
+      display: block;
+      margin: auto;
+  }
+  #asideResponsive{
+      width: 20%;
+      overflow: auto;
+      height: 45%;
+  }
+  #footerResponsive{
+      display: flex;
+      align-items: center;
+  }
+  #footerResponsive h3{
+      width: 45%;
+      font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  #bodyResponsiveEjemplo{
+    height: 100vh;
+  }
+  .contenedorResponsive{
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 8px;
+      column-gap: 5px;
+  }
+  #headerResponsive{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 7%;
+  }
+  #headerResponsive ul{
+      display: flex;
+      justify-content: space-around;
+      width: 600px;
+      font-size: 1.1em;
+  }
+  #mainResponsive{
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+  }
+  #mainResponsive h1{
+      display: block;
+      margin: auto;
+  }
+  #asideResponsive{
+      width: 30%;
+      overflow: auto;
+      height: 45%;
+  }
+  #footerResponsive{
+      display: flex;
+      align-items: center;
+  }
+  #footerResponsive h3{
+      width: 45%;
+      font-size: 1.1em;
+  }
+}

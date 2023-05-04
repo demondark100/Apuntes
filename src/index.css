@@ -1,4 +1,98 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+html,
+body {
+  height: 100%;
+}
+
+body{
+  background-image: url("https://www.forum.virtualmt2.com.pl/uploads/profile/photo-70266.gif?_r=1614158681");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+main{
+  margin-top: 13vh;
+  margin-bottom: 15vh;
+  flex: 1;
+}
+h1{
+  color: #0bff95;
+  text-shadow: 0 0 3vh #0bff95;
+  text-align: center !important;
+  font-size: 2.8em;
+  width: 100% !important;
+}
+h2{
+  color: #0bff95;
+  text-shadow: 0 0 3vh #0bff95;
+  margin-top: 2%;
+  text-align: center !important;
+  font-size: 2.4em;
+  width: 100% !important;
+}
+h3{
+  color: #0bff95;
+  text-shadow: 0 0 3vh #0bff95;
+  margin-top: 2%;
+  text-align: center !important;
+  font-size: 2.2em;
+  width: 100% !important;
+}
+
+footer {
+  margin-top: auto;
+  width: 100vw;
+  background-color: #f5f5f5f5;
+  font-size: 3em;
+  height: 11vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.website{
+  display: block;
+  background-color: #fff;
+  width: 95vw;
+  max-width: 1800px;
+  overflow: auto;
+  margin: auto;
+  margin-top: 5%;
+  max-height: 70vh;
+  padding: 2vh;
+  max-height: 30vh;
+}
+
+@media screen and (min-width: 750px) {
+  body{
+    background-position: none;
+  }
+  h1{
+    font-size: 3.5em;
+  }
+  h2{
+    font-size: 3em;
+  }
+  h3{
+    font-size: 3em;
+  }
+  .website{
+    width: 75%;
+    max-height: 45vh;
+  }
 }

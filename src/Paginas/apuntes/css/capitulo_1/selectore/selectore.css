@@ -1,0 +1,123 @@
+.modal-open{
+  overflow: hidden;
+}
+
+.website .pColor{
+  color: rgb(83, 143, 83);
+}
+.website h3{
+  text-align: start;
+}
+.universalWebsite{
+  color: #00f !important;
+}
+.deTipo{
+  color: gray;
+}
+
+.parrafoClases{
+  color: blue;
+}
+.subtituloClases{
+  color: red !important;
+}
+.elemento_clases{
+  color: gray;
+}
+.botonLeft{
+  font-size: 3.5vh;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.botonLeft:hover{
+  font-size: 4vh;
+  background-color: #000;
+  border: none;
+  color: #0f0;
+  text-align: center;
+  transition-duration: .5s;
+}
+
+#titulo{
+  color: green;
+}
+#parrafo{
+  color: red;
+}
+
+[boton="el_boton"]{
+  color: orange;
+}
+[parrafo="el_parrafo"]{
+  color: pink;
+}
+
+
+
+.website div p{
+  color: green;
+}
+.website h6 p{
+  color: red;
+}
+.website .subtitulo__h6 .un_parrafo{
+  color: gray;
+}
+
+#cambiar{
+  color: red;
+}
+#cambiar:hover{
+  color: green;
+}
+
+
+
+/* componente left4dead */
+.left4content{
+  position: absolute;
+  opacity: 0;
+  transition-duration: .5s;
+  background-color: #000000ee;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mostrar-modal{
+  opacity: 1;
+  z-index: 2;
+}
+
+.imageLeft4dead{
+  background-image: url("https://th.bing.com/th/id/R.61fc2d0d5125860cc2c8da97f8f1b291?rik=X45DmUSUmSsI6g&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fy4L5vl0.jpg&ehk=qpgTRut8dSOZPSAYJllR12%2bNdVLYtiiSbdsvmo%2f0zEw%3d&risl=&pid=ImgRaw&r=0");
+  background-position: center;
+  background-size: cover;
+  width: 75%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: .5vh solid #0f0;
+}
+.mensajeLeft1{
+  color: #f00;
+  text-shadow: 0 0 2vh #f00;
+}
+.mensajeLeft2{
+  text-align: center;
+  color: #25c44f;
+  text-shadow: 0 0 2vh #25c44f;
+}
+
+
+
+@media screen and (min-width: 750px){
+  .imageLeft4dead{
+    width: 45%;
+    height: 45%;
+  }
+}

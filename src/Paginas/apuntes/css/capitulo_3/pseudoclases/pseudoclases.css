@@ -1,0 +1,26 @@
+.hover_ejemplo:hover{
+  color: wheat;
+  background-color: black;
+}
+
+#click{
+  background-color: black;
+  color: wheat;
+}
+#click:link{
+  background-color: green;
+}
+#btn_1{
+  background-color: black;
+  color: wheat;
+  display: block;
+  margin: auto;
+}
+#btn_1:active{
+  background-color: orange;
+  color: black;
+}
+#inputFeliz:focus{
+  background-color: black;
+  color: orange;
+}

@@ -1,0 +1,17 @@
+.main-notFound{
+  margin-top: 4%;
+}
+.notFount-content{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, transparent ,#000 );
+}
+.mensaje-error{
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
