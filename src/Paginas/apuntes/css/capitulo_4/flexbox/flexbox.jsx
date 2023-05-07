@@ -5,11 +5,13 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./flexbox.css";
+import Capitulos from "../../../../../aside";
 
 function Flexbox() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>flexbox</h1>
         <Conseptos texto={`Anteriormente se solia trabajar con tablas , float para crear los sitios web pero ahora se usa flexbox debido a que es mas facil y mas optimo.

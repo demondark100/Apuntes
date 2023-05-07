@@ -4,11 +4,13 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
+import Capitulos from "../../../../../aside";
 
 function GridTemplate() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>grid-template</h1>
         <Conseptos texto={`Con esto podremos definir cuantas filas y columnas queremos , estos se aplican a los grid container.`}/>

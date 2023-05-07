@@ -4,7 +4,7 @@ function AlignSelf() {
   return (  
     <>
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
+        <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
       </div>
       <div className="bodyAlignSelf">
         <h3>align-self</h3>

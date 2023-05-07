@@ -35,15 +35,12 @@ import ExtraHtml from './Paginas/apuntes/html/capitulo_4/extra/extra';
 
 
 // css
-import CssHome from './Paginas/apuntes/css/CssHome';
-import Capitulo1Css from "./Paginas/apuntes/css/capitulo_1/capitulo1Css";
 import IntroduccionCss from './Paginas/apuntes/css/capitulo_1/introduccion/introduccionCss';
 import Selectores from './Paginas/apuntes/css/capitulo_1/selectore/selectore';
 import Especificidad from './Paginas/apuntes/css/capitulo_1/especificidad/especificidad';
 import Metodologia from './Paginas/apuntes/css/capitulo_1/metodologia/Metodologia';
 import Unidades from './Paginas/apuntes/css/capitulo_1/unidades/unidades';
 import Unidades2 from './Paginas/apuntes/css/capitulo_1/unidades/unidades2';
-import Capitulo2Css from './Paginas/apuntes/css/capitulo_2/capitulo2Css';
 import Background from './Paginas/apuntes/css/capitulo_2/background/background';
 import PropiedadesTexto from './Paginas/apuntes/css/capitulo_2/propiedadesTexto/porpiedadesTexto';
 import Normalize from './Paginas/apuntes/css/capitulo_2/normalize/normalize';
@@ -53,7 +50,6 @@ import Margin from './Paginas/apuntes/css/capitulo_2/margin/margin';
 import Border from './Paginas/apuntes/css/capitulo_2/border/border';
 import Sombras from './Paginas/apuntes/css/capitulo_2/sombras/sombras';
 import Outline from './Paginas/apuntes/css/capitulo_2/outline/outline';
-import Capitulo3Css from './Paginas/apuntes/css/capitulo_3/capitulo3Css';
 import Position from './Paginas/apuntes/css/capitulo_3/position/position';
 import PositionAbsolute from './Paginas/apuntes/css/capitulo_3/position/positionAbsolute';
 import Zindex from './Paginas/apuntes/css/capitulo_3/position/zIndex';
@@ -67,7 +63,6 @@ import Overflow from './Paginas/apuntes/css/capitulo_3/overflow/overflow';
 import Float from './Paginas/apuntes/css/capitulo_3/float/float';
 import Pseudoelementos from './Paginas/apuntes/css/capitulo_3/pseudoelementos/pseudoelementos';
 import Pseudoclases from './Paginas/apuntes/css/capitulo_3/pseudoclases/pseudoclases';
-import Capitulo4Css from './Paginas/apuntes/css/capitulo_4/capitulo4Css';
 import ObjetFit from './Paginas/apuntes/css/capitulo_4/objectFit/objectFit';
 import Cursor from './Paginas/apuntes/css/capitulo_4/cursor/cursor';
 import Colorizacion from './Paginas/apuntes/css/capitulo_4/colorizacion/colorizacion';
@@ -88,7 +83,6 @@ import AlignSelf from './Paginas/apuntes/css/capitulo_4/flexbox/resultado/alignS
 import FlexGrow from './Paginas/apuntes/css/capitulo_4/flexbox/flexGrow';
 import FlexGrowResultado from './Paginas/apuntes/css/capitulo_4/flexbox/resultado/FlexGrow';
 import Order from './Paginas/apuntes/css/capitulo_4/order/order';
-import Capitulo5Css from './Paginas/apuntes/css/capitulo_5/Capitulo5Css';
 import Grid from './Paginas/apuntes/css/capitulo_5/grid/grid';
 import GridTemplate from './Paginas/apuntes/css/capitulo_5/grid/gridTemplate';
 import GridGap from './Paginas/apuntes/css/capitulo_5/grid/gridGap';
@@ -118,7 +112,7 @@ function App() {
             <Route path='/html/importante leer esto' element={<Importante />} />
             <Route path='/html/conseptos basicos' element={<ConseptosBasicos />}/>
             
-            {/* capitulo 2 */}
+          {/* capitulo 2 */}
             <Route path='/html/etiquetas' element={<Etiquetas />} />
             <Route path='/html/estructura html' element={<EstructuraHtml />}/>
             <Route path='/html/html semantico' element={<HtmlSemantico />} />
@@ -132,100 +126,90 @@ function App() {
             <Route path='/html/formularios' element={<Formularios />}/>
             <Route path='/html/metadatos' element={<Metadatos />}/>
 
-        {/* capitulo 4 */}
-          <Route path='/html/mav' element={<Nav />} />
-          <Route path='/html/section y article' element={<SectionArticle />} />
-          <Route path='/html/aside' element={<Aside />} />
-          <Route path='/html/main' element={<Main />} />
-          <Route path='/html/footer' element={<FooterHtmlCurso />} />
-          <Route path='/html/tablas' element={<Tablas />} />
-          <Route path='/html/extra' element={<ExtraHtml />} />
+          {/* capitulo 4 */}
+            <Route path='/html/mav' element={<Nav />} />
+            <Route path='/html/section y article' element={<SectionArticle />} />
+            <Route path='/html/aside' element={<Aside />} />
+            <Route path='/html/main' element={<Main />} />
+            <Route path='/html/footer' element={<FooterHtmlCurso />} />
+            <Route path='/html/tablas' element={<Tablas />} />
+            <Route path='/html/extra' element={<ExtraHtml />} />
 
-      {/* css */}
-
-      <Route path='/css' element={<CssHome />} />
+        {/* css */}        
+          {/* capitulo 1 */}
+            <Route path='/css/introduccion a css' element={<IntroduccionCss />} />
+            <Route path='/css/selectores' element={<Selectores />} />
+            <Route path='/css/especificidad' element={<Especificidad />} />
+            <Route path='/css/metodologia BEM' element={<Metodologia />} />
+            <Route path='/css/unidades' element={<Unidades />} />
+              <Route path='/css/unidades/unidades2' element={<Unidades2 />} />
         
-        {/* capitulo 1 */}
+          {/* capitulo 2 */}
+            <Route path='/css/background' element={<Background />}/>
+            <Route path='/css/propiedades de texto' element={<PropiedadesTexto />}/>
+            <Route path='/css/normalize' element={<Normalize />}/>
+            <Route path='/css/cajas' element={<Cajas />}/>
+            <Route path='/css/padding' element={<Padding />}/>
+            <Route path='/css/margin' element={<Margin />}/>
+            <Route path='/css/border' element={<Border />}/>
+            <Route path='/css/sombras' element={<Sombras />}/>
+            <Route path='/css/outline' element={<Outline />}/>
 
-        <Route path='/css/capitulo 1' element={<Capitulo1Css />}/>
-          <Route path='/css/capitulo 1/introduccion a css' element={<IntroduccionCss />} />
-          <Route path='/css/capitulo 1/selectores' element={<Selectores />} />
-          <Route path='/css/capitulo 1/especificidad' element={<Especificidad />} />
-          <Route path='/css/capitulo 1/metodologia BEM' element={<Metodologia />} />
-          <Route path='/css/capitulo 1/unidades' element={<Unidades />} />
-            <Route path='/css/capitulo 1/unidades/unidades2' element={<Unidades2 />} />
-        
-        {/* capitulo 2 */}
+          {/* capitulo 3 */}
+            <Route path='/css/position' element={<Position />}/>
+              <Route path='/css/position/position absolute' element={<PositionAbsolute />}/>
+              <Route path='/css/position/position absolute/z-index' element={<Zindex />}/>
+              <Route path='/css/position/position absolute/z-index/position-fixed' element={<PositionFixed />}/>
+                <Route path='/css/position/position absolute/z-index/position-fixed/resultado1' element={<Fixed1 />}/>
+                <Route path='/css/position/position absolute/z-index/position-fixed/resultado2' element={<Fixed2 />}/>
+                <Route path='/css/position/position absolute/z-index/position-fixed/position-sticky' element={<PositionSticky />}/>
+                <Route path='/css/position/position absolute/z-index/position-fixed/position-sticky/resultado' element={<StickyPage />}/>
+            <Route path='/css/display' element={<Display />}/>
+            <Route path='/css/overflow' element={<Overflow />}/>
+            <Route path='/css/float' element={<Float />}/>
+            <Route path='/css/pseudoelementos' element={<Pseudoelementos />}/>
+            <Route path='/css/pseudoclases' element={<Pseudoclases />}/>
 
-        <Route path='/css/capitulo 2' element={<Capitulo2Css />}/>
-          <Route path='/css/capitulo 2/background' element={<Background />}/>
-          <Route path='/css/capitulo 2/propiedades de texto' element={<PropiedadesTexto />}/>
-          <Route path='/css/capitulo 2/normalize' element={<Normalize />}/>
-          <Route path='/css/capitulo 2/cajas' element={<Cajas />}/>
-          <Route path='/css/capitulo 2/padding' element={<Padding />}/>
-          <Route path='/css/capitulo 2/margin' element={<Margin />}/>
-          <Route path='/css/capitulo 2/border' element={<Border />}/>
-          <Route path='/css/capitulo 2/sombras' element={<Sombras />}/>
-          <Route path='/css/capitulo 2/outline' element={<Outline />}/>
-
-        {/* capitulo 3 */}
-        <Route path='/css/capitulo 3' element={<Capitulo3Css />}/>
-          <Route path='/css/capitulo 3/position' element={<Position />}/>
-              <Route path='/css/capitulo 3/position/position absolute' element={<PositionAbsolute />}/>
-              <Route path='/css/capitulo 3/position/position absolute/z-index' element={<Zindex />}/>
-              <Route path='/css/capitulo 3/position/position absolute/z-index/position-fixed' element={<PositionFixed />}/>
-              <Route path='/css/capitulo 3/position/position absolute/z-index/position-fixed/resultado1' element={<Fixed1 />}/>
-              <Route path='/css/capitulo 3/position/position absolute/z-index/position-fixed/resultado2' element={<Fixed2 />}/>
-              <Route path='/css/capitulo 3/position/position absolute/z-index/position-fixed/position-sticky' element={<PositionSticky />}/>
-              <Route path='/css/capitulo 3/position/position absolute/z-index/position-fixed/position-sticky/resultado' element={<StickyPage />}/>
-          <Route path='/css/capitulo 3/display' element={<Display />}/>
-          <Route path='/css/capitulo 3/overflow' element={<Overflow />}/>
-          <Route path='/css/capitulo 3/float' element={<Float />}/>
-          <Route path='/css/capitulo 3/pseudoelementos' element={<Pseudoelementos />}/>
-          <Route path='/css/capitulo 3/pseudoclases' element={<Pseudoclases />}/>
 
           {/* capitulo 4 */}
-          <Route path='css/capitulo 4' element={<Capitulo4Css />}/>
-            <Route path='css/capitulo 4/object fit' element={<ObjetFit />}/>
-            <Route path='css/capitulo 4/cursor' element={<Cursor />}/>
-            <Route path='css/capitulo 4/colorizacion' element={<Colorizacion />}/>
-            <Route path='css/capitulo 4/responsive(basico)' element={<ResponsiveBasico />}/>
-              <Route path='css/capitulo 4/responsive(basico)/resultadoResponsiveBasico' element={<ResultadoResponsive1 />}/>
-            <Route path='css/capitulo 4/flexbox' element={<Flexbox />}/>
-              <Route path='css/capitulo 4/flexbox/resultado1' element={<Resultado1Flex />}/>
-              <Route path='css/capitulo 4/flexbox/flexDirection' element={<FlexDirection />}/>
-              <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap' element={<FlexWrap />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/resultadoWrap1' element={<Wrap1 />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/resultadoWrap2' element={<Wrap2 />}/>
-              <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex' element={<AlineacionFlex />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/alineacionFlx' element={<ResultadoAlineacionFlex />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/alineacionAlign' element={<AlignItems />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/resultadoStart' element={<ResultadoStart />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/alignContent' element={<AlignContent />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/AlignSelf' element={<AlignSelf />}/>
-              <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow' element={<FlexGrow />}/>
-                <Route path='css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow/flexGrowResultado' element={<FlexGrowResultado />}/>
-            <Route path='css/capitulo 4/order' element={<Order />}/>
+            <Route path='css/object fit' element={<ObjetFit />}/>
+            <Route path='css/cursor' element={<Cursor />}/>
+            <Route path='css/colorizacion' element={<Colorizacion />}/>
+            <Route path='css/responsive(basico)' element={<ResponsiveBasico />}/>
+              <Route path='css/responsive(basico)/resultadoResponsiveBasico' element={<ResultadoResponsive1 />}/>
+            <Route path='css/flexbox' element={<Flexbox />}/>
+              <Route path='css/flexbox/resultado1' element={<Resultado1Flex />}/>
+              <Route path='css/flexbox/flexDirection' element={<FlexDirection />}/>
+              <Route path='css/flexbox/flexDirection/flexWrap' element={<FlexWrap />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/resultadoWrap1' element={<Wrap1 />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/resultadoWrap2' element={<Wrap2 />}/>
+              <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex' element={<AlineacionFlex />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/alineacionFlx' element={<ResultadoAlineacionFlex />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/alineacionAlign' element={<AlignItems />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/resultadoStart' element={<ResultadoStart />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/alignContent' element={<AlignContent />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/AlignSelf' element={<AlignSelf />}/>
+              <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow' element={<FlexGrow />}/>
+                <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow/flexGrowResultado' element={<FlexGrowResultado />}/>
+            <Route path='css/order' element={<Order />}/>
         
         {/* capitulo 5 */}
-
-        <Route path='css/capitulo 5' element={<Capitulo5Css />}/>
-          <Route path='css/capitulo 5/grid' element={<Grid />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate' element={<GridTemplate />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap' element={<GridGap />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios' element={<AsignacionEspacios />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat' element={<RepeatCss />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx' element={<GridImEx />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto' element={<GridAuto />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico' element={<GridDinamico />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico/alineacionGrid' element={<AlineacionGrid />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico/alineacionGrid/gridArea' element={<GridArea />}/>
-            <Route path='css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico/alineacionGrid/gridArea/nombrarGrid' element={<NombrarGrid />}/>
-          <Route path='css/capitulo 5/responsive design' element={<ResponsiveDesing />}/>
-            <Route path='css/capitulo 5/responsive design/responRes1' element={<ResponRes1 />}/>
-            <Route path='css/capitulo 5/responsive design/responRes2' element={<ResponRes2 />}/>
-            <Route path='css/capitulo 5/responsive design/responRes3' element={<ResponRes3 />}/>
-          <Route path='css/capitulo 5/transition' element={<Transition />}/>
+          <Route path='css/grid' element={<Grid />}/>
+            <Route path='css/grid/gridTemplate' element={<GridTemplate />}/>
+            <Route path='css/grid/gridTemplate/grid-gap' element={<GridGap />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios' element={<AsignacionEspacios />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat' element={<RepeatCss />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx' element={<GridImEx />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto' element={<GridAuto />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico' element={<GridDinamico />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico/alineacionGrid' element={<AlineacionGrid />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico/alineacionGrid/gridArea' element={<GridArea />}/>
+            <Route path='css/grid/gridTemplate/grid-gap/asignacion de espacios/repeat/gridImEx/grid auto/grid dinamico/alineacionGrid/gridArea/nombrarGrid' element={<NombrarGrid />}/>
+          <Route path='css/responsive design' element={<ResponsiveDesing />}/>
+            <Route path='css/responsive design/responRes1' element={<ResponRes1 />}/>
+            <Route path='css/responsive design/responRes2' element={<ResponRes2 />}/>
+            <Route path='css/responsive design/responRes3' element={<ResponRes3 />}/>
+          <Route path='css/transition' element={<Transition />}/>
 
             
             

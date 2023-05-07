@@ -6,7 +6,7 @@ function ResponRes3() {
       <div id="bodyResponsiveEjemplo">
         <div id="headerResponsive">
           <div className="siguiebte__parte">
-            <Link to={"../css/capitulo 5/responsive design"}>volver</Link>
+            <Link to={"../css/responsive design"}>volver</Link>
           </div>
                 <b className="logoResponsive">proyecto!</b>
                 <nav>

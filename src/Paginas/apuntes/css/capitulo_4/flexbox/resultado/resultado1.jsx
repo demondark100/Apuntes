@@ -4,7 +4,7 @@ function Resultado1Flex() {
   return (  
     <>
     <div className="siguiente__parte">
-      <Link to={"../css/capitulo 4/flexbox"}>volver</Link>
+      <Link to={"../css/flexbox"}>volver</Link>
     </div>
       <div className="contenido_flex">
     <p className="parrafo1">

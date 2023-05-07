@@ -5,7 +5,7 @@ function AlignContent() {
   return (  
     <>
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
+        <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
       </div>
       <Conseptos texto={`para notar la diferencia pon la resolucion mas pequeña y ve jugando con las resoluciones y te daras cuenta de las diferencias.`}/>
       <div className="bodyAlignContent">

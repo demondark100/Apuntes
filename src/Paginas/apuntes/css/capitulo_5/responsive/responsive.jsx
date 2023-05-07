@@ -5,11 +5,13 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./responsive.css";
+import Capitulos from "../../../../../aside";
 
 function ResponsiveDesing() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>responsive design</h1>
         <Conseptos texto={`Responsive Design es para poder adaptar nuestro sitio web para todas las resoluciones que queramos.

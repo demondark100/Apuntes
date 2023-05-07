@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -8,6 +9,7 @@ function Unidades2() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>unidades parte 2 <b>(la venganza :v)</b></h1>
         <Conseptos texto={`Ahora vamos a ver mas medidas relativas pero esta vez para las cagitas posdata todas las propiedades nuevas que veremos son medidas relativas no fijas.

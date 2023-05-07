@@ -4,7 +4,7 @@ function ResultadoResponsive1() {
   return (  
     <>        
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 4/responsive(basico)"}>volver</Link>
+        <Link to={"../css/responsive(basico)"}>volver</Link>
       </div>
       <div className="content_1">
         <h5>titulo 1</h5>

@@ -4,7 +4,7 @@ function FlexGrowResultado() {
   return (  
     <>
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow"}>volver</Link>
+        <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow"}>volver</Link>
       </div>
       <div className="bodyFlexGrow">
         <h4>sin grow</h4>

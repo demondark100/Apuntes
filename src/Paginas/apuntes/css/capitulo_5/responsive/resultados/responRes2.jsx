@@ -4,7 +4,7 @@ function ResponRes2() {
   return (  
     <>
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 5/responsive design"}>volver</Link>
+        <Link to={"../css/responsive design"}>volver</Link>
       </div>
         <div className="content_media">
           <p>

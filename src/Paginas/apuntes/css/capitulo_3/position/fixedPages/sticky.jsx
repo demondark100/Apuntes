@@ -5,7 +5,7 @@ function StickyPage() {
   return (  
       <div className="content_sticky_page">
         <div className="siguiente__parte">
-          <Link to={"../css/capitulo 3/position/position absolute/z-index/position-fixed/position-sticky"}>volver</Link>
+          <Link to={"../css/position/position absolute/z-index/position-fixed/position-sticky"}>volver</Link>
         </div>
       <div className="pagina_sticky">
         <p>

@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -8,6 +9,7 @@ function NombrarGrid() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>nombrar lineas grid</h1>
         <Conseptos texto={`sin nombrar lineas`}/>

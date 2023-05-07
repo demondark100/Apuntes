@@ -5,16 +5,18 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./grid.css";
 import Html from "../../../../../componentes/lenguajes/Html";
+import Capitulos from "../../../../../aside";
 
 function Grid() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>grid</h1>
         <Conseptos texto={`grid es muy similar a flex con la diferencia que se pueden crear filas , columnas como nosotros queramos.`}/>
         <div className="siguiente__parte">
-          <Link to={"../css/capitulo 4/flexbox"}>flex</Link>
+          <Link to={"../css/flexbox"}>flex</Link>
         </div>
         <img className="gridFlexImg" src="https://cdn-media-1.freecodecamp.org/images/HHwxqz2N4bNksz9YwcMBAtD0z9TTCxeNXNBS" alt="gridFlexImg" />
         <h2>grid</h2>

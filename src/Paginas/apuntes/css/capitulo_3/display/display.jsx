@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -9,6 +10,7 @@ function Display() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>display</h1>
         <Conseptos texto={`Bueno veremos las otras propiedades de display pero no profundizaremos.

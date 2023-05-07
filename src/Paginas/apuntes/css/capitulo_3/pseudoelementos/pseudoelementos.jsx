@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -9,6 +10,7 @@ function Pseudoelementos() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>pseudoelementos</h1>
         <Conseptos texto={`Un pseudoelemento en CSS es un elemento virtual que se utiliza para agregar contenido o estilo a un elemento en el documento, sin tener que agregar elementos adicionales al código HTML. Es una forma de crear elementos visuales adicionales en un documento web sin necesidad de agregar más HTML.`}/>

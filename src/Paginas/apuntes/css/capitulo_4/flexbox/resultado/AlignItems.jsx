@@ -4,7 +4,7 @@ function AlignItems() {
   return (  
     <>
     <div className="siguiente__parte">
-      <Link to={"../css/capitulo 4/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
+      <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
     </div>
     <div className="bodyAlign">
       <div className="content_items">

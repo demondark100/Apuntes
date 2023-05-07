@@ -5,11 +5,13 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./position.css"
+import Capitulos from "../../../../../aside";
 
 function PositionSticky() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>position-sticky</h1>
         <Conseptos texto={`Esto es igual a Position Fixed pero la diferencia esque se asimila mas a position relative asi como Fixed se parecia a position absolute en simples palabras sticky ocupa un espacio real en el sitio web.`}/>
@@ -67,7 +69,7 @@ position: sticky;
 tio: 15px;
 left: 50px`}/>
         <div className="siguiente__parte">
-          <Link to={`/css/capitulo 3/position/position absolute/z-index/position-fixed/position-sticky/resultado`}>resultado</Link>
+          <Link to={`/css/position/position absolute/z-index/position-fixed/position-sticky/resultado`}>resultado</Link>
         </div>
 
         <Conseptos texto={`Para terminar de entender sticky fijate en la imagen de Emilia que baja a medida que tu bajas en la pagina.`}/>

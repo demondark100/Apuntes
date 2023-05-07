@@ -4,11 +4,13 @@ import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./propiedadesText.css"
+import Capitulos from "../../../../../aside";
 
 function PropiedadesTexto() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>propiedades de texto</h1>
         <Conseptos texto={`Aqui veremos las propiedades de las letras empecemos con:

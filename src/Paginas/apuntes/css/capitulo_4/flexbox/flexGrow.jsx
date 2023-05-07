@@ -4,11 +4,13 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import Css from "../../../../../componentes/lenguajes/Css";
+import Capitulos from "../../../../../aside";
 
 function FlexGrow() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>flex-grow</h1>
         <Conseptos texto={`Esta propiedad hace que las cajas se ajusten al espacio que sobra , "flex-grow" se debe aplicar en los elementos hijos no en los contnedores.`}/>

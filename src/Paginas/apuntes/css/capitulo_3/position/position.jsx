@@ -5,11 +5,13 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./position.css";
+import Capitulos from "../../../../../aside";
 
 function Position() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>position-relative</h1>
         <Conseptos texto={`Esta propiedad nos permite posisionar elementos , al usar la propiedad position un elemento adquiere nuevas propiedades como:

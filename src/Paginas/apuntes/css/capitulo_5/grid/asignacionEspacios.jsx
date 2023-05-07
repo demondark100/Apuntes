@@ -4,11 +4,13 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
+import Capitulos from "../../../../../aside";
 
 function AsignacionEspacios() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>asignacion de espacios</h1>
         <Conseptos texto={`Nosotros podemos asignar cuanto queremos que ocupe cada celda/grisha.
@@ -81,31 +83,31 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         <div className="website">
           <div className="sin_resumir">
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
         </div>
         </div>
@@ -115,31 +117,31 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         <h3>html</h3>
         <Html codigo={`<div class="con_resumir">
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
 </div>`}/>
         <h3>css</h3>
@@ -161,31 +163,31 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         <div className="website">
           <div className="con_resumir">
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
         </div>
         </div>
@@ -199,31 +201,31 @@ grid-row: 1 / span 3;`}/>
         <h3>html</h3>
         <Html codigo={`<div class="spam_content">
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
     <div>
-        >:v
+        :v
     </div>
 </div>`}/>
         <h3>css</h3>
@@ -243,31 +245,31 @@ grid-row: 1 / span 3;`}/>
         <div className="website">
           <div className="spam_content">
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
             <div>
-                >:v
+                :v
             </div>
         </div>
         </div>

@@ -4,12 +4,14 @@ import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./cajas.css";
+import Capitulos from "../../../../../aside";
 
 
 function Cajas() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>cajas</h1>
         <Conseptos texto={`En html tenemos dos tipos de caja las que son en linea y las que son en bloque.`}/>

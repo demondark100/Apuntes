@@ -7,6 +7,7 @@ import Menu2 from "../../../../../componentes/menus/Menu2";
 import { useState , useRef } from "react";
 import "./unidades.css";
 import Rem from "./rem";
+import Capitulos from "../../../../../aside";
 
 function Unidades() {
   const [showRem, setShowRem] = useState(false);
@@ -24,6 +25,7 @@ function Unidades() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>unidades</h1>
         <Conseptos texto={`Tenemos dos tipos de medidas.

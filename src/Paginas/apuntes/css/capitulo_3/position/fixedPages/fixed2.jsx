@@ -5,7 +5,7 @@ function Fixed2() {
   return (  
     <div className="body__fondo">
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 3/position/position absolute/z-index/position-fixed"}>volver</Link>
+        <Link to={"../css/position/position absolute/z-index/position-fixed"}>volver</Link>
       </div>
       <div className="menu__fixed2">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>

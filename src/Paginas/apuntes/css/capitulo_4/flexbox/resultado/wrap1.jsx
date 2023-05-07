@@ -4,7 +4,7 @@ function Wrap1() {
   return (  
     <>
       <div className="siguiente__parte">
-        <Link to={"../css/capitulo 4/flexbox/flexDirection/flexWrap"}>volver</Link>
+        <Link to={"../css/flexbox/flexDirection/flexWrap"}>volver</Link>
       </div>
 
       <div className="sinWrapContent">

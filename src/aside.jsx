@@ -33,6 +33,14 @@ const [cap2Html, setCap2Html] = useState(false);
 const [cap3Html, setCap3Html] = useState(false);
 const [cap4Html, setCap4Html] = useState(false);
 
+// css
+// capitulos
+const [cap1Css, setCap1Css] = useState(false);
+const [cap2Css, setCap2Css] = useState(false);
+const [cap3Css, setCap3Css] = useState(false);
+const [cap4Css, setCap4Css] = useState(false);
+const [cap5Css, setCap5Css] = useState(false);
+
   return (  
     <>
       <aside ref={aside}>
@@ -134,19 +142,72 @@ const [cap4Html, setCap4Html] = useState(false);
               {
                 css && <div className="capitulos">
                   <div>
-                    <p>capitulo 1</p>
+                    <p onClick={()=>setCap1Css(!cap1Css)}>capitulo 1</p>
+                    {
+                      cap1Css && <div className="temas">
+                        <Link to={"../css/introduccion a css"}>introduccion a css</Link>
+                        <Link to={"../css/selectores"}>selectores</Link>
+                        <Link to={"../css/especificidad"}>especificidad</Link>
+                        <Link to={"../css/metodologia BEM"}>metodologia BEM</Link>
+                        <Link to={"../css/unidades"}>unidades</Link>
+                      </div>
+                    }
                   </div>
+
                   <div>
-                    <p>capitulo 2</p>
+                    <p onClick={()=>setCap2Css(!cap2Css)}>capitulo 2</p>
+                    {
+                      cap2Css && <div className="temas">
+                        <Link to={"../css/background"}>background</Link>
+                        <Link to={"../css/propiedades de texto"}>propiedades de texto</Link>
+                        <Link to={"../css/normalize"}>normalize</Link>
+                        <Link to={"../css/cajas"}>cajas</Link>
+                        <Link to={"../css/padding"}>padding</Link>
+                        <Link to={"../css/margin"}>margin</Link>
+                        <Link to={"../css/border"}>border</Link>
+                        <Link to={"../css/sombras"}>sombras</Link>
+                        <Link to={"../css/outline"}>outline</Link>
+                      </div>
+                    }
                   </div>
+
                   <div>
-                    <p>capitulo 3</p>
+                    <p onClick={()=>setCap3Css(!cap3Css)}>capitulo 3</p>
+                    {
+                      cap3Css && <div className="temas">
+                        <Link to={"../css/position"}>position</Link>
+                        <Link to={"../css/display"}>display</Link>
+                        <Link to={"../css/overflow"}>overflow</Link>
+                        <Link to={"../css/float"}>float</Link>
+                        <Link to={"../css/pseudoelementos"}>pseudoelementos</Link>
+                        <Link to={"../css/pseudoclases"}>pseudoclases</Link>
+                      </div>
+                    }
                   </div>
+
                   <div>
-                    <p>capitulo 4</p>
+                    <p onClick={()=>setCap4Css(!cap4Css)}>capitulo 4</p>
+                    {
+                      cap4Css && <div className="temas">
+                        <Link to={"../css/object fit"}>object fit</Link>
+                        <Link to={"../css/cursor"}>cursor</Link>
+                        <Link to={"../css/colorizacion"}>colorizacion</Link>
+                        <Link to={"../css/responsive(basico)"}>responsive(basico)</Link>
+                        <Link to={"../css/flexbox"}>flexbox</Link>
+                        <Link to={"../css/order"}>order</Link>
+                      </div>
+                    }
                   </div>
+
                   <div>
-                    <p>capitulo 5</p>
+                    <p onClick={()=>setCap5Css(!cap5Css)}>capitulo 5</p>
+                    {
+                      cap5Css && <div className="temas">
+                        <Link to={"../css/grid"}>grid</Link>
+                        <Link to={"../css/responsive design"}>responsive design</Link>
+                        <Link to={"../css/transition"}>transition</Link>
+                      </div>
+                    }
                   </div>
                   <div>
                     <p>capitulo 6</p>

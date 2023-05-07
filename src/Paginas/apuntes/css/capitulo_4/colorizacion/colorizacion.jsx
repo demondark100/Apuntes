@@ -5,6 +5,7 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import "./colorizacion.css"
 import { useState , useRef } from "react";
+import Capitulos from "../../../../../aside";
 
 function Colorizacion() {
 
@@ -18,6 +19,7 @@ function Colorizacion() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>colorizacion</h1>
         <Conseptos texto={`Tenemos distintas formas de usar los colores por ejemplo la forma que hemos estado usando hasta ahora.
