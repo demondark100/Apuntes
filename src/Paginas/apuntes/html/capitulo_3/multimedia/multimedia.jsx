@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -7,6 +8,7 @@ function Multimedia() {
   return (  
     <>
     <Menu2 />
+    <Capitulos />
     <main>
       <h1>Multimedia</h1>
       <Conseptos texto={`Aqui pondremos videos , audios , imagenes osea se viene lo bueno lo ricolino.`}/>

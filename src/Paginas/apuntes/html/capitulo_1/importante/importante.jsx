@@ -5,6 +5,7 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import { Link } from "react-router-dom";
+import Capitulos from "../../../../../aside";
 
 
 function Importante() {
@@ -26,6 +27,7 @@ function Importante() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main className="main_importante">
         <h1>importante</h1>
         <Conseptos texto={`Para empezar para crear un archivo html debmos crear un archivo con la extencion .html por ejemplo.

@@ -10,6 +10,7 @@ function Capitulo5Css() {
         <h1>capitulo 5</h1>
         <Capitulos texto={"grid"}/>
         <Capitulos texto={`responsive design`}/>
+        <Capitulos texto={"transition"} />
       </main>
       <Footer />
     </>

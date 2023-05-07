@@ -1,0 +1,98 @@
+aside{
+  position: fixed;
+  background-color: #1a1818;
+  margin-top: 10vh;
+  width: 100vw;
+  height: 50px;
+  transition-duration: .5s;
+  overflow: hidden;
+}
+.expandir{
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-bottom: 15%;
+}
+
+
+/* esto es el boto */
+
+.botonAsideContent{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  padding-left: 2%;
+  background-color: #000;
+  max-height: 100px;
+  height: 50px;
+}
+
+
+/* iconos */
+
+.iconoAside{
+  margin-left: 2%;
+}
+.rotar{
+  transform: rotate(180deg);
+  transition-duration: .5s;
+}
+
+
+/* los cursos */
+
+.curso p{
+  cursor: pointer;
+  color: #fff;
+  padding-left: 4%;
+  background-color: #514646;
+}
+.curso p:hover{
+  background-color: #000;
+}
+
+
+/* aqui los capitulos */
+
+.capitulos{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.capitulos p{
+  padding-left: 8%;
+  color: #fff;
+  background-color: #413232;
+}
+.capitulos p:hover{
+  background-color: #554848;
+  
+}
+
+/* aqui los temas */
+.temas{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #231f1f;
+}
+.temas a{
+  padding-left: 11%;
+  display: block;
+}
+.temas a:hover{
+  background-color: #312828;
+}
+.temas a{
+  color: #fff;
+}
+
+@media (min-width: 750px){
+  aside{
+    height: 35px;
+    margin-top: 45px;
+  }
+  .botonAsideContent{
+    height: 35px;
+  }
+}

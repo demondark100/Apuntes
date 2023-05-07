@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -7,6 +8,7 @@ function EstructuraHtml() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>Estructura de html</h1>
         <Conseptos texto={`Html tiene una estructura basica aqui las explicaremos de forma detallada para que es cada cosa no te asustes :v.`}/>

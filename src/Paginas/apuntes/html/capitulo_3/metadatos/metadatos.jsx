@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -7,6 +8,7 @@ function Metadatos() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>Metadatos</h1>
         <Conseptos texto={`Los metadatos describen recursos tomemos como ejemplo un video.

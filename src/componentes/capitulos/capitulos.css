@@ -1,8 +1,6 @@
 .capitulos_content{
-  background-image:  url("https://th.bing.com/th/id/OIP.qrt5tURWWCiOjyM1FguIYQHaEo?pid=ImgDet&w=3840&h=2400&rs=1");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 50vw;
   max-width: 800px;
   margin: auto;
   padding: .5%;
@@ -14,7 +12,7 @@
   overflow: hidden;
 }
 .capitulos_content:hover{
-  background-image: url("https://th.bing.com/th/id/OIP.ScbsP7TXWkBoflDcwrFvhAHaEo?w=307&h=191&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  border-bottom: 1vh solid #000;
   transition-duration: .5s;
 }
 .capitulos_content a{
@@ -25,14 +23,11 @@
   text-shadow: 0 0 3vh #0cdbff;
 }
 .capitulos_content a:hover{
-  color: #45d408;
-  text-shadow: 0 0 3vh #45d408;
+  color: #97efff;
+  text-shadow: 0 0 3vh #97efff;
   transition-duration: .5s;
 }
 @media screen and (min-width:750px) {
-  .capitulos_content{
-    width: 35%;
-  }
   .html_title{
     margin-bottom: 10vh;
   }

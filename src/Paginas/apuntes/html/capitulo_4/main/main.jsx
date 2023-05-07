@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -7,6 +8,7 @@ function Main() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>main</h1>
         <Conseptos texto={`La etiqueta <main> en HTML se utiliza para marcar el contenido principal de una página web.`}/>

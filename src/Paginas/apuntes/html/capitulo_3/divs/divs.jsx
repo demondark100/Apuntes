@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -7,6 +8,7 @@ function Divs() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>divs</h1>
         <Conseptos texto={`Los divs nos sirven para agrupar los contenidos en distintas cajas es como decir una caja que guarda otras cajas esto es muy importante en especial a la hora de trabajar con css y javaScript`}/>

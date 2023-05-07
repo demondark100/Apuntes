@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Menu.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import { useRef } from "react";
 
@@ -12,49 +13,40 @@ import Redes from "./Redes";
 
 function Menu1() {
   const menu = useRef(null);
-  const fondo = useRef(null)
-
-  const [showIcon, setShowIcon] = useState(true);
+  const [menuAbierto, setMenuAbierto] = useState(false);
 
   const mostrarMenu =()=>{
+    setMenuAbierto(true);
     menu.current.classList.add("mostrarMenu");
-    fondo.current.classList.add("mostrarFondo");
-    setShowIcon(false);
 
     window.addEventListener("resize",()=>{
       if(window.innerWidth < 750){
         menu.current.classList.add("mostrarMenu");
-        fondo.current.classList.add("mostrarFondo");
 
       } else{
         menu.current.classList.remove("mostrarMenu");
-        fondo.current.classList.remove("mostrarFondo");
       }
     })
 
   }
   const cerrarMenu =()=>{
+    setMenuAbierto(false);
     menu.current.classList.remove("mostrarMenu");
-    fondo.current.classList.remove("mostrarFondo");
-    setShowIcon(true);
 
     window.addEventListener("resize",()=>{
       if(window.innerWidth < 750){
         menu.current.classList.remove("mostrarMenu");
-        fondo.current.classList.remove("mostrarFondo");
-
       } 
     })
   }
   return (
     <header>
       <div className="icono">
-      {showIcon && <FontAwesomeIcon icon={faBars} onClick={mostrarMenu} />}
-      {!showIcon && <></>}
-      {/* ... */}
-      </div>
-      <div ref={fondo} className="fondo">
-        <p onClick={cerrarMenu}>x</p>
+        {menuAbierto ? (
+          <FontAwesomeIcon icon={faTimes} onClick={cerrarMenu} />
+        ) : (
+          <FontAwesomeIcon icon={faBars} onClick={mostrarMenu} />
+        )}
       </div>
         <nav ref={menu} className="contenedor-menu">
           <ul className="links">
@@ -64,7 +56,7 @@ function Menu1() {
             <li>
               <Link target="_blank" to="https://github.com/demondark100">GitHub</Link>
             </li>
-            <li>
+            <li className="li_redes">
               <Redes />
             </li>
           </ul>

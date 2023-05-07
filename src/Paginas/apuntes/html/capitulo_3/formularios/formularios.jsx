@@ -1,3 +1,4 @@
+import Capitulos from "../../../../../aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -7,6 +8,7 @@ function Formularios() {
   return (  
     <>
       <Menu2 />
+      <Capitulos />
       <main>
         <h1>formularios</h1>
         <Conseptos texto={`Formularios en HTML: permiten enviar información al servidor. Se crean con <form> y tienen campos de entrada. Al hacer clic en enviar, la información se envía al servidor para ser procesada.

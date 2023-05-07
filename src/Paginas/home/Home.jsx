@@ -6,11 +6,13 @@ import Menu1 from '../../componentes/menus/Menu1';
 import Conseptos from '../../componentes/conseptos/conseptos';
 import Footer from '../../componentes/menus/Footer';
 import Opciones from '../../componentes/conseptos/opciones';
+import Capitulos from '../../aside';
 
 function Home() {
   return (
     <>
       <Menu1 />
+      <Capitulos />
       <main>
         <h1>Apuntes programacion</h1>
         <Conseptos texto={

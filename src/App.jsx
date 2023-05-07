@@ -10,18 +10,14 @@ import {
 // componentes
 import Home from './Paginas/home/Home';
 import NotFound from './Paginas/notFound/NotFound';
-import HtmlCaps from './Paginas/apuntes/html/HtmlCaps';
 
 
 // html
-import CapitulosHtml from "./Paginas/apuntes/html/capitulo_1/CapitulosHtml";
 import Importante from './Paginas/apuntes/html/capitulo_1/importante/importante';
 import ConseptosBasicos from './Paginas/apuntes/html/capitulo_1/conseptos basicos/conseptos_basicos';
-import Capitulo_2Html from './Paginas/apuntes/html/capitulo_2/capitulo_2';
 import Etiquetas from './Paginas/apuntes/html/capitulo_2/etiquetas/Etiquetas';
 import EstructuraHtml from './Paginas/apuntes/html/capitulo_2/estructuraHtml/estructuraHtml';
 import HtmlSemantico from './Paginas/apuntes/html/capitulo_2/htmlSemantico/HtmlSemantico';
-import Capitulo_3Html from './Paginas/apuntes/html/capitulo_3/capitulo_3';
 import EnlacesHtml from './Paginas/apuntes/html/capitulo_3/enlaces/enlaces';
 import Br from './Paginas/apuntes/html/capitulo_3/br/Br';
 import Listas from './Paginas/apuntes/html/capitulo_3/listas/listas';
@@ -29,7 +25,6 @@ import Multimedia from './Paginas/apuntes/html/capitulo_3/multimedia/multimedia'
 import Divs from './Paginas/apuntes/html/capitulo_3/divs/divs';
 import Formularios from './Paginas/apuntes/html/capitulo_3/formularios/formularios';
 import Metadatos from './Paginas/apuntes/html/capitulo_3/metadatos/metadatos';
-import Capitulo4Html from './Paginas/apuntes/html/capitulo_4/capitulo_4html';
 import Nav from './Paginas/apuntes/html/capitulo_4/nav/nav';
 import SectionArticle from './Paginas/apuntes/html/capitulo_4/section y article/sectionArticle';
 import Aside from './Paginas/apuntes/html/capitulo_4/aside/aside';
@@ -109,6 +104,7 @@ import ResponsiveDesing from './Paginas/apuntes/css/capitulo_5/responsive/respon
 import ResponRes1 from './Paginas/apuntes/css/capitulo_5/responsive/resultados/responRes1';
 import ResponRes2 from './Paginas/apuntes/css/capitulo_5/responsive/resultados/responRes2';
 import ResponRes3 from './Paginas/apuntes/css/capitulo_5/responsive/resultados/responRes3';
+import Transition from './Paginas/apuntes/css/capitulo_5/transition/transition';
 
 
 function App() {
@@ -118,42 +114,32 @@ function App() {
         <Route path='/' element={<Home />} />
 
         {/* html */}
-        <Route path='/html' element={<HtmlCaps />} />
-    
           {/* capitulo 1 */}
-
-          <Route path='/html/capitulo 1' element={<CapitulosHtml />}/>
-            <Route path='/html/capitulo 1/importante leer esto' element={<Importante />} />
-            <Route path='/html/capitulo 1/conseptos basicos' element={<ConseptosBasicos />}/>
+            <Route path='/html/importante leer esto' element={<Importante />} />
+            <Route path='/html/conseptos basicos' element={<ConseptosBasicos />}/>
             
             {/* capitulo 2 */}
-
-          <Route path='/html/capitulo 2' element={<Capitulo_2Html />}/>
-            <Route path='/html/capitulo 2/etiquetas' element={<Etiquetas />} />
-            <Route path='/html/capitulo 2/estructura html' element={<EstructuraHtml />}/>
-            <Route path='/html/capitulo 2/html semantico' element={<HtmlSemantico />} />
+            <Route path='/html/etiquetas' element={<Etiquetas />} />
+            <Route path='/html/estructura html' element={<EstructuraHtml />}/>
+            <Route path='/html/html semantico' element={<HtmlSemantico />} />
           
           {/* capitulo 3 */}
-
-          <Route path='/html/capitulo 3' element={<Capitulo_3Html />} />
-            <Route path='/html/capitulo 3/enlaces' element={<EnlacesHtml />} />
-            <Route path='/html/capitulo 3/br' element={<Br />} />
-            <Route path='/html/capitulo 3/listas' element={<Listas /> } />
-            <Route path='/html/capitulo 3/multimedia' element={<Multimedia />} />
-            <Route path='/html/capitulo 3/divs' element={<Divs />}/>
-            <Route path='/html/capitulo 3/formularios' element={<Formularios />}/>
-            <Route path='/html/capitulo 3/metadatos' element={<Metadatos />}/>
+            <Route path='/html/enlaces' element={<EnlacesHtml />} />
+            <Route path='/html/br' element={<Br />} />
+            <Route path='/html/listas' element={<Listas /> } />
+            <Route path='/html/multimedia' element={<Multimedia />} />
+            <Route path='/html/divs' element={<Divs />}/>
+            <Route path='/html/formularios' element={<Formularios />}/>
+            <Route path='/html/metadatos' element={<Metadatos />}/>
 
         {/* capitulo 4 */}
-
-        <Route path='/html/capitulo 4' element={<Capitulo4Html />} />
-          <Route path='/html/capitulo 4/mav' element={<Nav />} />
-          <Route path='/html/capitulo 4/section y article' element={<SectionArticle />} />
-          <Route path='/html/capitulo 4/aside' element={<Aside />} />
-          <Route path='/html/capitulo 4/MAIN' element={<Main />} />
-          <Route path='/html/capitulo 4/footer' element={<FooterHtmlCurso />} />
-          <Route path='/html/capitulo 4/tablas' element={<Tablas />} />
-          <Route path='/html/capitulo 4/extra' element={<ExtraHtml />} />
+          <Route path='/html/mav' element={<Nav />} />
+          <Route path='/html/section y article' element={<SectionArticle />} />
+          <Route path='/html/aside' element={<Aside />} />
+          <Route path='/html/main' element={<Main />} />
+          <Route path='/html/footer' element={<FooterHtmlCurso />} />
+          <Route path='/html/tablas' element={<Tablas />} />
+          <Route path='/html/extra' element={<ExtraHtml />} />
 
       {/* css */}
 
@@ -239,6 +225,7 @@ function App() {
             <Route path='css/capitulo 5/responsive design/responRes1' element={<ResponRes1 />}/>
             <Route path='css/capitulo 5/responsive design/responRes2' element={<ResponRes2 />}/>
             <Route path='css/capitulo 5/responsive design/responRes3' element={<ResponRes3 />}/>
+          <Route path='css/capitulo 5/transition' element={<Transition />}/>
 
             
             

@@ -1,0 +1,156 @@
+.ejemplo1_tr{
+  background-color: #000;
+  color: #fff;
+  transition-duration: .5s;
+}
+.ejemplo1_tr:hover{
+  background-color: #0f0;
+  color: #000;
+}
+.property_content{
+  background-color: #1815d1f8;
+  height: 200px;
+  padding: 10px;
+}
+.property_content__cajita1{
+  width: 35%;
+  height: 40%;
+  background-color: #87d10f;
+  transition-property: background;
+  transition-duration: .5s;
+}
+.property_content__cajita1:hover{
+  background-color: #2f87a1;
+}
+
+.duration_content{
+  background-color: #000000f8;
+  height: 200px;
+  padding: 10px;
+}
+.cajita2{
+  width: 35%;
+  height: 40%;
+  background-color: #ffffff;
+
+  transition-property: background;
+  transition-duration: 1s;
+}
+.cajita2:hover{
+  background-color: #000000;
+}
+.delay_content{
+  background-color: #000000f8;
+  height: 200px;
+  padding: 10px;
+}
+.cajita3{
+  width: 35%;
+  height: 40%;
+  background-color: #ffffff;
+
+  transition-property: background;
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+.cajita3:hover{
+  background-color: #000000;
+}
+
+.i_content{
+  background-color: #2f87a1;
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+}
+.i_hijo{
+  width: 35%;
+  height: 35%;
+  border: 2px solid #000;
+  background-color: inherit;
+}
+
+
+.timing_content{
+  padding: 25px;
+  background-color: #2f87a1;
+}
+
+.timing_content div{
+  border: 2px solid #000;
+  margin: 15px;
+  width: 25%;
+  height: 50px;
+  background-color: #000;
+  transition-property: background left;
+  transition-duration: 1s;
+  position: relative;
+  left: 0;
+}
+
+.timing_content:hover div{
+  left: 50%;
+  background-color: inherit;
+}
+
+.timing_content div:hover {
+  background-color: inherit;
+}
+.timing_content div:nth-child(1){
+  transition-timing-function: linear;
+}
+.timing_content div:nth-child(2){
+  transition-timing-function: ease;
+  /* "ease" es la propiedad que viene por defecto. */
+}
+.timing_content div:nth-child(3){
+  transition-timing-function: ease-in;
+}
+.timing_content div:nth-child(4){
+  transition-timing-function: ease-out;
+}
+.timing_content div:nth-child(5){
+  transition-timing-function: ease-in-out;
+}
+
+
+.diferencia_content{
+  padding: 25px;
+  background-color: #2f87a1;
+}
+.diferencia_content div{
+  border: 2px solid #000;
+  margin: 15px;
+  width: 25%;
+  height: 50px;
+  background-color: #000;
+  transition-property: background , left;
+  transition-duration: .4s , 1.2s;
+  position: relative;
+  left: 0;
+}
+.diferencia_content:hover div{
+  left: 50%;
+  background-color: inherit;
+}
+
+
+
+.diferencia_content div:hover {
+  background-color: inherit;
+}
+.diferencia_content div:nth-child(1){
+  transition-timing-function: linear;
+}
+.diferencia_content div:nth-child(2){
+  transition-timing-function: ease;
+}
+.diferencia_content div:nth-child(3){
+  transition-timing-function: ease-in;
+}
+.diferencia_content div:nth-child(4){
+  transition-timing-function: ease-out;
+}
+.diferencia_content div:nth-child(5){
+  transition-timing-function: ease-in-out;
+}

@@ -1,21 +1,15 @@
 .contenedor-conseptos{
-  display: block;
   padding: 1.5vh;
-  width: 95%;
-  max-width: 1800px;
   margin: auto;
   margin-top: 4vh;
-  background-color: #000;
-  border-image: linear-gradient(to left, #2f2a76, #000, #2f2a76) 1 / .4vh;
-  overflow: auto;
 }
 .contenedor-conseptos p{
-  color: #d2e0d9;
+  color: #f9f7f7;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 1.6em;
-  text-shadow: 0 0 3vh #aeffa0;
+  text-shadow: 0 0 2vh #fff9f7f7;
 }
 
 .enlacesConseptos{
@@ -32,7 +26,6 @@
   .contenedor-conseptos{
     padding: 3%;
     margin-top: 2%;
-    width: 78%;
   }
   .contenedor-conseptos p{
     font-size: 2.1em;
