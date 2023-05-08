@@ -1,21 +1,70 @@
-.linksGome-content{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));;
-  margin-top: 8%;
-  place-items: center;
-  grid-row-gap: 8vh;
-  margin: auto;
-  margin-top: 5%;
+.mainHome{
+  margin-bottom: 0;
+}
+
+
+.title_consepto1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #181616;
+  height: 100vh;
   width: 100vw;
-  font-size: 1em;
 }
-.title_home{
-  margin-top: 5vh;
+.titleHome{
+  font-size: 5vh;
 }
-@media (min-width: 750px){
-  .linksGome-content{
-    grid-template-columns: repeat(3,1fr);
-    font-size: 2em;
+.conseptoHome{
+  color: #fff;
+  text-align: center;
+  width: 75%;
+  font-size: 3vh;
+}
+
+
+
+
+
+.editoresCodigoContent{
+  background-color: #302828;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.edioresParrafo{
+  width: 75%;
+  color: #ffff;
+  text-align: center;
+  font-size: 3vh;
+}
+.editoresCodigoContent a{
+  color: #a8a4a4;
+  font-size: 3vh;
+}
+.editoresCodigoContent a:hover{
+  color: #837171;
+}
+
+@media (min-width: 950px){
+  .titleHome{
+    font-size: 2.5em;
+  }
+  .conseptoHome{
+    font-size: 1.2em;
+  }
+  .conseptoHome{
+    width: 35%;
+  }
+
+  .edioresParrafo{
+    font-size: 1.2em;
+    width: 35%;
+  }
+  .editoresCodigoContent a{
+    font-size: 1.2em;
   }
 }

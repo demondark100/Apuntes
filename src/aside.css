@@ -1,11 +1,12 @@
 aside{
   position: fixed;
   background-color: #1a1818;
-  margin-top: 10vh;
+  margin-top: 6.5vh;
   width: 100vw;
-  height: 50px;
+  height: 25px;
   transition-duration: .5s;
   overflow: hidden;
+  font-size: 4vh;
 }
 .expandir{
   height: 100vh;
@@ -14,6 +15,9 @@ aside{
   padding-bottom: 15%;
 }
 
+aside::-webkit-scrollbar{
+  display: none;
+}
 
 /* esto es el boto */
 
@@ -22,9 +26,10 @@ aside{
   color: #fff;
   align-items: center;
   padding-left: 2%;
-  background-color: #000;
+  background-color: #1a1818;
+  border-bottom: 2px solid #2d2a2a;
   max-height: 100px;
-  height: 50px;
+  height: 25px;
 }
 
 
@@ -45,10 +50,11 @@ aside{
   cursor: pointer;
   color: #fff;
   padding-left: 4%;
-  background-color: #514646;
+  background-color: #1a1818;
+  font-size: 1.2em;
 }
 .curso p:hover{
-  background-color: #000;
+  background-color: #1f1a1a;
 }
 
 
@@ -62,10 +68,11 @@ aside{
 .capitulos p{
   padding-left: 8%;
   color: #fff;
-  background-color: #413232;
+  background-color: #141414;
+  font-size: 1.2em;
 }
 .capitulos p:hover{
-  background-color: #554848;
+  background-color: #121010;
   
 }
 
@@ -74,14 +81,15 @@ aside{
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: #231f1f;
+  background-color: #100e0e;
 }
 .temas a{
-  padding-left: 11%;
+  padding-left: 15%;
   display: block;
+  font-size: 1.1em;
 }
 .temas a:hover{
-  background-color: #312828;
+  background-color: #141010;
 }
 .temas a{
   color: #fff;
@@ -89,10 +97,24 @@ aside{
 
 @media (min-width: 750px){
   aside{
-    height: 35px;
+    height: 100vh;
+    width: 30vw;
     margin-top: 45px;
+    overflow-y: auto;
+    border-right: 4px solid #2d2a2a;
+    padding-bottom: 25vh;
   }
   .botonAsideContent{
-    height: 35px;
+    display: none;
+  }
+  .curso p{
+    padding-left: 15%;
+  }
+  .capitulos p{
+    padding-left: 20%;
+  }
+  .temas a{
+    padding-left: 8%;
+    
   }
 }

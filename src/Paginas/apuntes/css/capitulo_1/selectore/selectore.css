@@ -85,6 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .mostrar-modal{
   opacity: 1;
@@ -119,5 +120,8 @@
   .imageLeft4dead{
     width: 45%;
     height: 45%;
+  }
+  .left4content{
+    margin-left: -30vw;
   }
 }

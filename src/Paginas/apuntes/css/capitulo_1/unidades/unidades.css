@@ -142,6 +142,9 @@
   .siguiente__parte a:hover{
     font-size: 7vh;
   }
+  .remConent{
+    margin-left: -30vw;
+  }
   .remImage{
     width: 25%;
   }

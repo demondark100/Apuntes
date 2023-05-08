@@ -3,12 +3,10 @@ header{
   background-color: #1a1818;
   position: fixed;
   width: 100%;
-  height:  10vh;
+  height:  7vh;
   top: 0;
   left: 0;
   z-index: 2;
-  border-bottom: .5vh solid #2d2a2a;
-  /* max-height: 100px; */
 }
 /* estilos generales */
 li{
@@ -30,6 +28,7 @@ a{
   overflow: hidden;
   overflow-y: scroll;
   padding-bottom: 15%;
+  margin-top: -3px;
 }
 .mostrarMenu{
   display: block;
@@ -43,6 +42,7 @@ a{
   padding-bottom: 100px;
   position: absolute;
   z-index: 5;
+  margin-top: -3px;
 }
 
 
@@ -96,14 +96,13 @@ a{
 .icono-red{
   display: block;
   padding: 1.5%;
-  padding-left: 20px;
+  margin-left: 20px;
   font-size: .9em;
   cursor: pointer;
   transition-property: transform;
   transition-duration: .5s;
 }
 .girar{
-  
   transform: rotate(180deg);
   transition-property: transform;
   transition-duration: .5s;
@@ -154,13 +153,12 @@ a{
   align-items: center;
   cursor: pointer;
   color: #fff;
-  font-size: 4vh;
+  font-size: 3vh;
   transition-duration: .5s;
   margin-left: 5%;
 }
 .icono:hover{
   text-shadow: 0 0vh 6vh #fff;
-  font-size: 5.5vh;
   transition-duration: .5s;
 }
 
@@ -177,6 +175,7 @@ a{
 @media screen and (min-width: 750px) {
   header{
     height: 45px;
+    border-bottom: 2px solid #2d2a2a;
   }
   .icono{
     display: none;
@@ -223,5 +222,3 @@ a{
     transform: translate(-50px,10px);
   }
 }
-
-
