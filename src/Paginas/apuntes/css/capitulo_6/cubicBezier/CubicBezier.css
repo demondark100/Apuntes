@@ -1,0 +1,124 @@
+.cubicContent{
+  display: block;
+  width: 85%;
+  margin: auto;
+  margin-top: 8%;
+}
+
+.cubic_content{
+  background-color: #9eb6ff;
+  width: 100%;
+  height: 100px;
+}
+.cubic_div{
+  width: 25%;
+  height: 45%;
+  background-color: #87d10f;
+  border: 2px #000 solid;
+  transition-property: left background;
+  transition-duration: 1s;
+  position: relative;
+  left: 0;
+
+  transition-timing-function: cubic-bezier(0.4,0.23,0.36,0.1);
+}
+
+.cubic_content:hover .cubic_div{
+  background-color: #000;
+  left: 50%;
+}
+
+
+.sin_cubic_content{
+  background-color: #9eb6ff;
+  width: 100%;
+  height: 100px;
+}
+.sin_cubic_div{
+  width: 25%;
+  height: 45%;
+  background-color: #87d10f;
+  border: 2px #000 solid;
+  transition-property: left background;
+  transition-duration: 1s;
+  position: relative;
+  left: 0;
+}
+
+.sin_cubic_content:hover .sin_cubic_div{
+  background-color: #000;
+  left: 50%;
+}
+
+
+
+
+.animation_cubic{
+  background-color: #9eb6ff;
+  width: 100%;
+  height: 100px;
+}
+.animation_cubic_div{
+  width: 25%;
+  height: 45%;
+  background-color: #87d10f;
+  border: 2px #000 solid;
+  position: relative;
+  left: 0;
+  animation-name: con_cubic;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  
+  animation-timing-function:  cubic-bezier(0.4,0.23,0.36,0.1);
+}
+
+
+.sin_animation_cubic{
+  background-color: #9eb6ff;
+  width: 100%;
+  height: 100px;
+}
+.sin_animation_cubic_div{
+  width: 25%;
+  height: 45%;
+  background-color: #87d10f;
+  border: 2px #000 solid;
+  position: relative;
+  left: 0;
+  animation-name: con_cubic;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes con_cubic {
+  0%{
+      left: 0;
+      background-color: #87d10f;
+  }
+  100%{
+      left: 100%;
+      background-color: #000;
+  }
+}
+
+
+
+@keyframes con_cubic {
+  0%{
+      left: 0;
+      background-color: #87d10f;
+  }
+  100%{
+      left: 100%;
+      background-color: #000;
+  }
+}
+
+
+
+
+@media (min-width: 750px){
+  .cubicContent{
+    width: 45%;
+  }
+}

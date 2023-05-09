@@ -18,7 +18,6 @@
 .content_holaMundo p{
   transition-duration: .5s;
   color: #f00;
-  background: linear-gradient(0deg,transparent,#000);
   text-align: center;
 
 }
@@ -27,9 +26,4 @@
   transition-duration: .5s;
   color: rgb(255, 16, 16);
   padding: 15px;
-}
-@media screen and (min-width: 750px) {
-  .main_importante{
-    height: 185vh;
-  }
 }

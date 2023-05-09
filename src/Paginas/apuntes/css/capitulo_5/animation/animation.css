@@ -1,0 +1,155 @@
+.ContentAnimation__duratio{
+  width: 100%;
+  height: 100%;
+  background-color: #9eb6ff;
+  padding: 20px;
+}
+.animation__duration{
+  width: 110px;
+  height: 110px;
+  border: 2px solid #000;
+  background-color: inherit;
+  position: relative;
+
+  animation-name: mover_caja;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mover_caja {
+  from{
+      left: 0;
+      background-color: #000;
+  }
+  to{
+      left: 100%;
+      background-color: #fff;
+  }
+}
+
+
+.iteracion_content{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #9eb6ff;
+}
+.iteracion_content_div{
+  top: 15px;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #000;
+  background-color: inherit;
+  position: relative;
+
+  animation-name: iteracion;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes iteracion {
+  from{
+      left: 0;
+      background-color: #000;
+  }
+  to{
+      left: 100%;
+      background-color: #fff;
+  }
+}
+
+
+
+.reverse_content{
+  width: 100%;
+  height: 100%;
+  background-color: #9eb6ff;
+}
+.reverse_content_div{
+  top: 15px;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #000;
+  background-color: inherit;
+  position: relative;
+
+  animation-name: reverse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes reverse {
+  from{
+      left: 0;
+      background-color: #000;
+  }
+  to{
+      left: 100%;
+      background-color: #fff;
+  }
+}
+
+
+
+.alternate_content{
+  width: 100%;
+  height: 100%;
+  background-color: #9eb6ff;
+}
+.alternate_content_div{
+  top: 15px;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #000;
+  background-color: inherit;
+  position: relative;
+
+  animation-name: reverse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes reverse {
+  from{
+      left: 0;
+      background-color: #000;
+  }
+  to{
+      left: 100%;
+      background-color: #fff;
+  }
+}
+
+
+
+.alternate_reverse_content{
+  width: 100%;
+  height: 100%;
+  background-color: #9eb6ff;
+}
+.alternate_reverse_content_div{
+  top: 15px;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #000;
+  background-color: inherit;
+  position: relative;
+
+  animation-name: reverse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes reverse {
+  from{
+      left: 0;
+      background-color: #000;
+  }
+  to{
+      left: 100%;
+      background-color: #fff;
+  }
+}

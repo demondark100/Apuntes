@@ -26,20 +26,21 @@ function Capitulos() {
   const [python, setPython] = useState(false);
 
 
-// html
-// capitulos
-const [cap1Html, setCap1Html] = useState(false);
-const [cap2Html, setCap2Html] = useState(false);
-const [cap3Html, setCap3Html] = useState(false);
-const [cap4Html, setCap4Html] = useState(false);
+  // html
+  // capitulos
+  const [cap1Html, setCap1Html] = useState(false);
+  const [cap2Html, setCap2Html] = useState(false);
+  const [cap3Html, setCap3Html] = useState(false);
+  const [cap4Html, setCap4Html] = useState(false);
 
-// css
-// capitulos
-const [cap1Css, setCap1Css] = useState(false);
-const [cap2Css, setCap2Css] = useState(false);
-const [cap3Css, setCap3Css] = useState(false);
-const [cap4Css, setCap4Css] = useState(false);
-const [cap5Css, setCap5Css] = useState(false);
+  // css
+  // capitulos
+  const [cap1Css, setCap1Css] = useState(false);
+  const [cap2Css, setCap2Css] = useState(false);
+  const [cap3Css, setCap3Css] = useState(false);
+  const [cap4Css, setCap4Css] = useState(false);
+  const [cap5Css, setCap5Css] = useState(false);
+  const [cap6Css, setCap6Css] = useState(false);
 
   return (  
     <>
@@ -111,7 +112,7 @@ const [cap5Css, setCap5Css] = useState(false);
                         <Link to={"../html/br"}>br</Link>
                         <Link to={"../html/listas"}>listas</Link>
                         <Link to={"../html/multimedia"}>multimedia</Link>
-                        <Link to={",,/html/divs"}>divs</Link>
+                        <Link to={"../html/divs"}>divs</Link>
                         <Link to={"../html/formularios"}>formularios</Link>
                         <Link to={"../html/metadatos"}>metadatos</Link>
                       </div>
@@ -122,7 +123,7 @@ const [cap5Css, setCap5Css] = useState(false);
                     <p onClick={()=>setCap4Html(!cap4Html)}>capitulo 4</p>
                     {
                       cap4Html && <div className="temas">
-                        <Link to={"../html/mav"}></Link>
+                        <Link to={"../html/mav"}>nav</Link>
                         <Link to={"../html/section y article"}>section y article</Link>
                         <Link to={"../html/aside"}>aside</Link>
                         <Link to={"../html/main"}>main</Link>
@@ -206,12 +207,25 @@ const [cap5Css, setCap5Css] = useState(false);
                         <Link to={"../css/grid"}>grid</Link>
                         <Link to={"../css/responsive design"}>responsive design</Link>
                         <Link to={"../css/transition"}>transition</Link>
+                        <Link to={"../css/animation"}>animation</Link>
                       </div>
                     }
                   </div>
+
                   <div>
-                    <p>capitulo 6</p>
+                    <p onClick={()=>setCap6Css(!cap6Css)}>capitulo 6</p>
+                    {
+                      cap6Css && <div className="temas">
+                        <Link to={"../css/Cubic Bezier"}>Cubic Bezier</Link>
+                        <Link to={"../css/Transform"}>Transform</Link>
+                        <Link to={"../css/variables"}>variables</Link>
+                        <Link to={"../css/filter"}>filter</Link>
+                        <Link to={"../css/extraCss"}>cosas extrea de css</Link>
+                        <Link to={"../css/linear"}>linear</Link>
+                      </div>
+                    }
                   </div>
+
                 </div>
               }
             </li>

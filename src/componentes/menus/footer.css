@@ -1,9 +1,6 @@
 .footer_content{
-  background: linear-gradient(0deg,#000,transparent);
+  background-color: #1a1818;
   border-top: 2px solid #574343;
-  box-shadow: 0 0 3vh #574343;
-  height: 500vh;
-  max-height: 100px;
 }
 .footer_p{
   color: #1cc990;

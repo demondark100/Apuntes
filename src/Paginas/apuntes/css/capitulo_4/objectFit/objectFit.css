@@ -2,12 +2,11 @@
   width: 100%;
 }
 .elegir_imagen{
-  display: flex;
+  display: grid;
   padding: 25px;
   width: 70%;
   margin: auto;
-  flex-wrap: wrap;
-  justify-content: center;
+  grid-template-columns: repeat(2,1fr);
   gap: 10%;
 }
 .btn_img{
@@ -29,6 +28,7 @@
   text-align: center;
 }
 .imagenes{
+  margin-top: 8%;
   display: flex;
   justify-content: space-around;
 }

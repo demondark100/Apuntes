@@ -22,6 +22,9 @@ body{
   padding: 0;
   overflow-x: hidden;
 }
+body::-webkit-scrollbar{
+  display: none;
+}
 main{
   flex: 1;
   display: flex;
@@ -37,13 +40,13 @@ h1{
   color: #ffffff;
   text-shadow: 0 0 1vh #fff;
   text-align: center !important;
-  font-size: 2.8em;
+  font-size: 2em;
   margin-bottom: 8%;
 }
 h2{
   color: #fff;
   text-shadow: 0 0 1vh #fff;
-  font-size: 2.4em;
+  font-size: 1.8em;
   margin-top: 4%;
   width: 100%;
   text-align: start;
@@ -52,28 +55,29 @@ h2{
 h3{
   color: #fff;
   text-shadow: 0 0 1vh #fff;
-  font-size: 2.2em;
+  font-size: 1.5em;
   margin-top: 8%;
   width: 100%;
   text-align: start;
-  padding-left: 14%;
+  padding-left: 8%;
 }
 
 footer {
   margin-top: auto;
   width: 100vw;
   font-size: 3em;
-  height: 11vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  padding: 1%;
 }
 
 .website{
   display: block;
   background-color: #fff;
-  width: 100%;
+  width: 90%;
   max-width: 1800px;
   overflow: auto;
   margin: auto;

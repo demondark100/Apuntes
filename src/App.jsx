@@ -99,6 +99,14 @@ import ResponRes1 from './Paginas/apuntes/css/capitulo_5/responsive/resultados/r
 import ResponRes2 from './Paginas/apuntes/css/capitulo_5/responsive/resultados/responRes2';
 import ResponRes3 from './Paginas/apuntes/css/capitulo_5/responsive/resultados/responRes3';
 import Transition from './Paginas/apuntes/css/capitulo_5/transition/transition';
+import Animation from './Paginas/apuntes/css/capitulo_5/animation/animation';
+import CubicBezier from './Paginas/apuntes/css/capitulo_6/cubicBezier/CubicBezier';
+import Transform from './Paginas/apuntes/css/capitulo_6/transform/transform';
+import VariablesCss from './Paginas/apuntes/css/capitulo_6/variables/variables';
+import Filter from './Paginas/apuntes/css/capitulo_6/filter/filter';
+import ExtraCss from './Paginas/apuntes/css/capitulo_6/extraCss/extraCss';
+import ResultadoScroll from './Paginas/apuntes/css/capitulo_6/extraCss/resultado';
+import Linear from './Paginas/apuntes/css/capitulo_6/linear/linear';
 
 
 function App() {
@@ -193,6 +201,7 @@ function App() {
                 <Route path='css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow/flexGrowResultado' element={<FlexGrowResultado />}/>
             <Route path='css/order' element={<Order />}/>
         
+
         {/* capitulo 5 */}
           <Route path='css/grid' element={<Grid />}/>
             <Route path='css/grid/gridTemplate' element={<GridTemplate />}/>
@@ -210,9 +219,18 @@ function App() {
             <Route path='css/responsive design/responRes2' element={<ResponRes2 />}/>
             <Route path='css/responsive design/responRes3' element={<ResponRes3 />}/>
           <Route path='css/transition' element={<Transition />}/>
+          <Route path='css/animation' element={<Animation />}/>
+            
+        
+        {/* capitulo 6 */}
+          <Route path='css/Cubic Bezier' element={<CubicBezier />}/>
+          <Route path='css/Transform' element={<Transform />}/>
+          <Route path='css/variables' element={<VariablesCss />}/>
+          <Route path='css/filter' element={<Filter />}/>
+          <Route path='css/extraCss' element={<ExtraCss />}/>
+            <Route path='css/extraCss/resultadoScroll' element={<ResultadoScroll />}/>
+          <Route path='css/linear' element={<Linear />}/>
 
-            
-            
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </Router>

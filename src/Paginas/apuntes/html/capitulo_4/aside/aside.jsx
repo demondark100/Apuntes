@@ -20,9 +20,9 @@ function Aside() {
 `}/>
 
         <div className="website">
-          <aside>
+          <div>
             contenido extra o una navegacion secundaria.
-          </aside>
+          </div>
         </div>
 
         <Conseptos texto={`Todo completo con lo anterior.`}/>
@@ -54,9 +54,9 @@ function Aside() {
               <p>podemos poner secciones infinitas la cosa es que la pagina este bien estructurada.</p>
             </section>
           </article>
-          <aside>
+          <div>
             contenido extra o navegacion secundaria
-          </aside>
+          </div>
         </div>
 
       </main>

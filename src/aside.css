@@ -49,9 +49,9 @@ aside::-webkit-scrollbar{
 .curso p{
   cursor: pointer;
   color: #fff;
-  padding-left: 4%;
+  padding: 4% 0 4% 4%;
   background-color: #1a1818;
-  font-size: 1.2em;
+  font-size: .8em;
 }
 .curso p:hover{
   background-color: #1f1a1a;
@@ -66,10 +66,10 @@ aside::-webkit-scrollbar{
   cursor: pointer;
 }
 .capitulos p{
-  padding-left: 8%;
+  padding: 4% 0 4% 8%;
   color: #fff;
   background-color: #141414;
-  font-size: 1.2em;
+  font-size: .8em;
 }
 .capitulos p:hover{
   background-color: #121010;
@@ -84,9 +84,9 @@ aside::-webkit-scrollbar{
   background-color: #100e0e;
 }
 .temas a{
-  padding-left: 15%;
+  padding: 5% 0 5% 15%;
   display: block;
-  font-size: 1.1em;
+  font-size: .8em;
 }
 .temas a:hover{
   background-color: #141010;
@@ -108,13 +108,17 @@ aside::-webkit-scrollbar{
     display: none;
   }
   .curso p{
+    font-size: 1.2em;
     padding-left: 15%;
   }
   .capitulos p{
+    font-size: 1.2em;
     padding-left: 20%;
   }
   .temas a{
+    font-size: 1.2em;
     padding-left: 8%;
+    padding: 2% 0 2% 8%;
     
   }
 }

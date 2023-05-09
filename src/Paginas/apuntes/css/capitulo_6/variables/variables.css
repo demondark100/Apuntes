@@ -1,0 +1,28 @@
+/* esto es el :root siempre se debe crear asi para usar variales globales */
+
+:root{
+  --un-rojo: #f00;
+}
+
+
+.variable_global{
+  width: 45%;
+  height: 45%;
+  background-color: var(--un-rojo);
+}
+.variable_global__p{
+  margin-top: 15px;
+  background-color: #000;
+  padding: 15px;
+}
+.variable_global__p p {
+  color: var(--un-rojo) !important;
+}
+
+
+.bodyVariableCss{
+  background-color: #000000ea;
+}
+.variableParrafo{
+  color: #0f0;
+}

@@ -28,7 +28,7 @@ function Importante() {
     <>
       <Menu2 />
       <Capitulos />
-      <main className="main_importante">
+      <main>
         <h1>importante</h1>
         <Conseptos texto={`Para empezar para crear un archivo html debmos crear un archivo con la extencion .html por ejemplo.
 

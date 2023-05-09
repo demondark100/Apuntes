@@ -1,0 +1,64 @@
+.direction{
+  background-color: #000;
+  color: #fff;
+  font-family: serif;
+  text-shadow: 2px 5px 15px #fff;
+}
+.rtl_content{
+  direction: rtl;
+}
+.ltr_content{
+  margin-top: 4%;
+  direction: ltr;
+}
+
+.tituloLetter{
+  background-color: #000;
+  box-shadow: 2px 4px 8px 15px #000;
+  border: 2px solid #0f0;
+}
+.tituloLetter h1{
+  color: #fff;
+  text-shadow: 2px 5px 15px #fff;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+
+
+.containerScrollF{
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+}
+*{
+  /* es recomendable ponerlo para todos los elementos para que se haga una transision en el scroll. */
+
+
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+h1{
+  color: #000;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+}
+
+h2{
+  color: #000;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+}
+
+
+.no_seleccion{
+  background-color: #000;
+  color: #fff;
+  user-select: none;
+}

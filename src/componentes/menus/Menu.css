@@ -59,10 +59,9 @@ a{
   display: block;
   color: #fff;
   transition-duration: .5s;
-  font-size: 1.5em;
+  font-size: 1em;
   width: 100%;
-  padding: 1%;
-  padding-left: 2%;
+  padding: 4% 0 4% 2%;
 }
 .contenedor-menu li a:hover {
   text-shadow: 0 0vh 6vh #fff;
@@ -76,14 +75,14 @@ a{
   color: #fff;
   display: flex;
   align-items: center;
-  padding-left: 10%;
+  padding: 15% 0 5% 20%;
   z-index: 8;
   
 }
 .redes{
   color: #fff;
   transition-duration: .5s;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 .content-redes:hover{
   color: #fff;
@@ -189,6 +188,10 @@ a{
     margin-left: 0;
     
   }
+  .contenedor-menu li a{
+    font-size: 1.7em;
+    padding: 2% 0 2% 0;
+  }
   .contenedor-menu li a:hover{
     background-color: transparent;
   }
@@ -208,6 +211,14 @@ a{
     transition-duration: .5;
   }
 
+  .redes{
+    margin-top: -15%;
+    font-size: 1.7em;
+  }
+  .icono-red{
+    font-size: 1.4em;
+    margin-top: -15%;
+  }
   .hide {
     position: absolute;
     visibility: hidden;
@@ -219,6 +230,6 @@ a{
     position: absolute;
     visibility: visible;
     transition-duration: .5s;
-    transform: translate(-50px,10px);
+    transform: translate(-50px,0px);
   }
 }

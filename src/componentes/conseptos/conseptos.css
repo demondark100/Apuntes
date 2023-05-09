@@ -1,7 +1,9 @@
 .contenedor-conseptos{
   margin: auto;
   margin-top: 4vh;
-  padding: 15px;
+  width: 90%;
+  max-width: 1800px;
+  margin: auto;
 }
 .contenedor-conseptos p{
   color: #f9f7f7;
@@ -13,28 +15,26 @@
 
 .enlacesConseptos{
   color: #0ff;
-  font-size: 1.6em;
+  font-size: 1em;
   transition-duration: .5;
 }
 .enlacesConseptos:hover{
   color: rgb(197, 246, 255);
-  font-size: 1.8em;
+  text-shadow: 0 0 3vh #fff;
   transition-duration: .5s;
 }
 @media screen and (min-width: 750px){
   .contenedor-conseptos{
-    padding: 35px;
     margin-top: 2%;
   }
   .contenedor-conseptos p{
     font-size: 2em;
   }
   .enlacesConseptos{
-    font-size: 1.5em;
+    font-size: 1.1em;
     transition-duration: .5s;
   }
   .enlacesConseptos:hover{
-    font-size: 1.9em;
     transition-duration: .5s;
   }
 }
