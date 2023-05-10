@@ -109,11 +109,34 @@ import ResultadoScroll from './Paginas/apuntes/css/capitulo_6/extraCss/resultado
 import Linear from './Paginas/apuntes/css/capitulo_6/linear/linear';
 
 
+// logica
+import TipoDeDatos from './Paginas/apuntes/logica/capitulo_1/tipoDeDato/tipoDeDato';
+import OperadoresLogica from './Paginas/apuntes/logica/capitulo_1/operaciones/Operaciones';
+import ImportanteLogica from './Paginas/apuntes/logica/capitulo_1/importante/importanteLogica';
+import VariableLogica from './Paginas/apuntes/logica/capitulo_2/variables/variables';
+import InpuLogica from './Paginas/apuntes/logica/capitulo_2/inputLogica/ImputLogica';
+
+
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Home />} />
+
+        {/* logica */}
+          {/* capitulo 1 */}
+            <Route path='/logica/comenzar' element={<ImportanteLogica />} />
+            <Route path='/logica/tipo de datos' element={<TipoDeDatos />} />
+            <Route path='/logica/operadores' element={<OperadoresLogica />} />
+
+          {/* capitulo 2 */}
+            <Route path='logica/variables' element={<VariableLogica />} />
+            <Route path='logica/inOuLogica' element={<InpuLogica />} />
+
+            
+          
+        
 
         {/* html */}
           {/* capitulo 1 */}

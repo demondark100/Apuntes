@@ -5,9 +5,10 @@ import { faCopy, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./lenguajes.css"
 
-export default function Html({ codigo }) {
+export default function JavaScript({ codigo }) {
   const lenguaje = useRef(null);
   const [copiado, setCopiado] = useState(false);
+  const [codigoPrevio, setCodigoPrevio] = useState('');
 
   const copiar = () => {
     const texto = lenguaje.current.innerText;
@@ -17,8 +18,11 @@ export default function Html({ codigo }) {
   };
 
   useEffect(() => {
-    hljs.highlightBlock(lenguaje.current);
-  }, [codigo]);
+    if (codigo !== codigoPrevio) {
+      hljs.highlightBlock(lenguaje.current);
+      setCodigoPrevio(codigo);
+    }
+  }, [codigo, codigoPrevio]);
 
   return (
     <div className='contentLenguaje'>
@@ -28,7 +32,7 @@ export default function Html({ codigo }) {
           {copiado ? ' Copiado' : ' Copiar'}
         </button>
         <pre>
-          <code className="language-html scroll" ref={lenguaje}>
+          <code className="language-javascript scroll" ref={lenguaje}>
             {codigo}
           </code>
         </pre>

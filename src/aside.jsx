@@ -26,6 +26,11 @@ function Capitulos() {
   const [python, setPython] = useState(false);
 
 
+  // logica
+  // capitulos
+  const [cap1Logica, setcap1Logica] = useState(false);
+  const [cap2Logica, setCap2Logica] = useState(false);
+
   // html
   // capitulos
   const [cap1Html, setCap1Html] = useState(false);
@@ -62,10 +67,24 @@ function Capitulos() {
               {
                 logica && <div className="capitulos">
                   <div>
-                    <p>capitulo 1</p>
+                    <p onClick={()=>setcap1Logica(!cap1Logica)}>capitulo 1</p>
+                    {
+                      cap1Logica && <div className="temas">
+                        <Link to={"../logica/comenzar"}>Comenzar</Link>
+                        <Link to={"../logica/tipo de datos"}>tipos de datos</Link>
+                        <Link to={"../logica/operadores"}>operadores</Link>
+                      </div>
+                    }
                   </div>
+
                   <div>
-                    <p>capitulo 2</p>
+                    <p onClick={()=>setCap2Logica(!cap2Logica)}>capitulo 2</p>
+                    {
+                      cap2Logica && <div className="temas">
+                        <Link to={"../logica/variables"}>variables</Link>
+                        <Link to={"../logica/inOuLogica"}>inputs y outputs</Link>
+                      </div>
+                    }
                   </div>
                   <div>
                     <p>capitulo 3</p>

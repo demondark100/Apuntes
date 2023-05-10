@@ -28,7 +28,7 @@ export default function Css({ codigo }) {
           {copiado ? ' Copiado' : ' Copiar'}
         </button>
         <pre>
-          <code className="css scroll" ref={lenguaje}>
+          <code className="language-css scroll" ref={lenguaje}>
             {codigo}
           </code>
         </pre>

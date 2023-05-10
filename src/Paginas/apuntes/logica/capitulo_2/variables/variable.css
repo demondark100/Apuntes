@@ -1,0 +1,66 @@
+.noMover{
+  overflow: hidden;
+}
+.mainFilter{
+  filter: blur(4px);
+}
+.contentMensajeVariable{
+  background-color: #000000c6;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition-duration: .5s;
+  filter: blur(0) !important;
+  visibility: 1;
+}
+.contentMensajeVariable p{
+  color: #fff;
+  text-align: center;
+}
+.contentMensajeVariable button{
+  display: block;
+  margin: auto;
+  margin-top: 8%;
+  background-color: #3b544c;
+  width: 15%;
+  border-radius: 15vh;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.contentMensajeVariable button:hover{
+  background-color: #66b89e;
+  transition-duration: .5s;
+}
+
+.mostrarMessage{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+
+
+.resultadoVariable{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #4ae327;
+  margin-top: 4vh;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.resultadoVariable:hover{
+  text-shadow: 0 0 3vh #4ae327;
+}
+@media (min-width: 750px){
+  .contentMensajeVariable p{
+    font-size: 1.3em;
+  }
+  .contentMensajeVariable :no-button{
+    font-size: 1.3em;
+  }
+}

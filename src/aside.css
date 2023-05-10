@@ -7,6 +7,7 @@ aside{
   transition-duration: .5s;
   overflow: hidden;
   font-size: 4vh;
+  z-index: 4;
 }
 .expandir{
   height: 100vh;
@@ -103,6 +104,7 @@ aside::-webkit-scrollbar{
     overflow-y: auto;
     border-right: 4px solid #2d2a2a;
     padding-bottom: 25vh;
+    z-index: 0;
   }
   .botonAsideContent{
     display: none;

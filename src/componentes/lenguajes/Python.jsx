@@ -5,7 +5,7 @@ import { faCopy, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./lenguajes.css"
 
-export default function Html({ codigo }) {
+export default function Python({ codigo }) {
   const lenguaje = useRef(null);
   const [copiado, setCopiado] = useState(false);
 
@@ -28,7 +28,7 @@ export default function Html({ codigo }) {
           {copiado ? ' Copiado' : ' Copiar'}
         </button>
         <pre>
-          <code className="language-html scroll" ref={lenguaje}>
+          <code className="language-python scroll" ref={lenguaje}>
             {codigo}
           </code>
         </pre>
