@@ -3,7 +3,7 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 
 function IntroduccionCss() {

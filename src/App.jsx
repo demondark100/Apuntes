@@ -115,6 +115,7 @@ import OperadoresLogica from './Paginas/apuntes/logica/capitulo_1/operaciones/Op
 import ImportanteLogica from './Paginas/apuntes/logica/capitulo_1/importante/importanteLogica';
 import VariableLogica from './Paginas/apuntes/logica/capitulo_2/variables/variables';
 import InpuLogica from './Paginas/apuntes/logica/capitulo_2/inputLogica/ImputLogica';
+import ConcatenarLogica from './Paginas/apuntes/logica/capitulo_2/concatenacion/concatenar';
 
 
 
@@ -132,6 +133,7 @@ function App() {
 
           {/* capitulo 2 */}
             <Route path='logica/variables' element={<VariableLogica />} />
+            <Route path='logica/concatenacion' element={<ConcatenarLogica />} />
             <Route path='logica/inOuLogica' element={<InpuLogica />} />
 
             

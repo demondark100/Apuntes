@@ -5,7 +5,7 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import "./colorizacion.css"
 import { useState , useRef } from "react";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Colorizacion() {
 

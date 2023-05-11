@@ -82,6 +82,7 @@ function Capitulos() {
                     {
                       cap2Logica && <div className="temas">
                         <Link to={"../logica/variables"}>variables</Link>
+                        <Link to={"../logica/concatenacion"}>Concatenacion</Link>
                         <Link to={"../logica/inOuLogica"}>inputs y outputs</Link>
                       </div>
                     }

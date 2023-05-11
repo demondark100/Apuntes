@@ -1,55 +1,21 @@
-import { useEffect } from "react";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
+import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Python from "../../../../../componentes/lenguajes/Python";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import MensajeVariable from "./MensajeVariable";
-import { useState , useRef} from "react";
+import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
 function VariableLogica() {
-  const contenedor = useRef(null);
-  const main = useRef(null)
-  const botonNoPuedo = useRef(null);
-  const [ShowMessage, setShowMessage] = useState(true);
-  const [mostrarResultado, setMostrarResultado] = useState(false);
-  useEffect(()=>{
-    if (ShowMessage) {
-      document.body.classList.add("noMover");
-      contenedor.current.style.top = `${window.scrollY}px`
-      main.current.classList.add("mainFilter");
-      document.querySelector("aside").classList.add("mainFilter");
-      // document.querySelector("footer").classList.add("mainFilter");
-      document.querySelector("header").classList.add("mainFilter");
-    } else {
-      document.body.classList.remove("noMover");
-      main.current.classList.remove("mainFilter");
-      document.querySelector("aside").classList.remove("mainFilter");
-      // document.querySelector("footer").classList.remove("mainFilter");
-      document.querySelector("header").classList.remove("mainFilter");
-    }
-
-  })
-
-  const mostrarMessage = () =>{
-    setShowMessage(false);
-  }
-  const showResult=()=>{
-    setMostrarResultado(!mostrarResultado);
-    mostrarResultado ? botonNoPuedo.current.textContent = "no puedo 😒": botonNoPuedo.current.textContent = "ocultar resultado si puedo perra 😎"
-  }
   return (  
     <>
       <Menu2 />
       <Capitulos />
-      <div ref={contenedor} className={`contentMensajeVariable ${
-          ShowMessage ? "":"mostrarMessage"
-        }`}>
-          <MensajeVariable mostrarMessage={mostrarMessage}/>
-      </div>
+      <MensajeModal texto={`Todo el codigo escrito en esta parte lo puedes ejecutar en tu consola del navegador para comprobar los resultados.
 
-      <main ref={main}>
+Para eso presiona F12 y pega los codigos que aparecen o puedes escribirlo tu mism@.`}/>
+      <main>
         <h1>variables</h1>
         <Conseptos texto={`Las variables nos sirven para guardar los distintos tipos de datos o cualquier cosa.`}/>
         <h3>pseudocodigo</h3>
@@ -81,24 +47,27 @@ falso = false`}/>
         <JavaScript codigo={`igualdad1 = 5 == 5;`}/>
         <JavaScript codigo={`comparar = 15 < 2;`}/>
         <Conseptos texto={`Si ejecutaste los codigos en la consola veras como es que funciono y te mostrara los resultados correspodientes correspondientes.`}/>
-        
+
+        <h2>¡Para que sirve!</h2>
+        <Conseptos texto={`Bueno una variable se usa para todo en la programacion.
+Desarrollemos un juego:`}/>
+        <JavaScript codigo={`jugadorVida = 100;
+enemigoDaño = 5;
+//cada vez que usuario reciba daño jugadorVida
+//se restara por "enemigoDaño".`}/>
+
         <h2>¡Proyecto!</h2>
         <Conseptos texto={`Hacer un programa que saque el area de un cuadrado.
 formula:
 L x L
 lado x lado`}/>
-        <button 
-          onClick={showResult}
-          className="resultadoVariable"
-          ref={botonNoPuedo}
-        >no puedo 😒</button>
-        {
-          mostrarResultado && <JavaScript codigo={`lado1 = 15;
+        <Ejercicios 
+          texto1={`no puedo 😒`}
+          texto2={`ocultar resultado si puedo perra 😎`}
+          codigo={<JavaScript codigo={`lado1 = 15;
 lado2 = 15;
-resultado = lado1 * lado2;`}/>
-        }
-
-
+resultado = lado1 * lado2;`}/>}
+        />
       </main>
       <Footer />
     </>

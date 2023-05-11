@@ -4,7 +4,7 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import { Link } from "react-router-dom";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function AlineacionFlex() {
   return (  

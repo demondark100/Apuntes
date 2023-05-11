@@ -4,7 +4,7 @@ import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./cajas.css";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 
 function Cajas() {

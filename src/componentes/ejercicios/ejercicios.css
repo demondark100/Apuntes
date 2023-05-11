@@ -1,0 +1,32 @@
+.contentEjercicios{
+  margin-top: 5%;
+  width: 100%;
+}
+
+
+.botonMostrarEjercicio{
+  cursor: pointer;
+  margin: auto;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #f62323;
+  font-size: 1.2em;
+}
+.botonMostrarEjercicio:hover{
+  text-shadow: 0 0 3vh #fff;
+}
+
+
+.mostrarEjercicio{
+  width: 100%;
+}
+
+
+
+@media (min-width: 750px){
+  .botonMostrarEjercicio{
+    font-size: 1.5em;
+  }
+}

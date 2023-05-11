@@ -8,7 +8,7 @@ import "./selectore.css";
 
 import { useState , useRef } from "react";
 import LeftModal from "./Left4DeadComponent";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Selectores() {
 

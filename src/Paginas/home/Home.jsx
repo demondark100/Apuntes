@@ -4,7 +4,7 @@ import "./Home.css"
 // componentes
 import Menu1 from '../../componentes/menus/Menu1';
 import Footer from '../../componentes/menus/Footer';
-import Capitulos from '../../aside';
+import Capitulos from '../../componentes/capitulos/aside';
 import { Link } from 'react-router-dom';
 
 function Home() {

@@ -7,7 +7,7 @@ aside{
   transition-duration: .5s;
   overflow: hidden;
   font-size: 4vh;
-  z-index: 4;
+  z-index: 1;
 }
 .expandir{
   height: 100vh;

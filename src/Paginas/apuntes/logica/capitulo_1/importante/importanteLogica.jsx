@@ -1,4 +1,4 @@
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Python from "../../../../../componentes/lenguajes/Python";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";

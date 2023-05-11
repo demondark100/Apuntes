@@ -7,7 +7,7 @@ import Confirmar from "./confirmar";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Overflow() {
   const contenedor_overflow = useRef(null);

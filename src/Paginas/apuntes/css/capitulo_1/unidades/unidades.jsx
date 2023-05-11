@@ -7,7 +7,7 @@ import Menu2 from "../../../../../componentes/menus/Menu2";
 import { useState , useRef } from "react";
 import "./unidades.css";
 import Rem from "./rem";
-import Capitulos from "../../../../../aside";
+import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Unidades() {
   const [showRem, setShowRem] = useState(false);
