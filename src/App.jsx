@@ -6,7 +6,6 @@ import {
   Route
 } from 'react-router-dom';
 
-
 // componentes
 import Home from './Paginas/home/Home';
 import NotFound from './Paginas/notFound/NotFound';
@@ -116,12 +115,15 @@ import ImportanteLogica from './Paginas/apuntes/logica/capitulo_1/importante/imp
 import VariableLogica from './Paginas/apuntes/logica/capitulo_2/variables/variables';
 import InpuLogica from './Paginas/apuntes/logica/capitulo_2/inputLogica/ImputLogica';
 import ConcatenarLogica from './Paginas/apuntes/logica/capitulo_2/concatenacion/concatenar';
+import ScrollToTop from './ScrollToTop';
+import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
 
 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
 
@@ -135,7 +137,9 @@ function App() {
             <Route path='logica/variables' element={<VariableLogica />} />
             <Route path='logica/concatenacion' element={<ConcatenarLogica />} />
             <Route path='logica/inOuLogica' element={<InpuLogica />} />
-
+          
+          {/* capitulo 3 */}
+            <Route path='logica/condicionales' element={<CondicionalesLogica />} />
             
           
         

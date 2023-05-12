@@ -1,0 +1,64 @@
+.diagramaContentCondicional{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cd;
+  z-index: 4;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+
+.diagramaTitle{
+  margin-top: 4%;
+}
+.desisionesParrafo{
+  color: #fff;
+  font-size: 1em;
+  margin-top: 2%;
+  text-align: center;
+}
+.cerrarCondicional{
+  color: #fff;
+  font-size: 2em;
+}
+.diagrama{
+  text-align: center;
+}
+
+.contenedorDesisiones{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+}
+.codicionalP{
+  color: #f00;
+  text-align: center;
+  cursor: pointer;
+}
+
+.respuestaCondicion{
+  color: #0f0;
+  margin-top: 10%;
+  cursor: none;
+}
+
+
+
+.ocultarMostrarCondicional{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+
+
+.condicionalBody{
+  overflow: hidden;
+}
+@media(min-width: 750px){
+  .diagramaContentCondicional{
+    margin-left: -30%;
+  }
+  .desisionesParrafo{
+    font-size: 1.4em;
+  }
+}

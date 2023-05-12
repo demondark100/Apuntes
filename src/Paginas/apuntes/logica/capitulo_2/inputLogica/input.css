@@ -1,0 +1,38 @@
+#waifuName{
+  margin-top: 4%;
+  background: linear-gradient(0deg,#903333,transparent);
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.3em;
+}
+#waifuName::placeholder{
+  color: #fff;
+}
+#waifuName:focus{
+  background: linear-gradient(0deg,transparent,transparent);
+  background-color: #000;
+  border-bottom: .5vh solid #f00;
+  color: #f00;
+}
+
+.mensajeInputMegumin{
+  font-size: 1.2em;
+  margin-top: 2vh;
+}
+.verde{
+  color: #0f0;
+}
+.rojo{
+  color: #f00;
+}
+
+@media (min-width:750px){
+  #waifuName{
+    font-size: 2em;
+  }
+  
+  .mensajeInputMegumin{
+    font-size: 1.7em;
+  }
+}

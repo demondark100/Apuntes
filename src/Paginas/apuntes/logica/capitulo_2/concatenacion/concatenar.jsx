@@ -54,6 +54,19 @@ Recuerda la variable musica tiene el valor "Come a Little Closer" por eso sale e
 En conclucion es como si estuvieramos haciendo esto.`}/>
         <JavaScript codigo={`"la musica " + "Come a Little Closer" + " es un temazo."
                    variable musica`}/>
+        
+        <h2>¡Para que sirve!</h2>
+        <Conseptos texto={`La concatenacion nos sirve para muchas cosas por ejemplo.
+
+desarrollamos una IA
+el usuario dice su nombre
+la IA lo procesa y saluda al usuario con el nombre que el usuario le proporicono.
+ejemplo:
+usuarui: hola soy Martis.
+IA: saludar = "hola " + UserName = " mucho gusto".
+el usuario veria algo asi.
+"hola Martis mucho gusto"`}/>
+
         <h2>¡ejercicio!</h2>
         <Conseptos texto={`Hacer un programa que salude al usuario.
 1. Una variable debe guardar el nombre del usuario.
