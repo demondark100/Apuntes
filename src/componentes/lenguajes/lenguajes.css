@@ -1,11 +1,9 @@
 .contentLenguaje{
   display: block;
   margin: auto;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin: 14% 0 14% 0 !important;
   width: 90% !important;
-  background-color: #090300;
-  overflow: auto;
+
 }
 
 .lenguajes{
@@ -18,6 +16,9 @@
 
 
 /* scroll */
+.scroll{
+  margin-top: -5%;
+}
 
 .scroll::-webkit-scrollbar {
   height: .5vh;
@@ -43,25 +44,28 @@
 
 
 .lenguajes button{
+  position: sticky;
   font-size: 1em;
-  margin-left: 60%;
-  margin-top: 5%;
+  left: 64%;
+  top: 8%;
   background-color: transparent;
   color: #3c7f6c;
   text-shadow: 0 0 3vh #3c7f6c;
   transition-duration: .5s;
+  background-color: #000;
+  opacity: .4;
 }
 .lenguajes button:hover{
   color: #9efaff;
   text-shadow: 0 0 3vh #9efaff;
   transition-duration: .5s;
+  opacity: 1;
 }
 
 
 @media (min-width: 750px) {
   .contentLenguaje{
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin: 8% 0 2% 0 !important;
     max-height: 1800px;
     max-width: 1800px;
   }

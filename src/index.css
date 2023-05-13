@@ -56,10 +56,10 @@ h3{
   color: #fff;
   text-shadow: 0 0 1vh #fff;
   font-size: 1.5em;
-  margin-top: 8%;
+  margin-top: 2%;
   width: 100%;
   text-align: start;
-  padding-left: 8%;
+  padding-left: 4%;
 }
 
 footer {
@@ -99,9 +99,11 @@ footer {
   }
   h2{
     font-size: 3em;
+    max-width: 1800px;
   }
   h3{
     font-size: 3em;
+    max-width: 1800px;
   }
   .website{
     max-height: 45vh;

@@ -93,6 +93,7 @@ function Capitulos() {
                     {
                       cap3Logica && <div className="temas">
                         <Link to={"../logica/condicionales"}>Condicionales</Link>
+                        <Link to={"../logica/arreglos"}>Arreglos</Link>
                       </div>
                     }
                   </div>

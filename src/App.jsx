@@ -117,6 +117,7 @@ import InpuLogica from './Paginas/apuntes/logica/capitulo_2/inputLogica/ImputLog
 import ConcatenarLogica from './Paginas/apuntes/logica/capitulo_2/concatenacion/concatenar';
 import ScrollToTop from './ScrollToTop';
 import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
+import ArreglosLogica from './Paginas/apuntes/logica/capitulo_3/arreglos/arreglos';
 
 
 
@@ -140,7 +141,7 @@ function App() {
           
           {/* capitulo 3 */}
             <Route path='logica/condicionales' element={<CondicionalesLogica />} />
-            
+            <Route path='logica/arreglos' element={<ArreglosLogica />} />
           
         
 

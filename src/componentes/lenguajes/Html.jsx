@@ -1,9 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/base16/3024.css';
 import { faCopy, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./lenguajes.css"
+import hljs from 'highlight.js';
+
+// solo se cambia esto
+import 'highlight.js/styles/xt256.css';
+
 
 export default function Html({ codigo }) {
   const lenguaje = useRef(null);

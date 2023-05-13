@@ -22,6 +22,24 @@
   color: #fff;
   font-size: 2em;
 }
+
+.mostrar_ejemplo_grafico{
+  color: #19adda;
+  font-size: 1.2em;
+  margin-top: 4%;
+  transition-duration: .5s;
+}
+.mostrar_ejemplo_grafico:hover{
+  color: #2acdff;
+  text-shadow: 0 0 3vh #2acdff;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.cerrarCondicional{
+  margin-top: 15px;
+  margin-left: 20px;
+  cursor: pointer;
+}
 .diagrama{
   text-align: center;
 }
@@ -60,5 +78,8 @@
   }
   .desisionesParrafo{
     font-size: 1.4em;
+  }
+  .mostrar_ejemplo_grafico{
+    font-size: 1.5em;
   }
 }
