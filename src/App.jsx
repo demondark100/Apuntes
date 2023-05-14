@@ -119,6 +119,7 @@ import ScrollToTop from './ScrollToTop';
 import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
 import ArreglosLogica from './Paginas/apuntes/logica/capitulo_3/arreglos/arreglos';
 import ArreglosBiLogica from './Paginas/apuntes/logica/capitulo_3/arreglosBidimencionales/arreglosBi';
+import BuclesLogica from './Paginas/apuntes/logica/capitulo_4/bucles';
 
 
 
@@ -144,7 +145,9 @@ function App() {
             <Route path='logica/condicionales' element={<CondicionalesLogica />} />
             <Route path='logica/arreglos' element={<ArreglosLogica />} />
             <Route path='logica/arreglosBi' element={<ArreglosBiLogica />} />
-        
+          
+          {/* capitulo 4 */}
+            <Route path='logica/bucles' element={<BuclesLogica />} />
 
         {/* html */}
           {/* capitulo 1 */}

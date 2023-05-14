@@ -31,6 +31,7 @@ function Capitulos() {
   const [cap1Logica, setcap1Logica] = useState(false);
   const [cap2Logica, setCap2Logica] = useState(false);
   const [cap3Logica, setCap3Logica] = useState(false);
+  const [cap4Logica, setCap4Logica] = useState(false);
 
   // html
   // capitulos
@@ -101,7 +102,12 @@ function Capitulos() {
                   </div>
 
                   <div>
-                    <p>capitulo 4</p>
+                    <p onClick={()=>setCap4Logica(!cap4Logica)}>capitulo 4</p>
+                    {
+                      cap4Logica && <div className="temas">
+                        <Link to={"../logica/bucles"}>bucles</Link>
+                      </div>
+                    }
                   </div>
                 </div>
               }
