@@ -89,7 +89,7 @@ footer {
 
 @media screen and (min-width: 750px) {
   main{
-    margin-left: 30vw;
+    margin-left: 23vw;
     width: 75vw;
     max-width: 100%;
   }
@@ -100,10 +100,12 @@ footer {
   h2{
     font-size: 3em;
     max-width: 1800px;
+    margin-left: 50px;
   }
   h3{
     font-size: 3em;
     max-width: 1800px;
+    margin-left: 80px;
   }
   .website{
     max-height: 45vh;

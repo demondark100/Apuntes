@@ -2,8 +2,10 @@ import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Python from "../../../../../componentes/lenguajes/Python";
+import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
+import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
 function ArreglosLogica() {
   return (  
@@ -30,9 +32,9 @@ function ArreglosLogica() {
         <Python codigo={`arreglo[posision que queremos obtener]`}/>
         <Conseptos texto={`Las posisiones de los arreglos siempre se cuentan desde 0 nunca empieces a contar desde uno siempre desde 0.`}/>
         <Python codigo={`arreglo["posision 0" , "posision 1" , "posision 2"]
-mostrar(arreglo[0])
-mostrar(arreglo[1])
-mostrar(arreglo[2])`}/>
+alert(arreglo[0])
+alert(arreglo[1])
+alert(arreglo[2])`}/>
         <Conseptos texto={`Ahora un ejemplo mas.`}/>
         <Python codigo={`juegos = [
   "left 4 dead",
@@ -48,10 +50,42 @@ mostrar(arreglo[2])`}/>
         <h3>pseudocodigo</h3>
         <h3>crear arreglo</h3>
         <Python codigo={`arr = ["string1" , "string2" , "string3" , "string4"]
-           0           1           2            3`}/>
+//         0           1           2            3`}/>
         <h3>llamar valor</h3>
-        <Python codigo={`mostrar(arr[3])
-resultado "string4"`}/>
+        <JavaScript codigo={`alert(arr[3])
+// resultado "string4"`}/>
+        <h2>¡Para que sirve!</h2>
+        <Conseptos texto={`Como te dije nos sirve para poder guardar mas de un dato nos evita hacer algo como esto.`}/>
+        <Python codigo={`precio1 = 15;
+precio2 = 14;
+precio3 = 20;
+precio4 = 504;`}/>
+        <Conseptos texto={`Y con los arreglos obtimizamos esto evitando crear variables para cada precio.`}/>
+        <Python codigo={`precios = [15,14,20,504];`}/>
+        <Conseptos texto={`Imagina que estás desarrollando un programa para una tienda de comestibles y necesitas almacenar los precios de varios productos. Puedes utilizar un arreglo para almacenar estos precios y realizar operaciones simples con ellos. `}/>
+        <JavaScript codigo={`// Definir los precios de los productos
+precios = [10.5, 5.25, 3.75, 8.99, 2.49];
+// Calculamos los precios que queremos.
+sumar = precios[1] + precios[0];
+alert(sumar);
+// en la variable sumar podemos poner 
+// cualquier posision del arreglo para sumar
+`}/>
+        <h2>¡Proyecto!</h2>
+        <Conseptos texto={`Hacer um programa que guarde los nombres de 5 videojuegos y en una variable guardar tu juego favorito con la oracion "mi juego favorito es " arreglo[con la posision.].`}/>
+        <Ejercicios 
+          texto1={`No puedo enseñas mal >:v`}
+          texto2={`Era de chill si puedo.`}
+          codigo={<JavaScript codigo={`juegos = [
+  "gta",
+  "left 4 dead",
+  "counter strike",
+  "half-life",
+  "plants vs zombies"
+];
+favorito = "mi juego favorito es " + juegos[1];
+alert(favorito);`}/>}
+        />
         
       </main>
       <Footer />

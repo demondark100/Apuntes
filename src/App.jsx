@@ -118,6 +118,7 @@ import ConcatenarLogica from './Paginas/apuntes/logica/capitulo_2/concatenacion/
 import ScrollToTop from './ScrollToTop';
 import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
 import ArreglosLogica from './Paginas/apuntes/logica/capitulo_3/arreglos/arreglos';
+import ArreglosBiLogica from './Paginas/apuntes/logica/capitulo_3/arreglosBidimencionales/arreglosBi';
 
 
 
@@ -142,7 +143,7 @@ function App() {
           {/* capitulo 3 */}
             <Route path='logica/condicionales' element={<CondicionalesLogica />} />
             <Route path='logica/arreglos' element={<ArreglosLogica />} />
-          
+            <Route path='logica/arreglosBi' element={<ArreglosBiLogica />} />
         
 
         {/* html */}

@@ -5,8 +5,8 @@ aside{
   width: 100vw;
   height: 25px;
   transition-duration: .5s;
-  overflow: hidden;
-  font-size: 4vh;
+  overflow: auto;
+  font-size: 1.4em;
   z-index: 1;
 }
 .expandir{
@@ -28,6 +28,7 @@ aside::-webkit-scrollbar{
   align-items: center;
   padding-left: 2%;
   background-color: #1a1818;
+  font-size: .9em;
   border-bottom: 2px solid #2d2a2a;
   max-height: 100px;
   height: 25px;
@@ -50,7 +51,7 @@ aside::-webkit-scrollbar{
 .curso p{
   cursor: pointer;
   color: #fff;
-  padding: 4% 0 4% 4%;
+  padding: 2% 0 2% 4%;
   background-color: #1a1818;
   font-size: .8em;
 }
@@ -99,7 +100,8 @@ aside::-webkit-scrollbar{
 @media (min-width: 750px){
   aside{
     height: 100vh;
-    width: 30vw;
+    width: 25vw;
+    max-width: 1500px;
     margin-top: 45px;
     overflow-y: auto;
     border-right: 4px solid #2d2a2a;
@@ -112,15 +114,15 @@ aside::-webkit-scrollbar{
   .curso p{
     font-size: 1.2em;
     padding-left: 15%;
+    width: 100vh;
   }
   .capitulos p{
     font-size: 1.2em;
     padding-left: 20%;
+    width: 100vw;
   }
   .temas a{
     font-size: 1.2em;
-    padding-left: 8%;
-    padding: 2% 0 2% 8%;
-    
+    padding: 1% 0 1% 8%;
   }
 }

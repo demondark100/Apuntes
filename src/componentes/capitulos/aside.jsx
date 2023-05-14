@@ -88,15 +88,18 @@ function Capitulos() {
                       </div>
                     }
                   </div>
+
                   <div>
                     <p onClick={()=>setCap3Logica(!cap3Logica)}>capitulo 3</p>
                     {
                       cap3Logica && <div className="temas">
                         <Link to={"../logica/condicionales"}>Condicionales</Link>
                         <Link to={"../logica/arreglos"}>Arreglos</Link>
+                        <Link to={"../logica/arreglosBi"}>arreglos <br /> bidimencionales</Link>
                       </div>
                     }
                   </div>
+
                   <div>
                     <p>capitulo 4</p>
                   </div>
@@ -114,7 +117,7 @@ function Capitulos() {
                     <p onClick={()=>setCap1Html(!cap1Html)}>capitulo 1</p>
                     {
                       cap1Html && <div className="temas">
-                        <Link to={"../html/importante leer esto"}>importante leer esto</Link>
+                        <Link to={"../html/importante leer esto"}>importante <br /> leer esto</Link>
                         <Link to={"../html/conseptos basicos"}>conseptos basicos</Link>
                       </div>
                     }
@@ -151,7 +154,7 @@ function Capitulos() {
                     {
                       cap4Html && <div className="temas">
                         <Link to={"../html/mav"}>nav</Link>
-                        <Link to={"../html/section y article"}>section y article</Link>
+                        <Link to={"../html/section y article"}>section y <br /> article</Link>
                         <Link to={"../html/aside"}>aside</Link>
                         <Link to={"../html/main"}>main</Link>
                         <Link to={"../html/footer"}>footer</Link>
@@ -173,7 +176,7 @@ function Capitulos() {
                     <p onClick={()=>setCap1Css(!cap1Css)}>capitulo 1</p>
                     {
                       cap1Css && <div className="temas">
-                        <Link to={"../css/introduccion a css"}>introduccion a css</Link>
+                        <Link to={"../css/introduccion a css"}>introduccion <br /> a css</Link>
                         <Link to={"../css/selectores"}>selectores</Link>
                         <Link to={"../css/especificidad"}>especificidad</Link>
                         <Link to={"../css/metodologia BEM"}>metodologia BEM</Link>
@@ -187,7 +190,7 @@ function Capitulos() {
                     {
                       cap2Css && <div className="temas">
                         <Link to={"../css/background"}>background</Link>
-                        <Link to={"../css/propiedades de texto"}>propiedades de texto</Link>
+                        <Link to={"../css/propiedades de texto"}>propiedades <br /> de texto</Link>
                         <Link to={"../css/normalize"}>normalize</Link>
                         <Link to={"../css/cajas"}>cajas</Link>
                         <Link to={"../css/padding"}>padding</Link>
@@ -247,7 +250,7 @@ function Capitulos() {
                         <Link to={"../css/Transform"}>Transform</Link>
                         <Link to={"../css/variables"}>variables</Link>
                         <Link to={"../css/filter"}>filter</Link>
-                        <Link to={"../css/extraCss"}>cosas extrea de css</Link>
+                        <Link to={"../css/extraCss"}>cosas extrea <br /> de css</Link>
                         <Link to={"../css/linear"}>linear</Link>
                       </div>
                     }
