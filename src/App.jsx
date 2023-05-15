@@ -119,7 +119,9 @@ import ScrollToTop from './ScrollToTop';
 import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
 import ArreglosLogica from './Paginas/apuntes/logica/capitulo_3/arreglos/arreglos';
 import ArreglosBiLogica from './Paginas/apuntes/logica/capitulo_3/arreglosBidimencionales/arreglosBi';
-import BuclesLogica from './Paginas/apuntes/logica/capitulo_4/bucles';
+import BuclesLogica from './Paginas/apuntes/logica/capitulo_4/bucles/bucles';
+import BucleParaLogica from './Paginas/apuntes/logica/capitulo_4/bucles/buclePara';
+import FuncionesLogica from './Paginas/apuntes/logica/capitulo_4/funciones/funciones';
 
 
 
@@ -148,6 +150,10 @@ function App() {
           
           {/* capitulo 4 */}
             <Route path='logica/bucles' element={<BuclesLogica />} />
+            <Route path='logica/bucles/buclePara' element={<BucleParaLogica />} />
+            <Route path='logica/funciones' element={<FuncionesLogica />} />
+            
+            
 
         {/* html */}
           {/* capitulo 1 */}

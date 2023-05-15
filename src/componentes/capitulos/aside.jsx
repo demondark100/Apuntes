@@ -106,6 +106,7 @@ function Capitulos() {
                     {
                       cap4Logica && <div className="temas">
                         <Link to={"../logica/bucles"}>bucles</Link>
+                        <Link to={"../logica/funciones"}>Funciones</Link>
                       </div>
                     }
                   </div>

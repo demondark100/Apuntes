@@ -1,8 +1,9 @@
-import Capitulos from "../../../../componentes/capitulos/aside";
-import Conseptos from "../../../../componentes/conseptos/conseptos";
-import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
-import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
+import { Link } from "react-router-dom";
+import Capitulos from "../../../../../componentes/capitulos/aside";
+import Conseptos from "../../../../../componentes/conseptos/conseptos";
+import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Footer from "../../../../../componentes/menus/Footer";
+import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function BuclesLogica() {
   return (  
@@ -79,14 +80,14 @@ while(i < arreglo.length){
   i++;
 }`}/>
         <h2>explicacion</h2>
-        <Conseptos texto={`Probablemente te este confundiendo esto arreglo[i] y longitud bueno arreglo[i] se encarga de recorrer el arreglo me refiero a que i cambia de numero a medida que itera lo recuerdas inicia con 0 y termina con 2 es como decir esto.`}/>
+        <Conseptos texto={`Probablemente te este confundiendo esto arreglo[i] y longitud bueno arreglo[i] se encarga de recorrer el arreglo me refiero a que i cambia de numero a medida que itera ¿lo recuerdas? inicia con 0 y termina con 2 es como decir esto.`}/>
         <JavaScropt codigo={`arreglo[0];
 arreglo[1];
 arreglo[2];`}/>
-        <Conseptos texto={`"longitud bueno esto se encarga de obtener la posision del arreglo por ejemplo."`}/>
+        <Conseptos texto={`"longitud bueno esto se encarga de obtener la longitud de del arreglo osea que si en un arreglo tenemos 3 elementos las posisiones serian "0 , 1 , 2" sin embargo su longitud es de 3 debido a que tiene 3 elementos por ejemplo."`}/>
         <JavaScropt codigo={`   arreglo = ["dato 1","dato 2","dato 3"];
 arreglo.longitud  1       2         3`}/>
-        <Conseptos texto={`longitud se encarga de contar la cantidad de elementos que hay en un arreglo.`}/>
+        <Conseptos texto={`En conclusion la longitud se encarga de contar la cantidad de elementos que hay en un arreglo.`}/>
           <h2>recorrer arreglos bidimensionales</h2>
           <Conseptos texto={`Bueno tambien podemos recorrer arreglos bidimensionales esto se hace con bucles anidados.`}/>
           <h3>pseudocodigo</h3>
@@ -120,6 +121,19 @@ while(i < arreglo.length){
   }
   i++;
 }`}/>
+        <h2>Explicacion</h2>
+        <Conseptos texto={`1. Creamos 2 variables una llamada i y la otra j , ambas inicializadas con 0.
+2. Creamos un arreglo bidimensional con 3 subArreglos osea que si ponemos arreglos.longitud nos daria como resultado 3.
+3. Hacemos un bucle mientras donde indicamos que el bucle se hara mientras que i osea 0 sea menor a arreglo.longitud osea que el bucle se ejecutara 3 veces.
+4. Dentro del bucle i ponemos que j sera 0 esto para reiniciar a j en cada iteracion.
+5. Creamos otro bucle dentro del bucle i esto se le conoce como bucle anidado.
+6. Este bucle anidado se ejecutara mientras que j sea menor que arreglo[i].longitud osea que se ejecutara tres veces debido a que en cada sub arreglo hay 3 datos.
+7. Despues mostramos el contenido del arreglo bidimensional con arreglo[i][j] [i] recorre las filas y [j] recorre las columnas del arreglo bidimensional.
+8. Por ultimo decimos que i , j aumenten de uno en uno para evitar hacer un bucle infinito.`}/>
+      
+        <div className="siguiente__parte">
+          <Link to={"buclePara"}>bucle para</Link>
+        </div>
       </main>
       <Footer />
     </>
