@@ -1,13 +1,14 @@
 aside{
   position: fixed;
   background-color: #1a1818;
-  margin-top: 6.5vh;
+  margin-top: 5vh;
   width: 100vw;
-  height: 25px;
+  height: 15px;
   transition-duration: .5s;
-  overflow: auto;
-  font-size: 1.4em;
-  z-index: 1;
+  overflow: hidden;
+  font-size: 1em;
+  z-index: 2;
+  border-bottom: 2px solid #2d2a2a;
 }
 .expandir{
   height: 100vh;
@@ -25,11 +26,11 @@ aside::-webkit-scrollbar{
 .botonAsideContent{
   display: flex;
   color: #fff;
+  margin-top: -5px;
   align-items: center;
   padding-left: 2%;
   background-color: #1a1818;
   font-size: .9em;
-  border-bottom: 2px solid #2d2a2a;
   max-height: 100px;
   height: 25px;
 }
@@ -39,6 +40,8 @@ aside::-webkit-scrollbar{
 
 .iconoAside{
   margin-left: 2%;
+  transition-duration: .5s;
+  font-size: .8em;
 }
 .rotar{
   transform: rotate(180deg);

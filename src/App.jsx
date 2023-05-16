@@ -11,6 +11,24 @@ import Home from './Paginas/home/Home';
 import NotFound from './Paginas/notFound/NotFound';
 
 
+
+// logica
+import TipoDeDatos from './Paginas/apuntes/logica/capitulo_1/tipoDeDato/tipoDeDato';
+import OperadoresLogica from './Paginas/apuntes/logica/capitulo_1/operaciones/Operaciones';
+import ImportanteLogica from './Paginas/apuntes/logica/capitulo_1/importante/importanteLogica';
+import VariableLogica from './Paginas/apuntes/logica/capitulo_2/variables/variables';
+import InpuLogica from './Paginas/apuntes/logica/capitulo_2/inputLogica/ImputLogica';
+import ConcatenarLogica from './Paginas/apuntes/logica/capitulo_2/concatenacion/concatenar';
+import ScrollToTop from './ScrollToTop';
+import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
+import ArreglosLogica from './Paginas/apuntes/logica/capitulo_3/arreglos/arreglos';
+import ArreglosBiLogica from './Paginas/apuntes/logica/capitulo_3/arreglosBidimencionales/arreglosBi';
+import BuclesLogica from './Paginas/apuntes/logica/capitulo_4/bucles/bucles';
+import BucleParaLogica from './Paginas/apuntes/logica/capitulo_4/bucles/buclePara';
+import FuncionesLogica from './Paginas/apuntes/logica/capitulo_4/funciones/funciones';
+import PodLogica from './Paginas/apuntes/logica/capitulo_4/POD/pod';
+
+
 // html
 import Importante from './Paginas/apuntes/html/capitulo_1/importante/importante';
 import ConseptosBasicos from './Paginas/apuntes/html/capitulo_1/conseptos basicos/conseptos_basicos';
@@ -108,20 +126,14 @@ import ResultadoScroll from './Paginas/apuntes/css/capitulo_6/extraCss/resultado
 import Linear from './Paginas/apuntes/css/capitulo_6/linear/linear';
 
 
-// logica
-import TipoDeDatos from './Paginas/apuntes/logica/capitulo_1/tipoDeDato/tipoDeDato';
-import OperadoresLogica from './Paginas/apuntes/logica/capitulo_1/operaciones/Operaciones';
-import ImportanteLogica from './Paginas/apuntes/logica/capitulo_1/importante/importanteLogica';
-import VariableLogica from './Paginas/apuntes/logica/capitulo_2/variables/variables';
-import InpuLogica from './Paginas/apuntes/logica/capitulo_2/inputLogica/ImputLogica';
-import ConcatenarLogica from './Paginas/apuntes/logica/capitulo_2/concatenacion/concatenar';
-import ScrollToTop from './ScrollToTop';
-import CondicionalesLogica from './Paginas/apuntes/logica/capitulo_3/condicionales/condicionales';
-import ArreglosLogica from './Paginas/apuntes/logica/capitulo_3/arreglos/arreglos';
-import ArreglosBiLogica from './Paginas/apuntes/logica/capitulo_3/arreglosBidimencionales/arreglosBi';
-import BuclesLogica from './Paginas/apuntes/logica/capitulo_4/bucles/bucles';
-import BucleParaLogica from './Paginas/apuntes/logica/capitulo_4/bucles/buclePara';
-import FuncionesLogica from './Paginas/apuntes/logica/capitulo_4/funciones/funciones';
+// JavaScropt
+import RecomendadoJs from './Paginas/apuntes/javaScript/capitulo_1/recomendaciones/recomendado';
+import JavaScriptBasico from './Paginas/apuntes/javaScript/capitulo_1/javaScriptBasico/javaScriptBasico';
+import VariablesJavaScript from './Paginas/apuntes/javaScript/capitulo_2/variables/variables';
+import BloqueCJavaScript from './Paginas/apuntes/javaScript/capitulo_2/variables/bloqueC';
+import EnlazarJavaScript from './Paginas/apuntes/javaScript/capitulo_1/enlazar/enlazar';
+import PromptLogica from './Paginas/apuntes/javaScript/capitulo_2/prompt/prompt';
+
 
 
 
@@ -152,7 +164,7 @@ function App() {
             <Route path='logica/bucles' element={<BuclesLogica />} />
             <Route path='logica/bucles/buclePara' element={<BucleParaLogica />} />
             <Route path='logica/funciones' element={<FuncionesLogica />} />
-            
+            <Route path='logica/pod' element={<PodLogica />} />
             
 
         {/* html */}
@@ -270,6 +282,24 @@ function App() {
           <Route path='css/extraCss' element={<ExtraCss />}/>
             <Route path='css/extraCss/resultadoScroll' element={<ResultadoScroll />}/>
           <Route path='css/linear' element={<Linear />}/>
+
+
+        {/* javaScript */}
+          {/* capitulo 1 */}
+            <Route path='javaScript/recomendado' element={<RecomendadoJs />}/>
+            <Route path='javaScript/javaScriptBasico' element={<JavaScriptBasico />}/>
+            <Route path='javaScript/enlazarJavaScript' element={<EnlazarJavaScript />}/>
+
+          {/* capitulo 2 */}
+            <Route path='javaScript/variables' element={<VariablesJavaScript />}/>
+              <Route path='javaScript/variables/bloqueDeCodigo' element={<BloqueCJavaScript />}/>
+            <Route path='javaScript/prompt' element={<PromptLogica />}/>
+            
+
+              
+            
+
+
 
         <Route path='*' element={<NotFound />}/>
       </Routes>

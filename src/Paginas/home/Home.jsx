@@ -5,6 +5,7 @@ import "./Home.css"
 import Menu1 from '../../componentes/menus/Menu1';
 import Footer from '../../componentes/menus/Footer';
 import Capitulos from '../../componentes/capitulos/aside';
+import MensajeModal from "../../componentes/MensajeModal/mensajeModal";
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
     <>
       <Menu1 />
       <Capitulos />
-      
+      <MensajeModal texto={`Agregamos javaScript basico y variables.`}/>
       <main className='mainHome'>
         <article>
           <section>

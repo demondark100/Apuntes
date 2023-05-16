@@ -49,6 +49,11 @@ function Capitulos() {
   const [cap5Css, setCap5Css] = useState(false);
   const [cap6Css, setCap6Css] = useState(false);
 
+  // javaScript
+  // capitulos
+  const [cap1JavaScript, setCap1JavaScript] = useState(false);
+  const [cap2JavaScript, setCap2JavaScript] = useState(false);
+
   return (  
     <>
       <aside ref={aside}>
@@ -107,6 +112,7 @@ function Capitulos() {
                       cap4Logica && <div className="temas">
                         <Link to={"../logica/bucles"}>bucles</Link>
                         <Link to={"../logica/funciones"}>Funciones</Link>
+                        <Link to={"../logica/pod"}>programacion <br />orientada a <br /> objetos(POD)</Link>
                       </div>
                     }
                   </div>
@@ -270,6 +276,30 @@ function Capitulos() {
 
             <li className="curso">
               <p onClick={()=>setJavaScript(!javaScript)}>jsvaScript</p>
+              {
+                javaScript && <div className="capitulos">
+                  <div>
+                    <p onClick={()=>setCap1JavaScript(!cap1JavaScript)}>capitulo 1</p>
+                    {
+                      cap1JavaScript && <div className="temas">
+                        <Link to={"../javaScript/recomendado"}>recomendaciones</Link>
+                        <Link to={"../javaScript/javaScriptBasico"}>javaScript basico</Link>
+                        <Link to={"../javaScript/enlazarJavaScript"}>enlazar javaScript</Link>
+                      </div>
+                    }
+                  </div>
+                  <div>
+                    <p onClick={()=>setCap2JavaScript(!cap2JavaScript)}>capitulo 2</p>
+                    {
+                      cap2JavaScript && <div className="temas">
+                        <Link to={"../javaScript/variables"}>variables</Link>
+                        <Link to={"../javaScript/prompt"}>prompt</Link>
+                      </div>
+                    }
+                  </div>
+
+                </div>
+              }
             </li>
 
 
