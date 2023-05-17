@@ -13,7 +13,7 @@ function Home() {
     <>
       <Menu1 />
       <Capitulos />
-      <MensajeModal texto={`Agregamos javaScript basico y variables.`}/>
+      <MensajeModal texto={`Agregamos javaScript hasta el cap 2 el cap 3 sigue en desarrollo.`}/>
       <main className='mainHome'>
         <article>
           <section>

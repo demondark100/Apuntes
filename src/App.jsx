@@ -133,6 +133,10 @@ import VariablesJavaScript from './Paginas/apuntes/javaScript/capitulo_2/variabl
 import BloqueCJavaScript from './Paginas/apuntes/javaScript/capitulo_2/variables/bloqueC';
 import EnlazarJavaScript from './Paginas/apuntes/javaScript/capitulo_1/enlazar/enlazar';
 import PromptLogica from './Paginas/apuntes/javaScript/capitulo_2/prompt/prompt';
+import OperadoresJavaScript from './Paginas/apuntes/javaScript/capitulo_2/operaciones/operaciones';
+import ConcatenacionJavaScript from './Paginas/apuntes/javaScript/capitulo_2/concatenacion/concatenacion';
+import CamelCaseJavaScript from './Paginas/apuntes/javaScript/capitulo_2/camelCase/camelCase';
+import CondicionalesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/condicionales/condicionales';
 
 
 
@@ -294,9 +298,13 @@ function App() {
             <Route path='javaScript/variables' element={<VariablesJavaScript />}/>
               <Route path='javaScript/variables/bloqueDeCodigo' element={<BloqueCJavaScript />}/>
             <Route path='javaScript/prompt' element={<PromptLogica />}/>
-            
-
-              
+            <Route path='javaScript/operadores' element={<OperadoresJavaScript />}/>
+            <Route path='javaScript/concatenacion' element={<ConcatenacionJavaScript />}/>
+            <Route path='javaScript/camelCase' element={<CamelCaseJavaScript />}/>
+          
+          {/* capitulo 3 */}
+            <Route path='javaScript/condicionales' element={<CondicionalesJavaScript />}/>
+          
             
 
 

@@ -53,6 +53,7 @@ function Capitulos() {
   // capitulos
   const [cap1JavaScript, setCap1JavaScript] = useState(false);
   const [cap2JavaScript, setCap2JavaScript] = useState(false);
+  const [cap3JavaScript, setCap3JavaScript] = useState(false);
 
   return (  
     <>
@@ -288,12 +289,25 @@ function Capitulos() {
                       </div>
                     }
                   </div>
+
                   <div>
                     <p onClick={()=>setCap2JavaScript(!cap2JavaScript)}>capitulo 2</p>
                     {
                       cap2JavaScript && <div className="temas">
                         <Link to={"../javaScript/variables"}>variables</Link>
                         <Link to={"../javaScript/prompt"}>prompt</Link>
+                        <Link to={"../javaScript/operadores"}>Operadores</Link>
+                        <Link to={"../javaScript/concatenacion"}>Concatenacion</Link>
+                        <Link to={"../javaScript/camelCase"}>camelCase</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap3JavaScript(!cap3JavaScript)}>capitulo 3</p>
+                    {
+                      cap3JavaScript && <div className="temas">
+                        <Link to={"../javaScript/condicionales"}>Condicionales</Link>
                       </div>
                     }
                   </div>

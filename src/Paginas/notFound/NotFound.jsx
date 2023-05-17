@@ -10,8 +10,8 @@ function NotFound() {
         <div className="notFount-content">
           <h1>en desarrollo</h1>
           <p className="mensaje-error">
-            esto sigue en desarrollo lo siento pero aun no agregue eso :c <br />
-            disponible html y css
+            Esto sigue en desarrollo... <br />
+            disponible: logica,html,css
           </p>
         </div>
       </main>
