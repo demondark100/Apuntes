@@ -165,10 +165,21 @@ a{
 
 
 
+/* imgaen del logo */
 
-
-
-
+.contenedorBotonImg{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.imgaeLogoMobil{
+  margin-top: 4px;
+  height: 4vh;
+}
+.imgPcLogo{
+  display: none;
+}
 
 
 
@@ -182,31 +193,39 @@ a{
     display: none;
   }
   .contenedor-menu{
+    display: flex;
+    justify-content: space-evenly;
     overflow: hidden;;
     transform: none;
     background-color: transparent;
     height: 45px;
     padding: 0;
+    margin-top: -46px;
     margin-left: 0;
-    
+    align-items: center;
   }
   .contenedor-menu li a{
     font-size: 1.7em;
-    padding: 2% 0 2% 0;
+    padding: 1% 0 1% 0;
+    margin-right: 45px;
   }
   .contenedor-menu li a:hover{
     background-color: transparent;
   }
   .links{
     display: flex;
-    justify-content: space-around;
-    height: 40px;
-    margin-top: 8px;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
   }
   .link li{
     font-size: 1em;
     transition-duration: .5;
     padding: 0;
+  }
+  .link li a{
+    margin-left: 0 !important;
+    padding-left: 5%;
   }
   .link li:hover{
     background-color: #696464;
@@ -232,5 +251,16 @@ a{
     visibility: visible;
     transition-duration: .5s;
     transform: translate(0,0px);
+  }
+
+  /* imgaen logo */
+
+  .imgaeLogoMobil{
+    display: none;
+  }
+  .imgPcLogo{
+    display: block;
+    height: 75%;
+    background-color: #fff;
   }
 }

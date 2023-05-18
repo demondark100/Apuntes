@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Wrap1() {
   return (  
-    <>
+    <div className="flexPageContent">
       <div className="siguiente__parte">
         <Link to={"../css/flexbox/flexDirection/flexWrap"}>volver</Link>
       </div>
@@ -27,7 +27,7 @@ function Wrap1() {
       <p className="sinWrapParrafo">
         Como te das cuenta a medida que pongas la resolucion mas pequeña las cajas se iran haciendo mas pequeñas perdiendo la medida original que nosotros dimos.
       </p>
-    </>
+    </div>
   );
 }
 

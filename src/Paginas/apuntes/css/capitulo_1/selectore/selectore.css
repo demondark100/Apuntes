@@ -85,7 +85,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .mostrar-modal{
   opacity: 1;
@@ -122,6 +121,6 @@
     height: 45%;
   }
   .left4content{
-    margin-left: -30vw;
+    margin-left: -23vw;
   }
 }

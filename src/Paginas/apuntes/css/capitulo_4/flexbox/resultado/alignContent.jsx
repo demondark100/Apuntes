@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import Conseptos from "../../../../../../componentes/conseptos/conseptos";
 
 function AlignContent() {
-  return (  
+  return (
     <>
+
+      <div className="bodyAlignContent">
       <div className="siguiente__parte">
         <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
       </div>
       <Conseptos texto={`para notar la diferencia pon la resolucion mas pequeña y ve jugando con las resoluciones y te daras cuenta de las diferencias.`}/>
-      <div className="bodyAlignContent">
         <h3>sin align-content</h3>
         <div className="align_content1">
           <div>

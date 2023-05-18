@@ -29,7 +29,12 @@
 .containerScrollF{
   background-color: #000;
   color: #fff;
-  height: 100vh;
+  z-index: 4;
+}
+@media (min-width:1800px){
+  .containerScrollF{
+    height: 100vh;
+  }
 }
 *{
   /* es recomendable ponerlo para todos los elementos para que se haga una transision en el scroll. */

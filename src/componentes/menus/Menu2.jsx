@@ -4,8 +4,8 @@ import "./Menu.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
 import { useRef } from "react";
+import logo from '../imgs/logo.jpg';
 
 
 // componentes
@@ -41,14 +41,19 @@ function Menu2() {
   }
   return (
     <header>
-      <div className="icono">
-        {menuAbierto ? (
-          <FontAwesomeIcon icon={faTimes} onClick={cerrarMenu} />
-        ) : (
-          <FontAwesomeIcon icon={faBars} onClick={mostrarMenu} />
-        )}
-      </div>
+        <div className="contenedorBotonImg">
+          <img className="imgaeLogoMobil" src={logo} alt="logo" />
+          <div className="icono">
+            {menuAbierto ? (
+              <FontAwesomeIcon icon={faTimes} onClick={cerrarMenu} />
+            ) : (
+            <FontAwesomeIcon icon={faBars} onClick={mostrarMenu} />
+            )}
+          </div>
+        </div>
+
         <nav ref={menu} className="contenedor-menu">
+          <img className="imgPcLogo" src={logo} alt="logo" />
           <ul className="links">
             <li>
               <Link to="/">inicio</Link>

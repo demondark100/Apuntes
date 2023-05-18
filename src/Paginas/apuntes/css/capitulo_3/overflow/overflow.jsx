@@ -36,7 +36,7 @@ function Overflow() {
     <>
       <Menu2 />
       <main>
-        <NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink>
+        <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink></h2>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
           <Confirmar confirmado={confirmado} cancelar={cancelar} />
         </div>

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function ResultadoScroll() {
   return (  
     <>
-    <div className="siguiente__parte">
-      <Link to={"../css/extraCss"}>volver</Link>
-    </div>
     <div className="containerScrollF">
+      <div className="siguiente__parte">
+        <Link to={"../css/extraCss"}>volver</Link>
+      </div>
       <h1>una pagina informativa xd</h1>
       <a href="#articulo_2">articulo 2</a>
       <h2>articulo 1</h2>

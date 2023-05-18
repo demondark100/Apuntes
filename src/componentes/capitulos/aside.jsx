@@ -3,14 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCarSide, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Capitulos() {
   
-  const [activeItem, setActiveItem] = useState(null);
 
-  const handleItemClick = (item) => {
-    setActiveItem(item);
-  };
 
   // esto es el aside
   const [showOptions, setShowOptions] = useState(false);
@@ -21,6 +18,20 @@ function Capitulos() {
       aside.current.classList.remove("expandir")
     } else{aside.current.classList.add("expandir")}
   };
+  useEffect(()=>{
+    const links = document.querySelectorAll(".temas a");
+    if (links != null) {
+      links.forEach(i=>{
+        i.addEventListener(("click"),()=>{
+          aside.current.classList.remove("expandir");
+          setShowOptions(false)
+        })
+      })
+    } else {
+      aside.current.classList.add("expandir")
+      setShowOptions(true)
+    }
+  })
 
 
   // capitulos

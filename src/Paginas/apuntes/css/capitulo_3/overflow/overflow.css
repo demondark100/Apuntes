@@ -1,7 +1,7 @@
 .overflow__title{
-  color: #ffa113;
+  color: #ffa113 !important;
   text-shadow: 0 0 2vh #ffa113;
-  font-size: 5vh;
+  font-size: 1.5em;
   display: block;
   text-align: center;
 }
@@ -114,12 +114,9 @@
     height: 45%;
   }
   .confirmar-container{
-    margin-left: -30vw;
+    margin-left: -23vw;
   }
   .overflow__texto{
     width: 35%;
-  }
-  .overflow__title{
-    font-size: 10vh;
   }
 }

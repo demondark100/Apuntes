@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function FlexGrowResultado() {
   return (  
     <>
-      <div className="siguiente__parte">
-        <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow"}>volver</Link>
-      </div>
       <div className="bodyFlexGrow">
+        <div className="siguiente__parte">
+          <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow"}>volver</Link>
+        </div>
         <h4>sin grow</h4>
         <div className="sin_grow">
             <div>

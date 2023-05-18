@@ -3,7 +3,7 @@ import "../position.css";
 
 function StickyPage() {
   return (  
-      <div className="content_sticky_page">
+      <div style={{zIndex: "8"}} className="content_sticky_page">
         <div className="siguiente__parte">
           <Link to={"../css/position/position absolute/z-index/position-fixed/position-sticky"}>volver</Link>
         </div>

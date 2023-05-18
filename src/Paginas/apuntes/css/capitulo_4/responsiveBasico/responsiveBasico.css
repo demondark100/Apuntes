@@ -32,7 +32,10 @@ div{
 }
 
 
-
+.responsiveResult1{
+  background-color: #fff;
+  z-index: 2;
+}
 @media (min-width: 750px){
   .responsive1_img{
     width: 35%;
@@ -54,5 +57,9 @@ div{
   .content_2{
     width: 100%;
     background-color: #251e1e;
+  }
+
+  .responsiveResult1{
+    height: 100vh;
   }
 }

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 function AlignSelf() {
   return (  
     <>
-      <div className="siguiente__parte">
-        <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
-      </div>
       <div className="bodyAlignSelf">
+        <div className="siguiente__parte">
+          <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
+        </div>
         <h3>align-self</h3>
         <div className="AlignSelfCajas">
           <div className="AlignSelfCajas__caja1">
