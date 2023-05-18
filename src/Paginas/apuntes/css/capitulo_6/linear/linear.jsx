@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Linear() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>linear</h1>
         <Conseptos texto={`Esta propiedad nos permite dar gradientes a nuestros fondos por ejemplo arriba que sea azul y abajo que sea rojo.`}/>

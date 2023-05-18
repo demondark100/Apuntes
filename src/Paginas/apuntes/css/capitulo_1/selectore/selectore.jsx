@@ -8,7 +8,6 @@ import "./selectore.css";
 
 import { useState , useRef } from "react";
 import LeftModal from "./Left4DeadComponent";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Selectores() {
 
@@ -28,7 +27,6 @@ function Selectores() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>selectores</h1>
         <Conseptos texto={`Los selectores nos sirven para poder seleccionar a las cagitas / elementos de html.

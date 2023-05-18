@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Order() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>order</h1>
         <Conseptos texto={`Esto nos servira para ordenar las caja flexibles como nosotros queramos un ejemplo de uso seria a la hora de trabajar con responsive podemos ordenar una caja como queramos.

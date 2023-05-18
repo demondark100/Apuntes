@@ -1,5 +1,4 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Python from "../../../../../componentes/lenguajes/Python";
@@ -19,7 +18,6 @@ function CondicionalesLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <MensajeModal texto={`Aqui podras escribir el codigo en el navegador ya que escribiremos codigo javaScript.`}/>
       <main>
         <h1>Condicionales</h1>

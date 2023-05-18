@@ -4,7 +4,6 @@ import "./Home.css"
 // componentes
 import Menu1 from '../../componentes/menus/Menu1';
 import Footer from '../../componentes/menus/Footer';
-import Capitulos from '../../componentes/capitulos/aside';
 import MensajeModal from "../../componentes/MensajeModal/mensajeModal";
 import { Link } from 'react-router-dom';
 
@@ -12,8 +11,6 @@ function Home() {
   return (
     <>
       <Menu1 />
-      <Capitulos />
-      <MensajeModal texto={`Agregamos javaScript hasta el cap 2 el cap 3 sigue en desarrollo.`}/>
       <main className='mainHome'>
         <article>
           <section>

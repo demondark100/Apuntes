@@ -4,13 +4,11 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import "./cursor.css";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Cursor() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>cursor</h1>
 

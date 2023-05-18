@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function ExtraHtml() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>cosas extra de html</h1>
         <Conseptos texto={`Primero empecemos con un atributo extra de img.`}/>

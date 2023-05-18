@@ -4,13 +4,11 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function AlineacionGrid() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>alineacion en grid</h1>
         <Conseptos texto={`En grid tambien podemos alinear los elementos al igual que flex.

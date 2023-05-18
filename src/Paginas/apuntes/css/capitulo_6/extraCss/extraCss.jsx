@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -11,7 +10,6 @@ function ExtraCss() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>cosas extrea de css</h1>
         <h2>direction</h2>

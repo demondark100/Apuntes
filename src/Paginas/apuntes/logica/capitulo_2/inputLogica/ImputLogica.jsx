@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
@@ -35,7 +34,6 @@ function InpuLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>inputs y outputs</h1>
         <Conseptos texto={`La programacion se basa en

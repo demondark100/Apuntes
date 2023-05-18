@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
@@ -11,7 +10,6 @@ function VariableLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <MensajeModal texto={`Todo el codigo escrito en esta parte lo puedes ejecutar en tu consola del navegador para comprobar los resultados.
 
 Para eso presiona F12 y pega los codigos que aparecen o puedes escribirlo tu mism@.`}/>

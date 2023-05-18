@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function Aside() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>aside</h1>
         <Conseptos texto={`Aside es como algo secundario que debe de ir a un costadito de la pagina.`}/>

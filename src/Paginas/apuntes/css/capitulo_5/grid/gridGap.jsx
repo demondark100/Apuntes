@@ -4,13 +4,11 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function GridGap() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>grid-gap</h1>
         <Conseptos texto={`Esto es como un margin pero se aplican para todas las celdas/grishas y estos se separan entre las celdas mas no del contenedor.`}/>

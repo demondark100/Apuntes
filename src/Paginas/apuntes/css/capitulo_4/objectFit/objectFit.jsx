@@ -5,8 +5,6 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import "./objectFit.css";
 import { useEffect } from "react";
-import Capitulos from "../../../../../componentes/capitulos/aside";
-
 
 
 
@@ -101,7 +99,6 @@ function ObjetFit() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>object fit</h1>
         <Conseptos texto={`Esta propiedade nos permitira controlar los estilos de las imagenes para centrarlas , ajustarlas bien , etc.`}/>

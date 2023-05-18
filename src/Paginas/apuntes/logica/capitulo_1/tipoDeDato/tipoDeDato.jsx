@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
@@ -8,7 +7,6 @@ function TipoDeDatos() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>tipos de datos</h1>
         <Conseptos texto={`En la programacion tenemos 3 tipos de datos.

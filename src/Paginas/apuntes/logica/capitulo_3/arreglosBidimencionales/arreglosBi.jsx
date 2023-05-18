@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Python from "../../../../../componentes/lenguajes/Python";
@@ -9,7 +8,6 @@ function ArreglosBiLogica() {
   return (  
     <>
       <Menu2/>
-      <Capitulos />
       <main>
         <h1>arreglos bidimencionales</h1>
         <Conseptos texto={`Los arreglos bidimensionales, también conocidos como matrices, son estructuras de datos que nos permiten almacenar y manipular datos en dos dimensiones, es decir, en filas y columnas. Podemos pensar en ellos como una tabla o una cuadrícula.`}/>

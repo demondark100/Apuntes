@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Python from "../../../../../componentes/lenguajes/Python";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
@@ -9,7 +8,6 @@ function ImportanteLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Bases</h1>
         <Conseptos texto={`Todo lo que aprenderas aqui se aplican para todos los lenguajes de programacion java,python,c#,javaScript,c++,etc.

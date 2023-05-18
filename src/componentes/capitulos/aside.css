@@ -1,6 +1,6 @@
 aside{
   position: fixed;
-  background-color: #1a1818;
+  background-color: #453232;
   margin-top: 5vh;
   width: 100vw;
   height: 15px;
@@ -24,10 +24,13 @@ aside::-webkit-scrollbar{
 /* esto es el boto */
 
 .botonAsideContent{
+  position: sticky;
+  top: 0;
+  width: 100%;
   display: flex;
   color: #fff;
-  margin-top: -5px;
-  align-items: center;
+  margin-top: -8px;
+  /* align-items: center; */
   padding-left: 2%;
   background-color: #1a1818;
   font-size: .9em;
@@ -39,9 +42,11 @@ aside::-webkit-scrollbar{
 /* iconos */
 
 .iconoAside{
+  margin-top: 3px;
   margin-left: 2%;
   transition-duration: .5s;
   font-size: .8em;
+  cursor: pointer;
 }
 .rotar{
   transform: rotate(180deg);
@@ -55,11 +60,11 @@ aside::-webkit-scrollbar{
   cursor: pointer;
   color: #fff;
   padding: 2% 0 2% 4%;
-  background-color: #1a1818;
+  background-color: #453232;
   font-size: .8em;
 }
 .curso p:hover{
-  background-color: #1f1a1a;
+  background-color: #271c1c;
 }
 
 
@@ -73,11 +78,11 @@ aside::-webkit-scrollbar{
 .capitulos p{
   padding: 4% 0 4% 8%;
   color: #fff;
-  background-color: #141414;
+  background-color: #332525;
   font-size: .8em;
 }
-.capitulos p:hover{
-  background-color: #121010;
+.capitulos p a:hover{
+  background-color: #201818;
   
 }
 
@@ -86,19 +91,24 @@ aside::-webkit-scrollbar{
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: #100e0e;
+  background-color: #191818;
 }
 .temas a{
   padding: 5% 0 5% 15%;
   display: block;
   font-size: .8em;
+  color: #fff;
 }
+
 .temas a:hover{
   background-color: #141010;
 }
-.temas a{
-  color: #fff;
+
+.active {
+  font-weight: bold;
+  color: blue;
 }
+
 
 @media (min-width: 750px){
   aside{

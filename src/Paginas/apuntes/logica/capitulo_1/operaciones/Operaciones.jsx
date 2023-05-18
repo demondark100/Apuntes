@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Python from "../../../../../componentes/lenguajes/Python";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function OperadoresLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>operadores</h1>
         <Conseptos texto={`Aqui tenemos las mismas operaciones basicas de las matematicas osea + , - , x , /`}/>

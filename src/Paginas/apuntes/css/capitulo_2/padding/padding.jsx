@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Padding() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>padding</h1>
         <Conseptos texto={`Padding en HTML es un espacio interno añadido alrededor del contenido de un elemento, separándolo de su borde.`}/>

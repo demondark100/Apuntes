@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function EnlacesHtml() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Enlaces</h1>
         <Conseptos texto={`Esta etiqueta nos servira para redirigir al usuario hacia otra parte de nuestra pagina web o a otros lugares por ejemplo facebook , youtube , hentaiLA lo que sea.

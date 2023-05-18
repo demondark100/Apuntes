@@ -137,6 +137,12 @@ import OperadoresJavaScript from './Paginas/apuntes/javaScript/capitulo_2/operac
 import ConcatenacionJavaScript from './Paginas/apuntes/javaScript/capitulo_2/concatenacion/concatenacion';
 import CamelCaseJavaScript from './Paginas/apuntes/javaScript/capitulo_2/camelCase/camelCase';
 import CondicionalesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/condicionales/condicionales';
+import ArreglosJavaScript from './Paginas/apuntes/javaScript/capitulo_3/arreglos/arreglos';
+import ArreglosAsJavaScript from './Paginas/apuntes/javaScript/capitulo_3/arreglosAs/arreglosAs';
+import Capitulos from './componentes/capitulos/aside';
+import Menu2 from './componentes/menus/Menu2';
+import Footer from './componentes/menus/Footer';
+import BuclesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/bucles/bucles';
 
 
 
@@ -145,6 +151,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Capitulos />
       <Routes>
         <Route path='/' element={<Home />} />
 
@@ -304,7 +311,9 @@ function App() {
           
           {/* capitulo 3 */}
             <Route path='javaScript/condicionales' element={<CondicionalesJavaScript />}/>
-          
+            <Route path='javaScript/arreglos' element={<ArreglosJavaScript />}/>
+            <Route path='javaScript/arreglosAsociativos' element={<ArreglosAsJavaScript />}/>
+            <Route path='javaScript/bucles' element={<BuclesJavaScript />}/>
             
 
 

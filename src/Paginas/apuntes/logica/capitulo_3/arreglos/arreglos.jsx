@@ -1,5 +1,4 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Python from "../../../../../componentes/lenguajes/Python";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
@@ -11,7 +10,6 @@ function ArreglosLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <MensajeModal texto={`Todo este codigo podras ejecutarlo en tu consola del navegador.`}/>
       <main>
         <h1>Arreglos</h1>

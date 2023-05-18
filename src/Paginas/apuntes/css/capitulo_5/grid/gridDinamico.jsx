@@ -4,13 +4,11 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function GridDinamico() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>grid dinamico</h1>
         <Conseptos texto={`Con esto podemos posiscionar de mejor forma los elementos , manejar su comportamento a los elementos/grishas.`}/>

@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Sombras() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>sombras</h1>
         <Conseptos texto={`Esta propiedad es similar a {border} pero en vez de darle bordes a las cajas les damos una sombra. ejemplo.`}

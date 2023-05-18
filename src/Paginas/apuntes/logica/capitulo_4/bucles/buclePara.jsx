@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function BucleParaLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>bucle para</h1>
         <Conseptos texto={`Los bucles para son similares que los bucles mientras solo que es una estructura más compacta que incluye la inicialización, la condición y la actualización de las variables de control en una única línea. Su estructura básica es la siguiente:`}/>

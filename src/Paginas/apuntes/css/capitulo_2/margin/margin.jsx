@@ -4,13 +4,11 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./margin.css";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Margin() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>margin</h1>
         <Conseptos texto={`Margin en HTML es un espacio externo añadido alrededor del borde de un elemento, separándolo de otros elementos.`}/>

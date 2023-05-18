@@ -5,6 +5,12 @@ import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
 
 function Capitulos() {
+  
+  const [activeItem, setActiveItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
 
   // esto es el aside
   const [showOptions, setShowOptions] = useState(false);
@@ -70,6 +76,7 @@ function Capitulos() {
         
         <nav>
           <ul>
+
             <li className="curso">
               <p onClick={()=>setLogica(!logica)}>logica</p>
               {
@@ -308,6 +315,9 @@ function Capitulos() {
                     {
                       cap3JavaScript && <div className="temas">
                         <Link to={"../javaScript/condicionales"}>Condicionales</Link>
+                        <Link to={"../javaScript/arreglos"}>arrglos</Link>
+                        <Link to={"../javaScript/arreglosAsociativos"}>arreglos <br />asociativos</Link>
+                        <Link to={"../javaScript/bucles"}>bucles</Link>
                       </div>
                     }
                   </div>

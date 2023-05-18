@@ -5,13 +5,11 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./grid.css";
 import Html from "../../../../../componentes/lenguajes/Html";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Grid() {
   return (  
     <>
-      <Menu2 />
-      <Capitulos />
+      <Menu2 />      
       <main>
         <h1>grid</h1>
         <Conseptos texto={`grid es muy similar a flex con la diferencia que se pueden crear filas , columnas como nosotros queramos.`}/>

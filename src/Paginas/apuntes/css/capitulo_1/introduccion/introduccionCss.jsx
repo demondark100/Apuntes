@@ -1,16 +1,13 @@
-import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
-import Capitulos from "../../../../../componentes/capitulos/aside";
-
+import Conseptos from "../../../../../componentes/conseptos/conseptos";
 
 function IntroduccionCss() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>introduccion a css</h1>
         <Conseptos texto={`css es una tecnologia / lenguaje que nos sirve para dar estilos a las cagitas que creamos con html.

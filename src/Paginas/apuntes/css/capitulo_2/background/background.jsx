@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Background() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>background</h1>
         <Conseptos texto={`Esta propiedad nos permite dar fondos a las cajas este tiene muchas proiedades que veremos a continuacion.`}/>

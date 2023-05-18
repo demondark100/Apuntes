@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -11,7 +10,6 @@ function Transform() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Transform</h1>
         <Conseptos texto={`Esta propiedad transforma al elemento de distintas formas que mas adelante veremos como , con mas adelante me refiero a ahora.`}/>

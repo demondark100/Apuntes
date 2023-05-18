@@ -5,14 +5,12 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import { Link } from "react-router-dom";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 
 function ResponsiveBasico() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>responsive(basico)</h1>
         <Conseptos texto={`"responsive" se refiere a las distintas resolucines que puede tener un sitio web por ejemplo este sitio web si te das cuenta cuando pongas el sitio web en modo mobile aparecera una opcion de menu pero cuando pongas en resolucines de pc desaparecera esa opcion de menu y se mostrara directamente las opciones.

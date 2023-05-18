@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function SectionArticle() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>section y article</h1>
         <Conseptos texto={`Con section y article estructuramos de mejor forma nuestro sitio web..`}/>

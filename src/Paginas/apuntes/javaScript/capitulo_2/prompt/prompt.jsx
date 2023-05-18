@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
@@ -9,7 +8,6 @@ function PromptLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>prompt</h1>
         <Conseptos texto={`Prompt es para pedir datos al usuario.`}/>

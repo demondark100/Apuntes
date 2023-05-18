@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Animation() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Animation</h1>
         <Conseptos texto={`Esto es similar a transition pero lleva otras reglas.

@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function Br() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>br</h1>
         <Conseptos texto={`Esta etiqueta sirve para dar saltos en linea por ejemplo al escribir algo largo , esta etiqueta no necesita una etiqueta de cierre como las otras etiquetas.

@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function Border() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main> 
         <h1>border</h1>
         <Conseptos texto={`Esta propiedad se encarga de darle el borde a las cajas.`}/>

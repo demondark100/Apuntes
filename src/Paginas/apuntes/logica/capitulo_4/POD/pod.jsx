@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function PodLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>programacion orientada a objetos (POD)</h1>
         <Conseptos texto={`La programación orientada a objetos (POO) es como organizar tu código de forma más amigable. En lugar de tener un montón de líneas de código sueltas, la POO te permite agruparlas en objetos que representan cosas del mundo real. Imagina que estás construyendo un juego y tienes un objeto para el jugador, otro para los enemigos y otro para los objetos que se pueden recolectar. Cada objeto tiene sus propias características (como la vida del jugador) y acciones (como el movimiento de los enemigos). La POO te ayuda a mantener todo ordenado y a reutilizar el código fácilmente. Es como tener piezas de Lego que puedes combinar y reutilizar para construir cosas geniales.`}/>

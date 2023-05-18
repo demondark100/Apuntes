@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -10,7 +9,6 @@ function CubicBezier() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Cubic Bezier</h1>
         <Conseptos texto={`Esta es una propiedad que se trabaja en el "transition-timing-function" y el "animation-timing-function" esto nos sirve para cambiar la velociadad de las animaciones y transisiones que tiene el elemento a travez de curvas.

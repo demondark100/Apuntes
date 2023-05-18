@@ -5,8 +5,6 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
-import Capitulos from "../../../../../componentes/capitulos/aside";
-
 
 function Importante() {
   const mensajeHtml = useRef(null);
@@ -27,7 +25,6 @@ function Importante() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>importante</h1>
         <Conseptos texto={`Para empezar para crear un archivo html debmos crear un archivo con la extencion .html por ejemplo.

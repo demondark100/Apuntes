@@ -1,7 +1,6 @@
 import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
-import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
@@ -9,7 +8,6 @@ function EnlazarJavaScript() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>enlazar javaScript</h1>
         <Conseptos texto={`Para poder usar javaScript es necesario enlazar javaScript a html.

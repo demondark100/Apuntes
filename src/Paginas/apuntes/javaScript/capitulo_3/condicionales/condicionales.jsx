@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
@@ -9,7 +8,6 @@ function CondicionalesJavaScript() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Condicionales</h1>
         <Conseptos texto={`Las condicionales en este lenguaje tienen la siguiente sintaxis:

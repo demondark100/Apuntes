@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function JavaScriptBasico() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>javaScript basico</h1>
         <h2>comentar codigo</h2>

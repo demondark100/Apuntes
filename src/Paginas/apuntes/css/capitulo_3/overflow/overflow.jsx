@@ -7,7 +7,6 @@ import Confirmar from "./confirmar";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Overflow() {
   const contenedor_overflow = useRef(null);
@@ -36,7 +35,6 @@ function Overflow() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>

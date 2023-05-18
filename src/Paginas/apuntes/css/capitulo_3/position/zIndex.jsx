@@ -5,13 +5,11 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./position.css";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function Zindex() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>z-index</h1>
         <Conseptos texto={`z-index es para controlar las capas si te diste cuenta en position absolute y position relative habian cajas que se sobreponian en sima de otras pero eso podemos controlarlo con z-index.

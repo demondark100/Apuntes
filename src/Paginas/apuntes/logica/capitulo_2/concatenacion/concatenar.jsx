@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -11,7 +10,6 @@ function ConcatenarLogica() {
     <>
       <Menu2 />
       <MensajeModal texto={`Todo el codigo de esta parte tambien lo puedes pegar en la consola del navegador.`}/>
-      <Capitulos />
       <main>
         <h1>Concatenacion</h1>
         <Conseptos  texto={`La concatenacion es para unir cadenas de texto(strings).`}/>

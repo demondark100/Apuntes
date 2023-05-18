@@ -1,4 +1,3 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -8,7 +7,6 @@ function FuncionesLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>Funciones</h1>
         <Conseptos texto={`Las funciones son un bloque de codigo que podemos reutulizar cuantas veces queramos por ejemplo una funcion nos puede ahorrar muchas lineas de codigo , evita que escribamos el codigo una y otra y otra vez.`}/>

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -9,7 +8,6 @@ function BuclesLogica() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>bucles</h1>
         <Conseptos texto={`Los bucles se encargan de recorrer arreglos , hacer una accion de forma repetitiva , etc.`}/>

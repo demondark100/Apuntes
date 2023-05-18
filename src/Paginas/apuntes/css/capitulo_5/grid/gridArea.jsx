@@ -4,13 +4,11 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import Capitulos from "../../../../../componentes/capitulos/aside";
 
 function GridArea() {
   return (  
     <>
       <Menu2 />
-      <Capitulos />
       <main>
         <h1>grid area</h1>
         <h3>html</h3>
