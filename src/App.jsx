@@ -143,6 +143,7 @@ import Capitulos from './componentes/capitulos/aside';
 import Menu2 from './componentes/menus/Menu2';
 import Footer from './componentes/menus/Footer';
 import BuclesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/bucles/bucles';
+import FuncionesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/funciones/funciones';
 
 
 
@@ -314,6 +315,8 @@ function App() {
             <Route path='javaScript/arreglos' element={<ArreglosJavaScript />}/>
             <Route path='javaScript/arreglosAsociativos' element={<ArreglosAsJavaScript />}/>
             <Route path='javaScript/bucles' element={<BuclesJavaScript />}/>
+            <Route path='javaScript/funciones' element={<FuncionesJavaScript />}/>
+            
             
 
 

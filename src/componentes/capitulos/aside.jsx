@@ -329,6 +329,7 @@ function Capitulos() {
                         <Link to={"../javaScript/arreglos"}>arrglos</Link>
                         <Link to={"../javaScript/arreglosAsociativos"}>arreglos <br />asociativos</Link>
                         <Link to={"../javaScript/bucles"}>bucles</Link>
+                        <Link to={"../javaScript/funciones"}>funciones</Link>
                       </div>
                     }
                   </div>
