@@ -330,6 +330,7 @@ function Capitulos() {
                         <Link to={"../javaScript/arreglosAsociativos"}>arreglos <br />asociativos</Link>
                         <Link to={"../javaScript/bucles"}>bucles</Link>
                         <Link to={"../javaScript/funciones"}>funciones</Link>
+                        <Link to={"../javaScript/PODJavaScript"}>programacion <br /> orientado a <br /> objetos(POD)</Link>
                       </div>
                     }
                   </div>

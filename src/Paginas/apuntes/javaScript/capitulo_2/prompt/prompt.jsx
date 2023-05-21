@@ -21,20 +21,6 @@ function PromptLogica() {
         <JavaScropt codigo={`let numero = prompt("dime un numero cualquiera.");
 console.log(numero);`}/>
         <Conseptos texto={`El valor que pusimos en el mensaje que nos motro prompt se guardara en la variable numero.`}/>
-        <h2>typeof</h2>
-        <Conseptos texto={`La funcion ("typeof"/"tipode") es para saber que tipo de dato es un valor.
-
-si es cadnena de texto es: "string".
-si es dato numerico es: "number".
-si es booleano es: "boolean"`}/>
-        <JavaScropt codigo={`let text = "una cadena de texto";
-let number = 18;
-let booleano = true;
-console.log(            //resultados
-  typeof(text),           //string
-  typeof(number),         //number
-  typeof(booleano)        //boolean
-);`}/>
         <h2>string</h2>
         <Conseptos texto={`Todo lo que se escribe dentro del espacio que nos ofrece prompt es una string osea que si en un prompt escribimos un numero igual sera una string.`}/>
         <h3>ejemplo</h3>
@@ -51,11 +37,7 @@ let sumarNumeros = numero1 + numero2;
 console.log(sumarNumeros);`}/>
         <Conseptos texto={`Como te das cuenta el valor de las variables se concatenan mas no se suman como nosotros queremos.
 
-Felizmente javaScript proporciona una funcion que se encarga de concertir una string en un dato numerico.`}/>
-        <h2>parseInt()</h2>
-        <Conseptos texto={`Esta funcion se encarga de convertir las strings que adentro tienen numero a convertirlos a datos numericos.`}/>
-        <JavaScropt codigo={`parseInt("15")`}/>
-        <Conseptos texto={`Con esta funcion ahora si podemos sumar dos valores de prompt.`}/>
+Felizmente javaScript proporciona una funcion que se encarga de concertir una string en un dato numerico. ¿recuerdas parseInt?`}/>
         <JavaScropt codigo={`let numero1 = prompt("Dime el numero 1");
 let numero2 = prompt("dime el numero 2");
 let sumar = parseInt(numero1) + parseInt(numero2);

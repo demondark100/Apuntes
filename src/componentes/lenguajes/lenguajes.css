@@ -1,24 +1,27 @@
 .contentLenguaje{
   display: block;
   margin: auto;
-  margin: 14% 0 14% 0 !important;
   width: 90% !important;
-
+  max-height: 1800px;
+  max-width: 1800px;
 }
 
+
 .lenguajes{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   font-size: 1em;
   overflow: auto;
   max-height: 35vh;
   max-width: 1800px;
+  margin-top: 3% !important;
 }
 
 
 /* scroll */
-.scroll{
-  margin-top: -5%;
-}
+
+
 
 .scroll::-webkit-scrollbar {
   height: .5vh;
@@ -45,15 +48,13 @@
 
 .lenguajes button{
   position: sticky;
+  top: 0;
   font-size: 1em;
-  left: 64%;
-  top: 8%;
-  background-color: transparent;
   color: #3c7f6c;
   text-shadow: 0 0 3vh #3c7f6c;
   transition-duration: .5s;
-  background-color: #000;
-  opacity: .4;
+  text-align: center;
+  background-color: #251e1e;
 }
 .lenguajes button:hover{
   color: #9efaff;
@@ -62,20 +63,8 @@
   opacity: 1;
 }
 
-
-@media (min-width: 750px) {
-  .contentLenguaje{
-    margin: 8% 0 2% 0 !important;
-    max-height: 1800px;
-    max-width: 1800px;
-  }
-  .lenguajes{
-    width: 100%;
-    font-size: 1.5em;
-  }
+@media(min-width:750px){
   .lenguajes button{
-    margin-left: 75%;
-    margin-top: 2%;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 }

@@ -144,6 +144,9 @@ import Menu2 from './componentes/menus/Menu2';
 import Footer from './componentes/menus/Footer';
 import BuclesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/bucles/bucles';
 import FuncionesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/funciones/funciones';
+import FunFlecha from './Paginas/apuntes/javaScript/capitulo_3/funciones/funFlecha';
+import JavaScriptFun from './Paginas/apuntes/javaScript/capitulo_2/javaSCriptFun/javaSCriptFun';
+import PODJavaScript from './Paginas/apuntes/javaScript/capitulo_3/POD/POD';
 
 
 
@@ -306,6 +309,7 @@ function App() {
             <Route path='javaScript/variables' element={<VariablesJavaScript />}/>
               <Route path='javaScript/variables/bloqueDeCodigo' element={<BloqueCJavaScript />}/>
             <Route path='javaScript/prompt' element={<PromptLogica />}/>
+            <Route path='javaScript/javaSCriptFun' element={<JavaScriptFun />}/>
             <Route path='javaScript/operadores' element={<OperadoresJavaScript />}/>
             <Route path='javaScript/concatenacion' element={<ConcatenacionJavaScript />}/>
             <Route path='javaScript/camelCase' element={<CamelCaseJavaScript />}/>
@@ -316,6 +320,8 @@ function App() {
             <Route path='javaScript/arreglosAsociativos' element={<ArreglosAsJavaScript />}/>
             <Route path='javaScript/bucles' element={<BuclesJavaScript />}/>
             <Route path='javaScript/funciones' element={<FuncionesJavaScript />}/>
+              <Route path='javaScript/funciones/funcionFlecha' element={<FunFlecha />}/>
+            <Route path='javaScript/PODJavaScript' element={<PODJavaScript />}/>
             
             
 
