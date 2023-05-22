@@ -147,6 +147,9 @@ import FuncionesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/funcion
 import FunFlecha from './Paginas/apuntes/javaScript/capitulo_3/funciones/funFlecha';
 import JavaScriptFun from './Paginas/apuntes/javaScript/capitulo_2/javaSCriptFun/javaSCriptFun';
 import PODJavaScript from './Paginas/apuntes/javaScript/capitulo_3/POD/POD';
+import MetodosCadenaJavaScript from './Paginas/apuntes/javaScript/capitulo_4/metodosCadena/metodosCadena';
+import MetodosArrJavaScript from './Paginas/apuntes/javaScript/capitulo_4/metodosArreglo/metodosArr';
+import ObjectMathJavaScript from './Paginas/apuntes/javaScript/capitulo_4/objectMath/objectMath';
 
 
 
@@ -323,6 +326,13 @@ function App() {
               <Route path='javaScript/funciones/funcionFlecha' element={<FunFlecha />}/>
             <Route path='javaScript/PODJavaScript' element={<PODJavaScript />}/>
             
+            {/* capitulo 4 */}
+              <Route path='javaScript/metodosCadena' element={<MetodosCadenaJavaScript />}/>
+              <Route path='javaScript/metodosArreglo' element={<MetodosArrJavaScript />}/>
+              <Route path='javaScript/objectMath' element={<ObjectMathJavaScript />}/>
+              
+              
+
             
 
 

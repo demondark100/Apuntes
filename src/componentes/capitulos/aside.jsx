@@ -71,6 +71,7 @@ function Capitulos() {
   const [cap1JavaScript, setCap1JavaScript] = useState(false);
   const [cap2JavaScript, setCap2JavaScript] = useState(false);
   const [cap3JavaScript, setCap3JavaScript] = useState(false);
+  const [cap4JavaScript, setCap4JavaScript] = useState(false);
 
   return (  
     <>
@@ -331,6 +332,17 @@ function Capitulos() {
                         <Link to={"../javaScript/bucles"}>bucles</Link>
                         <Link to={"../javaScript/funciones"}>funciones</Link>
                         <Link to={"../javaScript/PODJavaScript"}>programacion <br /> orientado a <br /> objetos(POD)</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap4JavaScript(!cap4JavaScript)}>capitulo 4</p>
+                    {
+                      cap4JavaScript && <div className="temas">
+                        <Link to={"../javaScript/metodosCadena"}>Metodos de <br /> cadena</Link>
+                        <Link to={"../javaScript/metodosArreglo"}>Metodos de <br />arreglos</Link>
+                        <Link to={"../javaScript/objectMath"}>object Math</Link>
                       </div>
                     }
                   </div>

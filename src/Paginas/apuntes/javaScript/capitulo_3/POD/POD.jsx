@@ -184,11 +184,57 @@ console.log(mesa.acceder)`}/>
         <h2>¡Proyecto!</h2>
         <Conseptos texto={`Mejorar la calculadora pero ahora con la programacion orientada a objetos.`}/>
         <Ejercicios 
+          texto1={"Que mamada como se supone que se puede hacer eso? (mostrar pistas)"}
+          texto2={"No son necesarias las pistas soy mas listo que Kira(ocultar pistas)"}
+          codigo={<JavaScropt codigo={`// Se isa POD.
+// se usa bucles.
+// se usa variables.
+// se usa operadores matematicos.`}/>}
+        />
+        <Ejercicios 
           texto1={"No pude ni con la calculadora 1 :v(mostrar solucion)"}
           texto2={"Si puedo con cualquier mamada xd(ocultar solucion)"}
           codigo={<JavaScropt codigo={`class Calculadora{
-  
-}`}/>}
+  constructor(){
+    this.dato = 0;
+    this.num1 = 0;
+    this.num2 = 0;
+    this.resultado = 0;
+  }
+  operacion(n1,n2){
+    if(this.dato === 1) this.resultado = n1 + n2;
+    else if(this.dato === 2) this.resultado = n1 - n2;
+    else if(this.dato === 2) this.resultado = n1 / n2;
+    else if(this.dato === 4) this.resultado = n1 * n2;
+  }
+  calcular(){
+    this.dato = parseInt(prompt(\`¿Que operacion deseas hacer?
+    1. sumar
+    2. restar
+    3. dividir
+    4. multiplicar\`));
+    if(this.dato > 4){
+        alert("Te di cuatro pinches opciones no mas >:v.")
+    } else {
+        this.num1 = parseInt(prompt("¿Cual es el primer numero?"));
+        this.num2 = parseInt(prompt("¿Cual es el segundo numero?"));
+        this.operacion(this.num1,this.num2);
+        alert(\`El resultado es: ${"${this.resultado}"}\`)
+    }
+    while(isNaN(this.num1 && this.num2)){
+        this.num1 = parseInt(prompt("¿Cual es el primer numero?"));
+        this.num2 = parseInt(prompt("¿Cual es el segundo numero?"));
+        this.operacion(this.num1,this.num2);
+        if(isNaN(this.resultado)){
+            alert("Proporciona un dato numerico.");
+        } else {
+            alert(\`El resultado es: ${"${this.resultado}"}\`)
+        }
+    }
+  }
+}
+const calculadora = new Calculadora("+");
+calculadora.calcular();`}/>}
         />
       </main>
       <Footer/>
