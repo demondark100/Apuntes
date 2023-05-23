@@ -73,6 +73,7 @@ function Capitulos() {
   const [cap3JavaScript, setCap3JavaScript] = useState(false);
   const [cap4JavaScript, setCap4JavaScript] = useState(false);
   const [cap5JavaScript, setCap5JavaScript] = useState(false);
+  const [cap6JavaScript, setCap6JavaScript] = useState(false);
 
   return (  
     <>
@@ -358,6 +359,23 @@ function Capitulos() {
                         <Link to={"../javaScript/atributoGlobal"}>atributos <br />globales</Link>
                         <Link to={"../javaScript/attrInput"}>atributos de <br /> inputs</Link>
                         <Link to={"../javaScript/clasesMet"}>clases y <br /> metodos</Link>
+                        <Link to={"../javaScript/obtenMod"}>obtencion y <br /> modificacion de <br /> contenido</Link>
+                        <Link to={"../javaScript/creacionEle"}>creacion de <br /> elementos</Link>
+                        <Link to={"../javaScript/obChild"}>obtencion de <br /> childs</Link>
+                        <Link to={"../javaScript/propChild"}>propiedades <br /> de childs</Link>
+                        <Link to={"../javaScript/propPar"}>propiedades de <br /> parents</Link>
+                        <Link to={"../javaScript/PropSi"}>propiedades de <br /> sibling</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap6JavaScript(!cap6JavaScript)}>capitulo 6</p>
+                    {
+                      cap6JavaScript && <div className="temas">
+                        <Link to={"../javaScript/window1"}>window 1</Link>
+                        <Link to={"../javaScript/window2"}>window 2</Link>
+                        <Link to={"../javaScript/window3"}>window 3</Link>
                       </div>
                     }
                   </div>

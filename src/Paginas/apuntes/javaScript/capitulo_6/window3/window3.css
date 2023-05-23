@@ -1,0 +1,59 @@
+.content_grafico{
+  margin-top: 25px;
+  background-color: #000000;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+}
+.content_grafico p{
+  font-size: 10px;
+}
+
+.protocolo{
+  background-color: #6f736e88;
+}
+.protocolo_1{
+  color: #abc041;
+}
+.protocolo_2{
+  color: #5caed4;
+}
+
+
+.hostaname{
+  background-color: #055b9d88;
+}
+.hostaname_1{
+  color: #f00;
+}
+.hostaname_2{
+  color: #5caed4;
+}
+
+
+.patname{
+  background-color: #720d0daa;
+}
+.patname_1{
+  color: #314bf8;
+}
+.patname_2{
+  color: #5caed4;
+}
+
+
+.content_href{
+  text-align: center; 
+  width: 300%;
+  background-color: #0f0;
+}
+.href_1{
+  color: #06527a;
+}
+
+@media(min-width:820px){
+  .content_grafico p {
+      font-size: 25px;
+  }
+}

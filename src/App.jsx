@@ -156,6 +156,15 @@ import CambiarAttrJavaScript from './Paginas/apuntes/javaScript/capitulo_5/cambi
 import AtributosGlobalesJs from './Paginas/apuntes/javaScript/capitulo_5/atributoGlobal/atributoGlobal';
 import AtributosInputsJs from './Paginas/apuntes/javaScript/capitulo_5/attrInputs/attrrINputs';
 import ClasesMetJs from './Paginas/apuntes/javaScript/capitulo_5/clases y metodos/claseMet';
+import ObtenModJs from './Paginas/apuntes/javaScript/capitulo_5/obtencionMod/obtenMod';
+import CreacionEleJs from './Paginas/apuntes/javaScript/capitulo_5/creacionEle/creacionEle';
+import ObModChildJs from './Paginas/apuntes/javaScript/capitulo_5/obtencion y mod de childs/obModChild';
+import PropChildJs from './Paginas/apuntes/javaScript/capitulo_5/propiedades de childs/propChild';
+import PropParJs from './Paginas/apuntes/javaScript/capitulo_5/propiedades parents/propPar';
+import PropSiJs from './Paginas/apuntes/javaScript/capitulo_5/propiedades de siblings/poropSi';
+import Window1Js from './Paginas/apuntes/javaScript/capitulo_6/window1';
+import Window2Js from './Paginas/apuntes/javaScript/capitulo_6/window2';
+import Window3Js from './Paginas/apuntes/javaScript/capitulo_6/window3/window3';
 
 
 
@@ -344,11 +353,18 @@ function App() {
               <Route path='javaScript/atributoGlobal' element={<AtributosGlobalesJs />}/>
               <Route path='javaScript/attrInput' element={<AtributosInputsJs />}/>
               <Route path='javaScript/clasesMet' element={<ClasesMetJs />}/>
+              <Route path='javaScript/obtenMod' element={<ObtenModJs />}/>
+              <Route path='javaScript/creacionEle' element={<CreacionEleJs />}/>
+              <Route path='javaScript/obChild' element={<ObModChildJs />}/>
+              <Route path='javaScript/propChild' element={<PropChildJs />}/>
+              <Route path='javaScript/propPar' element={<PropParJs />}/>
+              <Route path='javaScript/PropSi' element={<PropSiJs />}/>
               
-              
-              
-              
-
+            
+            {/* capitulo 6 */}
+              <Route path='javaScript/window1' element={<Window1Js />}/>
+              <Route path='javaScript/window2' element={<Window2Js />}/>
+              <Route path='javaScript/window3' element={<Window3Js />}/>
             
 
 
