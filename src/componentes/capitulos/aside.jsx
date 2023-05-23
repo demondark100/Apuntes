@@ -72,6 +72,7 @@ function Capitulos() {
   const [cap2JavaScript, setCap2JavaScript] = useState(false);
   const [cap3JavaScript, setCap3JavaScript] = useState(false);
   const [cap4JavaScript, setCap4JavaScript] = useState(false);
+  const [cap5JavaScript, setCap5JavaScript] = useState(false);
 
   return (  
     <>
@@ -343,6 +344,20 @@ function Capitulos() {
                         <Link to={"../javaScript/metodosCadena"}>Metodos de <br /> cadena</Link>
                         <Link to={"../javaScript/metodosArreglo"}>Metodos de <br />arreglos</Link>
                         <Link to={"../javaScript/objectMath"}>object Math</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap5JavaScript(!cap5JavaScript)}>capitulo 5</p>
+                    {
+                      cap5JavaScript && <div className="temas">
+                        <Link to={"../javaScript/DOM"}>DOM</Link>
+                        <Link to={"../javaScript/SelectoresJavaScript"}>selectores de <br /> elementos</Link>
+                        <Link to={"../javaScript/atributosJs"}>atributos</Link>
+                        <Link to={"../javaScript/atributoGlobal"}>atributos <br />globales</Link>
+                        <Link to={"../javaScript/attrInput"}>atributos de <br /> inputs</Link>
+                        <Link to={"../javaScript/clasesMet"}>clases y <br /> metodos</Link>
                       </div>
                     }
                   </div>

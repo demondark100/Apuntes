@@ -150,6 +150,12 @@ import PODJavaScript from './Paginas/apuntes/javaScript/capitulo_3/POD/POD';
 import MetodosCadenaJavaScript from './Paginas/apuntes/javaScript/capitulo_4/metodosCadena/metodosCadena';
 import MetodosArrJavaScript from './Paginas/apuntes/javaScript/capitulo_4/metodosArreglo/metodosArr';
 import ObjectMathJavaScript from './Paginas/apuntes/javaScript/capitulo_4/objectMath/objectMath';
+import DOMJavaScript from './Paginas/apuntes/javaScript/capitulo_5/DOM/DOM';
+import SelectoresDOMJavaScript from './Paginas/apuntes/javaScript/capitulo_5/slectores/selectores';
+import CambiarAttrJavaScript from './Paginas/apuntes/javaScript/capitulo_5/cambiarAttr/cambiarAttr';
+import AtributosGlobalesJs from './Paginas/apuntes/javaScript/capitulo_5/atributoGlobal/atributoGlobal';
+import AtributosInputsJs from './Paginas/apuntes/javaScript/capitulo_5/attrInputs/attrrINputs';
+import ClasesMetJs from './Paginas/apuntes/javaScript/capitulo_5/clases y metodos/claseMet';
 
 
 
@@ -330,6 +336,16 @@ function App() {
               <Route path='javaScript/metodosCadena' element={<MetodosCadenaJavaScript />}/>
               <Route path='javaScript/metodosArreglo' element={<MetodosArrJavaScript />}/>
               <Route path='javaScript/objectMath' element={<ObjectMathJavaScript />}/>
+            
+            {/* capitulo 5 */}
+              <Route path='javaScript/DOM' element={<DOMJavaScript />}/>
+              <Route path='javaScript/SelectoresJavaScript' element={<SelectoresDOMJavaScript />}/>
+              <Route path='javaScript/atributosJs' element={<CambiarAttrJavaScript />}/>
+              <Route path='javaScript/atributoGlobal' element={<AtributosGlobalesJs />}/>
+              <Route path='javaScript/attrInput' element={<AtributosInputsJs />}/>
+              <Route path='javaScript/clasesMet' element={<ClasesMetJs />}/>
+              
+              
               
               
 
