@@ -165,6 +165,9 @@ import PropSiJs from './Paginas/apuntes/javaScript/capitulo_5/propiedades de sib
 import Window1Js from './Paginas/apuntes/javaScript/capitulo_6/window1';
 import Window2Js from './Paginas/apuntes/javaScript/capitulo_6/window2';
 import Window3Js from './Paginas/apuntes/javaScript/capitulo_6/window3/window3';
+import EventListenJs from './Paginas/apuntes/javaScript/capitulo_7/enventListen';
+import EventFujoJs from './Paginas/apuntes/javaScript/capitulo_7/eventFlujo';
+import MouseEventJs from './Paginas/apuntes/javaScript/capitulo_7/mouseEvent/mouseEvent';
 
 
 
@@ -366,6 +369,11 @@ function App() {
               <Route path='javaScript/window2' element={<Window2Js />}/>
               <Route path='javaScript/window3' element={<Window3Js />}/>
             
+            {/* capitulo 7 */}
+              <Route path='javaScript/eventListen' element={<EventListenJs />}/>
+              <Route path='javaScript/eventFlujo' element={<EventFujoJs />}/>
+              <Route path='javaScript/MouseEvent' element={<MouseEventJs />}/>
+              
 
 
 

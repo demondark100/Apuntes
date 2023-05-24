@@ -74,6 +74,7 @@ function Capitulos() {
   const [cap4JavaScript, setCap4JavaScript] = useState(false);
   const [cap5JavaScript, setCap5JavaScript] = useState(false);
   const [cap6JavaScript, setCap6JavaScript] = useState(false);
+  const [cap7JavaScript, setCap7JavaScript] = useState(false);
 
   return (  
     <>
@@ -376,6 +377,17 @@ function Capitulos() {
                         <Link to={"../javaScript/window1"}>window 1</Link>
                         <Link to={"../javaScript/window2"}>window 2</Link>
                         <Link to={"../javaScript/window3"}>window 3</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap7JavaScript(!cap7JavaScript)}>capitulo 7</p>
+                    {
+                      cap7JavaScript && <div className="temas">
+                        <Link to={"../javaScript/eventListen"}>eventos de <br /> escucha</Link>
+                        <Link to={"../javaScript/eventFlujo"}>flujo de <br /> eventos</Link>
+                        <Link to={"../javaScript/MouseEvent"}>mouse events</Link>
                       </div>
                     }
                   </div>
