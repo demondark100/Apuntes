@@ -18,7 +18,6 @@ function Especificidad() {
         <Conseptos texto={`para continuar debemos saber que son las cascadas en css bueno las cascadas toman importancia al ultimo estilo que hayamos definido.
 ejemplo:`}/>
         <h2>Cascadas</h2>
-        <h3>html</h3>
         <Html codigo={`<b>
   esto no sera verde
 </b>
@@ -44,11 +43,9 @@ b{
         <Conseptos texto={`bueno la especificidad viene a solucionar un problema de cascadas por ejemlo si queremos que un elemento no cambie por nada del mundo la especificidad nos permite hecer eso ahora veremos del menos importante al mas importante.`}/>
         <h2>elementos</h2>
         <Conseptos texto={`aqui veras como es que class tiene mas poder que una seleccion por elemento.`} />
-        <h2>html</h2>
         <Html codigo={`<h6 subtitulo="feliz" class="subtitulo_1">
   este es un subtitulo feliz :D.
 </h6>`}/>
-        <h3>css</h3>
         <Css codigo={`[subtitulo="feliz"]{
   color: gray;
 }
@@ -74,7 +71,6 @@ a que su gerarquia es demasiado baja. */`} />
 
         <h2>ID</h2>
         <Conseptos texto={`si nos damos cuenta en la imagen el id es superior a las clases , atributos y elementos/pseudoclases.`}/>
-        <h3>html</h3>
         <Html codigo={`<h6 id="otro_subtitulo_feliz" class="subtitulo_2">
   otro subtitulo feliz :D.
 </h6>`}/>
@@ -102,12 +98,11 @@ clase pero si al del id ya que es superior.  */`}/>
         <h2>estilo en linea</h2>
         <Conseptos texto={`los estilos en linea se usan con el atributo style y es superior a los demas osea los id , clases , atributos , elementos , universal.
 no es recomendable trabajar con esto debido a que es mejor darle estilo a travez de css y no desde html ya que se formara un codigo espagueti osea un dodigo poco legible.`} />
-        
-        <h3>html</h3>
+
         <Html codigo={`<h6  class="subtitulo_clase" id="subtitulo_3" style="color: red;">
   un subtitulo medio feliz :D.
 </h6>`}/>
-        <h3>css</h3>
+
         <Css codigo={`.subtitulo_clase{
   color: yellow;
 }
@@ -130,11 +125,11 @@ superiores a los demas  */
 
         <h2>important</h2>
         <Conseptos texto={`el important le gana a todos absolutamente a todos incluso a Goku no importa si lo pones en el mas debil siempre hara caso al important.`}/>
-        <h3>html</h3>
+
         <Html codigo={`<h6 id="ultilo_subtitulo" class="otro_subtitulo" style="color: blue;">
   este subtitulos solo hara caso al important
 </h6>`}/>
-        <h3>css</h3>
+
         <Css codigo={`#ultilo_subtitulo{
   color: green;
 }

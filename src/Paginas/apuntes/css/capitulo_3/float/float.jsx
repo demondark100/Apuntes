@@ -17,7 +17,7 @@ function Float() {
 float: right; posisionara un contenedor a la derecha.
 
 float: left; posisionara un contenedor a la izquierda.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_float1">
   <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus molestias aut atque odit iure mollitia ipsum dolores maiores, sed ex natus exercitationem recusandae laudantium facilis fuga sunt nam asperiores ratione. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus eaque ipsum nesciunt doloremque facilis temporibus quae odit dolore dicta aut totam culpa harum dignissimos, quod cupiditate ipsam, asperiores quasi?
@@ -28,7 +28,7 @@ float: left; posisionara un contenedor a la izquierda.`}/>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ab labore tenetur est. Sint nostrum amet animi impedit repellat enim quos ipsam! Exercitationem iure explicabo vero temporibus cumque delectus! Nisi.
   </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_float1{
   background-color: yellow;
   width: 50%;
@@ -54,7 +54,7 @@ float: left; posisionara un contenedor a la izquierda.`}/>
         <Conseptos texto={`Como te das cuenta estamos cambiando de posision a los contenedores uno de derecha a izquierda y otro de izquierda a derecha lo malo de esto esque trae problemas de altura.`}/>
 
         <Conseptos texto={`Un ejemplo mas del como usar float de una buena forma.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_float_ejemplo">
   <img class="imagen_Akame" src="https://i.pinimg.com/originals/e0/fa/76/e0fa76944eea642158cc9b071cf7d3ee.jpg" alt="akame" title="akame">
   <h2>Akame</h2>
@@ -66,7 +66,7 @@ float: left; posisionara un contenedor a la izquierda.`}/>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dignissimos quia placeat ullam dolor deserunt ipsum ex, nemo nostrum ad qui nisi, odio atque quibusdam laboriosam ab perspiciatis! Cumque, tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus pariatur quos
   </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_float_ejemplo{
   border: 2px solid gray;
   width: 85%;

@@ -25,11 +25,12 @@ export default function Html({ codigo }) {
 
   return (
     <div className='contentLenguaje'>
-      <div className="lenguajes scroll">
-        <button onClick={copiar}>
+      <h3 className='titleLengauje'>html</h3>
+      <button className='copiarCodigo'  onClick={copiar}>
           <FontAwesomeIcon icon={copiado ? faCheck : faCopy} />
           {copiado ? ' Copiado' : ' Copiar'}
         </button>
+      <div className="lenguajes scroll">
         <pre>
           <code className="language-html scroll" ref={lenguaje}>
             {codigo}

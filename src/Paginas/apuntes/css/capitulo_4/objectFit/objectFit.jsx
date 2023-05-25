@@ -168,11 +168,11 @@ function ObjetFit() {
 
         <h2>contain</h2>
         <Conseptos texto={`"contain" hace que la imagen se ponga a su resolucion real por mas que el contenedor sea demasiado grande.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="contain">
   <img src="https://i.pinimg.com/originals/55/d0/29/55d02905b888ffbf8967484aa7875e34.jpg" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.contain{
   margin: auto;
   width: 85%;
@@ -184,13 +184,13 @@ function ObjetFit() {
   width: 100%;
   object-fit: contain;
 }`}/>
-        <h3>sin contain</h3>
+        
         <div className="website">
           <div className="contain_">
             <img alt="escoje una imagen" className="mostrar_img imagen__0" />
           </div>
         </div>
-        <h3>con contain</h3>
+        
         <div className="website">
         <div className="contain_">
             <img alt="escoje una imagen" className="mostrar_img imagen__1" />
@@ -199,11 +199,11 @@ function ObjetFit() {
 
         <h2>cover</h2>
         <Conseptos texto={`"cover" ajuata a la imagen al tamaño de su contenedor recortandola para que se pueda ver bien.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="cover">
   <img src="https://pm1.narvii.com/7858/b1ce484056913bc7484e401d0ce7c1e4ee727a81r1-736-736v2_uhq.jpg" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.cover{
   margin: auto;
   width: 85%;
@@ -215,13 +215,13 @@ function ObjetFit() {
   width: 100%;
   object-fit: cover;
 }`}/>
-        <h3>sin cover</h3>
+        
         <div className="website">
           <div className="cover_">
             <img alt="escoje una imagen" className="mostrar_img imagen__2" />
           </div>
         </div>
-        <h3>con cover</h3>
+        
         <div className="website">
           <div className="cover">
             <img alt="escoje una imagen" className="mostrar_img imagen__3" />
@@ -230,11 +230,11 @@ function ObjetFit() {
 
         <h2>none</h2>
         <Conseptos texto={`"none" ajusta a la imagen pero con su resolucion a escala real osea que si la imagen mide 200x400 se ajustara a su resolucion real.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="none">
   <img src="https://i.pinimg.com/originals/53/9e/7d/539e7deaa1c884043b565b2cf529b042.jpg" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.none{
   margin: auto;
   width: 85%;
@@ -246,13 +246,13 @@ function ObjetFit() {
   width: 100%;
   object-fit: none;
 }`}/>
-        <h3>sin none</h3>
+        
         <div className="website">
           <div className="none_">
             <img alt="escoje una imagen" className="mostrar_img imagen__4" />
           </div>
         </div>
-        <h3>con none</h3>
+        
         <div className="website">
           <div className="none">
             <img alt="escoje una imagen" className="mostrar_img imagen__5" />
@@ -266,11 +266,11 @@ Puedes ponerle cualquier propiedad.
 top , right , bottom , left tambien puedes usar los em ejemplo "-15em" etc.
 
 escoje una imagen`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="position">
   <img src="https://i.pinimg.com/originals/55/d0/29/55d02905b888ffbf8967484aa7875e34.jpg" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.position{
   margin: auto;
   width: 85%;

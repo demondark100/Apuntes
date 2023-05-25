@@ -18,7 +18,7 @@ function Grid() {
         </div>
         <img className="gridFlexImg" src="https://cdn-media-1.freecodecamp.org/images/HHwxqz2N4bNksz9YwcMBAtD0z9TTCxeNXNBS" alt="gridFlexImg" />
         <h2>grid</h2>
-        <h3>grid container</h3>
+        
         <Conseptos texto={`Esto es todo el contenedor de las filas y columnas.`}/>
         <div className="website">
           <div className="cuadrado_grid">
@@ -34,7 +34,7 @@ function Grid() {
         <img className="imagenGrid1" src="https://www.guineapigcagesstore.com/Shared/Images/Product/Standard-Grid/standard-grid.jpg" alt="imagenGrid1" />
         <h2>display grid</h2>
         <Conseptos texto={`Con esto indicaremos que el contenedor se vuelva grid los cambios al igual que flex se notaran en los elementos hijos.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_content">
     <div>.</div>
     <div>.</div>
@@ -43,7 +43,7 @@ function Grid() {
     <div>.</div>
     <div>.</div>
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`.grid_content{
     display: grid;
 }

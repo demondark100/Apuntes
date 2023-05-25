@@ -1,6 +1,7 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
@@ -11,12 +12,11 @@ function FunFlecha() {
       <main>
         <h1>funcion flecha</h1>
         <Conseptos texto={`La funcion flecha es para poder escribir codigo mas simple dentro de la funcion a parte de que su sintaxis no necesita de ninguna palabra clave como "function"`}/>
-        <h2>sintaxis</h2>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`crear variable = (parametros) => {
+
+        <Sintaxis codigo={`crear variable = (parametros) => {
   // aqui va el codigo de la funcion.
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`const sumar=(n1)=>{
   // aqui va el codigo.
 }`}/>

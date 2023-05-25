@@ -6,16 +6,8 @@ import hljs from 'highlight.js/lib/core';
 
 
 
-export default function Python({ codigo }) {
+export default function Sintaxis({ codigo }) {
   const lenguaje = useRef(null);
-  const [copiado, setCopiado] = useState(false);
-
-  const copiar = () => {
-    const texto = lenguaje.current.innerText;
-    navigator.clipboard.writeText(texto);
-    setCopiado(true);
-    setTimeout(() => setCopiado(false), 2000);
-  };
 
   useEffect(() => {
     hljs.highlightBlock(lenguaje.current);
@@ -23,11 +15,7 @@ export default function Python({ codigo }) {
 
   return (
     <div className='contentLenguaje'>
-      <h3 className='titleLengauje'>python</h3>
-      <button className='copiarCodigo'  onClick={copiar}>
-          <FontAwesomeIcon icon={copiado ? faCheck : faCopy} />
-          {copiado ? ' Copiado' : ' Copiar'}
-        </button>
+      <h3 className='titleLengauje'>sintaxis</h3>
       <div className="lenguajes scroll">
         <pre>
           <code className="python scroll" ref={lenguaje}>

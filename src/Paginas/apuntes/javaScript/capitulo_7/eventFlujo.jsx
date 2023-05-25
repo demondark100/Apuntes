@@ -17,13 +17,13 @@ function EventFujoJs() {
       <main>
         <h1>flujo de eventos</h1>
         <Conseptos texto={`Con esto veremos cual es el flujo de los eventos.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_1">
     <div class="content_2">
         <button class="boton"> click </button>
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_1{
     width: 250px;
     height: 110px;
@@ -40,7 +40,7 @@ function EventFujoJs() {
     color: #fff;
 }`}/>
         <h2>flujo normal</h2>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const content_1 = document.querySelector(".content_1");
 const content_2 = document.querySelector(".content_2");
 const boton = document.querySelector(".boton");
@@ -54,7 +54,7 @@ boton.addEventListener("click",()=>{
     alert("click");
 });`}/>
         <h2>controlar flujo</h2>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const content_1 = document.querySelector(".content_1");
 const content_2 = document.querySelector(".content_2");
 const boton = document.querySelector(".boton");
@@ -69,7 +69,7 @@ boton.addEventListener("click",()=>{
 });`}/>
         <Conseptos texto={`Con "true" manejaremos el flujo de los eventos en este caso "content_2" se ejecutara primero.`}/>
         <h2>detener flujo</h2>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const content_1 = document.querySelector(".content_1");
 const content_2 = document.querySelector(".content_2");
 const boton = document.querySelector(".boton");

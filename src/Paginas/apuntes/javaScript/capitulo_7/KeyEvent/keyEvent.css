@@ -1,0 +1,13 @@
+.input_tecla{
+  margin: auto;
+  color: #c8ffb8;
+  background: linear-gradient(0deg,#35b9ae,transparent);
+  border: none;
+  outline: none;
+  width: 40%;
+  margin-top: 5%;
+  margin-top: 5%;
+}
+.input_tecla::placeholder{
+  color: #c8ffb8;
+}

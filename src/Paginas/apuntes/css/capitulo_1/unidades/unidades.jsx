@@ -45,11 +45,9 @@ mayormente se suele usar px/pixeles pero puedes usar cualquiera.
 
 Aqui un ejemplo del como se usa "font-size" en vez de px puedes poner cualquier medida. cm,pt,ml,etc.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
         <Html codigo={`<h6 class="subtitulo_1">
   este es un subtitulo feliz.
 </h6>`}/>
-        <h3>css</h3>
         <Css codigo={`.subtitulo_1{
   font-size: 23px;
 }`}/>
@@ -79,13 +77,11 @@ estas son como usar porcentajes cosa que veremos mas adelante pero en simples pa
         <h2>Em</h2>
         <Conseptos texto={`las unidades "em" se ajustan al font-size de algun contenedor padre.
 ejemplo`} />
-        <h3>html</h3>
         <Html codigo={`<div class="contenedor_padre">
   <p class="contenedor_hijo">
     esto se ajustara segun el padre.
   </p>
 </div>`}/>
-        <h3>css</h3>
         <Css codigo={`.contenedor_padre{
   font-size: 18px;
 }
@@ -99,12 +95,6 @@ ejemplo`} />
           </p>
         </div>
 
-
-
-
-
-
-
         <h2 onClick={rem} className="rem">Rem</h2>
         <div ref={contentedor__Rem} className={`remConent ${showRem ? "mostrarRem": ""}`}>
           {
@@ -112,24 +102,10 @@ ejemplo`} />
           }
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
         <Conseptos texto={`Las unidades rem no toman el font-size del contenedor padre si no que toman el font-size del body.`}/>
-        <h3>html</h3>
         <Html codigo={`<p class="parrafo_rem">
   esto toma las medidas del body.
 </p>`}/>
-        <h3>css</h3>
         <Css codigo={`.parrafo_rem{
   font-size: 1.50rem;
 }`}/>

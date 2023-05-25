@@ -54,13 +54,13 @@ function Overflow() {
           <Confirmar confirmado={confirmado} cancelar={cancelar} />
         </div>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="contenedor_o">
   <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione, quod asperiores, aut, nesciunt dolorem quasi ea itaque unde facilis tenetur veritatis. Quia, laboriosam voluptatibus velit id numquam deserunt! Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quia suscipit accusamus voluptates a? Error minus sed molestiae dicta laborum vitae rerum nostrum incidunt quasi officiis tempora, ullam quo blanditiis.
   </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.contenedor_o{
   background-color: gray;
   width: 200px;
@@ -100,7 +100,7 @@ hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
           <Confirmar confirmado={confirmado} cancelar={cancelar} />
         </div>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="scroll2">
   <p>
       que viva 
@@ -129,14 +129,14 @@ hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
           <Confirmar confirmado={confirmado} cancelar={cancelar} />
         </div>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="overflow_auto">
   <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione, quod asperiores, aut, nesciunt dolorem quasi ea itaque unde facilis tenetur veritatis. Quia, laboriosam voluptatibus velit id numquam deserunt! Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quia suscipit accusamus voluptates a? Error minus sed molestiae dicta laborum vitae rerum nostrum incidunt quasi officiis tempora, ullam quo blanditiis.
   </p>
 </div>
 `}/>
-        <h3>css</h3>
+        
         <Css codigo={`.overflow_auto{
   margin: auto;
   width: 55%;
@@ -157,13 +157,13 @@ hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
           <Confirmar confirmado={confirmado} cancelar={cancelar} />
         </div>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="overflowHideen">
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione, quod asperiores, aut, nesciunt dolorem quasi ea itaque unde facilis tenetur veritatis. Quia, laboriosam voluptatibus velit id numquam deserunt! Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quia suscipit accusamus voluptates a? Error minus sed molestiae dicta laborum vitae rerum nostrum incidunt quasi officiis tempora, ullam quo blanditiis.
   </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.overflowHideen{
   margin: auto;
   width: 55%;

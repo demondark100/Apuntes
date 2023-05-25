@@ -11,7 +11,7 @@ function GridArea() {
       <Menu2 />
       <main>
         <h1>grid area</h1>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_content">
     <div class="grid_item grid_header">
         <nav>
@@ -46,7 +46,7 @@ function GridArea() {
         </p>
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_content{
     background-color: #000;
     margin: 10px;

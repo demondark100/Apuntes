@@ -4,13 +4,14 @@
   width: 90%;
   max-width: 1800px;
   margin: auto;
+  overflow: auto;
 }
 .contenedor-conseptos p{
   color: #f9f7f7;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .enlacesConseptos{
@@ -28,7 +29,7 @@
     margin-top: 2%;
   }
   .contenedor-conseptos p{
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .enlacesConseptos{
     font-size: 1.1em;

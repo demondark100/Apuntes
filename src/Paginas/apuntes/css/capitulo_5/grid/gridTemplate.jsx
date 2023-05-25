@@ -21,7 +21,7 @@ grid-template-rows: 10px 10px 10px 10px 10px;`}/>
         <Conseptos texto={`En este caso creamos 5 filas con una medida de 10px cada una.
 
 Si tienes menos cantidad de elementos hijos que la cantidad de gird que hayas declarado siempre se dibujaran los grids que declaraste , esto se aplica a las columnas tambien.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="rows_content">
     <div>
         caja 1
@@ -33,7 +33,7 @@ Si tienes menos cantidad de elementos hijos que la cantidad de gird que hayas de
         caja 3
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.rows_content{
     display: grid;
     grid-template-rows: 150px 150px 150px 150px;
@@ -58,7 +58,7 @@ Si tienes menos cantidad de elementos hijos que la cantidad de gird que hayas de
 
         <h2>grid-template-columns</h2>
         <Conseptos texto={`Esto es igual a rows solo que se aplican a las columnas.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_columns">
     <div>
         caja 1
@@ -70,7 +70,7 @@ Si tienes menos cantidad de elementos hijos que la cantidad de gird que hayas de
         caja 3
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_columns{
     display: grid;
     grid-template-columns: 150px 150px 150px 150px;
@@ -95,11 +95,11 @@ Si tienes menos cantidad de elementos hijos que la cantidad de gird que hayas de
         <Conseptos texto={"A estos tambien se le puede dar medidas con em rem % , etc."}/>
         <h2>fr</h2>
         <Conseptos texto={`Los grid tienen un tipo de medida propio uno de esos es fr que es para que los elementos se ajusten de forma automaticamente al tamaño de su contenedor.`}/>
-        <h3>pseudocodigo</h3>
+        
         <Css codigo={`/* estos se deben poner como medidas. */
 grid-template-rown: 1fr 1fr;
 grid-template-columns: 1fr 1fr:`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="fr_content">
     <div>
         caja 1
@@ -114,7 +114,7 @@ grid-template-columns: 1fr 1fr:`}/>
         caja 4
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.fr_content{
     display: grid;
     height: 50%;

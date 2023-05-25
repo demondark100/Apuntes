@@ -23,11 +23,11 @@ display: grid;
 como dije anteriormente estas propiedades modifican el comportamiento de las cajas.
 para recordar...`}/>
           <h2>block</h2>
-          <h3>html</h3>
+          
           <Html codigo={`<div class="recordar__block">
   todo el espacio
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`.recordar__block{
   display: block;
   background-color: black;
@@ -41,11 +41,11 @@ para recordar...`}/>
           </div>
 
           <h2>inline</h2>
-          <h3>html</h3>
+          
           <Html codigo={`<div class="recordar__linea">
   linea
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`.recordar__linea{
   display: inline;
   background-color: black;
@@ -59,14 +59,14 @@ para recordar...`}/>
           <Conseptos texto={`Recuerda que display inline se adapta al espacio que ocupa no ocupara todo el espacio como display block.`}/>
 
           <h2>inline-block</h2>
-          <h3>html</h3>
+          
           <Html codigo={`<div class="inlineBlock__recordar1">
   linea/bloque 1
 </div>
 <div class="inlineBlock__recordar2">
   linea/bloque 2
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`.inlineBlock__recordar1{
   display: inline-block;
   background-color: black;

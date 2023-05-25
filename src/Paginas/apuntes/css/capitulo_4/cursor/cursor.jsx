@@ -13,11 +13,11 @@ function Cursor() {
         <h1>cursor</h1>
 
         <Conseptos texto={`El cursor es el puntero del mouse a este tambien se le puede modificar las propiedades.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="cursor_1">
   pasa el mouse aqui.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.cursor_1{
   background-color: gray;
   cursor: pointer;

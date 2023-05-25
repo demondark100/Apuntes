@@ -39,11 +39,11 @@ estilos.
 estilos.
 }`}/>
         <h2>ejemplo de uso</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="responsive_content">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum aperiam nam blanditiis quam sapiente consequuntur sed est facere repellendus nulla, dignissimos repudiandae voluptatum, asperiores doloribus, optio nemo non fugiat dolor.
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.responsive_content{
     background-color: rgb(8, 163, 54);
 }
@@ -69,13 +69,13 @@ estilos.
         background-color: #000;
     }
 }`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_media">
     <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus saepe qui, corporis ea inventore dolor natus vel obcaecati et non doloribus perferendis perspiciatis officiis molestias quibusdam earum harum voluptates hic.
     </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_media{
     background-color: #000;
     color: #ffff;
@@ -110,7 +110,7 @@ estilos.
         </div>
 
         <h2>una practica :v</h2>
-        <h3>htmñ</h3>
+        
         <Html codigo={`<header id="header">
     <b class="logo">proyecto!</b>
     <nav>
@@ -161,12 +161,12 @@ estilos.
 </div>
 
 <footer id="footer">
-    <h3>pie de pagina</h3>
+    
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea harum dolor eum nam ad quas, earum cumque repudiandae ut officia libero maiores eos soluta mollitia eius quisquam numquam molestias.
     </p>
 </footer>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`body{
     margin: 0;
     padding: 0;

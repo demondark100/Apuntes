@@ -15,7 +15,7 @@ function GridImEx() {
 ejemplo:
 Como te das cuanta solo creamos 3 columnas pero se agrego de forma automaticamente la cuarta columna.`}/>
         <h2>ejemplo implicito</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_impl">
     <div>
         .
@@ -48,7 +48,7 @@ Como te das cuanta solo creamos 3 columnas pero se agrego de forma automaticamen
         .
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_impl{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -93,7 +93,7 @@ Como te das cuanta solo creamos 3 columnas pero se agrego de forma automaticamen
         </div>
         </div>
         <h2>ahora un ejemplo mas.</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_implicito">
     <div>
         :D
@@ -129,7 +129,7 @@ Como te das cuanta solo creamos 3 columnas pero se agrego de forma automaticamen
         :D
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_implicito{
     display: grid;
     grid-template-columns: repeat(3,120px);

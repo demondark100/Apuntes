@@ -19,14 +19,14 @@ translate tiene 2 parametros:`}/>
         <Css codigo={`translate(de izquierda a derecha , de arriba a abajo);
 translate(150px , 120px);`}/>
         <Conseptos texto={`A este se le puede dar valores negativos para poder mover a izquierda y a arriba.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="translate_content1">
     <b>:D</b>
 </div>
 <div class="translate_content2">
     <b>:D</b>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.translate_content1{
     width: 120px;
     height: 120px;
@@ -77,11 +77,11 @@ scale tiene dos parametros que son scaleX y scaleY , pero para resumir el codigo
           <h2>pseudocodigo</h2>
           <Css codigo={`scale(escala de la altura , escala del ancho);
 scale(2 , .4);`}/>
-          <h3>html</h3>
+          
           <Html codigo={`<div class="scale_content1">
     <b>:D</b>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.scale_content1{
     width: 50px;
     height: 50px;
@@ -108,11 +108,11 @@ scale(2 , .4);`}/>
 
 "skew" especifica la inclinación. Los valores pueden ser positivos o negativos , este tiene las coordenadas X y Y puedes jugar con estos elementos.`}/>
       
-      <h3>html</h3>
+      
       <Html codigo={`<div class="skew_content">
     <b>:D</b>
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.skew_content{
     width: 50px;
     height: 50px;
@@ -137,13 +137,13 @@ scale(2 , .4);`}/>
       <Link className="clipPath" target="_blank" to={"https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"}>Clip Path</Link>
       <Conseptos texto={`Clip Path es un una propiedad que nos servira para dar formas a los elementos. hay un sitio web que nos facilitara su uso click en el titulo que dice Clip Path.`}/>
 
-      <h3>html</h3>
+      
       <Html codigo={`<div class="clip_content">
     <p>
         :D
     </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.clip_content{
     width: 50px;
     height: 50px;

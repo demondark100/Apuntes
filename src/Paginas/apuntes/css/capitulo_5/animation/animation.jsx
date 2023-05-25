@@ -54,14 +54,14 @@ al 78% se haga esta animacion.`}/>
 }`}/>
         <h2>animation-name</h2>
         <Conseptos texto={`Esta propiedad es para ponerle el nombre al elemento que queremos que tenga esa animacion.`}/>
-        <h3>pseudocodigo</h3>
+        
         <Css codigo={`.elemento{
     animation-name: nombre de la animacion;
 }
 @keyframes nombre de la animacion{
     hacer animacion
 }`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.elemento{
     animation-name: mover;
 }
@@ -75,13 +75,13 @@ al 78% se haga esta animacion.`}/>
 }`}/>
         <h2>animation-duration</h2>
         <Conseptos texto={`Esta propiead es similar a transition-duration.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="ContentAnimation__duratio">
     <div class="animation__duratio">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.ContentAnimation__duratio{
     width: 100%;
     height: 50%;
@@ -127,13 +127,13 @@ Aqui podemos ponerle cuantas veces queremos que se repita la animacio o si quere
 
 animation-iteration-count: 3;
 animation-iteration-count: infinite;`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="iteracion_content">
     <div class="iteracion_content_div">
 
     </div>
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.iteracion_content{
     width: 100%;
     height: 50%;
@@ -180,13 +180,13 @@ alternate: es como un ir y volver es como la mescla de norma y reverse.
 alternate-reverse: es igual que alternate pero empieza del otro lado osea como si fuese en reversa.`}/>
 
         <h2>reverse</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="reverse_content">
     <div class="reverse_content_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.reverse_content{
     width: 100%;
     height: 50%;
@@ -225,13 +225,13 @@ alternate-reverse: es igual que alternate pero empieza del otro lado osea como s
         </div>
 
         <h1>alternate</h1>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="alternate_content">
     <div class="alternate_content_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.alternate_content{
     width: 100%;
     height: 50%;
@@ -270,13 +270,13 @@ alternate-reverse: es igual que alternate pero empieza del otro lado osea como s
         </div>
 
         <h2>alternate-reverse</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="alternate_reverse_content">
     <div class="alternate_reverse_content_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.alternate_reverse_content{
     width: 100%;
     height: 50%;
@@ -321,7 +321,7 @@ esta tiene las siguientes propiedades.
 none: esto hace que la animacion vuelva a la normalidad.
 forwards: esta hace que la animacion se quede como finaliza.
 both: arranca con la propiedad que le indicamos al inicion de la animacion.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<!-- none -->
 
 <div class="none_content">

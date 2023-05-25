@@ -4,6 +4,9 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Menu2 from "../../../../componentes/menus/Menu2";
 import { useState } from "react";
+import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+
+
 
 function EventListenJs() {
 
@@ -25,29 +28,29 @@ function EventListenJs() {
         <Conseptos texto={`Los eventos de escucha sirven para poder interactuar con los elementos html con esto me refiero a darles funcionalidad ejemplo.`}/>
         <button onClick={()=>alert("Bienvenido a los eventos de escucha")}>click aqui</button>
         <h2>addEventListener</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<button class="boton">
     saludar
 </button>`}/>
         <h2>funcion rapida</h2>
-        <h3>sintaxis</h3>
-        <JavaScropt codigo={`elementoHTML.escucharEvento("tipo de evento",()=>{ 
+        
+        <Sintaxis codigo={`elementoHTML.escucharEvento("tipo de evento",()=>{ 
     // codigo de la funcion.
 })`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const boton = document.querySelector(".boton");
 boton.addEventListener("click",()=>{
     alert("hola");
 })`}/>
-        <h3>explicacion</h3>
+        <h2>explicacion</h2>
         <Conseptos texto={`Empezamos con el evento "click" este se ejecutara cuando el usuario haga click en algun elemento html.`}/>
         <div className="website">
           <button onClick={()=>alert("hola")}>saludar</button>
         </div>
         <Conseptos texto={`La desventaja de la funcion rapida (como yo lo llamo) es que no se puede remover un evento de escucha.`}/>
         <h2>llamar funcion</h2>
-        <h3>sintaxis</h3>
-        <JavaScropt codigo={`elementoHTML.metodoEscucha("tipo de evento",funcionEvento); 
+        
+        <Sintaxis codigo={`elementoHTML.metodoEscucha("tipo de evento",funcionEvento); 
 funcion funcionEvento(){ 
     // escribir el codigo de la funcion.
     elementoHTML.removerEvento(

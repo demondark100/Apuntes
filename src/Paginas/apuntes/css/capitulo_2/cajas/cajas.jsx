@@ -48,17 +48,17 @@ ejemplo.`}/>
 
         <Conseptos texto={`En los ejemplos el "h2" y el "p" ocupan todo el ancho y el "b" no pero con css podemos cambiar eso por ejemplo que el b se comporte como bloque y que el h2 y p se comporten como linea.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Conseptos texto={`Para entender mejor has click derecho en cualquier elemento y dale en inspeccionar despues pasa el mouse encima de cada elemento pero desde la consola y veras como te muestra que elemento esta en bloque y que elemento esta en linea.`}/>
         <Html codigo={`<h2>bloque</h2>
-<h3>bloque</h3>
+
 <b>linea </b>
 <b>linea</b>
 <p>bloque</p>`} />
         <Conseptos texto={`Aqui abajo inspecciona`}/>
         <div className="website">
           <h2>bloque</h2>
-          <h3>bloque</h3>
+          
           <b>linea </b>
           <b>linea</b>
           <p>bloque</p>
@@ -72,13 +72,13 @@ tenemos:
 display: block; = bloque.
 display: inline; = linea.`}/>        
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<h2>bloque</h2>
-<h3>bloque</h3>
+
 <b>linea</b>
 <b>linea</b>
 <p>bloque</p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`h2{
   display: inline;
 }
@@ -111,7 +111,7 @@ height = la altura de las cajas.
 Tanto a wisth como height les puesdes poner % , cm , px , pt , vh cualquier medida pero supongo que ya lo habras deduciodo a cualquier propiedad que tenga un parametro para medir se le puede poner cualquier tipo de medida`}/>
 
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<b>
   esto es un elemento en linea no se puede
   modificar el ancho y la altura.
@@ -120,7 +120,7 @@ Tanto a wisth como height les puesdes poner % , cm , px , pt , vh cualquier medi
   este es un elemento en bloque si se puede
   modificar el ancho y la altura.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`b{
   background-color: red;
   color: white;
@@ -145,14 +145,14 @@ p{
         </div>
 
         <Conseptos texto={`Para finalizar con esta parte podemos hacer que un elemento en linea pueda recibir las propiedades de un elemento de bloque`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<b class="noRecibe">
   esto no recibira las propiedades.
 </b>
 <b class="recibe">
   esto si recibira las propiedades.
 </b>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.noRecibe{
   background-color: red;
   color: white;

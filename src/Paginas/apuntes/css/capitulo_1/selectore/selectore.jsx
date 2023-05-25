@@ -34,12 +34,11 @@ function Selectores() {
 para empezar veremos la propiedad color esto nos sirve para cambiar de color las letras de nuestros elementos.`}/>
 
         <h2>color</h2>
-        <h3>html</h3>
         <Html codigo={`<p>
   hola mundo css.
 </p>`} />
 
-        <h3>css</h3>
+
         <Css codigo={`p {
   color: green;
 }`} />
@@ -75,7 +74,6 @@ div p {
 esto es como una clase secundaria bueno para entender mejor daremos un ejemplo con la pseudoclase "hover".`}/>
 
         <h2>universas " * "</h2>
-        <h3>html</h3>
         <Html codigo={`<h3>esta es una pagina con css</h3>
   <p>
       esta pagina es demasiado basica.
@@ -83,7 +81,6 @@ esto es como una clase secundaria bueno para entender mejor daremos un ejemplo c
   <p>
       todos los elementos cambiaran de color xd.
   </p> `}/>
-        <h3>css</h3>
         <Css codigo={`*{
   color: blue;
 }`} />
@@ -98,7 +95,6 @@ esto es como una clase secundaria bueno para entender mejor daremos un ejemplo c
         </div>
 
         <h2>de tipo</h2>
-        <h3>html</h3>
         <Html codigo={`<h4>
   esto no cambiara
 </h4>
@@ -109,7 +105,6 @@ esto es como una clase secundaria bueno para entender mejor daremos un ejemplo c
 <button>
   cambiara
 </button>`}/>
-        <h3>css</h3>
         <Css codigo={`input{
   color: gray;
 }
@@ -130,7 +125,6 @@ button{
         </div>
 
         <h2>clases</h2>
-        <h3>html</h3>
         <Html codigo={`<h2>
     esto no cambiara.
 </h2>
@@ -155,7 +149,6 @@ button{
 <p class="parrafo elemento_p">
   tambien se pueden agregar mas clases a un solo elemento.
 </p>`}/>
-        <h3>css</h3>
         <Css codigo={`.parrafo{
   color: blue;
 }
@@ -209,7 +202,6 @@ button{
 
 
         <h2>ID</h2>
-        <h3>html</h3>
         <Html codigo={`<h4 id="titulo">este es un titulo con id</h4>
 <p>
   me encantaria que este parrafo tenga el id titulo pero no se puede ya que no se puede repetir el mismo id.
@@ -217,7 +209,6 @@ button{
 <p id="parrafo">
   este parrafo si tendra un id :D.
 </p>`}/>
-        <h2>css</h2>
         <Css codigo={`#titulo{
   color: green;
 }
@@ -235,7 +226,6 @@ button{
         </div>
 
         <h2>por atributo</h2>
-        <h3>html</h3>
         <Html codigo={`<button boton="el_boton">
   el boton.
 </button>
@@ -245,7 +235,6 @@ button{
 <b>
   esto no tendra atributo xd.
 </b>`}/>
-        <h3>css</h3>
         <Css codigo={`[boton="el_boton"]{
   color: orange;
 }
@@ -265,7 +254,6 @@ button{
         </div>
 
         <h2>descendiente</h2>
-        <h3>html</h3>
         <Html codigo={`<div>
   <p>esto si cambiara a verde</p>
 </div>
@@ -283,7 +271,6 @@ button{
   </p>
 </h6>
 `}/>
-        <h3>css</h3>
         <Css codigo={`div p{
   color: green;
 }
@@ -314,11 +301,9 @@ h6 p{
 
         <h2>pseudoclase</h2>
         <Conseptos texto={`"hover" es una pseudoclase que se encarga de cambiar de estilo cada que pasemos el mouse sobre un elemento.`}/>
-        <h3>html</h3>
         <Html codigo={`<p id="cambiar">
   pasa el mouse sobre mi.
 </p>`} />
-        <h3>css</h3>
         <Css codigo={`#cambiar{
   color: red;
 }
@@ -331,7 +316,6 @@ h6 p{
             pasa el mouse sobre mi.
           </p>
         </div>
-
 
       </main>
       <Footer />

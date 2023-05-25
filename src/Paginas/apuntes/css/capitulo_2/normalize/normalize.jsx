@@ -15,8 +15,8 @@ function Normalize() {
 
 ahora observa esto.`}/>
 
-        <h3>html</h3>
-        <Html codigo={`<h3>un titulo feliz :D</h3>
+        
+        <Html codigo={`
 <p>
   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad cupiditate tempora deleniti minima quidem sequi, rerum eos libero repudiandae. Praesentium neque quod earum id nesciunt ipsa consequatur inventore consectetur quibusdam?
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolores quibusdam ducimus, cumque in, consequuntur a necessitatibus distinctio qui corporis officiis amet assumenda quae eligendi? Fugiat mollitia deleniti doloremque perspiciatis.
@@ -49,13 +49,13 @@ enlaces={{
   normalize: {text: "click aqui",url: "https://necolas.github.io/normalize.css/"}
 }}
 targetBlank={true} />
-        <h3>*</h3>
+        
         <Css codigo={`*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }`}/>
-        <h3>img</h3>
+        
         <Css codigo={`img{
   border-style: none;
   max-width: 100%;

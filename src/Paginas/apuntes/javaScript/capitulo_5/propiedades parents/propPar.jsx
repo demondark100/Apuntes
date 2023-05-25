@@ -11,13 +11,13 @@ function PropParJs() {
       <main>
         <h1>propiedades de parents</h1>
         <h2>parentElemet y parentNode</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content">
     <p class="a_1"> algo xd </p>
     <p class="a_2"> algo xd </p>
     <p class="a_3"> algo xd </p>
 </div>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const content = document.querySelector(".content");
 const a_1 = document.querySelector(".a_1");
 const a_2 = document.querySelector(".a_2");

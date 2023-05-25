@@ -11,7 +11,7 @@ function NombrarGrid() {
       <main>
         <h1>nombrar lineas grid</h1>
         <Conseptos texto={`sin nombrar lineas`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="sin_nombrar">
     <div>
         .
@@ -41,7 +41,7 @@ function NombrarGrid() {
         .
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sin_nombrar{
     background-color: #bb9d9d66;
     border: 2px solid #000;
@@ -102,7 +102,7 @@ medida
 [nombre de linea]
 medida
 [nombre de linea];`}/>
-        <h3>css</h3>
+        
         <Css codigo={`grid-template-columns:
 [nombre de linea]
 medida.
@@ -112,7 +112,7 @@ medida
 medida
 [nombre de linea];`}/>
         <h2>ejemplo de uso</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="con_nombrar">
     <div>
         .
@@ -142,7 +142,7 @@ medida
         .
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.con_nombrar{
     background-color: #000000;
     border: 2px solid #000;

@@ -23,7 +23,7 @@ space-evenly: hace que las cajas tenga un mismo margin.`}/>
 
         
         <h2>justify-content</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<h2>center</h2>
 <div class="center">
   <div>
@@ -90,7 +90,7 @@ space-evenly: hace que las cajas tenga un mismo margin.`}/>
     caja 4.
   </div>
 </div>`} />
-          <h3>css</h3>
+          
           <Css codigo={`body{
     box-sizing: border-box;
     margin: 0;
@@ -177,7 +177,7 @@ flex-end: que es para poner a los elementos al final.
 "align-content" alineara todas las lineas.`}/>
 
           <h2>align-items</h2>
-          <h3>html</h3>
+          
           <Html codigo={`<div class="content_items">
   <div class="start">
     <div>
@@ -195,7 +195,7 @@ flex-end: que es para poner a los elementos al final.
     </div>
   </div>
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`body{
   background-color: #000;
   margin: 0;
@@ -259,8 +259,8 @@ flex-end: que es para poner a los elementos al final.
 
           <h2>flex-start vs stretch</h2>
           <Conseptos texto={`"flex-start" no viene por defecto como probablemente creias , la propiedad que viene por defecto es stretch.`}/>
-          <h3>html</h3>
-          <Html codigo={`<h3>stretch</h3>
+          
+          <Html codigo={`
 <div class="stretch">
   <div>
     stretch
@@ -270,7 +270,7 @@ flex-end: que es para poner a los elementos al final.
   </div>
 </div>
 
-<h3>flex-start</h3>
+
 <div class="flex_start">
   <div>
     flex-start
@@ -279,7 +279,7 @@ flex-end: que es para poner a los elementos al final.
     flex-start
   </div>
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`body{
   background-color: #000;
   margin: 0;
@@ -316,8 +316,8 @@ flex-end: que es para poner a los elementos al final.
           <Conseptos texto={`Como te das cuenta "stretch" estira al contenedor cosa que flex-start no hace.`}/>
 
           <h2>align-content</h2>
-          <h3>html</h3>
-          <Html codigo={`<h3>sin align-content</h3>
+          
+          <Html codigo={`
 <div class="align_content1">
   <div>
     content
@@ -352,7 +352,7 @@ flex-end: que es para poner a los elementos al final.
 </div>
 
 
-<h3>con align-content</h3>
+
 <div class="align_content2">
   <div>
     content
@@ -385,7 +385,7 @@ flex-end: que es para poner a los elementos al final.
     content
   </div>
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`body{
   background-color: #000;
   margin: 0;
@@ -436,8 +436,8 @@ h3{
 
           <h2>align-self</h2>
           <Conseptos texto={`Tambien podemos alinear a solo una caja con align-self , esta obtendra los mismos parametros que los demas.`}/>
-          <h3>html</h3>
-          <Html codigo={`<h3>align-self</h3>
+          
+          <Html codigo={`
 <div className="AlignSelfCajas">
   <div className="AlignSelfCajas__caja1">
     caja 1
@@ -449,7 +449,7 @@ h3{
     caja 3
   </div>
 </div>`}/>
-          <h3>css</h3>
+          
           <Css codigo={`body{
   background-color: #000;
   margin: 0;

@@ -22,13 +22,13 @@ Cubic-beszier(0.25,0.8,0.9,0.7);`}/>
 
         <h2>Cubic beszier transisition</h2>
         <h2>con cubic</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="cubic_content">
     <div class="cubic_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.cubic_content{
     background-color: #9eb6ff;
     width: 100%;
@@ -60,13 +60,13 @@ Cubic-beszier(0.25,0.8,0.9,0.7);`}/>
         </div>
 
         <h2>sin cubic</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="sin_cubic_content">
     <div class="sin_cubic_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sin_cubic_content{
     background-color: #9eb6ff;
     width: 100%;
@@ -97,13 +97,13 @@ Cubic-beszier(0.25,0.8,0.9,0.7);`}/>
 
         <h2>Cubic beszier animation</h2>
         <h2>con cubic bezier</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="animation_cubic">
     <div class="animation_cubic_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.animation_cubic{
     background-color: #9eb6ff;
     width: 100%;
@@ -142,13 +142,13 @@ Cubic-beszier(0.25,0.8,0.9,0.7);`}/>
         </div>
 
         <h2>sin cubic bezier</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="sin_animation_cubic">
     <div class="sin_animation_cubic_div">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sin_animation_cubic{
     background-color: #9eb6ff;
     width: 100%;

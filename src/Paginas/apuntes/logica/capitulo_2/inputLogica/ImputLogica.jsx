@@ -2,7 +2,7 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./input.css";
-import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import { useState } from "react";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
@@ -47,19 +47,19 @@ otra persona: recibe la pregunta y la procesa en su cerebro.
 otra persona: te da la hora.`}/>
         <h2>input</h2>
         <Conseptos texto={`El input se encargara de pedir un dato al usuario por ejemplo.`}/>
-        <JavaScript codigo={`nombre = pedirDato("escribe tu nombre")`}/>
+        <Sintaxis codigo={`nombre = pedirDato("escribe tu nombre")`}/>
         <p 
           onClick={pedirName}
           style={{color: `#fff`,fontSize: `1.8em`,cursor: "pointer"}}
         >ejecutar codigo</p>
         <h2>proceso</h2>
         <Conseptos texto={`Aqui procesamos el nombre del usuario.`}/>
-        <JavaScript codigo={`saludar = "hola " + nombre + " soy una IA."`}/>
+        <Sintaxis codigo={`saludar = "hola " + nombre + " soy una IA."`}/>
         <h2>output</h2>
         <Conseptos texto={`Aqui le mostramos al usuario el resultado de lo que procesamos.`}/>
-        <JavaScript codigo={`mostrar(saludar)`}/>
+        <Sintaxis codigo={`mostrar(saludar)`}/>
         <h2>resultado</h2>
-        <JavaScript codigo={`hola ${nombre} soy una IA.`} />
+        <Sintaxis codigo={`hola ${nombre} soy una IA.`} />
 
         <h2>ejercicio</h2>
         <Conseptos texto={`Escribe o copia "Megumin" tal como esta.`}/>
@@ -90,21 +90,21 @@ mostrar() por alert()
 De esta manera podras escribir codigo en la consola de tu navegador`}/>
         <h2>pseudocodigo</h2>
         <h3>prompt</h3>
-        <JavaScript codigo={`prompt(mensaje para pedir un dato)`}/>
+        <Sintaxis codigo={`prompt(mensaje para pedir un dato)`}/>
         <h3>mostrar</h3>
-        <JavaScript codigo={`alert(que queremos mostrar al usuario)`}/>
+        <Sintaxis codigo={`alert(que queremos mostrar al usuario)`}/>
         
         <h2>empieza a programar</h2>
         <Ejercicios 
           texto1={`Ahh esta complicado no puedo!`}
           texto2={`Esta izi :D oculta el resultado`}
-          codigo={<JavaScript codigo={`numero1 = prompt("Dime el numero 1");
+          codigo={<Sintaxis codigo={`numero1 = prompt("Dime el numero 1");
 numero2 = prompt("Dime el numero 2");
 multiplicar = numero1 * numero2;
 alert("el resultado es " multiplicar);`}/>}
         />
         <h2>nota</h2>
-        <Conseptos texto={`El lenguaje que usaste para programar esto fue javaScript de ahora en adelante usaremos "alert" y "prompt" en vez de usar mostrar() y pedirDato().
+        <Conseptos texto={`El lenguaje que usaste para programar esto fue Sintaxis de ahora en adelante usaremos "alert" y "prompt" en vez de usar mostrar() y pedirDato().
 
 Esto para que puedas escribir codigo en tu navegador.`}/>
       </main>

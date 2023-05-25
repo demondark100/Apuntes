@@ -1,5 +1,5 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
-import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
@@ -10,31 +10,31 @@ function BucleParaLogica() {
       <main>
         <h1>bucle para</h1>
         <Conseptos texto={`Los bucles para son similares que los bucles mientras solo que es una estructura más compacta que incluye la inicialización, la condición y la actualización de las variables de control en una única línea. Su estructura básica es la siguiente:`}/>
-        <JavaScropt codigo={`para crear variable;condicional;actualizar variable:
+        <Sintaxis codigo={`para crear variable;condicional;actualizar variable:
   // hacer algo.`}/>
         <h2>diferencias</h2>
         <Conseptos texto={`Ahora veremos las diferencias entre estos tipos de bucles.`}/>
         <h3>while</h3>
-        <JavaScropt codigo={`i = 0; // crear variable
+        <Sintaxis codigo={`i = 0; // crear variable
       while          5 < 8: 
 //tipo de bucle  //condicional
   i++; // actualizar variable
   // ejecutar codigo`}/>
         <h3>para</h3>
-        <JavaScropt codigo={`para i = 0;       i < 5;         i++:
+        <Sintaxis codigo={`para i = 0;       i < 5;         i++:
     //crear   //condicional  //acvtualizar
    //variable                //variable
    //ejecutar codigo`}/>
         <h2>ejercicio 1</h2>
         <Conseptos texto={`Hacer un programa que haga un conteo regresivo pero hacia atras.`}/>
         <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`para i = 10; i >= 0; i--:
+        <Sintaxis codigo={`para i = 10; i >= 0; i--:
   mostrar(i);`}/>
         <h3>pegar en la consola de tu navegador</h3>
-        <JavaScropt codigo={`for (let i = 10; i >= 0; i--) {
+        <Sintaxis codigo={`for (let i = 10; i >= 0; i--) {
   console.log(i);
 }`}/>
-        <JavaScropt codigo={``}/>   
+        <Sintaxis codigo={``}/>   
         <h2>ejercicio 2</h2>
         <Conseptos 
 texto={`Hacer un {fibonacci} con bucles estos se pueden hacer con un bucle while o for (mientras o para).`}
@@ -43,7 +43,7 @@ enlaces={{
 }}
 targetBlank={true}/>
         <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`n = 10;
+        <Sintaxis codigo={`n = 10;
 fibonacci = [];
 
 para i = 0; i < n; i++:
@@ -54,7 +54,7 @@ para i = 0; i < n; i++:
     fibonacci.push(siguienteNumero);
 mostrar(fibonacci);`}/>
         <h3>pegar en la consola de tu navegador.</h3>
-        <JavaScropt codigo={`let n = 10; // Número de elementos de la secuencia de Fibonacci
+        <Sintaxis codigo={`let n = 10; // Número de elementos de la secuencia de Fibonacci
 let fibonacci = [];
 
 for (let i = 0; i < n; i++) {

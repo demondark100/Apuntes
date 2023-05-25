@@ -35,11 +35,11 @@ box-shadow:
           ixquierda | ariiba| desenfoque| borde| color
           derecha   | abajo |           |      |
                               `}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="caja_combreada">
   caja sombreada :D
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.caja_combreada{
   width: 55%;
   background-color: black;
@@ -63,11 +63,11 @@ text-shadow:
         <Css codigo={`text-shadow:   -2px  |   2px    |    15px    |  green;
             izquierda| arriba   | desenfoque |  color
             derecha  | abajo    |            |`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="sombra_de_texto">
   un texto feliz :D
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sombra_de_texto{
   background-color: black;
   color: white;

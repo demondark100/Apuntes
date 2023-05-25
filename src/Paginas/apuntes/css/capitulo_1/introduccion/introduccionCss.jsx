@@ -37,7 +37,6 @@ crear archivo css
 archivo.css`}/>
 
         <h2>enlazar html y css</h2>
-        <h3>html</h3>
         <Conseptos texto={`la etiqueta "link" es para poder enlazar nuestros estilos css este lleva como atributo:
 1: "rel" que es para indicarle que daremos estilo css.
 2: "href" para indicarle la ruta de nuestro archivo css recuerdan los enlaces de los protocolos local y https donde si teniamos el archivo en una capeta teniamos que poner "/" bueno para enlazar css es igual.`} />
@@ -50,11 +49,9 @@ archivo.css`}/>
   2: crear un archivo llamado "estilos.html".
   3: crear un archivo llamado "style.css".`}/>
 
-        <h2>html</h2>
         <Html codigo={`<head>
   <link rel="stylesheet" href="style.css">
 </head>`}/>
-        <h3>css</h3>
         <Css codigo={`body{
   background-color: #000;
 }

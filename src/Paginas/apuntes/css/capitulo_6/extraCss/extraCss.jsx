@@ -17,7 +17,7 @@ function ExtraCss() {
 
 rtl: (right to left) (derecha a izquierda);
 ltr: (left to right) (izquierda a derecha);`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="rtl_content direction">
     <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, impedit! Debitis repudiandae doloremque obcaecati consequuntur aperiam cum, voluptate laboriosam totam maxime commodi adipisci error rem tempore minus placeat inventore eos.
@@ -28,7 +28,7 @@ ltr: (left to right) (izquierda a derecha);`}/>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, mollitia quos. Cum voluptas, accusamus maiores aliquid error natus eum, aspernatur sit eveniet deserunt magni necessitatibus a omnis eaque, unde odit!
     </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.direction{
     background-color: #000;
     color: #fff;
@@ -57,11 +57,11 @@ ltr: (left to right) (izquierda a derecha);`}/>
 
         <h2>Letter Spacing</h2>
         <Conseptos texto={`Esta propiedad nos sirve para separar las letras como queramos a estos los puedes separar con px.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="tituloLetter">
     <h1>HOLA MUNDO</h1>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.tituloLetter{
     background-color: #000;
     box-shadow: 2px 4px 8px 15px #000;
@@ -81,7 +81,7 @@ ltr: (left to right) (izquierda a derecha);`}/>
 
         <h2>Scroll Behavior</h2>
         <Conseptos texto={`Esta propiedad nos sirve para poder scrollear de forma mas suave y qye no sea tan brusco el scrolleo.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="containerScrollF">
     <h1>una pagina informativa xd</h1>
     <a href="#articulo_2">articulo 2</a>
@@ -113,7 +113,7 @@ ltr: (left to right) (izquierda a derecha);`}/>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi doloremque quos minus quia sequi consequuntur. Alias quas enim placeat corporis? Maxime vel, incidunt sapiente omnis tempora delectus rerum ad ex.
     </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`body{
     background-color: #000;
     color: #fff;
@@ -149,11 +149,11 @@ h2{
 
         <h2>User Selected</h2>
         <Conseptos texto={`Con esta propiedad evitaremos que el usuario seleccione un texto.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="no_seleccion">
     jaja no puedes seleccionarme
 </p>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.no_seleccion{
     background-color: #000;
     color: #fff;

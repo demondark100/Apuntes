@@ -14,9 +14,9 @@ function Order() {
         <Conseptos texto={`Esto nos servira para ordenar las caja flexibles como nosotros queramos un ejemplo de uso seria a la hora de trabajar con responsive podemos ordenar una caja como queramos.
 
 esto se debe poner en los elemetos hijos.`}/>
-        <h3>pseudocodigo</h3>
+        
         <Css codigo={`order: orden que queremos;`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="order_content">
     <div class="caja1">
         caja 1.
@@ -31,7 +31,7 @@ esto se debe poner en los elemetos hijos.`}/>
         caja 4.
     </div>
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.order_content{
     display: flex;
     background-color: #000;
@@ -83,7 +83,7 @@ esto se debe poner en los elemetos hijos.`}/>
           </div>
         </div>
 
-        <h3>min y max</h3>
+        
         <Conseptos texto={`Ahora aprenderemos una propiedad muy importante.
 min-width , min-height , max-width , max-height.
 
@@ -96,11 +96,11 @@ max-width: es cuanto sera el maximo de ancho que tendra un elemento.
 max-heigth: es cuanto sera el maximo de altura de un elemento.`}/>
 
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="min_max">
   una caja.
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.min_max{
   width: 45%;
   height: 20vh;

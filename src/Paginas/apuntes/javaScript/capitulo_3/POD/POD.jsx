@@ -1,6 +1,7 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
@@ -17,14 +18,14 @@ aqui se agrega "descripcion/constructor" para poder poder llamar un valor del ob
 en metodos se agregan "()" para los parametros y "{}" para poner el codigo.
 "nuevo" se cambia por "new".
 "eredar" se cambia por "extends".`}/>
-        <h3>pseudocodigo POD:</h3>
-        <JavaScropt codigo={`clase nombre { 
+
+        <Sintaxis codigo={`clase nombre { 
     descripcion(objeto) { 
         este.objeto = objeto,
         este.objeto = objeto
     } 
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`class Puerta { 
     constructor(color,material){ 
         this.color = color;
@@ -32,9 +33,9 @@ en metodos se agregan "()" para los parametros y "{}" para poner el codigo.
     } 
 }`}/>
         <Conseptos texto={`Para poder llamar a un objeto debemos hacer una variable de respaldo`}/>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`variable = nuevo objeto(poner la descripcion del objeto)`}/>
-        <h3>javaScript</h3>
+
+        <Sintaxis codigo={`variable = nuevo objeto(poner la descripcion del objeto)`}/>
+
         <JavaScropt codigo={`const puerta = new Puerta("negro","madera");`}/>
         <Conseptos texto={`Ahora podemos llamar al objeto puerta de esta manera.`}/>
         <JavaScropt codigo={`console.log(puerta);`}/>
@@ -44,8 +45,8 @@ en metodos se agregan "()" para los parametros y "{}" para poner el codigo.
         <JavaScropt codigo={`console.log(puerta.material);
 //resultado: "madera"`}/>
         <h2>metodos</h2>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`class Puerta { 
+
+        <Sintaxis codigo={`class Puerta { 
     constructor(color,material){ 
         this.color = color;
         this.material = material;
@@ -54,7 +55,7 @@ en metodos se agregan "()" para los parametros y "{}" para poner el codigo.
         hacer algo
     } 
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`class Puerta { 
     constructor(color,material){ 
         this.color = color;
@@ -67,23 +68,23 @@ en metodos se agregan "()" para los parametros y "{}" para poner el codigo.
     } 
 }`}/>
         <h2>llamar metodos</h2>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`objeto.metodo();`}/>
-        <h3>javaScript</h3>
+
+        <Sintaxis codigo={`objeto.metodo();`}/>
+
         <JavaScropt codigo={`const puerta = new Puerta("negro","madera")
 puerta.describir();
 //resultado: 
 //"la puerta es de color negro y esta hecho de madera"`}/>
         <Conseptos texto={`De esta manera llamamos a un metodo recuerda siempre debe de ir acompañado de un objeto previamente creado.`}/>
         <h2>herencia</h2>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`clase objeto eredar objeto anterior { 
+
+        <Sintaxis codigo={`clase objeto eredar objeto anterior { 
     descripcion(eredar objeto anterior y agregar cosas nuevas) { 
         erencia(cosas que eredara),
         hacer algo
     } 
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`class Puerta { 
     constructor(color,material){ 
         this.color = color;
@@ -102,8 +103,8 @@ class ventana extends Puerta {
     } 
 }`}/>
         <h2>metodos estaticos</h2>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`class objeto{ 
+
+        <Sintaxis codigo={`class objeto{ 
     constructor(color){
         this.color = color
     } 
@@ -111,7 +112,7 @@ class ventana extends Puerta {
         hacer algo
     } 
 }`}/>
-      <h3>javaScript</h3>
+
       <JavaScropt codigo={`class Objeto{ 
     constructor(color){
         this.color = color
@@ -122,8 +123,8 @@ class ventana extends Puerta {
 } 
 Objeto.describir();`}/>
         <h2>Metodos accesores</h2>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`class objeto { 
+
+        <Sintaxis codigo={`class objeto { 
     constructor(material){ 
         this.material = material
     } 
@@ -134,7 +135,7 @@ Objeto.describir();`}/>
         retornar this.material
     } 
 }  `}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`class Objeto{ 
     constructor(forma,material){ 
         this.forma = forma
@@ -148,10 +149,10 @@ Objeto.describir();`}/>
     } 
 } `}/>
         <h3>llamar metodos accesores</h3>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`objeto.metodo = "nuevo valor";
+
+        <Sintaxis codigo={`objeto.metodo = "nuevo valor";
 console.log(objeto.metodo);`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`const pared = new Objeto("cuadrada","madera");
 pared.cambio = "hierro";
 console.log(pared.acceder);`}/>

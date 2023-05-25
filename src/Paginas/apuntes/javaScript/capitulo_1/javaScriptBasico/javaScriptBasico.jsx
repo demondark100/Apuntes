@@ -13,9 +13,9 @@ function JavaScriptBasico() {
         <Conseptos texto={`El comentario de codigo nos sirve para poder escribir cualquier cosa. El lenguaje no detectara el texto que escribamos en esa linea de codigo es como hacer codigo invicible.
 
 Para comentar codigo se usa este simbolo "//".`}/>
-        <h3>sin comentar</h3>
+        
         <JavaScropt codigo={`esto dara un error de sintaxis ya que no estoy comentando este texto.`}/>
-        <h3>con comentario</h3>
+        
         <JavaScropt codigo={`// Esto no dara ningun error porque esta linea
 // de codigo si esta comentada.`}/>
         <h2>alert</h2>
@@ -30,7 +30,7 @@ alert(true);
 alert(false);`}/>
         <h2>console.log()</h2>
         <Conseptos texto={`Para que puedas ver el resultado que nos brinda console.log debemos abrir la consola del navegador apretando f12.`}/>
-        <h3>ejemplo</h3>
+        
         <JavaScropt codigo={`// mostrar strings.
 console.log("hola mundo");
 // mostrar datos numericos.

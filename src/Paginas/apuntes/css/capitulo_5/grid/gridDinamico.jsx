@@ -15,7 +15,7 @@ function GridDinamico() {
         <h2>min-content / max-content</h2>
         <Conseptos texto={`Estas propiedades ajustan los elementos en el contenedor minimo o maximo , estas propiedades generalmente se suelen poner en repeat.`}/>
         <h2>min content</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="min_content">
     <div>
         a
@@ -45,7 +45,7 @@ function GridDinamico() {
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.min_content{
     display: grid;
     grid-template-columns: repeat(3,min-content);
@@ -90,7 +90,7 @@ function GridDinamico() {
         </div>
 
         <h2>max content</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="max_content">
     <div>
         a
@@ -168,7 +168,7 @@ function GridDinamico() {
         <h2>pseudocodigo</h2>
         <Css codigo={`minmax(cuanto queremos que sea el minimo , cuanto queremos que sea el maximo); 
 minmax(120px,400px);`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="min_max">
     <div>
         a
@@ -198,7 +198,7 @@ minmax(120px,400px);`}/>
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.min_max{
     display: grid;
     grid-template-columns: repeat(3,minmax(80px,200px));
@@ -244,7 +244,7 @@ minmax(120px,400px);`}/>
 
         <h2>auto-fill</h2>
         <Conseptos texto={`Esta propiedad se encarga de mover de forma dinamica las celdas una a lado de otra o posisionandolas abajo puedes darte cuenta con su comportamiento.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="auto_fill">
     <div>
         a
@@ -283,7 +283,7 @@ minmax(120px,400px);`}/>
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.auto_fill{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
@@ -339,7 +339,7 @@ minmax(120px,400px);`}/>
         
         <h2>auto-fit</h2>
         <Conseptos texto={`Este a diferencia de auto-fill hace que los elementos se agranden pero al igual que auto-fill trabaja de forma dinamica.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="auto_fit">
     <div>
         a
@@ -351,7 +351,7 @@ minmax(120px,400px);`}/>
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.auto_fit{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(80px,1fr));

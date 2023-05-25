@@ -18,7 +18,7 @@ top , right , bottom , left , z-index.`} />
 
         <h2>position: relative;</h2>
         <Conseptos texto={`Position relative hace que una caja conserve su espacio en el sitio web es como decir que la caja siga siendo solida.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="relative_1">
   caja 1
 </div>
@@ -28,7 +28,7 @@ top , right , bottom , left , z-index.`} />
 <div class="relative_3">
   caja 3
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.relative_1 , .relative_2 , .relative_3 {
   width: 25%;
   height: 125px;
@@ -61,11 +61,11 @@ top , right , bottom , left , z-index.`} />
         </div>
 
         <Conseptos texto={`A la hora de trabajar con position lo normal es trabajar solo con top y left ejemplo.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="mover_caja">
   cajita.
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.mover_caja{
   margin: auto;
   background-color: lightblue;
@@ -83,11 +83,11 @@ top , right , bottom , left , z-index.`} />
         </div>
         <Conseptos texto={`Si te fijas en vez de poner "right: 85px;" solo pusimos "left: -85px;" y que en vez de poner "bottom: 10px;" pusimos "top: -10px;" esto es debido a que top y left tienen una gerarquia mayor a bottom y right por asi decirlo.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="caja">
   caja.
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.caja{
   background-color: red;
   color: white;

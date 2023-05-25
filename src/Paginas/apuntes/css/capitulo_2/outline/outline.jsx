@@ -13,14 +13,14 @@ function Outline() {
         <h1>outline</h1>
         <Conseptos texto={`El outline es un borde que no afecta al espacio de las cajas como si pasa con los bordes en simples palabras el outline no ocupara espacio real en el sitio web.`}/>
         <h2>border</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="borde_1">
   cajita
 </div>
 <div class="borde_2">
   cajita
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.borde_1{
   background-color: green;
   border: 8px solid orangered;
@@ -45,14 +45,14 @@ function Outline() {
           </div>
         </div>
         <h2>outline</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="outline_1">
   cajita
 </div>
 <div class="outline_2">
   cajita
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.outline_1{
   background-color: green;
   outline: 10px solid orangered;
@@ -79,12 +79,12 @@ function Outline() {
         <Conseptos texto={`ahora si te fijas el borde del outline no empuja a la caja de abajo debido a que no ocupa un espacio como tal en el sitio web para fijarte mejor fijate en la palabra "cajita" en la propiedad border de arriba empuja a la caja y se puede ver la palabra "cajita" por completo pero con el outline si te fijas la palabra "cajita" no sale por completo ya que no esta empujando a la cajita.`}/>
         <Conseptos texto={`Para terminar de entender el outline solo es para resaltar algo y no ocupara espacio real un ejemplo del uso del outline son los input.`}/>
         
-        <h3>html</h3>
+        
         <Html codigo={`<div class="input_content">
   <input type="text">
   <input class="sin_outline" type="text">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sin_outline{
   outline: none;
 }`}/>

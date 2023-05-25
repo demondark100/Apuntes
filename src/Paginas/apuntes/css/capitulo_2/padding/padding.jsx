@@ -25,7 +25,7 @@ function Padding() {
 "padding-left: 15px;" = cuanto espacio queremos en la parte izquierda.`}/>
         
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content__">
 
   <div class="arriba">
@@ -45,7 +45,7 @@ function Padding() {
   </div>
 
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content__{
   width: 45%;
   margin: auto;
@@ -136,11 +136,11 @@ function Padding() {
         </div>
 
         <Conseptos texto={`El padding siempre se debe poner en el contenedor padre t para entender mejor el padding es el espacio que hay entre el borde de la caja y el contenido pero desde adentro.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="contenedor_div">
   <div>contenido</div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.contenedor_div{
   background-color: red;
   padding: 15px;
@@ -163,11 +163,11 @@ function Padding() {
         </div>
         <Conseptos texto={`ahora veremos resumir de mejor manera a la propiedad padding.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_a_a">
   <div>contenido</div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_a_a{
   padding: 15px 0;
   background-color: red;
@@ -184,11 +184,11 @@ en este caso hemos dicho que (arriba y abajo) tengan un padding de 15px y que (d
           </div>
         </div>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_d_i">
   <div>contenido</div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_d_i{
   background-color: red;
   padding: 0 15px;
@@ -212,11 +212,11 @@ segundo parametro = derecha.
 tercer parametro = abajo.
 cuarto parametro = izquierda.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="resumen_p">
   <div>contenido</div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.resumen_p{
   padding: 16px 12px 8px 6px;
   background-color: red;

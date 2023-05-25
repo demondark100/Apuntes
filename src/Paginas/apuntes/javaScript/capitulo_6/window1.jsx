@@ -2,6 +2,8 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Menu2 from "../../../../componentes/menus/Menu2";
+import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+
 
 function Window1Js() {
   return (  
@@ -9,8 +11,8 @@ function Window1Js() {
       <Menu2/>
       <main>
         <h1>window 1</h1>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`ventana.metodo();`}/>
+        
+        <Sintaxis codigo={`ventana.metodo();`}/>
         <h2>open</h2>
         <JavaScropt codigo={`window.open("https://youtube.com");`}/>
         <Conseptos texto={`Esto nos servira para abrir una nueva ventana en otro navegador o en uno ya existenete.`}/>

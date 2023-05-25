@@ -33,7 +33,7 @@ flex-wrap: nowrap; con esto decimos que se desactive esta propiedad.`}/>
         <h2>nowarp</h2>
         <Conseptos texto={`nowrap siempre viene por defecto a la hora de trabajar con flexbox.
 flex-wrap: nowrap;`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="wrap_content1">
   <div>
     caja1.
@@ -51,7 +51,7 @@ flex-wrap: nowrap;`}/>
     caja5.
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Conseptos texto={`En un caso real no seria necesario poner "flex-wrap: nowrap;" debido a que esta propiedad esta por defecto.`}/>
         <Css codigo={`.wrap_content1{
   display: flex;
@@ -86,7 +86,7 @@ flex-wrap: nowrap;`}/>
         
         <h2>wrap</h2>
         <Conseptos texto={`"wrap" a diferencia de nowrap si se debe activar recuerda que es para que las cajas del contenedor mantengan las medidas que nosotros le dimos.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_wrap">
   <div>
     caja 1.
@@ -107,7 +107,7 @@ flex-wrap: nowrap;`}/>
     caja 6.
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_wrap{
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +149,7 @@ flex-wrap: nowrap;`}/>
 parametro 1 = fila/columna.
 parametro 2 = wrap/ nowrap`}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="flexFlowContent">
   <div>
     caja 1.
@@ -164,7 +164,7 @@ parametro 2 = wrap/ nowrap`}/>
     caja 4.
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.flexFlowContent{
   display: flex;
   flex-flow: row-reverse wrap;
@@ -195,7 +195,7 @@ parametro 2 = wrap/ nowrap`}/>
 
         <h2>wrap-reverse</h2>
         <Conseptos texto={`Esta propiedad es igual que wrap pero en reversa osea que en vez de ir abajo a medida que las resoluciones se hagan pequeñas se iran para ariiba.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="wrap_reverse">
   <div>
     caja 1.
@@ -210,7 +210,7 @@ parametro 2 = wrap/ nowrap`}/>
     caja 4.
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.wrap_reverse{
   display: flex;
   flex-wrap: wrap-reverse;

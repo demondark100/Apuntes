@@ -1,7 +1,9 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
+
 
 function MetodosCadenaJavaScript() {
   return (  
@@ -72,7 +74,7 @@ if (cadena.indexOf("@") == -1) {
       <Conseptos texto={`Si la posision del caracter que queremos no existe sera -1.`}/>
       <h2>padStart y padEnd</h2>
       <h3>pseudocodigo</h3>
-      <JavaScropt codigo={`variable.metodo ( 
+      <Sintaxis codigo={`variable.metodo ( 
     parametro 1 longitud de cadena ,
 
     parametro 2 cadena que queremos poner
@@ -103,7 +105,7 @@ cadena.split(" ");
       <Conseptos texto={`Esto nos servira para separar una cadena y se convertira en un arreglo.`}/>
       <h2>substring</h2>
       <h3>pseudocodigo</h3>
-      <JavaScropt codigo={`crear_variable = variable.metodo ( 
+      <Sintaxis codigo={`crear_variable = variable.metodo ( 
     parametro 1 desde donde inicia , 
     parametro 2 hasta donde finaliza y no cuenta el ultimo numero 
 );`}/>

@@ -14,9 +14,9 @@ function CambiarAttrJavaScript() {
         <h2>sintaxis</h2>
         <JavaScropt codigo={`variable.tipoDeCambio("parametros");`}/>
         <h2>setAttribute</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<input class="color" type="text">`}/>
-        <h3>css</h3>
+        
         <JavaScropt codigo={`let color = document.querySelector(".color"); 
 a.setAttribute("type","color");
           //atributo , // valor`}/>
@@ -25,9 +25,9 @@ a.setAttribute("type","color");
         </div>
         <Conseptos texto={`Con esto podremos cambiar el atributo de un elemento.`}/>
         <h2>getAttribute</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<input class="acceder" type="text">`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`let a = document.querySelector(".a"); 
 a.getAttribute("type")
 // resultado: true`}/>
@@ -35,9 +35,9 @@ a.getAttribute("type")
 true: si el atributo existe.
 null: si el atributo no existe.`}/>
         <h2>removeAttribute</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<input class="remover" type="text">`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`let remover = document.querySelector(".remover"); 
 a.removeAttribute("type");`}/>
         <Conseptos texto={`Con esto removeremos el atributo de un elemento.`}/>

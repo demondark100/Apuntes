@@ -56,7 +56,7 @@ flex-direction: column; = columna.
 ahora veremos como usarlo.`}/>
         
         <h2>filas</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="filas_content">
   <div>
     fila.
@@ -68,7 +68,7 @@ ahora veremos como usarlo.`}/>
     fila.
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.filas_content{
   display: flex;
 }
@@ -97,7 +97,7 @@ ahora veremos como usarlo.`}/>
 
 
         <h2>columna</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="column_content">
   <div>
     columna
@@ -109,7 +109,7 @@ ahora veremos como usarlo.`}/>
     columna
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.column_content{
   display: flex;
   flex-direction: column;
@@ -142,7 +142,7 @@ esto nos servira para poder modificar al elemento hijo que queramos.
 
 ejemplo de uso.`}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="nthContent1">
   <div>
     hijo 1.
@@ -154,7 +154,7 @@ ejemplo de uso.`}/>
     hijo 3.
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.nthContent1 div:nth-child(1){
   width: 120px;
   height: 120px;
@@ -202,7 +202,7 @@ flex-direction: row-reverse;
 flex-direction: column-revese;
 ahora un ejemplo de uso.`}/>
         <h2>row-reverse</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="reverse_content">
   <div>
     caja 1
@@ -214,7 +214,7 @@ ahora un ejemplo de uso.`}/>
     caja 3
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.reverse_content{
   display: flex;
   flex-direction: row-reverse;
@@ -267,7 +267,7 @@ ahora un ejemplo de uso.`}/>
 
 
         <h2>column-reverse</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="column_reverse">
   <div>
     caja 1
@@ -279,7 +279,7 @@ ahora un ejemplo de uso.`}/>
     caja 3
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.column_reverse{
   display: flex;
   flex-direction: column-reverse;

@@ -1,7 +1,7 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import Python from "../../../../../componentes/lenguajes/Python";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis.jsx"
 
 function TipoDeDatos() {
   return (  
@@ -21,29 +21,29 @@ function TipoDeDatos() {
 
         <h2>strings</h2>
         <Conseptos texto={`Si nosotros escribimos solo una vocal o letra del alfabeto se le concidera como (un caracter).`}/>
-        <Python codigo={`"a"
+        <Sintaxis codigo={`"a"
 "b"`}/>
         <Conseptos texto={`Pero si escribimos mas de un caracter se le considera como (cadena de caracteres).`}/>
-        <Python codigo={`"Hola mundo"`}/>
+        <Sintaxis codigo={`"Hola mundo"`}/>
         <Conseptos texto={`Dato curioso los espacios tambien cuentan como un caracter , bueno sea (un caracter) o (cadena de caracteres) a ambos se les llama strings.`}/>
 
         <h2>numericos</h2>
         <Conseptos texto={`A diferencia de las strings los datos numericos no necesitan de comillas("")`}/>
         <h2>Enteros</h2>
-        <Python codigo={`1
+        <Sintaxis codigo={`1
 8
 500
 258`}/>
         <h2>Flotantes</h2>
         <Conseptos texto={`En la programacion un dato flotante siempre sera flotante con esto me refiero a que si en un lenguaje le pasamos un numero entero se convertira en flotante agregando ".0"`}/>
         <h3>ejemplo</h3>
-        <Python codigo={`pasar dato entero                50
+        <Sintaxis codigo={`pasar dato entero                50
 se convierte en flotante        50.0
 
 pasar dato entero                257
 se convierte en flotante        257.0`}/>
         <h2>Booleanos</h2>
-        <Python codigo={`true
+        <Sintaxis codigo={`true
 false`}/>
         <h2>¿Y para que sirve?</h2>
         <Conseptos texto={`bueno estamos desarrollando un juego:

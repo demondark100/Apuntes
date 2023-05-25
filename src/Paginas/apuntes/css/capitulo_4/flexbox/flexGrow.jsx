@@ -12,7 +12,7 @@ function FlexGrow() {
       <main>
         <h1>flex-grow</h1>
         <Conseptos texto={`Esta propiedad hace que las cajas se ajusten al espacio que sobra , "flex-grow" se debe aplicar en los elementos hijos no en los contnedores.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<h4>sin grow</h4>
 <div class="sin_grow">
   <div>
@@ -39,7 +39,7 @@ function FlexGrow() {
   </div>
 </div>`}/>
 
-        <h3>css</h3>
+        
         <Css codigo={`body{
   background-color: #000;
   margin: 0;
@@ -79,7 +79,7 @@ h4{
         </div>
         <Conseptos texto={`Esta propiedad se puede dar a los elementos por individual como se vio en el ejemplo anterior a estos podemos indicarle que tanto espacio queremos que ocupe puedes ir jugando con esta propiedad.`}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grow_ejemplo">
   <div>
     caja 1
@@ -91,7 +91,7 @@ h4{
     caja 3
   </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grow_ejemplo{
   display: flex;
   height: 40vh;
@@ -139,7 +139,7 @@ estos tienen como parametros.
 start: posisionara el texto al principio.
 center: posisionara el texto al centro.
 end: posisionara el texto al final.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="text-start">
   esto estara al inicio.
 </p>
@@ -149,7 +149,7 @@ end: posisionara el texto al final.`}/>
 <p class="text-end">
   esto estara al final.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.text-start{
   text-align: start;
   color: #9eb6ff;

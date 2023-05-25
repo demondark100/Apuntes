@@ -3,6 +3,8 @@ import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
+
 
 function CondicionalesJavaScript() {
   return (  
@@ -16,8 +18,8 @@ function CondicionalesJavaScript() {
 "entonces:" se reemplaza por "{}".
 "sino si" se reemplaza por "else if".
 "sino" se reemplaza por "else".`}/>
-        <h2>sintaxis</h2>
-        <JavaScropt codigo={`if (aqui va la condicional) {
+
+        <Sintaxis codigo={`if (aqui va la condicional) {
   // dentro de las llaves va el codigo 
   // que queremos escribir
 } else if (aqui va la condicional){

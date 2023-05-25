@@ -1,6 +1,7 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
@@ -11,13 +12,13 @@ function ObModChildJs() {
       <main>
         <h1>obtencion de childs</h1>
         <h2>appendChild</h2>
-        <h3>sintaxis</h3>
-        <JavaScropt codigo={`variable.appendChild("aqui el elemento hijo.")`}/>
-        <h3>html</h3>
+        
+        <Sintaxis codigo={`variable.appendChild("aqui el elemento hijo.")`}/>
+        
         <Html codigo={`<div class="contenedor">
 
 </div>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const contenedor = document.querySelector(".contenedor");
 let parrafo = document.createElement("P");
 let fragmento = document.createDocumentFragment();
@@ -33,13 +34,13 @@ contenedor.appendChild(fragmento);`}/>
 6. usando appendChild agregamos el parrafo al fragmento para obtimizar el codigo.
 9. por ultimo ponemos el fragmento que guarda al parrafo en el contenedor div.`}/>
         <h2>firstElementChild y lastElementChild</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="a_content"> 
     <p> algo 1 </p>
     <p> algo 2 </p>
     <p> algo 3 </p>
 </div> `}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const a_content = document.querySelector(".a_content");
 let algo1 = a_content.firstElementChild;
 let algo2 = a_content.lastElementChild;
@@ -49,13 +50,13 @@ console.log(algo1 , algo2);
 // <p> algo 3 </p>`}/>
         <Conseptos texto={`firstElementChild y lastElementChild obtendra el primer y ultimo hijo de un elemento contenedor.`}/>
         <h2>children</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="a_content">
     <p> algo 1 </p>
     <p> algo 2 </p>
     <p> algo 3 </p>
 </div>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const a_content = document.querySelector(".a_content");
 let algo2 = a_content.children[1];
 console.log(algo2);

@@ -15,7 +15,7 @@ function RepeatCss() {
         <h2>pseudocodigo</h2>
         <Css codigo={`grid-template-rows: repeat(cuantas veces , medidas);`}/>
         <h2>sin repeat</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="sin_repeat">
     <div>
         .
@@ -86,7 +86,7 @@ function RepeatCss() {
         </div>
         </div>
         <h2>con repeat</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="con_repeat">
     <div>
         .

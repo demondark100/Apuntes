@@ -1,5 +1,7 @@
 .footer_content{
-  background-color: #151313;
+  background-color: #000000d2;
+  box-shadow: 0 0 10px 1px #db0a1c;
+  width: 100%;
 }
 .footer_p{
   color: #1cc990;

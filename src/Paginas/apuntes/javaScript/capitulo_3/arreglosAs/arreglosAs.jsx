@@ -1,6 +1,6 @@
-import Capitulos from "../../../../../componentes/capitulos/aside";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 
@@ -13,7 +13,7 @@ function ArreglosAsJavaScript() {
         <Conseptos texto={` Los "arreglos asociativos" en JavaScript se conocen como objetos. A diferencia de los arreglos normales, los objetos no tienen un orden específico osea que no es necesario "[0][1]" , En lugar de utilizar índices numéricos, utilizan claves/identificadores para acceder a los valores asociados. Aquí tienes un ejemplo en pseudocódigo y JavaScript para ilustrar cómo trabajar con objetos:`}/>
         <h2>pseudocodigo</h2>
         <h3>crear objeto</h3>
-        <JavaScropt codigo={`
+        <Sintaxis codigo={`
 // crear variable
 variable = {
     // dentro de las llaves poner el objeto.
@@ -23,9 +23,9 @@ variable = {
 };`}/>
         <h3>formas de llamar un valor</h3>
         <h3>forma 1</h3>
-        <JavaScropt codigo={`mostrar(variable.identificador);`}/>
+        <Sintaxis codigo={`mostrar(variable.identificador);`}/>
         <h3>forma 2</h3>
-        <JavaScropt codigo={`mostrar(variable["identificador"]);`}/>
+        <Sintaxis codigo={`mostrar(variable["identificador"]);`}/>
         <h2>javaScript</h2>
         <JavaScropt codigo={`const musica = {
   nombre: "Tighten Up",

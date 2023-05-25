@@ -1,7 +1,7 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
-import Python from "../../../../../componentes/lenguajes/Python";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
 import CondicionalesDiagrama from "./diagrama";
@@ -23,7 +23,7 @@ function CondicionalesLogica() {
         <h1>Condicionales</h1>
         <Conseptos texto={`Las condicionales en programación son instrucciones que permiten tomar decisiones en función de si se cumple o no una determinada condición.`}/>
         <h2>pseudocodigo</h2>
-        <Python codigo={`si "lavaste los platos" entonces:
+        <Sintaxis codigo={`si "lavaste los platos" entonces:
   #ganas un premio
 sino:
   #te castigan`}/>
@@ -44,7 +44,7 @@ Ahora un pequeño ejemplo grafico para entender mejor.`}/>
 
         <h2>pseudocodigo</h2>
         <Conseptos texto={`Hacer un programa que verifique si un numero es positivo o negativo.`}/>
-        <Python codigo={`#no copiar
+        <Sintaxis codigo={`#no copiar
 numero = pedirDato("introduce un numero.");
 
 si numero > 0 entonces:
@@ -66,7 +66,7 @@ if(numero > 0){
 
         <Conseptos texto={`Aqui en las condicionales podemos evaluar todo tipo de cosas operaciones matematicas , operaciones logicas igualdades comparaciones lo que sea con tal de que se adapte a lo que necesites.`}/>
         <h2>ejemplo</h2>
-        <Python codigo={`si 15 == 15 entonces:
+        <Sintaxis codigo={`si 15 == 15 entonces:
   #hacer algo.
 
 #otra condicion

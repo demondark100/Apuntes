@@ -1,4 +1,5 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
@@ -17,11 +18,11 @@ function BuclesJavaScript() {
 la condicional se pone dentro de "()".
 "hacer" se cambia por "{}".
 el simbolo "++" se mantiene.`}/>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`while(aqui va la condicional){
+
+        <Sintaxis codigo={`while(aqui va la condicional){
   // aqui el codigo que escribiremos
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`let i = 0;
 while(i < 5){
   i++;
@@ -32,11 +33,11 @@ while(i < 5){
 "para" por "for".
 la declaracion de la variable , la condicional y la actualizacion van dentro de ().
 "hacer" se cambia por "{}"`}/>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`for(aqui va la inicializacion; aqui la condicional ; aqui la actualizacion de la variable){
+
+        <Sintaxis codigo={`for(aqui va la inicializacion; aqui la condicional ; aqui la actualizacion de la variable){
   // aqui dentro el codigo a escribir.
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`for(let i = 0;i < 5;i++){
   alert(\`el valor de i es: ${"${i}"}\`);
 }`}/>
@@ -51,11 +52,11 @@ la declaracion de la variable , la condicional y la actualizacion van dentro de 
 for(let i = 0;i < animes.length;i++){
   console.log(i);
 }`}/>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`para("crear variable" "in" arreglo){
+
+        <Sintaxis codigo={`para("crear variable" "in" arreglo){
   // escribir codigo
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`for(let i in arreglo){
   // escribir codigo
 }`}/>
@@ -84,11 +85,11 @@ for(let i in animes){
 for(let i = 0;i < animes.length;i++){
   console.log(animes[i]);
 }`}/>
-        <h3>pseudocodigo</h3>
-        <JavaScropt codigo={`para("crear variable" "of" "arreglo"){
+
+        <Sintaxis codigo={`para("crear variable" "of" "arreglo"){
   // escribir codigo
 }`}/>
-        <h3>javaScript</h3>
+
         <JavaScropt codigo={`for(let i of arreglo){
   // escribir codigo
 }`}/>

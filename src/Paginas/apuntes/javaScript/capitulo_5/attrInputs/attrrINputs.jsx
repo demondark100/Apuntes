@@ -27,7 +27,7 @@ function AtributosInputsJs() {
         <Conseptos texto={`La sintaxis es mas parecida al de un objeto.`}/>
         <JavaScropt codigo={`variable.atributo = "valor";`}/>
         <h2>placeholder</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<input class="textoPlace" type="text"> `}/>
         <h1>javaScript</h1>
         <JavaScropt codigo={`const textoPlace = document.querySelector(".textoPlace"); 
@@ -37,9 +37,9 @@ textoPlace.placeholder = "nombre";`}/>
           <input placeholder="nombre" />
         </div>
         <h2>type</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<input class="tipo" type="text">`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const tipo = document.querySelector(".tipo"); 
 tipo.type = "password";`}/>
         <Conseptos texto={`Aqui solo cambiamos el tipo de input de text a password.`}/>
@@ -47,9 +47,9 @@ tipo.type = "password";`}/>
           <input type="password"/>
         </div>
         <h2>value</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<input class="valor" type="text"> `}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const valor = document.querySelector(".valor"); 
 valor.value = "Music";`}/>
         <Conseptos texto={`Recuerda que value es el valor que lleva un input y aqui en javaScript lo estamos modificando para que tenga el valor "Music" por defecto. `}/>
@@ -62,9 +62,9 @@ valor.value = "Music";`}/>
 Bueno este atributo es para dar estilos a cualquier elemento html es como un css pero en javaScript.`}/>
         <h2>sintaxis</h2>
         <JavaScropt codigo={`variable.estilo.propiedad = "valor del estilo";`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p id="colorLetra">color</p>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const colorLetra = document.getElementById("colorLetra");
 colorLetra.style.color = "#0f0";`}/>
         <div className="website">
@@ -73,10 +73,10 @@ colorLetra.style.color = "#0f0";`}/>
         <Conseptos texto={`Dato curioso recuerdas que en css existen valores que se separan por "-" por ejemplo "background-color" , Con el atributo style se reemplaza "-" por camelCase osea pasa de ser:
 "background-color" a "backgroundColor" y asi con los demas elementos que lleva "-".`}/>
         <h2>ejercicio</h2>
-        <h3>html</h3>
+        
         <Html codigo={`
 <p id="colorStyle">cambio de fondo</p>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`const colorStyle = document.getElementById("colorStyle");
 const fondo = prompt(\`  Escoje un color de fondo:
 1. para color rojo.

@@ -15,11 +15,11 @@ function Linear() {
         <h2>pseudocodigo</h2>
         <Css codigo={`background: linear-gradient(cuantos grados , los colores que quieras poner);
 background: linear-gradient(0deg , #00f , #f00);`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="linear_content1">
 
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.linear_content1{
     width: 50%;
     height: 60%;
@@ -32,11 +32,11 @@ background: linear-gradient(0deg , #00f , #f00);`}/>
         </div>
 
         <h2>mas ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="linear_content2">
 
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`body{
     background-color: #000;
 }

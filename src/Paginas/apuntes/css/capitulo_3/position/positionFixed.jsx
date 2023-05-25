@@ -16,7 +16,7 @@ function PositionFixed() {
         <Conseptos texto={`Para continuar debemos entender como funciona opacity.`}/>
         <h2>opacity</h2>
         <Conseptos texto={`Esta propiedad nos permite controlar la opacidad de un elemento esta propiedad se mueve entre 0 y 1 puedes ir jugando con los valores de la opcidad.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="todo">
   todo.
 </div>
@@ -26,7 +26,7 @@ function PositionFixed() {
 <div class="nada">
   nada.
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.todo{
   background-color: lightblue;
   color: black;
@@ -69,7 +69,7 @@ function PositionFixed() {
         
         <h2>position-fixed</h2>
         <Conseptos texto={`Aqui vamos a emular una pagina con un menu para poder usar la propiedad fixed.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<body>
   <div class="menu">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
@@ -96,7 +96,7 @@ function PositionFixed() {
     </p>
   </div>
 </body>`}/>
-        <h3>css 1</h3>
+        
         <Conseptos texto={`En este ejemplo veras como funciona fixed pero traera un pequeño problema...`}/>
         <Css codigo={`.menu{
   background-color: red;
@@ -110,7 +110,7 @@ function PositionFixed() {
           <Link to={`../css/position/position absolute/z-index/position-fixed/resultado1`}>resultado</Link>
         </div>
 
-        <h3>css 2</h3>
+        
         <Conseptos texto={`Ahora aqui solucionaremos para que el menu no se ponga sobre el contenido de la pagina.`}/>
         <Css codigo={`.menu{
   background-color: red;

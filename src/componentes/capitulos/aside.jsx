@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 function Capitulos() {
-  
+  const navAside = useRef(null)
 
 
   // esto es el aside
@@ -16,7 +16,11 @@ function Capitulos() {
     setShowOptions(!showOptions);
     if(showOptions){
       aside.current.classList.remove("expandir")
-    } else{aside.current.classList.add("expandir")}
+      navAside.current.classList.add("quitarNavAside")
+    } else{
+      aside.current.classList.add("expandir")
+      navAside.current.classList.remove("quitarNavAside")
+    }
   };
   useEffect(()=>{
     const links = document.querySelectorAll(".temas a");
@@ -25,15 +29,18 @@ function Capitulos() {
         i.addEventListener(("click"),()=>{
           aside.current.classList.remove("expandir");
           setShowOptions(false)
+          navAside.current.classList.add("quitarNavAside")
         })
       })
     } else {
-      aside.current.classList.add("expandir")
+      
+      aside.current.classList.remove("expandir")
       setShowOptions(true)
+      navAside.current.classList.remove("quitarNavAside")
     }
   })
 
-
+  
   // capitulos
   const [logica, setLogica] = useState(false);
   const [html, setHtml] = useState(false);
@@ -89,7 +96,7 @@ function Capitulos() {
           />
         </div>
         
-        <nav>
+        <nav ref={navAside}>
           <ul>
 
             <li className="curso">
@@ -388,6 +395,8 @@ function Capitulos() {
                         <Link to={"../javaScript/eventListen"}>eventos de <br /> escucha</Link>
                         <Link to={"../javaScript/eventFlujo"}>flujo de <br /> eventos</Link>
                         <Link to={"../javaScript/MouseEvent"}>mouse events</Link>
+                        <Link to={"../javaScript/keyEvent"}>eventos de <br /> teclado</Link>
+                        <Link to={"../javaScript/interEvent"}>eventos de <br /> la interfaz</Link>
                       </div>
                     }
                   </div>

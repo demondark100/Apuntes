@@ -168,6 +168,8 @@ import Window3Js from './Paginas/apuntes/javaScript/capitulo_6/window3/window3';
 import EventListenJs from './Paginas/apuntes/javaScript/capitulo_7/enventListen';
 import EventFujoJs from './Paginas/apuntes/javaScript/capitulo_7/eventFlujo';
 import MouseEventJs from './Paginas/apuntes/javaScript/capitulo_7/mouseEvent/mouseEvent';
+import KeyEventJs from './Paginas/apuntes/javaScript/capitulo_7/KeyEvent/keyEvent';
+import InterEventJs from './Paginas/apuntes/javaScript/capitulo_7/interEvent';
 
 
 
@@ -373,6 +375,9 @@ function App() {
               <Route path='javaScript/eventListen' element={<EventListenJs />}/>
               <Route path='javaScript/eventFlujo' element={<EventFujoJs />}/>
               <Route path='javaScript/MouseEvent' element={<MouseEventJs />}/>
+              <Route path='javaScript/keyEvent' element={<KeyEventJs />}/>
+              <Route path='javaScript/interEvent' element={<InterEventJs />}/>
+              
               
 
 

@@ -30,7 +30,7 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         <img className="alineacionGridImg" src="https://keepcoding.io/wp-content/uploads/2022/06/diagrama-de-numeracion-de-lineas-de-grid.jpg" alt="alineacionGridImg" />
 
         <h2>sin resumir codigo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="sin_resumir">
     <div>
         >:v
@@ -60,7 +60,7 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         >:v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sin_resumir{
     display: grid;
     border: 5px solid #32a8a8;
@@ -112,7 +112,7 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         <Conseptos texto={`Como te das cuenta para poder asignar espacios necesitamos de dos lineas para el inicio y el final.`}/>
         
         <h2>resumir codigo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="con_resumir">
     <div>
         :v
@@ -142,7 +142,7 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         :v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.con_resumir{
     display: grid;
     border: 5px solid #32a8a8;
@@ -196,7 +196,7 @@ grid-row: desde que linea inicia / desde que linea termina;`}/>
         <h2>pseudocodigo</h2>
         <Css codigo={`grid-row: desde que linea empieza / span cuantas filas ocupara;
 grid-row: 1 / span 3;`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="spam_content">
     <div>
         :v
@@ -226,7 +226,7 @@ grid-row: 1 / span 3;`}/>
         :v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.spam_content{
     display: grid;
     border: 5px solid #32a8a8;

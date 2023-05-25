@@ -7,6 +7,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 html,
 body {
@@ -14,7 +15,6 @@ body {
 }
 
 body{
-  background-color: #1a1818;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,22 @@ body{
   padding: 0;
   overflow-x: hidden;
 }
+  
+  body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://th.bing.com/th/id/OIP.UAQ4ivzW80hdIHSlDPa9WgHaEK?w=283&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  filter: brightness(.2); 
+  z-index: -1;
+}
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -40,13 +56,13 @@ h1{
   color: #ffffff;
   text-shadow: 0 0 1vh #fff;
   text-align: center !important;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 8%;
 }
 h2{
   color: #fff;
   text-shadow: 0 0 1vh #fff;
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-top: 4%;
   width: 100%;
   text-align: start;
@@ -55,7 +71,7 @@ h2{
 h3{
   color: #fff;
   text-shadow: 0 0 1vh #fff;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 2%;
   width: 100%;
   text-align: start;
@@ -94,16 +110,16 @@ footer {
     max-width: 100%;
   }
   h1{
-    font-size: 3.5em;
+    font-size: 2.5em;
     margin-bottom: 2%;
   }
   h2{
-    font-size: 3em;
+    font-size: 2em;
     max-width: 1800px;
     margin-left: 50px;
   }
   h3{
-    font-size: 3em;
+    font-size: 1.5em;
     max-width: 1800px;
     margin-left: 80px;
   }

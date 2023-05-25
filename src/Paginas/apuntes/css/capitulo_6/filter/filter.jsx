@@ -103,11 +103,11 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
         </div>
 
         <h2>blur</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="blur_content">
     <img src="https://th.bing.com/th/id/OIP.PeIrlf8uwonQqvSKjskUTQHaNK?w=236&h=419&c=7&o=5&dpr=1.1&pid=1.7" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.blur_content img{
     width: 40%;
     filter: blur(5px);
@@ -119,14 +119,14 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
         </div>
 
         <h2>brightness</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="brightness_content">
     <img src="https://pa1.narvii.com/7689/8844d706d0dc93113f83bb22c379355562a6b5f6r1-566-630_hq.gif" alt="imagen">
 </div>
 <div class="brightness_content2">
     <img src="https://pa1.narvii.com/7689/8844d706d0dc93113f83bb22c379355562a6b5f6r1-566-630_hq.gif" alt="imagen">
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.brightness_content img{
     width: 40%;
     filter: brightness(2);
@@ -147,14 +147,14 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
       </div>
 
       <h2>contrast</h2>
-      <h3>html</h3>
+      
       <Html codigo={`<div class="contrast_content">
     <img src="https://th.bing.com/th/id/OIP.Fa79isF1mooXTEQJDBAwbgAAAA?w=186&h=257&c=7&r=0&o=5&pid=1.7" alt="imagen">
 </div>
 <div class="contrast_content2">
     <img src="https://th.bing.com/th/id/OIP.Fa79isF1mooXTEQJDBAwbgAAAA?w=186&h=257&c=7&r=0&o=5&pid=1.7" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.contrast_content img{
     width: 40%;
     filter: contrast(2);
@@ -175,14 +175,14 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
         </div>
 
         <h2>grayscale</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grayscale_content1">
     <img src="https://th.bing.com/th?id=OIP.OKhMuJ3DQ9SahO8aVjgzmQHaKd&w=210&h=297&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="imagen">
 </div>
 <div class="grayscale_content2">
     <img src="https://th.bing.com/th?id=OIP.OKhMuJ3DQ9SahO8aVjgzmQHaKd&w=210&h=297&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grayscale_content1 img{
     width: 40%;
     filter: grayscale(.4);
@@ -203,14 +203,14 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
         </div>
 
         <h2>invert</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="invert_content1">
     <img src="https://www.bing.com/th?id=OIP.pVbwrZkDHJuqAuiYaQKzCAHaKl&w=150&h=214&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="imagen">
 </div>
 <div class="invert_content2">
     <img src="https://www.bing.com/th?id=OIP.pVbwrZkDHJuqAuiYaQKzCAHaKl&w=150&h=214&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.invert_content1 img{
     width: 40%;
     filter: invert(15%);
@@ -232,7 +232,7 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
 
 
 i       <h2>saturate</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="saturate_content1">
     <img src="https://th.bing.com/th/id/OIP.RHG3PL8XBQjk5YrY8tVpcQAAAA?w=186&h=257&c=7&r=0&o=5&pid=1.7" alt="imagen">
 </div>
@@ -242,7 +242,7 @@ i       <h2>saturate</h2>
 <div class="saturate_content3">
     <img src="https://th.bing.com/th/id/OIP.RHG3PL8XBQjk5YrY8tVpcQAAAA?w=186&h=257&c=7&r=0&o=5&pid=1.7" alt="imagen">
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.saturate_content1 img{
     width: 40%;
     filter: saturate(0);

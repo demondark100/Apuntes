@@ -14,13 +14,13 @@ function Transition() {
         <Conseptos texto={`Esto es para hacer trnasisiones en distintas cosas es como dar una animacion por ejemplo a los hover.
 en simples palabras transition nos mostrara el proceso de un cambio a otro.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="ejemplo1_tr">
     <p>
         hola.
     </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.ejemplo1_tr{
     background-color: #000;
     color: #fff;
@@ -41,13 +41,13 @@ en simples palabras transition nos mostrara el proceso de un cambio a otro.`}/>
         <Conseptos texto={`Como te das cuenta al pasar el mouse sobre el elemento "p" se demora de pasar de un color a otro pasa como una transision.`}/>
         <h2>transition-property</h2>
         <Conseptos texto={`Con esto le indicaremos que propiedad queremos que se haga el cambio por ejemplo el background,color,font,etc.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="property_content">
     <div class="cajita1">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.property_content{
     background-color: #1815d1f8;
     height: 65%;
@@ -80,13 +80,13 @@ y si queremos menos de un segundo se pone. 0.5s , 0.1s , 0.8s , etc.
 pero podemos quitar el 0 y solo poner
 .5s , .1s , .8s.
 puedes ir jugando con los valores para que se adapten a tus gustos o estilos.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="duration_content">
     <div class="cajita2">
 
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.duration_content{
     background-color: #000000f8;
     height: 65%;
@@ -113,13 +113,13 @@ puedes ir jugando con los valores para que se adapten a tus gustos o estilos.`}/
         <Conseptos texto={`Como te das cuenta la transision se hace en 1 segundo pero se puede cambiar ese tiempo por el que tu quieras.`}/>
         <h2>transition-delay</h2>
         <Conseptos texto={`Si queremos que la transision no se muestre al instante podemos hacer que se muestre dentro de un tiempo con transition-delay.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="delay_content">
     <div class="cajita3">
         
     </div>
 </div>`}></Html>
-        <h3>css</h3>
+        
         <Css codigo={`.delay_content{
     background-color: #000000f8;
     height: 65%;
@@ -147,13 +147,13 @@ puedes ir jugando con los valores para que se adapten a tus gustos o estilos.`}/
         </div>
         <h2>inherit</h2>
         <Conseptos texto={`esta propiedad ereda el color de su contenedor.`}></Conseptos>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="i_content">
     <div class="i_hijo">
 
     </div>
 </div>`}></Html>
-        <h3>css</h3>
+        
         <Css codigo={`.i_content{
     background-color: #2f87a1;
     width: 100%;
@@ -176,7 +176,7 @@ puedes ir jugando con los valores para que se adapten a tus gustos o estilos.`}/
         </div>
         <h2>transision-timing-function</h2>
         <Conseptos texto={`Esta propiedad es la curva del tiempo que se tardara en hacerse la animacion.`}></Conseptos>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="timing_content">
     <div></div>
     <div></div>
@@ -184,7 +184,7 @@ puedes ir jugando con los valores para que se adapten a tus gustos o estilos.`}/
     <div></div>
     <div></div>
 </div>`}></Html>
-        <h3>css</h3>
+        
         <Css codigo={`.timing_content{
     padding: 25px;
     background-color: #2f87a1;
@@ -241,10 +241,10 @@ puedes ir jugando con los valores para que se adapten a tus gustos o estilos.`}/
         <h2>pseudocodigo:</h2>
         <Css codigo={`transition-property: background , left;
 transition-durantion: tiempo de background , tiempo de left;`}></Css>
-        <h3>css</h3>
+        
         <Css codigo={`transition-property: background , left;
 transition-durantion: tiempo de background , tiempo de left;`}></Css>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="diferencia_content">
     <div></div>
     <div></div>
@@ -252,7 +252,7 @@ transition-durantion: tiempo de background , tiempo de left;`}></Css>
     <div></div>
     <div></div>
 </div>`}></Html>
-        <h3>css</h3>
+        
         <Css codigo={`.diferencia_content{
     padding: 25px;
     background-color: #2f87a1;

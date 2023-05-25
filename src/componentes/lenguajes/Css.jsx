@@ -22,11 +22,12 @@ export default function Css({ codigo }) {
 
   return (
     <div className='contentLenguaje'>
-      <div className="lenguajes scroll">
-        <button onClick={copiar}>
+      <h3 className='titleLengauje'>css</h3>
+      <button className='copiarCodigo'  onClick={copiar}>
           <FontAwesomeIcon icon={copiado ? faCheck : faCopy} />
           {copiado ? ' Copiado' : ' Copiar'}
         </button>
+      <div className="lenguajes scroll">
         <pre>
           <code className="css scroll" ref={lenguaje}>
             {codigo}

@@ -15,13 +15,11 @@ function Unidades2() {
 para entender mejor debemos aprender la propiedad "background-color".
 background-color: es una propiedad que sirve para darle color de fondo a una cagita ejemplo.`}/>
         <h2>background-color</h2>
-        <h3>html</h3>
         <Html codigo={`<div id="cagita_roja">
   <p>
     la caja sera color roja.
   </p>
 </div>`}/>
-        <h3>css</h3>
         <Css codigo={`#cagita_roja{
   background-color: red;
 }
@@ -49,13 +47,11 @@ ahora para escribir los viewport en css debemos poner "vh" y "vw".
 "height" es la propiedad que indica la altura de la panatalla.`}/>
 
         <h2>ejemplo de uso</h2>
-        <h3>html</h3>
         <Html codigo={`<div>
   <p>
     este body ocupara toda la pantalla.
   </p>
 </div>`}/>
-        <h3>css</h3>
         <Css codigo={`div{
   background-color: black;
   width: 100vw;
@@ -78,12 +74,10 @@ tu puedes cambiar los valores para que ocupen la medida que desees y veras que s
         <h2>porcentajes</h2>
         <Conseptos texto={`Estos son similares al viewport pero estos solo llegaran al ancho del contenedor no de toda la pantalla.
 ejemplo:`}/>
-        <h3>html</h3>
         <Html codigo={`<div class="contenr_1">
   <div class="content_porcentaje">
   </div>
 </div>`}/>
-        <h3>css</h3>
         <Css codigo={`.contenr_1{
   width: 256px;
   height: 256px;

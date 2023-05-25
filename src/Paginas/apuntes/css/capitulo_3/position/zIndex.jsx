@@ -18,7 +18,7 @@ Muy importante z-index inicia siempre desde la capa 0.`}/>
         
         <h2>z-index</h2>
         <Conseptos texto={`En este ejemplo solo lo mostraremos con position relative pero esto tambien se aplica para position-absolute.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="relative_1">
   caja 1
 </div>

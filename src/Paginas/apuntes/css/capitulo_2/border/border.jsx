@@ -21,7 +21,7 @@ border: 2px solid blue;`}/>
           </div>
         </div>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="bordeer_1">
   borde
 </div>`}/>
@@ -44,14 +44,14 @@ border: 2px solid blue;`}/>
       
       <h2>none</h2>
       <Conseptos texto={`Luego tenemos una propiedad muy importante la cual es none con esta propiedad estamos diciendo que no tenga ningun borde por ejemplo un boton.`}/>
-      <h3>html</h3>
+      
       <Html codigo={`<button class="boton_1">
   con borde
 </button>
 <button class="boton_2">
   sin borde
 </button>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.boton_2{
   border: none;
 }`}/>
@@ -66,7 +66,7 @@ border: 2px solid blue;`}/>
 
       <h2>border-radius</h2>
       <Conseptos texto={`Luego tenemos a "border-radius" que nos sirve para redondear un borde en simples palabras es por si quieres border con forma de circulo.`}/>
-      <h3>html</h3>
+      
       <Html codigo={`<div class="borde_1_b">
   caja.
 </div>
@@ -76,7 +76,7 @@ border: 2px solid blue;`}/>
 <div class="borde_3_b">
   caja.
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.borde_1_b{
   background-color: red;
   color: white;
@@ -118,11 +118,11 @@ border-top = borde de arriba
 border-right = borde de la derecha
 border-bottom = borde de abajo
 border-left = borde de la izquierda`}/>
-      <h3>html</h3>
+      
       <Html codigo={`<div class="caja__border">
   contenido
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`.caja__border{
   width: 55%;
   height: 12%;

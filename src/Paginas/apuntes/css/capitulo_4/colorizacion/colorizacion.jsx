@@ -52,7 +52,7 @@ rgb viene de los colores primario Rojo Verde Azul Red Green , Blue`}/>
 rgb(150 rojo,255 verde,12 azul);
 rgb(150 red,255 green,12 blue);`}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="colorizacion_rgb">
 
 </div>`}/>
@@ -71,11 +71,11 @@ rgb(150 red,255 green,12 blue);`}/>
 
         <h2>rgba</h2>
         <Conseptos texto={`Esto es exactamente igual a rgb pero con rgba desidiremos cuanta opacidad queremos darle al color.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="rgba">
 
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.rgba{
   width: 150px;
   height: 150px;
@@ -110,11 +110,11 @@ podemos colorizar con numeros desde el "0" hasta el "9".
 con letras desde la "a" hasta la "f".
 
 estos podemos mesclarlos para que formemos colores pero puedes ir jugando con los valores.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="rgb1">
 
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.rgb1{
   width: 100px;
   height: 100px;
@@ -130,11 +130,11 @@ estos podemos mesclarlos para que formemos colores pero puedes ir jugando con lo
 
         <h2>opacidad con hexadecimal</h2>
         <Conseptos texto={`Para dar opacidad agregaremos dos valores mas despues de los 6 valores estos tambien se comportaran como "0" valor minimo y "f" valor maximo.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="rgb_o">
 
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.rgb_o{
   width: 100px;
   height: 100px;
@@ -148,7 +148,7 @@ estos podemos mesclarlos para que formemos colores pero puedes ir jugando con lo
         </div>
 
         <div className="colorizacion__content">
-          <h3>elige un color</h3>
+          
           <Conseptos texto={`aqui podras elegir un color y te mostrare el codigo hexadesimal.`}/>
           <div className="colorizacion__funcion">
             <input type="color" ref={valorInput}/>

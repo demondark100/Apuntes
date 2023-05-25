@@ -20,7 +20,7 @@ enlaces={{
 }}
 targetBlank={true}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="position_1">
   caja 1
 </div>
@@ -33,7 +33,7 @@ targetBlank={true}/>
 <div class="position_4">
   caja 4
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.position_1{
   background-color: green;
   width: 35%;

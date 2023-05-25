@@ -24,7 +24,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
           repeat: {text: "repeat",url:"../css/capitulo 5/grid/gridTemplate/grid-gap/asignacion de espacios/repeat"}
         }}/>
         <h2>sin grid auto</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="sin_auto">
     <div>
         :v
@@ -60,7 +60,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         :v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.sin_auto{
     border: 5px  solid #87d10f;
     display: grid;
@@ -109,7 +109,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         </div>
 
         <h2>con grid auto</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="con_auto">
     <div>
         :v
@@ -145,7 +145,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         :v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.con_auto{
     border: 5px  solid #87d10f;
     display: grid;
@@ -197,7 +197,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         <Conseptos texto={`Como te diste cuenta las nuevas celdas se crearon de forma automatica como filas pero podemos cambiar ese comportamiento con:`}/>
         <Css codigo={`grid-auto-flow: column / row;`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_flow">
     <div>
         :v
@@ -233,7 +233,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         :v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_flow{
     display: grid;
     grid-template-columns: repeat(3,120px);
@@ -284,7 +284,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         <Conseptos texto={`Como te das cuenta ahora se crean como columnas y no como filas como antes.`}/>
         <h2>dense</h2>
         <Conseptos texto={`Esta propiedad se usa en caso de que haya un espacio sin usar esto detectara cual es ese campo sin rellenar y pondra la celda mas cercana para reemplazar ese espacio.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_flow_dense">
     <div>
         :v
@@ -320,7 +320,7 @@ grid-auto-rows: solo se ponen las medidas;`}/>
         :v
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_flow_dense{
     display: grid;
     grid-template-columns: repeat(3,1fr);

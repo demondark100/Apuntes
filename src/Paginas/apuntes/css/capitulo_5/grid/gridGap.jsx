@@ -17,7 +17,7 @@ function GridGap() {
 grid-row-gap: separar filas;
 grid-gap: separar filas y columnas;`}/>
         <h2>grid-column-gap</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="gap_column">
     <div>
         a
@@ -47,7 +47,7 @@ grid-gap: separar filas y columnas;`}/>
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.gap_column{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -122,7 +122,7 @@ grid-gap: separar filas y columnas;`}/>
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_row{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -167,7 +167,7 @@ grid-gap: separar filas y columnas;`}/>
         <Conseptos texto={`Como te das cuenta se separan las filas pero no se separan del borde del contenedor.`}/>
         
         <h2>grid-gap</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="grid_gap">
     <div>
         a
@@ -197,7 +197,7 @@ grid-gap: separar filas y columnas;`}/>
         a
     </div>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.grid_gap{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

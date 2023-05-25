@@ -24,11 +24,11 @@ enlaces={
 
         <h2>font-family</h2>
         <Conseptos texto={`esta pripiedad es la tipografia de las letras.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="tipografia">
   esto es la tipografia.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.tipografia{
   font-family: cursive;
 }`}/>
@@ -41,11 +41,11 @@ enlaces={
         <h2>line-height</h2>
         <Conseptos texto={`Esta propiedad es cuanto ocupara de arriba a abajo una oracion o palabra por ejemplo si ponemos 2 ocupara mas espacio y las letras se centraran.`}/>
         <h2>ejemplo</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="line_height">
   esto ocupara mas espacio en cuention de altura.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.line_height{
   line-height: 2;
 }`}/>
@@ -57,12 +57,12 @@ enlaces={
 
         <h2>font-weight</h2>
         <Conseptos texto={`Esta propiedad hace que las letras sean mas gruesas osea que las lineas que dibujan las letras no sean tan delgadas.`}/>
-        <h3>ejemplo</h3>
-        <h3>html</h3>
+        
+        
         <Html codigo={`<p id="grosor">
   estas letras seran mas gruesas.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`#grosor{
   font-weight: 800;
 }`}/>
@@ -93,7 +93,7 @@ enlaces={
 } 
   targetBlank={true}
 />
-        <h3>html</h3>
+        
         <Html codigo={`<head>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
 </head>

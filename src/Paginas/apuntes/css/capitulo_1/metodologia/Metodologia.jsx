@@ -75,7 +75,6 @@ hijo con cambios:<p>       content__hijo--cambios`}/>
         </div>
 
         <h2>ejemplo 2</h2>
-        <h3>html</h3>
         <Html codigo={`<div class="content">
   yo sere color verde.
   <p class="content__p">
@@ -86,7 +85,6 @@ hijo con cambios:<p>       content__hijo--cambios`}/>
   </p>
 </div>
 `}/>
-        <h3>css</h3>
         <Css codigo={`.content{
   color: green;
 }

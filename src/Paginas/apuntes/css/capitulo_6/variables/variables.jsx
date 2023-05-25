@@ -22,7 +22,7 @@ function VariablesCss() {
         <Conseptos texto={`Las variables globales nos permitira usar la variable en cualquier elemento que queramos.
 
 Para usarlas es necesario crear un "root".`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="variable_global">
 
 </div>
@@ -31,7 +31,7 @@ Para usarlas es necesario crear un "root".`}/>
         un parrafo cualquiera XD.
     </p>
 </div>`}/>
-      <h3>css</h3>
+      
       <Css codigo={`/* esto es el :root siempre se debe crear asi para usar variales globales */
 
 :root{
@@ -64,7 +64,7 @@ Para usarlas es necesario crear un "root".`}/>
 
         <h2>variable locales</h2>
         <Conseptos texto={`Estas a diferencia de las variables globales no necesitan de "root" pero estos solo se aplicaran para el elemento que le indiquemos por ejemplo si creamos la variable para un "p" esa variable solo funcionara con los "p" y no con los otros elementos debido a que es una variable local.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p>
     esto cambiara.
 </p>
@@ -77,7 +77,7 @@ Para usarlas es necesario crear un "root".`}/>
 <b>
     no cambiara.
 </b>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`body{
     background-color: #000000ea;
 }

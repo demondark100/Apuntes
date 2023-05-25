@@ -24,7 +24,7 @@ margin-right: 15px;
 margin-bottom: 15px;
 margin-left: 15px;`}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="m_content">
   
   <div class="arriba">
@@ -45,7 +45,7 @@ margin-left: 15px;`}/>
 
 </div>`}/>
 
-        <h3>css</h3>
+        
         <Css codigo={`.m_content{
   display: block;
   margin: auto;
@@ -94,11 +94,11 @@ margin-right ,
 margin-bottom ,
  margin-left.`}/>
 
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_margin">
   contenido
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.content_margin{
   margin: auto;
   background-color: red;
@@ -112,7 +112,7 @@ margin-bottom ,
         </div>
 
         <Conseptos texto={`Ahora otro ejemplo del como usar margin.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="caja_1">
   caja 1
 </div>
@@ -125,7 +125,7 @@ margin-bottom ,
 <div class="caja_4">
   caja 4
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.caja_1{
   color: white;
   background-color: blue;

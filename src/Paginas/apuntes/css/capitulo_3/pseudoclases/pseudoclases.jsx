@@ -20,11 +20,11 @@ function Pseudoclases() {
 
         <h2>hover</h2>
         <Conseptos texto={`"hover" se activara cada que pases el mouse ensima del elemento , puedes poner el estilo que se te ocurra cualquier cosa.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="hover_e">
   hover.
 </p>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`.hover_e:hover{
   color: wheat;
   background-color: black;
@@ -37,9 +37,9 @@ function Pseudoclases() {
 
         <h2>link</h2>
         <Conseptos texto={`"link" detecta cuando el usuario hace click para que se desactive el estilo que le dimos en la pseudoclase y se ponga el estilo que le dimos al elemento por defecto.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<a id="click" href="#">click aqui</a>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`#click{
   background-color: black;
   color: wheat;
@@ -54,11 +54,11 @@ function Pseudoclases() {
 
         <h2> active</h2>
         <Conseptos texto={`"active" se activara cada que se mantenga clickeado el elemto al cual le pongamos esta pseudoclase.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<button id="btn_1">
   hola xd
 </button>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`#btn_1{
   background-color: black;
   color: wheat;
@@ -78,9 +78,9 @@ function Pseudoclases() {
 
         <h2>focus</h2>
         <Conseptos texto={`"focus" sirve mas que nada para inputs esta pseudoclase se activara cuando se haga click al elemento y el elemento se mantenga enfocado por asi decirlo.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<input type="text" id="inputFeliz">`}/>
-        <h3>css</h3>
+        
         <Css codigo={`#inputFeliz:focus{
   background-color: black;
   color: orange;

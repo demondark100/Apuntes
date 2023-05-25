@@ -24,11 +24,12 @@ export default function JavaScropt({ codigo }) {
 
   return (
     <div className='contentLenguaje'>
-      <div className="lenguajes scroll">
-        <button onClick={copiar}>
+      <h3 className='titleLengauje'>javaScript</h3>
+      <button className='copiarCodigo'  onClick={copiar}>
           <FontAwesomeIcon icon={copiado ? faCheck : faCopy} />
           {copiado ? ' Copiado' : ' Copiar'}
         </button>
+      <div className="lenguajes scroll">
         <pre>
           <code className="javascript scroll" ref={lenguaje}>
             {codigo}

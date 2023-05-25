@@ -41,19 +41,19 @@ title: Esto le da un titulo a cualquier elemento de html.`}/>
         </div>
         <h2>apliquemos javaScript</h2>
         <h2>contentEditable</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="editarContenido"> hola </p>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`let editarContenido = document.querySelector(".editarContenido"); 
 editarContenido.setAttribute("contentEditable","true");`}/>
         <div className="website">
           <p contentEditable="true"> hola </p>
         </div>
         <h2>dir</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="dir_1"> hola </p> 
 <p class="dir_2"> hola </p>`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`let dir_1 = document.querySelector(".dir_1");
 dir_1.setAttribute("dir","rtl"); 
 
@@ -64,18 +64,18 @@ dir_2.setAttribute("dir","ltr");`}/>
           <p dir="ltr"> hola </p>
         </div>
         <h2>hidden</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="ocultar" hidden> se mostrara </p> `}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`let mostrar = document.querySelector(".ocultar");
 mostrar.removeAttribute("hidden")`}/>
         <div className="website">
         <p> se mostrara </p> 
         </div>
         <h2>title</h2>
-        <h3>html</h3>
+        
         <Html codigo={`<p class="titulo"> hola </p> `}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`let titulo = document.querySelector(".titulo"); 
 titulo.setAttribute("title","hola mundo");`}/>
         <div className="website">

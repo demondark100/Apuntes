@@ -25,11 +25,11 @@ Ahora una imagen para entender mejor este consepto teorico.`}/>
 
         <h2>media query</h2>
         <Conseptos texto={`Con esto vamos a crear los sitios web con distintas resolucines.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="media_1">
   responsive.
 </div>`}/>
-        <h3>css</h3>
+        
         <Conseptos texto={`Esto es un ejemplo del como se usa media query`}/>
         <Css codigo={`.media_1{
   width: 45%;
@@ -52,7 +52,7 @@ Ahora una imagen para entender mejor este consepto teorico.`}/>
         </div>
 
         <Conseptos texto={`Ahora veremos un ejemplo mas si no entiendes algo lo explicaremos de mejor manera mas adelante.`}/>
-        <h3>html</h3>
+        
         <Html codigo={`<div class="content_1">
     <h5>titulo 1</h5>
     <p>
@@ -65,7 +65,7 @@ Ahora una imagen para entender mejor este consepto teorico.`}/>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex maiores dolorem ea vel quo? Esse, ratione! Sit suscipit harum impedit! Natus, dolores porro animi facere voluptatibus atque aut autem exercitationem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores ad nulla exercitationem nobis sapiente recusandae labore nisi est odio, magnam ipsam atque id laborum corporis facilis illum explicabo eius rem?
   </p>
 </div>`}/>
-        <h3>css</h3>
+        
         <Css codigo={`div{
   display: inline-block;
 }

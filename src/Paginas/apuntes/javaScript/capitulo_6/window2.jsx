@@ -2,6 +2,8 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Menu2 from "../../../../componentes/menus/Menu2";
+import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+
 
 function Window2Js() {
   return (  
@@ -10,7 +12,7 @@ function Window2Js() {
       <main>
         <h1>window 2</h1>
         <h2>sintaxis</h2>
-        <JavaScropt codigo={`ventana.metodo.propiedad`}/>
+        <Sintaxis codigo={`ventana.metodo.propiedad`}/>
         <h2>screen</h2>
         <JavaScropt codigo={`window.screen;`}/>
         <Conseptos texto={`Esto nos servira para ver las propiedades de la pantalla.`}/>
@@ -27,12 +29,12 @@ function Window2Js() {
         <JavaScropt codigo={`window.scrollX;`}/>
         <Conseptos texto={`Esto nos servira para ver cuanto nos desplazamos de derecha a izquierda.`}/>
         <h2>abreviar scroll</h2>
-        <h3>sintaxis</h3>
-        <JavaScropt codigo={`window.scroll(
+        
+        <Sintaxis codigo={`window.scroll(
     parametro 1 moverse de arriba a abajo ,
     parametro 2 moverse de izquierda a derecha
 );`}/>
-        <h3>javaScript</h3>
+        
         <JavaScropt codigo={`window.scroll(50,10);`}/>
         <h2>innerWidth y innerHeight</h2>
         <JavaScropt codigo={`window.innerWidth; // ver ancho
