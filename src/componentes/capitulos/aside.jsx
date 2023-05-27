@@ -82,6 +82,9 @@ function Capitulos() {
   const [cap5JavaScript, setCap5JavaScript] = useState(false);
   const [cap6JavaScript, setCap6JavaScript] = useState(false);
   const [cap7JavaScript, setCap7JavaScript] = useState(false);
+  const [cap8JavaScript, setCap8JavaScript] = useState(false);
+  const [cap9JavaScript, setCap9JavaScript] = useState(false);
+  const [cap10JavaScript, setCap10JavaScript] = useState(false);
 
   return (  
     <>
@@ -397,6 +400,47 @@ function Capitulos() {
                         <Link to={"../javaScript/MouseEvent"}>mouse events</Link>
                         <Link to={"../javaScript/keyEvent"}>eventos de <br /> teclado</Link>
                         <Link to={"../javaScript/interEvent"}>eventos de <br /> la interfaz</Link>
+                        <Link to={"../javaScript/timers"}>timers</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap8JavaScript(!cap8JavaScript)}>capitulo 8</p>
+                    {
+                      cap8JavaScript && <div className="temas">
+                        <Link to={"../javaScript/controlFlujo"}>control de <br /> flujo(teorico)</Link>
+                        <Link to={"../javaScript/switch"}>switch</Link>
+                        <Link to={"../javaScript/ManErr"}>manejo de <br />errores</Link>
+                        <Link to={"../javaScript/callbacks"}>callbacks</Link>
+                        <Link to={"../javaScript/promesas"}>Promesas</Link>
+                        <Link to={"../javaScript/awaitAsync"}>await y async</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap9JavaScript(!cap9JavaScript)}>capitulo 9</p>
+                    {
+                      cap9JavaScript && <div className="temas">
+                        <Link to={"../javaScript/json"}>JSON</Link>
+                        <Link to={"../javaScript/Ajsx"}>AJAX</Link>
+                        <Link to={"../javaScript/fetch"}>fetch</Link>
+                        <Link to={"../javaScript/axios"}>axios</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap10JavaScript(!cap10JavaScript)}>capitulo 10</p>
+                    {
+                      cap10JavaScript && <div className="temas">
+                        <Link to={"../javaScript/proto"}>prototipos</Link>
+                        <Link to={"../javaScript/carProto"}>caracteristicas de <br /> prototipos</Link>
+
+                        <Link to={"../javaScript/strictMod"}>Strict Mode</Link>
+
+
                       </div>
                     }
                   </div>

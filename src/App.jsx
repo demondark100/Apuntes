@@ -170,6 +170,20 @@ import EventFujoJs from './Paginas/apuntes/javaScript/capitulo_7/eventFlujo';
 import MouseEventJs from './Paginas/apuntes/javaScript/capitulo_7/mouseEvent/mouseEvent';
 import KeyEventJs from './Paginas/apuntes/javaScript/capitulo_7/KeyEvent/keyEvent';
 import InterEventJs from './Paginas/apuntes/javaScript/capitulo_7/interEvent';
+import TimersJs from './Paginas/apuntes/javaScript/capitulo_7/timers';
+import ControlFlujoJs from './Paginas/apuntes/javaScript/capitulo_8/controlFlujo';
+import SwitchJs from './Paginas/apuntes/javaScript/capitulo_8/switch';
+import ManErrJs from './Paginas/apuntes/javaScript/capitulo_8/manErr';
+import CallbacksJs from './Paginas/apuntes/javaScript/capitulo_8/callbacks';
+import PromesasJs from './Paginas/apuntes/javaScript/capitulo_8/promesas';
+import AwaitAsyncJs from './Paginas/apuntes/javaScript/capitulo_8/awaiAsync';
+import JsonJs from './Paginas/apuntes/javaScript/capitulo_9/JSON';
+import AjaxJs from './Paginas/apuntes/javaScript/capitulo_9/AJAX';
+import FetchJs from './Paginas/apuntes/javaScript/capitulo_9/fetch';
+import AxiosJs from './Paginas/apuntes/javaScript/capitulo_9/asios';
+import ProtoJs from './Paginas/apuntes/javaScript/capitulo_10/proto';
+import CarProtoJs from './Paginas/apuntes/javaScript/capitulo_10/carProto';
+import StrictModJs from './Paginas/apuntes/javaScript/capitulo_10/strictMod';
 
 
 
@@ -377,6 +391,34 @@ function App() {
               <Route path='javaScript/MouseEvent' element={<MouseEventJs />}/>
               <Route path='javaScript/keyEvent' element={<KeyEventJs />}/>
               <Route path='javaScript/interEvent' element={<InterEventJs />}/>
+              <Route path='javaScript/timers' element={<TimersJs />}/>
+            
+            {/* capitulo 8 */}
+              <Route path='javaScript/controlFlujo' element={<ControlFlujoJs />}/>
+              <Route path='javaScript/switch' element={<SwitchJs />}/>
+              <Route path='javaScript/ManErr' element={<ManErrJs />}/>
+              <Route path='javaScript/callbacks' element={<CallbacksJs />}/>
+              <Route path='javaScript/promesas' element={<PromesasJs />}/>
+              <Route path='javaScript/awaitAsync' element={<AwaitAsyncJs />}/>
+
+            {/* capitulo 9 */}
+              <Route path='javaScript/json' element={<JsonJs />}/>
+              <Route path='javaScript/Ajsx' element={<AjaxJs />}/>
+              <Route path='javaScript/fetch' element={<FetchJs />}/>
+              <Route path='javaScript/axios' element={<AxiosJs />}/>
+
+            {/* capitulo 10 */}
+              <Route path='javaScript/proto' element={<ProtoJs />}/>
+              <Route path='javaScript/carProto' element={<CarProtoJs />}/>
+              <Route path='javaScript/strictMod' element={<StrictModJs />}/>
+
+              
+
+              
+            
+              
+
+
               
               
 
