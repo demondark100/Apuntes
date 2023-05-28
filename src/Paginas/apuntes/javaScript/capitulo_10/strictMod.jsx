@@ -67,13 +67,13 @@ Object.preventExtensions(obj)
 obj.desarrollador =  "valve"`}/>
         <Conseptos texto={`Sin "use strict" si tratamos de acceder a la propiedad "desarrolador" solo nos dira undefined pero no notificara el error ya que "preventExtensions" no permite agregar mas propiedades al objeto.`}/>
         <h3>con "use strict"</h3>
-        <JavaScropt codigo={`"use strict
-const obj = 
+        <JavaScropt codigo={`"use strict";
+const obj = {
     juego: "left 4 dead 2"
 }
 Object.preventExtensions(obj)
 obj.desarrollador =  "valve"`}/>
-        <Conseptos texto={`Con "use strict" si nos notificara que no se pueden agregar mas propiedades a un objeto.`}/>
+        <Conseptos texto={`Con "use strict" si nos notificara que no se pueden agregar mas propiedades a un objeto.`}/>ñ
       </main>
       <Footer/>
     </>

@@ -85,6 +85,7 @@ function Capitulos() {
   const [cap8JavaScript, setCap8JavaScript] = useState(false);
   const [cap9JavaScript, setCap9JavaScript] = useState(false);
   const [cap10JavaScript, setCap10JavaScript] = useState(false);
+  const [cap11JavaScript, setCap11JavaScript] = useState(false);
 
   return (  
     <>
@@ -327,6 +328,7 @@ function Capitulos() {
                     {
                       cap2JavaScript && <div className="temas">
                         <Link to={"../javaScript/variables"}>variables</Link>
+                        <Link to={"../javaScript/javaScriptFun"}>funciones de <br />javaScript</Link>
                         <Link to={"../javaScript/prompt"}>prompt</Link>
                         <Link to={"../javaScript/operadores"}>Operadores</Link>
                         <Link to={"../javaScript/concatenacion"}>Concatenacion</Link>
@@ -437,10 +439,26 @@ function Capitulos() {
                       cap10JavaScript && <div className="temas">
                         <Link to={"../javaScript/proto"}>prototipos</Link>
                         <Link to={"../javaScript/carProto"}>caracteristicas de <br /> prototipos</Link>
-
                         <Link to={"../javaScript/strictMod"}>Strict Mode</Link>
+                        <Link to={"../javaScript/funciones2"}>funciones parte2 <br /> (la venganza :v)</Link>
+                        <Link to={"../javaScript/thisCon"}>this <br /> contextual</Link>
+                        <Link to={"../javaScript/recursividad"}>Recursividad</Link>
+                        <Link to={"../javaScript/clausulas"}>clausulas</Link>
+                        <Link to={"../javaScript/paramDefaul"}>parametros por <br /> defecto</Link>
+                        <Link to={"../javaScript/paramRest"}>parametro rest</Link>
+                        <Link to={"../javaScript/opTerna"}>operador <br /> ternario</Link>
+                        <Link to={"../javaScript/opSpread"}>operador <br /> spread</Link>
+                      </div>
+                    }
+                  </div>
 
-
+                  <div>
+                    <p onClick={()=>setCap11JavaScript(!cap11JavaScript)}>capitulo 11</p>
+                    {
+                      cap11JavaScript && <div className="temas">
+                        <Link to={"../javaScript/objDate"}>objeto Date</Link>
+                        <Link to={"../javaScript/locSeJs"}>LocalStorage y <br /> SessionStorage</Link>
+                        
                       </div>
                     }
                   </div>

@@ -184,6 +184,16 @@ import AxiosJs from './Paginas/apuntes/javaScript/capitulo_9/asios';
 import ProtoJs from './Paginas/apuntes/javaScript/capitulo_10/proto';
 import CarProtoJs from './Paginas/apuntes/javaScript/capitulo_10/carProto';
 import StrictModJs from './Paginas/apuntes/javaScript/capitulo_10/strictMod';
+import FuncionesPart2Js from './Paginas/apuntes/javaScript/capitulo_10/funciones';
+import ThisCon from './Paginas/apuntes/javaScript/capitulo_10/thisCon';
+import RecursividadJs from './Paginas/apuntes/javaScript/capitulo_10/recursividad';
+import ClausulasJs from './Paginas/apuntes/javaScript/capitulo_10/clausulas';
+import ParamDefaultJs from './Paginas/apuntes/javaScript/capitulo_10/paramDefault';
+import ParamRestJs from './Paginas/apuntes/javaScript/capitulo_10/paramRest';
+import OpeTernaJs from './Paginas/apuntes/javaScript/capitulo_10/opeTerna';
+import OpeSpread from './Paginas/apuntes/javaScript/capitulo_10/opSpread';
+import ObjDateJs from './Paginas/apuntes/javaScript/capitulo_11/objDate';
+import LocSeJs from './Paginas/apuntes/javaScript/capitulo_11/locSeJs';
 
 
 
@@ -345,6 +355,7 @@ function App() {
           {/* capitulo 2 */}
             <Route path='javaScript/variables' element={<VariablesJavaScript />}/>
               <Route path='javaScript/variables/bloqueDeCodigo' element={<BloqueCJavaScript />}/>
+            <Route path='javaScript/javaScriptFun' element={<JavaScriptFun />}/>
             <Route path='javaScript/prompt' element={<PromptLogica />}/>
             <Route path='javaScript/javaSCriptFun' element={<JavaScriptFun />}/>
             <Route path='javaScript/operadores' element={<OperadoresJavaScript />}/>
@@ -411,7 +422,20 @@ function App() {
               <Route path='javaScript/proto' element={<ProtoJs />}/>
               <Route path='javaScript/carProto' element={<CarProtoJs />}/>
               <Route path='javaScript/strictMod' element={<StrictModJs />}/>
-
+              <Route path='javaScript/funciones2' element={<FuncionesPart2Js />}/>
+              <Route path='javaScript/thisCon' element={<ThisCon />}/>
+              <Route path='javaScript/recursividad' element={<RecursividadJs />}/>
+              <Route path='javaScript/clausulas' element={<ClausulasJs />}/>
+              <Route path='javaScript/paramDefaul' element={<ParamDefaultJs />}/>
+              <Route path='javaScript/paramRest' element={<ParamRestJs />}/>
+              <Route path='javaScript/opTerna' element={<OpeTernaJs />}/>
+              <Route path='javaScript/opSpread' element={<OpeSpread />}/>
+              
+            {/* capitulo 11 */}
+              <Route path='javaScript/objDate' element={<ObjDateJs />}/>
+              <Route path='javaScript/locSeJs' element={<LocSeJs />}/>
+            
+              
               
 
               
