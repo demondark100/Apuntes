@@ -475,6 +475,12 @@ function Capitulos() {
                       cap12JavaScript && <div className="temas">
                         <Link to={"../javaScript/MatchMedia"}>MatchMedia</Link>
                         <Link to={"../javaScript/inObser"}>Intersection <br /> Observer</Link>
+                        <Link to={"../javaScript/lazyLoad"}>Lazy Load</Link>
+                        <Link to={"../javaScript/Notifications"}>Notifications</Link>
+                        <Link to={"../javaScript/webWork"}> Web Worker</Link>
+                        <Link to={"../javaScript/sameOr"}> Same Origin <br /> Politic</Link>
+                        
+                       
                       </div>
                     }
                   </div>

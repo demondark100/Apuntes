@@ -1,0 +1,12 @@
+.content_bucle_Web_Worker{
+  display: flex;
+  justify-content: center;
+}
+.button_web_worker{
+  background-color: #00000066;
+  color: #9eb6ff;
+}
+.inputWebWorker{
+  background-color: #211a1a;
+  color: #9eb6ff;
+}

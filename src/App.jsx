@@ -201,6 +201,10 @@ import FileReadJs from './Paginas/apuntes/javaScript/capitulo_11/FileRead';
 import IndexedDB from './Paginas/apuntes/javaScript/capitulo_11/IndexedDB';
 import MatchMediaJs from './Paginas/apuntes/javaScript/capitulo_12/MatchMedia/MatchMedia';
 import InObserJs from './Paginas/apuntes/javaScript/capitulo_12/inObser/inOber';
+import LazyLoadJs from './Paginas/apuntes/javaScript/capitulo_12/LazyLoad/lazyLoad';
+import NotificationJs from './Paginas/apuntes/javaScript/capitulo_12/notifications';
+import WebWorkerJs from './Paginas/apuntes/javaScript/capitulo_12/webWorker/webWork';
+import SameOrJs from './Paginas/apuntes/javaScript/capitulo_12/same origin politic/sameOr';
 
 
 
@@ -450,8 +454,11 @@ function App() {
             {/* capitulo 12 */}
               <Route path='javaScript/MatchMedia' element={<MatchMediaJs />}/>
               <Route path='javaScript/inObser' element={<InObserJs />}/>
-
-            
+              <Route path='javaScript/lazyLoad' element={<LazyLoadJs />}/>
+              <Route path='javaScript/Notifications' element={<NotificationJs />}/>
+              <Route path='javaScript/webWork' element={<WebWorkerJs />}/>
+              <Route path='javaScript/sameOr' element={<SameOrJs />}/>
+              
 
               
               

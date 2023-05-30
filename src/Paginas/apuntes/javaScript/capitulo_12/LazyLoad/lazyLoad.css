@@ -1,0 +1,52 @@
+.redSocialFalsaTitle{
+  padding: 20px;
+}
+.publicaciones{
+  width: 70%;
+  text-align: left;
+  margin: 20px;
+  color: #50cbe0;
+  animation: aparecer 1s forwards 0.5s;
+  opacity: 0;
+}
+.publicaciones h3{
+  border-bottom: 2px solid #48e;
+  display: inline block;
+}
+.publicaciones p {
+  padding: 10px 20px;
+  border-left: 2px solid #48e;
+}
+.comentarios{
+  display: flex;
+}
+.comentarios input{
+  padding: 0 10px;
+}
+.comentarios input::placeholder{
+  color: #eee;
+}
+.comentarios .comentario {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  color: #e7e4ff;
+  background-color: #8b899c;
+}
+.comentarios .enviar{
+  min-width: 50px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  color: #e7e4ff;
+  background-color: #8b899c;
+}
+  
+@keyframes aparecer {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
