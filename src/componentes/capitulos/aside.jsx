@@ -86,6 +86,7 @@ function Capitulos() {
   const [cap9JavaScript, setCap9JavaScript] = useState(false);
   const [cap10JavaScript, setCap10JavaScript] = useState(false);
   const [cap11JavaScript, setCap11JavaScript] = useState(false);
+  const [cap12JavaScript, setCap12JavaScript] = useState(false);
 
   return (  
     <>
@@ -457,8 +458,23 @@ function Capitulos() {
                     {
                       cap11JavaScript && <div className="temas">
                         <Link to={"../javaScript/objDate"}>objeto Date</Link>
-                        <Link to={"../javaScript/locSeJs"}>LocalStorage y <br /> SessionStorage</Link>
-                        
+                        <Link to={"../javaScript/locSeJs"}>LocalStorage y <br /> 
+                        SessionStorage</Link>
+                        <Link to={"../javaScript/dragDrop"}>Drag y Drop</Link>
+                        <Link to={"../javaScript/geolo"}>Geolocalization</Link>
+                        <Link to={"../javaScript/hisApi"}>History API</Link>
+                        <Link to={"../javaScript/FileRead"}>FileReader</Link>
+                        <Link to={"../javaScript/IndexedDB"}>IndexedDB</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap12JavaScript(!cap12JavaScript)}>capitulo 12</p>
+                    {
+                      cap12JavaScript && <div className="temas">
+                        <Link to={"../javaScript/MatchMedia"}>MatchMedia</Link>
+                        <Link to={"../javaScript/inObser"}>Intersection <br /> Observer</Link>
                       </div>
                     }
                   </div>

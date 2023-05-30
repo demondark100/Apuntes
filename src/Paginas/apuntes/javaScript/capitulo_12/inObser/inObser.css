@@ -1,0 +1,43 @@
+.websiteObserver{
+  background-color: transparent !important;
+  max-height: none !important;
+}
+.caja {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  background-color: #23b6cf;
+  margin: 20px auto;
+  color: #f1ffb3;
+  font-size: 35px;
+  border: solid 4px #363636;
+}
+
+/* cjas principales  */
+.caja1{
+  height: 200px;
+  width: 200px;
+  display: flex;
+  background-color: #23b6cf;
+  margin: 20px auto;
+  color: #f1ffb3;
+  font-size: 35px;
+  border: solid 4px #363636;
+}
+
+.caja span{
+  margin: auto;
+}
+.caja_2 {
+  background-color: #153692;
+  border: solid #000 4px;
+}
+.caja_3 {
+  background-color: #99c719;
+  border: solid #000 4px;
+}
+.caja_4 {
+  background-color: #d6a92d;
+  border: solid #000 4px;
+}
+

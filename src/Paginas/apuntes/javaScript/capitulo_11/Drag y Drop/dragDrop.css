@@ -1,0 +1,44 @@
+.content{
+  margin: auto;
+  background-color: whitesmoke;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+}
+.circulo{
+  background-color: #f00;
+  width: 45px;
+  height: 35px;
+  border-radius: 100%;
+}
+.cuadrado{
+  margin-top: 20px;
+  width: 95%;
+  height: 65px;
+  background-color: #00f;
+}
+.content b {
+  color: #000;
+}
+
+@media(min-width:800px){
+  .content{
+      margin: auto;
+      background-color: whitesmoke;
+      width: 450px;
+      height: 200px;
+      padding: 20px;
+  }
+  .circulo{
+      background-color: #f00;
+      width: 82px;
+      height: 55px;
+      border-radius: 100%;
+  }
+  .cuadrado{
+      margin-top: 50px;
+      width: 95%;
+      height: 85px;
+      background-color: #00f;
+  }
+}

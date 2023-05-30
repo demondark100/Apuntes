@@ -194,6 +194,13 @@ import OpeTernaJs from './Paginas/apuntes/javaScript/capitulo_10/opeTerna';
 import OpeSpread from './Paginas/apuntes/javaScript/capitulo_10/opSpread';
 import ObjDateJs from './Paginas/apuntes/javaScript/capitulo_11/objDate';
 import LocSeJs from './Paginas/apuntes/javaScript/capitulo_11/locSeJs';
+import DragDropJs from "./Paginas/apuntes/javaScript/capitulo_11/Drag y Drop/dragDrop"
+import GeolocalizationJs from './Paginas/apuntes/javaScript/capitulo_11/Geolocalization';
+import HistoryAPIJs from './Paginas/apuntes/javaScript/capitulo_11/HistoryAPI';
+import FileReadJs from './Paginas/apuntes/javaScript/capitulo_11/FileRead';
+import IndexedDB from './Paginas/apuntes/javaScript/capitulo_11/IndexedDB';
+import MatchMediaJs from './Paginas/apuntes/javaScript/capitulo_12/MatchMedia/MatchMedia';
+import InObserJs from './Paginas/apuntes/javaScript/capitulo_12/inObser/inOber';
 
 
 
@@ -434,7 +441,22 @@ function App() {
             {/* capitulo 11 */}
               <Route path='javaScript/objDate' element={<ObjDateJs />}/>
               <Route path='javaScript/locSeJs' element={<LocSeJs />}/>
+              <Route path='javaScript/dragDrop' element={<DragDropJs />}/>
+              <Route path='javaScript/geolo' element={<GeolocalizationJs />}/>
+              <Route path='javaScript/hisApi' element={<HistoryAPIJs />}/>
+              <Route path='javaScript/FileRead' element={<FileReadJs />}/>
+              <Route path='javaScript/IndexedDB' element={<IndexedDB />}/>
+
+            {/* capitulo 12 */}
+              <Route path='javaScript/MatchMedia' element={<MatchMediaJs />}/>
+              <Route path='javaScript/inObser' element={<InObserJs />}/>
+
             
+
+              
+              
+              
+              
               
               
 
