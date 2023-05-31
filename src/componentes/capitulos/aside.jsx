@@ -89,6 +89,10 @@ function Capitulos() {
   const [cap11JavaScript, setCap11JavaScript] = useState(false);
   const [cap12JavaScript, setCap12JavaScript] = useState(false);
 
+  // git
+  // capitulos
+  const [cap1Git, setCap1Git] = useState(false);
+
   return (  
     <>
       <aside ref={aside}>
@@ -502,7 +506,13 @@ function Capitulos() {
               {
                 git && <div className="capitulos">
                   <div>
-                    
+                    <p onClick={()=>setCap1Git(!cap1Git)}>capitulo 1</p>
+                    {
+                      cap1Git && <div className="temas">
+                        <Link to={"../javaScript/confiGit"}>configuracion <br /> git</Link>
+                        <Link to={"../javaScript/useGit"}>usar git</Link>
+                      </div>
+                    }
                   </div>
                 </div>
               }

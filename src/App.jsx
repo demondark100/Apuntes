@@ -216,6 +216,10 @@ import ObjScreenJs from './Paginas/apuntes/javaScript/capitulo_12/objScreen';
 import CanvasJs from './Paginas/apuntes/javaScript/capitulo_12/canvas/canvas';
 
 
+// git
+import ConfiGit from './Paginas/apuntes/git/capitulo_1/confiGit';
+import UseGit from './Paginas/apuntes/git/capitulo_1/useGit';
+
 
 
 function App() {
@@ -478,6 +482,9 @@ function App() {
               <Route path='javaScript/objCanvas' element={<CanvasJs />}/>
 
           {/* git */}
+            <Route path='javaScript/confiGit' element={<ConfiGit />}/>
+            <Route path='javaScript/useGit' element={<UseGit />}/>
+
             
               
               
