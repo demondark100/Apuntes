@@ -46,6 +46,7 @@ function Capitulos() {
   const [html, setHtml] = useState(false);
   const [css, setCss] = useState(false);
   const [javaScript, setJavaScript] = useState(false);
+  const [git, setGit] = useState(false);
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
 
@@ -479,8 +480,15 @@ function Capitulos() {
                         <Link to={"../javaScript/Notifications"}>Notifications</Link>
                         <Link to={"../javaScript/webWork"}> Web Worker</Link>
                         <Link to={"../javaScript/sameOr"}> Same Origin <br /> Politic</Link>
-                        
-                       
+                        <Link to={"../javaScript/objNa"}>Objeto <br /> Navigator</Link>
+                        <Link to={"../javaScript/memori"}>Memoization</Link>
+                        <Link to={"../javaScript/Caché"}>Caché</Link>
+                        <Link to={"../javaScript/servWork"}>Service Workers</Link>
+                        <Link to={"../javaScript/cachWeb"}>Cachear sitio <br /> web y mostrarlo <br /> offline</Link>
+                        <Link to={"../javaScript/Cookies"}>Cookies</Link>
+                        <Link to={"../javaScript/avisoCookies"}>Crear aviso <br /> de uso <br /> de cookies</Link>
+                        <Link to={"../javaScript/objScreen"}>Objeto Screen</Link>
+                        <Link to={"../javaScript/objCanvas"}>Objeto Canvas</Link>                       
                       </div>
                     }
                   </div>
@@ -488,7 +496,17 @@ function Capitulos() {
                 </div>
               }
             </li>
-
+            
+            <li className="curso">
+              <p onClick={()=>setGit(!git)}>git</p>
+              {
+                git && <div className="capitulos">
+                  <div>
+                    
+                  </div>
+                </div>
+              }
+            </li>
 
             <li className="curso">
               <p onClick={()=>setReact(!react)}>react</p>

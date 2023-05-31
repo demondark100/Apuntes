@@ -1,0 +1,66 @@
+canvas{
+  background-color: #fff;
+  border: solid #000 2px;
+}
+
+
+
+.contenedor{
+  margin-left: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: -800px;
+  user-select: none;
+}
+
+.resultado{
+  color: #e7e4ff;
+  text-align: center;
+  font-size: 25px;
+}
+.advertencia{
+  color: #f00;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+@media (min-width: 750px){
+  .contenedor{
+      position: relative;
+      top: 0;
+      width: 85%;
+      margin: auto;
+      height: 650px;
+  }
+  
+  .dibujo_title{
+      text-align: center;
+      color: #9eb6ff;
+      font-size: 35px;
+      padding-left: 0;
+      margin-left: 0;
+  }
+  #dibujo{
+      display: block;
+      margin: auto;
+      background-color: #fff;
+      border: 2px solid #000;
+  }
+  
+  .button_content{
+      display: flex;
+      justify-content: space-around;
+      width: 65%;
+      margin: auto;
+      margin-top: 15px;
+      max-width: 1200px;
+  }
+  .resultado{
+      font-size: 45px;
+  }
+  .advertencia{
+      opacity: 0;
+      user-select: none;
+      position: absolute;
+  }
+}

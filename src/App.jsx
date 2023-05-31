@@ -205,6 +205,15 @@ import LazyLoadJs from './Paginas/apuntes/javaScript/capitulo_12/LazyLoad/lazyLo
 import NotificationJs from './Paginas/apuntes/javaScript/capitulo_12/notifications';
 import WebWorkerJs from './Paginas/apuntes/javaScript/capitulo_12/webWorker/webWork';
 import SameOrJs from './Paginas/apuntes/javaScript/capitulo_12/same origin politic/sameOr';
+import ObjNavJs from './Paginas/apuntes/javaScript/capitulo_12/objNav';
+import MemorizationJs from './Paginas/apuntes/javaScript/capitulo_12/memorization';
+import CacheJs from './Paginas/apuntes/javaScript/capitulo_12/Caché';
+import ServiWorkJs from './Paginas/apuntes/javaScript/capitulo_12/serviWork';
+import CachWebJs from './Paginas/apuntes/javaScript/capitulo_12/cachWeb';
+import CookiesJs from './Paginas/apuntes/javaScript/capitulo_12/cookies';
+import AvisoCookJs from './Paginas/apuntes/javaScript/capitulo_12/avisoCookies/avisoCook';
+import ObjScreenJs from './Paginas/apuntes/javaScript/capitulo_12/objScreen';
+import CanvasJs from './Paginas/apuntes/javaScript/capitulo_12/canvas/canvas';
 
 
 
@@ -458,8 +467,20 @@ function App() {
               <Route path='javaScript/Notifications' element={<NotificationJs />}/>
               <Route path='javaScript/webWork' element={<WebWorkerJs />}/>
               <Route path='javaScript/sameOr' element={<SameOrJs />}/>
-              
+              <Route path='javaScript/objNa' element={<ObjNavJs />}/>
+              <Route path='javaScript/memori' element={<MemorizationJs />}/>
+              <Route path='javaScript/Caché' element={<CacheJs />}/>
+              <Route path='javaScript/servWork' element={<ServiWorkJs />}/>
+              <Route path='javaScript/cachWeb' element={<CachWebJs />}/>
+              <Route path='javaScript/Cookies' element={<CookiesJs />}/>
+              <Route path='javaScript/avisoCookies' element={<AvisoCookJs />}/>
+              <Route path='javaScript/objScreen' element={<ObjScreenJs />}/>
+              <Route path='javaScript/objCanvas' element={<CanvasJs />}/>
 
+          {/* git */}
+            
+              
+              
               
               
               
