@@ -221,6 +221,13 @@ import ConfiGit from './Paginas/apuntes/git/capitulo_1/confiGit';
 import UseGit from './Paginas/apuntes/git/capitulo_1/useGit';
 
 
+// react
+import CreacionReact from './Paginas/apuntes/react/capitulo_1/creacion';
+import SintaxisJsxReact from './Paginas/apuntes/react/capitulo_1/sintaxisJsx';
+import ComponentesReact from './Paginas/apuntes/react/capitulo_1/componentesReact';
+import ProprsReact from './Paginas/apuntes/react/capitulo_1/props';
+import EstadoReact from './Paginas/apuntes/react/capitulo_1/estado';
+import RenConReact from './Paginas/apuntes/react/capitulo_1/renCon';
 
 function App() {
   return (
@@ -482,9 +489,20 @@ function App() {
               <Route path='javaScript/objCanvas' element={<CanvasJs />}/>
 
           {/* git */}
-            <Route path='javaScript/confiGit' element={<ConfiGit />}/>
-            <Route path='javaScript/useGit' element={<UseGit />}/>
+            <Route path='git/confiGit' element={<ConfiGit />}/>
+            <Route path='git/useGit' element={<UseGit />}/>
 
+
+          {/* react */}
+            <Route path='react/creacion' element={<CreacionReact />}/>
+            <Route path='react/sintaxis' element={<SintaxisJsxReact />}/>
+            <Route path='react/componentes' element={<ComponentesReact />}/>
+            <Route path='react/props' element={<ProprsReact />}/>
+            <Route path='react/estado' element={<EstadoReact />}/>
+            <Route path='react/renCon' element={<RenConReact />}/>
+
+            
+            
             
               
               

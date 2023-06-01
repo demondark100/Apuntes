@@ -93,6 +93,11 @@ function Capitulos() {
   // capitulos
   const [cap1Git, setCap1Git] = useState(false);
 
+
+  // react
+  // capitulos
+  const [cap1React, setCap1React] = useState(false);
+
   return (  
     <>
       <aside ref={aside}>
@@ -509,8 +514,8 @@ function Capitulos() {
                     <p onClick={()=>setCap1Git(!cap1Git)}>capitulo 1</p>
                     {
                       cap1Git && <div className="temas">
-                        <Link to={"../javaScript/confiGit"}>configuracion <br /> git</Link>
-                        <Link to={"../javaScript/useGit"}>usar git</Link>
+                        <Link to={"../git/confiGit"}>configuracion <br /> git</Link>
+                        <Link to={"../git/useGit"}>usar git</Link>
                       </div>
                     }
                   </div>
@@ -520,6 +525,25 @@ function Capitulos() {
 
             <li className="curso">
               <p onClick={()=>setReact(!react)}>react</p>
+              {
+                react && <div className="capitulos">
+                  <p onClick={()=>setCap1React(!cap1React)}>capitulo 1</p>
+                  {
+                    cap1React && <div className="temas">
+                      <Link to={`../react/creacion`}>creacion de <br /> react</Link>
+                      <Link to={"../react/sintaxis"}>sintaxis jsx</Link>
+                      <Link to={"../react/componentes"}>componentes</Link>
+                      <Link to={"../react/props"}>propiedades props</Link>
+                      <Link to={"../react/estado"}>estado</Link>
+                      <Link to={"../react/renCon"}>renderizar condicional</Link>
+
+                      
+                      
+                      
+                    </div>
+                  }
+                </div>
+              }
             </li>
 
 
