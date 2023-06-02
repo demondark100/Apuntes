@@ -97,6 +97,7 @@ function Capitulos() {
   // react
   // capitulos
   const [cap1React, setCap1React] = useState(false);
+  const [cap2React, setCap2React] = useState(false);
 
   return (  
     <>
@@ -528,20 +529,39 @@ function Capitulos() {
               {
                 react && <div className="capitulos">
                   <p onClick={()=>setCap1React(!cap1React)}>capitulo 1</p>
-                  {
-                    cap1React && <div className="temas">
-                      <Link to={`../react/creacion`}>creacion de <br /> react</Link>
-                      <Link to={"../react/sintaxis"}>sintaxis jsx</Link>
-                      <Link to={"../react/componentes"}>componentes</Link>
-                      <Link to={"../react/props"}>propiedades props</Link>
-                      <Link to={"../react/estado"}>estado</Link>
-                      <Link to={"../react/renCon"}>renderizar condicional</Link>
-
-                      
-                      
-                      
+                    <div>
+                      {
+                        cap1React && <div className="temas">
+                          <Link to={`../react/creacion`}>creacion de <br /> react</Link>
+                          <Link to={"../react/sintaxis"}>sintaxis jsx</Link>
+                          <Link to={"../react/componentes"}>componentes</Link>
+                          <Link to={"../react/props"}>propiedades props</Link>
+                          <Link to={"../react/estado"}>estado</Link>
+                          <Link to={"../react/renCon"}>renderizar <br /> condicional</Link>
+                          <Link to={"../react/renEle"}>renderizado de <br /> Elementos</Link>
+                          <Link to={"../react/evenClass"}>eventos(ES6)</Link>
+                          <Link to={"../react/evenClass2"}>eventos(ES7)</Link>
+                          <Link to={"../react/eventNative"}>Eventos Nativos, <br /> Sintéticos & <br /> Personalizados</Link>                      
+                        </div>
+                      }
                     </div>
-                  }
+
+                    <div>
+                      <p onClick={()=>setCap2React(!cap2React)}>capitulo 2</p>
+                      {
+                        cap2React && <div className="temas">
+                          <Link to={"../react/comuCompo"}>comunicacion <br /> entre <br /> componentes</Link>
+                          <Link to={"../react/apiPOD"}>peticiones API <br /> (POD)</Link>
+                          <Link to={"../react/hooks"}>hooks</Link>
+                          <Link to={"../react/useEffect"}>useEffect</Link>
+                          <Link to={"../react/hooksPer"}>hooks <br /> personalizados</Link>
+                          <Link to={"../react/referencias"}>Referencias</Link>
+
+                          
+                          
+                        </div>
+                      }
+                    </div>
                 </div>
               }
             </li>

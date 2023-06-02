@@ -228,6 +228,16 @@ import ComponentesReact from './Paginas/apuntes/react/capitulo_1/componentesReac
 import ProprsReact from './Paginas/apuntes/react/capitulo_1/props';
 import EstadoReact from './Paginas/apuntes/react/capitulo_1/estado';
 import RenConReact from './Paginas/apuntes/react/capitulo_1/renCon';
+import RenEleReact from './Paginas/apuntes/react/capitulo_1/renEle';
+import EventClassReact from './Paginas/apuntes/react/capitulo_1/evenClass';
+import EventEs7React from './Paginas/apuntes/react/capitulo_1/eventEs7';
+import EventNativeReact from './Paginas/apuntes/react/capitulo_1/eventNative';
+import ComuCompReact from './Paginas/apuntes/react/capitulo_2/comuCom';
+import ApiPODReact from './Paginas/apuntes/react/capitulo_2/api';
+import HoksReact from './Paginas/apuntes/react/capitulo_2/hooks';
+import UseEfReact from './Paginas/apuntes/react/capitulo_2/useEf';
+import HooksPerReact from './Paginas/apuntes/react/capitulo_2/hooksPer';
+import RefReact from './Paginas/apuntes/react/capitulo_2/ref';
 
 function App() {
   return (
@@ -494,16 +504,29 @@ function App() {
 
 
           {/* react */}
-            <Route path='react/creacion' element={<CreacionReact />}/>
-            <Route path='react/sintaxis' element={<SintaxisJsxReact />}/>
-            <Route path='react/componentes' element={<ComponentesReact />}/>
-            <Route path='react/props' element={<ProprsReact />}/>
-            <Route path='react/estado' element={<EstadoReact />}/>
-            <Route path='react/renCon' element={<RenConReact />}/>
+            {/* capitulo 1 */}
+              <Route path='react/creacion' element={<CreacionReact />}/>
+              <Route path='react/sintaxis' element={<SintaxisJsxReact />}/>
+              <Route path='react/componentes' element={<ComponentesReact />}/>
+              <Route path='react/props' element={<ProprsReact />}/>
+              <Route path='react/estado' element={<EstadoReact />}/>
+              <Route path='react/renCon' element={<RenConReact />}/>
+              <Route path='react/renEle' element={<RenEleReact />}/>
+              <Route path='react/evenClass' element={<EventClassReact />}/>
+              <Route path='react/evenClass2' element={<EventEs7React />}/>
+              <Route path='react/eventNative' element={<EventNativeReact />}/>
 
             
-            
-            
+            {/* capitulo 2 */}
+              <Route path='react/comuCompo' element={<ComuCompReact />}/>
+              <Route path='react/apiPOD' element={<ApiPODReact />}/>
+              <Route path='react/hooks' element={<HoksReact />}/>
+              <Route path='react/useEffect' element={<UseEfReact />}/>
+              <Route path='react/hooksPer' element={<HooksPerReact />}/>
+              <Route path='react/referencias' element={<RefReact />}/>
+
+              
+              
               
               
               
