@@ -20,7 +20,7 @@ body{
   flex-direction: column;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
   
   body::after {
@@ -75,7 +75,6 @@ h3{
   margin-top: 2%;
   width: 100%;
   text-align: start;
-  padding-left: 4%;
 }
 
 footer {

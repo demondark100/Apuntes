@@ -1,0 +1,13 @@
+.contenedorEstilosReact{
+  background-color: #0cff82;
+}
+.tituloEstilosReact{
+  text-align: center;
+  color: #000;
+}
+.elements_contentEstilosReact{
+  display: flex;
+  color: #000;
+  justify-content: space-between;
+}
+

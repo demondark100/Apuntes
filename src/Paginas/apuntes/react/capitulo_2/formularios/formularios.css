@@ -1,0 +1,39 @@
+.mostrar_content{
+  position: absolute;
+  background-color: #000000f1;
+  width: 0%;
+  height: 100vh;
+  opacity: 0;
+  z-index: -2;
+  transition-duration: .5s;
+}
+.mostrarWaifus{
+  opacity: 1;
+  z-index: 8;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  width: 100%;
+  font-family: 'Dancing Script', cursive;
+}
+.mostrarWaifus img{
+  width: 55%;
+}
+.formWaifus{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+
+@media (min-width: 750px){
+  .mostrar_content{
+    margin-left: -22%;
+  }
+  .mostrarWaifus img{
+    width: 15%;
+  }
+}

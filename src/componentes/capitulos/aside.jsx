@@ -98,6 +98,7 @@ function Capitulos() {
   // capitulos
   const [cap1React, setCap1React] = useState(false);
   const [cap2React, setCap2React] = useState(false);
+  const [cap3React, setCap3React] = useState(false);
 
   return (  
     <>
@@ -556,8 +557,22 @@ function Capitulos() {
                           <Link to={"../react/useEffect"}>useEffect</Link>
                           <Link to={"../react/hooksPer"}>hooks <br /> personalizados</Link>
                           <Link to={"../react/referencias"}>Referencias</Link>
+                          <Link to={"../react/formularios"}>Formularios</Link>
+                          <Link to={"../react/estilos"}>estilos</Link>
+                          <Link to={"../react/styledCom"}>styled component</Link>
+                          <Link to={"../react/frameCss"}>frameworks css</Link>
+                        </div>
+                      }
+                    </div>
 
-                          
+                    <div>
+                      <p onClick={()=>setCap3React(!cap3React)}>capitulo 3</p>
+                      {
+                        cap3React && <div className="temas">
+                          <Link to={"../react/propsChild"}>props.children</Link>
+                          <Link to={"../react/Portales"}>Portales</Link>
+                          <Link to={"../react/reactRouter"}>React router <br /> dom</Link>
+
                           
                         </div>
                       }

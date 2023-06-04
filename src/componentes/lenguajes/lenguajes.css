@@ -7,7 +7,7 @@
   max-width: 1800px;
   margin-top: 5%;
   box-shadow: 0 0 15px 2px rgb(61, 210, 170);
-  background-color: #00000079;
+  background: linear-gradient(0deg,#000000b6,#221f1f57,#000000b6);
 }
 
 code {

@@ -238,6 +238,13 @@ import HoksReact from './Paginas/apuntes/react/capitulo_2/hooks';
 import UseEfReact from './Paginas/apuntes/react/capitulo_2/useEf';
 import HooksPerReact from './Paginas/apuntes/react/capitulo_2/hooksPer';
 import RefReact from './Paginas/apuntes/react/capitulo_2/ref';
+import FormulariosReacr from './Paginas/apuntes/react/capitulo_2/formularios/formularios';
+import EstilosReact from './Paginas/apuntes/react/capitulo_2/estilos/estilos';
+import StyledComReact from './Paginas/apuntes/react/capitulo_2/styledCom/styledCom';
+import FrameCssReact from './Paginas/apuntes/react/capitulo_2/frame';
+import PropsChildReact from './Paginas/apuntes/react/capitulo_3/propsChild';
+import PortalesReact from './Paginas/apuntes/react/capitulo_3/portales';
+import ReactRouterDom from './Paginas/apuntes/react/capitulo_3/reactRouter';
 
 function App() {
   return (
@@ -524,6 +531,15 @@ function App() {
               <Route path='react/useEffect' element={<UseEfReact />}/>
               <Route path='react/hooksPer' element={<HooksPerReact />}/>
               <Route path='react/referencias' element={<RefReact />}/>
+              <Route path='react/formularios' element={<FormulariosReacr />}/>
+              <Route path='react/estilos' element={<EstilosReact />}/>
+              <Route path='react/styledCom' element={<StyledComReact />}/>
+              <Route path='react/frameCss' element={<FrameCssReact />}/>
+
+            {/* capitulo 3 */}
+              <Route path='react/propsChild' element={<PropsChildReact />}/>
+              <Route path='react/Portales' element={<PortalesReact />}/>
+              <Route path='react/reactRouter' element={<ReactRouterDom />}/>
 
               
               
