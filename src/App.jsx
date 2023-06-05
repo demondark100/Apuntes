@@ -246,6 +246,19 @@ import PropsChildReact from './Paginas/apuntes/react/capitulo_3/propsChild';
 import PortalesReact from './Paginas/apuntes/react/capitulo_3/portales';
 import ReactRouterDom from './Paginas/apuntes/react/capitulo_3/reactRouter';
 
+
+// python
+import DatSimplePy from './Paginas/apuntes/python/capitulo_1/datSimple';
+import VariablesPy from './Paginas/apuntes/python/capitulo_1/variables';
+import ArreglosPy from './Paginas/apuntes/python/capitulo_1/arreglos';
+import OperadoresPy from './Paginas/apuntes/python/capitulo_1/operadores';
+import CondicionalesPy from './Paginas/apuntes/python/capitulo_1/condicionales';
+import MetCadPy from './Paginas/apuntes/python/capitulo_2/metCad';
+import MetListPy from './Paginas/apuntes/python/capitulo_2/metList';
+import MetDiccPy from './Paginas/apuntes/python/capitulo_2/metDicc';
+import EntrDatosPy from './Paginas/apuntes/python/capitulo_2/entrDeDatos';
+import Variables2Py from './Paginas/apuntes/python/capitulo_3/variables2';
+
 function App() {
   return (
     <Router>
@@ -541,10 +554,25 @@ function App() {
               <Route path='react/Portales' element={<PortalesReact />}/>
               <Route path='react/reactRouter' element={<ReactRouterDom />}/>
 
-              
-              
-              
-              
+          
+          {/* python */}
+            {/* capitulo 1*/}
+              <Route path='python/datSimple' element={<DatSimplePy />}/>
+              <Route path='python/variables' element={<VariablesPy />}/>
+              <Route path='python/datComp' element={<ArreglosPy />}/>
+              <Route path='python/operadores' element={<OperadoresPy />}/>
+              <Route path='python/condicionales' element={<CondicionalesPy />}/>
+
+            {/* capitulo 2 */}
+              <Route path='python/metCade' element={<MetCadPy />}/>
+              <Route path='python/metList' element={<MetListPy />}/>
+              <Route path='python/metDicc' element={<MetDiccPy />}/>              
+              <Route path='python/enDeDatos' element={<EntrDatosPy />}/>              
+
+            {/* capitulo 3 */}
+              <Route path='python/variable2' element={<Variables2Py />}/>              
+
+            
               
               
               

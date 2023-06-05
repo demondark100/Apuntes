@@ -100,6 +100,13 @@ function Capitulos() {
   const [cap2React, setCap2React] = useState(false);
   const [cap3React, setCap3React] = useState(false);
 
+
+  // python
+  // capitulos
+  const [cap1Python, setCap1Python] = useState(false);
+  const [cap2Python, setCap2Python] = useState(false);
+  const [cap3Python, setCap3Python] = useState(false);
+
   return (  
     <>
       <aside ref={aside}>
@@ -529,8 +536,8 @@ function Capitulos() {
               <p onClick={()=>setReact(!react)}>react</p>
               {
                 react && <div className="capitulos">
-                  <p onClick={()=>setCap1React(!cap1React)}>capitulo 1</p>
                     <div>
+                      <p onClick={()=>setCap1React(!cap1React)}>capitulo 1</p>
                       {
                         cap1React && <div className="temas">
                           <Link to={`../react/creacion`}>creacion de <br /> react</Link>
@@ -572,11 +579,52 @@ function Capitulos() {
                           <Link to={"../react/propsChild"}>props.children</Link>
                           <Link to={"../react/Portales"}>Portales</Link>
                           <Link to={"../react/reactRouter"}>React router <br /> dom</Link>
-
-                          
                         </div>
                       }
                     </div>
+                </div>
+              }
+            </li>
+
+
+            <li className="curso">
+              <p onClick={()=>setPython(!python)}>python</p>
+              {
+                python && <div className="capitulos">
+                  <div>
+                    <p onClick={()=>setCap1Python(!cap1Python)}>capitulo 1</p>
+                    {
+                      cap1Python && <div className="temas">
+                        <Link to={"../python/datSimple"}>datos simples</Link>
+                        <Link to={"../python/variables"}>variables</Link>
+                        <Link to={"../python/datComp"}>datos compuestos <br /> (arreglos)</Link>
+                        <Link to={"../python/operadores"}>operadores</Link>
+                        <Link to={"../python/condicionales"}>condicionales</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap2Python(!cap2Python)}>capitulo 2</p>
+                    {
+                      cap2Python && <div className="temas">
+                        <Link to={"../python/metCade"}>Metodos de <br /> cadena</Link>
+                        <Link to={"../python/metList"}>metodos de <br /> listas</Link>
+                        <Link to={"../python/metDicc"}>Metodos de <br /> diccionario</Link>
+                        <Link to={"../python/enDeDatos"}>entrada de <br /> datos</Link>
+                      </div>
+                    }
+
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap3Python(!cap3Python)}>capitulo 3</p>
+                    {
+                      cap3Python && <div className="temas">
+                        <Link to={"../python/variable2"}>variables 2.0 <br />(la venganza)</Link>
+                      </div>
+                    }
+                  </div>
                 </div>
               }
             </li>
