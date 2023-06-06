@@ -52,6 +52,8 @@ main{
   margin-bottom: 15vh;
   width: 100vw;
 }
+
+
 h1{
   color: #ffffff;
   text-shadow: 0 0 1vh #fff;
@@ -76,6 +78,7 @@ h3{
   width: 100%;
   text-align: start;
 }
+
 
 footer {
   margin-top: auto;
@@ -125,4 +128,21 @@ footer {
   .website{
     max-height: 45vh;
   }
+}
+
+.Page{
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  left: 0;
+}
+
+.pageElement{
+  color: #000;
+  text-align: start !important;
+  padding: 0;
+  margin: 0;
 }

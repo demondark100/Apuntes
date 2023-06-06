@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState,useRef, useEffect } from 'react';
 import './mensajeModal.css';
+import ReactDOM  from 'react-dom';
 
 function MensajeModal({ texto }) {
   const [showMessage, setShowMessage] = useState(true);
-
+  const contenedor = useRef(null);
 
 
   useEffect(() => {
@@ -23,24 +24,18 @@ function MensajeModal({ texto }) {
   useEffect(() => {
     if (showMessage) {
       document.body.classList.add('noMover');
-      document.querySelector('main').classList.add('mainFilter');
-      document.querySelector('aside').classList.add('mainFilter');
-      document.querySelector('footer').classList.add('mainFilter');
-      document.querySelector('header').classList.add('mainFilter');
+      contenedor.current.style.left = `${window.scrollX}px`;
     } else {
-      document.body.classList.remove('noMover');
-      document.querySelector('main').classList.remove('mainFilter');
-      document.querySelector('aside').classList.remove('mainFilter');
-      document.querySelector('footer').classList.remove('mainFilter');
-      document.querySelector('header').classList.remove('mainFilter');
+      document.body.classList.remove("noMover")
+      contenedor.current.classList.add("quitarMensaje")
     }
   }, [showMessage]);
 
   return (
-    <div className={`contentMensajeVariable ${showMessage ? '' : 'ocultarMessage'}`}>
-      <div>
-        <p>{texto}</p>
-        <button onClick={() => setShowMessage(false)}>OK</button>
+    <div ref={contenedor} className={`contentMensajeVariable ${showMessage ? '' : 'ocultarMessage'}`}>
+      <div className='contenedoMensaje'>
+          <p>{texto}</p>
+          <button onClick={() => setShowMessage(false)}>OK</button>
       </div>
     </div>
   );

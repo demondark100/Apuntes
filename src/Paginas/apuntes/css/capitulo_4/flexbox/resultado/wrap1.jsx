@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function Wrap1() {
   return (  
     <div className="flexPageContent">
-      <div className="siguiente__parte">
-        <Link to={"../css/flexbox/flexDirection/flexWrap"}>volver</Link>
-      </div>
+      <Volver link={"../css/flexbox/flexDirection/flexWrap"}/>
 
       <div className="sinWrapContent">
         <div className="sinWrapContent__caja">

@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
+import Volver from "../../../../../componentes/volver/volver";
 
 function ResultadoResponsive1() {
   return (  
     <>        
       <div className="responsiveResult1">
-        <div className="siguiente__parte">
-          <Link to={"../css/responsive(basico)"}>volver</Link>
-        </div>
+        <Volver link={"../css/responsive(basico)"}/>
         <div className="content_1">
         <h5>titulo 1</h5>
         <p>

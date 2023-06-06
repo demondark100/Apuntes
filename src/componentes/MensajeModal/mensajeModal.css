@@ -1,70 +1,59 @@
 .noMover{
   overflow: hidden;
 }
-.mainFilter{
-  filter: blur(4px);
-}
+
 .contentMensajeVariable{
-  background-color: #00000071;
-  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  position: absolute;
+  background-color: #000000a5;
+  z-index: 8;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-  transition-duration: .5s;
-  filter: blur(0) !important;
-  visibility: 1;
 }
-.contentMensajeVariable p{
-  color: #fff;
-  text-align: center;
+.quitarMensaje{
+  opacity: 0;
+  visibility: 0;
+  z-index: -2;
+  transition-duration: .5s;
+}
+.contenedoMensaje{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background-color: #fff;
+  padding: 15px;
+  width: 85%;
+  height: 75%;
+  font-size: 1.2em;
+}
+.contenedoMensaje p{
   white-space: pre-wrap;
 }
-.contentMensajeVariable button{
-  display: block;
-  margin: auto;
-  margin-top: 8%;
-  background-color: #3b544c;
-  width: 100px;
-  color: #fff;
+.contenedoMensaje button{
   border-radius: 15vh;
-  transition-duration: .5s;
   cursor: pointer;
-}
-.contentMensajeVariable button:hover{
-  background-color: #66b89e;
-  color: #000;
+  background-color: inherit;
   transition-duration: .5s;
 }
-
-.ocultarMessage{
-  opacity: 0;
-  visibility: hidden;
+.contenedoMensaje button:hover{
+  background-color: #c6e2fc;
   transition-duration: .5s;
 }
-
-
-.resultadoVariable{
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #4ae327;
-  margin-top: 4vh;
-  font-size: 1.5em;
-  cursor: pointer;
+.contenedoMensaje::-webkit-scrollbar{
+  display: nones ;
 }
-.resultadoVariable:hover{
-  text-shadow: 0 0 3vh #4ae327;
-}
+
 @media (min-width: 750px){
-  .contentMensajeVariable p{
-    font-size: 1.3em;
-    width: 55vw;
-  }
-  .contentMensajeVariable :no-button{
-    font-size: 1.3em;
+  .contenedoMensaje{
+    width: 55%;
+    height: 55%;
+    font-size: 1.2em;
+    text-align: center;
+    max-height: 200px;
+    max-width: 1200px;
   }
 }

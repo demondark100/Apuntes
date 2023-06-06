@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import "../position.css";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function Fixed2() {
   return (  
     <div className="body__fondo">
-      <div className="siguiente__parte">
-        <Link to={"../css/position/position absolute/z-index/position-fixed"}>volver</Link>
-      </div>
+      <Volver link={"../css/position/position absolute/z-index/position-fixed"}/>
       <div className="menu__fixed2">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
       </div>

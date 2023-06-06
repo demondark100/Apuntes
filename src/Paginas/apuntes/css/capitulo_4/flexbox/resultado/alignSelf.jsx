@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function AlignSelf() {
   return (  
     <>
       <div className="bodyAlignSelf">
-        <div className="siguiente__parte">
-          <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
-        </div>
+        <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
         <h3>align-self</h3>
         <div className="AlignSelfCajas">
           <div className="AlignSelfCajas__caja1">

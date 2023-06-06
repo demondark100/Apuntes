@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import "../position.css";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function StickyPage() {
   return (  
       <div style={{zIndex: "8"}} className="content_sticky_page">
-        <div className="siguiente__parte">
-          <Link to={"../css/position/position absolute/z-index/position-fixed/position-sticky"}>volver</Link>
-        </div>
+        <Volver link={"../css/position/position absolute/z-index/position-fixed/position-sticky"}/>
       <div className="pagina_sticky">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam dolorem non similique unde distinctio! A repellat perferendis molestiae rerum similique natus! Quae, numquam commodi? Dolor voluptate doloremque accusamus impedit?Lorem ipsum dolor, sit amet consecteturrferendis nostrum accusantium. Rem, ab?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ex molestias nemo error, sed suscipit, magni repellendus et aliquid maxime unde. Excepturi nemo veritatis illo explicabo doloribus, distinctio aut recusandae.

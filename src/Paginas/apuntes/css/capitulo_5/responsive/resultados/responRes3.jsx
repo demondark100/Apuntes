@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function ResponRes3() {
   return (  
     <>
       <div id="bodyResponsiveEjemplo">
+        <Volver link={"../css/responsive design"}/>
         <div id="headerResponsive">
-          <div className="siguiebte__parte">
-            <Link to={"../css/responsive design"}>volver</Link>
-          </div>
                 <b className="logoResponsive">proyecto!</b>
                 <nav>
                     <ul>

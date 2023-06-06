@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function ResultadoStart() {
   return (  
     <>
       <div className="content__start_ejemplo">
-        <div className="siguiente__parte">
-          <Link to={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}>volver</Link>
-        </div>
+        <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
         <h3>stretch</h3>
         <div class="stretch">
           <div>

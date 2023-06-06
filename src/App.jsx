@@ -49,6 +49,11 @@ import Main from './Paginas/apuntes/html/capitulo_4/main/main';
 import FooterHtmlCurso from './Paginas/apuntes/html/capitulo_4/footer/footer';
 import Tablas from './Paginas/apuntes/html/capitulo_4/tablas/tablas';
 import ExtraHtml from './Paginas/apuntes/html/capitulo_4/extra/extra';
+// proyectos
+import Cap1ProyectoHtml from './Paginas/apuntes/html/proyectos/cap1';
+import Cap3ProyHtml from './Paginas/apuntes/html/proyectos/cap3';
+import Cap4ProyecHtml from './Paginas/apuntes/html/proyectos/cap4';
+
 
 
 // css
@@ -233,6 +238,7 @@ import EventClassReact from './Paginas/apuntes/react/capitulo_1/evenClass';
 import EventEs7React from './Paginas/apuntes/react/capitulo_1/eventEs7';
 import EventNativeReact from './Paginas/apuntes/react/capitulo_1/eventNative';
 import ComuCompReact from './Paginas/apuntes/react/capitulo_2/comuCom';
+import CicloVidaReact from './Paginas/apuntes/react/capitulo_2/cicloVida';
 import ApiPODReact from './Paginas/apuntes/react/capitulo_2/api';
 import HoksReact from './Paginas/apuntes/react/capitulo_2/hooks';
 import UseEfReact from './Paginas/apuntes/react/capitulo_2/useEf';
@@ -248,6 +254,7 @@ import ReactRouterDom from './Paginas/apuntes/react/capitulo_3/reactRouter';
 
 
 // python
+import ImportantePy from './Paginas/apuntes/python/capitulo_1/importante';
 import DatSimplePy from './Paginas/apuntes/python/capitulo_1/datSimple';
 import VariablesPy from './Paginas/apuntes/python/capitulo_1/variables';
 import ArreglosPy from './Paginas/apuntes/python/capitulo_1/arreglos';
@@ -258,6 +265,7 @@ import MetListPy from './Paginas/apuntes/python/capitulo_2/metList';
 import MetDiccPy from './Paginas/apuntes/python/capitulo_2/metDicc';
 import EntrDatosPy from './Paginas/apuntes/python/capitulo_2/entrDeDatos';
 import Variables2Py from './Paginas/apuntes/python/capitulo_3/variables2';
+
 
 function App() {
   return (
@@ -290,6 +298,7 @@ function App() {
             <Route path='logica/pod' element={<PodLogica />} />
             
 
+
         {/* html */}
           {/* capitulo 1 */}
             <Route path='/html/importante leer esto' element={<Importante />} />
@@ -299,7 +308,9 @@ function App() {
             <Route path='/html/etiquetas' element={<Etiquetas />} />
             <Route path='/html/estructura html' element={<EstructuraHtml />}/>
             <Route path='/html/html semantico' element={<HtmlSemantico />} />
-          
+            <Route path='/html/cap1Proy' element={<Cap1ProyectoHtml />} />
+
+            
           {/* capitulo 3 */}
             <Route path='/html/enlaces' element={<EnlacesHtml />} />
             <Route path='/html/br' element={<Br />} />
@@ -308,6 +319,8 @@ function App() {
             <Route path='/html/divs' element={<Divs />}/>
             <Route path='/html/formularios' element={<Formularios />}/>
             <Route path='/html/metadatos' element={<Metadatos />}/>
+            <Route path='html/cap3Proy' element={<Cap3ProyHtml />}/>
+
 
           {/* capitulo 4 */}
             <Route path='/html/mav' element={<Nav />} />
@@ -317,6 +330,8 @@ function App() {
             <Route path='/html/footer' element={<FooterHtmlCurso />} />
             <Route path='/html/tablas' element={<Tablas />} />
             <Route path='/html/extra' element={<ExtraHtml />} />
+            <Route path='html/cap4Proy' element={<Cap4ProyecHtml />} />
+
 
         {/* css */}        
           {/* capitulo 1 */}
@@ -539,6 +554,7 @@ function App() {
             
             {/* capitulo 2 */}
               <Route path='react/comuCompo' element={<ComuCompReact />}/>
+              <Route path='react/ciclVid' element={<CicloVidaReact />}/>
               <Route path='react/apiPOD' element={<ApiPODReact />}/>
               <Route path='react/hooks' element={<HoksReact />}/>
               <Route path='react/useEffect' element={<UseEfReact />}/>
@@ -557,6 +573,7 @@ function App() {
           
           {/* python */}
             {/* capitulo 1*/}
+              <Route path='python/importante' element={<ImportantePy />}/>
               <Route path='python/datSimple' element={<DatSimplePy />}/>
               <Route path='python/variables' element={<VariablesPy />}/>
               <Route path='python/datComp' element={<ArreglosPy />}/>

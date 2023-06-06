@@ -40,8 +40,13 @@ function Capitulos() {
     }
   })
 
+
+
+
+
   
   // capitulos
+  const [proyectos, setProyectos] = useState(false);
   const [logica, setLogica] = useState(false);
   const [html, setHtml] = useState(false);
   const [css, setCss] = useState(false);
@@ -49,6 +54,10 @@ function Capitulos() {
   const [git, setGit] = useState(false);
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
+
+    // proyectos
+  // html
+  const [proyectosHtml, setProyectosHtml] = useState(false);
 
 
   // logica
@@ -122,6 +131,25 @@ function Capitulos() {
         
         <nav ref={navAside}>
           <ul>
+
+            <li className="curso">
+              <p onClick={()=>setProyectos(!proyectos)}>proyectos</p>
+              {
+                proyectos && <div className="capitulos">
+                  <div>
+                    <p onClick={()=>setProyectosHtml(!proyectosHtml)}>html</p>
+                    {
+                      proyectosHtml && <div className="temas">
+                        <Link to={"../html/cap1Proy"}>capitulo 2</Link>
+                        <Link to={"../html/cap3Proy"}>capitulo 3</Link>
+                        <Link to={"../html/cap4Proy"}>capitulo 4</Link>
+                      </div>
+                    }
+                  </div>
+
+                </div>
+              }
+            </li>
 
             <li className="curso">
               <p onClick={()=>setLogica(!logica)}>logica</p>
@@ -559,6 +587,7 @@ function Capitulos() {
                       {
                         cap2React && <div className="temas">
                           <Link to={"../react/comuCompo"}>comunicacion <br /> entre <br /> componentes</Link>
+                          <Link to={"../react/ciclVid"}>ciclo de vida</Link>
                           <Link to={"../react/apiPOD"}>peticiones API <br /> (POD)</Link>
                           <Link to={"../react/hooks"}>hooks</Link>
                           <Link to={"../react/useEffect"}>useEffect</Link>
@@ -595,6 +624,7 @@ function Capitulos() {
                     <p onClick={()=>setCap1Python(!cap1Python)}>capitulo 1</p>
                     {
                       cap1Python && <div className="temas">
+                        <Link to={"../python/importante"}>importante</Link>
                         <Link to={"../python/datSimple"}>datos simples</Link>
                         <Link to={"../python/variables"}>variables</Link>
                         <Link to={"../python/datComp"}>datos compuestos <br /> (arreglos)</Link>
@@ -630,9 +660,9 @@ function Capitulos() {
             </li>
 
 
-            <li className="curso">
+            {/* <li className="curso">
               <p onClick={()=>setPython(!python)}>python</p>
-            </li>
+            </li> */}
 
 
           </ul>

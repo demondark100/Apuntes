@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
+import Volver from "../../../../../../componentes/volver/volver";
 
 function Resultado1Flex() {
   return (  
     <>
       <div className="flexPageContent">
-        <div className="siguiente__parte">
-          <Link to={"../css/flexbox"}>volver</Link>
-        </div>
+        <Volver link={"../css/flexbox"}/>
           <div className="contenido_flex">
         <p className="parrafo1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio deserunt aliquid neque odit iure velit ex voluptas expedita alias, porro reiciendis cupiditate, unde ea. Perferendis hic cumque odit animi laborum.

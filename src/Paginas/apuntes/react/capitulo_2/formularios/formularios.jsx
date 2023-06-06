@@ -764,7 +764,7 @@ function ChecarCaja(){
           name="terminos"
           onChange={e=>setCheck(e.target.checked)}
         />
-        <label htmlFor="denegar">no , es aburrido >:v</label>
+        <label htmlFor="denegar">no , es aburrido </label>
       </form>
     </div>
   )
