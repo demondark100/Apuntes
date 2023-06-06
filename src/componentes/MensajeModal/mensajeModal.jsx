@@ -34,7 +34,9 @@ function MensajeModal({ texto }) {
   return (
     <div ref={contenedor} className={`contentMensajeVariable ${showMessage ? '' : 'ocultarMessage'}`}>
       <div className='contenedoMensaje'>
-          <p>{texto}</p>
+          <div className='textoMensajeModal'>
+            <p>{texto}</p>
+          </div>
           <button onClick={() => setShowMessage(false)}>OK</button>
       </div>
     </div>

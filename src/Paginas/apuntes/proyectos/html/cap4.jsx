@@ -4,7 +4,18 @@ import Volver from "../../../../componentes/volver/volver";
 function Cap4ProyecHtml() {
   return (  
     <>
-      <MensajeModal texto={`Hacer una tienda web bien estructurado para este punto ya se puede usar header , main , footer , aside , center y mas para estructurar de forma semantica un sitio web.`}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 4
+Hacer una tienda web bien estructurada.
+
+Recuerda que aprendimos:
+
+1. nav.
+2. section y article.
+3. aside.
+4. main.
+5. header y footer.
+6. tablas.
+7. cosas extra.`}/>
       <Volver link={"../"}/>
       <div className="Page">
         <div>

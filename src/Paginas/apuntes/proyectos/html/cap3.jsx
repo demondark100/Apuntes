@@ -12,8 +12,18 @@ function Cap3ProyHtml(){
 
   return (
     <>
-      <MensajeModal texto={`Hacer un pequeño tutorial web sobre termux que lleve formularios , un video o imagen con html.
-  Recuerda aprendimos br , divs , enlaces , multimedia`}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 3
+Hacer un pequeño tutorial web sobre termux.
+
+Recuerda que aprendimos:
+
+1. Enlaces.
+2. br.
+3. listas.
+4. multimedia.
+5. divs.
+6. formularios.
+7. metadatos.`}/>
       <Volver link={"../"}/>
       <div className="Page">
 

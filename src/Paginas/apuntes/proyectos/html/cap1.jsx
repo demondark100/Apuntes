@@ -4,7 +4,13 @@ import Volver from "../../../../componentes/volver/volver";
 function Cap1ProyectoHtml() {
   return (
     <>
-      <MensajeModal texto={`Hacer un sitio web que tenga la estructura basica de html y ademas que lleve las etiquetas aprendidas en el capitulo 2.`}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 2
+Hacer un sitio web que tenga la estructura basica de html.
+
+Recuerda que aprendimos:
+
+1. Estructura basica de html.
+2. html semantico(aqui conocimos algunas etiquetas muy usadas en HTML).`}/>
       <div className="Page">
         <h1 className="pageElement">Estructura de pagina web</h1>
         <h2 className="pageElement">estructurar</h2>

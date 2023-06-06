@@ -49,11 +49,6 @@ import Main from './Paginas/apuntes/html/capitulo_4/main/main';
 import FooterHtmlCurso from './Paginas/apuntes/html/capitulo_4/footer/footer';
 import Tablas from './Paginas/apuntes/html/capitulo_4/tablas/tablas';
 import ExtraHtml from './Paginas/apuntes/html/capitulo_4/extra/extra';
-// proyectos
-import Cap1ProyectoHtml from './Paginas/apuntes/html/proyectos/cap1';
-import Cap3ProyHtml from './Paginas/apuntes/html/proyectos/cap3';
-import Cap4ProyecHtml from './Paginas/apuntes/html/proyectos/cap4';
-
 
 
 // css
@@ -266,6 +261,14 @@ import MetDiccPy from './Paginas/apuntes/python/capitulo_2/metDicc';
 import EntrDatosPy from './Paginas/apuntes/python/capitulo_2/entrDeDatos';
 import Variables2Py from './Paginas/apuntes/python/capitulo_3/variables2';
 
+// proyectos
+// html
+import Cap1ProyectoHtml from './Paginas/apuntes/proyectos/html/cap1';
+import Cap3ProyHtml from './Paginas/apuntes/proyectos/html/cap3';
+import Cap4ProyecHtml from './Paginas/apuntes/proyectos/html/cap4';
+// CSS
+import Cap1ProyCss from './Paginas/apuntes/proyectos/css/capitulo_1/cap1';
+import Cap2ProyectoCss from './Paginas/apuntes/proyectos/css/capitulo_2/cap2';
 
 function App() {
   return (
@@ -274,6 +277,19 @@ function App() {
       <Capitulos />
       <Routes>
         <Route path='/' element={<Home />} />
+
+        {/* proyectos */}
+          {/* html */}
+            <Route path='/html/cap1Proy' element={<Cap1ProyectoHtml />} />
+            <Route path='html/cap3Proy' element={<Cap3ProyHtml />}/>
+            <Route path='html/cap4Proy' element={<Cap4ProyecHtml />} />
+          {/* css */}
+            <Route path='css/proyCap1' element={<Cap1ProyCss />} />
+            <Route path='css/proyCap2' element={<Cap2ProyectoCss />} />
+
+            
+          
+
 
         {/* logica */}
           {/* capitulo 1 */}
@@ -308,7 +324,6 @@ function App() {
             <Route path='/html/etiquetas' element={<Etiquetas />} />
             <Route path='/html/estructura html' element={<EstructuraHtml />}/>
             <Route path='/html/html semantico' element={<HtmlSemantico />} />
-            <Route path='/html/cap1Proy' element={<Cap1ProyectoHtml />} />
 
             
           {/* capitulo 3 */}
@@ -319,7 +334,6 @@ function App() {
             <Route path='/html/divs' element={<Divs />}/>
             <Route path='/html/formularios' element={<Formularios />}/>
             <Route path='/html/metadatos' element={<Metadatos />}/>
-            <Route path='html/cap3Proy' element={<Cap3ProyHtml />}/>
 
 
           {/* capitulo 4 */}
@@ -330,7 +344,6 @@ function App() {
             <Route path='/html/footer' element={<FooterHtmlCurso />} />
             <Route path='/html/tablas' element={<Tablas />} />
             <Route path='/html/extra' element={<ExtraHtml />} />
-            <Route path='html/cap4Proy' element={<Cap4ProyecHtml />} />
 
 
         {/* css */}        

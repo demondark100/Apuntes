@@ -55,10 +55,9 @@ function Capitulos() {
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
 
-    // proyectos
-  // html
+  // proyectos
   const [proyectosHtml, setProyectosHtml] = useState(false);
-
+  const [proyectosCss, setProyectosCss] = useState(false);
 
   // logica
   // capitulos
@@ -143,6 +142,16 @@ function Capitulos() {
                         <Link to={"../html/cap1Proy"}>capitulo 2</Link>
                         <Link to={"../html/cap3Proy"}>capitulo 3</Link>
                         <Link to={"../html/cap4Proy"}>capitulo 4</Link>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setProyectosCss(!proyectosCss)}>css</p>
+                    {
+                      proyectosCss && <div className="temas">
+                        <Link to={"../css/proyCap1"}>capitulo 1</Link>
+                        <Link to={"../css/proyCap2"}>capitulo 2</Link>
                       </div>
                     }
                   </div>
@@ -261,7 +270,6 @@ function Capitulos() {
                 </div>
               }
             </li>
-
 
             <li className="curso">
               <p onClick={()=>setCss(!css)}>css</p>
