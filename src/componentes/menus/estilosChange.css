@@ -1,0 +1,11 @@
+/* esto es el menu */
+.MenuDar{
+  background-color: #fff;
+  color: #000;
+  transition-duration: .5s;
+}
+.bodyDark{
+  background-color: #000;
+  color: #fff;
+  transition-duration: .5s;
+}

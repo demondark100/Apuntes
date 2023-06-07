@@ -322,13 +322,6 @@
   z-index: 4;
 }
 
-h2{
-  text-align: center;
-  font-size: 1.8em;
-  color: #32fff5;
-  text-shadow: -2px -2px 15px #32fff5;
-}
-
 
 /* center */
 
@@ -503,12 +496,6 @@ h2{
   box-sizing: border-box;
 }
 
-h3{
-  color: #03cdff;
-  text-shadow: 5px 5px 15px #03cdff;
-  font-size: 1.5em;
-  text-align: center;
-}
 
 
 .align_content1{
@@ -583,12 +570,6 @@ h3{
   box-sizing: border-box;
 }
 
-h4{
-  color: #08eb1a;
-  text-shadow: 5px 5px 15px #08eb1a;
-  text-align: center;
-  font-size: 1.5em;
-}
 .sin_grow{
   display: flex;
   height: 40vh;

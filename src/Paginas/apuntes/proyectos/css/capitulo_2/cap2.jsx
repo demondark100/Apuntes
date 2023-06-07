@@ -5,7 +5,7 @@ import "./cap2.css";
 function Cap2ProyectoCss() {
   return (
     <>
-      <MensajeModal texto={`¡Proyecto capitulo 3!
+      <MensajeModal texto={`¡Proyecto! capitulo 2
 Hacer una pagina que muestre la utilidad de algunas tecnologias.
 
 Recuerda aprendimos:

@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
+    
       <Menu1 />
       <main className='mainHome'>
         <article>

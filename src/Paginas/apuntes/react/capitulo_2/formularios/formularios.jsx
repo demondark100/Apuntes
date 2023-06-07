@@ -792,7 +792,7 @@ export default function App(){
               name="terminos"
               onChange={e=>setCheck(e.target.checked)}
             />
-            <label htmlFor="denegar">no , es aburrido >:v</label>
+            <label htmlFor="denegar">no , es aburrido :v</label>
           </form>
         </div>
 

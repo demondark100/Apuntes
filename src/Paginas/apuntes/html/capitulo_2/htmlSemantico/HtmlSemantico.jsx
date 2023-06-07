@@ -2,8 +2,6 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Menu2 from "../../../../../componentes/menus/Menu2";
-import "./htmlSemantico.css";
-
 
 function HtmlSemantico() {
   return (  
