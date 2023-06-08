@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./mouseEvent.css";
 
 function MouseEventJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>mouse events</h1>
         <h2>sintaxis</h2>

@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 
 function MetodosCadenaJavaScript() {
   return (  
     <>
-    <Menu2/>
     <main>
       <h1>Metodos de cadena</h1>
       <Conseptos texto={`JavaScript cuenta con metodos de cadena para poder facilitar muchas tareas que podrian ser demasiado complicadas.`}/>

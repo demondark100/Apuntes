@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Git from "../../../../componentes/lenguajes/Git";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function UseGit() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>comandos git</h1>
         <h2>ls</h2>

@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function ConcatenacionJavaScript() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Concatenacion</h1>
         <Conseptos texto={`En javaScript tenemos dos formas de concatenar las cadenas.

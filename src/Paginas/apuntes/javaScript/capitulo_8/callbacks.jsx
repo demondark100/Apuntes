@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function CallbacksJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>callbacks</h1>
         <Conseptos texto={`Los callbacks sirven para llamar a otra funcion dentro de una funcion.`}/>

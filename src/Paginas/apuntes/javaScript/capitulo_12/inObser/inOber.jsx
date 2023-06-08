@@ -4,7 +4,6 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./inObser.css";
 import { useRef,useEffect } from "react";
 
@@ -55,7 +54,6 @@ function InObserJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Interseccion observer</h1>
         <Conseptos texto={`Esta API nos ayudara de mejor manera a manejar nuestro sitio web por detras pronto entenderemos a lo que me refiero.`}/>

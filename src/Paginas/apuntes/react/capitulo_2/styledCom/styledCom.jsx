@@ -3,7 +3,6 @@ import ReactCode from "../../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Terminal from "../../../../../componentes/lenguajes/Terminal";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./styled.css";
 import { useRef,useState } from "react";
 
@@ -36,7 +35,6 @@ function StyledComReact() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Styled Component</h1>
         <Conseptos texto={`Esta es una libreria demasiado util para trabajar con los estilos ya que hacemos todo desde 1 archivo sin crear nada y podemos darle logica a los estilos.`}/>

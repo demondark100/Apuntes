@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Terminal from "../../../../componentes/lenguajes/Terminal";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ReactRouterDom() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>React router dom</h1>
         <Conseptos texto={`react router dom nos sirve para enrutar a otras secciones de nuestra aplicacion porque en react ya no podemos andar creando otro html para ir a otra seccion de nuestra pagina.`}/>

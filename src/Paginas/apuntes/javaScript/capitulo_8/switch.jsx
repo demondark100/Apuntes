@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function SwitchJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>switch</h1>
         <Conseptos texto={`Switch es similar a los if else solo que la sintaxis es algo distinta osea pasamos de esto`}/>

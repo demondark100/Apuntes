@@ -2,7 +2,6 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./formularios.css";
 
 import React from "react";
@@ -430,7 +429,6 @@ function FormulariosReacr(){
 
   return(
     <>
-      <Menu2/>
       <main>
         <h1>Formularios</h1>
         <Conseptos texto={`React nos da unas herramientas para poder trabajar con los formularios.

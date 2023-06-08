@@ -4,7 +4,6 @@ import Css from "../../../../componentes/lenguajes/Css";
 import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 
 
@@ -13,7 +12,6 @@ function EventFujoJs() {
   return (  
     <>
       <MensajeModal texto={`Para diferenciar los resultados hacer click en "click" , copia o reescribe tu mismo el codigo para ver los resultados.`}/>
-      <Menu2 />
       <main>
         <h1>flujo de eventos</h1>
         <Conseptos texto={`Con esto veremos cual es el flujo de los eventos.`}/>

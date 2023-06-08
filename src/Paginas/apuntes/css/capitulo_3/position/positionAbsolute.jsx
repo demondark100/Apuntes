@@ -3,13 +3,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./position.css";
 
 function PositionAbsolute() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>position-absolute</h1>
         <Conseptos texto={`Esta propiedad a diferencia de {positioRelative} no ocupa espacio real en el sitio web , tambien obtiene las mismas propiedades de position relative como:

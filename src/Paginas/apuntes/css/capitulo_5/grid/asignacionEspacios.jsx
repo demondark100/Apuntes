@@ -3,12 +3,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function AsignacionEspacios() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>asignacion de espacios</h1>
         <Conseptos texto={`Nosotros podemos asignar cuanto queremos que ocupe cada celda/grisha.

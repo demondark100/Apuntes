@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import Git from "../../../../componentes/lenguajes/Git";
 
 function ConfiGit() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Configuracion de git</h1>
         <Conseptos texto={`Aqui te dejo el link para descargar git.

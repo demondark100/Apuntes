@@ -3,13 +3,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./position.css";
 
 function PositionFixed() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>position-fixed</h1>
         <Conseptos texto={`Esto es similar a position absolute osea que no ocupa un espacio como tal en el sitio web la diferencia esque el elemento se queda en un lugar fijo del sitio web esto se suele usar para menus o publicidades estaticas un ejemplo si sigues bajando notaras como es que el menu esta bajando contigo.`} />

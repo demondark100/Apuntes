@@ -3,12 +3,10 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function ObModChildJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>obtencion de childs</h1>
         <h2>appendChild</h2>

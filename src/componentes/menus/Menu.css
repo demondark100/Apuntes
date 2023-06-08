@@ -6,11 +6,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #000;
+  background-color: #fff;
   min-width: 55px;
   height: 60px;
   z-index: 4;
-  color: #fff;
+  color: #000;
   transition-duration: .5s;
 }
 
@@ -42,11 +42,69 @@
   position: absolute;
   top: 60px;
   left: -100%;
-  background-color: #000;
+  background-color: #fff;
   width: 100%;
   height: 100vh;
   transition-duration: .5s;
+  overflow: auto;
+
 }
+.contenedorLinksMenu::-webkit-scrollbar{
+  display: none;
+}
+
+/* estos son los li del ul que estan dentro de nav */
+
+.linkInicio:hover{
+  border-bottom: 2px solid #000;
+  transition-duration: .5s;
+}
+
+.links{
+  list-style: none;
+}
+.links li{
+  padding: 15px;
+}
+.links li a{
+  text-decoration: none;
+  color: #fff;
+  transition-duration: .5s;
+}
+.links li a:hover{
+  border-bottom: 2px solid #fff;
+  transition-duration: .5s;
+}
+
+/* estos son los links de redes osea el ul li etc */
+.linkMovil{
+  list-style: none;
+}
+.linkPc{
+  display: none;
+}
+
+/* esto es el div que contiene el logo y el boton para mostrar y ocultar las redes */
+
+.icono-red{
+  transform: rotate(-90deg);
+  transition-duration: .5s;
+  margin-left: 15px;
+}
+.girar{
+  transform: rotate(90deg);
+  transition-duration: .5s;
+}
+.show{
+  transform: translate(0,0);
+  transition-duration: .5s;
+  position: relative;
+}
+.hide{
+  transform: translate(-100%,0);
+  position: absolute;
+}
+
 
 /* esto es la animacion que se dara para mostrar o no el menu */
 
@@ -55,14 +113,34 @@
   transition-duration: .5s;
 }
 
+/* este es el div que contiene al aside osea los capitulos */
+
+.capitulosContentMovil{
+  position: absolute;
+}
+.capitulosContentPc{
+  display: none;
+}
+
+
 
 
 @media (min-width: 750px){
-/* esto es el header */
+  /* esto es el header */
 
-.headerMenu{
-  
-}
+  .headerMenu{
+    height: 60px;
+    z-index: 4;
+    color: #000;
+    transition-duration: .5s;
+  }
+
+
+  /* esto es la imagen del logo */
+  .imgPcLogo{
+    width: 35px;
+  }
+
 
   /* esto es el icono */
 
@@ -70,24 +148,109 @@
     display: none;
   }
 
-  /* esto es el nav del menu */
+  /* este es el icono de claro y oscuro */
 
-  .contenedorLinksMenu{
-    width: 100%;
-    visibility: visible;
+  .iconoClOs{
+    cursor: pointer;
     position: relative;
-    background-color: transparent;
-    top: 0;
-    left: 0;
-    height: auto;
   }
 
 
-  /* estos son los links del nav */
-  
+  /* esto es el nav del menu */
+
+  .contenedorLinksMenu{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    transition-duration: .5s;
+    /* overflow: hidden; */
+    width: 55%;
+  }
+
+  /* estos son los li del ul que estan dentro de nav */
+
   .links{
     display: flex;
     justify-content: space-around;
   }
+  .links li{
+    padding: 15px;
+  }
+  .links li a{
+    text-decoration: none;
+    transition-duration: .5s;
+  }
+  .links li a:hover{
+    border-bottom: 2px solid #000;
+    transition-duration: .5s;
+  }
 
+  /* estos son los links de redes osea el ul li etc */
+  .linkMovil{
+    display: none;
+    background-color: #0f0;
+    list-style: none;
+  }
+  .linkPc{
+    display: block;
+    list-style: none;
+    background-color: inherit;
+    width: 15%;
+    text-align: center;
+    z-index: -2;
+  }
+  .linkPc li{
+    padding: 10px;
+  }
+  .linkPc li a{
+    text-decoration: none;
+  }
+  .linkPc li a:hover{
+    border-bottom: 2px solid #000;
+    transition-duration: .5s;
+  }
+
+  /* esto es el div que contiene el logo y el boton para mostrar y ocultar las redes */
+
+  .icono-red{
+    transform: rotate(0);
+    transition-duration: .5s;
+    margin-left: 15px;
+  }
+  .girar{
+    transform: rotate(180deg);
+    transition-duration: .5s;
+  }
+  .show{
+    position: absolute;
+    transform: translate(20vw,100px);
+    transition-duration: .5s;
+  }
+  .hide{
+    transform: translate(20vw,-100%);
+    transition-duration: .5s;
+    
+  }
+
+
+  /* esto es la animacion que se dara para mostrar o no el menu */
+
+  .mostrarMenu{
+    left: 0;
+    transition-duration: .5s;
+  }
+
+  /* esto es el div que contiene a aside osea los capitulos */
+  .capitulosContentMovil{
+    display: none;
+  }
+  .capitulosContentPc{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
 }

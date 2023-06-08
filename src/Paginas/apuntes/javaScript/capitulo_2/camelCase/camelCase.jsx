@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function CamelCaseJavaScript() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>camelCase</h1>
         <Conseptos texto={`Para usar camelCase debemos empezar escribiendo con minuscula y se debe de reemplazar los espacios por mayusculas.`}/>

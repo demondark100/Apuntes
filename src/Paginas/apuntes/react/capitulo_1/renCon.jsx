@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function RenConReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Renderizado Condicional</h1>
         <Conseptos texto={`Con esto mostraremos un componente segun sea en la pantalla de hecho este tipo de estructura lo veras a menudo en proyectos react.

@@ -1,7 +1,6 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { Component } from "react";
 
 function Pokemon({ avatar, name }) {
@@ -75,7 +74,6 @@ function ApiPODReact() {
   
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Api con (POD)</h1>
         <Conseptos texto={`Recuerdan que dijimos que en "componentDidMount" se hacian las peticiones bueno ahora lo pondremos a prueba consumiendo la API de pokemon.`}/>

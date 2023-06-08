@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function TimersJs() {
   const mostrar=()=>{
@@ -12,7 +11,6 @@ function TimersJs() {
   }
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>timers</h1>
         <Conseptos texto={`Los timers nos sirve para ejecutar una funcion en un tiempo determinado , Nosotros podemos decidir en que mmomento se ejecutara la funcion.

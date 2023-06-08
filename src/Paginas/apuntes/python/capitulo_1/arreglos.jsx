@@ -2,14 +2,11 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
-import Terminal from "../../../../componentes/lenguajes/Terminal";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ArreglosPy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Datos Compuestos</h1>
         <Conseptos texto={`Estos son los arreglos solo que en este lenguaje hay distintos tipos de arreglos por asi decirlo.`}/>

@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function CacheJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Caché</h1>
         <Conseptos texto={`El cache almacena informacion que ya solicitamos de forma cotidiana/normalmente lo ciañ hace que el usuario tenga que esperar menos por entrar al sitio web.`}/>

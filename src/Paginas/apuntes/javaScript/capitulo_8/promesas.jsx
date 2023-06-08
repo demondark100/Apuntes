@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function PromesasJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>promesas</h1>
         <Conseptos texto={`Las promesas nos sirven para manejar errores de forma mas sensillas y tambien para manejar tareas asincronas que veremos mas adelante.

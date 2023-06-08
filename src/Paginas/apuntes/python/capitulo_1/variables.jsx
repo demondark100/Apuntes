@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function VariablesPy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Variables</h1>
         <Conseptos texto={`Como ya sabemos las variables guardan datos como numeros , strings , etc,

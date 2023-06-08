@@ -1,7 +1,6 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./metodologia.css";
 import { useRef } from "react";
@@ -32,7 +31,6 @@ function Metodologia() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>metodologia BEM</h1>
         <Conseptos texto={`La metodologia BEM nos permite solucionar conflictos con la seleccion de multiples clases de una forma tal que nos permite saber que elemento estamos seleccionando.

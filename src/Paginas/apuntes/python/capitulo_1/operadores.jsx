@@ -3,12 +3,10 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function OperadoresPy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Operadores</h1>
         <h2>operadores aritmeticos</h2>

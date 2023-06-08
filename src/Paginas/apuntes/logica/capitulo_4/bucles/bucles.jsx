@@ -2,12 +2,10 @@ import { Link } from "react-router-dom";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function BuclesLogica() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>bucles</h1>
         <Conseptos texto={`Los bucles se encargan de recorrer arreglos , hacer una accion de forma repetitiva , etc.`}/>

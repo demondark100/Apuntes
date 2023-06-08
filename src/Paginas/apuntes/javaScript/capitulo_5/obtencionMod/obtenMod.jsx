@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function ObtenModJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>obtencion y modificacion de contenido</h1>
         <Conseptos texto={`Con esto podremos modificar y ver el contenido de los elementos html.`}/>

@@ -1,7 +1,6 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { Component } from "react";
 
 
@@ -73,7 +72,6 @@ class Reloj extends Component {
 function CicloVidaReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>ciclo de vida</h1>
         <Conseptos texto={`El siclo de vida en un componente de clase tiene 3 fases.

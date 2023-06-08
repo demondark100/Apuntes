@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function ArreglosJavaScript() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>arreglos</h1>
         <Conseptos texto={`La sintaxis de los arreglos en este lenguaje no cambian en absolutamente nada a comparacion de la sintaxis de la logica , Lo unico diferente seria como declaramos la variable que guardara el arreglo.`}/>

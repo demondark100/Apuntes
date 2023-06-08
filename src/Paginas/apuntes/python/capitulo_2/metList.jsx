@@ -3,12 +3,10 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function MetListPy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Metodos de listas</h1>
         <Conseptos texto={`Al igual que las cadenas los arreglos tambien tienen sus metodos propieos , estos tambien reciben la funcion dir(solo es un recordatorio).`}/>

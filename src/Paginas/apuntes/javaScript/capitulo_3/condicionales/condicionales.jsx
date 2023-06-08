@@ -2,14 +2,12 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 
 
 function CondicionalesJavaScript() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Condicionales</h1>
         <Conseptos texto={`Las condicionales en este lenguaje tienen la siguiente sintaxis:

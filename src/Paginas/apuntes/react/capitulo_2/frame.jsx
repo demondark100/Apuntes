@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Html from "../../../../componentes/lenguajes/Html";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 
 
@@ -11,7 +10,6 @@ import Menu2 from "../../../../componentes/menus/Menu2";
 function FrameCssReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>frameworks css</h1>
         <Conseptos texto={`Los frameworks de css son estilos que vienen ya hechos para que tu solo te preocupes de la logica de tu sitio web o tambien por si te da flojera escribir los estilos.

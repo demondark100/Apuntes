@@ -3,12 +3,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function GridDinamico() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>grid dinamico</h1>
         <Conseptos texto={`Con esto podemos posiscionar de mejor forma los elementos , manejar su comportamento a los elementos/grishas.`}/>

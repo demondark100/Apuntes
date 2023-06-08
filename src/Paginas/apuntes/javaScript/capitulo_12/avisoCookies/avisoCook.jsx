@@ -4,7 +4,6 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./avisoCook.css";
 
 function AvisoCookJs() {
@@ -58,7 +57,6 @@ function AvisoCookJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Crear aviso de uso de cookies</h1>
         <Conseptos texto={`Actualmente debemos pedir permiso al usuario de que usaremos cookies por temas legales :v.`}/>

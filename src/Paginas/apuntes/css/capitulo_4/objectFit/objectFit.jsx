@@ -1,5 +1,4 @@
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
@@ -98,7 +97,6 @@ function ObjetFit() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>object fit</h1>
         <Conseptos texto={`Esta propiedade nos permitira controlar los estilos de las imagenes para centrarlas , ajustarlas bien , etc.`}/>

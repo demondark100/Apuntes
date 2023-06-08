@@ -3,12 +3,10 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function Variables2Py() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>variables 2.0 (la venganza)</h1>
         <Conseptos texto={`Nosotros podemos desencapsular las variables por ejemplo tenemos un arreglo , tupla , conjunto ahora veremos como hacerlo.`}/>

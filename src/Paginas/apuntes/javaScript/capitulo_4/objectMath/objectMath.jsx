@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function ObjectMathJavaScript() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>object Math</h1>
         <h2>sqet</h2>

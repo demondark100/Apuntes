@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./sombras.css";
 
 function Sombras() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>sombras</h1>
         <Conseptos texto={`Esta propiedad es similar a {border} pero en vez de darle bordes a las cajas les damos una sombra. ejemplo.`}

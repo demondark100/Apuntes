@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function CambiarAttrJavaScript() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>atributos</h1>
         <Conseptos texto={`Esto nos servira mas que nada en los inputs ya que estos llevan mas atributos pero como bien dije se pueden cambiar todo tipo de atributos por ejemplos los de imagenes , audio , parrafos , etc..`}/>

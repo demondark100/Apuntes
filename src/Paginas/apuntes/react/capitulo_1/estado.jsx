@@ -3,7 +3,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { useState } from "react";
 
 
@@ -20,7 +19,6 @@ function EstadoReact() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Estado</h1>
         <Conseptos texto={`el estado es el conjunto de variables que intervienenen en el componente

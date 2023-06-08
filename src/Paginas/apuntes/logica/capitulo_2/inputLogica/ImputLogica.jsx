@@ -1,6 +1,5 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./input.css";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import { useState } from "react";
@@ -33,7 +32,6 @@ function InpuLogica() {
   }
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>inputs y outputs</h1>
         <Conseptos texto={`La programacion se basa en

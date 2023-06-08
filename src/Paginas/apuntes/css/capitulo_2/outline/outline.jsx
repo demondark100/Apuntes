@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./outline.css";
 
 function Outline() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>outline</h1>
         <Conseptos texto={`El outline es un borde que no afecta al espacio de las cajas como si pasa con los bordes en simples palabras el outline no ocupara espacio real en el sitio web.`}/>

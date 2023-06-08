@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ServiWorkJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Service Workers</h1>
         <Conseptos texto={`Aqui una forma grafica del como es Service Workers.`}/>

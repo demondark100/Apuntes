@@ -3,13 +3,11 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Json from "../../../../componentes/lenguajes/Json";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function RenEleReact() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>renderizado de elementos</h1>
         <Conseptos texto={`Nosotros podemos renderizar arreglos pero a la hora de ejecutar habra una pequeña advertencia de que necesita un "key" que seria un equivalente al "id" en html esto es para poder buscar de mejor forma en la virtual dom.`}/>

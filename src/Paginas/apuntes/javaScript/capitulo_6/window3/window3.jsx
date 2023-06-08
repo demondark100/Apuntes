@@ -1,13 +1,11 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./window3.css";
 
 function Window3Js() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>window 3</h1>
         <h2>location</h2>

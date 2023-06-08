@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ParamRestJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>parametro rest</h1>
         <Conseptos texto={`Los parametros rest son parametros que son indefinidos los cuales se convertiran en arreglos.`}/>

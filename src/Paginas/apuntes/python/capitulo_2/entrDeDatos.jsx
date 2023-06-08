@@ -3,12 +3,10 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function EntrDatosPy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Entrada de datos</h1>
         <Conseptos texto={`Con esto pediremos datos al usuario para procesarlos y mostrarles un resultado , los inputs siempre devolveran una string por eso es que existen unos metodos para poder cambiar esos datos a numeros pero bueno empecemos.`}/>

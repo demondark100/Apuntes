@@ -3,7 +3,6 @@ import Html from "../../../../componentes/lenguajes/Html";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import {useState} from "react";
 
 
@@ -23,7 +22,6 @@ function PortalesReact() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Portales</h1>
         <Conseptos texto={`Los portales en React son una característica que permite renderizar componentes fuera del árbol de componentes principal, lo que puede ser útil para crear elementos superpuestos o modales.

@@ -2,7 +2,6 @@ import React from 'react';
 import "./Home.css"
 
 // componentes
-import Menu1 from '../../componentes/menus/Menu1';
 import Footer from '../../componentes/menus/Footer';
 import MensajeModal from "../../componentes/MensajeModal/mensajeModal";
 import { Link } from 'react-router-dom';
@@ -10,8 +9,6 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <>
-    
-      <Menu1 />
       <main className='mainHome'>
         <article>
           <section>

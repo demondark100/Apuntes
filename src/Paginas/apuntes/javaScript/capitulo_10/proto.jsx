@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ProtoJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>protopipos</h1>
         <Conseptos texto={`Todo en javaScript es un objeto por ejemplo una cadena de texto o nunmero.`}/>

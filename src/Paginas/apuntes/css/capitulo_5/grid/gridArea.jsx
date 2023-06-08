@@ -3,12 +3,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function GridArea() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>grid area</h1>
         

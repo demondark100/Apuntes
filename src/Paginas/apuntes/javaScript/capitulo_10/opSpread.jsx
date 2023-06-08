@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function OpeSpread() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Operador spread</h1>
         <h2>sin operador spread</h2>

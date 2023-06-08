@@ -1,6 +1,5 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import "./selectore.css";
@@ -26,7 +25,6 @@ function Selectores() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>selectores</h1>
         <Conseptos texto={`Los selectores nos sirven para poder seleccionar a las cagitas / elementos de html.

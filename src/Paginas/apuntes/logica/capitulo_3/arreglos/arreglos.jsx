@@ -2,13 +2,11 @@ import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
 function ArreglosLogica() {
   return (  
     <>
-      <Menu2 />
       <MensajeModal texto={`Todo este codigo podras ejecutarlo en tu consola del navegador.`}/>
       <main>
         <h1>Arreglos</h1>

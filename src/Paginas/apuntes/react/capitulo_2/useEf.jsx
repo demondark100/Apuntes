@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 import {React,useState,useEffect} from "react"
 
@@ -126,7 +125,6 @@ function PokemonApi() {
 function UseEfReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>useEffect</h1>
         <h2>tiempo de vida en los compinentes</h2>

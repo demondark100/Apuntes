@@ -3,12 +3,10 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/txt";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function AjaxJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>AJAX</h1>
         <Conseptos texto={`Para esto abriremos un archivo ".txt" y un servidor local usando: {xampp} o ("Live Server" extencion de vscode) esto para poder enviar y recibir peticiones y ademas porque es compatible con una gran cantidad de sistemas operativos.`}

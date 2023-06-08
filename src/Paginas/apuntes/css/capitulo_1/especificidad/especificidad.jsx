@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./especificidad.css";
 
 function Especificidad() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Especificidad</h1>
         <Conseptos texto={`la especificidad es como rangos para evitar conflictos con los estilos de css ahora una igamen para poder entender mejor la especificidad.`}/>

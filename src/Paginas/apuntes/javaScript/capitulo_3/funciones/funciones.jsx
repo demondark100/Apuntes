@@ -3,12 +3,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function FuncionesJavaScript() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>funciones</h1>
         <Conseptos texto={`En este lenguaje la sintaxis de las funciones cambian en:

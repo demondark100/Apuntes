@@ -1,5 +1,4 @@
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
@@ -8,7 +7,6 @@ import "./cursor.css";
 function Cursor() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>cursor</h1>
 

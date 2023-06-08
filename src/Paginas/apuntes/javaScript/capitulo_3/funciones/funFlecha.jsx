@@ -3,12 +3,10 @@ import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function FunFlecha() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>funcion flecha</h1>
         <Conseptos texto={`La funcion flecha es para poder escribir codigo mas simple dentro de la funcion a parte de que su sintaxis no necesita de ninguna palabra clave como "function"`}/>

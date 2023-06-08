@@ -3,12 +3,10 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/txt";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function FetchJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>fetch</h1>
         <Conseptos texto={`Con "fetch" podemos trabajar de forma mas sensilla y con menos codigo que "ajax".

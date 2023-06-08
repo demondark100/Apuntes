@@ -2,13 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
-import GridTemplate from "../../../css/capitulo_5/grid/gridTemplate";
 
 function ClasesMetJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>clases y metodos</h1>
         <Conseptos texto={`Todo esto nos servira segun el contexto en el que estemos en nuestro codigo.`}/>

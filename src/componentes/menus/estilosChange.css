@@ -1,11 +1,23 @@
-/* esto es el menu */
-.MenuDar{
-  background-color: #fff;
-  color: #000;
-  transition-duration: .5s;
-}
+/* esto es el body */
 .bodyDark{
   background-color: #000;
   color: #fff;
   transition-duration: .5s;
+}
+
+/* esto es el menu */
+.MenuDar{
+  background-color: #000;
+  color: #ffff;
+  transition-duration: .5s;
+}
+
+/* estos son los links ul li de nav del menu */
+.ColorA{
+  color: #000 !important;
+  transition-duration: .5s;
+}
+.ColorA:hover{
+  transition-duration: .5s;
+  border-bottom: 2px solid #fff;
 }

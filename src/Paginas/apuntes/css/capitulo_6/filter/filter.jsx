@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./filter.css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
@@ -66,7 +65,6 @@ function Filter() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>filter</h1>
         <Conseptos texto={`Como bien dice el nombre esta propiedad nos permitira dar filtros a nuestros elementos html mayormente se notas mas en imagenes.

@@ -1,5 +1,4 @@
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
@@ -17,7 +16,6 @@ function Colorizacion() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>colorizacion</h1>
         <Conseptos texto={`Tenemos distintas formas de usar los colores por ejemplo la forma que hemos estado usando hasta ahora.

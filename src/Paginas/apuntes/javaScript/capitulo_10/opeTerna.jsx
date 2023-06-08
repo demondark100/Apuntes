@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function OpeTernaJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Operador ternario</h1>
         <Conseptos texto={`El operador ternario mejora el if y obtimiza el codigo , es recomendable usarlo solo cuando se hara un "si" y "sino" aqui no existe "sino si".`}/>

@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 import React from "react";
 import { useState } from "react";
@@ -30,7 +29,6 @@ function Hooks(){
 function HoksReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>hooks</h1>
         <Conseptos texto={`Los hooks son una version mejorada de los componentes de clase por asi decirlo ya que volvemos a las funciones , y es muy parecida a las bases de javaScript y ademas escribimos menos codigo ya que se reduce demasiado con las funciones.

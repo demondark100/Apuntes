@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./conseptos_basicos.css";
 
 function ConseptosBasicos() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>conseptos basicos</h1>
         <Conseptos texto="Html es un lenguaje de maquetacion para estructurar sitios web y es escensial para porder trabajar con lenguajes comno css y javaScript."/>

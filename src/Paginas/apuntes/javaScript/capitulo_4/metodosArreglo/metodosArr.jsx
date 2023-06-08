@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function MetodosArrJavaScript() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Metodos de arreglos</h1>
         <Conseptos texto={`Al igual que los metodos de cadena los arreglos tambien tienen metodos que nos facilitaras muchas cosas.`}/>

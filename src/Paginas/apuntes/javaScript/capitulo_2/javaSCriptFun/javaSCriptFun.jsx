@@ -1,5 +1,4 @@
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
@@ -7,7 +6,6 @@ import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 function JavaScriptFun() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>funciones de javaScript</h1>
         <Conseptos texto={`Estas funciones son solo de javaScript que nos facilitaran mucho las cosas a la hora de trabajar con este lenguaje por ejemplo hay una funcion que nos sirve para saber si un dato es string , numero , etc y asi , Son muy utiles al momento de trabajar con el lenguaje. `}/>

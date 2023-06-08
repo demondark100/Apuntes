@@ -1,9 +1,7 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./dragDrop.css";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
-import { useRef } from "react";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 
@@ -19,7 +17,6 @@ function DragDropJs() {
   }
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Drag y Drop</h1>
         <Conseptos texto={`Drag y Drop es el arrastre y desplazamiento de los elementos , todos los objetos tienen drag osea que si arrastras cualquier objeto el ebjeto sentira el drag a la hora de desplazarlo.`}/>

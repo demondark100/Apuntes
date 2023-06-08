@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function PropSiJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>propiedades de sibling</h1>
         <h2>previousElementSibling y nextElementSibling</h2>

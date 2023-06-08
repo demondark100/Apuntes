@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function Tablas() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>tablas</h1>
         <Conseptos texto={`las tablas son estructuras que tienen columnas y filas.

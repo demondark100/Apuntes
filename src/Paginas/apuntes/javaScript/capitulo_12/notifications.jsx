@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function NotificationJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Notifications</h1>
         <Conseptos texto={`Consejo si por accidente das click en donde dice bloquear debes dirigirte donde esta la url y dar click en el signo de exclamacion que aparece al principio de la url.

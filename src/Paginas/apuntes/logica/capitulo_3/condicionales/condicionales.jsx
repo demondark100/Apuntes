@@ -3,7 +3,6 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import CondicionalesDiagrama from "./diagrama";
 import { useRef, useState } from "react";
 
@@ -17,7 +16,6 @@ function CondicionalesLogica() {
   } 
   return (  
     <>
-      <Menu2 />
       <MensajeModal texto={`Aqui podras escribir el codigo en el navegador ya que escribiremos codigo javaScript.`}/>
       <main>
         <h1>Condicionales</h1>

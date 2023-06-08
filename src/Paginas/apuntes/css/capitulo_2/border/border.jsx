@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./border.css";
 
 function Border() {
   return (  
     <>
-      <Menu2 />
       <main> 
         <h1>border</h1>
         <Conseptos texto={`Esta propiedad se encarga de darle el borde a las cajas.`}/>

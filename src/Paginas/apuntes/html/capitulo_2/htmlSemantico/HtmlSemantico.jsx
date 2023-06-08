@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function HtmlSemantico() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>html semantico</h1>
         <Conseptos texto={`Aqui veremos algunas etiquetas de html para empezar con unos cuantos proyectos.`}/>

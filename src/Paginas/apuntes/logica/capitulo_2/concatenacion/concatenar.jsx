@@ -1,14 +1,12 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
 function ConcatenarLogica() {
   return (  
     <>
-      <Menu2 />
       <MensajeModal texto={`Todo el codigo de esta parte tambien lo puedes pegar en la consola del navegador.`}/>
       <main>
         <h1>Concatenacion</h1>

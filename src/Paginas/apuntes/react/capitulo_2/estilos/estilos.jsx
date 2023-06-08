@@ -3,7 +3,6 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import ReactCode from "../../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./estilos.css";
 
 import React , {useState} from "react";
@@ -67,7 +66,6 @@ function ModulosEstilos(){
 function EstilosReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Estilos</h1>
         <Conseptos texto={`Para dar estilos a un componente tenemos distintas formas de hacerlo.`}/>

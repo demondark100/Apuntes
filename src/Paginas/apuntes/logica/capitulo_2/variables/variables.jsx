@@ -1,14 +1,12 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis"
 
 function VariableLogica() {
   return (  
     <>
-      <Menu2 />
       <MensajeModal texto={`Todo el codigo escrito en esta parte lo puedes ejecutar en tu consola del navegador para comprobar los resultados.
 
 Para eso presiona F12 y pega los codigos que aparecen o puedes escribirlo tu mism@.`}/>

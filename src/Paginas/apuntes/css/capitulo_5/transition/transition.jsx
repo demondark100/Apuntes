@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./transition.css";
 
 function Transition() {
   return (  
     <>
-      <Menu2></Menu2>
       <main>
         <h1>transition</h1>
         <Conseptos texto={`Esto es para hacer trnasisiones en distintas cosas es como dar una animacion por ejemplo a los hover.

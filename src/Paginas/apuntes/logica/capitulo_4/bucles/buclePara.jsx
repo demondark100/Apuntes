@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function BucleParaLogica() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>bucle para</h1>
         <Conseptos texto={`Los bucles para son similares que los bucles mientras solo que es una estructura más compacta que incluye la inicialización, la condición y la actualización de las variables de control en una única línea. Su estructura básica es la siguiente:`}/>

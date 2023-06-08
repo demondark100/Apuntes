@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
 function BuclesJavaScript() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>bucles</h1>
         <Conseptos texto={`En este lenguaje se cambia la sintaxis para poder usar los bucles.`}/>

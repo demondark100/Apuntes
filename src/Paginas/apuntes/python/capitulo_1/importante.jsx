@@ -1,11 +1,9 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ImportantePy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Importante de python</h1>
         <h2>como usar</h2>

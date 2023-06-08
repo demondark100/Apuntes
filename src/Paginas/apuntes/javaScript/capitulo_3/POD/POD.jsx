@@ -3,12 +3,10 @@ import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function PODJavaScript() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>programacion orientada a objetos(POD)</h1>
         <Conseptos texto={`En este lenguaje la sintaxis de POD cambia en esto:

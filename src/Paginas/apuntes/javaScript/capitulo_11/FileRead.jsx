@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { useRef } from "react";
 
 function FileReadJs() {
@@ -48,7 +47,6 @@ function FileReadJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>FileReader</h1>
         <Conseptos texto={`A FileReader lo usamos cuando trabajamos con eventos por ejemplo si llamamos a "FileReader" nos mostrara todo null.`}/>

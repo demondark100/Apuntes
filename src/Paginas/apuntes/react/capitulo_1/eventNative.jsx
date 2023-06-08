@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 
 
@@ -44,7 +43,6 @@ export class MostarE extends Component {
 function EventNativeReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Eventos Nativos, Sintéticos & Personalizados</h1>
         <Conseptos texto={`Nosotros podemos acceder a los eventos que react obtimizo para los navegadores pero tambien podemos acceder a los eventos nativos de javaScript.`}/>

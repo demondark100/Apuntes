@@ -3,12 +3,10 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function MetCadPy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Metodos de cadenas</h1>
         <Conseptos texto={`Los metodos de cadena nos sirven mucho porque nos permite modificar o comprobar muchas cosas de los caracteres.

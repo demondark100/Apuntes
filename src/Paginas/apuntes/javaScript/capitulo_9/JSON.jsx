@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function JsonJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>JSON</h1>
         <Conseptos texto={`Estos son como los (objetos/arreglos asociativos) solo que se le agregan comillas pronto veremos para que es.`}/>

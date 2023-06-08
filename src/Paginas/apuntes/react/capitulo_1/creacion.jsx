@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import Terminal from "../../../../componentes/lenguajes/Terminal";
 
 function CreacionReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>creacion de react</h1>
         <Conseptos texto={`Para poder crear una aplicacion de react necesitamos de {node} para poder usar esta libreria.

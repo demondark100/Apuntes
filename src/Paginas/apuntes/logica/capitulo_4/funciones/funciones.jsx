@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function FuncionesLogica() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Funciones</h1>
         <Conseptos texto={`Las funciones son un bloque de codigo que podemos reutulizar cuantas veces queramos por ejemplo una funcion nos puede ahorrar muchas lineas de codigo , evita que escribamos el codigo una y otra y otra vez.`}/>

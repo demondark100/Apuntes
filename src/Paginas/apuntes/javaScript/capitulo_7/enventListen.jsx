@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { useState } from "react";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 
@@ -22,7 +21,6 @@ function EventListenJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>eventos de escucha</h1>
         <Conseptos texto={`Los eventos de escucha sirven para poder interactuar con los elementos html con esto me refiero a darles funcionalidad ejemplo.`}/>

@@ -1,5 +1,4 @@
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 function AlineacionFlex() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>alineacion flex</h1>
         <h2>alineamiento horizontal(hechado _ )</h2>

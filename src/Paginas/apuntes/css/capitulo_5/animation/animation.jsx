@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./animation.css";
 
 function Animation() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Animation</h1>
         <Conseptos texto={`Esto es similar a transition pero lleva otras reglas.

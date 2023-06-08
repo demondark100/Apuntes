@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ProprsReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>propiedades props</h1>
         <Conseptos texto={`Con las propiedades podemos hacer que un componente sea dinamico para poder modificar como queramos estos reciben cualquier tipo de dato:

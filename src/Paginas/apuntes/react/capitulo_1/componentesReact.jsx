@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ComponentesReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>componentes</h1>
         <Conseptos texto={`Los componentes son muy utiles para poder usar un codigo que ya habiamos escrito anteriormente sin necesidad de volver a escribirlo.

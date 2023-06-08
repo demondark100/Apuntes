@@ -1,9 +1,7 @@
-import ReactSimpleSearch from "react-simple-search";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { useState } from "react";
 
 function EventEs7React() {
@@ -12,7 +10,6 @@ function EventEs7React() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>eventos(ES7)</h1>
         <Conseptos texto={`Con la llegadade ES7 ya no es necesario usar "constructor" para poder definir this ya que podemos hacerlo en menos codigo , para eso usaremos las funciones flecha que simplificaran el bindeo.`}/>

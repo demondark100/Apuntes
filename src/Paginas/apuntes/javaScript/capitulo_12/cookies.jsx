@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function CookiesJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Cookies</h1>
         <Conseptos texto={`Las "Cookies" se encargan de guardar informacion del ususario en el navegador.`}/>

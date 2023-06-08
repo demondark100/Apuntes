@@ -1,8 +1,6 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
-import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 import React from "react";
 import { useRef } from "react";
@@ -42,7 +40,6 @@ function MenuHook() {
 function RefReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Referencias</h1>
         <Conseptos texto={`Las referencias nos sirve para manipular los objetos del DOM con esto es que nos recomienda react trabajar , las referencias no van a volver a renderizar los elementos como si lo haria un estado con lo cual es muy util por ejemplo para hacer un menu.

@@ -3,12 +3,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function GridImEx() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>grid implicito</h1>
         <Conseptos texto={`Nosotros al crear un elemento de mas se creara una celda mas a eso se le llama grid implicito.

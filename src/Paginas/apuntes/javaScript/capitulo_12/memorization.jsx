@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function MemorizationJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Memorization</h1>
         <Conseptos texto={`"Memoization" es un proceso que acorta los tiempos de ejecucion para permitir que la experiencia del ususario sea mas obtima.`}/>

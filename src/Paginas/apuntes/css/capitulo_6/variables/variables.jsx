@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./variables.css";
 
 function VariablesCss() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>variables</h1>
         <Conseptos texto={`Las variables nos sirve para guardas estilos en css.`}/>

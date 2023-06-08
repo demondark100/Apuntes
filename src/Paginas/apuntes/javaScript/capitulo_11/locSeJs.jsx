@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function LocSeJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>LocalStorage y SessionStorage</h1>
         <Conseptos texto={`Esta api se encarga de guardar la informacion de la pagina web.`}/>

@@ -2,14 +2,12 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./flexbox.css"
 import { Link } from "react-router-dom";
 
 function FlexDirection() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>flex direction</h1>
         <Conseptos texto={`Recuerdan que dije que flex es de (arriba a abajo) y de (derecha a izquierda)

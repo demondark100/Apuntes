@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function FuncionesPart2Js() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>funciones parte 2 (la venganza :v)</h1>
         <h2>funcion flecha</h2>

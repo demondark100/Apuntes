@@ -2,12 +2,10 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function PropsChildReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>props.children</h1>
         <Conseptos texto={`los props.children nos sirve para poder poner contenido en un componente pero no desde el componente mismo.

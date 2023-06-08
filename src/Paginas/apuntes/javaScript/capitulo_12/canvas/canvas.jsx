@@ -4,7 +4,6 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./canvas.css";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 
@@ -58,7 +57,6 @@ function CanvasJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Objeto Canvas</h1>
         <Conseptos texto={`canvas es un elemento en html para hacer graficos o para los usos que queramos darle como juegos , etc.`}/>

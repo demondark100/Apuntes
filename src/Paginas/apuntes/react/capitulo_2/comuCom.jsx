@@ -1,7 +1,6 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { Component } from "react";
 
 class Comunicacion extends Component{
@@ -81,7 +80,6 @@ function Hijo(props) {
 function ComuCompReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>comunicacion entre componentes</h1>
         <Conseptos texto={`Esto nos sirve para poder pasar informacion de un componente padre a un componente hijo ahora aremos una practica.`}/>

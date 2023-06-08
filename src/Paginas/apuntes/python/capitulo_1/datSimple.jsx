@@ -2,13 +2,11 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import Consola from "../../../../componentes/consola/consola";
 
 function DatSimplePy() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Datos simples</h1>
         <Conseptos texto={`python al igual que los conseptos basicos de progranacion tiene tipos de datos por ejemplo:

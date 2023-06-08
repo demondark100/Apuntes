@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./pseudoclases.css";
 
 function Pseudoclases() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>pseudoclases</h1>
         <Conseptos texto={`Las pseudoclases de CSS son usadas para seleccionar y aplicar estilos a elementos según su estado o posición en el documento. En resumen, se utilizan para aplicar estilos de forma dinámica a elementos según su interacción con el usuario o posición en la página.`}/>

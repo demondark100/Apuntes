@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function PromptLogica() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>prompt</h1>
         <Conseptos texto={`Prompt es para pedir datos al usuario.`}/>

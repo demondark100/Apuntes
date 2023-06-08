@@ -1,13 +1,11 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function DOMJavaScript() {
   return (  
     <>
       <MensajeModal texto={`Para trabajar con (Document Object Model/DOM) se necesita de forma obligatoria html y css.`}/>
-      <Menu2/>
       <main>
         <h1>DOM</h1>
         <Conseptos texto={`DOM imagina que estás creando una página web dedicada a tus animes favoritos.

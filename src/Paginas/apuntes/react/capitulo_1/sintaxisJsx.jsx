@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import ReactCode from "../../../../componentes/lenguajes/React";
 
 function SintaxisJsxReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Sintaxis jsx</h1>
         <Conseptos texto={`Eeact como tal es como poner html css y javaScript en un solo archivo por ejemplo si queremos mostrar un valor de una variable normalmente seleccionariamos a la variable para poder dibujarlo en el DOM pero con jsx de react se facilita de mejor forma esta tarea.`}/>

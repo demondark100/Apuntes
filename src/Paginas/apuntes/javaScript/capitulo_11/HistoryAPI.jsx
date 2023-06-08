@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function HistoryAPIJs() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>History API</h1>
         <Conseptos texto={`Con el objeto "History" trabajaremos con el historial una api muy util.`}/>

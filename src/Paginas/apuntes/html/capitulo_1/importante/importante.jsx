@@ -3,7 +3,6 @@ import { useRef } from "react";
 
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 
 function Importante() {
@@ -24,7 +23,6 @@ function Importante() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>importante</h1>
         <Conseptos texto={`Para empezar para crear un archivo html debmos crear un archivo con la extencion .html por ejemplo.

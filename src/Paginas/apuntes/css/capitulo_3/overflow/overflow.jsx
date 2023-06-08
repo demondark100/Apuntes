@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./overflow.css";
 import { useState , useRef  } from "react";
 import Confirmar from "./confirmar";
@@ -34,7 +33,6 @@ function Overflow() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink></h2>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>

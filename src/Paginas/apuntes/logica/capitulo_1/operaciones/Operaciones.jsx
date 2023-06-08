@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis"
 
 function OperadoresLogica() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>operadores</h1>
         <Conseptos texto={`Aqui tenemos las mismas operaciones basicas de las matematicas osea + , - , x , /`}/>

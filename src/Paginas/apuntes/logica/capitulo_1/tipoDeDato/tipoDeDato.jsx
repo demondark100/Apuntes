@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis.jsx"
 
 function TipoDeDatos() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>tipos de datos</h1>
         <Conseptos texto={`En la programacion tenemos 3 tipos de datos.

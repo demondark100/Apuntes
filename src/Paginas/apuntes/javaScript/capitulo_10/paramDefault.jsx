@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ParamDefaultJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Parametros por defecto</h1>
         <Conseptos texto={`Esto nos sirve para poner un parametro por defecto en una funcion esto en el caso de que no se pase ningun parametro para la funcion por ejemplo.`}/>

@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function SelectoresDOMJavaScript() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>selectores de elementos</h1>
         <Conseptos texto={`Los selectores nos permitira seleccionar cualquier elemento o grupo de elementos de HTML con elementos me refiero a las cajitas.`}/>

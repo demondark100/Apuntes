@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function AtributosGlobalesJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>atributos globales</h1>
         <Conseptos texto={`Estos atributos se pueden poner en cualquier HTML esto debi de enseñarlo en html pero me dio flokera tenemos.`}/>

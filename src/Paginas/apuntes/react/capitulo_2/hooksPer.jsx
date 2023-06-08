@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function HooksPerReact() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Hooks personalizador</h1>
         <Conseptos texto={`Esto nos sirve para poder crear una funcion que usaremos muchas veces en nuestra aplicacion de react.`}/>

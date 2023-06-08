@@ -140,8 +140,6 @@ import CondicionalesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/con
 import ArreglosJavaScript from './Paginas/apuntes/javaScript/capitulo_3/arreglos/arreglos';
 import ArreglosAsJavaScript from './Paginas/apuntes/javaScript/capitulo_3/arreglosAs/arreglosAs';
 import Capitulos from './componentes/capitulos/aside';
-import Menu2 from './componentes/menus/Menu2';
-import Footer from './componentes/menus/Footer';
 import BuclesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/bucles/bucles';
 import FuncionesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/funciones/funciones';
 import FunFlecha from './Paginas/apuntes/javaScript/capitulo_3/funciones/funFlecha';
@@ -269,12 +267,13 @@ import Cap4ProyecHtml from './Paginas/apuntes/proyectos/html/cap4';
 // CSS
 import Cap1ProyCss from './Paginas/apuntes/proyectos/css/capitulo_1/cap1';
 import Cap2ProyectoCss from './Paginas/apuntes/proyectos/css/capitulo_2/cap2';
+import Menu from './componentes/menus/Menu';
 
 function App() {
   return (
     <Router>
+      <Menu/>
       <ScrollToTop />
-      <Capitulos />
       <Routes>
         <Route path='/' element={<Home />} />
 

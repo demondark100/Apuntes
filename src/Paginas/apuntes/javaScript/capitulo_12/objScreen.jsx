@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ObjScreenJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Objeto screen</h1>
         <Conseptos texto={`"scrren" es un objeto que nos permite acceder a algunas propiedades de la pantalla.`}/>

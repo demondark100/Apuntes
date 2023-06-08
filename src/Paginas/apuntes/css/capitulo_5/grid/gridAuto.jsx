@@ -3,12 +3,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function GridAuto() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>grid auto</h1>
         <Conseptos texto={`Con estas propiedades vamos a programar el {gridImplicito} , si te fijaste bien en los ejemplos del grid implicito se creaban filas de forma automatica.`}

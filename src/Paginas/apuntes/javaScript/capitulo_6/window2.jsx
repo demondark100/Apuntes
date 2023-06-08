@@ -1,14 +1,12 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 
 
 function Window2Js() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>window 2</h1>
         <h2>sintaxis</h2>

@@ -1,13 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
-import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function ThisCon() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>this contextual</h1>
         <Conseptos texto={`"this" hace referencia al objeto por ejemplo si declaramos "this" fuera de cualquier objeto.`}/>

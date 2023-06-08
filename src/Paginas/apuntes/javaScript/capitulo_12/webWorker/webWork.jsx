@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./webWork.css";
 import { useRef } from "react";
 
@@ -23,7 +21,6 @@ function WebWorkerJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Web Worker</h1>
         <Conseptos texto={`Esto nos ayudara a poder hacer de una mejor forma mas de una accion aqui una forma grafica del como funciona.`}/>

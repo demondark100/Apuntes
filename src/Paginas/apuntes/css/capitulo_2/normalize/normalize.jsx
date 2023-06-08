@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./normalize.css";
 
 function Normalize() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>Normalize</h1>
         <Conseptos texto={`Para empezar los navegadores siempre traen un estilo por defecto por ejemplo si escribimos algo te daras cuenta que las letras son de color negro debido a que asi lo quizo el navegador.

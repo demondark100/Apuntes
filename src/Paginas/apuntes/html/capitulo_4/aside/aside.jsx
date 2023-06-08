@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function Aside() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>aside</h1>
         <Conseptos texto={`Aside es como algo secundario que debe de ir a un costadito de la pagina.`}/>

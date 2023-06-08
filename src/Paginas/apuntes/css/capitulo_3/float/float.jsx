@@ -2,13 +2,11 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import "./float.css";
 
 function Float() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>float</h1>
         <Conseptos texto={`Esta propiedad nos sirve para cambiar a los contenedores de posision de derecha a izquierda y visebersa.`}/>

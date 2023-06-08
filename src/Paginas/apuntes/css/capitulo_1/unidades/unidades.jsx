@@ -3,7 +3,6 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import { useState , useRef } from "react";
 import "./unidades.css";
 import Rem from "./rem";
@@ -23,7 +22,6 @@ function Unidades() {
 
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>unidades</h1>
         <Conseptos texto={`Tenemos dos tipos de medidas.

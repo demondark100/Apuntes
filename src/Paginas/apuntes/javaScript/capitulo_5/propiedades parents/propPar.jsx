@@ -2,12 +2,10 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function PropParJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>propiedades de parents</h1>
         <h2>parentElemet y parentNode</h2>

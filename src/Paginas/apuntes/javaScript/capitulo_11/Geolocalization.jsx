@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function GeolocalizationJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Geolocalization</h1>
         <Conseptos texto={`Con esta api podremos trabajar con la ubicacion del usuario para poder hacer aplicaciones que necesiten de la ubicacion del usuario.`}/>

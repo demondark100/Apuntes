@@ -2,7 +2,6 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 import { useRef } from "react";
 
 function ClausulasJs() {
@@ -10,7 +9,6 @@ function ClausulasJs() {
 
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>clausulas</h1>
         <Conseptos texto={`Las clausulas son funciones que retornan otras funciones.`}/>

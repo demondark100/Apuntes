@@ -1,6 +1,5 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./propiedadesText.css"
@@ -8,7 +7,6 @@ import "./propiedadesText.css"
 function PropiedadesTexto() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>propiedades de texto</h1>
         <Conseptos texto={`Aqui veremos las propiedades de las letras empecemos con:

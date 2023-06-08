@@ -1,12 +1,10 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
-import Menu2 from "../../../../../componentes/menus/Menu2";
 
 function FooterHtmlCurso() {
   return (  
     <>
-      <Menu2 />
       <main>
         <h1>footer</h1>
         <Conseptos texto={`La etiqueta <footer> en HTML se utiliza para marcar el pie de página de una página web.

@@ -1,12 +1,10 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
-import Menu2 from "../../../../componentes/menus/Menu2";
 
 function CachWebJs() {
   return (  
     <>
-      <Menu2/>
       <main>
         <h1>Cachear sitio web y mostrarlo offline</h1>
         <Conseptos texto={`Si queremos entrar a la pagina pero sin conexion a internet como hacemos?`}/>
