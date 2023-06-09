@@ -5,7 +5,7 @@ import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-function Capitulos({sendshowAside,sendasideMb ,sendasidePc}) {
+function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasidePc}) {
 
   // esto es el aside
 
@@ -16,6 +16,10 @@ function Capitulos({sendshowAside,sendasideMb ,sendasidePc}) {
         sendasideMb.current.classList.add("hideAside")
         sendasidePc.current.classList.add("hideAside")
         sendshowAside(false)
+        if(window.innerWidth < 750){
+          estadoMenu(false)
+          contentMenu.current.classList.remove("mostrarMenu")
+        }
       })
     });
   })
