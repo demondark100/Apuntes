@@ -5,40 +5,21 @@ import { useState,useRef } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-function Capitulos() {
-  const navAside = useRef(null)
-
+function Capitulos({sendshowAside,sendasideMb ,sendasidePc}) {
 
   // esto es el aside
-  const [showOptions, setShowOptions] = useState(false);
-  const aside = useRef(null);
-  const toggleRedes = () => {
-    setShowOptions(!showOptions);
-    if(showOptions){
-      aside.current.classList.remove("expandir")
-      navAside.current.classList.add("quitarNavAside")
-    } else{
-      aside.current.classList.add("expandir")
-      navAside.current.classList.remove("quitarNavAside")
-    }
-  };
+
   useEffect(()=>{
-    const links = document.querySelectorAll(".temas a");
-    if (links != null) {
-      links.forEach(i=>{
-        i.addEventListener(("click"),()=>{
-          aside.current.classList.remove("expandir");
-          setShowOptions(false)
-          navAside.current.classList.add("quitarNavAside")
-        })
+    const links = document.querySelectorAll(".temas a")
+    links.forEach(i => {
+      i.addEventListener("click",()=>{
+        sendasideMb.current.classList.add("hideAside")
+        sendasidePc.current.classList.add("hideAside")
+        sendshowAside(false)
       })
-    } else {
-      
-      aside.current.classList.remove("expandir")
-      setShowOptions(true)
-      navAside.current.classList.remove("quitarNavAside")
-    }
+    });
   })
+
 
 
 
@@ -117,20 +98,9 @@ function Capitulos() {
 
   return (  
     <>
-      <aside ref={aside}>
-
-        <div className="botonAsideContent">
-          <p>cursos</p>
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            onClick={toggleRedes}
-            className={showOptions ? 'iconoAside rotar' : 'iconoAside'}
-          />
-        </div>
-        
-        <nav ref={navAside}>
+      <aside>
+        <nav>
           <ul>
-
             <li className="curso">
               <p onClick={()=>setProyectos(!proyectos)}>proyectos</p>
               {
@@ -192,7 +162,7 @@ function Capitulos() {
                       cap3Logica && <div className="temas">
                         <Link to={"../logica/condicionales"}>Condicionales</Link>
                         <Link to={"../logica/arreglos"}>Arreglos</Link>
-                        <Link to={"../logica/arreglosBi"}>arreglos <br /> bidimencionales</Link>
+                        <Link to={"../logica/arreglosBi"}>arreglos    bidimencionales</Link>
                       </div>
                     }
                   </div>
@@ -203,7 +173,7 @@ function Capitulos() {
                       cap4Logica && <div className="temas">
                         <Link to={"../logica/bucles"}>bucles</Link>
                         <Link to={"../logica/funciones"}>Funciones</Link>
-                        <Link to={"../logica/pod"}>programacion <br />orientada a <br /> objetos(POD)</Link>
+                        <Link to={"../logica/pod"}>programacion   orientada a    objetos(POD)</Link>
                       </div>
                     }
                   </div>
@@ -221,7 +191,7 @@ function Capitulos() {
                     <p onClick={()=>setCap1Html(!cap1Html)}>capitulo 1</p>
                     {
                       cap1Html && <div className="temas">
-                        <Link to={"../html/importante leer esto"}>importante <br /> leer esto</Link>
+                        <Link to={"../html/importante leer esto"}>importante    leer esto</Link>
                         <Link to={"../html/conseptos basicos"}>conseptos basicos</Link>
                       </div>
                     }
@@ -258,7 +228,7 @@ function Capitulos() {
                     {
                       cap4Html && <div className="temas">
                         <Link to={"../html/mav"}>nav</Link>
-                        <Link to={"../html/section y article"}>section y <br /> article</Link>
+                        <Link to={"../html/section y article"}>section y    article</Link>
                         <Link to={"../html/aside"}>aside</Link>
                         <Link to={"../html/main"}>main</Link>
                         <Link to={"../html/footer"}>footer</Link>
@@ -279,7 +249,7 @@ function Capitulos() {
                     <p onClick={()=>setCap1Css(!cap1Css)}>capitulo 1</p>
                     {
                       cap1Css && <div className="temas">
-                        <Link to={"../css/introduccion a css"}>introduccion <br /> a css</Link>
+                        <Link to={"../css/introduccion a css"}>introduccion    a css</Link>
                         <Link to={"../css/selectores"}>selectores</Link>
                         <Link to={"../css/especificidad"}>especificidad</Link>
                         <Link to={"../css/metodologia BEM"}>metodologia BEM</Link>
@@ -293,7 +263,7 @@ function Capitulos() {
                     {
                       cap2Css && <div className="temas">
                         <Link to={"../css/background"}>background</Link>
-                        <Link to={"../css/propiedades de texto"}>propiedades <br /> de texto</Link>
+                        <Link to={"../css/propiedades de texto"}>propiedades    de texto</Link>
                         <Link to={"../css/normalize"}>normalize</Link>
                         <Link to={"../css/cajas"}>cajas</Link>
                         <Link to={"../css/padding"}>padding</Link>
@@ -353,7 +323,7 @@ function Capitulos() {
                         <Link to={"../css/Transform"}>Transform</Link>
                         <Link to={"../css/variables"}>variables</Link>
                         <Link to={"../css/filter"}>filter</Link>
-                        <Link to={"../css/extraCss"}>cosas extrea <br /> de css</Link>
+                        <Link to={"../css/extraCss"}>cosas extrea    de css</Link>
                         <Link to={"../css/linear"}>linear</Link>
                       </div>
                     }
@@ -384,7 +354,7 @@ function Capitulos() {
                     {
                       cap2JavaScript && <div className="temas">
                         <Link to={"../javaScript/variables"}>variables</Link>
-                        <Link to={"../javaScript/javaScriptFun"}>funciones de <br />javaScript</Link>
+                        <Link to={"../javaScript/javaScriptFun"}>funciones de   javaScript</Link>
                         <Link to={"../javaScript/prompt"}>prompt</Link>
                         <Link to={"../javaScript/operadores"}>Operadores</Link>
                         <Link to={"../javaScript/concatenacion"}>Concatenacion</Link>
@@ -399,10 +369,10 @@ function Capitulos() {
                       cap3JavaScript && <div className="temas">
                         <Link to={"../javaScript/condicionales"}>Condicionales</Link>
                         <Link to={"../javaScript/arreglos"}>arrglos</Link>
-                        <Link to={"../javaScript/arreglosAsociativos"}>arreglos <br />asociativos</Link>
+                        <Link to={"../javaScript/arreglosAsociativos"}>arreglos   asociativos</Link>
                         <Link to={"../javaScript/bucles"}>bucles</Link>
                         <Link to={"../javaScript/funciones"}>funciones</Link>
-                        <Link to={"../javaScript/PODJavaScript"}>programacion <br /> orientado a <br /> objetos(POD)</Link>
+                        <Link to={"../javaScript/PODJavaScript"}>programacion    orientado a    objetos(POD)</Link>
                       </div>
                     }
                   </div>
@@ -411,8 +381,8 @@ function Capitulos() {
                     <p onClick={()=>setCap4JavaScript(!cap4JavaScript)}>capitulo 4</p>
                     {
                       cap4JavaScript && <div className="temas">
-                        <Link to={"../javaScript/metodosCadena"}>Metodos de <br /> cadena</Link>
-                        <Link to={"../javaScript/metodosArreglo"}>Metodos de <br />arreglos</Link>
+                        <Link to={"../javaScript/metodosCadena"}>Metodos de    cadena</Link>
+                        <Link to={"../javaScript/metodosArreglo"}>Metodos de   arreglos</Link>
                         <Link to={"../javaScript/objectMath"}>object Math</Link>
                       </div>
                     }
@@ -423,17 +393,17 @@ function Capitulos() {
                     {
                       cap5JavaScript && <div className="temas">
                         <Link to={"../javaScript/DOM"}>DOM</Link>
-                        <Link to={"../javaScript/SelectoresJavaScript"}>selectores de <br /> elementos</Link>
+                        <Link to={"../javaScript/SelectoresJavaScript"}>selectores de    elementos</Link>
                         <Link to={"../javaScript/atributosJs"}>atributos</Link>
-                        <Link to={"../javaScript/atributoGlobal"}>atributos <br />globales</Link>
-                        <Link to={"../javaScript/attrInput"}>atributos de <br /> inputs</Link>
-                        <Link to={"../javaScript/clasesMet"}>clases y <br /> metodos</Link>
-                        <Link to={"../javaScript/obtenMod"}>obtencion y <br /> modificacion de <br /> contenido</Link>
-                        <Link to={"../javaScript/creacionEle"}>creacion de <br /> elementos</Link>
-                        <Link to={"../javaScript/obChild"}>obtencion de <br /> childs</Link>
-                        <Link to={"../javaScript/propChild"}>propiedades <br /> de childs</Link>
-                        <Link to={"../javaScript/propPar"}>propiedades de <br /> parents</Link>
-                        <Link to={"../javaScript/PropSi"}>propiedades de <br /> sibling</Link>
+                        <Link to={"../javaScript/atributoGlobal"}>atributos   globales</Link>
+                        <Link to={"../javaScript/attrInput"}>atributos de    inputs</Link>
+                        <Link to={"../javaScript/clasesMet"}>clases y    metodos</Link>
+                        <Link to={"../javaScript/obtenMod"}>obtencion y    modificacion de    contenido</Link>
+                        <Link to={"../javaScript/creacionEle"}>creacion de    elementos</Link>
+                        <Link to={"../javaScript/obChild"}>obtencion de    childs</Link>
+                        <Link to={"../javaScript/propChild"}>propiedades    de childs</Link>
+                        <Link to={"../javaScript/propPar"}>propiedades de    parents</Link>
+                        <Link to={"../javaScript/PropSi"}>propiedades de    sibling</Link>
                       </div>
                     }
                   </div>
@@ -453,11 +423,11 @@ function Capitulos() {
                     <p onClick={()=>setCap7JavaScript(!cap7JavaScript)}>capitulo 7</p>
                     {
                       cap7JavaScript && <div className="temas">
-                        <Link to={"../javaScript/eventListen"}>eventos de <br /> escucha</Link>
-                        <Link to={"../javaScript/eventFlujo"}>flujo de <br /> eventos</Link>
+                        <Link to={"../javaScript/eventListen"}>eventos de    escucha</Link>
+                        <Link to={"../javaScript/eventFlujo"}>flujo de    eventos</Link>
                         <Link to={"../javaScript/MouseEvent"}>mouse events</Link>
-                        <Link to={"../javaScript/keyEvent"}>eventos de <br /> teclado</Link>
-                        <Link to={"../javaScript/interEvent"}>eventos de <br /> la interfaz</Link>
+                        <Link to={"../javaScript/keyEvent"}>eventos de    teclado</Link>
+                        <Link to={"../javaScript/interEvent"}>eventos de    la interfaz</Link>
                         <Link to={"../javaScript/timers"}>timers</Link>
                       </div>
                     }
@@ -467,9 +437,9 @@ function Capitulos() {
                     <p onClick={()=>setCap8JavaScript(!cap8JavaScript)}>capitulo 8</p>
                     {
                       cap8JavaScript && <div className="temas">
-                        <Link to={"../javaScript/controlFlujo"}>control de <br /> flujo(teorico)</Link>
+                        <Link to={"../javaScript/controlFlujo"}>control de    flujo(teorico)</Link>
                         <Link to={"../javaScript/switch"}>switch</Link>
-                        <Link to={"../javaScript/ManErr"}>manejo de <br />errores</Link>
+                        <Link to={"../javaScript/ManErr"}>manejo de   errores</Link>
                         <Link to={"../javaScript/callbacks"}>callbacks</Link>
                         <Link to={"../javaScript/promesas"}>Promesas</Link>
                         <Link to={"../javaScript/awaitAsync"}>await y async</Link>
@@ -494,16 +464,16 @@ function Capitulos() {
                     {
                       cap10JavaScript && <div className="temas">
                         <Link to={"../javaScript/proto"}>prototipos</Link>
-                        <Link to={"../javaScript/carProto"}>caracteristicas de <br /> prototipos</Link>
+                        <Link to={"../javaScript/carProto"}>caracteristicas de    prototipos</Link>
                         <Link to={"../javaScript/strictMod"}>Strict Mode</Link>
-                        <Link to={"../javaScript/funciones2"}>funciones parte2 <br /> (la venganza :v)</Link>
-                        <Link to={"../javaScript/thisCon"}>this <br /> contextual</Link>
+                        <Link to={"../javaScript/funciones2"}>funciones parte2    (la venganza :v)</Link>
+                        <Link to={"../javaScript/thisCon"}>this    contextual</Link>
                         <Link to={"../javaScript/recursividad"}>Recursividad</Link>
                         <Link to={"../javaScript/clausulas"}>clausulas</Link>
-                        <Link to={"../javaScript/paramDefaul"}>parametros por <br /> defecto</Link>
+                        <Link to={"../javaScript/paramDefaul"}>parametros por    defecto</Link>
                         <Link to={"../javaScript/paramRest"}>parametro rest</Link>
-                        <Link to={"../javaScript/opTerna"}>operador <br /> ternario</Link>
-                        <Link to={"../javaScript/opSpread"}>operador <br /> spread</Link>
+                        <Link to={"../javaScript/opTerna"}>operador    ternario</Link>
+                        <Link to={"../javaScript/opSpread"}>operador    spread</Link>
                       </div>
                     }
                   </div>
@@ -513,7 +483,7 @@ function Capitulos() {
                     {
                       cap11JavaScript && <div className="temas">
                         <Link to={"../javaScript/objDate"}>objeto Date</Link>
-                        <Link to={"../javaScript/locSeJs"}>LocalStorage y <br /> 
+                        <Link to={"../javaScript/locSeJs"}>LocalStorage y    
                         SessionStorage</Link>
                         <Link to={"../javaScript/dragDrop"}>Drag y Drop</Link>
                         <Link to={"../javaScript/geolo"}>Geolocalization</Link>
@@ -529,18 +499,18 @@ function Capitulos() {
                     {
                       cap12JavaScript && <div className="temas">
                         <Link to={"../javaScript/MatchMedia"}>MatchMedia</Link>
-                        <Link to={"../javaScript/inObser"}>Intersection <br /> Observer</Link>
+                        <Link to={"../javaScript/inObser"}>Intersection    Observer</Link>
                         <Link to={"../javaScript/lazyLoad"}>Lazy Load</Link>
                         <Link to={"../javaScript/Notifications"}>Notifications</Link>
                         <Link to={"../javaScript/webWork"}> Web Worker</Link>
-                        <Link to={"../javaScript/sameOr"}> Same Origin <br /> Politic</Link>
-                        <Link to={"../javaScript/objNa"}>Objeto <br /> Navigator</Link>
+                        <Link to={"../javaScript/sameOr"}> Same Origin    Politic</Link>
+                        <Link to={"../javaScript/objNa"}>Objeto    Navigator</Link>
                         <Link to={"../javaScript/memori"}>Memoization</Link>
                         <Link to={"../javaScript/Caché"}>Caché</Link>
                         <Link to={"../javaScript/servWork"}>Service Workers</Link>
-                        <Link to={"../javaScript/cachWeb"}>Cachear sitio <br /> web y mostrarlo <br /> offline</Link>
+                        <Link to={"../javaScript/cachWeb"}>Cachear sitio    web y mostrarlo    offline</Link>
                         <Link to={"../javaScript/Cookies"}>Cookies</Link>
-                        <Link to={"../javaScript/avisoCookies"}>Crear aviso <br /> de uso <br /> de cookies</Link>
+                        <Link to={"../javaScript/avisoCookies"}>Crear aviso    de uso    de cookies</Link>
                         <Link to={"../javaScript/objScreen"}>Objeto Screen</Link>
                         <Link to={"../javaScript/objCanvas"}>Objeto Canvas</Link>                       
                       </div>
@@ -559,7 +529,7 @@ function Capitulos() {
                     <p onClick={()=>setCap1Git(!cap1Git)}>capitulo 1</p>
                     {
                       cap1Git && <div className="temas">
-                        <Link to={"../git/confiGit"}>configuracion <br /> git</Link>
+                        <Link to={"../git/confiGit"}>configuracion    git</Link>
                         <Link to={"../git/useGit"}>usar git</Link>
                       </div>
                     }
@@ -576,16 +546,16 @@ function Capitulos() {
                       <p onClick={()=>setCap1React(!cap1React)}>capitulo 1</p>
                       {
                         cap1React && <div className="temas">
-                          <Link to={`../react/creacion`}>creacion de <br /> react</Link>
+                          <Link to={`../react/creacion`}>creacion de    react</Link>
                           <Link to={"../react/sintaxis"}>sintaxis jsx</Link>
                           <Link to={"../react/componentes"}>componentes</Link>
                           <Link to={"../react/props"}>propiedades props</Link>
                           <Link to={"../react/estado"}>estado</Link>
-                          <Link to={"../react/renCon"}>renderizar <br /> condicional</Link>
-                          <Link to={"../react/renEle"}>renderizado de <br /> Elementos</Link>
+                          <Link to={"../react/renCon"}>renderizar    condicional</Link>
+                          <Link to={"../react/renEle"}>renderizado de    Elementos</Link>
                           <Link to={"../react/evenClass"}>eventos(ES6)</Link>
                           <Link to={"../react/evenClass2"}>eventos(ES7)</Link>
-                          <Link to={"../react/eventNative"}>Eventos Nativos, <br /> Sintéticos & <br /> Personalizados</Link>                      
+                          <Link to={"../react/eventNative"}>Eventos Nativos,    Sintéticos &    Personalizados</Link>                      
                         </div>
                       }
                     </div>
@@ -594,12 +564,12 @@ function Capitulos() {
                       <p onClick={()=>setCap2React(!cap2React)}>capitulo 2</p>
                       {
                         cap2React && <div className="temas">
-                          <Link to={"../react/comuCompo"}>comunicacion <br /> entre <br /> componentes</Link>
+                          <Link to={"../react/comuCompo"}>comunicacion    entre    componentes</Link>
                           <Link to={"../react/ciclVid"}>ciclo de vida</Link>
-                          <Link to={"../react/apiPOD"}>peticiones API <br /> (POD)</Link>
+                          <Link to={"../react/apiPOD"}>peticiones API    (POD)</Link>
                           <Link to={"../react/hooks"}>hooks</Link>
                           <Link to={"../react/useEffect"}>useEffect</Link>
-                          <Link to={"../react/hooksPer"}>hooks <br /> personalizados</Link>
+                          <Link to={"../react/hooksPer"}>hooks    personalizados</Link>
                           <Link to={"../react/referencias"}>Referencias</Link>
                           <Link to={"../react/formularios"}>Formularios</Link>
                           <Link to={"../react/estilos"}>estilos</Link>
@@ -615,7 +585,7 @@ function Capitulos() {
                         cap3React && <div className="temas">
                           <Link to={"../react/propsChild"}>props.children</Link>
                           <Link to={"../react/Portales"}>Portales</Link>
-                          <Link to={"../react/reactRouter"}>React router <br /> dom</Link>
+                          <Link to={"../react/reactRouter"}>React router    dom</Link>
                         </div>
                       }
                     </div>
@@ -635,7 +605,7 @@ function Capitulos() {
                         <Link to={"../python/importante"}>importante</Link>
                         <Link to={"../python/datSimple"}>datos simples</Link>
                         <Link to={"../python/variables"}>variables</Link>
-                        <Link to={"../python/datComp"}>datos compuestos <br /> (arreglos)</Link>
+                        <Link to={"../python/datComp"}>datos compuestos    (arreglos)</Link>
                         <Link to={"../python/operadores"}>operadores</Link>
                         <Link to={"../python/condicionales"}>condicionales</Link>
                       </div>
@@ -646,10 +616,10 @@ function Capitulos() {
                     <p onClick={()=>setCap2Python(!cap2Python)}>capitulo 2</p>
                     {
                       cap2Python && <div className="temas">
-                        <Link to={"../python/metCade"}>Metodos de <br /> cadena</Link>
-                        <Link to={"../python/metList"}>metodos de <br /> listas</Link>
-                        <Link to={"../python/metDicc"}>Metodos de <br /> diccionario</Link>
-                        <Link to={"../python/enDeDatos"}>entrada de <br /> datos</Link>
+                        <Link to={"../python/metCade"}>Metodos de    cadena</Link>
+                        <Link to={"../python/metList"}>metodos de    listas</Link>
+                        <Link to={"../python/metDicc"}>Metodos de    diccionario</Link>
+                        <Link to={"../python/enDeDatos"}>entrada de    datos</Link>
                       </div>
                     }
 
@@ -659,7 +629,7 @@ function Capitulos() {
                     <p onClick={()=>setCap3Python(!cap3Python)}>capitulo 3</p>
                     {
                       cap3Python && <div className="temas">
-                        <Link to={"../python/variable2"}>variables 2.0 <br />(la venganza)</Link>
+                        <Link to={"../python/variable2"}>variables 2.0   (la venganza)</Link>
                       </div>
                     }
                   </div>

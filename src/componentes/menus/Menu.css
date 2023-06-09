@@ -12,6 +12,7 @@
   z-index: 4;
   color: #000;
   transition-duration: .5s;
+  border-bottom: 1px solid #e9dbdb;
 }
 
 
@@ -55,24 +56,26 @@
 
 /* estos son los li del ul que estan dentro de nav */
 
-.linkInicio:hover{
-  border-bottom: 2px solid #000;
-  transition-duration: .5s;
-}
-
 .links{
   list-style: none;
+  margin-left: 30px;
+  margin-top: -35px;
+  height: 100%;
+  overflow: auto;
+}
+.links::-webkit-scrollbar{
+  display: none;
 }
 .links li{
   padding: 15px;
 }
 .links li a{
   text-decoration: none;
-  color: #fff;
+  color: #000;
   transition-duration: .5s;
 }
 .links li a:hover{
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000;
   transition-duration: .5s;
 }
 
@@ -98,11 +101,12 @@
 .show{
   transform: translate(0,0);
   transition-duration: .5s;
-  position: relative;
+  margin-top: 15px;
+  margin-left: -15px;
 }
 .hide{
-  transform: translate(-100%,0);
-  position: absolute;
+  transform: translate(-100vw,0);
+  transition-duration: .5s;
 }
 
 
@@ -164,7 +168,6 @@
     left: 0;
     height: auto;
     transition-duration: .5s;
-    /* overflow: hidden; */
     width: 55%;
   }
 
@@ -173,24 +176,16 @@
   .links{
     display: flex;
     justify-content: space-around;
+    margin-top: 0;
   }
   .links li{
     padding: 15px;
   }
-  .links li a{
-    text-decoration: none;
-    transition-duration: .5s;
-  }
-  .links li a:hover{
-    border-bottom: 2px solid #000;
-    transition-duration: .5s;
-  }
+
 
   /* estos son los links de redes osea el ul li etc */
   .linkMovil{
     display: none;
-    background-color: #0f0;
-    list-style: none;
   }
   .linkPc{
     display: block;
@@ -205,6 +200,7 @@
   }
   .linkPc li a{
     text-decoration: none;
+    color: #000;
   }
   .linkPc li a:hover{
     border-bottom: 2px solid #000;
@@ -228,6 +224,7 @@
     transition-duration: .5s;
   }
   .hide{
+    position: absolute;
     transform: translate(20vw,-100%);
     transition-duration: .5s;
     
@@ -241,16 +238,185 @@
     transition-duration: .5s;
   }
 
-  /* esto es el div que contiene a aside osea los capitulos */
-  .capitulosContentMovil{
-    display: none;
-  }
+
   .capitulosContentPc{
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    
   }
+}
+
+
+
+
+
+
+
+/* todos los estilos de aqui seran la barrita del costado */
+
+/* esto es el contenedor de la barrita */
+
+.barrita__contentMovil{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #111311;
+  align-items: center;
+  width: 30px;
+  height: 100vh;
+  z-index: 4;
+}
+.barrita__contentPc{
+  display: none;
+}
+
+/* esto es el link */
+.iconno{
+  color: #fff !important;
+  margin-top: 15px;
+}
+
+.contentHover{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(45px,16px);
+  background-color: #424b42;
+  width: 60px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.contentHover{
+  color: #fff;
+}
+.mostrar_opciones{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+  z-index: 15;
+}
+
+/* este es el texto */
+.hoverInicio{
+  color: #fff;
+}
+
+
+.cursos{
+  top: 30px;
+}
+
+
+
+@media(min-width: 750px){
+
+  /* esto es el li de la barrita */
+  .liBarrita{
+    position: absolute;
+    visibility: hidden;
+  }
+
+  /* esto es el contenedor de la barrita */
+
+  .barrita__contentMovil{
+    display: none;
+  }
+  .barrita__contentPc{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111311;
+    align-items: center;
+    width: 30px;
+    height: 100%;
+  }
+
+  /* esto es el link de inicio */
+  .iconno{
+    margin-top: 15px;
+  }
+
+  /* esto es el estilos del hover que aparece cuando se hace hover. */
   
+  .contentHover{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(45px,16px);
+    background-color: #424b42;
+    width: 60px;
+    height: 25px;
+    opacity: 0;
+    transition-duration: .5s;
+  }
+  .contentHover{
+    color: #fff;
+  }
+  .mostrar_opciones{
+    opacity: 1;
+    transition-duration: .5s;
+  }
+
+  /* este es el texto */
+  .hoverInicio{
+    color: #fff;
+  }
+  .cursos{
+    top: 30px;
+  }
+}
+
+
+
+
+
+/* esto es el aside osea los capitulos */
+.capitulosContentMovil{
+  position: absolute;
+  top: 0;
+  left: 30px;
+  background-color: #444444;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition-duration: .5s;
+  overflow: auto;
+}
+
+.hideAside{
+  left: -100%;
+  transition-duration: .5s;
+}
+
+
+@media(min-width:750px){
+  .capitulosContentMovil{
+    display: none;
+  }
+  .capitulosContentPc{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    background-color: #444444;
+    width: 25%;
+    height: 100vh;
+    transition-duration: .5s;
+    overflow: auto;
+  }
+
+  .capitulosContentPc::-webkit-scrollbar{
+    display: none;
+  }
+  .hideAside{
+    left: -100%;
+  }
 }

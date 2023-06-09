@@ -2,22 +2,25 @@
 .bodyDark{
   background-color: #000;
   color: #fff;
-  transition-duration: .5s;
 }
 
 /* esto es el menu */
 .MenuDar{
   background-color: #000;
   color: #ffff;
-  transition-duration: .5s;
+}
+.headerBorder{
+  background-color: #000;
+  color: #ffff;
+  border-bottom: 1px solid #191919;
 }
 
 /* estos son los links ul li de nav del menu */
 .ColorA{
-  color: #000 !important;
+  color: #fff !important;
   transition-duration: .5s;
 }
 .ColorA:hover{
   transition-duration: .5s;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #fff !important;
 }
