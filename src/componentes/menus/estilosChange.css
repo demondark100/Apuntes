@@ -24,3 +24,11 @@
   transition-duration: .5s;
   border-bottom: 2px solid #fff !important;
 }
+
+/* estos son los "a" osea los enlaces */
+.allA{
+  color: #ad8e8e;
+}
+.allA:hover{
+  text-shadow: 0 0 15px #ad8e8e;
+}

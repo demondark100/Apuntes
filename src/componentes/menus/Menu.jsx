@@ -103,7 +103,7 @@ function Menu() {
   // esta funcion se encarga de quitar el menu cuando se da click en el icono de inicio
   const quitMenuInicio=()=>{
     setMenuAbierto(false)
-    menu.current.classList.remove("mostrarMenu")
+    menu.current.classList.add("mostrarMenu")
   }
   
 
@@ -118,6 +118,7 @@ function Menu() {
     document.body.classList.remove("bodyDark") //esto es el body
     document.querySelectorAll(".links li a").forEach(i => i.classList.remove("ColorA")); //estos son los links del nav para movil
     document.querySelectorAll(".linkPc li a").forEach(i => i.classList.remove("ColorA")); //estos son los links del nav para movil
+    document.querySelectorAll("a").forEach(i=>i.classList.remove("allA"))
   }
   const oscuro=()=>{
     setLightOrDark(true);
@@ -128,8 +129,10 @@ function Menu() {
     document.body.classList.add("bodyDark") //esto es el body
     document.querySelectorAll(".links li a").forEach(i => i.classList.add("ColorA")); //estos son los links del nav para movil
     document.querySelectorAll(".linkPc li a").forEach(i => i.classList.add("ColorA")); //estos son los links del nav para movil
+    document.querySelectorAll("a").forEach(i=>i.classList.add("allA"))
   }
 
+  
   // no se porque chingados no se guarda la pinche variable de estado en la puta memoria del pendejo navegador sea cual sea la razon que chingue su madre
   useEffect(() => {
     localStorage.setItem('claroOscuro', lightOrDark);

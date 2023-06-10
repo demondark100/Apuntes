@@ -1,0 +1,22 @@
+.title_consepto1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.conseptoHome{
+  text-align: center;
+  width: 75%;
+}
+.editoresCodigoContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.edioresParrafo{
+  text-align: center;
+  width: 75%;
+}

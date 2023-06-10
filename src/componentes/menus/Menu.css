@@ -404,10 +404,10 @@
   }
   .capitulosContentPc{
     position: absolute;
-    top: 60px;
+    top: 0;
     left: 30px;
     background-color: #444444;
-    width: 25%;
+    width: 250px;
     height: 100vh;
     transition-duration: .5s;
     overflow: auto;

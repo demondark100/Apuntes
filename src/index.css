@@ -1,7 +1,9 @@
+/* esto quita el margin y el padding de todo */
 *{
   margin: 0;
   padding: 0;
 }
+/* estos son los estilos del body */
 body{
   background-color: #fff;
   color: #000;
@@ -9,14 +11,92 @@ body{
   overflow-x: hidden;
 }
 
+/* estos estilos son de main */
 main{
   width: 100vw;
   margin: auto;
 }
 
+/* estos son los estilos de los resultados de las paginas */
+.website{
+  display: block;
+  width: 95%;
+  margin: auto;
+  height: 40vh;
+  max-height: 350px;
+  max-width: 1200px;
+  overflow: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.website::-webkit-scrollbar{
+  background-color: rgb(0, 0, 0);
+  border-radius: 150px;
+}
+.website::-webkit-scrollbar-thumb{
+  background: linear-gradient(0deg,#fff,transparent);
+  border: 1px solid #fff;
+  border-radius: 150px;
+}
+.website h1{
+  text-align: start;
+}
+.website h2{
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.website h3{
+  margin-top: 0;
+  font-size: 1em;
+}
+.website a{
+  text-decoration: underline;
+}
+
+
+
+/* estos son los estilos de los titulos */
+h1{
+  text-align: center;
+}
+h2{
+  margin-top: 15px;
+  margin-left: 8px;
+  margin-bottom: 15px;
+}
+h3{
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+
+/* este es el "a" osea los enlaces */
+a{
+  text-decoration: none;
+  color: #735c5c;
+}
+a:hover{
+  text-shadow: 0 0 15px #2d2525;
+}
+
+/* aqui el cambio de resolucion de los estilos */
+
 @media(min-width:750px){
+
+  /* estos son los estilos del main */
   main{
-    margin-left: 30px;
-    width: auto;
+    display: block;
+    margin: auto;
+    padding-left: 30px;
+    width: 95%;
+    max-width: 1200px;
   }
+
+
 }
