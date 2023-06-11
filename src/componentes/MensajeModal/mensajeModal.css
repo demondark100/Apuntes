@@ -36,6 +36,7 @@
 .textoMensajeModal{
   height: 45%;
   overflow: auto;
+  width: 95%;
 }
 .textoMensajeModal::-webkit-scrollbar{
   background-color: #d3f6ee;

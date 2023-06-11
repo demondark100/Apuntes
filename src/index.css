@@ -125,6 +125,9 @@ a:hover{
 .Page a{
   text-decoration: underline;
 }
+.Page p{
+  color: #000;
+}
 
 
 /* aqui el cambio de resolucion de los estilos */

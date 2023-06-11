@@ -267,8 +267,16 @@ import Cap4ProyecHtml from './Paginas/apuntes/proyectos/html/cap4';
 // CSS
 import Cap1ProyCss from './Paginas/apuntes/proyectos/css/capitulo_1/cap1';
 import Cap2ProyectoCss from './Paginas/apuntes/proyectos/css/capitulo_2/cap2';
-import Menu from './componentes/menus/Menu';
+import ProyCssCap3 from './Paginas/apuntes/proyectos/css/capitulo_3/cap3';
+
+
+// pendejadas
 import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
+
+
+// componente menu
+import Menu from './componentes/menus/Menu';
+
 
 function App() {
   return (
@@ -286,7 +294,9 @@ function App() {
           {/* css */}
             <Route path='css/proyCap1' element={<Cap1ProyCss />} />
             <Route path='css/proyCap2' element={<Cap2ProyectoCss />} />
+            <Route path='css/proyCap3' element={<ProyCssCap3 />} />
 
+            
             
           
 

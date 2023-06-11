@@ -40,7 +40,6 @@ function Home() {
 
       </main>
       <Footer />
-      {/* <Capitulos /> */}
     </>
   );
 }

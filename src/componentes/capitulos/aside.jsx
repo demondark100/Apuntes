@@ -132,6 +132,7 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
                       proyectosCss && <div className="temas">
                         <Link to={"../css/proyCap1"}>capitulo 1</Link>
                         <Link to={"../css/proyCap2"}>capitulo 2</Link>
+                        <Link to={"../css/proyCap3"}>capitulo 3</Link>
                       </div>
                     }
                   </div>
