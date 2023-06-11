@@ -268,6 +268,7 @@ import Cap4ProyecHtml from './Paginas/apuntes/proyectos/html/cap4';
 import Cap1ProyCss from './Paginas/apuntes/proyectos/css/capitulo_1/cap1';
 import Cap2ProyectoCss from './Paginas/apuntes/proyectos/css/capitulo_2/cap2';
 import Menu from './componentes/menus/Menu';
+import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
 
 function App() {
   return (
@@ -600,6 +601,11 @@ function App() {
 
             {/* capitulo 3 */}
               <Route path='python/variable2' element={<Variables2Py />}/>              
+
+
+          {/* pendejadas */}
+            {/* cap1 */}
+                <Route path='pendejadas/calculadora' element={<Calculadora />}/>              
 
             
               

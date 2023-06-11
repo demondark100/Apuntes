@@ -2,14 +2,15 @@
   padding: 15px;
   background-color: #000;
   color: rgb(82, 243, 19);
-  width: 75%;
-  max-width: 800px;
+  width: 93%;
   max-height: 45vh;
+  display: block;
   margin: auto;
   white-space: pre-wrap;
   overflow: auto;
-  margin-top: 4%;
-  margin-bottom: 4%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #0f0;
 }
 .consola::-webkit-scrollbar{
   display: none;

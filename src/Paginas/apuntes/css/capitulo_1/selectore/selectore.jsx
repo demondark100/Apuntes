@@ -17,6 +17,7 @@ function Selectores() {
     setShowModal(true)
     document.body.classList.add("modal-open");
     contenedor__left.current.style.top = `${window.scrollY}px`
+    contenedor__left.current.style.left = `${window.scrollX}px`
     setTimeout(() => {
       setShowModal(false)
       document.body.classList.remove("modal-open")

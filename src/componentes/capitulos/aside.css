@@ -11,19 +11,19 @@ aside{
   padding: 15px;
 }
 .curso:hover{
-  background-color: #766767;
+  background-color: #121712;
 }
 .capitulos{
   display: flex;
   flex-direction: column;
 }
 .capitulos div{  
-  background-color: #615353;
+  background-color: #131a13;
   margin-left: -15px;
   padding-left: 25px;
 }
 .capitulos div:hover{
-  background-color: #433a3a;
+  background-color: #151f15;
 }
 
 .temas{
@@ -33,13 +33,13 @@ aside{
 .temas a{
   text-decoration: none;
   color: #fff;
-  background-color: #2e2929;
+  background-color: #0e190e;
   padding: 15px;
   padding-left: 50px;
   margin-left: -20px;
 }
 .temas a:hover{
-  background-color: #1a1616;
+  background-color: #0f200f;
 }
 
 @media(min-width:750px){

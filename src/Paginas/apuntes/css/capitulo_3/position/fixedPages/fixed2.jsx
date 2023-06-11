@@ -3,8 +3,8 @@ import "../position.css";
 import Volver from "../../../../../../componentes/volver/volver";
 
 function Fixed2() {
-  return (  
-    <div className="body__fondo">
+  return (
+    <div className="Page">
       <Volver link={"../css/position/position absolute/z-index/position-fixed"}/>
       <div className="menu__fixed2">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>

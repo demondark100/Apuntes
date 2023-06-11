@@ -4,9 +4,10 @@ import Volver from "../../../../../../componentes/volver/volver";
 function ResultadoStart() {
   return (  
     <>
-      <div className="content__start_ejemplo">
+      <div className="Page">
         <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
-        <h3>stretch</h3>
+          <div style={{backgroundColor: "#000",width: "100vw",height: "100%"}}>
+          <h3 style={{color: "#fff"}}>stretch</h3>
         <div class="stretch">
           <div>
             stretch
@@ -16,7 +17,7 @@ function ResultadoStart() {
           </div>
         </div>
 
-        <h3>flex-start</h3>
+        <h3 style={{color: "#fff"}}>flex-start</h3>
         <div class="flex_start">
           <div>
             flex-start
@@ -25,6 +26,7 @@ function ResultadoStart() {
             flex-start
           </div>
         </div>
+          </div>
       </div>
     </>
   );

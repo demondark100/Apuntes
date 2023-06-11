@@ -17,6 +17,7 @@ function Overflow() {
     event.preventDefault();
     setIrAlLing(true);
     contenedor_overflow.current.style.top = `${window.scrollY}px`;
+    contenedor_overflow.current.style.left = `${window.scrollX}px`;
     document.body.classList.add("modal-open")
   }
   const confirmado = () => {

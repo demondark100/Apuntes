@@ -4,9 +4,10 @@ import Volver from "../../../../../../componentes/volver/volver";
 function AlignSelf() {
   return (  
     <>
-      <div className="bodyAlignSelf">
+      <div className="Page">
         <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
         <h3>align-self</h3>
+        <div style={{backgroundColor: "#000"}}>
         <div className="AlignSelfCajas">
           <div className="AlignSelfCajas__caja1">
             caja 1
@@ -17,6 +18,7 @@ function AlignSelf() {
           <div className="AlignSelfCajas__caja3">
             caja 3
           </div>
+        </div>
         </div>
       </div>
     </>

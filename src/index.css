@@ -4,17 +4,26 @@
   padding: 0;
 }
 /* estos son los estilos del body */
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 body{
   background-color: #fff;
   color: #000;
   transition-duration: .5s;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
+
 
 /* estos estilos son de main */
 main{
   width: 100vw;
   margin: auto;
+  margin-top: 60px !important;
 }
 
 /* estos son los estilos de los resultados de las paginas */
@@ -84,6 +93,39 @@ a{
 a:hover{
   text-shadow: 0 0 15px #2d2525;
 }
+
+
+/* este es el estilo de las paginas de proyectos */
+.Page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  position: fixed;
+  overflow: auto;
+}
+
+.Page h1{
+  text-align: start;
+}
+.Page h2{
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.Page h3{
+  margin-top: 0;
+  font-size: 1em;
+}
+.Page a{
+  text-decoration: underline;
+}
+
 
 /* aqui el cambio de resolucion de los estilos */
 

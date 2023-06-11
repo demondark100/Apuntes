@@ -1,7 +1,9 @@
 .titleCap4CssProyect{
+  margin-top: 0;
   text-align: center !important;
   background-color: #e0e0e0;
   padding: 15px;
+  color: #000;
 }
 .titleCap4CssProyect__h2{
   text-align: center !important;
@@ -14,7 +16,7 @@
 .contenedorCssProyectoCap2{
   background-color: #ff5506;
   width: 35%;
-  color: #000000;
+  color: #000000 !important;
   padding: 50px;
   margin: auto;
   margin-top: 25px;

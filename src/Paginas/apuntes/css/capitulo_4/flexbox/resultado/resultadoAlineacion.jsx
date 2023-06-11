@@ -4,9 +4,10 @@ import Volver from "../../../../../../componentes/volver/volver";
 function ResultadoAlineacionFlex() {
   return (  
     <>
-    <div className="body__content">
+    <div className="Page">
         <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
-          <h2>center</h2>
+        <div style={{backgroundColor: "#000"}}>
+          <h2 style={{color: "#fff"}}>center</h2>
             <div class="center">
                 <div>
                     caja 1.
@@ -22,7 +23,7 @@ function ResultadoAlineacionFlex() {
                 </div>
             </div>
 
-            <h2>space around</h2>
+            <h2 style={{color: "#fff"}}>space around</h2>
 
             <div class="space_around">
                 <div>
@@ -39,7 +40,7 @@ function ResultadoAlineacionFlex() {
                 </div>
             </div>
 
-            <h2>space between</h2>
+            <h2 style={{color: "#fff"}}>space between</h2>
 
             <div class="space_between">
                 <div>
@@ -56,7 +57,7 @@ function ResultadoAlineacionFlex() {
                 </div>
             </div>
 
-            <h2>space evenly</h2>
+            <h2 style={{color: "#fff"}}>space evenly</h2>
 
             <div class="space_evenly">
                 <div>
@@ -72,6 +73,7 @@ function ResultadoAlineacionFlex() {
                     caja 4.
                 </div>
             </div>
+        </div>
     </div>
     </>
   );

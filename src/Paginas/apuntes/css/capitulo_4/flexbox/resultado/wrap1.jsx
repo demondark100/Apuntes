@@ -3,7 +3,7 @@ import Volver from "../../../../../../componentes/volver/volver";
 
 function Wrap1() {
   return (  
-    <div className="flexPageContent">
+    <div className="Page">
       <Volver link={"../css/flexbox/flexDirection/flexWrap"}/>
 
       <div className="sinWrapContent">

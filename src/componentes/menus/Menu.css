@@ -1,13 +1,14 @@
 /* esto es el header */
 
 .headerMenu{
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
   min-width: 55px;
+  width: 100%;
   height: 60px;
   z-index: 4;
   color: #000;
@@ -264,6 +265,7 @@
   top: 0;
   left: 0;
   background-color: #111311;
+  border-right: 1px solid #383a3a;
   align-items: center;
   width: 30px;
   height: 100vh;
@@ -334,6 +336,7 @@
     top: 0;
     left: 0;
     background-color: #111311;
+    border-right: 1px solid #383a3a;
     align-items: center;
     width: 30px;
     height: 100%;
@@ -384,7 +387,7 @@
   position: absolute;
   top: 0;
   left: 30px;
-  background-color: #444444;
+  background-color: #111311;
   width: 90%;
   height: 100%;
   z-index: 0;
@@ -403,10 +406,10 @@
     display: none;
   }
   .capitulosContentPc{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 30px;
-    background-color: #444444;
+    background-color: #111311;
     width: 250px;
     height: 100vh;
     transition-duration: .5s;

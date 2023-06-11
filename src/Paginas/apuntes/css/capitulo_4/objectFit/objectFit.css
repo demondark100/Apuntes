@@ -6,8 +6,9 @@
   padding: 25px;
   width: 70%;
   margin: auto;
-  grid-template-columns: repeat(2,1fr);
-  gap: 10%;
+  justify-content: center;
+  grid-template-columns: repeat(2,150px);
+  gap: 25px;
 }
 .btn_img{
   background-color: transparent;
@@ -21,7 +22,7 @@
 }
 .btn_img:hover{
   background-color: transparent;
-  color: #eee;
+  color: #2f88c8;
   font-weight: 900;
   font-size: 1.8em;
   text-shadow: 2px 2px 15px #eee;

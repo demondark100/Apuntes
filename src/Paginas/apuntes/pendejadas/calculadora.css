@@ -1,0 +1,20 @@
+#contenedorCalculadora{
+  background-color: #468be5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#titleCalc{
+  text-align: center;
+}
+#inputsCalContent{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#inputsCalContent input{
+  margin-bottom: 15px;
+}
+#inputsCalContent p{
+  color: #000;
+}

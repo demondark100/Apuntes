@@ -4,8 +4,8 @@ import Volver from "../../../../../../componentes/volver/volver";
 function AlignItems() {
   return (  
     <>
-    <div className="bodyAlign">
-      <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
+    <div className="Page">
+      <div style={{backgroundColor: "#000"}}>
       <div className="content_items">
         <div className="start_align">
           <div>
@@ -23,6 +23,9 @@ function AlignItems() {
           </div>
         </div>
       </div>
+      </div>
+      <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
+      
     </div>
     </>
   );

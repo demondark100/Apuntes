@@ -88,7 +88,7 @@
 }
 .mostrar-modal{
   opacity: 1;
-  z-index: 2;
+  z-index: 4;
 }
 
 .imageLeft4dead{
@@ -119,8 +119,5 @@
   .imageLeft4dead{
     width: 45%;
     height: 45%;
-  }
-  .left4content{
-    margin-left: -23vw;
   }
 }

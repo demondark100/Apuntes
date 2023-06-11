@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 .elegir_imagenFilter{
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;

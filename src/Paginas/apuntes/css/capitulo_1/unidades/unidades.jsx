@@ -13,6 +13,7 @@ function Unidades() {
   const rem = () =>{
     setShowRem(true)
     contentedor__Rem.current.style.top = `${window.scrollY}px`;
+    contentedor__Rem.current.style.left = `${window.scrollX}px`;
     document.body.classList.add("modal-open");
     setTimeout(() => {
       setShowRem(false)

@@ -2,7 +2,7 @@ import React , {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faLaptopMedical } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faL, faLaptopMedical } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useRef } from "react";
 import logo from '../imgs/logo.jpg';
@@ -13,8 +13,14 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 
+// componentes que cambian
+import Home from "../../Paginas/home/Home";
+
+
+
 // componentes
 import Capitulos from "../capitulos/aside";
+
 
 function Menu() {
   const initialMode = localStorage.getItem('claroOscuro') === false;
@@ -39,26 +45,11 @@ function Menu() {
   const mostrarMenu =()=>{
     setMenuAbierto(true);
     menu.current.classList.add("mostrarMenu");
-
-    window.addEventListener("resize",()=>{
-      if(window.innerWidth < 750){
-        menu.current.classList.add("mostrarMenu");
-
-      } else{
-        menu.current.classList.remove("mostrarMenu");
-      }
-    })
   }
   // este quita el menu con sus opciones
   const cerrarMenu =()=>{
     setMenuAbierto(false);
     menu.current.classList.remove("mostrarMenu");
-
-    window.addEventListener("resize",()=>{
-      if(window.innerWidth < 750){
-        menu.current.classList.remove("mostrarMenu");
-      } 
-    })
   }
 
 
@@ -86,10 +77,12 @@ function Menu() {
   // esta funcion mostrar el aside o lo quitara segun sea
   const toggleAside=()=>{
     setShowAside(!showAside)
+    asidePc.current.classList.remove("hideAside");
     asideMb.current.classList.add("hideAside");
     asidePc.current.classList.add("hideAside");
   }
-  // esto agregara el aside cuando se haga click en los iconos
+  // esta funcion se encarga de quitar el menu cuando se da click en el icono de inicio
+
   useEffect(()=>{
     if(showAside){
       asideMb.current.classList.remove("hideAside");
@@ -100,10 +93,14 @@ function Menu() {
     }
   })
 
+
+
   // esta funcion se encarga de quitar el menu cuando se da click en el icono de inicio
   const quitMenuInicio=()=>{
     setMenuAbierto(false)
-    menu.current.classList.add("mostrarMenu")
+    menu.current.classList.remove("mostrarMenu")
+    setShowAside(false)
+    asidePc.current.classList.add("hideAside")
   }
   
 
@@ -132,6 +129,10 @@ function Menu() {
     document.querySelectorAll("a").forEach(i=>i.classList.add("allA"))
   }
 
+
+    
+  
+
   
   // no se porque chingados no se guarda la pinche variable de estado en la puta memoria del pendejo navegador sea cual sea la razon que chingue su madre
   useEffect(() => {
@@ -150,7 +151,7 @@ function Menu() {
         className="imgPcLogo" 
         src={logo} alt="logo" 
       />
-
+      
       {/* esto es el icono para que aparezcan los links*/}
       {
         menuAbierto ? (
@@ -306,7 +307,8 @@ function Menu() {
       <div className="barrita__contentPc">
         <Link 
           className="iconno" 
-          to={"./"}><FontAwesomeIcon 
+          to={"./"}><FontAwesomeIcon
+          onClick={quitMenuInicio}
           className="iconoOptions" 
           icon={faHome} 
         /></Link>

@@ -3,7 +3,7 @@ import Volver from "../../../../../../componentes/volver/volver";
 
 function Wrap2() {
   return (  
-    <div className="flexPageContent flexPageContentMod1">
+    <div className="Page">
       <Volver link={"../css/flexbox/flexDirection/flexWrap"}/>
       <div className="conWrapContent">
         <div className="conWrapContent__caja">

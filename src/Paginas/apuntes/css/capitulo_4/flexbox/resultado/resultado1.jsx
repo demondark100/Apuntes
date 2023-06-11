@@ -4,7 +4,7 @@ import Volver from "../../../../../../componentes/volver/volver";
 function Resultado1Flex() {
   return (  
     <>
-      <div className="flexPageContent">
+      <div className="Page">
         <Volver link={"../css/flexbox"}/>
           <div className="contenido_flex">
         <p className="parrafo1">

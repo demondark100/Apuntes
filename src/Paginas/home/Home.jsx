@@ -5,11 +5,17 @@ import "./Home.css"
 import Footer from '../../componentes/menus/Footer';
 import MensajeModal from "../../componentes/MensajeModal/mensajeModal";
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useRef } from 'react';
 
 function Home() {
+
+  
+
   return (
     <>
       <main className='mainHome'>
+        <MensajeModal texto={`¡Gay el que lo lea :v!`}/>
         <article>
           <section>
             <div className='title_consepto1'>

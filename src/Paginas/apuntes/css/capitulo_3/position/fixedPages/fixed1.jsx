@@ -4,7 +4,7 @@ import Volver from "../../../../../../componentes/volver/volver";
 
 function Fixed1() {
   return (  
-    <div className="body__fondo">
+    <div className="Page">
       <Volver link={"../css/position/position absolute/z-index/position-fixed"}/>
       <div className="menu__fixed1">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>

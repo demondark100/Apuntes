@@ -39,6 +39,8 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
   const [git, setGit] = useState(false);
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
+  const [pendejadas, setPendejadas] = useState(false);
+
 
   // proyectos
   const [proyectosHtml, setProyectosHtml] = useState(false);
@@ -99,6 +101,10 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
   const [cap1Python, setCap1Python] = useState(false);
   const [cap2Python, setCap2Python] = useState(false);
   const [cap3Python, setCap3Python] = useState(false);
+
+  // pendejadas
+  // capitulos
+  const [cap1Pendejadas, setCap1Pendejadas] = useState(false);
 
   return (  
     <>
@@ -629,11 +635,30 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
 
                   </div>
 
+
+
                   <div>
                     <p onClick={()=>setCap3Python(!cap3Python)}>capitulo 3</p>
                     {
                       cap3Python && <div className="temas">
                         <Link to={"../python/variable2"}>variables 2.0   (la venganza)</Link>
+                      </div>
+                    }
+                  </div>
+
+                </div>
+              }
+            </li>
+
+            <li className="curso">
+              <p onClick={()=>setPendejadas(!pendejadas)}>pendejadas</p>
+              {
+                pendejadas && <div className="capitulos">
+                  <div className="temas">
+                    <p onClick={()=>setCap1Pendejadas(!cap1Pendejadas)}>calculadora pendeja</p>
+                    {
+                      cap1Pendejadas && <div className="temas">
+                        <Link to={"../pendejadas/calculadora"}>calculadora</Link>
                       </div>
                     }
                   </div>

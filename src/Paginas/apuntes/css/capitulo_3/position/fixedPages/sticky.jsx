@@ -4,7 +4,7 @@ import Volver from "../../../../../../componentes/volver/volver";
 
 function StickyPage() {
   return (  
-      <div style={{zIndex: "8"}} className="content_sticky_page">
+      <div className="Page">
         <Volver link={"../css/position/position absolute/z-index/position-fixed/position-sticky"}/>
       <div className="pagina_sticky">
         <p>
