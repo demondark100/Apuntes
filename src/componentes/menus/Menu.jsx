@@ -1,39 +1,38 @@
-import React , {useEffect, useState} from "react";
+import React , {useEffect, useState, useRef} from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css"
+
+// estos son los iconos
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faL, faLaptopMedical } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { useRef } from "react";
-import logo from '../imgs/logo.jpg';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import "./estilosChange.css";
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
 
-
-// componentes que cambian
-import Home from "../../Paginas/home/Home";
+// esto es el logo de la aplicacion
+import logo from '../imgs/logo.jpg';
 
 
 
 // componentes
 import Capitulos from "../capitulos/aside";
+import Proyectos from "../proyectos/proyectos";
 
 
 function Menu() {
   const initialMode = localStorage.getItem('claroOscuro') === false;
 
   const menu = useRef(null); //esto es el nav
-  const header = useRef(null); //esto es el heade
-  const [menuAbierto, setMenuAbierto] = useState(false); //esto es para abrir o cerrar el menu
-  const [lightOrDark, setLightOrDark] = useState(initialMode); // esto es el estado de claro o oscuro
-  const asideMb = useRef(null); //esto es el contenedor del aside movil
-  const asidePc = useRef(null); //esto es el contenedor del aside de pc
+  const header = useRef(null); //esto es el header
+
+  // funciones
+
   // estas son las funciones de redes
   const [showRedes, setShowRedes] = useState(false); //esto es para mostrar el contenedor del aside.
-
   // esta funcion se encarga de poner y quitar las redes
   const toggleRedes = () => {
     setShowRedes(!showRedes);
@@ -41,6 +40,7 @@ function Menu() {
 
 
   // estas funciones son para que apareca y desaparezcan las opciones del menu
+  const [menuAbierto, setMenuAbierto] = useState(false); //esto es para abrir o cerrar el menu
   // este muestra el menu con sus opciones
   const mostrarMenu =()=>{
     setMenuAbierto(true);
@@ -74,6 +74,8 @@ function Menu() {
   // esta funcion es para que aparezca o desaparezcam los capitulos osea el aside
   
   const [showAside, setShowAside] = useState(false); //esto mostara el aside osea el contenedor
+  const asideMb = useRef(null); //esto es el contenedor del aside movil
+  const asidePc = useRef(null); //esto es el contenedor del aside de pc
   // esta funcion mostrar el aside o lo quitara segun sea
   const toggleAside=()=>{
     setShowAside(!showAside)
@@ -102,10 +104,15 @@ function Menu() {
     setShowAside(false)
     asidePc.current.classList.add("hideAside")
   }
+
+  // esta funcion se encargara de poner y quitar los proyectos
+  const toggleProyectos=()=>{
+    setShowAside(false)
+  }
   
 
   //estas funciones son para que la pagina cambie entre claro y oscuro
-
+  const [lightOrDark, setLightOrDark] = useState(initialMode); // esto es el estado de claro o oscuro
   const claro=()=>{
     setLightOrDark(false);
 
@@ -206,6 +213,19 @@ function Menu() {
                 <b>cursos</b>
               </div>
 
+              <p 
+                className="iconno" 
+                onClick={toggleProyectos}
+              >
+                <FontAwesomeIcon 
+                  className="iconoOptions" 
+                  icon={faFolderOpen} 
+                />
+              </p>
+              <div className="contentHover proyectos">
+                <b>proyectos</b>
+              </div>
+
             </div>
           </li>
 
@@ -256,6 +276,10 @@ function Menu() {
             sendasideMb={asideMb} 
             sendasidePc={asidePc}
           />
+        </div>
+
+        <div className="proyectosBarritaMb">
+          <Proyectos />
         </div>
 
       </nav>
@@ -327,6 +351,20 @@ function Menu() {
         <div className="contentHover cursos">
           <b>cursos</b>
         </div>
+
+        <p 
+          className="iconno" 
+          onClick={toggleProyectos}
+        >
+        <FontAwesomeIcon 
+          className="iconoOptions" 
+          icon={faFolderOpen} 
+        />
+        </p>
+        <div className="contentHover proyectos">
+          <b>proyectos</b>
+        </div>
+
       </div>
 
     </header>
