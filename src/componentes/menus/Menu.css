@@ -265,8 +265,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #111311;
-  border-right: 1px solid #383a3a;
+  background-color: #000;
+  box-shadow: 10px 0 15px #2e2c2c;
   align-items: center;
   width: 30px;
   height: 100vh;
@@ -342,8 +342,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #111311;
-    border-right: 1px solid #383a3a;
+    background-color: #000;
+    box-shadow: 2px 0 15px #2e2c2c;
     align-items: center;
     width: 30px;
     height: 100%;
@@ -389,18 +389,24 @@
 
 
 
+
+
+
 /* esto es el aside osea los capitulos */
 .capitulosContentMovil{
   position: absolute;
   top: 0;
   left: 30px;
-  background-color: #111311;
+  background-color: #000;
   width: 100%;
   height: 100%;
   z-index: 0;
   transition-duration: .5s;
   overflow: auto;
   overflow-x: hidden;
+}
+.capitulosContentMovil::-webkit-scrollbar{
+  display: none;
 }
 .capitulosContentPc{
   display: none;
@@ -421,7 +427,8 @@
     position: fixed;
     top: 0;
     left: 30px;
-    background-color: #111311;
+    background-color: #000;
+    box-shadow: 10px 0 15px #2e2c2c;
     width: 250px;
     height: 100vh;
     transition-duration: .5s;
@@ -447,8 +454,8 @@
   position: absolute;
   top: 0;
   left: -100%;
-  background-color: #111311;
-  width: 80vw;
+  background-color: #000;
+  width: 100%;
   height: 100vh;
   transition-duration: .5s;
   overflow: auto;
@@ -472,7 +479,8 @@
     position: fixed;
     top: 0;
     left: -100%;
-    background-color: #111311;
+    background-color: #000;
+    box-shadow: 10px 0 15px #2e2c2c;
     width: 80vw;
     height: 100vh;
     transition-duration: .5s;

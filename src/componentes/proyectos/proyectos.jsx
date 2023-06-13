@@ -30,18 +30,35 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
 
 
 
+  // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
+  const [activeElement, setActiveElement] = useState("");
+  const handleElementClick = (element) => {
+    setActiveElement(element);
+
+    if (element === "p1") {
+      setHtml(!html)
+    } else if (element === "p2") {
+      setCss(!css)
+    } 
+  };
+
+  // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
+  // const [activeTemas, setActiveTemas] = useState("");
+  // const hundleActiveTemas = (element) => {
+  //   setActiveTemas(element);
 
 
-
-
-
+  // };
 
   return (
     <aside>
       <nav>
         <ul>
           <li className="curso">
-              <p onClick={()=>setHtml(!html)}>html</p>
+              <p 
+                className={activeElement === "p1" ? "activeParrafo" : ""}
+                onClick={() => handleElementClick("p1")}
+              >html</p>
               {
                 html && <div className="temas">
                   <Link to={"../html/cap1Proy"}>capitulo 2 (estructura)</Link>
@@ -52,7 +69,10 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
             </li>
 
             <li className='curso'>
-              <p onClick={()=>setCss(!css)}>css</p>
+              <p 
+                className={activeElement === "p2" ? "activeParrafo" : ""}
+                onClick={() => handleElementClick("p2")}
+              >css</p>
               {
                 css && <div className='temas'>
                   <Link to={"../css/proyCap1"}>capitulo 1 (consejos css)</Link>
