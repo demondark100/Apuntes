@@ -79,6 +79,7 @@ function Menu() {
   // esta funcion mostrar el aside o lo quitara segun sea
   const toggleAside=()=>{
     setShowAside(!showAside)
+    setProyectos(false)
     asidePc.current.classList.remove("hideAside");
     asideMb.current.classList.add("hideAside");
     asidePc.current.classList.add("hideAside");
@@ -96,20 +97,35 @@ function Menu() {
   })
 
 
-
-  // esta funcion se encarga de quitar el menu cuando se da click en el icono de inicio
-  const quitMenuInicio=()=>{
-    setMenuAbierto(false)
-    menu.current.classList.remove("mostrarMenu")
-    setShowAside(false)
-    asidePc.current.classList.add("hideAside")
-  }
-
+  const [proyectos, setProyectos] = useState(false); //este estado guarda si se renderiza o no el contenedor de proyectos
+  const proyects = useRef(null); //esto es el contenedor de proyectos
+  const proyectsPc = useRef(null)
   // esta funcion se encargara de poner y quitar los proyectos
   const toggleProyectos=()=>{
+    setProyectos(!proyectos)
     setShowAside(false)
   }
+  useEffect(()=>{
+    if(proyectos){
+      setProyectos(true)
+      proyects.current.classList.add("mostrarProyectos")
+      proyectsPc.current.classList.add("mostrarProyectos")
+    } else {
+      setProyectos(false)
+      proyects.current.classList.remove("mostrarProyectos")
+      proyectsPc.current.classList.remove("mostrarProyectos")
+    }
+  })
   
+    // esta funcion se encarga de quitar el menu cuando se da click en el icono de inicio
+    const quitMenuInicio=()=>{
+      setMenuAbierto(false)
+      menu.current.classList.remove("mostrarMenu")
+      setShowAside(false)
+      asidePc.current.classList.add("hideAside")
+      setProyectos(false)
+    }
+
 
   //estas funciones son para que la pagina cambie entre claro y oscuro
   const [lightOrDark, setLightOrDark] = useState(initialMode); // esto es el estado de claro o oscuro
@@ -277,9 +293,14 @@ function Menu() {
             sendasidePc={asidePc}
           />
         </div>
-
-        <div className="proyectosBarritaMb">
-          <Proyectos />
+        
+        {/* este div contiene a los proyectos */}
+        <div ref={proyects} className="proyectosBarritaMb">
+          <Proyectos 
+            sendshowProyects={setProyectos}
+            sendMenu={setMenuAbierto}
+            menu={menu}
+          />
         </div>
 
       </nav>
@@ -303,11 +324,19 @@ function Menu() {
       {/* esto es el aside pero para pc */}
       <div ref={asidePc} className="capitulosContentPc">
         <Capitulos 
-          sendshowAside={setShowAside} 
-          sendasideMb={asideMb} 
-          sendasidePc={asidePc}
+            estadoMenu={setMenuAbierto} 
+            contentMenu={menu} 
+            sendshowAside={setShowAside} 
+            sendasideMb={asideMb} 
+            sendasidePc={asidePc}
         />
       </div>
+      {/* esto es el aside de los proyectos para pc */}
+      <div ref={proyectsPc} className="proyectosBarritaPc">
+          <Proyectos
+            sendshowProyects={setProyectos}
+          />
+        </div>
 
       {/* esto es el icono de claro y osuro */}
       {

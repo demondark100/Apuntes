@@ -49,6 +49,7 @@
   height: 100vh;
   transition-duration: .5s;
   overflow: auto;
+  overflow-x: hidden;
 
 }
 .contenedorLinksMenu::-webkit-scrollbar{
@@ -394,11 +395,15 @@
   top: 0;
   left: 30px;
   background-color: #111311;
-  width: 90%;
+  width: 100%;
   height: 100%;
   z-index: 0;
   transition-duration: .5s;
   overflow: auto;
+  overflow-x: hidden;
+}
+.capitulosContentPc{
+  display: none;
 }
 
 .hideAside{
@@ -412,6 +417,7 @@
     display: none;
   }
   .capitulosContentPc{
+    display: block;
     position: fixed;
     top: 0;
     left: 30px;
@@ -434,12 +440,48 @@
 
 
 
+
+
 /* los estilos de aqui son de los proyectos de la barrita */
 .proyectosBarritaMb{
   position: absolute;
   top: 0;
-  left: 0;
-  background-color: #0f1;
-  width: 100%;
+  left: -100%;
+  background-color: #111311;
+  width: 80vw;
   height: 100vh;
+  transition-duration: .5s;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.mostrarProyectos{
+  left: 30px;
+  transition-duration: .5s;
+}
+.proyectosBarritaPc{
+  display: none;
+}
+
+/* esto es la version pero para pc */
+@media (min-width:750px){
+  .proyectosBarritaMb{
+    display: none;
+  }
+  .proyectosBarritaPc{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #111311;
+    width: 80vw;
+    height: 100vh;
+    transition-duration: .5s;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  .mostrarProyectos{
+    left: 30px;
+    width: 250px;
+    transition-duration: .5s;
+  }
 }

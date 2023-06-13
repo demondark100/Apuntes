@@ -31,7 +31,6 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
 
   
   // capitulos
-  const [proyectos, setProyectos] = useState(false);
   const [logica, setLogica] = useState(false);
   const [html, setHtml] = useState(false);
   const [css, setCss] = useState(false);
@@ -42,9 +41,7 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
   const [pendejadas, setPendejadas] = useState(false);
 
 
-  // proyectos
-  const [proyectosHtml, setProyectosHtml] = useState(false);
-  const [proyectosCss, setProyectosCss] = useState(false);
+
 
   // logica
   // capitulos
@@ -111,36 +108,7 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
       <aside>
         <nav>
           <ul>
-            <li className="curso">
-              <p onClick={()=>setProyectos(!proyectos)}>proyectos</p>
-              {
-                proyectos && <div className="capitulos">
-                  <div>
-                    <p onClick={()=>setProyectosHtml(!proyectosHtml)}>html</p>
-                    {
-                      proyectosHtml && <div className="temas">
-                        <Link to={"../html/cap1Proy"}>capitulo 2</Link>
-                        <Link to={"../html/cap3Proy"}>capitulo 3</Link>
-                        <Link to={"../html/cap4Proy"}>capitulo 4</Link>
-                      </div>
-                    }
-                  </div>
-
-                  <div>
-                    <p onClick={()=>setProyectosCss(!proyectosCss)}>css</p>
-                    {
-                      proyectosCss && <div className="temas">
-                        <Link to={"../css/proyCap1"}>capitulo 1</Link>
-                        <Link to={"../css/proyCap2"}>capitulo 2</Link>
-                        <Link to={"../css/proyCap3"}>capitulo 3</Link>
-                      </div>
-                    }
-                  </div>
-
-                </div>
-              }
-            </li>
-
+            
             <li className="curso">
               <p onClick={()=>setLogica(!logica)}>logica</p>
               {

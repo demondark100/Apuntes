@@ -30,8 +30,10 @@
 }
 .contenedorCssProyectoCap2_1{
   background-color: #00f;
-  color: #fff !important;
   border: 2px solid #8888ff;
+}
+.contenedorCssProyectoCap2_1 p{
+  color: #fff !important;
 }
 .contenedorCssProyectoCap2_1 h2{
   color: #000;
@@ -43,8 +45,10 @@
 }
 .contenedorCssProyectoCap2_4{
   background-color: #000;
-  color: #fff !important;
   border: 2px solid #5f5d5d;
+}
+.contenedorCssProyectoCap2_4 p{
+  color: #fff !important;
 }
 .contenedorCssProyectoCap2_4 h2{
   color: #000;
