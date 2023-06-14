@@ -1,14 +1,76 @@
+import { useState } from "react";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Volver from "../../../../../componentes/volver/volver";
 import "./cap4.css";
 
+
+
 function Cap4ProyCss() {
+
+  const [mostrarMensje, setmostrarMensje] = useState(false);
+  const mandar=()=>{
+    setmostrarMensje(true)
+    document.querySelectorAll(".contenedorFormularioCssProyCap4__form__input").forEach((i)=>{i.value = ""})
+  }
+
   return (  
     <>
-      <MensajeModal texto={`Aun no se que hacer`}/>
+      <MensajeModal texto={`¡proyecto! capitulo 4:
+
+Hacer un login.
+
+Recuerda que aprendimos:
+
+1. Object fit.
+2. cursor.
+3. colorizacion.
+4. responsive(basico).
+5. flexbox.
+6. order.`}/>
       <Volver link={"../"}/>
       <div className="Page">
+        <div className="mainCap4ProyCss">
+          
+          <div className="contenedorFormularioCssProyCap4">
+            <h2 className="contenedorFormularioCssProyCap4__h1">log in</h2>
 
+            <form className="contenedorFormularioCssProyCap4__form">
+
+              <label htmlFor="nombreProyCssCap4">nombres</label>
+              <input 
+                autoComplete="false"
+                type="text" 
+                id="nombreProyCssCap4" 
+                className="contenedorFormularioCssProyCap4__form__input"
+                placeholder="nombres"
+              />
+
+              <label htmlFor="emailProyCssCap4">correo electorinico</label>
+              <input 
+                autoComplete="false"
+                type="email" 
+                placeholder="emlail"
+                className="contenedorFormularioCssProyCap4__form__input"
+                id="emailProyCssCap4"
+              />
+
+              <label htmlFor="passwordProyCssCap4">contraseña</label>
+              <input 
+                autoComplete="false"
+                type="password" 
+                placeholder="contraseña"
+                className="contenedorFormularioCssProyCap4__form__input"
+                id="passwordProyCssCap4"
+              />
+            </form>
+            <button className="contenedorFormularioCssProyCap4__button" onClick={mandar}>enviar</button>
+            {
+              mostrarMensje && <MensajeModal texto={`wahahaha te acabo de hackear :v`}/>
+            }
+          </div>
+
+
+        </div>
       </div>
     </>
   );

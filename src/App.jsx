@@ -277,6 +277,7 @@ import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
 
 // componente menu
 import Menu from './componentes/menus/Menu';
+import Cap5ProyCss from './Paginas/apuntes/proyectos/css/capitulo_5/cap5';
 
 
 function App() {
@@ -297,6 +298,7 @@ function App() {
             <Route path='css/proyCap2' element={<Cap2ProyectoCss />} />
             <Route path='css/proyCap3' element={<ProyCssCap3 />} />
             <Route path='css/proyCap4' element={<Cap4ProyCss />} />
+            <Route path='css/proyCap5' element={<Cap5ProyCss />} />
 
             
             

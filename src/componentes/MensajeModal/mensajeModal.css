@@ -67,10 +67,10 @@
 
 @media (min-width: 750px){
   .contenedoMensaje{
-    width: 55%;
-    height: 55%;
+    width: 30%;
+    height: 85%;
     font-size: 1.2em;
-    max-height: 200px;
-    max-width: 1200px;
+    max-height: 800px;
+    max-width: 800px;
   }
 }
