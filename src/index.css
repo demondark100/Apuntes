@@ -97,7 +97,6 @@ a:hover{
 
 /* este es el estilo de las paginas de proyectos */
 .Page{
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 4;
@@ -106,24 +105,29 @@ a:hover{
   padding: 0;
   margin: 0;
   height: 100vh;
-  position: fixed;
+  
   overflow: auto;
 }
 
 .Page h1{
   text-align: start;
+  margin-top: 0;
+  color: #000 !important;
 }
 .Page h2{
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 0;
+  color: #000 !important;
 }
 .Page h3{
   margin-top: 0;
   font-size: 1em;
+  color: #000 !important;
 }
 .Page a{
   text-decoration: underline;
+  color: #00f;
 }
 .Page p{
   color: #000;

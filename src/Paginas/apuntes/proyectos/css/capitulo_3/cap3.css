@@ -1,0 +1,33 @@
+.titlecap3ProyCss{
+  background-color: rgb(176, 219, 176);
+  text-align: center !important;
+  position: fixed;
+  width: 100%;
+}
+.contenedorFloatProyCSS1{
+  margin-top: 55px !important;
+}
+.contenedorFloatProyCSS{
+  display: block;
+  width: 55%;
+  margin: auto;
+  width: 80%;
+  border: 2px solid #0f0;
+  max-width: 1800px;
+  margin-bottom: 15px;
+}
+.contenedorFloatProyCSS h2{
+  text-align: center;
+}
+.contenedorFloatProyCSS__img{
+  display: flex;
+  justify-content: center;
+}
+.contenedorFloatProyCSS__img img{
+  padding: 15px;
+  width: 150px;
+  display: block;
+}
+.contenedorFloatProyCSS__parrafo{
+  padding: 15px;
+}

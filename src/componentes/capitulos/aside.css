@@ -8,7 +8,7 @@ aside{
 }
 .curso p{
   cursor: pointer;
-  padding: 15px;
+  padding: 8px;
 }
 
 .capitulos{
@@ -28,7 +28,7 @@ aside{
 .temas a{
   text-decoration: none;
   color: #fff;
-  padding: 15px;
+  padding: 8px;
   padding-left: 50px;
   margin-left: -20px;
 }
@@ -48,7 +48,7 @@ aside{
 
 /* estos son los active de los parrafos temas */
 .activeParrafoTemas{
-  background-color: #292424;
+  background-color: #0f0f0f;
   margin-left: -15px !important;
   padding-left: 30px !important;
 }
@@ -56,5 +56,5 @@ aside{
 /* estos estilos son del cuando se activan o desactivan los enlaces */
 
 .active{
-  background-color: #5b5050 !important;
+  background-color: #2e2828 !important;
 }

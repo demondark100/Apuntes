@@ -14,6 +14,7 @@
   box-shadow: 0 8px 13px 8px #e0e0e0;
 }
 .contenedorCssProyectoCap2{
+  display: block;
   background-color: #ff5506;
   width: 35%;
   color: #000000 !important;

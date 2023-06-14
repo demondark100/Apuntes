@@ -484,7 +484,7 @@
     width: 80vw;
     height: 100vh;
     transition-duration: .5s;
-    overflow: auto;
+    overflow: hidden;
     overflow-x: hidden;
   }
   .mostrarProyectos{

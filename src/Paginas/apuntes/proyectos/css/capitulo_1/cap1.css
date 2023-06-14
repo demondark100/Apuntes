@@ -1,13 +1,17 @@
 .titleCap1CssProyecto{
   background-color: #3147e9;
   width: 75%;
-  color: #11fff7;
+  color: #11fff7 !important;
 }
 .consejosProyecto1Css__title{
-  color: #11fff7;
+  color: #11fff7 !important;
 }
 .consejosProyecto1Css{
   background-color: rgb(0, 0, 0);
   width: 50%;
-  color: #fff;
+  color: #fff !important;
+}
+.consejosProyecto1Css p{
+  color: #fff !important;
+
 }
