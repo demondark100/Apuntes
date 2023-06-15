@@ -27,6 +27,9 @@ Recuerda que aprendimos:
 4. responsive(basico).
 5. flexbox.
 6. order.`}/>
+      {
+        mostrarMensje && <MensajeModal texto={`wahahaha te acabo de hackear :v`}/>
+      }
       <Volver link={"../"}/>
       <div className="Page">
         <div className="mainCap4ProyCss">
@@ -63,10 +66,8 @@ Recuerda que aprendimos:
                 id="passwordProyCssCap4"
               />
             </form>
-            <button className="contenedorFormularioCssProyCap4__button" onClick={mandar}>enviar</button>
-            {
-              mostrarMensje && <MensajeModal texto={`wahahaha te acabo de hackear :v`}/>
-            }
+            <button className="contenedorFormularioCssProyCap4__button" onClick={mandar}>iniciar secion</button>
+
           </div>
 
 

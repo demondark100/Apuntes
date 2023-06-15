@@ -104,7 +104,9 @@ a:hover{
   background-color: #fff;
   padding: 0;
   margin: 0;
-  height: 100vh;
+  height: 100%;
+  overflow: auto;
+  position: sticky;
   
   overflow: auto;
 }
