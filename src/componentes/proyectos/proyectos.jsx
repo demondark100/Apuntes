@@ -80,6 +80,7 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
                   <Link to={"../css/proyCap3"}>capitulo 3 (juegos clasicos)</Link>
                   <Link to={"../css/proyCap4"}>capitulo 4 (login)</Link>
                   <Link to={"../css/proyCap5"}>capitulo 5 (buscador de lenguajes)</Link>
+                  <Link to={"../css/proyCap6"}>capitulo 6 (menu animado)</Link>
 
                 </div>
               }

@@ -14,10 +14,13 @@
 }
 
 .contenedorCap5CssProyContentBuscador{
+  position: absolute;
   background-color: #fff;
+  top: 5%;
   margin-bottom: 35px;
   border-radius: 150px;
   overflow: hidden;
+  width: 75%;
   height: 6%;
   max-height: 25px;
   display: flex;
@@ -38,6 +41,11 @@
   margin-left: 0;
   margin-right: 0;
   cursor: pointer;
+  position: absolute;
+  left: 75%;
+  padding: 0;
+  width: 25%;
+
 }
 
 .contenedorCap5CssProy{
@@ -107,6 +115,11 @@
     width: 45%;
     height: 55%;
     gap: 15px;
+  }
+  .contenedorCap5CssProyContentBuscador{
+    width: 25%;
+    top: 5%;
+    max-width: 500px;
   }
   .contenedorCap5CssProy div img{
     animation-name: animarImage;
