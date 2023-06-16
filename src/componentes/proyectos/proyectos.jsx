@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
 
 function Proyectos({sendshowProyects,sendMenu,menu}) {
   
+  // temas principales
   const [html, setHtml] = useState(false);
   const [css, setCss] = useState(false);
+  const [javaScript, setJavaScript] = useState(false);
+
+
+  const [cap1Js, setCap1Js] = useState(false);
+
 
   useEffect(()=>{
     const links = document.querySelectorAll(".temas a")
@@ -39,16 +45,20 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
       setHtml(!html)
     } else if (element === "p2") {
       setCss(!css)
-    } 
+    } else if (element === "p3") {
+      setJavaScript(!javaScript)
+    }
   };
 
   // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
-  // const [activeTemas, setActiveTemas] = useState("");
-  // const hundleActiveTemas = (element) => {
-  //   setActiveTemas(element);
+  const [activeTemas, setActiveTemas] = useState("");
+  const hundleActiveTemas = (element) => {
+    setActiveTemas(element);
+    if(element === "p1"){
+      setCap1Js(!cap1Js)
+    }
 
-
-  // };
+  };
 
   return (
     <aside>
@@ -86,6 +96,36 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
               }
             </li>
 
+            <li className='curso'>
+              <p 
+                className={activeElement === "p3" ? "activeParrafo" : ""}
+                onClick={() => handleElementClick("p3")}
+              >
+                javaScript
+              </p>
+              {
+                javaScript && <div className='capitulos'>
+                  
+                  <div>
+                    <p
+                      className={activeTemas === "p1" ? "activeParrafoTemas" : ""}
+                      onClick={()=>hundleActiveTemas("p1")}
+                    >
+                      capitulo 1
+                    </p>
+                    {
+                      cap1Js && <div className='temas'>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScipt/cap1ProyV1"}>nombre</NavLink>
+                      </div>
+                    }
+                  </div>
+
+                </div>
+              }
+            </li>
+
+
+            
         </ul>
       </nav>
     </aside>
