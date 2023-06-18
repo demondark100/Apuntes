@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,8 +11,9 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
   const [css, setCss] = useState(false);
   const [javaScript, setJavaScript] = useState(false);
 
-
+  // javaScript capitulos
   const [cap1Js, setCap1Js] = useState(false);
+  const [cap3Js, setCap3Js] = useState(false);
 
 
   useEffect(()=>{
@@ -56,6 +57,8 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
     setActiveTemas(element);
     if(element === "p1"){
       setCap1Js(!cap1Js)
+    } else if (element === "p2"){
+      setCap3Js(!cap3Js)
     }
 
   };
@@ -111,13 +114,30 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
                       className={activeTemas === "p1" ? "activeParrafoTemas" : ""}
                       onClick={()=>hundleActiveTemas("p1")}
                     >
-                      capitulo 1
+                      capitulo 2
                     </p>
                     {
                       cap1Js && <div className='temas'>
-                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScipt/cap1ProyV1"}>nombre</NavLink>
+                        <Link to={"../javaScipt/cap1ProyV1"}>nombre</Link>
+                        <Link to={"../javaScipt/cap1ProyV2"}>operaciones</Link>
                       </div>
                     }
+                  </div>
+
+                  <div>
+                    
+                    <p
+                      className={activeTemas === "p2" ? "activeParrafoTemas" : ""}
+                      onClick={()=>hundleActiveTemas("p2")}
+                    >
+                      capitulo 3
+                    </p>
+                    {
+                      cap3Js && <div className='temas'>
+                        <Link>asd</Link>
+                      </div>
+                    }
+                  
                   </div>
 
                 </div>

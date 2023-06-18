@@ -1,0 +1,118 @@
+.contenedorCap1JsV2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  background-image: url("https://th.bing.com/th/id/OIP.LcxhNiowmkdOHwTxD30JDwHaEK?w=313&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  background-size: cover;
+  background-position: center;
+}
+
+.contenedorCap1JsV2__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0000009d;
+  width: 85%;
+  height: 55%;
+  overflow: auto;
+  padding: 15px 0 15px 0;
+}
+.contenedorCap1JsV2__content::-webkit-scrollbar{
+  display: none;
+}
+
+.contenedorCap1JsV2__boton{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100% !important;
+}
+.contenedorCap1JsV2__boton button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff !important;
+  background-color: #292424;
+  transition-duration: 1s;
+}
+.contenedorCap1JsV2__boton button:hover{
+  transform: rotateY(40deg);
+  border: 1px solid #000;
+  background-color: #4e4545;
+}
+
+
+
+/* estos son los inputs */
+
+
+.contenedorCap1JsV2__inputs--input1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 810px !important;
+  width: 85% !important;
+  background-color: #000000a6;
+}
+
+.contenedorCap1JsV2__inputs--input1 p{
+  position: relative;
+  margin-top: 15px;
+  left: -7px;
+  width: 65px;
+  overflow: auto;
+  direction: rtl;
+  color: #fff !important;
+}
+.contenedorCap1JsV2__inputs--input1 p::-webkit-scrollbar{
+  display: none;
+}
+.contenedorCap1JsV2__input{
+  border: none;
+  outline: none;
+  height: 15px;
+  width: 85px;
+  direction: rtl;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff !important;
+}
+.contenedorCap1JsV2__input2{
+  margin-left: -35px !important;
+}
+
+
+.contenedorCap1JsV2__inputs--input1--in{
+  display: flex;
+  align-items: center;
+}
+
+.contenedorCap1JsV2__inputs--input1--in button{
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: #fff !important;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+
+@media(min-width: 750px){
+  .contenedorCap1JsV2__content{
+    width: 25%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  .contenedorCap1JsV2__boton{
+    width: 35%;
+  }
+  .contenedorCap1JsV2__inputs--input1{
+    
+    width: 35%;
+  }
+}

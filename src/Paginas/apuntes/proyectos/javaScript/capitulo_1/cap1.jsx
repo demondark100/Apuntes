@@ -19,6 +19,8 @@ function Cap1ProyJsV1() {
       <Volver link={"../"}/>
       <MensajeModal texto={`¡Proyecto! capitulo 1:
 
+Pedir al usuario su nombre y concatenarlo para dar un aviso.
+
 Recuerda que aprendimos:
 
 1. Variables.
