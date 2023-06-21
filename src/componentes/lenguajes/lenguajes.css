@@ -15,7 +15,7 @@ code {
   background-color: transparent !important;
 }
 .titleLengauje{
-  margin: 0;
+  margin: 0 !important;
   margin-bottom: 0 !important;
   font-size: 1em;
   padding: 0;
@@ -63,14 +63,19 @@ code {
 
 .copiarCodigo{
   position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   font-size: 1em;
   color: #3c7f6c;
+  gap: 15px;
   text-shadow: 0 0 3vh #3c7f6c;
   transition-duration: .5s;
   text-align: center;
   background-color: transparent;
   border: none;
+  cursor: pointer !important;
 }
 .copiarCodigo:hover{
   color: #9efaff;

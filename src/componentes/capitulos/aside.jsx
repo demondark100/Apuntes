@@ -515,7 +515,6 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/arreglosAsociativos"}>arreglos asociativos</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/bucles"}>bucles</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/funciones"}>funciones</NavLink>
-                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/PODJavaScript"}>programacion orientado a    objetos(POD)</NavLink>
                       </div>
                     }
                   </div>
@@ -527,6 +526,7 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
                     >capitulo 4</p>
                     {
                       cap4JavaScript && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/PODJavaScript"}>programacion orientado a    objetos(POD)</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/metodosCadena"}>Metodos de cadena</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/metodosArreglo"}>Metodos de arreglos</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/objectMath"}>object Math</NavLink>

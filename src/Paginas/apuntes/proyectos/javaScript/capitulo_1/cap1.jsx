@@ -1,6 +1,8 @@
 import { useRef , useState } from "react";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Volver from "../../../../../componentes/volver/volver";
+import CodigoFuenteSinInt from "../../../../../componentes/codigoFuente/code";
+import JavaScropt from "../../../../../componentes/lenguajes/JavaScript"
 import "./cap1.css";
 
 
@@ -16,6 +18,8 @@ function Cap1ProyJsV1() {
 
   return (  
     <>
+      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`let nombre = prompt("escribe tu nombre");
+console.log(\`¡Hola! ${"${nombre}"} desde ahora se aplicaran conseptos de programacion en todos los proyectos de javaScript.\`)`}/>}/>
       <Volver link={"../"}/>
       <MensajeModal texto={`¡Proyecto! capitulo 1:
 

@@ -1,0 +1,150 @@
+.cap3-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #222;
+  color: #fff !important;
+  overflow: auto;
+}
+
+.cap3-modal {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cap3-modal h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cap3-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cap3-form label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.cap3-form input[type="number"] {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cap3-alumno {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cap3-alumno input[type="text"] {
+  width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.cap3-alumno select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.cap3-resultados {
+  display: flex;
+  justify-content: center;
+}
+
+.cap3-resultados > div {
+  margin-right: 20px;
+}
+
+.cap3-resultados h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cap3-resultados ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cap3-resultados li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Estilos futuristas */
+
+.cap3-container {
+  font-family: 'Arial', sans-serif;
+}
+
+.cap3-modal {
+  animation: slideInDown 0.5s ease-in;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cap3-form {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cap3-alumno {
+  animation: fadeIn 1s ease-in;
+}
+
+.cap3-resultados {
+  animation: slideInUp 0.5s ease-in;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cap3-resultados > div {
+  animation: fadeIn 1s ease-in;
+}
+
+
+
+.cap3-container__h3{
+  color: #fff !important;
+  margin-bottom: 15px !important;
+}
+.cap3-faltan__h4{
+  color: #f00 !important;
+}
+.cap3-presentes__h4{
+  color: #0f0 !important;
+}

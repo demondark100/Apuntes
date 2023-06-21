@@ -274,6 +274,7 @@ import Cap6ProyCss from './Paginas/apuntes/proyectos/css/capitulo_6/cap6';
 // javaScript
 import Cap1ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_1/cap1';
 import Cap1Vs2PryJs from './Paginas/apuntes/proyectos/javaScript/capitulo_1/cap2';
+import Cap3ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/asistencia/ca3';
 
 
 // pendejadas
@@ -309,6 +310,7 @@ function App() {
           {/* javaScript */}
             <Route path='javaScipt/cap1ProyV1' element={<Cap1ProyJsV1 />} />
             <Route path='javaScipt/cap1ProyV2' element={<Cap1Vs2PryJs />} />
+            <Route path='javaScript/cap3ProyV1' element={<Cap3ProyJsV1 />} />
 
             
             

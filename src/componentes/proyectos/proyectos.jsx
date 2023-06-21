@@ -134,7 +134,7 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
                     </p>
                     {
                       cap3Js && <div className='temas'>
-                        <Link>asd</Link>
+                        <Link to={"../javaScript/cap3ProyV1"}>asistencia de alumnos</Link>
                       </div>
                     }
                   
