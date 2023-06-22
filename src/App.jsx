@@ -283,6 +283,7 @@ import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
 
 // componente menu
 import Menu from './componentes/menus/Menu';
+import Cap3ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/fiesta/fiesta';
 
 
 
@@ -311,6 +312,7 @@ function App() {
             <Route path='javaScipt/cap1ProyV1' element={<Cap1ProyJsV1 />} />
             <Route path='javaScipt/cap1ProyV2' element={<Cap1Vs2PryJs />} />
             <Route path='javaScript/cap3ProyV1' element={<Cap3ProyJsV1 />} />
+            <Route path='javaScript/cap3ProyV2' element={<Cap3ProyJsV2 />} />
 
             
             

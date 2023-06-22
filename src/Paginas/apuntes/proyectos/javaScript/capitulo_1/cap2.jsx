@@ -2,6 +2,8 @@ import { useEffect, useRef,useState } from "react";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Volver from "../../../../../componentes/volver/volver";
 import "./cap2.css";
+import CodigoFuernteSinInt from "../../../../../componentes/codigoFuente/code";
+import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 
 
 function Cap1Vs2PryJs() {
@@ -95,6 +97,30 @@ function Cap1Vs2PryJs() {
 
   return (
     <>
+      <CodigoFuernteSinInt codigo={<JavaScropt codigo={`// suma
+let numeroSuma1 = parseInt(prompt("dime el primer numero para sumar"));
+let numeroSuma2 = parseInt(prompt("dime el segundo numero para sumar"));
+console.log(\`el resultado de la suma es: ${"${numeroSuma1 + numeroSuma2}"}\`);
+
+// resta
+let numeroResta1 = parseInt(prompt("dime el primer numero para restar"));
+let numeroResta2 = parseInt(prompt("dime el segundo numero para restar"));
+console.log(\`el resultado de la resta es: ${"${numeroResta1 - numeroResta2}"}\`);
+
+// dividir
+let numeroDividir1 = parseInt(prompt("dime el primer numero para dividir"));
+let numeroDividir2 = parseInt(prompt("dime el segundo numero para dividir"));
+console.log(\`el resultado de la divicion es: ${"${numeroDividir1 / numeroDividir2}"}\`);
+
+// multiplicar
+let numeroMultiplicar1 = parseInt(prompt("dime el primer numero para multiplicar"));
+let numeroMultiplicar2 = parseInt(prompt("dime el segundo numero para multiplicar"));
+console.log(\`el resultado de la multiplicacion es: ${"${numeroMultiplicar1 * numeroMultiplicar2}"}\`);
+
+// resto
+let numeroResto1 = parseInt(prompt("dime el primer numero para sacar el resto"));
+let numeroResto2 = parseInt(prompt("dime el segundo numero para sacar el resto"));
+console.log(\`el resultado del resto es: ${"${numeroResto1 % numeroResto2}"}\`);`}/>}/>
       <MensajeModal texto={`¡Proyecto! capitulo 1:
 
 Hacer un programa que sume , reste , multiplique , divida , saque el resto.`}/>
@@ -167,8 +193,6 @@ Hacer un programa que sume , reste , multiplique , divida , saque el resto.`}/>
                 <p>{resultadoResto}</p>
               </div> 
             }
-
-
           </div>
 
         </div>
