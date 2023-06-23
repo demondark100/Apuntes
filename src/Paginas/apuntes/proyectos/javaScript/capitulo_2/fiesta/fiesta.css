@@ -1,13 +1,13 @@
 .contenedorTitleProyCap3V2__presentacion{
   display: flex;
-  height: 50vh;
+  height: 85vh;
   min-height: 300px;
   align-items: center;
   justify-content: end;
 }
 .contenedorTitleProyCap3V2__presentacion img{
   position: absolute;
-  height: 50vh;
+  height: 85vh;
   min-height: 300px;
   filter: brightness(.5);
 }
@@ -20,7 +20,7 @@
   width: 85%;
   top: 0;
   z-index: 5;
-  height: 50vh;
+  height: 85vh;
   min-height: 300px;
   align-self: flex-start;
   justify-self: flex-start !important;
@@ -36,8 +36,98 @@
   color: #fff !important;
   width: 65%;
 }
-@media (min-width:950px){
-  .contenedorTitleProyCap3V2__presentacion__texto p{
-    font-size: 2em;
-  }  
+
+
+
+.contenedorTitleProyCap3V2__input{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  min-height: 350px;
+  font-size: 1.5em;
+}
+.contenedorTitleProyCap3V2__input button{
+  background-color: #2508a7;
+  margin-top: 28px;
+  color: #fff !important;
+  cursor: pointer;
+}
+.contenedorTitleProyCap3V2__input button:hover{
+  background-color: #200d74;
+
+}
+.contenedorTitleProyCap3V2__input p{
+  margin-top: 25px;
+  padding: 18px;
+  text-align: center;
+}
+.parrafoNoPasasJsCap3{
+  background-color: #f00;
+  color: #fff !important;
+}
+.parrafoSiPasasJsCap3{
+  background-color: #0f0;
+  color: #000 !important;
+}
+
+
+
+.contenedorTitleProyCap3V2__comprarContent{
+  width: 100vw;
+  height: 90vh;
+  min-height: 350px;
+  background-color: #e2fae2;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorTitleProyCap3V2__comprarContenido{
+  background-color: #fff;
+  width: 85%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 450px !important;
+  padding: 8px;
+}
+.contenedorTitleProyCap3V2__comprarContenido h4{
+  font-size: 3em;
+  color: #000 !important;
+}
+.contenedorTitleProyCap3V2__comprarContenido p{
+  font-size: 2em;
+  width: 85%;
+  text-align: center;
+  margin-top: 25px;
+  color:  #000 !important;
+}
+.contenedorTitleProyCap3V2__comprarContenido button{
+  margin-top: 38px;
+  color: #000 !important;
+  cursor: pointer;
+  font-size: 2em;
+}
+.contenedorTitleProyCap3V2__comprarContenido button:hover{
+  background-color: #0f0;
+}
+.contenedorTitleProyCap3V2__comprarContenido__parr{
+  background-color: #0f0;
+  color: #000 !important;
+  font-size: 1em !important;
+  padding: 15px;
+
+}
+
+@media (min-width: 750px){
+  .contenedorTitleProyCap3V2__comprarContenido{
+    width: 25%;
+    height: 65%;
+  }
 }
