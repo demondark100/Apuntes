@@ -14,8 +14,8 @@
 .contenedorTitleProyCap3V2__presentacion__texto{
   position: absolute;
   left: 0;
-  background: linear-gradient(90deg,#2d0699,#2d0699,#2d0699,transparent);
-  color: #fff !important;
+  background: linear-gradient(90deg,#c2f0f3,#c2f0f3,transparent);
+  color: #000 !important;
   padding: 0 15px 0 15px;
   width: 85%;
   top: 0;
@@ -33,7 +33,7 @@
   font-size: 4em;
 }
 .contenedorTitleProyCap3V2__presentacion__texto p{
-  color: #fff !important;
+  color: #000 !important;
   width: 65%;
 }
 
@@ -48,6 +48,9 @@
   height: 85vh;
   min-height: 350px;
   font-size: 1.5em;
+}
+.contenedorTitleProyCap3V2__input input{
+  width: 85%;
 }
 .contenedorTitleProyCap3V2__input button{
   background-color: #2508a7;
@@ -89,20 +92,22 @@
 .contenedorTitleProyCap3V2__comprarContenido{
   background-color: #fff;
   width: 85%;
-  height: 55%;
+  height: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 450px !important;
+  max-width: 500px;
+  max-height: 600px;
   padding: 8px;
 }
 .contenedorTitleProyCap3V2__comprarContenido h4{
-  font-size: 3em;
+  font-size: 2.5em;
   color: #000 !important;
 }
 .contenedorTitleProyCap3V2__comprarContenido p{
-  font-size: 2em;
+  font-size: 1.5em;
   width: 85%;
   text-align: center;
   margin-top: 25px;
@@ -112,7 +117,7 @@
   margin-top: 38px;
   color: #000 !important;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.2em;
 }
 .contenedorTitleProyCap3V2__comprarContenido button:hover{
   background-color: #0f0;
@@ -130,4 +135,36 @@
     width: 25%;
     height: 65%;
   }
+  .contenedorTitleProyCap3V2__input input{
+    width: 25%;
+    max-width: 350px;
+    margin-top: 15px;
+  }
+}
+
+
+
+.contenedorRelojProyCap3Js{
+  position: absolute;
+  padding: 10px;
+  min-width: 55px;
+  text-align: center;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+.contenedorRelojProyCap3Js span{
+  background-color: #504646;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff !important;
+}
+.contenedorRelojProyCap3Js p{
+  background-color: #f00;
+  color: #fff !important;
+  padding: 10px;
 }

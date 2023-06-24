@@ -17,6 +17,10 @@ body{
   display: flex;
   flex-direction: column;
 }
+.bodyDark{
+  background-color: #000;
+  color: #fff !important;
+}
 
 
 /* estos estilos son de main */
@@ -146,6 +150,84 @@ a:hover{
     width: 95%;
     max-width: 1200px;
   }
+}
 
 
+
+/* esto es el boton de dia y noche */
+
+.contentSwitch{
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch{
+  background-color: #3c487e;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  transition-duration: .5s;
+  width: 65px;
+  height: 30px;
+  pointer-events: stroke;
+}
+.activeSwitch{
+  background-color: rgb(55, 149, 255);
+  transition-duration: .5s;
+}
+.activeSwitch span{
+  color: #e9fdc3 !important;
+}
+.switch::after{
+  content: "";
+  display: block;
+  width: 38px;
+  height: 33px;
+  position: absolute;
+  background-color: #fff;
+  top: 15px;
+  margin-left: -45px;
+  right: unset;
+  border-radius: 100px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+  transition-duration: .5s !important;
+}
+.activeSwitch::after{
+  left: unset;
+  margin-left: 45px;
+  transition-duration: .5s !important;
+}
+.switch span{
+  height: 30px;
+  color: #fff;
+  line-height: 30px;
+  display: block;
+  background-color: none !important;
+  color: rgb(197, 238, 16);
+}
+
+@media(min-width: 750px){
+  .contentSwitch{
+    justify-content: end;
+  }
+  .switch{
+    margin-right: 85px;
+    height: 30px !important;
+  }
+  .switch::after{
+    content: "";
+    width: 38px;
+    height: 34px;
+  }
 }

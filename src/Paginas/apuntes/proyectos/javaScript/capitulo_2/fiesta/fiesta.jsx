@@ -2,7 +2,7 @@ import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModa
 import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
 import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
 import Volver from "../../../../../../componentes/volver/volver";
-import React, { useState , useRef } from 'react';
+import React, { useState , useRef, useEffect } from 'react';
 import './fiesta.css';
 
 
@@ -16,6 +16,8 @@ function Cap3ProyJsV2() {
   const [pagar, setPagar] = useState(false); // esto es para mostrar el componente para pagar.
   const [showComp, setShowComp] = useState(false);
 
+  const [quitConEdad, setQuitConEdad] = useState(true); // este estado renderiza la verificacion de edad del usuario.
+
   const validadEntrada=()=>{
     setShowEntra(true)
     if (inputEdad.current.value < 18) {
@@ -24,7 +26,11 @@ function Cap3ProyJsV2() {
     } else {
       setMensajeEntra("puedes pasar pero debes pagar")
       setPagar(true);
+      setTimeout(() => {
+        setQuitConEdad(false)
+      }, 4000);
     }
+
   }
 
   const [botonQuit, setBotonQuit] = useState(true);
@@ -37,7 +43,17 @@ function Cap3ProyJsV2() {
     }, 8000);
   }
 
+  const [hora, setHora] = useState(new Date().toLocaleTimeString());
+  useEffect(()=>{
+    setTimeout(() => {
+      setHora(new Date().toLocaleTimeString())
+    }, 1000);
+  })
 
+  const [personas, setPersonas] = useState(false);
+  const mostrarMenPerson =()=>{
+    setPersonas(!personas)
+  }
 
   return (  
     <>
@@ -68,20 +84,30 @@ Hacer un programa que simule la entrada a solo mayores de edad a una fiesta , si
         <div className="contenedorTitleProyCap3V2__presentacion">
           <div className="contenedorTitleProyCap3V2__presentacion__texto">
             <h5>¡Fiesta!</h5>
-            <p>bienvenido o bienvenida a esta gran fiesta de Juanito Alcahofa esta fiesta es exclusiva para mayores de edad y puedes entrar pagando , esto porque recibiras comida , premios , sorteos millonarios de bingo y mucho mas.</p>
+            <p>bienvenido o bienvenida a esta gran fiesta de Juanito Alcachofa esta fiesta es exclusiva para mayores de edad y puedes entrar pagando , esto porque recibiras comida , premios , sorteos millonarios de bingo y mucho mas.</p>
           </div>
-          <img src="https://www.bing.com/th/id/OGC.4d397104ff6aaefa16c3d7c88ec3d73f?pid=1.7&rurl=http%3a%2f%2fwww.fmdos.cl%2fwp-content%2fuploads%2f2016%2f07%2ffiesta.gif&ehk=iEllrbJZVXuITl%2f0xxbwumBZOHwRpri6pE37c0EPyFQ%3d" alt="" />
+          <img src="https://www.bing.com/th/id/OGC.4d397104ff6aaefa16c3d7c88ec3d73f?pid=1.7&rurl=http%3a%2f%2fwww.fmdos.cl%2fwp-content%2fuploads%2f2016%2f07%2ffiesta.gif&ehk=iEllrbJZVXuITl%2f0xxbwumBZOHwRpri6pE37c0EPyFQ%3d" alt="fiesta gif" />
         </div>
-        <div className="contenedorTitleProyCap3V2">
-          <div className="contenedorTitleProyCap3V2__input">
-            <label htmlFor="input__contenedorTitleProyCap3V2" style={{color: "#000"}}>¡Cuantos años tienes?</label>
-            <input ref={inputEdad} type="number" id="input__contenedorTitleProyCap3V2"/>
-            <button onClick={validadEntrada}>ontener entradas</button>
+        {
+          quitConEdad && <div className="contenedorTitleProyCap3V2">
+            <div className="contenedorRelojProyCap3Js">
+              <span onClick={mostrarMenPerson}>
+                {hora}
+              </span>
+              {
+                personas && <p>no eres la primer persona lo siento</p>
+              }
+            </div>
+            <div className="contenedorTitleProyCap3V2__input">
+              <label htmlFor="input__contenedorTitleProyCap3V2" style={{color: "#000"}}>¡Cuantos años tienes?</label>
+              <input ref={inputEdad} type="number" id="input__contenedorTitleProyCap3V2"/>
+              <button onClick={validadEntrada}>obtener entradas</button>
             {
               showEntra && <p className={`${inputEdad.current.value < 18 ? "parrafoNoPasasJsCap3":"parrafoSiPasasJsCap3"}`}>{mensajeEntra}</p>
             }
           </div>
         </div>
+        }
         {
           pagar && <div className="contenedorTitleProyCap3V2__comprarContent">
             <div className="contenedorTitleProyCap3V2__comprarContenido">
@@ -92,7 +118,7 @@ Hacer un programa que simule la entrada a solo mayores de edad a una fiesta , si
               }
               {
                 showComp && <p className="contenedorTitleProyCap3V2__comprarContenido__parr">
-                compra realizada dosfruta la fiesta.
+                compra realizada disfruta la fiesta.
               </p>
               }
             </div>

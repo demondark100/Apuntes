@@ -4,6 +4,7 @@ import "./Home.css"
 // componentes
 import Footer from '../../componentes/menus/Footer';
 import { Link } from 'react-router-dom';
+import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
 
   return (
     <>
+      <MensajeModal texto={"https://www.000webhost.com/members/website/list"}/>
       <main className='mainHome'>
 
         <article>

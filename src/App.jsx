@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef , useState } from 'react';
 import 'normalize.css';
 import { 
   BrowserRouter as Router,
   Routes,
   Route
 } from 'react-router-dom';
+
+
 
 // componentes
 import Home from './Paginas/home/Home';
@@ -139,7 +141,6 @@ import CamelCaseJavaScript from './Paginas/apuntes/javaScript/capitulo_2/camelCa
 import CondicionalesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/condicionales/condicionales';
 import ArreglosJavaScript from './Paginas/apuntes/javaScript/capitulo_3/arreglos/arreglos';
 import ArreglosAsJavaScript from './Paginas/apuntes/javaScript/capitulo_3/arreglosAs/arreglosAs';
-import Capitulos from './componentes/capitulos/aside';
 import BuclesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/bucles/bucles';
 import FuncionesJavaScript from './Paginas/apuntes/javaScript/capitulo_3/funciones/funciones';
 import FunFlecha from './Paginas/apuntes/javaScript/capitulo_3/funciones/funFlecha';
@@ -275,6 +276,7 @@ import Cap6ProyCss from './Paginas/apuntes/proyectos/css/capitulo_6/cap6';
 import Cap1ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_1/cap1';
 import Cap1Vs2PryJs from './Paginas/apuntes/proyectos/javaScript/capitulo_1/cap2';
 import Cap3ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/asistencia/ca3';
+import Cap3ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/fiesta/fiesta';
 
 
 // pendejadas
@@ -283,15 +285,38 @@ import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
 
 // componente menu
 import Menu from './componentes/menus/Menu';
-import Cap3ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/fiesta/fiesta';
 
 
-
+// importando icono de dia y noche
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+  const swicth = useRef(null); // esto es el boton.
+  const [active, setActive] = useState(false);
+
+  const activado =()=>{
+    setActive(!active)
+  }
+  useEffect(()=>{
+    if(active){
+      swicth.current.classList.add("activeSwitch")
+      document.body.classList.add("bodyDark")
+    } else{
+      swicth.current.classList.remove("activeSwitch")
+      document.body.classList.remove("bodyDark")
+    }
+  })
+
   return (
     <Router>
-      <Menu/>
+      <Menu active={active}/>
+      <div className="contentSwitch">
+        <button ref={swicth} onClick={activado} className='switch' id='switch'>
+          <span><FontAwesomeIcon icon={faSun}/></span>
+          <span><FontAwesomeIcon icon={faMoon}/></span>
+        </button>
+      </div>
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />

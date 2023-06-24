@@ -15,7 +15,11 @@
   transition-duration: .5s;
   border-bottom: 1px solid #e9dbdb;
 }
-
+.headerDark{
+  background-color: #000;
+  transition-duration: .5s;
+  color: #fff !important;
+}
 
 /* esto es la imagen del logo */
 .imgPcLogo{
@@ -30,12 +34,6 @@
   font-size: 1.5em;
 }
 
-/* este es el icono de claro y oscuro */
-
-.iconoClOs{
-  cursor: pointer;
-  position: absolute;
-}
 
 
 /* esto es el nav del menu */
@@ -50,11 +48,14 @@
   transition-duration: .5s;
   overflow: auto;
   overflow-x: hidden;
-
+}
+.contenedorLinksMenuDark{
+  background-color: #000;
 }
 .contenedorLinksMenu::-webkit-scrollbar{
   display: none;
 }
+
 
 /* estos son los li del ul que estan dentro de nav */
 
@@ -76,14 +77,25 @@
   color: #000;
   transition-duration: .5s;
 }
+.linksDark{
+  color: #fff !important;
+}
 .links li a:hover{
   border-bottom: 2px solid #000;
+  transition-duration: .5s;
+}
+.linksDark:hover{
+  border-bottom: 2px solid #fff !important;
   transition-duration: .5s;
 }
 
 /* estos son los links de redes osea el ul li etc */
 .linkMovil{
   list-style: none;
+  color: #fff;
+}
+.linkMovilDark{
+  color: #000;
 }
 .linkPc{
   display: none;
@@ -93,7 +105,6 @@
 
 .icono-red{
   transform: rotate(-90deg);
-  transition-duration: .5s;
   margin-left: 15px;
 }
 .girar{
@@ -168,8 +179,10 @@
     position: relative;
     top: 0;
     left: 0;
-    height: auto;
+    margin-left: -43%;
+    height: 100%;
     transition-duration: .5s;
+    align-self: center;
     width: 55%;
   }
 
@@ -178,6 +191,7 @@
   .links{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-top: 0;
   }
   .links li{
@@ -192,10 +206,13 @@
   .linkPc{
     display: block;
     list-style: none;
-    background-color: inherit;
     width: 15%;
+    background-color: #fff;
     text-align: center;
     z-index: -2;
+  }
+  .linkPcCDark{
+    background-color: #000;
   }
   .linkPc li{
     padding: 10px;
@@ -203,9 +220,18 @@
   .linkPc li a{
     text-decoration: none;
     color: #000;
+    transition-duration: .5s;
+  }
+  .linkPcDark{
+    color: #fff !important;
+    transition-duration: .5s;
   }
   .linkPc li a:hover{
     border-bottom: 2px solid #000;
+    transition-duration: .5s;
+  }
+  .linkPcDark:hover{
+    border-bottom: 2px solid #fff !important;
     transition-duration: .5s;
   }
 

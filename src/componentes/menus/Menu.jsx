@@ -1,4 +1,4 @@
-import React , {useEffect, useState, useRef} from "react";
+import React , {useEffect, useState, useRef, useDeferredValue} from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css"
 
@@ -6,12 +6,11 @@ import "./Menu.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
-import "./estilosChange.css";
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { faFolderOpen } from '@fortawesome/free-solid-svg-icons';
+
 
 // esto es el logo de la aplicacion
 import logo from '../imgs/logo.jpg';
@@ -23,8 +22,7 @@ import Capitulos from "../capitulos/aside";
 import Proyectos from "../proyectos/proyectos";
 
 
-function Menu() {
-  const initialMode = localStorage.getItem('claroOscuro') === false;
+function Menu({active}) {
 
   const menu = useRef(null); //esto es el nav
   const header = useRef(null); //esto es el header
@@ -127,41 +125,27 @@ function Menu() {
     }
 
 
-  //estas funciones son para que la pagina cambie entre claro y oscuro
-  const [lightOrDark, setLightOrDark] = useState(initialMode); // esto es el estado de claro o oscuro
-  const claro=()=>{
-    setLightOrDark(false);
+  // aqui recibimos el estado para poner claro y oscuro a los temas
+  useEffect(()=>{
+    if (active) {
+      header.current.classList.add("headerDark")
+      menu.current.classList.add("contenedorLinksMenuDark")
+      document.querySelectorAll(".links li a").forEach(i => i.classList.add("linksDark"));
+      document.querySelectorAll(".linkMovil li a").forEach(i => i.classList.add("linkMovilDark"));
+      document.querySelectorAll(".linkPc").forEach(i => i.classList.add("linkPcCDark"));
+      document.querySelectorAll(".linkPc li a").forEach(i => i.classList.add("linkPcDark"));
 
+      
+    } else {
+      header.current.classList.remove("headerDark")
+      menu.current.classList.remove("contenedorLinksMenuDark")
+      document.querySelectorAll(".links li a").forEach(i => i.classList.remove("linksDark"));    
+      document.querySelectorAll(".linkMovil li a").forEach(i => i.classList.remove("linkMovilDark"));
+      document.querySelectorAll(".linkPc").forEach(i => i.classList.remove("linkPcCDark"));
+      document.querySelectorAll(".linkPc li a").forEach(i => i.classList.remove("linkPcDark"));
 
-    header.current.classList.remove("headerBorder") //esto es el header
-    menu.current.classList.remove("MenuDar") //esto es el nav
-    document.body.classList.remove("bodyDark") //esto es el body
-    document.querySelectorAll(".links li a").forEach(i => i.classList.remove("ColorA")); //estos son los links del nav para movil
-    document.querySelectorAll(".linkPc li a").forEach(i => i.classList.remove("ColorA")); //estos son los links del nav para movil
-    document.querySelectorAll("a").forEach(i=>i.classList.remove("allA"))
-  }
-  const oscuro=()=>{
-    setLightOrDark(true);
-
-
-    header.current.classList.add("headerBorder") //esto es el header
-    menu.current.classList.add("MenuDar") //esto es el nav
-    document.body.classList.add("bodyDark") //esto es el body
-    document.querySelectorAll(".links li a").forEach(i => i.classList.add("ColorA")); //estos son los links del nav para movil
-    document.querySelectorAll(".linkPc li a").forEach(i => i.classList.add("ColorA")); //estos son los links del nav para movil
-    document.querySelectorAll("a").forEach(i=>i.classList.add("allA"))
-  }
-
-
-    
-  
-
-  
-  // no se porque chingados no se guarda la pinche variable de estado en la puta memoria del pendejo navegador sea cual sea la razon que chingue su madre
-  useEffect(() => {
-    localStorage.setItem('claroOscuro', lightOrDark);
-  }, [lightOrDark]);
-
+    }  
+  })
   return (
 
     <header 
@@ -336,25 +320,9 @@ function Menu() {
           <Proyectos
             sendshowProyects={setProyectos}
           />
-        </div>
+      </div>
 
-      {/* esto es el icono de claro y osuro */}
-      {
-        lightOrDark ? (
-          <FontAwesomeIcon 
-            onClick={claro} 
-            icon={faSun} 
-            className="iconoClOs" 
-          />
-        ) :
-        (
-          <FontAwesomeIcon 
-            onClick={oscuro} 
-            icon={faMoon} 
-            className="iconoClOs" 
-          />
-        )
-      }
+
 
       {/* esto es la barrita solo que para pc */}
       <div className="barrita__contentPc">
