@@ -125,6 +125,8 @@ function Menu({active}) {
     }
 
 
+  const barritaMb = useRef(null); //esto es la barrita pero para moviles
+  const barritaPc = useRef(null); //esto es la barrita pero para pc
   // aqui recibimos el estado para poner claro y oscuro a los temas
   useEffect(()=>{
     if (active) {
@@ -134,7 +136,12 @@ function Menu({active}) {
       document.querySelectorAll(".linkMovil li a").forEach(i => i.classList.add("linkMovilDark"));
       document.querySelectorAll(".linkPc").forEach(i => i.classList.add("linkPcCDark"));
       document.querySelectorAll(".linkPc li a").forEach(i => i.classList.add("linkPcDark"));
-
+      barritaMb.current.classList.add("barritaMbDark");
+      barritaPc.current.classList.add("barritaPcDark");
+      asideMb.current.classList.add("asideMbDark");
+      asidePc.current.classList.add("asidePcDark");
+      proyects.current.classList.add("proyectMcContentDark")
+      proyectsPc.current.classList.add("proyectPcContentDark")
       
     } else {
       header.current.classList.remove("headerDark")
@@ -143,9 +150,15 @@ function Menu({active}) {
       document.querySelectorAll(".linkMovil li a").forEach(i => i.classList.remove("linkMovilDark"));
       document.querySelectorAll(".linkPc").forEach(i => i.classList.remove("linkPcCDark"));
       document.querySelectorAll(".linkPc li a").forEach(i => i.classList.remove("linkPcDark"));
-
-    }  
+      barritaMb.current.classList.remove("barritaMbDark");    
+      barritaPc.current.classList.remove("barritaPcDark");
+      asideMb.current.classList.remove("asideMbDark");
+      asidePc.current.classList.remove("asidePcDark");
+      proyects.current.classList.remove("proyectMcContentDark")
+      proyectsPc.current.classList.remove("proyectPcContentDark")
+    }
   })
+  
   return (
 
     <header 
@@ -185,7 +198,7 @@ function Menu({active}) {
 
           {/* este li contiene los iconos de la barrita de la izquierda */}
           <li className="liBarrita">
-            <div className="barrita__contentMovil">
+            <div ref={barritaMb} className="barrita__contentMovil">
               <Link 
                 onClick={quitMenuInicio} 
                 className="iconno" 
@@ -275,6 +288,7 @@ function Menu({active}) {
             sendshowAside={setShowAside} 
             sendasideMb={asideMb} 
             sendasidePc={asidePc}
+            active={active}
           />
         </div>
         
@@ -325,9 +339,9 @@ function Menu({active}) {
 
 
       {/* esto es la barrita solo que para pc */}
-      <div className="barrita__contentPc">
-        <Link 
-          className="iconno" 
+      <div ref={barritaPc} className="barrita__contentPc">
+        <Link
+          className="iconno"
           to={"./"}><FontAwesomeIcon
           onClick={quitMenuInicio}
           className="iconoOptions" 

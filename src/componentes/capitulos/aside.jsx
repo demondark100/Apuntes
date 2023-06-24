@@ -5,7 +5,7 @@ import { useState,useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
-function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasidePc}) {
+function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasidePc,active}) {
 
   // esto es el aside
 
@@ -124,6 +124,20 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
     }
   };
 
+  // estos son los estilos de claro y oscuro de los capitulos
+  useEffect(()=>{
+    if (active == true) {
+      document.querySelector("aside").classList.add("asideDark");
+      document.querySelectorAll(".curso").forEach(i=>i.classList.add("cursosDark"))
+      document.querySelectorAll(".activeParrafo").forEach(i=>i.classList.add("activeParrafoDark"))
+      document.querySelectorAll(".temas a").forEach(i=>i.classList.add("temasADark"))
+    } else if (active == false){
+      document.querySelector("aside").classList.remove("asideDark");
+      document.querySelectorAll(".curso").forEach(i=>i.classList.remove("cursosDark"))
+      document.querySelectorAll(".activeParrafo").forEach(i=>i.classList.remove("activeParrafoDark"))
+      document.querySelectorAll(".temas a").forEach(i=>i.classList.remove("temasADark"))
+    }
+  })
 
   
   // capitulos
