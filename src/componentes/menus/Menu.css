@@ -518,7 +518,7 @@
   height: 100vh;
   transition-duration: .5s;
   overflow: auto;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .proyectMcContentDark{
   background-color: #000;
@@ -547,8 +547,11 @@
     width: 80vw;
     height: 100vh;
     transition-duration: .5s;
-    overflow: hidden;
+    overflow: auto;
     overflow-x: hidden;
+  }
+  .proyectosBarritaPc::-webkit-scrollbar{
+    display: none;
   }
   .proyectPcContentDark{
     background-color: #000;

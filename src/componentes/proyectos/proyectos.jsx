@@ -64,6 +64,7 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
   };
 
   return (
+    <>
     <aside>
       <nav>
         <ul>
@@ -150,6 +151,7 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
         </ul>
       </nav>
     </aside>
+    </>
   );
 }
 

@@ -7,6 +7,13 @@ import { Link } from 'react-router-dom';
 import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 
 
+
+
+
+
+
+
+
 function Home() {
 
   
@@ -37,7 +44,6 @@ function Home() {
               </div>
           </section>
         </article>
-
       </main>
       <Footer />
     </>

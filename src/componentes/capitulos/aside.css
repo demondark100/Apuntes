@@ -1,6 +1,7 @@
 aside{
   padding-bottom: 150px;
 }
+
 .curso{
   display: flex;
   flex-direction: column;
@@ -39,14 +40,10 @@ aside{
 }
 .temas a{
   text-decoration: none;
-  color: #000;
+  color: #a3a258;
   padding: 8px;
   padding-left: 50px;
   margin-left: -20px;
-  transition-duration: .5s;
-}
-.temasADark{
-  color: #fff !important;
   transition-duration: .5s;
 }
 
