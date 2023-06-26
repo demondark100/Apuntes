@@ -290,6 +290,7 @@ import Menu from './componentes/menus/Menu';
 // importando icono de dia y noche
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import Barrita from './componentes/opciones/opciones';
 
 function App() {
   const swicth = useRef(null); // esto es el boton.
@@ -311,6 +312,7 @@ function App() {
   return (
     <Router>
       <Menu active={active}/>
+      <Barrita active={active}/>
       <div className="contentSwitch">
         <button ref={swicth} onClick={activado} className='switch' id='switch'>
           <span><FontAwesomeIcon icon={faSun}/></span>
