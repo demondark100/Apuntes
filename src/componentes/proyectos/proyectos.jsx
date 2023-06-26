@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Proyectos({sendshowProyects,sendMenu,menu}) {
+function Proyectos() {
   
   // temas principales
   const [html, setHtml] = useState(false);

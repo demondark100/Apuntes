@@ -3,9 +3,11 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
-function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasidePc,active}) {
+function Capitulos({active}) {
 
   // esto es el aside
+
+  // esta funcion es para que desaparzca el contenedor
 
 
   // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
