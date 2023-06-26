@@ -7,20 +7,6 @@ function Capitulos({contentMenu,estadoMenu,sendshowAside,sendasideMb ,sendasideP
 
   // esto es el aside
 
-  useEffect(()=>{
-    const links = document.querySelectorAll(".temas a")
-    links.forEach(i => {
-      i.addEventListener("click",()=>{
-        sendasideMb.current.classList.add("hideAside")
-        sendasidePc.current.classList.add("hideAside")
-        sendshowAside(false)
-        if(window.innerWidth < 750){
-          estadoMenu(false)
-          contentMenu.current.classList.remove("mostrarMenu")
-        }
-      })
-    });
-  })
 
   // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
   const [activeElement, setActiveElement] = useState("");

@@ -16,25 +16,6 @@ function Proyectos({sendshowProyects,sendMenu,menu}) {
   const [cap3Js, setCap3Js] = useState(false);
 
 
-  useEffect(()=>{
-    const links = document.querySelectorAll(".temas a")
-    links.forEach(i => {
-        i.addEventListener("click",()=>{
-          try{
-            if(window.innerWidth < 750){
-              sendMenu(false)
-              menu.current.classList.remove("mostrarMenu");
-              sendshowProyects(false)
-            } else {
-              sendshowProyects(false)
-            }
-          } catch(err){
-
-          }
-      })
-    });
-  })
-
 
 
   // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
