@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Proyectos() {
+function Proyectos({sendshowProyects}) {
   
   // temas principales
   const [html, setHtml] = useState(false);
@@ -15,6 +15,15 @@ function Proyectos() {
   const [cap1Js, setCap1Js] = useState(false);
   const [cap3Js, setCap3Js] = useState(false);
 
+
+  useEffect(()=>{
+    const links = document.querySelectorAll(".temas a")
+    links.forEach(i => {
+        i.addEventListener("click",()=>{
+          sendshowProyects(false)
+        })
+      });
+    })
 
 
 
@@ -45,7 +54,6 @@ function Proyectos() {
   };
 
   return (
-    <>
     <aside>
       <nav>
         <ul>
@@ -132,7 +140,6 @@ function Proyectos() {
         </ul>
       </nav>
     </aside>
-    </>
   );
 }
 

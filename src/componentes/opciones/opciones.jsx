@@ -84,16 +84,19 @@ function Barrita({active}) {
 
   useEffect(()=>{
     if(active == true){
-      aside.current.classList.add("asideMbDark");
+      aside.current.classList.add("asideDark");
       proyects.current.classList.add("proyectMcContentDark")
+      barrita.current.classList.add("barritaDark");
     } else if(active == false){
-      aside.current.classList.remove("asideMbDark");
+      aside.current.classList.remove("asideDark");
       proyects.current.classList.remove("proyectMcContentDark")
+      barrita.current.classList.remove("barritaDark");
     }
   })
 
   return (
      <div className="liBarrita">
+
       <div ref={barrita} className="barrita__content">
         <Link 
           onClick={quitMenuInicio} 
@@ -141,7 +144,7 @@ function Barrita({active}) {
         <div ref={aside} className="capitulosContent">
           <Capitulos
             sendshowAside={setShowAside}
-            sendasideMb={aside}
+            sendaside={aside}
             active={active}
           />
         </div>
@@ -152,6 +155,7 @@ function Barrita({active}) {
           <Proyectos 
             sendshowProyects={setProyectos}
           />
+
         </div>
     </div>
   );

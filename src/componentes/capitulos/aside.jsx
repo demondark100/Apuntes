@@ -3,12 +3,20 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
-function Capitulos({active}) {
+function Capitulos({sendshowAside,sendaside , active}) {
 
   // esto es el aside
 
-  // esta funcion es para que desaparzca el contenedor
-
+  useEffect(()=>{
+    const links = document.querySelectorAll(".temas a")
+    links.forEach(i => {
+      i.addEventListener("click",()=>{
+        sendaside.current.classList.add("hideAside")
+        sendshowAside(false)
+      })
+    });
+  })
+  
 
   // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
   const [activeElement, setActiveElement] = useState("");
