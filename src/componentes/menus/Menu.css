@@ -198,9 +198,8 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 0;
-  }
-  .links li{
-    padding: 15px;
+    top: 0;
+    height: 100%;
   }
 
 

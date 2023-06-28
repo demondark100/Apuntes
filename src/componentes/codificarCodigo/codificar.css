@@ -1,0 +1,46 @@
+.codificarContenedor{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+/* esto es el icono de html css y js */
+.threeLanguages{
+  display: flex;
+  width: 65%;
+  margin: auto;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  font-size: .6em;
+}
+
+
+
+/* esto es el contenedor para codificar en html css js */
+.contenedorJsHtCs{
+  position: absolute;
+  top: 0;
+  left: 30px;
+  background-color: #322f2f;
+  overflow: auto;
+  width: 95vw;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.hideContenedorJsHtCs{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+
+@media (min-width:750px){
+  .contenedorJsHtCs{
+    left: 30px;
+  }
+}

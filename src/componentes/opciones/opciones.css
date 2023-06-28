@@ -74,6 +74,10 @@
   left: 85px;
   width: 90px;
 }
+.codificar{
+  left: 130px;
+  width: 90px;
+}
 
 
 
@@ -138,6 +142,11 @@
   .proyectos{
     top: 62px;
     left: -15px;
+    width: 90px;
+  }
+  .codificar{
+    left: -15px;
+    top: 95px;
     width: 90px;
   }
 }
@@ -218,8 +227,8 @@
   transition-duration: .5s;
   overflow: auto;
   overflow-x: hidden;
-  top: 65px;
-  z-index: 2;
+  top: 70px;
+  z-index: 5;
 }
 .proyectMcContentDark{
   background-color: #000;
@@ -256,6 +265,37 @@
   .mostrarProyectos{
     left: 30px;
     width: 250px;
+    transition-duration: .5s;
+  }
+}
+
+
+
+
+/* esto es el contenedor de los lenguajes para codificar */
+.codificarBarrita{
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 0 5px 5px #eedfdf;
+  width: 32px;
+  top: 70px;
+  z-index: 4;
+  height: 100vh;
+  left: 0;
+  transition-duration: .5s;
+}
+.hideCodificar{
+  left: -150% !important;
+  transition-duration: .5s;
+}
+
+@media (min-width: 750px){
+  .codificarBarrita{
+    top: 0px;
+    left: 32px;
+  }
+  .hideCodificar{
+    left: -100%;
     transition-duration: .5s;
   }
 }
