@@ -27,11 +27,12 @@
   position: absolute;
   top: 0;
   left: 30px;
-  background-color: #322f2f;
-  overflow: auto;
-  width: 95vw;
+  width: 100vw;
+  height: 100vh;
   visibility: visible;
+  display: flex;
   transition-duration: .5s;
+  background-color: #5c5b5b;
 }
 .hideContenedorJsHtCs{
   opacity: 0;

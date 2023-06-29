@@ -9,20 +9,13 @@ import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 
 
 
-
-
-
-
-
 function Home() {
 
   
 
   return (
     <>
-      <MensajeModal texto={"https://www.000webhost.com/members/website/list"}/>
-      <main className='mainHome'>
-
+      <main>
         <article>
           <section>
             <div className='title_consepto1'>

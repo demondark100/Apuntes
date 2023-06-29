@@ -1,43 +1,78 @@
+/* esto es el div que contiene todo */
+.contenedorTodoJsHtCs{
+  width: 100%;
+  overflow: auto;
+  padding-bottom: 80px;
+}
+
 .codigoEscribir{
   position: absolute;
   top: 0;
   width: 100%;
   height: 100vh;
-  z-index: 45;
-
+  overflow: auto;
 }
 
-.codificacionTexto{
-  background-color: #4a4242;
-  color: #fff;
+
+/* estos son los botones para seleccionar el lenguaje */
+.botondesCodeContent button{
+  margin: 0;
+  color: #fff !important;
+  background-color: #0a0a0a;
+  transform: skew(15deg,0deg);
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+.botondesCodeContent button:hover{
+  background-color: #4e4848;
+}
+
+/* esto es el input que recibe el codigo */
+.contenedorJsCodificar{
+  display: flex;
   height: 100vh;
-  width: 95vw;
+  flex-direction: column;
+}
+
+/* esto es el input que recibe el codigo */
+.codificacionTexto{
+  background-color: #000;
+  color: #fff;
+  height: 80%;
+  width: 100%;
   border: none !important;
   outline: none !important;
+  padding: 15px;
 }
 
 /* esto es el boton para comilar */
 .compilarJs{
-  position: absolute;
+  height: 9%;
   width: 100%;
-  top: 50px !important;
-  display: flex;
-  justify-content: end;
+  top: 100% !important;
   z-index: 5489;
-  top: 0;
   pointer-events: none;
 }
 .compilarJs button{
+  margin: 0;
   border: none;
   outline: none;
-  background-color: #928a8a;
+  background-color: #000;
+  height: 100%;
+  min-height: 35px;
+  width: 33%;
   color: #fff;
-  margin-top: 25px;
-  margin-right: 25px;
   cursor: pointer;
   pointer-events: stroke;
+  border: 2px solid #fff;
 }
 .compilarJs button:hover{
-  background-color: rgba(0, 255, 0, 0.344);
+  background-color: #4e4848;
   transition-duration: .5s;
+}
+
+@media(min-width: 750px){
+  .contenedorTodoJsHtCs{
+    padding-bottom: 0;
+  }
 }
