@@ -4,31 +4,44 @@ import "./Home.css"
 // componentes
 import Footer from '../../componentes/menus/Footer';
 import { Link } from 'react-router-dom';
-import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
+import { useEffect } from 'react';
+import { useRef } from 'react';
+// import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 
 
 
 
-function Home() {
+function Home({active}) {
 
-  
+  const contenedor1 = useRef();
+  const contenedor2 = useRef();
+
+  useEffect(()=>{
+    if(active == true){
+      contenedor1.current.classList.add("contenedorHomeDark")
+      contenedor2.current.classList.add("contenedorHomeDark")
+    } else if(active == false){
+      contenedor1.current.classList.remove("contenedorHomeDark")
+      contenedor2.current.classList.remove("contenedorHomeDark")
+    }
+  })
 
   return (
     <>
       <main>
-        <article>
-          <section>
+        <article className='contenedorHome'>
+          <section ref={contenedor1} className='contenedorHome__contenido'>
             <div className='title_consepto1'>
-              <h1 className='titleHome'>Apuntes programacion</h1>
-              <p className='conseptoHome'>
+              <h1>Apuntes programacion</h1>
+              <p>
                 Esta página contiene apuntes de todo lo que yo he ido aprendiendo a lo largo del tiempo como desarrollador. A medida que vaya avanzando, agregaré más apuntes a todo este sitio web, cosas como C#, Python u otros lenguajes aparte de JavaScript, etc.
               </p>
             </div>
           </section>
-          <section>
+          <section ref={contenedor2} className='contenedorHome__contenido'>
             <div className='editoresCodigoContent'>
-              <h1 className='titleHome'>¡Comenzar!</h1>
-                <p className='edioresParrafo'>
+              <h1>¡Comenzar!</h1>
+                <p>
                   Ahora para programar de forma sensilla necesitamos de un editor de codigo aqui te dejo algunos bien conocidos.
                   <br /> <br />
                   Visual Studio Code: <Link target='_blank' to={"https://code.visualstudio.com/"}>vscode</Link> <br />

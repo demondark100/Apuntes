@@ -189,6 +189,7 @@
     transition-duration: .5s;
     align-self: center;
     width: 55%;
+    overflow: hidden;
   }
 
   /* estos son los li del ul que estan dentro de nav */

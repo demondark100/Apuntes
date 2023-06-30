@@ -1,26 +1,57 @@
-.title_consepto1{
+.contenedorHome{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 25px;
   align-items: center;
-  height: 100vh;
-}
-.conseptoHome{
-  text-align: center;
-  width: 75%;
-}
-.editoresCodigoContent{
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.edioresParrafo{
-  text-align: center;
-  width: 75%;
+  margin-top: 25px;
 }
 
-.asd{
-  background-color: #0f0;
+/* estos son los dos contenedores */
+.contenedorHome__contenido{
+  background-color: #f3fdf3;
+  padding: 25px;
+  height: 75%;
+  width: 25%;
+  min-width: 200px;
+  max-height: 450px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 0 15px 1px #cabbbb;
+  color: #000 !important;
+  text-align: center;
+  transition-duration: .5s;
+}
+
+
+.contenedorHomeDark{
+  background-color: #0e0e0e !important;
+  color: #fff !important;
+  box-shadow: 0 0 15px 1px #181717;
+  transition-duration: .5s;
+}
+
+@media(min-width: 750px){
+  .contenedorHome{
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    /* gap: 150px; */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* estos son los dos contenedores */
+  .contenedorHome__contenido{
+    background-color: #f3fdf3;
+    height: 75%;
+    width: 25%;
+    min-width: 200px;
+    max-height: 450px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
 }

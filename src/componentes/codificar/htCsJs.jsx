@@ -52,25 +52,25 @@ function HtCsJs() {
     } catch (error) {
       console.error("");
       setConsoleOutput('');
-      setErrorMessage('Hubo un error en tu código.');
+      setErrorMessage('Hubo un error en tu código o la consola no puede procesar esto.');
     }
   };
 
 
   // esto es para mostrar los editeores de texto
 
-  const [html, setHtml] = useState(false);
+  const [html, setHtml] = useState(true);
   const [javaScript, setJavaScript] = useState(false);
 
   const showHtml = () => {
-    setHtml(!html);
+    setHtml(true);
     setJavaScript(false);
   };
 
 
 
   const showJavaScript = () => {
-    setJavaScript(!javaScript);
+    setJavaScript(true);
     setHtml(false);
   };
 
@@ -91,7 +91,13 @@ function HtCsJs() {
                 onKeyUp={actualizar} 
                 className='codificacionTexto codificacionTextoHt' 
                 onChange={handleCodeChangeHtml}
-                defaultValue={"<style></style>"}
+                placeholder={`usar la etiqueta style:
+<style>
+  aqui los estilos
+</style>
+no es necesario escribir la estructura de html , es como si estuvieramos dentro de body.
+
+aqui el contenido`}
               />
             </div>
             <iframe id='paginaCodigoHtml' ref={paginaHtml}></iframe>
@@ -103,7 +109,13 @@ function HtCsJs() {
         javaScript && (
           <div className='contenedorJsCodificar'>
             <div className='contenedorJsCodificar__contenedor'>
-              <textarea  ref={codeJs} value={code} onChange={handleCodeChange} className='codificacionTexto'/>
+              <textarea  
+                ref={codeJs} 
+                value={code} 
+                onChange={handleCodeChange} 
+                className='codificacionTexto'
+                placeholder={"no se puede usar la api del dom aqui , esto es solo una simulacion de la consola osea que se puede programar cosas sensillas."}
+              />
               <div className='compilarJs'>
                 <button onClick={handleRunCode}>ejecutar</button>
                 <button onClick={() => { codeJs.current.value = ""; }}>borrar todo</button>

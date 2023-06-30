@@ -105,6 +105,8 @@
     width: 100% !important;
     height: 80vh;
     color: #66bf18;
+    margin: 0;
+    
   }
   .contenedorJsCodificar__contenedor textarea::-webkit-scrollbar{
     display: none;
@@ -133,7 +135,7 @@
   .output{
     background-color: #000;
     color: #0f0;
-    width: 45%;
+    width: 37%;
     height: 80vh;
     outline: 2px solid #fff;
   }
