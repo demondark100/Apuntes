@@ -1,78 +1,157 @@
-/* esto es el div que contiene todo */
-.contenedorTodoJsHtCs{
-  width: 100%;
-  overflow: auto;
-  padding-bottom: 80px;
-}
-
-.codigoEscribir{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
-}
-
-
-/* estos son los botones para seleccionar el lenguaje */
-.botondesCodeContent button{
-  margin: 0;
-  color: #fff !important;
-  background-color: #0a0a0a;
-  transform: skew(15deg,0deg);
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-.botondesCodeContent button:hover{
-  background-color: #4e4848;
-}
-
-/* esto es el input que recibe el codigo */
-.contenedorJsCodificar{
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-}
-
-/* esto es el input que recibe el codigo */
-.codificacionTexto{
-  background-color: #000;
-  color: #fff;
-  height: 80%;
-  width: 100%;
-  border: none !important;
-  outline: none !important;
-  padding: 15px;
-}
-
-/* esto es el boton para comilar */
-.compilarJs{
-  height: 9%;
-  width: 100%;
-  top: 100% !important;
-  z-index: 5489;
-  pointer-events: none;
-}
-.compilarJs button{
-  margin: 0;
-  border: none;
-  outline: none;
-  background-color: #000;
-  height: 100%;
-  min-height: 35px;
-  width: 33%;
-  color: #fff;
-  cursor: pointer;
-  pointer-events: stroke;
-  border: 2px solid #fff;
-}
-.compilarJs button:hover{
-  background-color: #4e4848;
-  transition-duration: .5s;
-}
-
-@media(min-width: 750px){
+  /* esto es el contenedor de todo */
   .contenedorTodoJsHtCs{
-    padding-bottom: 0;
+    width: 100%;
+    overflow: auto;
+  }
+
+  /* esto es el contenedor de lso  botones de arriba osea html css y js */
+  .botondesCodeContent{
+    width: 100%;
+  }
+  .botondesCodeContent button{
+    margin: 0;
+    border: none;
+    background-color: #000;
+    color: #fff !important;
+    border: 2px solid #fff;
+    transform: skew(14deg,0deg);
+  }
+
+
+  /* esto es para escribir codigo js */
+  .contenedorJsCodificar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedorJsCodificar__contenedor{
+    width: 100%;
+  }
+  .contenedorJsCodificar__contenedor textarea{
+    background-color: #000;
+    border: none;
+    outline: none;
+    width: 100% !important;
+    height: 50vh;
+    color: #66bf18;
+  }
+  .contenedorJsCodificar__contenedor textarea::-webkit-scrollbar{
+    display: none;
+  }
+
+  /* estos son los botones para ejecutar y borrar el codigo */
+  .compilarJs{
+    margin-top: -4px;
+    height: 15%;
+  }
+  .compilarJs button{
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    max-height: 120px;
+  }
+  .compilarJs button:hover{
+    background-color: #242222;
+  }
+
+
+  /* esto es la consola de javaScript */
+  .output{
+    background-color: #000;
+    color: #0f0;
+    width: 100%;
+    height: 80vh;
+    outline: 2px solid #fff;
+  }
+
+
+@media (min-width: 750px){
+  /* esto es el contenedor de todo */
+  .contenedorTodoJsHtCs{
+    width: 100%;
+    overflow: auto;
+  }
+
+  /* esto es el contenedor de lso  botones de arriba osea html css y js */
+  .botondesCodeContent{
+    width: 100%;
+  }
+  .botondesCodeContent button{
+    margin: 0;
+    border: none;
+    background-color: #000;
+    color: #fff !important;
+    border: 2px solid #fff;
+    transform: skew(14deg,0deg);
+  }
+
+
+  /* esto es para escribir codigo js */
+  .contenedorJsCodificar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .contenedorJsCodificar__contenedor{
+    width: 55%;
+  }
+  .contenedorJsCodificar__contenedor textarea{
+    background-color: #000;
+    border: none;
+    outline: none;
+    width: 100% !important;
+    height: 80vh;
+    color: #66bf18;
+  }
+  .contenedorJsCodificar__contenedor textarea::-webkit-scrollbar{
+    display: none;
+  }
+
+  /* estos son los botones para ejecutar y borrar el codigo */
+  .compilarJs{
+    margin-top: -4px;
+    height: 15%;
+  }
+  .compilarJs button{
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    max-height: 120px;
+  }
+  .compilarJs button:hover{
+    background-color: #242222;
+  }
+
+
+  /* esto es la consola de javaScript */
+  .output{
+    background-color: #000;
+    color: #0f0;
+    width: 45%;
+    height: 80vh;
+    outline: 2px solid #fff;
+  }
+}
+
+
+/* esta es la pagina */
+.contenedorJsCodificarHtml{
+  height: 100%;
+  background-color: #fff;
+}
+
+.paginaCodigoHtml{
+  background-color: #fff;
+  border: 5px solid #000;
+}
+@media (min-width: 750px){
+  .codificacionTextoHt{
+    height: 100vh !important;
   }
 }
