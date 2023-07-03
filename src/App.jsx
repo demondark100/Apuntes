@@ -291,6 +291,7 @@ import Menu from './componentes/menus/Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import Barrita from './componentes/opciones/opciones';
+import Cap3ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/tienda/tienda';
 
 function App() {
   const swicth = useRef(null); // esto es el boton.
@@ -341,6 +342,7 @@ function App() {
             <Route path='javaScipt/cap1ProyV2' element={<Cap1Vs2PryJs />} />
             <Route path='javaScript/cap3ProyV1' element={<Cap3ProyJsV1 />} />
             <Route path='javaScript/cap3ProyV2' element={<Cap3ProyJsV2 />} />
+            <Route path='javaScript/cap3ProyV3' element={<Cap3ProyJsV3 />} />
 
             
             

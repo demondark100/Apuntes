@@ -1,31 +1,38 @@
-.volver{
-  z-index: 8;
+.contenedor__volver{
   position: fixed;
-  background-color: #000;
-  top: 75vh;
-  left: 70vw;
-  width: 75px;
-  height: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  cursor: pointer;
-}
-.volver a{
-  z-index: 4;
+  z-index: 8;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.volver{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  text-decoration: none;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+.volver a{
+  z-index: 8;
+  width: 55px;
+  height: 55px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 100%;
+  cursor: pointer;
+  pointer-events: stroke;
 }
 .volver::after{
   content: "";
   position: absolute;
-  background-color: #0000007e;
+  background-color: #5462439f;
   width: 100%;
   height: 100%;
   border-radius: 100%;
@@ -41,17 +48,10 @@
     height: 0;
   }
   100%{
-    width: 150%;
-    height: 150%;
+    width: 85px;
+    height: 85px;
   }
 }
 .volverLink{
   font-size: 1.5em;
-}
-
-@media (min-width:750px){
-  .volver{
-    top: 75%;
-    left: 85%;
-  }
 }

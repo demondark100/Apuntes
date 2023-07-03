@@ -126,6 +126,7 @@ function Proyectos({sendshowProyects}) {
                       cap3Js && <div className='temas'>
                         <Link to={"../javaScript/cap3ProyV1"}>asistencia de alumnos</Link>
                         <Link to={"../javaScript/cap3ProyV2"}>entradas fiesta</Link>
+                        <Link to={"../javaScript/cap3ProyV3"}>tienda de helados</Link>
                       </div>
                     }
                   

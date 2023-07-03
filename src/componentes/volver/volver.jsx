@@ -5,8 +5,10 @@ function Volver({link}) {
   const contenedor = useRef(null);
 
   return (  
-    <div ref={contenedor} className="volver">
-      <Link to={link} className="volverLink">back</Link>
+    <div className={"contenedor__volver"}>
+      <div ref={contenedor} className="volver">
+        <Link to={link} className="volverLink">back</Link>
+      </div>  
     </div>
   );
 }
