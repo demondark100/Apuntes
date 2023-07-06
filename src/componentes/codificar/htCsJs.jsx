@@ -3,7 +3,7 @@ import "./codificar.css";
 
 // iconos
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJs, faHtml5 } from '@fortawesome/free-brands-svg-icons';
+import { faJs,faCss3Alt,faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 function HtCsJs() {
 
@@ -77,7 +77,10 @@ function HtCsJs() {
   return (
     <div className='contenedorTodoJsHtCs'>
       <div className='botondesCodeContent'>
-        <button onClick={showHtml}><FontAwesomeIcon icon={faHtml5}/></button>
+        <button onClick={showHtml}>
+          <FontAwesomeIcon icon={faHtml5} style={{marginRight: "15px"}}/>
+          <FontAwesomeIcon icon={faCss3Alt}/>
+        </button>
         <button onClick={showJavaScript}><FontAwesomeIcon icon={faJs}/></button>
       </div>
       
