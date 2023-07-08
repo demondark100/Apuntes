@@ -50,8 +50,34 @@ function Helado({
 }
 
 // este componente es el mensaje de confirmacion para comprar los helados
-function ComparHelados() {
-  
+function ComparHelados({
+  si,
+  no //esto es para confirmar o rechazar la compra
+}) {
+
+  return (
+    <div className="cintenedorConfirmarCompraHeladoProyJs">
+      <div className="cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm">
+        <h4>¿Estas seguro/a de esta compra?</h4>
+        <div>
+          <button onClick={si}>Si</button>
+          <button onClick={no}>No</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+function Mensajes({mensaje,setMensaje1}) {
+  return (
+    <div className="contenedorMensajeProyJsHelados">
+      <div className="contenedorMensajeProyJsHelados__p">
+        <p>{mensaje}</p>
+        <button onClick={()=>setMensaje1(false)}>ok</button>
+      </div>
+    </div>
+  )
 }
 
 function Cap3ProyJsV3() {
@@ -85,26 +111,51 @@ function Cap3ProyJsV3() {
 
 
 
-  const [dineroUsuario, setDineroUsuario] = useState(100);
+  const [dineroUsuario, setDineroUsuario] = useState(100); // esta variable de estado es el dinero inicial del usuario.
 
+  const [confirmarCompra, setconfirmarCompra] = useState(); // esta variable es para confirmar la compra.
+
+  const [showConfirmCompra, setShowConfirmCompra] = useState(false);
+
+  const si =()=> {
+    setconfirmarCompra(true)
+    setShowConfirmCompra(false)
+  }
+  const no =()=> {
+    setconfirmarCompra(false)
+    setShowConfirmCompra(false)
+  }
+
+  
   const comprar = () => {
+    setShowConfirmCompra(true)
+  };
 
+
+  // este es el mensaje de que no alcanza el dinero.
+  const [mensaje1, setMensaje1] = useState(false); 
+  const [mensaje2, setMensaje2] = useState(false); // este es el mensaje de que no puede comprar mas helados hasta sierto tiempo.
+
+  useEffect(()=>{
     const modificar = { ...helados };
     let nuevoDineroUsuario = dineroUsuario; // Almacena el valor inicial
     let dineroSuficiente = true; // Variable booleana para controlar si tiene suficiente dinero
-  
-    for (let i in modificar) {
-      nuevoDineroUsuario -= modificar[i][1]; // Resta el valor del arreglo
-  
-      if (nuevoDineroUsuario < 0) {
-        nuevoDineroUsuario += modificar[i][1]; // Agrega nuevamente el valor del helado
-        modificar[i][0] = Math.floor(nuevoDineroUsuario / modificar[i][1]); // Calcula la cantidad de helados que puede comprar
-        dineroSuficiente = false; // Actualiza la variable booleana
-        break; // Detiene el bucle
+
+    
+    if (confirmarCompra == true) {
+      for (let i in modificar) {
+        nuevoDineroUsuario -= modificar[i][1]; // Resta el valor del arreglo
+    
+        if (nuevoDineroUsuario < 0) {
+          nuevoDineroUsuario += modificar[i][1]; // Agrega nuevamente el valor del helado
+          modificar[i][0] = Math.floor(nuevoDineroUsuario / modificar[i][1]); // Calcula la cantidad de helados que puede comprar
+          dineroSuficiente = false; // Actualiza la variable booleana
+          break; // Detiene el bucle
+        }
+    
+        modificar[i][0] = 0;
+        modificar[i][1] = 0;
       }
-  
-      modificar[i][0] = 0;
-      modificar[i][1] = 0;
     }
   
     if (!dineroSuficiente) {
@@ -112,12 +163,12 @@ function Cap3ProyJsV3() {
         modificar[i][0] = 0;
         modificar[i][1] = 0;
       }
-      alert("Lo siento, ya no tienes suficiente dinero para más helados.");
+      setMensaje1(true)
     }
   
     setDineroUsuario(nuevoDineroUsuario); // Actualiza el estado con el nuevo valor
     setHelados(modificar);
-  };
+  },[confirmarCompra])
   
   
   
@@ -175,7 +226,28 @@ cantidad de helados: helado n${"${i + 1}"}.
     
       <div className="Page">
         
-        
+        <div className={
+          showConfirmCompra ? 
+            "mostrarConfirmHelados"
+          :
+            "hideConfirmHelados"
+        }>
+          <ComparHelados 
+            si={si}
+            no={no}
+            setShowConfirmCompra={setShowConfirmCompra}
+          />
+        </div>
+
+        <div className={
+          mensaje1 ? 
+            "mostrarConfirmHelados"
+          :
+            "hideConfirmHelados"
+        }>
+          <Mensajes setMensaje1={setMensaje1} mensaje={"Usted no cuenta con dinero suficiente."}/>
+        </div>
+
         <div className="contenedorTiendaHeladosProyJs">
           <h1>Heladeria el helado</h1>
           <div className="contenedorTiendaHeladosProyJs__presupuesto">

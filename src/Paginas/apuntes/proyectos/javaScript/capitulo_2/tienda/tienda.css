@@ -28,14 +28,19 @@
   display: flex;
   justify-content: center;
   top: 60px;
-  z-index: 2;
+  z-index: 3;
 }
 .contenedorTiendaHeladosProyJs__presupuesto p{
   border-radius: 1000px;
   background-color: #fff;
   box-shadow: 0 5px 8px 0px #000;
   padding: 2px 25px 2px 25px;
-  font-size: 1.5em;
+  text-align: center;
+}
+@media(min-width: 750px){
+  .contenedorTiendaHeladosProyJs__presupuesto p{
+    font-size: 1.5em;
+  }
 }
 
 
@@ -146,4 +151,122 @@
 .comprarHelados:hover{
   background-color: #08ab08;
   transition-duration: .5s;
+}
+
+
+
+
+/* esto es el contenedor para que se confirme la compra de los helados */
+.mostrarConfirmHelados{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.hideConfirmHelados{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+
+
+.cintenedorConfirmarCompraHeladoProyJs{
+  background-color: #00000068;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm{
+  background-color: #fff;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  flex-direction: column;
+  text-align: center;
+  min-height: 60px;
+  font-size: 1.3em;
+}
+.cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm button:nth-child(1){
+  background-color: #0f0;
+}
+.cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm button:nth-child(2){
+  background-color: #f00;
+}
+@media(min-width: 750px){
+  .cintenedorConfirmarCompraHeladoProyJs{
+    align-items: start;
+  }
+  .cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm{
+    width: 30%;
+    margin-top: 50px;
+  }
+}
+
+
+
+
+/* este es el componente de los mensaje */
+.contenedorMensajeProyJsHelados{
+  width: 100%;
+  height: 100%;
+  background-color: #0000007d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorMensajeProyJsHelados__p{
+  background-color: #ffff;
+  width: 75%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 300px;
+  min-height: 120px;
+}
+.contenedorMensajeProyJsHelados__p button{
+  border-radius: 150px;
+  border: none;
+  outline: none;
+  background-color: #0f0;
+  color: #000 !important;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.contenedorMensajeProyJsHelados__p button:hover{
+  background-color: #57c757;
+  transition-duration: .5s;
+}
+
+@media(min-width: 750px){
+  .contenedorMensajeProyJsHelados{
+    align-items: start !important;
+    font-size: 1.5em;
+  }
+  .contenedorMensajeProyJsHelados__p{
+    width: 30%;
+    height: 15%;
+    margin-top: 50px;
+    max-width: 500px;
+    max-height: 100px;
+  }
 }
