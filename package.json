@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://demondark100.github.io/Apuntes",
   "scripts": {
+    "compilar": "npm run build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -15,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "codemirror": "^6.0.1",
     "gh": "^2.8.9",
+    "gh-pages": "^5.0.0",
     "highlight.js": "^11.7.0",
     "loglevel": "^1.8.1",
     "normalize.css": "^8.0.1",

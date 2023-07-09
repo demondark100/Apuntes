@@ -248,7 +248,7 @@ cantidad de helados: helado n${"${i + 1}"}.
           <div className="contenedorTiendaHeladosProyJs">
             <h4>Heladeria el helado</h4>
             <div className="contenedorTiendaHeladosProyJs__presupuesto">
-              <p>su presupuesto es de: ${dineroUsuario}</p>
+              <p>${dineroUsuario}</p>
             </div>
             
             <div className="componenteHelados">

@@ -14,6 +14,7 @@ function Proyectos({sendshowProyects}) {
   // javaScript capitulos
   const [cap1Js, setCap1Js] = useState(false);
   const [cap3Js, setCap3Js] = useState(false);
+  const [cap4Js, setCap4Js] = useState(false);
 
 
   useEffect(()=>{
@@ -40,6 +41,7 @@ function Proyectos({sendshowProyects}) {
       setJavaScript(!javaScript)
     }
   };
+  
 
   // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
   const [activeTemas, setActiveTemas] = useState("");
@@ -57,6 +59,7 @@ function Proyectos({sendshowProyects}) {
     <aside>
       <nav>
         <ul>
+          https://demondark100.github.io/Apuntes/
           <li className="curso">
               <p 
                 className={activeElement === "p1" ? "activeParrafo" : ""}
@@ -127,6 +130,22 @@ function Proyectos({sendshowProyects}) {
                         <Link to={"../javaScript/cap3ProyV1"}>asistencia de alumnos</Link>
                         <Link to={"../javaScript/cap3ProyV2"}>entradas fiesta</Link>
                         <Link to={"../javaScript/cap3ProyV3"}>tienda de helados</Link>
+                      </div>
+                    }
+                  
+                  </div>
+
+                  <div>
+                    
+                    <p
+                      className={activeTemas === "p3" ? "activeParrafoTemas" : ""}
+                      onClick={()=>hundleActiveTemas("p3")}
+                    >
+                      capitulo 4
+                    </p>
+                    {
+                      cap3Js && <div className='temas'>
+                        <Link>matematica para niños</Link>
                       </div>
                     }
                   

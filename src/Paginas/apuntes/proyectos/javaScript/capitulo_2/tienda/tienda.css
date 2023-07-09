@@ -34,8 +34,8 @@
   color: #be2e2e !important;
   text-shadow: 0px 15px 45px #5b2424;
   animation-direction: alternate;
-  top: 0;
-  font-size: 1.5em;
+  top: 15px;
+  font-size: 2em;
 
 }
 @keyframes tituloHeladoProyJs {
@@ -51,16 +51,17 @@
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: center;
-  top: 60px;
+  justify-content: start;
+  top: 50px !important;
   z-index: 3;
 }
 .contenedorTiendaHeladosProyJs__presupuesto p{
   border-radius: 1000px;
   background-color: #fff;
   box-shadow: 0 5px 8px 0px #000;
-  padding: 2px 25px 2px 25px;
+  padding: 8px;
   text-align: center;
+  margin-left: 15px;
 }
 @media(min-width: 750px){
   .contenedorTiendaHeladosProyJs h4{
@@ -85,7 +86,6 @@
   height: 220px;
   padding: 8px;
   transition-duration: .5s;
-  border-radius: 25px;
 }
 .contenedorHelado:hover{
   background-color: #ffff4f;
@@ -191,13 +191,13 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
-  margin-top: 110px !important;
+  margin-top: 65px !important;
 }
 @media (min-width:750px){
   .componenteHelados{
     width: 95%;
     margin: auto;
-    margin-top: 200px !important;
+    margin-top: 100px !important;
   }
 }
 
@@ -260,6 +260,7 @@
 }
 .cintenedorConfirmarCompraHeladoProyJs__contenedorConfirm{
   background-color: #fff;
+  color: #000 !important;
   width: 95%;
   display: flex;
   justify-content: center;
@@ -304,7 +305,8 @@
   align-items: center;
 }
 .contenedorMensajeProyJsHelados__p{
-  background-color: #ffff;
+  background-color: #fff;
+  color: #000 !important;
   width: 75%;
   height: 25%;
   display: flex;
