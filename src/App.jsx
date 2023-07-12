@@ -277,7 +277,8 @@ import Cap1ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_1/cap1
 import Cap1Vs2PryJs from './Paginas/apuntes/proyectos/javaScript/capitulo_1/cap2';
 import Cap3ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/asistencia/ca3';
 import Cap3ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/fiesta/fiesta';
-
+import Cap3ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/tienda/tienda';
+import Cap4ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/matematicas/cap4';
 
 // pendejadas
 import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
@@ -291,7 +292,7 @@ import Menu from './componentes/menus/Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import Barrita from './componentes/opciones/opciones';
-import Cap3ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/tienda/tienda';
+
 
 function App() {
   const swicth = useRef(null); // esto es el boton.
@@ -338,11 +339,15 @@ function App() {
             <Route path='css/proyCap5' element={<Cap5ProyCss />} />
             <Route path='css/proyCap6' element={<Cap6ProyCss />} />
           {/* javaScript */}
-            <Route path='javaScipt/cap1ProyV1' element={<Cap1ProyJsV1 />} />
-            <Route path='javaScipt/cap1ProyV2' element={<Cap1Vs2PryJs />} />
-            <Route path='javaScript/cap3ProyV1' element={<Cap3ProyJsV1 />} />
-            <Route path='javaScript/cap3ProyV2' element={<Cap3ProyJsV2 />} />
-            <Route path='javaScript/cap3ProyV3' element={<Cap3ProyJsV3 />} />
+            {/* capitulo 2 */}
+              <Route path='javaScipt/cap1ProyV1' element={<Cap1ProyJsV1 />} />
+              <Route path='javaScipt/cap1ProyV2' element={<Cap1Vs2PryJs />} />
+            {/* capitulo 3 */}
+              <Route path='javaScript/cap3ProyV1' element={<Cap3ProyJsV1 />} />
+              <Route path='javaScript/cap3ProyV2' element={<Cap3ProyJsV2 />} />
+              <Route path='javaScript/cap3ProyV3' element={<Cap3ProyJsV3 />} />
+            {/* capitulo 4 */}
+              <Route path='javaScript/cap4ProyV1' element={<Cap4ProyJsV1 />} />
 
             
             

@@ -51,6 +51,8 @@ function Proyectos({sendshowProyects}) {
       setCap1Js(!cap1Js)
     } else if (element === "p2"){
       setCap3Js(!cap3Js)
+    } else if (element === "p3"){
+      setCap4Js(!cap4Js)
     }
 
   };
@@ -59,7 +61,7 @@ function Proyectos({sendshowProyects}) {
     <aside>
       <nav>
         <ul>
-          https://demondark100.github.io/Apuntes/
+          
           <li className="curso">
               <p 
                 className={activeElement === "p1" ? "activeParrafo" : ""}
@@ -144,8 +146,8 @@ function Proyectos({sendshowProyects}) {
                       capitulo 4
                     </p>
                     {
-                      cap3Js && <div className='temas'>
-                        <Link>matematica para niños</Link>
+                      cap4Js && <div className='temas'>
+                        <Link to={"javaScript/cap4ProyV1"}>matematica para niños</Link>
                       </div>
                     }
                   
