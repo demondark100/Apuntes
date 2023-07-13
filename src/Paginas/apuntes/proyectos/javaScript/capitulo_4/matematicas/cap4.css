@@ -9,8 +9,10 @@
   position: absolute;
   top: 0;
   width: 100%;
+  height: 100%;
   background-color: #00000071;
-  transition-duration: .5s;
+  transition-duration: 1.5s;
+  z-index: 2;
 }
 .fondoNegroProyInstruccionesHide{
   opacity: 0;
@@ -20,7 +22,7 @@
 .contenedorInstruccionesJsProy{
   background-color: #4c85cb;
   width: 80%;
-  height: 100vh;
+  height: 100%;
   border-top-right-radius: 800px;
   border-bottom-right-radius: 800px;
   display: flex;
@@ -30,6 +32,7 @@
   text-align: center;
   padding-right: 15px;
   overflow: auto;
+  box-shadow: 10px 0 15px 0px #3e71af;
   transition-duration: .5s;
 }
 .contenedorInstruccionesJsProyHide{
@@ -70,7 +73,7 @@
   /* estas son las instucciones */
   .contenedorInstruccionesJsProy{
     width: 450px;
-    padding: 25px !important;
+    padding: 0 55px 0 55px;
   }
   .contenedorInstruccionesJsProy h4{
     font-size: 2em;
@@ -78,4 +81,95 @@
   .contenedorInstruccionesJsProy p{
     font-size: 1.5em;
   }
+}
+
+
+
+/* esto es para seleccionar la cantidad de ejercicios qwue el usuario desea resolver */
+.contenedorAritmeticaPryJs__cantidad{
+  background-color: #fff70e;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .5s;
+}
+.contenedorAritmeticaPryJs__cantidadHide{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contenedorAritmeticaPryJs__cantidad p{
+  background-color: #f00;
+  color: #fff !important;
+  margin-top: 15px;
+  padding: 5px;
+}
+
+.contenedorAritmeticaPryJs__cantidad__seleccion{
+  background-color: #dbd522;
+  display: flex;
+  text-align: center;
+  font-size: 1.8em;
+  padding: 8px;
+  flex-direction: column;
+  width: 85%;
+  color: #000 !important;
+  box-shadow: 0 15px 15px 2px #bbb61b;
+}
+.contenedorAritmeticaPryJs__cantidad__seleccion h4{
+  margin-bottom: 25px;
+}
+
+.contenedorAritmeticaPryJs__cantidad__input{
+  background-color: #b4f61a;
+  border-radius: 1000px;
+  overflow: hidden;
+  display: flex;
+  outline: 2px solid #6e901f !important;
+}
+.contenedorAritmeticaPryJs__cantidad__input input{
+  width: 85%;
+  border: none;
+  outline: none;
+}
+.contenedorAritmeticaPryJs__cantidad__input button{
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media(min-width:750px){
+  .contenedorAritmeticaPryJs__cantidad__seleccion{
+    width: 450px;
+    padding: 15px;
+  }
+}
+
+
+
+
+
+/* estos son los estilos que son para seleccionar la operacion que quiere hacer el usuario */
+.contenedorSelectOperacionProyJs{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  transition-duration: .5s;
+}
+.contenedorSelectOperacionProyJsHide{
+  opacity: 0;
+  visibility: hidden;
 }

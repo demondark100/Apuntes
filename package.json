@@ -5,8 +5,6 @@
   "type": "module",
   "homepage": "http://demondark100.github.io/Apuntes",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
