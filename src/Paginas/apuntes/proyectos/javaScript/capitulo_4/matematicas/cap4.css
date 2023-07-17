@@ -6,34 +6,36 @@
 
 /* esto es el fondo de las instrucciones */
 .fondoNegroProyInstrucciones{
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #00000071;
+  background-color: #000000b7;
   transition-duration: 1.5s;
   z-index: 2;
 }
 .fondoNegroProyInstruccionesHide{
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 /* estas son las instrucciones */
 .contenedorInstruccionesJsProy{
-  background-color: #4c85cb;
-  width: 80%;
-  height: 100%;
-  border-top-right-radius: 800px;
-  border-bottom-right-radius: 800px;
+  background-color: #000000;
+  width: 65%;
+  height: 100vh;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding-right: 15px;
+  padding:28px;
   overflow: auto;
-  box-shadow: 10px 0 15px 0px #3e71af;
+  box-shadow: 10px 0 15px 0px #141415;
   transition-duration: .5s;
+  white-space: pre-wrap !important;
+
 }
 .contenedorInstruccionesJsProyHide{
   width: 0 !important;
@@ -45,28 +47,40 @@
 }
 .contenedorInstruccionesJsProy h4{
   color: #fff !important;
-  margin-bottom: 15px;
+  margin-top: 15px;
   font-size: 1.5em;
 }
 .contenedorInstruccionesJsProy p{
   color: #fff !important;
+  margin-top: 15px;
+  overflow: auto;
+}
+.contenedorInstruccionesJsProy p::-webkit-scrollbar{
+  background-color: #141414;
+  border-radius: 1000px;
+}
+.contenedorInstruccionesJsProy p::-webkit-scrollbar-thumb{
+  background-color: #1b1a1a;
+  border-radius: 1000px;
+  
 }
 .contenedorInstruccionesJsProy button{
-  background-color: #78a4ca;
+  background-color: #171717;
   margin-top: 45px !important;
   border: none;
   outline: none;
-  padding: 5px;
+  padding: 10px;
   font-size: 1.5em;
   color: #000 !important;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   transition-duration: .5s;
   cursor: pointer;
+  color: #fff !important;
 }
 .contenedorInstruccionesJsProy button:hover{
-  background-color: #598ec0;
-  color: #c5e1c5 !important;
+  background-color: #3c3e41;
+  color: #fff !important;
   
 }
 @media(min-width: 750px){
@@ -87,16 +101,31 @@
 
 /* esto es para seleccionar la cantidad de ejercicios qwue el usuario desea resolver */
 .contenedorAritmeticaPryJs__cantidad{
-  background-color: #fff70e;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   transition-duration: .5s;
+  overflow: auto;
+  z-index: 1;
+}
+.contenedorAritmeticaPryJs__cantidad::after{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("https://th.bing.com/th/id/OIP.Y5ti2K9XdAduutxMfDgRhQHaEo?w=264&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.3);
 }
 .contenedorAritmeticaPryJs__cantidadHide{
   opacity: 0;
@@ -111,29 +140,28 @@
 }
 
 .contenedorAritmeticaPryJs__cantidad__seleccion{
-  background-color: #dbd522;
+  box-shadow: 0 35px 15px -15px #ffffff21;
   display: flex;
   text-align: center;
-  font-size: 1.8em;
-  padding: 8px;
+  /* font-size: 1.8em; */
+  padding: 15px;
   flex-direction: column;
-  width: 85%;
-  color: #000 !important;
-  box-shadow: 0 15px 15px 2px #bbb61b;
+  width: 65%;
+  color: #fff !important;
+  margin-top: 45px;
 }
 .contenedorAritmeticaPryJs__cantidad__seleccion h4{
   margin-bottom: 25px;
 }
 
 .contenedorAritmeticaPryJs__cantidad__input{
-  background-color: #b4f61a;
   border-radius: 1000px;
   overflow: hidden;
   display: flex;
-  outline: 2px solid #6e901f !important;
+  outline: 2px solid #2f2a2a !important;
 }
 .contenedorAritmeticaPryJs__cantidad__input input{
-  width: 85%;
+  width: 100%;
   border: none;
   outline: none;
 }
@@ -144,12 +172,15 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  color: #fff !important;
+  margin-top: 0;
 }
 
 @media(min-width:750px){
   .contenedorAritmeticaPryJs__cantidad__seleccion{
-    width: 450px;
+    width: 250px;
     padding: 15px;
+    font-size: 1.5em;
   }
 }
 
@@ -158,18 +189,400 @@
 
 
 /* estos son los estilos que son para seleccionar la operacion que quiere hacer el usuario */
-.contenedorSelectOperacionProyJs{
-  position: absolute;
+.contenedorSelectOperacionProyJs__content{
+  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff !important;
+  padding: 15px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+.contenedorSelectOperacionProyJs__content h4{
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.contenedorSelectOperacionProyJs__content__botones{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorSelectOperacionProyJs__content__botones div{
+  margin: 8px;
+  text-align: center;
+  padding: 8px !important;
+  transition-duration: .5s;
+}
+.contenedorSelectOperacionProyJs__content__botones div:hover{
+  background-color: #000000c4;
+}
+.contenedorSelectOperacionProyJs__content__botones div:hover > button{
+  background-color: #262424;
+  color: #9bff10 !important;
+}
+
+.contenedorSelectOperacionProyJs__content__botones div button{
+  background-color: #100f0f;
+  color: #fff !important;
+  border: none;
+  outline: none;
+  transition-duration: .5s;
+  cursor: pointer;
+  border-radius: 1000px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+.contenedorSelectOperacionProyJs__content__botones div p{
+  color: #fff !important;
+  user-select: none;
+  background-color: transparent !important;
+  margin-top: 0 !important;
+}
+
+
+@media(min-width:750px){
+  .contenedorSelectOperacionProyJs__content{
+    width: 100%;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* estos son los estilos del boton para iniciar */
+.comprobarProyJsBtnCap4V1{
+  border: none;
+  outline: none;
+  margin-bottom: 50px;
+  background-color: #0000002c;
+  color: #fff !important;
+  animation-name: bordeBtonComprobarProyJsBtnCap4V1;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  cursor: pointer;
+  transition-duration: .5s;
+  padding: 8px 15px 8px 15px;
+  border-radius: 100px;
+}
+.comprobarProyJsBtnCap4V1:hover{
+  background-color: #000000c3;
+  transition-duration: .5s;
+}
+@keyframes bordeBtonComprobarProyJsBtnCap4V1 {
+  0%{
+    box-shadow: 0 0px 8px 0px #262726;
+  }
+  100%{
+    box-shadow: 0 0px 15px 12px #ffffff9d;
+  }
+}
+@media(min-width:750px){
+  .comprobarProyJsBtnCap4V1{
+    font-size: 1.5em;
+  }
+}
+
+
+
+.contenedorMostrarProcesosProyJsCap4{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+  box-shadow: 0 25px 15px -15px #252825;
+  width: 85%;
+}
+.contenedorMostrarProcesosProyJsCap4 p{
+  background-color: transparent;
+  margin-top: 0;
+  height: 85px;
+  width: 85%;
+  text-align: center;
+  background-color: #24232354;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(min-width: 750px){
+  .contenedorMostrarProcesosProyJsCap4{
+    width: auto;
+  }
+  .contenedorMostrarProcesosProyJsCap4 p{
+    width: 120px;
+    height: 120px;
+    padding: 15px;
+    font-size: 1.3em;
+  }
+}
+
+
+
+
+
+/* estos son los estilos de los numeros aleatorios para que el usuario resuelva. */
+
+.resolverOperacionContenedorPryJsCap4{
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffffff;
+}
+.resolverOperacionContenedorPryJsCap4::before{
+  content: "";
   width: 100%;
   height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("https://th.bing.com/th/id/OIP.Y5ti2K9XdAduutxMfDgRhQHaEo?w=264&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.4);
+  z-index: -1;
+}
+.resolverOperacionContenedorPryJsCap4 p{
+  color: #fff !important;
+  margin-left: 15px;
+  font-size: 1.4em;
+  text-align: end;
+}
+.resolverOperacionContenedorPryJsCap4__contenedor{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  color: #fff !important;
+  gap: 15px;
+}
+.resolverOperacionContenedorPryJsCap4__contenedor__first{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1em;
+}
+.resolverOperacionContenedorPryJsCap4Animated{
+  padding: 25px;
+  position: relative;
+  opacity: 0;
+  
+}
+.resolverOperacionContenedorPryJsCap4AnimatedChange{
+  transform: rotateY(90deg);
+  transition-duration: .5s;
+  opacity: 1;
+}
+.resolverOperacionContenedorPryJsCap4AnimatedNoChange{
+  transform: rotate(0deg);
+  transition-duration: .5s;
+  opacity: 1;
+}
+
+.resolverOperacionContenedorPryJsCap4__contenedor__input input{
+  width: 50px;
+  border: none;
+  border-top: 2px solid #fff;
+  background-color: transparent;
+  outline: none;
+  color: #fff !important;
+  font-size: 1.3em;
+  display: block;
+  margin: auto;
+  margin-left: -2px;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+
+}
+.resolverOperacionContenedorPryJsCap4__contenedor__input input[type="number"]::-webkit-inner-spin-button,
+.resolverOperacionContenedorPryJsCap4__contenedor__input input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.resolverOperacionContenedorPryJsCap4__contenedor__second{
+  margin-left: -0px !important;
+}
+
+.mensajeCorrInProuCap4Js{
+  padding: 0 15px 0 15px;
+  text-align: center !important;
+  border-radius: 15px;
+  transition-duration: .5s;
+  position: absolute;
+  margin-top: 200px !important;
+  margin-left: 0 !important;
+}
+.mensajeCorrInProuCap4JsShow{
+  opacity: 1;
+  visibility: visible;
   transition-duration: .5s;
 }
-.contenedorSelectOperacionProyJsHide{
+.mensajeCorrInProuCap4JsHide{
   opacity: 0;
   visibility: hidden;
+  transition-duration: .5s;
+}
+.mensajeCorrInProuCap4JsCoorecto{
+  background-color: #349034;
+  margin-top: 15px;
+}
+.mensajeCorrInProuCap4JsIncorrecto{
+  background-color: #ab0909;
+  margin-top: 15px;
+}
+@media(min-width:750px){
+  .resolverOperacionContenedorPryJsCap4Animated{
+    font-size: 2em;
+  }
+  .resolverOperacionContenedorPryJsCap4__contenedor__input input{
+    width: 90px;
+    font-size: 1.5em;
+  }
+  .mensajeCorrInProuCap4Js{
+    font-size: 2em !important;
+  }
+}
+
+
+
+/* estos son los estilos del boton de comprobar */
+.BotonComprobarProyJsCap4{
+  background-color: #00000031;
+  border: none;
+  border-radius: 1000px;
+  outline: none;
+  color: #fff !important;
+  animation-name: animarBotonComprobarJsProy;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.BotonComprobarProyJsCap4:hover{
+  background-color: #00000091;
+}
+.BotonComprobarProyJsCap4Show{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.BotonComprobarProyJsCap4Hide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+@keyframes animarBotonComprobarJsProy{
+  0%{
+    box-shadow: 0 0px 10px 0px #ffffff77;
+  }
+  100%{
+    box-shadow: 0 0px 20px 8px #ffffff77;
+  }
+}
+@media(min-width:750px){
+  .BotonComprobarProyJsCap4{
+    font-size: 2em;
+  }
+}
+
+
+
+
+/* estos son los estilos de las estadisticas */
+.contenedorEstadisticasProyJsCap4{
+  position: fixed;
+  margin: auto;
+  background-color: #000000a7;
+  color: #fff !important;
+  /* padding: 15px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+}
+.contenedorEstadisticasProyJsCap4Show{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+  position: absolute;
+}
+.contenedorEstadisticasProyJsCap4 div{
+  display: flex;
+  flex-direction: column;
+}
+.contenedorEstadisticasProyJsCap4 p{
+  margin: 15px;
+  height: 45px;
+  text-align: center;
+  font-size: 1.5em;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.contenedorEstadisticasProyJsCap4 p:nth-child(1){
+  background-color: #127b12;
+}
+.contenedorEstadisticasProyJsCap4 p:nth-child(2){
+  background-color: #f00;
+}
+
+
+
+
+
+
+/* este es el boton para reintentar */
+.botonReintentarCap4ProyJs{
+  background-color: #000;
+  color: #fff;
+  border-radius: 1000px;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  outline: none;
+  order: 1;
+  transition-duration: .5s;
+  cursor: pointer;
+}
+.botonReintentarCap4ProyJs:hover{
+  background-color: #262424;
+  transition-duration: .5s;
+}
+
+@media(min-width: 750px){
+  .contenedorEstadisticasProyJsCap4{
+    width: 350px;
+    overflow: hidden;
+    padding: 20px;
+    height: 350px;
+  }
+  .contenedorEstadisticasProyJsCap4 div{
+    font-size: 1.5em;
+  }
+  .contenedorEstadisticasProyJsCap4 div p{
+    width: auto;
+  }
+  .botonReintentarCap4ProyJs{
+    font-size: 2em;
+    width: 65px;
+    height: 65px;
+  }
 }

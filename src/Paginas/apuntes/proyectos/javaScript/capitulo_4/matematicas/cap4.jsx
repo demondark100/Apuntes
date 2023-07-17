@@ -5,6 +5,11 @@ import Volver from "../../../../../../componentes/volver/volver";
 import React, { useState, useEffect } from 'react';
 import "./cap4.css"
 
+// iconos
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRedoAlt } from '@fortawesome/free-solid-svg-icons';
+
+
 // este componente muestra las instucciones
 function Instrucciones({
   showInstrucciones,
@@ -25,13 +30,19 @@ function Instrucciones({
       }>
         <h4>Instrucciones</h4>
         <p>
-          Hola bienvenido/a a los ejercicios matematicos basicos para aprender aritmetica , la dinamica sera esta: <br />
-          <br />
-          1. resuelve el ejercicio y le das a aseptar. <br />
-          <br />
-          2. tu podras elegir cuantos ejercicios quieres resolver para practicar. <br />
-          <br />
-          3. al final yo te mostrare cuantas veces asetaste y cuantas te equivocaste
+          {`Te dare una breve explicacion:
+
+1. Debes poner cuantos ejercicios deseas resolver en el espacio que esta de color blanco (solo se admiten numeros).
+
+2. Selecciona que operacion quieres practicar tienes + , - , x , ÷.
+
+3. Una vez seleccionados dale en iniciar y apareceran los ejercicios para resolver.
+
+4. Cuando termines un ejercicio dale a "siguiente" para pasar al siguiente ejercicio.
+
+5. Al final te mostrare cuantas respuestas correctas e incorrectas tienes.
+
+¡Suerte!`}
         </p>
         <button onClick={()=>setShowInstrucciones(false)}>Entendido</button>
       </div>
@@ -40,13 +51,21 @@ function Instrucciones({
 }
 
 
+
+
 // este componente renderizara la cantidad de operaciones que quiere realizar el usuario
 function CantidadOperaciones({
   handleKeyPress,
   setCantidad,
   showCantidad,
   mensajeErrorCantidad,
-  obtenerCantidad
+  operaciones,
+  obtenerOperacion,
+  iniciar,
+  mensajeErrorOperacion,
+  cantidad,
+  operacionLetra,
+  operacion
 }){
   return(
     <div className={`contenedorAritmeticaPryJs__cantidad ${showCantidad ? "":"contenedorAritmeticaPryJs__cantidadHide"}`}>
@@ -58,7 +77,6 @@ function CantidadOperaciones({
             onKeyPress={handleKeyPress}
             onChange={(e)=>setCantidad(e.target.value)}
           />
-          <button onClick={obtenerCantidad}>Iniciar</button>
         </div>
         {
           mensajeErrorCantidad && <p>
@@ -66,37 +84,143 @@ function CantidadOperaciones({
           </p>
         }
       </div>
+      <ElegirOperacion 
+        operaciones={operaciones}
+        obtenerOperacion={obtenerOperacion}
+        mensajeErrorOperacion={mensajeErrorOperacion}
+      />
+
+      <div className="contenedorMostrarProcesosProyJsCap4">
+        <p>ejercicios para resolver: {cantidad == 0 ? "0": cantidad}</p>
+        <p>
+          operacion elegida: {operacion == "" ? "no elegido": operacionLetra}
+        </p>
+      </div>
+
+      <button className="comprobarProyJsBtnCap4V1" onClick={iniciar}>
+        <span>¡iniciar!</span>
+      </button>
+
     </div>
   )
 }
 
 
+
+// este componente renderiza las opciones para elegir una operacion.
 function ElegirOperacion({
   operaciones,
   obtenerOperacion,
-  showSelectOp
+  mensajeErrorOperacion
 }){
 
   return(
-    <div className={`contenedorSelectOperacionProyJs ${showSelectOp ? "":"contenedorSelectOperacionProyJsHide"}`}>
-      <h4>¡Elije una operacion!</h4>
-      <div>
-        {operaciones.map((i) => (
-          <>
-            <button onClick={() => obtenerOperacion(i[1])} key={i[1]}>
-              {i[1]}
-            </button>
-          <p>{i[2]}</p>
-          </>
-        ))}
+      <div className="contenedorSelectOperacionProyJs__content">
+        <h4>¡Elije una operacion!</h4>
+        <div className="contenedorSelectOperacionProyJs__content__botones">
+          {operaciones.map((i) => (
+            <div>
+              <button onClick={() => obtenerOperacion(i[1])} key={i[1]}>
+                {i[1]}
+              </button>
+              <p>{i[2]}</p>
+            </div>
+          ))}
+        </div>
+        {
+          mensajeErrorOperacion && <p style={{textAlign: "center"}}>
+            porfavor seleccione una operacion para continuar.
+          </p> 
+        }
       </div>
-    </div>
   )
 }
 
 
 
+
+// este es el componente que muestra los numeros que debe resolver el usuario.
+function ResolverOperacion({
+  setResultadoUsuario,
+  nun1,nun2,
+  comprobar,
+  showHideBotonComprobar,
+  showEstadisticas,
+  correctos,
+  incorrectos,
+  reintentar,
+  darMensaje,
+  colorDarMensaje,
+  showMensajesErrCorr,
+  exerciseChange,
+  operacionMuestra
+}){
+  return(
+    <div className="resolverOperacionContenedorPryJsCap4">
+      <div className={`resolverOperacionContenedorPryJsCap4Animated ${
+        exerciseChange ?
+          "resolverOperacionContenedorPryJsCap4AnimatedChange":
+          "resolverOperacionContenedorPryJsCap4AnimatedNoChange"
+      }`}>
+        <div className="resolverOperacionContenedorPryJsCap4__contenedor">
+          <div className="resolverOperacionContenedorPryJsCap4__contenedor__first">
+            <p>{nun1}</p>
+            <p>{nun2}</p>
+          </div>
+          <b>{operacionMuestra}</b>
+        </div>
+        <div className="resolverOperacionContenedorPryJsCap4__contenedor__input">
+          <input
+            type="number"
+            onChange={(e)=>setResultadoUsuario(e.target.value)}
+          />
+        </div>
+      </div>
+      <p 
+        className={`mensajeCorrInProuCap4Js ${colorDarMensaje ? 
+          "mensajeCorrInProuCap4JsCoorecto":
+          "mensajeCorrInProuCap4JsIncorrecto"}
+          ${showMensajesErrCorr ? 
+            "mensajeCorrInProuCap4JsShow":"mensajeCorrInProuCap4JsHide"
+          }`
+        }
+      >{darMensaje}</p>
+      <button  
+        onClick={comprobar}
+        className={`BotonComprobarProyJsCap4 ${showHideBotonComprobar ? "BotonComprobarProyJsCap4Show":"BotonComprobarProyJsCap4Hide"}`}
+      >siguiente</button>
+
+      <Estadisticas 
+        showEstadisticas={showEstadisticas}
+        correctos={correctos}
+        incorrectos={incorrectos}
+        reintentar={reintentar}
+      />
+    </div>
+  )
+}
+
+function Estadisticas({
+  showEstadisticas,
+  correctos,
+  incorrectos,
+  reintentar
+}){
+  return(
+    <div className={`contenedorEstadisticasProyJsCap4 ${showEstadisticas ? "contenedorEstadisticasProyJsCap4Show":""}`}>
+      <div>
+      <p>correctos: {correctos}</p>
+      <p>incorrectos: {incorrectos}</p>
+      </div>
+      <button className="botonReintentarCap4ProyJs" onClick={reintentar}><FontAwesomeIcon icon={faRedoAlt} /></button>
+
+    </div>
+  )
+}
+
+
 function Cap4ProyJsV1() {
+  let elNumeroAleatorio = 1000;
 
   const [showInstrucciones, setShowInstrucciones] = useState(true); // este estado quitara las instrucciones.
 
@@ -114,18 +238,6 @@ function Cap4ProyJsV1() {
   const [cantidad, setCantidad] = useState(0); //esto obtiene la cantidad de ejercicios que el usuario quiere realizar.
   const [showCantidad, setShowCantidad] = useState(true); // esto es para quitar el div que muestra la cantidad.
   const [mensajeErrorCantidad, setMensajeErrorCantidad] = useState(false);
-  const obtenerCantidad=()=>{
-    if (cantidad == 0) {
-      setMensajeErrorCantidad(true)
-      setTimeout(() => {
-        setMensajeErrorCantidad(false)
-      }, 4000);
-    } else {
-      setShowCantidad(false)
-      setMensajeErrorCantidad(false)
-      setShowSelectOp(true)
-    }
-  }
 
 
   // toda esta funcionalidad es para obtener la operacion que desea hacer el UNSAFE_useScrollRestoration.
@@ -136,22 +248,144 @@ function Cap4ProyJsV1() {
     ["/","÷","divicion"]
   ]
   const [operacion, setOperacion] = useState(""); // esto guarda la operacion que eligio el usuario
-  const [showSelectOp, setShowSelectOp] = useState(false); // esto renderiza el contenedor para seleccionar las operaciones.
-  const obtenerOperacion = (valor) => {
-    setShowSelectOp(false)
-    let operacionReal = valor;
+  const [operacionLetra, setOperacionLetra] = useState("");
+  const [operacionMuestra, setOperacionMuestra] = useState("");
+  const obtenerOperacion = (valor1) => {
+    let operacionReal = valor1;
 
     // Reemplazar símbolos
     operaciones.forEach((op) => {
-      if (valor === op[1]) {
+      if (valor1 === op[1]) {
         operacionReal = op[0];
+        setOperacionLetra(op[2])
+        setOperacionMuestra(op[1])
       }
     });
 
     setOperacion(operacionReal);
+    
   };
 
+  // esto es para iniciar con las operaciones matematicas
+  const [mensajeErrorOperacion, setMensajeErrorOperacion] = useState(false);
+  const iniciar =()=>{
+    // estp es para verificar que cantidad tenga un numero.
+    if (cantidad == 0) {
+      setMensajeErrorCantidad(true)
+      setTimeout(() => {
+        setMensajeErrorCantidad(false)
+      }, 4000);
+    } else {
+      setMensajeErrorCantidad(false)
+    }
 
+    // esto es para verofocar que el usuario seleccione una operacion.
+    if (operacion == "") {
+      setMensajeErrorOperacion(true)
+      setTimeout(() => {
+        setMensajeErrorOperacion(false)
+      }, 4000);
+    }
+
+    // esto es para quitar este componente
+    if (operacion != "" && cantidad > 0) {
+      setShowCantidad(false)
+    }
+  }
+
+
+
+  // esta es la funcionalidad de las operaciones.
+  const [resultadoUsuario, setResultadoUsuario] = useState("");
+  const [nun1, setNun1] = useState(0);
+  const [nun2, setNun2] = useState(0);
+  const [aumento, setAumento] = useState(0);
+  const [correctos, setCorrectos] = useState(0);
+  const [incorrectos, setIncorrectos] = useState(0);
+  const [showHideBotonComprobar, setShowHideBotonComprobar] = useState(true);
+  const [exerciseChange, setExerciseChange] = useState(false);
+
+  let elejirMensaje = Math.floor(Math.random()*6);
+  let mensajesCorrecto = [
+    "bien hecho",
+    "correcto",
+    "vas muy bien",
+    "excelente",
+    "pero que buen trabajo",
+    "eres muy bueno para esto"
+  ]
+  let mensajesIncorrecto = [
+    "esta mal",
+    "incorrecto",
+    "no te rindas",
+    "¡Tu puedes!",
+    "fallaste pero continuemos ¿si?",
+    "estuviste cerca"
+  ]
+  const [darMensaje, setDarMensaje] = useState("");
+  const [colorDarMensaje, setColorDarMensaje] = useState(false);
+  const [showMensajesErrCorr, setShowMensajesErrCorr] = useState(false);
+  
+  useEffect(() => {
+    setAumento(1)
+    setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1);
+    setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1);
+  }, []);
+  
+  function comprobar() {
+    let resultado = eval(nun1 + operacion + nun2);
+    if (resultado < 0) {
+      resultado = 0
+    }
+    setTimeout(() => {
+      setShowMensajesErrCorr(false)
+      setShowHideBotonComprobar(true)
+    }, 3050);
+    setTimeout(() => {
+      setExerciseChange(false)
+    }, 500);
+    setAumento(aumento + 1);
+    if (aumento <= cantidad) {
+      if (resultadoUsuario == resultado) {
+        setCorrectos(correctos + 1);
+        setDarMensaje(`${mensajesCorrecto[elejirMensaje]}`)
+        setColorDarMensaje(true)
+        setShowMensajesErrCorr(true)
+        setShowHideBotonComprobar(false)
+        setExerciseChange(true)
+      } else {
+        setIncorrectos(incorrectos + 1);
+        setDarMensaje(`${mensajesIncorrecto[elejirMensaje]} respuesta correcta: ${resultado}`)
+        setColorDarMensaje(false)
+        setShowMensajesErrCorr(true)
+        setShowHideBotonComprobar(false)
+        setExerciseChange(true)
+      }
+  
+      if (aumento < cantidad) {
+        setTimeout(() => {
+          setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1);
+          setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1);
+        }, 500);
+      }
+    } else{
+      setShowHideBotonComprobar(false)
+      setShowEstadisticas(true) 
+    }
+  }
+  
+
+  const [showEstadisticas, setShowEstadisticas] = useState(false);
+  const reintentar =()=>{
+    setShowEstadisticas(false)
+    setShowCantidad(true)
+    setAumento(1)
+    setShowHideBotonComprobar(true)
+    setCorrectos(0)
+    setIncorrectos(0)
+    setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1)
+    setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1)
+  }
 
   return (  
     <>
@@ -272,14 +506,32 @@ aritmetica.comprobar()`}/>}/>
             setCantidad={setCantidad}
             showCantidad={showCantidad}
             mensajeErrorCantidad={mensajeErrorCantidad}
-            obtenerCantidad={obtenerCantidad}
-          />
-
-          {/* esto es para que el usuario elija la operacion que desea hacer */}
-          <ElegirOperacion
             operaciones={operaciones}
             obtenerOperacion={obtenerOperacion}
-            showSelectOp={showSelectOp}
+            iniciar={iniciar}
+            mensajeErrorOperacion={mensajeErrorOperacion}
+            cantidad={cantidad}
+            operacionLetra={operacionLetra}
+            operacion={operacion}
+          />
+          
+          <ResolverOperacion 
+            handleKeyPress={handleKeyPress}
+            resultadoUsuario={resultadoUsuario}
+            setResultadoUsuario={setResultadoUsuario}
+            nun1={nun1}
+            nun2={nun2}
+            comprobar={comprobar}
+            showHideBotonComprobar={showHideBotonComprobar}
+            showEstadisticas={showEstadisticas}
+            correctos={correctos}
+            incorrectos={incorrectos}
+            reintentar={reintentar}
+            darMensaje={darMensaje}
+            colorDarMensaje={colorDarMensaje}
+            showMensajesErrCorr={showMensajesErrCorr}
+            exerciseChange={exerciseChange}
+            operacionMuestra={operacionMuestra}
           />
 
         </div>
