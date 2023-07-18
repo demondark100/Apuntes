@@ -8,7 +8,8 @@ import "./cap4.css"
 // iconos
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedoAlt } from '@fortawesome/free-solid-svg-icons';
-
+import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 // este componente muestra las instucciones
 function Instrucciones({
@@ -90,12 +91,15 @@ function CantidadOperaciones({
         mensajeErrorOperacion={mensajeErrorOperacion}
       />
 
+
       <div className="contenedorMostrarProcesosProyJsCap4">
         <p>ejercicios para resolver: {cantidad == 0 ? "0": cantidad}</p>
         <p>
           operacion elegida: {operacion == "" ? "no elegido": operacionLetra}
         </p>
       </div>
+
+      <ElejirDificultad />
 
       <button className="comprobarProyJsBtnCap4V1" onClick={iniciar}>
         <span>¡iniciar!</span>
@@ -104,6 +108,7 @@ function CantidadOperaciones({
     </div>
   )
 }
+
 
 
 
@@ -133,6 +138,30 @@ function ElegirOperacion({
           </p> 
         }
       </div>
+  )
+}
+
+
+
+// esto es para elejir la dificultad
+function ElejirDificultad(){
+  return(
+    <div className="contenedorElejirDificultadCap4JsProy">
+      <h4>Elije una dificultad</h4>
+      <div className="contenedorElejirDificultadCap4JsProyIconosContent">
+        <div>
+          <FontAwesomeIcon icon={faCheckCircle} />
+        </div>
+
+        <div>
+          <FontAwesomeIcon icon={faBalanceScale} />
+        </div>
+
+        <div>
+          <FontAwesomeIcon icon={faExclamationCircle} />
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -327,13 +356,14 @@ function Cap4ProyJsV1() {
   const [showMensajesErrCorr, setShowMensajesErrCorr] = useState(false);
   
   useEffect(() => {
+
     setAumento(1)
     setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1);
     setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1);
   }, []);
   
   function comprobar() {
-    let resultado = eval(nun1 + operacion + nun2);
+    let resultado = eval(nun1 + operacion + nun2)
     if (resultado < 0) {
       resultado = 0
     }
@@ -346,6 +376,7 @@ function Cap4ProyJsV1() {
     }, 500);
     setAumento(aumento + 1);
     if (aumento <= cantidad) {
+
       if (resultadoUsuario == resultado) {
         setCorrectos(correctos + 1);
         setDarMensaje(`${mensajesCorrecto[elejirMensaje]}`)
@@ -353,7 +384,7 @@ function Cap4ProyJsV1() {
         setShowMensajesErrCorr(true)
         setShowHideBotonComprobar(false)
         setExerciseChange(true)
-      } else {
+      } else if(resultadoUsuario != resultado){
         setIncorrectos(incorrectos + 1);
         setDarMensaje(`${mensajesIncorrecto[elejirMensaje]} respuesta correcta: ${resultado}`)
         setColorDarMensaje(false)
@@ -363,10 +394,8 @@ function Cap4ProyJsV1() {
       }
   
       if (aumento < cantidad) {
-        setTimeout(() => {
-          setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1);
-          setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1);
-        }, 500);
+        setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1);
+        setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1);
       }
     } else{
       setShowHideBotonComprobar(false)

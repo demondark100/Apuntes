@@ -401,8 +401,7 @@
   display: block;
   margin: auto;
   margin-left: -2px;
-  direction: rtl;
-  unicode-bidi: bidi-override;
+  text-align: right;
 
 }
 .resolverOperacionContenedorPryJsCap4__contenedor__input input[type="number"]::-webkit-inner-spin-button,
@@ -448,8 +447,9 @@
     font-size: 2em;
   }
   .resolverOperacionContenedorPryJsCap4__contenedor__input input{
-    width: 90px;
-    font-size: 1.5em;
+    width: 110px;
+    margin-left: -25px;
+    font-size: 1.7em;
   }
   .mensajeCorrInProuCap4Js{
     font-size: 2em !important;
@@ -584,5 +584,41 @@
     font-size: 2em;
     width: 65px;
     height: 65px;
+  }
+}
+
+
+
+
+/* estos son los estilos para elejir la dificultad */
+.contenedorElejirDificultadCap4JsProy{
+  width: 45%;
+  padding: 8px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorElejirDificultadCap4JsProy h4{
+  color: #fff !important;
+}
+.contenedorElejirDificultadCap4JsProyIconosContent{
+  display: flex;
+  gap: 15px;
+  color: #fff !important;
+  margin-top: 15px;
+}
+
+@media(min-width: 750px){
+  .contenedorElejirDificultadCap4JsProy{
+    width: 250px;
+    padding: 5px;
+  }
+  .contenedorElejirDificultadCap4JsProyIconosContent{
+    font-size: 1.5em;
+  }
+  .contenedorElejirDificultadCap4JsProy h4{
+    font-size: 1.8em;
   }
 }
