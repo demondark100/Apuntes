@@ -148,6 +148,8 @@ function Proyectos({sendshowProyects}) {
                     {
                       cap4Js && <div className='temas'>
                         <Link to={"javaScript/cap4ProyV1"}>matematica para niños</Link>
+                        <Link to={"javaScript/cap4ProyV2"}>pregunta</Link>
+                        <Link to={"javaScript/cap4ProyV3"}>formulario</Link>
                       </div>
                     }
                   

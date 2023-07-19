@@ -1,0 +1,111 @@
+.contenedorCap4ProyV2Js{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.contenedorCap4ProyV2Js::before{
+  content: "";
+  position: absolute;
+  background-image: url("https://th.bing.com/th/id/OIP.UFiwWGQ1sJ4Fg1C-Hnn_BQHaEK?w=326&h=183&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  background-size: cover;
+  filter: brightness(.5);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.contenedorCap4ProyV2JsPegunta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 180px;
+  flex-direction: column;
+
+}
+.contenedorCap4ProyV2JsPegunta h4{
+  text-align: center;
+  color: #fff !important;
+}
+
+
+.contenedorCap4ProyV2JsPegunta button {
+  cursor: pointer;
+  border: none;
+  background-color: #0000009c;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 1000px;
+  box-shadow: 0 10px 15px -2px #fffdfd91;
+}
+
+.contenedorCap4ProyV2JsPegunta button:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #000, #00d5ffa4, #00ff00bb, #000, #00d5ff9c, #00ff00b7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  filter: brightness(.8);
+}
+
+.contenedorCap4ProyV2JsPegunta button:hover:before {
+  opacity: 1;
+}
+
+.contenedorMensajeProuJsCap4V2{
+  opacity: 1;
+  position: absolute;
+  transition-duration: .5s;
+  margin-top: 150px;
+}
+.contenedorMensajeProuJsCap4V2Hide{
+  opacity: 0;
+  position: absolute;
+  margin-top: 150px;
+  transition-duration: .5s;
+}
+.siCap4ProyJsV2{
+  background-color: #01ff014b;
+  padding: 0 25px 0 25px;
+  border-radius: 1000px;
+  color: #fff !important;
+}
+.noCap4ProyJsV2{
+  background-color: #ff000060;
+  padding: 0 25px 0 25px;
+  border-radius: 1000px;
+  color: #fff !important;
+}
+
+
+
+@media(min-width:750px){
+  .contenedorCap4ProyV2JsPegunta{
+    width: 200px;
+    height: 85px;
+    padding: 15px;
+  }
+  .contenedorCap4ProyV2JsPegunta button{
+    font-size: 1.5em;
+  }
+  .contenedorCap4ProyV2JsPegunta h4{
+    font-size: 1.5em;
+  }
+  .contenedorMensajeProuJsCap4V2 p{
+    font-size: 1.5em;
+  }
+}

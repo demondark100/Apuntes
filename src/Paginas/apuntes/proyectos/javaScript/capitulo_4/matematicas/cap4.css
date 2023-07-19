@@ -143,7 +143,6 @@
   box-shadow: 0 35px 15px -15px #ffffff21;
   display: flex;
   text-align: center;
-  /* font-size: 1.8em; */
   padding: 15px;
   flex-direction: column;
   width: 65%;
@@ -309,6 +308,7 @@
   width: 85%;
   text-align: center;
   background-color: #24232354;
+  backdrop-filter: blur(5px);
   margin: 15px;
   display: flex;
   align-items: center;
@@ -603,11 +603,37 @@
 .contenedorElejirDificultadCap4JsProy h4{
   color: #fff !important;
 }
+.contenedorElejirDificultadCap4JsProy p{
+  text-align: center;
+}
 .contenedorElejirDificultadCap4JsProyIconosContent{
   display: flex;
-  gap: 15px;
+  gap: 25px;
   color: #fff !important;
   margin-top: 15px;
+  user-select: none;
+}
+
+.contenedorIconoMensajeDificultadJsCap4{
+  display: flex;
+  flex-direction: column;
+  transition-duration: .5s;
+  padding: 8px;
+}
+.contenedorIconoMensajeDificultadJsCap4:hover{
+  background-color: #0000009a;
+  color: #11ec1c;
+  transition-duration: .5s;
+}
+.contenedorIconoMensajeDificultadJsCap4 svg{
+  margin-bottom: 15px;
+  transition-duration: .5s;
+}
+.contenedorIconoMensajeDificultadJsCap4 svg:hover{
+  color: #515751;
+  cursor: pointer;
+  transition-duration: .5s;
+  transition-duration: .5s;
 }
 
 @media(min-width: 750px){

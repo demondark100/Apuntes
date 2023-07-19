@@ -76,8 +76,15 @@ let noNumber = NaN;
 console.log(isFinite(noNumber));
 
 // resultados:
-// trye
+// true
 // false`}/>
+        <h2>eval</h2>
+        <Conseptos texto={`La función eval() en JavaScript es una función global que evalúa o ejecuta una cadena de texto como si fuera código JavaScript. Toma la cadena de texto y la interpreta como una expresión o declaración de JavaScript, devolviendo el resultado de la evaluación.`}/>
+        <JavaScropt codigo={`let expresion = "*";
+let numero = eval(5 + expresion + 5)
+
+console.log(numero);`}/>
+        <Conseptos texto={`En este caso se esta multiplicando 5 * 5 devido a que la expresion es *(x).`}/>
       </main>
       <Footer />
     </>

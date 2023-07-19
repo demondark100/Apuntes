@@ -279,6 +279,9 @@ import Cap3ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/asis
 import Cap3ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/fiesta/fiesta';
 import Cap3ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/tienda/tienda';
 import Cap4ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/matematicas/cap4';
+import Cap4ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/preguntar/cap4';
+import Cap4ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/formulario/cap4';
+
 
 // pendejadas
 import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
@@ -348,6 +351,8 @@ function App() {
               <Route path='javaScript/cap3ProyV3' element={<Cap3ProyJsV3 />} />
             {/* capitulo 4 */}
               <Route path='javaScript/cap4ProyV1' element={<Cap4ProyJsV1 />} />
+              <Route path='javaScript/cap4ProyV2' element={<Cap4ProyJsV2 />} />
+              <Route path='javaScript/cap4ProyV3' element={<Cap4ProyJsV3 />} />
 
             
             

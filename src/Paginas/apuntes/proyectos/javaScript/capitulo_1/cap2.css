@@ -15,7 +15,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0000009d;
+  background-color: #504a4a88;
+  backdrop-filter: blur(5px);
   width: 85%;
   height: 55%;
   overflow: auto;

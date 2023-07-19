@@ -14,6 +14,7 @@
   width: 85%;
   height: 65%;
   background-color: #0000005b;
+  backdrop-filter: blur(2px);
   padding: 2px;
   display: flex;
   flex-direction: column;
@@ -26,7 +27,7 @@
 }
 
 .contenedorFormularioCssProyCap4__h1{
-  color: #fff;
+  color: #fff !important;
   text-align: center !important;
   width: 100%;
   margin-top: 10% !important;

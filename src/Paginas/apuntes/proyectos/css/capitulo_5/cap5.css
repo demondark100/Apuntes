@@ -57,6 +57,7 @@
   width: 75%;
   max-width: 500px;
   background-color: #0000007a;
+  backdrop-filter: blur(3px);
   padding: 25px;
   max-height: 500px;
   max-width: 500px;

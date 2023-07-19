@@ -2,7 +2,7 @@ import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModa
 import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
 import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
 import Volver from "../../../../../../componentes/volver/volver";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef } from 'react';
 import "./cap4.css"
 
 // iconos
@@ -11,44 +11,62 @@ import { faRedoAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBalanceScale } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
+import sonido from "../matematicas/videoplayback.mp3"
+
 // este componente muestra las instucciones
 function Instrucciones({
   showInstrucciones,
   setShowInstrucciones
-}){
-  return(
-    <div 
-      className={`fondoNegroProyInstrucciones 
-      ${showInstrucciones ? 
-      "":
-      "fondoNegroProyInstruccionesHide"}`
-    }>
-      <div 
-        className={`contenedorInstruccionesJsProy 
-        ${showInstrucciones ? 
-        "":
-        "contenedorInstruccionesJsProyHide"}`
-      }>
+}) {
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === "Enter" || event.key === "Escape") {
+        setShowInstrucciones(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [setShowInstrucciones]);
+
+  const quitarInstrucciones = () => {
+    setShowInstrucciones(false);
+  };
+
+  return (
+    <div
+      className={`fondoNegroProyInstrucciones ${
+        showInstrucciones ? "" : "fondoNegroProyInstruccionesHide"
+      }`}
+    >
+      <div
+        className={`contenedorInstruccionesJsProy ${
+          showInstrucciones ? "" : "contenedorInstruccionesJsProyHide"
+        }`}
+      >
         <h4>Instrucciones</h4>
         <p>
-          {`Te dare una breve explicacion:
+          {`Te daré una breve explicación:
 
-1. Debes poner cuantos ejercicios deseas resolver en el espacio que esta de color blanco (solo se admiten numeros).
+1. Debes poner cuántos ejercicios deseas resolver en el espacio que está de color blanco (solo se admiten números).
 
-2. Selecciona que operacion quieres practicar tienes + , - , x , ÷.
+2. Selecciona qué operación quieres practicar: +, -, x, ÷.
 
-3. Una vez seleccionados dale en iniciar y apareceran los ejercicios para resolver.
+3. Una vez seleccionados, dale a "iniciar" y aparecerán los ejercicios para resolver.
 
-4. Cuando termines un ejercicio dale a "siguiente" para pasar al siguiente ejercicio.
+4. Cuando termines un ejercicio, dale a "siguiente" para pasar al siguiente ejercicio.
 
-5. Al final te mostrare cuantas respuestas correctas e incorrectas tienes.
+5. Al final te mostraré cuántas respuestas correctas e incorrectas tienes.
 
-¡Suerte!`}
+¡Buena suerte!`}
         </p>
-        <button onClick={()=>setShowInstrucciones(false)}>Entendido</button>
+        <button onClick={quitarInstrucciones}>Entendido</button>
       </div>
     </div>
-  )
+  );
 }
 
 
@@ -66,7 +84,10 @@ function CantidadOperaciones({
   mensajeErrorOperacion,
   cantidad,
   operacionLetra,
-  operacion
+  operacion,
+  setElNumeroAleatorio,
+  mensajeDificultad,
+  reproducirSonido,quitarSonido
 }){
   return(
     <div className={`contenedorAritmeticaPryJs__cantidad ${showCantidad ? "":"contenedorAritmeticaPryJs__cantidadHide"}`}>
@@ -89,6 +110,8 @@ function CantidadOperaciones({
         operaciones={operaciones}
         obtenerOperacion={obtenerOperacion}
         mensajeErrorOperacion={mensajeErrorOperacion}
+        reproducirSonido={reproducirSonido}
+        quitarSonido={quitarSonido}
       />
 
 
@@ -99,7 +122,12 @@ function CantidadOperaciones({
         </p>
       </div>
 
-      <ElejirDificultad />
+      <ElejirDificultad 
+        setElNumeroAleatorio={setElNumeroAleatorio}
+        mensajeDificultad={mensajeDificultad}
+        reproducirSonido={reproducirSonido}
+        quitarSonido={quitarSonido}
+      />
 
       <button className="comprobarProyJsBtnCap4V1" onClick={iniciar}>
         <span>¡iniciar!</span>
@@ -116,7 +144,9 @@ function CantidadOperaciones({
 function ElegirOperacion({
   operaciones,
   obtenerOperacion,
-  mensajeErrorOperacion
+  mensajeErrorOperacion,
+  reproducirSonido,
+  quitarSonido
 }){
 
   return(
@@ -125,7 +155,7 @@ function ElegirOperacion({
         <div className="contenedorSelectOperacionProyJs__content__botones">
           {operaciones.map((i) => (
             <div>
-              <button onClick={() => obtenerOperacion(i[1])} key={i[1]}>
+              <button onClick={() => obtenerOperacion(i[1])} key={i[1]} onMouseEnter={reproducirSonido} onMouseOut={quitarSonido}>
                 {i[1]}
               </button>
               <p>{i[2]}</p>
@@ -144,23 +174,51 @@ function ElegirOperacion({
 
 
 // esto es para elejir la dificultad
-function ElejirDificultad(){
+function ElejirDificultad({
+  setElNumeroAleatorio,
+  mensajeDificultad,
+  reproducirSonido,
+  quitarSonido
+}){
   return(
     <div className="contenedorElejirDificultadCap4JsProy">
       <h4>Elije una dificultad</h4>
       <div className="contenedorElejirDificultadCap4JsProyIconosContent">
-        <div>
-          <FontAwesomeIcon icon={faCheckCircle} />
+        <div className="contenedorIconoMensajeDificultadJsCap4">
+          <FontAwesomeIcon
+            onClick={()=>setElNumeroAleatorio(100)}
+            onMouseEnter={reproducirSonido}
+            onMouseOut={quitarSonido}
+            icon={faCheckCircle}
+          />
+          <b>facil</b>
         </div>
 
-        <div>
-          <FontAwesomeIcon icon={faBalanceScale} />
+        <div className="contenedorIconoMensajeDificultadJsCap4">
+          <FontAwesomeIcon 
+            onClick={()=>setElNumeroAleatorio(500)}
+            onMouseEnter={reproducirSonido}
+            onMouseOut={quitarSonido}
+            icon={faBalanceScale} 
+          />
+          <b>medio</b>
         </div>
 
-        <div>
-          <FontAwesomeIcon icon={faExclamationCircle} />
+        <div className="contenedorIconoMensajeDificultadJsCap4">
+          <FontAwesomeIcon
+            onClick={()=>setElNumeroAleatorio(1000)}
+            onMouseEnter={reproducirSonido}
+            onMouseOut={quitarSonido}
+            icon={faExclamationCircle} 
+          />
+          <b>dificil</b>
         </div>
       </div>
+      {
+        mensajeDificultad && <p>
+          porfavor seleccione una dificultad para iniciar
+        </p>
+      }
     </div>
   )
 }
@@ -249,7 +307,10 @@ function Estadisticas({
 
 
 function Cap4ProyJsV1() {
-  let elNumeroAleatorio = 1000;
+  const sound = useRef(null);
+
+  const [elNumeroAleatorio, setElNumeroAleatorio] = useState(20);
+  const [mensajeDificultad, setMensajeDificultad] = useState(false);
 
   const [showInstrucciones, setShowInstrucciones] = useState(true); // este estado quitara las instrucciones.
 
@@ -315,11 +376,18 @@ function Cap4ProyJsV1() {
         setMensajeErrorOperacion(false)
       }, 4000);
     }
+    if (elNumeroAleatorio == 20) {
+      setMensajeDificultad(true)
+      setTimeout(() => {
+        setMensajeDificultad(false)
+      }, 4000);
+    }
 
     // esto es para quitar este componente
-    if (operacion != "" && cantidad > 0) {
+    if (operacion != "" && cantidad > 0 && elNumeroAleatorio > 20) {
       setShowCantidad(false)
     }
+
   }
 
 
@@ -414,6 +482,14 @@ function Cap4ProyJsV1() {
     setIncorrectos(0)
     setNun1(Math.floor(Math.random() * elNumeroAleatorio) + 1)
     setNun2(Math.floor(Math.random() * elNumeroAleatorio) + 1)
+  }
+
+  const reproducirSonido=()=>{
+    sound.current.play()
+  }
+  const quitarSonido=()=>{
+    sound.current.pause();
+    sound.current.currentTime = 0;
   }
 
   return (  
@@ -522,7 +598,7 @@ aritmetica.comprobar()`}/>}/>
       <div className="Page">
 
         <div className="contenedorAritmeticaPryJs">
-
+          <audio ref={sound} src={sonido}></audio>
           {/* estas son las instrucciones */}
           <Instrucciones 
             showInstrucciones={showInstrucciones} 
@@ -542,6 +618,10 @@ aritmetica.comprobar()`}/>}/>
             cantidad={cantidad}
             operacionLetra={operacionLetra}
             operacion={operacion}
+            setElNumeroAleatorio={setElNumeroAleatorio}
+            mensajeDificultad={mensajeDificultad}
+            reproducirSonido={reproducirSonido}
+            quitarSonido={quitarSonido}
           />
           
           <ResolverOperacion 

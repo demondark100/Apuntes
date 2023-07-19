@@ -35,7 +35,7 @@ Recuerda que aprendimos:
         <div className="mainCap4ProyCss">
           
           <div className="contenedorFormularioCssProyCap4">
-            <h2 className="contenedorFormularioCssProyCap4__h1">log in</h2>
+            <h4 className="contenedorFormularioCssProyCap4__h1">log in</h4>
 
             <form className="contenedorFormularioCssProyCap4__form">
 
