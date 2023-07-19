@@ -14002,7 +14002,90 @@ aritmetica.comprobar()`})}),jsx(Volver,{link:"../"}),jsx("div",{className:"Page"
 Hacer una pregunta al usuario pero que no pueda decir que no.`}),jsx(CodigoFuenteSinInt,{codigo:jsx(JavaScropt,{codigo:`// no se puede modificar la ventanita de prompt :v
 // solo dire que se uso mucho Math.random para esto.`})}),jsx(Volver,{link:"../"}),jsx("div",{className:"Page",children:jsxs("div",{className:"contenedorCap4ProyV2Js",children:[jsxs("div",{className:"contenedorCap4ProyV2JsPegunta",children:[jsx("h4",{children:"¿programar es lo mejor?"}),jsxs("div",{children:[jsx("button",{onClick:()=>{s(!0),g(!0),setTimeout(()=>{g(!1)},1e4)},children:"si"}),jsx("button",{onClick:()=>{s(!1),g(!0),setTimeout(()=>{g(!1)},1e4)},ref:a,onMouseEnter:o,children:"no"})]})]}),jsx("div",{className:c?"contenedorMensajeProuJsCap4V2":"contenedorMensajeProuJsCap4V2Hide",children:i?jsx("p",{className:"siCap4ProyJsV2",children:"de acuerdo contigo."}):jsx("p",{className:"noCap4ProyJsV2",children:"esta bien no :c"})})]})})]})}function Cap4ProyJsV3(){return jsxs(Fragment,{children:[jsx(MensajeModal,{texto:`¡Proyecto! capitulo 4
 
-Hacer un formulario que valide las entradas que de el usuario.`}),jsx(CodigoFuenteSinInt,{codigo:jsx(JavaScropt,{codigo:"xd"})}),jsx(Volver,{link:"../"}),jsx("div",{className:"Page",children:"asd"})]})}const calculadora="";function Calculadora(){const a=reactExports.useRef(null),o=reactExports.useRef(null);reactExports.useRef(null);const i=reactExports.useRef(null);return jsx(Fragment,{children:jsxs("main",{children:[jsx("h1",{children:"una pinche calculadora"}),jsx(Conseptos,{texto:"Copia todo el pinche codigo."}),jsx(Html,{codigo:`<!DOCTYPE html>
+Hacer un formulario que valide las entradas que de el usuario.`}),jsx(CodigoFuenteSinInt,{codigo:jsx(JavaScropt,{codigo:`alert("Bienvenido/a al registro para esta red social por favor rellene los campos para continuar.")
+class Formulario {
+  constructor() {
+    this.nombre = "";
+    this.apellido = "";
+    this.correo = "";
+    this.contraseña = "";
+    this.numero = "";
+  }
+
+  pedirValor(campo, min, max) {
+    let valor;
+    do {
+      valor = prompt(\`Ingrese \${campo}:\`);
+      if (valor === null) {
+        return null;
+      }
+
+      valor = valor.trim();
+
+      if (valor.length < min) {
+        alert(\`La cantidad de caracteres en \${campo} es insuficiente (mínimo \${min} caracteres).\`);
+      } else if (valor.length > max) {
+        alert(\`Excediste la cantidad de caracteres en \${campo} (máximo \${max} caracteres).\`);
+      }
+    } while (valor.length < min || valor.length > max);
+
+    return valor;
+  }
+
+  validarCorreo(correo) {
+    while (true) {
+      correo = this.pedirValor("correo electrónico", 5, 50);
+      if (correo === null) {
+        // User clicked 'Cancel' on the prompt
+        return null;
+      }
+
+      if (correo.indexOf("@gmail.com") === -1) {
+        alert("El correo debe contener '@gmail.com'.");
+      } else {
+        return correo;
+      }
+    }
+  }
+
+  validarNumero(numero) {
+    while (true) {
+      numero = this.pedirValor("número telefónico", 6, 9);
+      if (numero === null) {
+        // User clicked 'Cancel' on the prompt
+        return null;
+      }
+
+      if (isNaN(numero)) {
+        alert("Debes ingresar solo números, no letras.");
+      } else {
+        return numero;
+      }
+    }
+  }
+
+  mostrar() {
+    this.nombre = this.pedirValor("nombres", 3, 22);
+    if (this.nombre === null) return;
+
+    this.apellido = this.pedirValor("apellidos", 3, 22);
+    if (this.apellido === null) return;
+
+    this.correo = this.validarCorreo(this.correo);
+    if (this.correo === null) return;
+
+    this.contraseña = this.pedirValor("contraseña", 5, 22);
+    if (this.contraseña === null) return;
+
+    this.numero = this.validarNumero(this.numero);
+    if (this.numero === null) return;
+
+    alert("¡registro exitoso!");
+  }
+}
+
+const formulario = new Formulario();
+formulario.mostrar();`})}),jsx(Volver,{link:"../"}),jsx("div",{className:"Page",children:"asd"})]})}const calculadora="";function Calculadora(){const a=reactExports.useRef(null),o=reactExports.useRef(null);reactExports.useRef(null);const i=reactExports.useRef(null);return jsx(Fragment,{children:jsxs("main",{children:[jsx("h1",{children:"una pinche calculadora"}),jsx(Conseptos,{texto:"Copia todo el pinche codigo."}),jsx(Html,{codigo:`<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
