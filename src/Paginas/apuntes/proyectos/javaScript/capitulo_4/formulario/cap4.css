@@ -1,0 +1,241 @@
+.ContenedorProyJsCap4V3Input{
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images8.alphacoders.com/361/361497.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  backdrop-filter: brightness(0);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+}
+
+/* este es el contenedor del boton para iniciar sesion o registrarse */
+.ContenedorProyJsCap4V3Botones{
+  position: absolute;
+  top: 0;
+  margin-top: 25px;
+}
+.ContenedorProyJsCap4V3Botones button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 3px;
+  color: #fff !important;
+  box-shadow: 0px 2px 15px -2px #fff;
+  background-color: #00000048;
+  transition-duration: .5s;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+.ContenedorProyJsCap4V3Botones button:hover{
+  box-shadow: 0px 2px 15px 5px #fff;
+  background-color: #00000098;
+  transition-duration: .5s;
+}
+
+
+
+/* esto es el contenedor en generar */
+.ContenedorProyJsCap4V3General{
+  background-color: #00000060;
+  backdrop-filter: blur(3px);
+  width: 250px;
+  height: 450px;
+  position: relative;
+  top: 90px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px !important;
+  box-shadow: 0 0 15px -5px #fff7f7;
+  margin-bottom: 150px;
+}
+
+/* estilos del titulo */
+.ContenedorProyJsCap4V3General h4{
+  color: #fff !important;
+  position: absolute;
+  top: 0;
+  margin-top: 25px;
+}
+
+/* estilos de los input */
+.ContenedorProyJsCap4V3General input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  color: #fff !important;
+  box-shadow: 0px 2px 15px -2px #fff;
+  transition-duration: .5s;
+  border-radius: 1000px;
+}
+.ContenedorProyJsCap4V3General input::placeholder{
+  color: #fff !important;
+}
+.ContenedorProyJsCap4V3General input:hover{
+  background-color: #00000038;
+  transition-duration: .5s;
+  box-shadow: 0px 2px 15px 5px #fff;
+}
+
+/* estos son los estilos de los mensajes de error */
+.ContenedorProyJsCap4V3General p{
+  color: #ff0404 !important;
+  background-color: #00000054;
+  margin-bottom: 15px;
+  margin-top: -5px;
+  width: 85%;
+  padding: 4px;
+  font-size: .8em;
+}
+
+
+/* estos son los estilos del boton para iniciar sesion o registrarse */
+.ContenedorProyJsCap4V3General button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 1000px;
+  box-shadow: 0px 2px 15px -2px #fff;
+  color: #c0a3a3 !important;
+  transition-duration: .5s;
+}
+.ContenedorProyJsCap4V3General button:hover{
+  background-color: #00000021;
+  transition-duration: .5s;
+  color: #fff !important;
+  box-shadow: 0px 2px 15px 5px #fff;
+}
+
+.ContenedorProyJsCap4V3General b{
+  color: #0861d4;
+  cursor: pointer;
+}
+
+
+/* este es el contenedor de registrarse */
+.ContenedorProyJsCap4V3Resistrarse{
+  position: absolute;
+  z-index: 1;
+  transition-duration: .5s;
+}
+.ShowContenedorProyJsCap4V3Resistrarse{
+  z-index: 1;
+}
+.HideContenedorProyJsCap4V3Resistrarse{
+  z-index: 0;
+  transform: rotateY(150deg);
+  opacity: 0;
+}
+
+/* este es el contenedor de iniciar sesion */
+.ContenedorProyJsCap4V3Login{
+  position: absolute;
+  transition-duration: .5s;
+  transform: rotateY(150deg);
+}
+.ShowContenedorProyJsCap4V3Login{
+  z-index: 1;
+  transform: rotateY(0deg);
+}
+.HideContenedorProyJsCap4V3Login{
+  z-index: 0;
+  opacity: 0;
+}
+
+
+/* estos son los estilos del contenedor de los mensajes */
+.contenedorMensjaesProuJsCap4V3{
+  backdrop-filter: blur(15px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition-duration: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorMensjaesProuJsCap4V3Hide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.contenedorMensjaesProuJsCap4V3Content{
+  color: #fff !important;
+  width: 220px;
+  height: 150px;
+  background-color: #00000063;
+  box-shadow: 0 0 15px 5px #000;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contenedorMensjaesProuJsCap4V3Content p{
+  color: #fff !important;
+}
+.contenedorMensjaesProuJsCap4V3Content button{
+  padding: 0;
+  background-color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff !important;
+  border-radius: 1000px;
+  padding: 8px;
+  transition-duration: .5s;
+}
+.contenedorMensjaesProuJsCap4V3Content button:hover{
+  background-color: #3b3939;
+  transition-duration: .5s;
+}
+
+
+@media(min-width:750px){
+  /* estos son los estilos de los botones de arriba */
+  .ContenedorProyJsCap4V3Botones button{
+    font-size: 1.5em;
+    padding: 5px 10px 5px 10px;
+  }
+
+  /* este es el contenedor general */
+  .ContenedorProyJsCap4V3General{
+    top: 85px;
+    width: 350px;
+    height: 500px;
+    padding: 8px;
+  }
+  /* estilos del titulo */
+  .ContenedorProyJsCap4V3General h4{
+    font-size: 1.5em;
+  }
+  /* estilos del input */
+  .ContenedorProyJsCap4V3General{
+    font-size: 1.3em;
+  }
+
+  /* este es el contenedor del mensaje */
+  .contenedorMensjaesProuJsCap4V3Content{
+    font-size: 1.4em;
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    width: 350px;
+    height: 100px;
+    padding: 30px;
+  }
+  .contenedorMensjaesProuJsCap4V3Content h4{
+    font-size: 1.6em;
+  }
+}
