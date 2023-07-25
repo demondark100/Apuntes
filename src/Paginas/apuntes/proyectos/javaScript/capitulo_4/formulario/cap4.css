@@ -132,6 +132,7 @@
   z-index: 0;
   transform: rotateY(150deg);
   opacity: 0;
+  visibility: hidden;
 }
 
 /* este es el contenedor de iniciar sesion */
@@ -152,7 +153,8 @@
 
 /* estos son los estilos del contenedor de los mensajes */
 .contenedorMensjaesProuJsCap4V3{
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(4px);
+  background-color: #00000023;
   position: fixed;
   top: 0;
   left: 0;
@@ -194,7 +196,13 @@
   color: #fff !important;
   border-radius: 1000px;
   padding: 8px;
+  box-shadow: 0px 2px 15px -2px #fff;
   transition-duration: .5s;
+}
+.contenedorMensjaesProuJsCap4V3Content button:hover{
+  box-shadow: 0px 2px 15px 5px #fff;
+  transition-duration: .5s;
+
 }
 .contenedorMensjaesProuJsCap4V3Content button:hover{
   background-color: #3b3939;

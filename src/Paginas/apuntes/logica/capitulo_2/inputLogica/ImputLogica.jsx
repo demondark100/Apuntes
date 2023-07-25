@@ -34,7 +34,9 @@ function InpuLogica() {
     <>
       <main>
         <h1>inputs y outputs</h1>
-        <Conseptos texto={`La programacion se basa en
+
+        <Conseptos 
+          texto={`La programacion se basa en
 1. pedir un dato al usuario (input)
 2. procesar el dato  (procesar)
 3. dar una respuesta al usuario   (output)
@@ -42,69 +44,119 @@ function InpuLogica() {
 Un ejemplo de la vida cotidiana hablas con una persona.
 tu: preguntas la hora.
 otra persona: recibe la pregunta y la procesa en su cerebro.
-otra persona: te da la hora.`}/>
+otra persona: te da la hora.`}
+        />
+
         <h2>input</h2>
-        <Conseptos texto={`El input se encargara de pedir un dato al usuario por ejemplo.`}/>
-        <Sintaxis codigo={`nombre = pedirDato("escribe tu nombre")`}/>
+
+        <Conseptos 
+          texto={`El input se encargara de pedir un dato al usuario por ejemplo.`}
+        />
+
+        <Sintaxis 
+          codigo={`nombre = pedirDato("escribe tu nombre")`}
+        />
         <p 
           onClick={pedirName}
-          style={{color: `#fff`,fontSize: `1.8em`,cursor: "pointer"}}
-        >ejecutar codigo</p>
+          style={{color: `#fff`,fontSize: `1.4em`,cursor: "pointer",backgroundColor: "#2897ff",width:"250px",textAlign: "center"}}
+        >ejecutar codigo
+        </p>
+
         <h2>proceso</h2>
-        <Conseptos texto={`Aqui procesamos el nombre del usuario.`}/>
-        <Sintaxis codigo={`saludar = "hola " + nombre + " soy una IA."`}/>
+
+        <Conseptos 
+          texto={`Aqui procesamos el nombre del usuario.`}
+        />
+
+        <Sintaxis 
+          codigo={`saludar = "hola " + nombre + " soy una IA."`}
+        />
+
         <h2>output</h2>
-        <Conseptos texto={`Aqui le mostramos al usuario el resultado de lo que procesamos.`}/>
-        <Sintaxis codigo={`mostrar(saludar)`}/>
+
+        <Conseptos 
+          texto={`Aqui le mostramos al usuario el resultado de lo que procesamos.`}
+        />
+
+        <Sintaxis 
+          codigo={`mostrar(saludar)`}
+          consola={`hola ${nombre} soy una IA.`}
+        />
+
         <h2>resultado</h2>
-        <Sintaxis codigo={`hola ${nombre} soy una IA.`} />
+
+        <Sintaxis 
+          codigo={`hola ${nombre} soy una IA.`}
+          consola={`Error de sintaxis en la linea 1: "hola ${nombre} soy una IA." no son palbras claves`}
+        />
 
         <h2>ejercicio</h2>
-        <Conseptos texto={`Escribe o copia "Megumin" tal como esta.`}/>
+
+        <Conseptos 
+          texto={`Escribe o copia "Megumin" tal como esta.`}
+        />
+
         <input 
           type="text" 
           id="waifuName" 
           placeholder="waifu name"
           onChange={handleChange}
         />
-        <p className={`mensajeInputMegumin ${relsatado ? "verde":"rojo"}`}>{mensaje}</p>
+        <p 
+          className={`mensajeInputMegumin ${relsatado ? "verde":"rojo"}`}
+        >
+          {mensaje}
+        </p>
 
-        <Conseptos texto={`Como te das cuenta te pedi un dato luego programe algo que lo procese y te di un mensaje del si era lo que queria o no en este caso te dije escribe Megumin o copialo.
+        <Conseptos 
+          texto={`Como te das cuenta te pedi un dato luego programe algo que lo procese y te di un mensaje del si era lo que queria o no en este caso te dije escribe Megumin o copialo.
 
 si lo escribiste mal te di un mensaje.
 si lo escribiste bien te di otro mensaje.
-y si no esciribiste nada no te di ningun mensaje.`}/>
+y si no esciribiste nada no te di ningun mensaje.`}
+        />
+
+        <h2>Curiosidad</h2>
+        <Conseptos 
+          texto={`Un input siempre sera una string por mas que le pases numeros de todos modos sera una string por ejemplo.
+Antes de iniciar usaremos la funcion "tipoDe()" que sirve para indicarnos que tipo de dato es una variable.`}
+        />
+
+        <Sintaxis 
+          codigo={`numero = pedirDato("dime un numero cualquiera.");
+flotante = pedirDato("dime un numero flotante cualquiera.");
+mostrar(
+  tipoDe(numero),
+  tipoDe(flotante)
+)`}
+          consola={`string
+string`}
+        />
 
         <h2>¡Para que sirve!</h2>
-        <Conseptos texto={`Como ya te diste cuenta esto es demasiado util en la programacion tanto para desarrollar IA , juegos , sitios web , etc.`}/>
+
+        <Conseptos 
+          texto={`Como ya te diste cuenta esto es demasiado util en la programacion tanto para desarrollar IA , juegos , sitios web , etc.`}
+        />
         
         <h2>¡Proyecto!</h2>
-        <Conseptos texto={`Hacer un programa que multiplique un numero por otro , el programa debe pedir al usuario que numeros desea multiplicar.
 
-nota: en los ejemplos que di cambia:
-pedirDato() por prompt()
-mostrar() por alert()
+        <Conseptos 
+          texto={`Hacer un programa que multiplique un numero por otro , el programa debe pedir al usuario que numeros desea multiplicar.`}
+        />
 
-De esta manera podras escribir codigo en la consola de tu navegador`}/>
-        <h2>pseudocodigo</h2>
-        <h3>prompt</h3>
-        <Sintaxis codigo={`prompt(mensaje para pedir un dato)`}/>
-        <h3>mostrar</h3>
-        <Sintaxis codigo={`alert(que queremos mostrar al usuario)`}/>
-        
-        <h2>empieza a programar</h2>
         <Ejercicios 
           texto1={`Ahh esta complicado no puedo!`}
           texto2={`Esta izi :D oculta el resultado`}
-          codigo={<Sintaxis codigo={`numero1 = prompt("Dime el numero 1");
-numero2 = prompt("Dime el numero 2");
+          codigo={<Sintaxis 
+            codigo={`numero1 = pedirDato("Dime el numero 1");
+numero2 = pedirDato("Dime el numero 2");
 multiplicar = numero1 * numero2;
-alert("el resultado es " multiplicar);`}/>}
+mostrar("el resultado es " multiplicar);`}
+            consola={`el resultado es: indefinido`}
+          />}
         />
-        <h2>nota</h2>
-        <Conseptos texto={`El lenguaje que usaste para programar esto fue Sintaxis de ahora en adelante usaremos "alert" y "prompt" en vez de usar mostrar() y pedirDato().
 
-Esto para que puedas escribir codigo en tu navegador.`}/>
       </main>
       <Footer />
     </>

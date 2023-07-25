@@ -1,10 +1,10 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
-import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import CondicionalesDiagrama from "./diagrama";
 import { useRef, useState } from "react";
+import Ejercicios from "../../../../../componentes/ejercicios/ejercicios"
 
 function CondicionalesLogica() {
   const [mostrarCondicional, setMostrarCondicional] = useState(false);
@@ -16,24 +16,36 @@ function CondicionalesLogica() {
   } 
   return (  
     <>
-      <MensajeModal texto={`Aqui podras escribir el codigo en el navegador ya que escribiremos codigo javaScript.`}/>
       <main>
         <h1>Condicionales</h1>
-        <Conseptos texto={`Las condicionales en programación son instrucciones que permiten tomar decisiones en función de si se cumple o no una determinada condición.`}/>
+        
+        <Conseptos 
+          texto={`Las condicionales en programación son instrucciones que permiten tomar decisiones en función de si se cumple o no una determinada condición.`}
+        />
+
         <h2>pseudocodigo</h2>
-        <Sintaxis codigo={`si "lavaste los platos" entonces:
+
+        <Sintaxis 
+          codigo={`si "lavaste los platos" entonces:
   #ganas un premio
 sino:
-  #te castigan`}/>
-        <Conseptos texto={`Tambien podemos hacer mas de una condicional por si tenemos mas opciones.
+  #te castigan`}
+          consola={`Error en la linea 1: "lavaste los platos" no se esta comparando con nada.`}
+        />
 
-Ahora un pequeño ejemplo grafico para entender mejor.`}/>
+        <Conseptos 
+          texto={`Tambien podemos hacer mas de una condicional por si tenemos mas opciones.
 
+Ahora un pequeño ejemplo grafico para entender mejor.`}
+        />
 
         <p 
           onClick={mostrarOcultarCondicional}
           className="mostrar_ejemplo_grafico"
-        >mostrar ejemplo grafico</p>
+        >
+          mostrar ejemplo grafico
+        </p>
+
         <div
           ref={contenedor} 
           className={`diagramaContentCondicional ${mostrarCondicional ? "":"ocultarMostrarCondicional"}`}>
@@ -41,73 +53,104 @@ Ahora un pequeño ejemplo grafico para entender mejor.`}/>
         </div>
 
         <h2>pseudocodigo</h2>
-        <Conseptos texto={`Hacer un programa que verifique si un numero es positivo o negativo.`}/>
-        <Sintaxis codigo={`#no copiar
-numero = pedirDato("introduce un numero.");
+
+        <Conseptos 
+          texto={`Hacer un programa que verifique si un numero es positivo o negativo.`}
+        />
+
+        <Sintaxis 
+          codigo={`numero = pedirDato("introduce un numero.");
 
 si numero > 0 entonces:
   mostrar("el numero es positivo");
 sino si numero < 0 entonces:
   mostrar("el numero es negativo");
 sino:
-  mostrar("el numero es cero");`}/>
-        <Conseptos texto={`Para verificar el resultado lo pasaremos a codigo javaScript para que lo puedas copiar en tu consola del navegador.`}/>
-        <JavaScript codigo={`numero = prompt("introduce un numero");
+  mostrar("el numero es cero");`}
+          consola={`el numero es cero`}
+        />
 
-if(numero > 0){
-  alert("el numero es positivo");
-} else if (numero < 0){
-  alert("el numero es negativo");
-} else {
-  alert("el numero es cero");
-}`}/>
+        <Conseptos 
+          texto={`Aqui en las condicionales podemos evaluar todo tipo de cosas operaciones matematicas , operaciones logicas igualdades comparaciones lo que sea con tal de que se adapte a lo que necesites.`}
+        />
 
-        <Conseptos texto={`Aqui en las condicionales podemos evaluar todo tipo de cosas operaciones matematicas , operaciones logicas igualdades comparaciones lo que sea con tal de que se adapte a lo que necesites.`}/>
         <h2>ejemplo</h2>
-        <Sintaxis codigo={`si 15 == 15 entonces:
-  #hacer algo.
+
+        <Sintaxis 
+          codigo={`si 15 == 15 entonces:
+  mostrar("15 si es igual a 15.");
 
 #otra condicion
 si "hola" == "hola" entonces:
-  #hacer algo
+  mostrar("hola si es igual a hola");
 
 #otra condicion
 si 5 + 5 == 15 entonces:
-  #hacer algo
+  mostrar("el resultado de 5 + 5 si es igual a 15");
 
 #otra condicion
 si 5 * 5 == 25 o 4 - 4 > 2 entonces:
-  #hacer algo
+  mostrar("uno de esos dos si se cumplio puede que 5 * 5 si sea igual a 25 o que 4 - 4 sea mayor a 2.");
 
 #otra condicion
 si 8 - 8 == 0 y 3 + 3 == 1 entonces:
-  #hacer algo
+  mostrar("solo aparecera si ambos se cumplen.");
 
 #otra condicion
 si 10 + 10 != 8 ebtonces:
-  #hacer algo
-`}/>
+  mostrar("el resultado de 10 + 10 si es distinto a 8.");
+`}
+        consola={`15 si es igual a 15.
+hola si es igual a hola
+uno de esos dos si se cumplio puede que 5 * 5 si sea igual a 25 o que 4 - 4 sea mayor a 2.
+el resultado de 10 + 10 si es distinto a 8.
+`}
+      />
+
       <h2>resultados</h2>
-      <Conseptos texto={`1. se cumple porque 15 si es igual a 15
+
+      <Conseptos 
+        texto={`1. se cumple porque 15 si es igual a 15
 2. Si se cumple porque la string "hola" es igual a "hola"
 3. No se cumple porque 5 + 5 no es igual a 15
 4. Si se cumple porque 5 * 5 si es 25 por mas que en la otra condicion no se cumpla recuerda estamos usando o asi que no es necesario que se cumplan ambos.
 5. No se cumple porque 3 + 3 no es igual a 1 recuerda ambos deben cumplirse para que la condicion se cumpla asi que no importa que 8 - 8 si sea iagual a 0 no se cumplen ambos.
-6. Si se cumple porque la suma de 10 + 10 es distinto de 8`}/>
-        <Conseptos texto={`En la mayoria de lenguajes el simbolo "y" , "o" , "not" se representan con:
-y = &
-o = |
-not = !=
-pero en algunos cambia la sintaxis.
+6. Si se cumple porque la suma de 10 + 10 es distinto de 8`}
+        />
 
-En los lenguajes de programacion en vez de decir "si" podemos "if" y ya la sintaxis cambia.`}/>
         <h2>¡Para que sirve!</h2>
-        <Conseptos texto={`Es demasiado util de hecho se usa todo el tiempo al igual que las variables , ya di demasiados ejemplos del uso de un if.
+        
+        <Conseptos 
+          texto={`Es demasiado util de hecho se usa todo el tiempo al igual que las variables , ya di demasiados ejemplos del uso de un if.
 por ejemplo al desarrollar un juego:
 si el jugador se aserca a un spawn aparecen zomvies
-sino los zombies dejan de aparecer.`}/>
+sino los zombies dejan de aparecer.`}
+        />
+
         <h2>¡Proyecto!</h2>
-        <Conseptos texto={`Bueno aqui no dejare ningun proyecto debido a que te estaria forzando aprender un lenguaje pero puedes hacer los proyectos en los distintos lenguajes de programacion que estaran disponibles.`}/>
+
+        <Conseptos 
+          texto={`Hacer un programa que verifique si un numero es mayor o menor que otro numero (El usuario debe poder poner los numeros para compararlos.)`}
+        />
+
+        <Ejercicios 
+          texto1={"No man esto esta dificil mejor hago otro ejercicion mas facil."}
+          texto2={"Quien dijo dificil? esta re facil."}
+          codigo={<Sintaxis 
+            codigo={`numero1 = pedirDato("Introduce el primer numero");
+numero2 = pedirDato("Introduce el segundo numero");
+
+si numero1 > numero2 entonces:
+  mostrar("El numero 1 es mayor al numero 2");
+sino si numero2 > numero1 entonces:
+  mostrar("El numero 2 es mayor al numero 1");
+sino entonces:
+  mostrar("Ambos numeros son iguales.");`}
+            consola={"Ambos numeros son iguales."}
+          />}
+        />
+        
+
         
       </main>
       <Footer />

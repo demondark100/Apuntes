@@ -7,7 +7,7 @@
   height: 100%;
   pointer-events: none;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .contenedorCodigoFuente__boton{
   display: flex;
@@ -40,17 +40,17 @@
 
 
 .contenedorCodigoFuente__codigo{
-  position: absolute;
+  position: fixed;
+  overflow: auto;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   left: 0;
   top: 0;
   pointer-events: stroke;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: flex-start;
-  background-color: #0000007f;
+  flex-direction: column;
+  padding-top: 85px;
+  background-color: #545a5465;
 }
 .mostrarCodigoFuente{
   opacity: 1;
@@ -64,7 +64,7 @@
 }
 .contenedorCodigoFuente__codigo p{
   background-color: #000 !important;
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 65px !important;
   width: 65px;

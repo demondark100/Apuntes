@@ -8,8 +8,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000000a5;
-  z-index: 9;
+  background-color: #0000003a;
+  backdrop-filter: blur(4px);
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,26 +26,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #00000063;
   overflow: auto;
-  background-color: #fff;
+  box-shadow: 0 0 15px -8px #fff;
   padding: 15px;
-  width: 85%;
-  height: 75%;
+  width: 80%;
+  height: 200px;
   font-size: 1.2em;
-  color: #000;
+  color: #fff;
 }
 .textoMensajeModal{
-  height: 45%;
+  height: 85%;
   overflow: auto;
   width: 95%;
 }
 .textoMensajeModal::-webkit-scrollbar{
-  background-color: #d3f6ee;
+  background-color: #242525;
   border-radius: 25px;
   border: 1px solid #83c3b9;
 }
 .textoMensajeModal::-webkit-scrollbar-thumb{
-  background: linear-gradient(0deg,#ffffff,#afa1a1);
+  background: linear-gradient(0deg,#575050,#2b2626);
   border: 1px solid #7d7474;
   border-radius: 200px;
 }
@@ -56,9 +58,10 @@
   cursor: pointer;
   background-color: inherit;
   transition-duration: .5s;
+  color: #fff !important;
 }
 .contenedoMensaje button:hover{
-  background-color: #c6e2fc;
+  background-color: #2e3031;
   transition-duration: .5s;
 }
 .contenedoMensaje::-webkit-scrollbar{
@@ -67,8 +70,8 @@
 
 @media (min-width: 750px){
   .contenedoMensaje{
-    width: 30%;
-    height: 85%;
+    width: 550px;
+    height: 250px;
     font-size: 1.2em;
     max-height: 800px;
     max-width: 800px;

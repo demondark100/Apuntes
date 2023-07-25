@@ -150,6 +150,8 @@ function Proyectos({sendshowProyects}) {
                         <Link to={"javaScript/cap4ProyV1"}>matematica para niños</Link>
                         <Link to={"javaScript/cap4ProyV2"}>pregunta</Link>
                         <Link to={"javaScript/cap4ProyV3"}>formulario</Link>
+                        <Link to={"javaScript/cap4ProyV4"}>calculadora</Link>
+
                       </div>
                     }
                   

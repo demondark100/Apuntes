@@ -6,7 +6,7 @@ import Footer from '../../componentes/menus/Footer';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useRef } from 'react';
-// import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
+import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 
 
 
@@ -28,6 +28,17 @@ function Home({active}) {
 
   return (
     <>
+      <MensajeModal texto={`wonder egg en order :v.
+espisodios   verdadero
+        2      -         6
+        3      -         7
+        4      -         8
+        5      -         9
+        6      -        10
+        7      -        11
+        8      -        12
+        9      -        13
+       10      -        `}/>
       <main>
         <article className='contenedorHome'>
           <section ref={contenedor1} className='contenedorHome__contenido'>
