@@ -55,30 +55,14 @@ aside{
   }
 }
 
-/* estos son los estilos del cuando se activan o desactivan los parrafos principales */
-
-.activeParrafo{
-  background-color: #b3faee;
-  margin-left: -25px;
-  padding-left: 28px !important;
-  color: #000 !important;
-  transition-duration: .5s;
-}
 
 
-/* estos son los active de los parrafos temas */
-.activeParrafoTemas{
-  background-color: #9aecdf;
-  margin-left: -35px !important;
-  padding-left: 42px !important;
-  color: #000 !important;
-  transition-duration: .5s;
-}
+
 
 /* estos estilos son del cuando se activan o desactivan los enlaces */
 
 .active{
-  background-color: #71c4b6 !important;
+  background-color: #6f918a !important;
   color: #000 !important;
   margin-left: -44px !important;
   padding-left: 72px !important;

@@ -18,105 +18,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
   })
   
 
-  // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
-  const [activeElement, setActiveElement] = useState("");
-  const handleElementClick = (element) => {
-    setActiveElement(element);
 
-    if (element === "p1") {
-      setLogica(!logica);
-    } else if (element === "p2") {
-      setHtml(!html);
-    } else if (element === "p3") {
-      setCss(!css);
-    } else if (element === "p4") {
-      setJavaScript(!javaScript);
-    } else if (element === "p5") {
-      setGit(!git);
-    } else if (element === "p6") {
-      setReact(!react);
-    } else if (element === "p7") {
-      setPython(!python);
-    } else if (element === "p8") {
-      setPendejadas(!pendejadas);
-    }
-  };
-
-  // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
-  const [activeTemas, setActiveTemas] = useState("");
-  const hundleActiveTemas = (element) => {
-    setActiveTemas(element);
-
-    if (element === "p1") {         // todo esto es logica
-      setcap1Logica(!cap1Logica)
-    } else if (element === "p2") {
-      setCap2Logica(!cap2Logica)
-    } else if (element === "p3") {
-      setCap3Logica(!cap3Logica)
-    } else if (element === "p4") {
-      setCap4Logica(!cap4Logica)      
-    } else if (element === "p5") {    //todo esto es html
-      setCap1Html(!cap1Html)
-    } else if (element === "p6") {
-      setCap2Html(!cap2Html)
-    } else if (element === "p7") {
-      setCap3Html(!cap3Html)
-    } else if (element === "p8") {
-      setCap4Html(!cap4Html)
-    } else if (element === "p9") {      //esto es css
-      setCap1Css(!cap1Css)
-    } else if (element === "p10") {
-      setCap2Css(!cap2Css)
-    } else if (element === "p11") {    
-      setCap3Css(!cap3Css)
-    } else if (element === "p12") {
-      setCap4Css(!cap4Css)
-    } else if (element === "p13") {
-      setCap5Css(!cap5Css)
-    } else if (element === "p14") {
-      setCap6Css(!cap6Css)
-    } else if (element === "p15") {    //todo esto es javaScript
-      setCap1JavaScript(!cap1JavaScript)
-    } else if (element === "p16") {
-      setCap2JavaScript(!cap2JavaScript)
-    } else if (element === "p17") {
-      setCap3JavaScript(!cap3JavaScript)
-    } else if (element === "p18") {
-      setCap4JavaScript(!cap4JavaScript)
-    } else if (element === "p19") {      
-      setCap5JavaScript(!cap5JavaScript)
-    } else if (element === "p20") {
-      setCap6JavaScript(!cap6JavaScript)
-    } else if (element === "p21") {
-      setCap7JavaScript(!cap7JavaScript)
-    } else if (element === "p22") {
-      setCap8JavaScript(!cap8JavaScript)
-    } else if (element === "p23") {
-      setCap9JavaScript(!cap9JavaScript)
-    } else if (element === "p24") {
-      setCap10JavaScript(!cap10JavaScript)
-    } else if (element === "p25") {
-      setCap11JavaScript(!cap11JavaScript)
-    } else if (element === "p26") {
-      setCap12JavaScript(!cap12JavaScript)
-    } else if (element === "p27") {           // esto es git
-      setCap1Git(!cap1Git)
-    } else if (element === "p28") {           // esto es react
-      setCap1React(!cap1React)
-    } else if (element === "p29") {
-      setCap2React(!cap2React)
-    } else if (element === "p30") {           
-      setCap3React(!cap3React)
-    } else if (element === "p31") {           // esto es python
-      setCap1Python(!cap1Python)
-    } else if (element === "p32") {
-      setCap2Python(!cap2Python)
-    } else if (element === "p33") {           
-      setCap3Python(!cap3Python)
-    } else if (element === "p34") {           //esto es pendejadas    
-      setCap1Pendejadas(!cap1Pendejadas)
-    }
-  };
   // estos son los estilos de claro y oscuro de los capitulos
   useEffect(()=>{
     if (active == true) {
@@ -138,8 +40,6 @@ function Capitulos({sendshowAside,sendaside , active}) {
   const [git, setGit] = useState(false);
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
-  const [pendejadas, setPendejadas] = useState(false);
-
 
 
 
@@ -211,17 +111,11 @@ function Capitulos({sendshowAside,sendaside , active}) {
             
             {/* esto es el curso de logica de programacion */}
             <li className="curso">
-              <p 
-                className={activeElement === "p1" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p1")}
-              >logica</p>
+              <p onClick={()=>setLogica(!logica)}>logica</p>
               {
                 logica && <div className="capitulos">
                   <div>
-                    <p 
-                      className={activeTemas === "p1" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p1")}
-                    >capitulo 1</p>
+                    <p onClick={()=>setcap1Logica(!cap1Logica)}>capitulo 1</p>
                     {
                       cap1Logica && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../logica/comenzar"}>Comenzar</NavLink>
@@ -232,10 +126,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p2" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p2")}
-                    >capitulo 2</p>
+                    <p onClick={()=>setCap2Logica(!cap2Logica)}>capitulo 2</p>
                     {
                       cap2Logica && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../logica/variables"}>variables</NavLink>
@@ -246,10 +137,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p3" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p3")}
-                    >capitulo 3</p>
+                    <p onClick={()=>setCap3Logica(!cap3Logica)}>capitulo 3</p>
                     {
                       cap3Logica && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../logica/condicionales"}>Condicionales</NavLink>
@@ -260,10 +148,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p4" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p4")}
-                    >capitulo 4</p>
+                    <p onClick={()=>setCap4Logica(!cap4Logica)}>capitulo 4</p>
                     {
                       cap4Logica && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../logica/bucles"}>bucles</NavLink>
@@ -278,18 +163,12 @@ function Capitulos({sendshowAside,sendaside , active}) {
 
             {/* esto es el curso de html */}
             <li className="curso">
-              <p 
-                className={activeElement === "p2" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p2")}
-              >html</p>
+            <p onClick={()=>setHtml(!html)}>html</p>
               {
                 html && <div className="capitulos">
 
                   <div>
-                    <p 
-                      className={activeTemas === "p5" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p5")}
-                    >capitulo 1</p>
+                    <p onClick={()=>setCap1Html(!cap1Html)}>capitulo 1</p>
                     {
                       cap1Html && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../html/importante leer esto"}>importante leer esto</NavLink>
@@ -299,10 +178,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p6" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p6")}
-                    >capitulo 2</p>
+                    <p onClick={()=>setCap2Html(!cap2Html)}>capitulo 2</p>
                     {
                       cap2Html && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../html/etiquetas"}>etiquetas</NavLink>
@@ -313,10 +189,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p7" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p7")}
-                    >capitulo 3</p>
+                    <p onClick={()=>setCap3Html(!cap3Html)}>capitulo 3</p>
                     {
                       cap3Html && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../html/enlaces"}>enlaces</NavLink>
@@ -331,10 +204,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p8" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p8")}
-                    >capitulo 4</p>
+                    <p onClick={()=>setCap4Html(!cap4Html)}>capitulo 4</p>
                     {
                       cap4Html && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../html/mav"}>nav</NavLink>
@@ -354,18 +224,12 @@ function Capitulos({sendshowAside,sendaside , active}) {
 
             {/* esto es el curso de css */}
             <li className="curso">
-              <p 
-                className={activeElement === "p3" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p3")}
-              >css</p>
+              <p onClick={()=>setCss(!css)}>css</p>
               {
                 css && <div className="capitulos">
 
                   <div>
-                    <p 
-                      className={activeTemas === "p9" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p9")}
-                    >capitulo 1</p>
+                    <p onClick={()=>setCap1Css(!cap1Css)}>capitulo 1</p>
                     {
                       cap1Css && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../css/introduccion a css"}>introduccion a css</NavLink>
@@ -378,10 +242,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p10" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p10")}
-                    >capitulo 2</p>
+                    <p onClick={()=>setCap2Css(!cap2Css)}>capitulo 2</p>
                     {
                       cap2Css && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../css/background"}>background</NavLink>
@@ -398,10 +259,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p11" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p11")}
-                    >capitulo 3</p>
+                    <p onClick={()=>setCap3Css(!cap3Css)}>capitulo 3</p>
                     {
                       cap3Css && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../css/position"}>position</NavLink>
@@ -415,10 +273,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p12" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p12")}
-                    >capitulo 4</p>
+                    <p onClick={()=>setCap4Css(!cap4Css)}>capitulo 4</p>
                     {
                       cap4Css && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../css/object fit"}>object fit</NavLink>
@@ -432,10 +287,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p13" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p13")}
-                    >capitulo 5</p>
+                    <p onClick={()=>setCap5Css(!cap5Css)}>capitulo 5</p>
                     {
                       cap5Css && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../css/grid"}>grid</NavLink>
@@ -447,10 +299,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p14" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p14")}
-                    >capitulo 6</p>
+                    <p onClick={()=>setCap6Css(!cap6Css)}>capitulo 6</p>
                     {
                       cap6Css && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../css/Cubic Bezier"}>Cubic Bezier</NavLink>
@@ -469,18 +318,12 @@ function Capitulos({sendshowAside,sendaside , active}) {
 
             {/* esto es el curso de javaScript */}
             <li className="curso">
-              <p 
-                className={activeElement === "p4" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p4")}
-              >jsvaScript</p>
+              <p onClick={()=>setJavaScript(!javaScript)}>javaScript</p>
               {
                 javaScript && <div className="capitulos">
 
                   <div>
-                    <p 
-                      className={activeTemas === "p15" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p15")}
-                    >capitulo 1</p>
+                    <p onClick={()=>setCap1JavaScript(!cap1JavaScript)}>capitulo 1</p>
                     {
                       cap1JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/recomendado"}>recomendaciones</NavLink>
@@ -491,10 +334,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p16" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p16")}
-                    >capitulo 2</p>
+                    <p onClick={()=>setCap2JavaScript(!cap2JavaScript)}>capitulo 2</p>
                     {
                       cap2JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/variables"}>variables</NavLink>
@@ -508,10 +348,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p17" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p17")}
-                    >capitulo 3</p>
+                    <p onClick={()=>setCap3JavaScript(!cap3JavaScript)}>capitulo 3</p>
                     {
                       cap3JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/condicionales"}>Condicionales</NavLink>
@@ -524,10 +361,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p18" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p18")}
-                    >capitulo 4</p>
+                    <p onClick={()=>setCap4JavaScript(!cap4JavaScript)}>capitulo 4</p>
                     {
                       cap4JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/PODJavaScript"}>programacion orientado a    objetos(POD)</NavLink>
@@ -539,10 +373,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p19" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p19")}
-                    >capitulo 5</p>
+                    <p onClick={()=>setCap5JavaScript(!cap5JavaScript)}>capitulo 5</p>
                     {
                       cap5JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/DOM"}>DOM</NavLink>
@@ -562,10 +393,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p20" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p20")}
-                    >capitulo 6</p>
+                    <p onClick={()=>setCap6JavaScript(!cap6JavaScript)}>capitulo 6</p>
                     {
                       cap6JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/window1"}>window 1</NavLink>
@@ -576,10 +404,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p21" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p21")}
-                    >capitulo 7</p>
+                    <p onClick={()=>setCap7JavaScript(!cap7JavaScript)}>capitulo 7</p>
                     {
                       cap7JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/eventListen"}>eventos de escucha</NavLink>
@@ -593,10 +418,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p22" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p22")}
-                    >capitulo 8</p>
+                    <p onClick={()=>setCap8JavaScript(!cap8JavaScript)}>capitulo 8</p>
                     {
                       cap8JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/controlFlujo"}>control de flujo(teorico)</NavLink>
@@ -610,10 +432,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p23" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p23")}
-                    >capitulo 9</p>
+                    <p onClick={()=>setCap9JavaScript(!cap9JavaScript)}>capitulo 9</p>
                     {
                       cap9JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/json"}>JSON</NavLink>
@@ -625,10 +444,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p24" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p24")}
-                    >capitulo 10</p>
+                    <p onClick={()=>setCap10JavaScript(!cap10JavaScript)}>capitulo 10</p>
                     {
                       cap10JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/proto"}>prototipos</NavLink>
@@ -647,10 +463,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p25" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p25")}
-                    >capitulo 11</p>
+                    <p onClick={()=>setCap11JavaScript(!cap11JavaScript)}>capitulo 11</p>
                     {
                       cap11JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/objDate"}>objeto Date</NavLink>
@@ -666,10 +479,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p26" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p26")}
-                    >capitulo 12</p>
+                    <p onClick={()=>setCap12JavaScript(!cap12JavaScript)}>capitulo 12</p>
                     {
                       cap12JavaScript && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../javaScript/MatchMedia"}>MatchMedia</NavLink>
@@ -697,18 +507,12 @@ function Capitulos({sendshowAside,sendaside , active}) {
             
             {/* este curso es de git */}
             <li className="curso">
-              <p 
-                className={activeElement === "p5" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p5")}
-              >git</p>
+              <p onClick={()=>setGit(!git)}>git</p>
               {
                 git && <div className="capitulos">
 
                   <div>
-                    <p 
-                      className={activeTemas === "p27" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p27")}
-                    >capitulo 1</p>
+                    <p onClick={()=>setCap1Git(!cap1Git)}>capitulo 1</p>
                     {
                       cap1Git && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../git/confiGit"}>configuracion git</NavLink>
@@ -723,18 +527,12 @@ function Capitulos({sendshowAside,sendaside , active}) {
 
             {/* este curso es de react */}
             <li className="curso">
-              <p 
-                className={activeElement === "p6" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p6")}
-              >react</p>
+              <p onClick={()=>setReact(!react)}>react</p>
               {
                 react && <div className="capitulos">
 
                     <div>
-                      <p 
-                      className={activeTemas === "p28" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p28")}
-                      >capitulo 1</p>
+                      <p onClick={()=>setCap1React(!cap1React)}>capitulo 1</p>
                       {
                         cap1React && <div className="temas">
                           <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={`../react/creacion`}>creacion de react</NavLink>
@@ -752,10 +550,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                     </div>
 
                     <div>
-                      <p 
-                      className={activeTemas === "p29" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p29")}
-                      >capitulo 2</p>
+                      <p onClick={()=>setCap2React(!cap2React)}>capitulo 2</p>
                       {
                         cap2React && <div className="temas">
                           <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../react/comuCompo"}>comunicacion    entre componentes</NavLink>
@@ -774,10 +569,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                     </div>
 
                     <div>
-                      <p 
-                      className={activeTemas === "p30" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p30")}
-                      >capitulo 3</p>
+                      <p onClick={()=>setCap3React(!cap3React)}>capitulo 3</p>
                       {
                         cap3React && <div className="temas">
                           <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../react/propsChild"}>props.children</NavLink>
@@ -793,18 +585,12 @@ function Capitulos({sendshowAside,sendaside , active}) {
 
             {/* esto es python */}
             <li className="curso">
-              <p 
-                className={activeElement === "p7" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p7")}
-              >python</p>
+              <p onClick={()=>setPython(!python)}>python</p>
               {
                 python && <div className="capitulos">
 
                   <div>
-                    <p 
-                      className={activeTemas === "p31" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p31")}
-                    >capitulo 1</p>
+                    <p onClick={()=>setCap1Python(!cap1Python)}>capitulo 1</p>
                     {
                       cap1Python && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/importante"}>importante</NavLink>
@@ -818,10 +604,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p32" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p32")}
-                    >capitulo 2</p>
+                    <p onClick={()=>setCap2Python(!cap2Python)}>capitulo 2</p>
                     {
                       cap2Python && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/metCade"}>Metodos de cadena</NavLink>
@@ -834,10 +617,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
                   </div>
 
                   <div>
-                    <p 
-                      className={activeTemas === "p33" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p33")}
-                    >capitulo 3</p>
+                    <p onClick={()=>setCap3Python(!cap3Python)}>capitulo 3</p>
                     {
                       cap3Python && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/variable2"}>variables 2.0 (la venganza)</NavLink>
@@ -849,30 +629,6 @@ function Capitulos({sendshowAside,sendaside , active}) {
               }
             </li>
 
-            {/* estas son pendejadas literalmente xd */}
-            <li className="curso">
-              <p 
-                className={activeElement === "p8" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p8")}
-              >pendejadas</p>
-              {
-                pendejadas && <div className="capitulos">
-
-                  <div className="temas">
-                    <p 
-                      className={activeTemas === "p34" ? "activeParrafoTemas" : ""}
-                      onClick={() => hundleActiveTemas("p34")}
-                    >calculadora pendeja</p>
-                    {
-                      cap1Pendejadas && <div className="temas">
-                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../pendejadas/calculadora"}>calculadora</NavLink>
-                      </div>
-                    }
-                  </div>
-
-                </div>
-              }
-            </li>
 
 
             {/* <li className="curso">

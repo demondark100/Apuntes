@@ -1,0 +1,125 @@
+.contenedorGeneracionJsCap5 {
+  position: fixed;
+  overflow: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0A0A14;
+  color: #FFFFFF !important;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.containerGeneradorPassword {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contenedorGeneracionJsCap5 h4 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.formGeneradorContraseñas {
+  display: flex;
+  flex-direction: column;
+}
+
+.palabraInputGenerador {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.mensajeErrorGeneradorContraseña {
+  color: #FF0000 !important;
+  margin: 5px 0;
+}
+
+.formGeneradorContraseñas button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formGeneradorContraseñas button:hover {
+  background-color: #45a049;
+}
+
+.contenedorContraseña {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #22223B;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.mostrarContraseña {
+  font-size: 16px;
+  color: #fff !important;
+}
+
+.botonCopiar {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #FF5722;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botonCopiar:hover {
+  background-color: #F4511E;
+}
+
+.contenedorContraseña button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contenedorContraseña button:hover {
+  background-color: #45a049;
+}
+
+
+.contenedorMensajeCopiado div{
+  background-color: #fff;
+  width: 350px;
+  font-size: 1.5em;
+  background-color: #4CAF50;
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.ShowContenedorMensajeCopiado{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.HideContenedorMensajeCopiado{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.mensajeCopiado{
+  color: #fff !important;
+}

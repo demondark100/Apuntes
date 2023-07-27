@@ -281,7 +281,8 @@ import Cap3ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/tien
 import Cap4ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/matematicas/cap4';
 import Cap4ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/preguntar/cap4';
 import Cap4ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/formulario/cap4';
-import Cap4ProyJsV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/calculadora/cap4';
+import Cap5ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/calculadora/cap5';
+import Cap5ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/contrasña/cap5';
 
 
 // pendejadas
@@ -354,9 +355,10 @@ function App() {
               <Route path='javaScript/cap4ProyV1' element={<Cap4ProyJsV1 />} />
               <Route path='javaScript/cap4ProyV2' element={<Cap4ProyJsV2 />} />
               <Route path='javaScript/cap4ProyV3' element={<Cap4ProyJsV3 />} />
-              <Route path='javaScript/cap4ProyV4' element={<Cap4ProyJsV4 />} />
+            {/* capitulo 5 */}
+              <Route path='javaScript/cap5ProyV1' element={<Cap5ProyJsV1 />} />
+              <Route path='javaScript/cap5ProyV2' element={<Cap5ProyJsV2 />} />
 
-            
             
             
           

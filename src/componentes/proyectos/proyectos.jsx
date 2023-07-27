@@ -15,6 +15,7 @@ function Proyectos({sendshowProyects}) {
   const [cap1Js, setCap1Js] = useState(false);
   const [cap3Js, setCap3Js] = useState(false);
   const [cap4Js, setCap4Js] = useState(false);
+  const [cap5Js, setCap5Js] = useState(false);
 
 
   useEffect(()=>{
@@ -28,45 +29,13 @@ function Proyectos({sendshowProyects}) {
 
 
 
-  // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
-  const [activeElement, setActiveElement] = useState("");
-  const handleElementClick = (element) => {
-    setActiveElement(element);
-
-    if (element === "p1") {
-      setHtml(!html)
-    } else if (element === "p2") {
-      setCss(!css)
-    } else if (element === "p3") {
-      setJavaScript(!javaScript)
-    }
-  };
-  
-
-  // esta funcion activa y desactiva el estado del cuando se haga click en el p principal
-  const [activeTemas, setActiveTemas] = useState("");
-  const hundleActiveTemas = (element) => {
-    setActiveTemas(element);
-    if(element === "p1"){
-      setCap1Js(!cap1Js)
-    } else if (element === "p2"){
-      setCap3Js(!cap3Js)
-    } else if (element === "p3"){
-      setCap4Js(!cap4Js)
-    }
-
-  };
-
   return (
     <aside>
       <nav>
         <ul>
           
           <li className="curso">
-              <p 
-                className={activeElement === "p1" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p1")}
-              >html</p>
+              <p onClick={()=>setHtml(!html)}>html</p>
               {
                 html && <div className="temas">
                   <Link to={"../html/cap1Proy"}>capitulo 2 (estructura)</Link>
@@ -77,10 +46,7 @@ function Proyectos({sendshowProyects}) {
             </li>
 
             <li className='curso'>
-              <p 
-                className={activeElement === "p2" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p2")}
-              >css</p>
+              <p onClick={()=>setCss(!css)}>css</p>
               {
                 css && <div className='temas'>
                   <Link to={"../css/proyCap1"}>capitulo 1 (consejos css)</Link>
@@ -95,22 +61,12 @@ function Proyectos({sendshowProyects}) {
             </li>
 
             <li className='curso'>
-              <p 
-                className={activeElement === "p3" ? "activeParrafo" : ""}
-                onClick={() => handleElementClick("p3")}
-              >
-                javaScript
-              </p>
+              <p onClick={()=>setJavaScript(!javaScript)}>javaScript</p>
               {
                 javaScript && <div className='capitulos'>
                   
                   <div>
-                    <p
-                      className={activeTemas === "p1" ? "activeParrafoTemas" : ""}
-                      onClick={()=>hundleActiveTemas("p1")}
-                    >
-                      capitulo 2
-                    </p>
+                    <p onClick={()=>setCap1Js(!cap1Js)}>capitulo 2</p>
                     {
                       cap1Js && <div className='temas'>
                         <Link to={"../javaScipt/cap1ProyV1"}>nombre</Link>
@@ -121,12 +77,7 @@ function Proyectos({sendshowProyects}) {
 
                   <div>
                     
-                    <p
-                      className={activeTemas === "p2" ? "activeParrafoTemas" : ""}
-                      onClick={()=>hundleActiveTemas("p2")}
-                    >
-                      capitulo 3
-                    </p>
+                    <p onClick={()=>setCap3Js(!cap3Js)}>capitulo 3</p>
                     {
                       cap3Js && <div className='temas'>
                         <Link to={"../javaScript/cap3ProyV1"}>asistencia de alumnos</Link>
@@ -139,19 +90,25 @@ function Proyectos({sendshowProyects}) {
 
                   <div>
                     
-                    <p
-                      className={activeTemas === "p3" ? "activeParrafoTemas" : ""}
-                      onClick={()=>hundleActiveTemas("p3")}
-                    >
-                      capitulo 4
-                    </p>
+                    <p onClick={()=>setCap4Js(!cap4Js)}>capitulo 4</p>
                     {
                       cap4Js && <div className='temas'>
                         <Link to={"javaScript/cap4ProyV1"}>matematica para niños</Link>
                         <Link to={"javaScript/cap4ProyV2"}>pregunta</Link>
                         <Link to={"javaScript/cap4ProyV3"}>formulario</Link>
-                        <Link to={"javaScript/cap4ProyV4"}>calculadora</Link>
 
+                      </div>
+                    }
+                  
+                  </div>
+
+                  <div>
+                    
+                    <p onClick={()=>setCap5Js(!cap5Js)}>capitulo 5</p>
+                    {
+                      cap5Js && <div className='temas'>
+                        <Link to={"javaScript/cap5ProyV1"}>calculadora</Link>
+                        <Link to={"javaScript/cap5ProyV2"}>generador de contraseñas</Link>
                       </div>
                     }
                   

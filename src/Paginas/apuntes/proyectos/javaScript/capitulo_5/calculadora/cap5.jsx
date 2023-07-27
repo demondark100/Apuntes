@@ -5,7 +5,7 @@ import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
 import Volver from "../../../../../../componentes/volver/volver";
 import Html from "../../../../../../componentes/lenguajes/Html"
 import Css from "../../../../../../componentes/lenguajes/Css"
-import "./cap4.css";
+import "./cap5.css";
 
 
 // // react
@@ -15,7 +15,7 @@ import "./cap4.css";
 
 
 
-function Cap4ProyJsV4() {
+function Cap5ProyJsV1() {
 
   useEffect(()=>{
     const botonNumero = document.querySelectorAll('[data-numero]')
@@ -127,32 +127,26 @@ botonBorrarTodo.addEventListener('click',() => {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 4
+      <MensajeModal texto={`¡Proyecto! capitulo 5
 
-Hacer una calculadora con programacion orientada a objetos.`}/>
+Hacer una calculadora con programacion orientada a objetos.
+
+Recuerda que aprendimos:
+
+1. DOM.
+2. Selectores de elementos.
+3. Atributos.
+4. Atributos globales.
+5. Atributos de inputs.
+6. clases y metodos.
+7. Obtencion y modificacion de contenido.
+8. Creacion de elementos.
+9. Obtencion de childs.
+10. propiedades de childs.
+11. propiedades de parents.
+12. propiedades de siblings.`}/>
       <Volver link={`../`}/>
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`class Calculadora {
-  constructor(){
-    this.numero1 = parseInt(prompt("introduce el primer numero."))
-    this.numero2 = parseInt(prompt("introduce el srgundo numero"))
-    this.operaciones = prompt(\`¡Que operacion deseas realizar?
-    1. + 2. - 3. /  4. x\`)
-    this.resultado = 0
-  }
-
-  calcular(){
-    if(this.operaciones == "1") {this.resultado = this.numero1 + this.numero2}
-    else if(this.operaciones == "2") {this.resultado = this.numero1 - this.numero2}
-    else if(this.operaciones == "3") {this.resultado = this.numero1 / this.numero2}
-    else if(this.operaciones == "4") {this.resultado = this.numero1 * this.numero2}
-    else {alert("opcion no valida")}
-    alert(this.resultado)
-  }
-}
-
-const calculadora = new Calculadora();
-calculadora.calcular()`}/>}
-        codigo2={<Html codigo={`<div className="calculadora">
+      <CodigoFuenteSinInt codigo={<Html codigo={`<div className="calculadora">
   <div className="display">
     <div className="valor-superior" data-valor-superior></div>
     <div className="valor-inferior" data-valor-inferior></div>
@@ -176,7 +170,7 @@ calculadora.calcular()`}/>}
   <button data-numero>0</button>
   <button data-igual >=</button>
 </div>`}/>}
-        codigo3={<Css codigo={`body {
+        codigo2={<Css codigo={`body {
   display: flex;
   justify-content: center;
   background-image: url("https://th.bing.com/th/id/OIP.pfx5_Yz0AM6cCz39FjERLAHaEK?w=313&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7");
@@ -242,7 +236,7 @@ calculadora.calcular()`}/>}
   color: #dce7bb;
   font-size: 2rem;
 }`}/>}
-        codigo4={<JavaScropt codigo={`const botonNumero = document.querySelectorAll('[data-numero]')
+        codigo3={<JavaScropt codigo={`const botonNumero = document.querySelectorAll('[data-numero]')
 const botonOperador = document.querySelectorAll('[data-operador]')
 const botonIgual = document.querySelector('[data-igual]')
 const botonBorrarTodo = document.querySelector('[data-borrar-todo]')
@@ -387,4 +381,4 @@ botonBorrarTodo.addEventListener('click',() => {
   );
 }
 
-export default Cap4ProyJsV4;
+export default Cap5ProyJsV1;
