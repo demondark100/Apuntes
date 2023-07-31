@@ -1,0 +1,147 @@
+.contenedorRelojProyJs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://th.bing.com/th/id/OIP.6VJP3J4JM8V52kkXSYTbsQHaEo?w=303&h=189&c=7&r=0&o=5&dpr=1.1&pid=1.7");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.contenedor__elejir--btn__contenedorRelojProyJs{
+  width: 100%;
+  position: relative;
+  top: 0;
+  display: flex;;
+  justify-content: center;
+  gap: 65px;
+  padding: 8px;
+  padding-bottom: 0;
+}
+.contenedor__elejir--btn__contenedorRelojProyJs button{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+.contenedor__elejir--btn__contenedorRelojProyJs button:hover{
+  color: #0f0;
+}
+#btn-reloj{
+  border-bottom: 4px solid #0f0;
+}
+
+
+
+.contenedorHora {
+  margin-top: 45px;
+  width: 300px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.contenedorHora-front {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  text-align: center;
+  border: 15px solid #524c4c;
+  transform: translateZ(150px);
+}
+.contenedorHora-behind {
+  background-color: #000;
+  text-align: center;
+  border: 15px solid #524c4c !important;
+  transform: translateZ(-150px) rotateY(180deg) !important;
+}
+
+.contenedorHora-front p {
+  color: #fff !important;
+  font-size: 4em;
+  text-shadow: 0 0 15px #fff;
+}
+
+.contenedor-top,
+.contenedor-bottom,
+.contenedor-right,
+.contenedor-left,
+.contenedorHora-behind {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: 2px solid #000;
+}
+.contenedorHora-behind {
+  transform: translateZ(-0px);
+}
+.contenedor-left{
+  transform: translate(-128px,0px) rotateY(90deg) translateZ(-25px);
+  height: 127px;
+}
+.contenedor-right{
+  transform: translate(204px,0px) rotateY(90deg) translateZ(-25px);
+  height: 127px;
+}
+.contenedor-top{
+  transform: translate(0px,0px) rotateX(90deg) translateZ(152px);
+  height: 300px;
+  width: 330px;
+}
+.contenedor-bottom{
+  transform: translate(0px,0px) rotateX(90deg) translateZ(23px);
+  height: 300px;
+  width: 330px;
+}
+
+
+
+
+.contenedorCronometro{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contenedorCronometro p{
+  margin-top: -2px;
+  font-size: 3em;
+  color: #fff !important;
+}
+
+.contenedorCronometro button{
+  padding: 0;
+  font-size: 2em;
+  margin: 20px;
+  margin-top: 0px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 0 15px #fff;
+}
+#pausar{
+  visibility: hidden;
+  position: absolute;
+}
