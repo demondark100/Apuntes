@@ -11,7 +11,7 @@ import Css from "../../../../../../componentes/lenguajes/Css";
 import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
 
 
-function Cap5ProyJsV3(){
+function Indefinido(){
 
   useEffect(()=>{
     //estos son los botones para cambiar de reloj a cronometro u biseversa.
@@ -595,4 +595,4 @@ btnCronometro.addEventListener("click", () => {
   );
 };
 
-export default Cap5ProyJsV3;
+export default Indefinido;

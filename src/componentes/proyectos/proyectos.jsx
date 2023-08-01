@@ -109,7 +109,8 @@ function Proyectos({sendshowProyects}) {
                       cap5Js && <div className='temas'>
                         <Link to={"javaScript/cap5ProyV1"}>calculadora</Link>
                         <Link to={"javaScript/cap5ProyV2"}>generador de contraseñas</Link>
-                        <Link to={"javaScript/cap5ProyV3"}>reloj</Link>
+                        <Link to={"javaScript/cap5ProyV3"}>contador</Link>
+
                       </div>
                     }
                   

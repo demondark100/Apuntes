@@ -283,7 +283,7 @@ import Cap4ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/preg
 import Cap4ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/formulario/cap4';
 import Cap5ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/calculadora/cap5';
 import Cap5ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/contrasña/cap5';
-import Cap5ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/reloj/cap5';
+import Cap5ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/contador/cap5';
 
 
 // pendejadas

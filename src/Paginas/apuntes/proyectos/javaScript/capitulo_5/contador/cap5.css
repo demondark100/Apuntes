@@ -1,0 +1,73 @@
+.contenedorCap5ProyJsV3{
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+.contenedorCap5ProyJsV3__contenedor{
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  transition-duration: .4s;
+}
+
+.cara__frontCap5Proy,
+.cara__behindCap5Proy,
+.cara__topCap5Proy,
+.cara__bottomCap5Proy{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  background-color: #0f0c0c;
+}
+.cara__behindCap5Proy{
+  transform: translateZ(-75px) rotateX(180deg);
+}
+.cara__frontCap5Proy{
+  transform: translateZ(76px);
+}
+.cara__topCap5Proy{
+  transform: translate(0px,0px) rotateX(90deg) translateZ(70px);
+}
+.cara__bottomCap5Proy{
+  transform: translate(0px,0px) rotateX(270deg) translateZ(75px);
+}
+
+
+.contenedorBotonesCap5Proy{
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap:15px;
+}
+.contenedorBotonesCap5Proy button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 1000px;
+  padding: 0;
+  color: #fff !important;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px -5px #fefefe;
+  transition-duration: .5s;
+}
+.contenedorBotonesCap5Proy button:hover{
+  background-color: #0f0c0c;
+  box-shadow: 0 15px 15px -5px #fefefe;
+  transition-duration: .5s;
+}
