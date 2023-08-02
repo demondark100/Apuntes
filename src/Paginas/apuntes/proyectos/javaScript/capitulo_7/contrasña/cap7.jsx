@@ -1,4 +1,4 @@
-import "./cap5.css";
+import "./cap7.css";
 import React, { useState,useEffect } from 'react';
 import Volver from "../../../../../../componentes/volver/volver"
 import CodigoFuenteSinIn from "../../../../../../componentes/codigoFuente/code"
@@ -13,7 +13,7 @@ import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript"
 
 
 
-function Cap5ProyJsV2() {
+function Cap7ProyJsV3() {
   const [palabra, setPalabra] = useState("");
   const [mostrarContrasena, setMostrarContrasena] = useState("");
   const [mensajeError, setMensajeError] = useState("");
@@ -94,7 +94,7 @@ function Cap5ProyJsV2() {
 
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 5
+      <MensajeModal texto={`¡Proyecto! capitulo 7
 
 Hacer un generador de contraseñas seguras.`}/>
       <Volver link={"../"}/>
@@ -329,7 +329,7 @@ palabraInput.addEventListener("input", () => {
       
 
       <div className="Page">
-        <div className="contenedorGeneracionJsCap5">
+        <div className="contenedorGeneracionJsCap7">
           <div className="containerGeneradorPassword">
             <h4>Generador de passwords</h4>
             <form className="formGeneradorContraseñas" onSubmit={handleGenerarContrasena}>
@@ -368,4 +368,4 @@ palabraInput.addEventListener("input", () => {
   );
 }
 
-export default Cap5ProyJsV2;
+export default Cap7ProyJsV3;

@@ -16,6 +16,8 @@ function Proyectos({sendshowProyects}) {
   const [cap3Js, setCap3Js] = useState(false);
   const [cap4Js, setCap4Js] = useState(false);
   const [cap5Js, setCap5Js] = useState(false);
+  const [cap6Js, setCap6Js] = useState(false);
+  const [cap7Js, setCap7Js] = useState(false);
 
 
   useEffect(()=>{
@@ -107,9 +109,36 @@ function Proyectos({sendshowProyects}) {
                     <p onClick={()=>setCap5Js(!cap5Js)}>capitulo 5</p>
                     {
                       cap5Js && <div className='temas'>
-                        <Link to={"javaScript/cap5ProyV1"}>calculadora</Link>
-                        <Link to={"javaScript/cap5ProyV2"}>generador de contraseñas</Link>
-                        <Link to={"javaScript/cap5ProyV3"}>contador</Link>
+                        <Link to={"javaScript/cap5ProyV1"}>generador de cajitas</Link>
+
+
+                      </div>
+                    }
+                  
+                  </div>
+
+                  
+                  <div>
+                    
+                    <p onClick={()=>setCap6Js(!cap6Js)}>capitulo 6</p>
+                    {
+                      cap6Js && <div className='temas'>
+
+
+                      </div>
+                    }
+                  
+                  </div>
+
+                  
+                  <div>
+                    
+                    <p onClick={()=>setCap7Js(!cap7Js)}>capitulo 7</p>
+                    {
+                      cap7Js && <div className='temas'>
+                        <Link to={"javaScript/cap7ProyV1"}>contador</Link>
+                        <Link to={"javaScript/cap7ProyV2"}>calculadora</Link>
+                        <Link to={"javaScript/cap7ProyV3"}>generador de contraseñas</Link>
 
                       </div>
                     }

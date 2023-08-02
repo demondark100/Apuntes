@@ -1,4 +1,4 @@
-.contenedorGeneracionJsCap5 {
+.contenedorGeneracionJsCap7 {
   position: fixed;
   overflow: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -103,7 +103,7 @@ input[type="text"] {
 
 .contenedorMensajeCopiado div{
   background-color: #fff;
-  width: 350px;
+  width: 85%;
   font-size: 1.5em;
   background-color: #4CAF50;
   padding: 8px;
@@ -122,4 +122,11 @@ input[type="text"] {
 }
 .mensajeCopiado{
   color: #fff !important;
+}
+
+
+@media(min-width:750px){
+  .contenedorMensajeCopiado div{
+    width: 350px;
+  }
 }

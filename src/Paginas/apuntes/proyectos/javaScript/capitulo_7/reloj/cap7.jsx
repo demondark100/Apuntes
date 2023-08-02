@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import "./cap5.css";
+import "./cap7.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faUndo } from '@fortawesome/free-solid-svg-icons';
 

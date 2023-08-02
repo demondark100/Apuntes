@@ -5,17 +5,14 @@ import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
 import Volver from "../../../../../../componentes/volver/volver";
 import Html from "../../../../../../componentes/lenguajes/Html"
 import Css from "../../../../../../componentes/lenguajes/Css"
-import "./cap5.css";
-
-
-// // react
-// import { useEffect, useState } from "react";
+import "./cap7.css";
 
 
 
 
 
-function Cap5ProyJsV1() {
+
+function Cap7ProyJsV2() {
 
   useEffect(()=>{
     const botonNumero = document.querySelectorAll('[data-numero]')
@@ -127,31 +124,16 @@ botonBorrarTodo.addEventListener('click',() => {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 5
+      <MensajeModal texto={`¡Proyecto! capitulo 7
 
-Hacer una calculadora con programacion orientada a objetos.
-
-Recuerda que aprendimos:
-
-1. DOM.
-2. Selectores de elementos.
-3. Atributos.
-4. Atributos globales.
-5. Atributos de inputs.
-6. clases y metodos.
-7. Obtencion y modificacion de contenido.
-8. Creacion de elementos.
-9. Obtencion de childs.
-10. propiedades de childs.
-11. propiedades de parents.
-12. propiedades de siblings.`}/>
+Hacer una calculadora.`}/>
       <Volver link={`../`}/>
-      <CodigoFuenteSinInt codigo={<Html codigo={`<div className="calculadora">
-  <div className="display">
-    <div className="valor-superior" data-valor-superior></div>
-    <div className="valor-inferior" data-valor-inferior></div>
+      <CodigoFuenteSinInt codigo={<Html codigo={`<div class="calculadora">
+  <div class="display">
+    <div class="valor-superior" data-valor-superior></div>
+    <div class="valor-inferior" data-valor-inferior></div>
   </div> 
-  <button className="span2" data-borrar-todo>AC</button>
+  <button class="span2" data-borrar-todo>AC</button>
   <button data-borrar>DEL</button>
   <button data-operador>÷</button>
   <button data-numero >1</button>
@@ -345,9 +327,9 @@ botonBorrarTodo.addEventListener('click',() => {
 
       <div className="Page">
 
-        <div className="contenedorCalculadoraCap4Js">
+        <div className="contenedorCalculadoraCap7Js">
 
-          <div className="contenedorCalculadoraCap4JsContentPrincipal">
+          <div className="contenedorCalculadoraCap7JsContentPrincipal">
               <div className="calculadora">
                   <div className="display">
                       <div className="valor-superior" data-valor-superior></div>
@@ -375,10 +357,9 @@ botonBorrarTodo.addEventListener('click',() => {
           </div>
 
         </div>
-
       </div>
     </>
   );
 }
 
-export default Cap5ProyJsV1;
+export default Cap7ProyJsV2;
