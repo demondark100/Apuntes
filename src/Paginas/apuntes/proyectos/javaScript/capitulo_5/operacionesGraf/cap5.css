@@ -1,0 +1,259 @@
+.contenedorOperacionesCap5Dom{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+
+
+
+
+/* esto es el contenedor del prompt */
+.contenedorPromptCap5DOM{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000006e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition-duration: .5s;
+  overflow: auto;
+  backdrop-filter: blur(2px);
+
+}
+.contenedorPromptCap5DOMGide{
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(0px);
+  transition-duration: .5s;
+}
+
+/* esto es el contenedor del prompt */
+.contenedorPromptCap5DOM__content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1b1a1a;
+  padding: 4px;
+  width: 245px;
+  box-shadow: 0 0 50px -8px #706666;
+}
+
+/* estos son los contenedores de los botones */
+.contenedorPromptCap5DOM__botones{
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+.contenedorPromptCap5DOM__botones button{
+  padding: 0 15px 0 15px;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.contenedorPromptCap5DOM__botones button:hover{
+  box-shadow: 0 0 10px -2px #01ff01;
+  transition-duration: .5s;
+}
+.botonOperacionCap5V2Focus{
+  box-shadow: 0 0 20px -2px #0f0;
+  transition-duration: .5s;
+}
+
+/* esto es el contenedor de los inputs */
+.contenedorPromptCap5DOM__inputs{
+  order: 1;
+  width: 55%;
+}
+/* estos son los estilos de los inputs */
+/* Estilo para ocultar las flechas del input de tipo number */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Estilo para los inputs en .contenedorPromptCap5DOM__content */
+.contenedorPromptCap5DOM__content input {
+  width: 40%;
+  margin-bottom: 35px;
+  background-color: #0000002d;
+  color: #fff !important;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 15px -4px #fffdfd;
+  text-align: center;
+}
+
+/* Estilo para .contenedorPromptCap5DOM__inputs__operacion */
+.contenedorPromptCap5DOM__inputs__operacion {
+  color: #fff !important;
+  font-size: 1.5em;
+  margin: 4px;
+}
+
+
+/* estos son los estilos del boton que genera  */
+
+.contenedorPromptCap5DOM__generar{
+  position: absolute;
+  margin-top: 120px;
+  margin-left: -70px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  z-index: 2;
+  cursor: pointer;
+}
+.contenedorPromptCap5DOM__generar::before{
+  content: "";
+  position: absolute;
+  border-right: 2px solid #0f0;
+  background: linear-gradient(90deg,#000,transparent);
+  height: 20px;
+  width: 0;
+  animation-name: botonQuitarPromptCap5V2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: -1;
+}
+
+@keyframes botonQuitarPromptCap5V2 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100px;
+  }
+}
+
+
+/* esto es el mensaje de error */
+.contenedorPromptCap5DOM__error{
+  position: absolute;
+  background-color: #f00;
+  color: #fff !important;
+  margin-top: 18px;
+  padding: 8px;
+  transition-duration: .5s;
+  margin-top: 240px;
+}
+.contenedorPromptCap5DOM__errorHide{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition-duration: .5s;
+}
+
+
+/* esto es el contenedor de las cajas generadas */
+.contenedorCajarDeCajasCap5Js{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #272927;
+  padding: 15px;
+  width: 85%;
+  margin: auto;
+}
+.contenedorCajarDeCajasCap5Js__operacion{
+  color: #fff !important;
+  font-size: 1.8em;
+  text-align: center;
+}
+.contenedorCajitas__content1ProyJsCap5{
+  background-color: #383d38;
+  width: 85%;
+  min-height: 45px;
+  max-height: 200px;
+  overflow: auto;
+}
+.contenedorCajitas__content1ProyJsCap5::-webkit-scrollbar{
+  background-color: #222422;
+  border-radius: 100px;
+}
+.contenedorCajitas__content1ProyJsCap5::-webkit-scrollbar-thumb{
+  background-color: #524949;
+  border-radius: 100px;
+}
+
+/* estas son las manzanas creadas */
+.manzajaCreadaCap5Js{
+  width: 25px;
+  height: 25px;
+  margin: 15px;;
+  display: inline-block;
+}
+.manzajaCreadaCap5Js img{
+  width: 100%;
+}
+.manzajaCreadaCap5Js__div{
+  margin-left: 8px;
+  color: #fff !important;
+}
+
+/* este es el boton para invocar al prompt */
+.contenedorOperacionesCap5Dom__botonChange{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 4px;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+.contenedorOperacionesCap5Dom__botonChange::before{
+  content: "";
+  position: absolute;
+  margin-top: -4px;
+  margin-left: -4px;
+  height: 37px;
+  border-right: 2px solid #0f0;
+  background:  linear-gradient(90deg,#4e4646,transparent);
+  animation-name: botonAnimadoBotonChangeCap5Js;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: -1;
+}
+@keyframes botonAnimadoBotonChangeCap5Js {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 142px;
+  }
+}
+
+@media(min-width: 750px){
+  /* esto es el contenedor de las cajas creadas */
+  .contenedorCajarDeCajasCap5Js{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contenedorCajitas__content1ProyJsCap5{
+    height: 250px;
+    width: 25%;
+    overflow: auto;
+    max-height: 100%;
+  }
+}

@@ -282,6 +282,7 @@ import Cap4ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/mate
 import Cap4ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/preguntar/cap4';
 import Cap4ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/formulario/cap4';
 import Cap5ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/genCajitas/cap5';
+import Cap5ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/operacionesGraf/cap5';
 
 
 import Cap7ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/contador/cap7';
@@ -361,6 +362,7 @@ function App() {
               <Route path='javaScript/cap4ProyV3' element={<Cap4ProyJsV3 />} />
             {/* capitulos 5 */}
               <Route path='javaScript/cap5ProyV1' element={<Cap5ProyJsV1 />} />
+              <Route path='javaScript/cap5ProyV2' element={<Cap5ProyJsV2 />} />
 
             {/* capitulo 7 */}
               <Route path='javaScript/cap7ProyV1' element={<Cap7ProyJsV1 />} />
