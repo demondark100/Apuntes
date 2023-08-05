@@ -1,0 +1,100 @@
+/* esto es el icono para mostrar o quitar la barrita */
+.contenedorGaleriaCap5Js__barraEditora__icono1{
+  color: #fff !important;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+.contenedorGaleriaCap5Js__barraEditora__icono1Ip{
+  transform: rotate(0deg);
+}
+
+/* esto es el contenedor de la barrita de la izquierda */
+
+.contenedorGaleriaCap5Js__barraEditora{
+  width: 45px;
+  height: 100%;
+  position: fixed;
+  background-color: #181717;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-top: 15px;
+  transition-duration: .5s;
+}
+.contenedorGaleriaCap5Js__barraEditoraHide{
+  height: 30px;
+  overflow: hidden;
+  transition-duration: .5s;
+}
+
+/* esto es el contenedor de los iconos */
+.contenedorIconosGaleriaCap5Js{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.contenedorIconosGaleriaCap5Js svg{
+  margin-right: 14px;
+  color: #fff !important;
+  cursor: pointer;
+}
+.contenedorIconosGaleriaCap5Js p{
+  position: absolute;
+  left: 45px;
+  background-color: #181717;
+  color: #fff !important;
+  padding: 4px;
+  width: 150px;
+  text-align: center;
+  transition-duration: .5s;
+}
+.contenedorIconosGaleriaCap5Js__textoHide{
+  position: absolute;
+  left: 45px;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+
+
+
+/* esto es el contenedor de todo en general */
+.contenedorGaleriaCap5Js{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 45px;
+  z-index: -1;
+  overflow: auto;
+  transition-duration: .5s;
+}
+.contenedorGaleriaCap5JsMove{
+  left: 0;
+  transition-duration: .5s;
+}
+
+/* esto es el lienzo del grid editado */
+.contenedorGaleriaCap5Js__Lienzo{
+  background-color: #1f1e1e;
+  width: 85%;
+  height: 95%;
+  margin-top: 15px;
+}
+
+@media(min-width:750px){
+  /* esto es el lienzo del grid editado */
+  .contenedorGaleriaCap5Js__Lienzo{
+    width: 65%;
+    height: 95%;
+    max-height: 750px;
+    max-width: 750px;
+  }
+}
