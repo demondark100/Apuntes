@@ -415,7 +415,7 @@ function Cap5ProyJsV3() {
 
     let cantidad = columnas * filas;
     for (let i = 0; i < cantidad; i++) {
-      imagenesArr.push(<img key={i} />)
+      imagenesArr.push(<img key={i} alt="ingresa la URL de una imagen."/>)
     }
     setImagenes(imagenesArr)
   }

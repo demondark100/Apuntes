@@ -89,10 +89,9 @@
 
 /* esto es el lienzo del grid editado */
 .contenedorGaleriaCap5Js__Lienzo{
-  background-color: #ebdbdb;
+  background-color: #706969;
   width: 85%;
   height: 95%;
-  margin-top: 15px;;
   display: flex;
   justify-content: center;
   align-items: center;
