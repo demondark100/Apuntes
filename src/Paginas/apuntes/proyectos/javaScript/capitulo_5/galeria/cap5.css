@@ -6,6 +6,7 @@
 }
 .contenedorGaleriaCap5Js__barraEditora__icono1Ip{
   transform: rotate(0deg);
+  color: #000 !important;
 }
 
 /* esto es el contenedor de la barrita de la izquierda */
@@ -26,6 +27,7 @@
 }
 .contenedorGaleriaCap5Js__barraEditoraHide{
   height: 30px;
+  background-color: transparent;
   overflow: hidden;
   transition-duration: .5s;
 }
@@ -67,7 +69,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  background-color: #000;
+  background-color: #ffffff;
   width: 100%;
   height: 100%;
   top: 0;
@@ -81,20 +83,414 @@
   transition-duration: .5s;
 }
 
+
+
+
+
 /* esto es el lienzo del grid editado */
 .contenedorGaleriaCap5Js__Lienzo{
-  background-color: #1f1e1e;
+  background-color: #ebdbdb;
   width: 85%;
   height: 95%;
-  margin-top: 15px;
+  margin-top: 15px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 8px;
+  
 }
+.contenedorGaleriaCap5Js__Lienzo__grid{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+}
+.contenedorGaleriaCap5Js__Lienzo__grid img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+/* esto es el editor de las filas y columnas */
+.editorFilasColumnasCap5JsContenedor{ /*contenedor*/
+  background-color: #161616;
+  position: absolute;
+  width: 75%;
+  left: 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.editorFilasColumnasCap5JsContenedor__botonCrear{
+  background-color: #2b2727;
+  color: #fff !important;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin: auto;
+  padding: 2px 8px 2px 8px;
+}
+.editorFilasColumnasCap5JsContenedor p{ /* descripcion */
+  position: absolute;
+  color: #fff !important;
+  background-color: #000;
+  top: 0;
+  left: 45px;
+  width: 160px;
+  text-align: center;
+  padding: 8px;
+}
+
+.editorFilasColumnasCap5JsContenedor__botones{ /* contenedor de los botones */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.editorFilasColumnasCap5JsContenedor__botones button{ /* botones */
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.editorFilasColumnasCap5JsContenedor__inputs{ /* contenedor de los inputs */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editorFilasColumnasCap5JsContenedor__inputs input{ /* esos son los inputs */
+  width: 45%;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: .5px solid #b9a1a1;
+  outline: none;
+  color: #b9a1a1 !important;
+}
+.editorFilasColumnasCap5JsContenedor__inputs input::placeholder{
+  color: #b9a1a1 !important;
+}
+
+
+
+
+
+/* esto es el editor de las medidas de las filas y las columnas */
+.editorMedidasCap5JsContenedor{
+  background-color: #161616;
+  position: absolute;
+  width: 75%;
+  left: 0px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.editorMedidasCap5JsContenedor__botonesContent{ /* esto es el contenedor de los botones */
+  display: flex;
+  justify-content: space-between;
+}
+.editorMedidasCap5JsContenedor__botonesContent button{ /* los botones */
+  padding: 0;
+  background-color: transparent;
+  color: #fff !important;
+  border: none;
+  outline: none;
+}
+.editorMedidasCap5JsContenedor p{ /* esto es el parrafo de descripcion */
+  position: absolute;
+  color: #fff !important;
+  background-color: #000;
+  top: 0;
+  left: 45px;
+  width: 160px;
+  text-align: center;
+  padding: 8px;
+}
+
+/* esto es el contenedor de los inputs de las medidas */
+.contenedorEditorInputsCap5JsMedidas{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenedorEditorInputsCap5JsMedidas__input{
+  display: flex;
+  justify-content: start;
+  width: 65%;
+  margin-bottom: 15px;
+  border-bottom: .5px solid #b9a1a1;
+}
+
+.contenedorEditorInputsCap5JsMedidas__input input{
+  width: 85%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #b9a1a1 !important; 
+}
+.contenedorEditorInputsCap5JsMedidas__input select{
+  background-color: transparent;
+  color: #b9a1a1 !important;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.contenedorEditorInputsCap5JsMedidas__input select option{
+  background-color: #000;
+  border: none;
+  outline: none;
+}
+
+.contenedorEditorInputsCap5JsMedidas__boton{
+  background-color: #2b2727;
+  color: #fff !important;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin: auto;
+  padding: 2px 8px 2px 8px;
+}
+
+
+
+
+/* estos son los estilos del editor de area */
+.contenedorAreaCap5JsV3{
+  display: flex;
+  flex-direction: column;
+  background-color: #161616;
+  position: absolute;
+  left: 0;
+  padding: 8px;
+  height: 100%;
+  overflow: auto;
+  width: 65%;
+}
+.contenedorAreaCap5JsV3__botonesContent{
+  display: flex;
+  justify-content: space-between;
+}
+.contenedorAreaCap5JsV3__botonesContent button{
+  background-color: transparent;
+  color: #fff !important;
+  border: none;
+  outline: none;
+}
+.contenedorAreaCap5JsV3__descripcion{
+  position: absolute;
+  color: #fff !important;
+  background-color: #000;
+  top: 0;
+  left: 75px;
+  width: 160px;
+  padding: 8px;
+  z-index: 1;
+  white-space: pre-wrap;
+}
+.contenedorAreaCap5JsV3::-webkit-scrollbar{
+  width: 4px;
+  background-color: #463e3e;
+}
+.contenedorAreaCap5JsV3::-webkit-scrollbar-thumb{
+  background-color: #fff;
+}
+.contenedorAreaCap5JsV3__inputs__areas__input__texto{
+  color: #fff !important;
+}
+
+.contenedorAreaCap5JsV3__inputs__areas{
+  display: flex;
+  flex-direction: column;
+  background-color: #0c0c0c;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.contenedorAreaCap5JsV3__inputs__areas__input{
+  display: flex;
+  justify-content: space-around;
+}
+.contenedorAreaCap5JsV3__inputs__areas__input input{
+  width: 10%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  border-bottom: 1px solid #b9a1a1;
+}
+.contenedorAreaCap5JsV3__inputs__areas label{
+  color: #fff !important;
+  text-align: center;
+}
+.contenedorAreaCap5JsV3__inputs__areas__input b{
+  color: #fff !important;
+}
+.contenedorAreaCap5JsV3__error{
+  color: #fff !important;
+  background-color: #0c0c0c !important;
+  padding: 8px;
+  width: 250px;
+  position: relative !important;
+}
+
+/* estos son los botones extra */
+.contenedorAreaCap5JsV3__reiniciarTodo{
+  background-color: #a31111;
+  border: none;
+  outline: none;
+  width: 45%;
+  color: #fff !important;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.contenedorAreaCap5JsV3__botonesExtra{
+  background-color: #000;
+  display: flex;
+  padding: 0;
+  margin-top: 15px;
+  border-right: 2px solid #fff;
+}
+.contenedorAreaCap5JsV3__botonesExtra button{
+  background-color: transparent;
+  padding: 0;
+  color: #fff !important;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  border: none;
+  padding: 2px;
+  border-left: 2px solid #fff;
+}
+
+
+
+
+/* esto es el contenedor para agregar las imagenes */
+.contenedorURLImageCap5V3{
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  background-color: #161616;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  overflow: auto;
+}
+.contenedorURLImageCap5V3::-webkit-scrollbar{
+  background-color: #0a0a0a;
+  width: 2px;
+}
+.contenedorURLImageCap5V3::-webkit-scrollbar-thumb{
+  background-color: #2c2929;
+}
+.contenedorURLImageCap5V3__botonesContent{ /*contenedor de los botones*/
+  display: flex;
+  justify-content: space-between;
+}
+.contenedorURLImageCap5V3__botonesContent button{
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff !important;
+}
+.contenedorURLImageCap5V3__descripcion{ /*esto es la descripcion*/
+  position: absolute;
+  color: #fff !important;
+  background-color: #000;
+  top: 0;
+  left: 45px;
+  width: 160px;
+  padding: 8px;
+  z-index: 1;
+}
+.contenedorURLImageCap5V3__error{
+  background-color: #000;
+  color: #fff !important;
+  padding: 8px;
+}
+.contenedorURLImageCap5V3__content{
+  background-color: #000;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+.contenedorURLImageCap5V3__content p{
+  color: #fff !important;
+  margin-bottom: 8px;
+}
+.contenedorURLImageCap5V3__content__input{
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 1000px;
+}
+.contenedorURLImageCap5V3__content__input input{
+  background-color: transparent;
+  color: #fff !important;
+  border: none !important;
+  outline: none;
+  margin: 0 !important;
+  border-right: 2px solid #fff !important;
+}
+.contenedorURLImageCap5V3__content__input button{
+  background-color: transparent;
+  padding: 0;
+  color: #fff !important;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
 
 @media(min-width:750px){
   /* esto es el lienzo del grid editado */
   .contenedorGaleriaCap5Js__Lienzo{
-    width: 65%;
+    width: 55%;
     height: 95%;
     max-height: 750px;
     max-width: 750px;
+    margin-right: 85px;
+  }
+  /* esto es el contenedor de todo en general */
+.contenedorGaleriaCap5Js{
+  justify-content: end;
+}
+
+  /* esto es el editor de las filas y columnas */
+  .editorFilasColumnasCap5JsContenedor{ /*contenedor*/
+    width: auto;
+  }
+
+  /* esto es el editor de las medidas de las filas y las columnas */
+  .editorMedidasCap5JsContenedor{
+    width: auto;
+  }
+  
+  /* estos son los estilos del editor de area */
+  .contenedorAreaCap5JsV3{
+    width: auto;
+  }
+  /* esto es el contenedor para agregar las imagenes */
+  .contenedorURLImageCap5V3{
+    width: auto;
   }
 }
