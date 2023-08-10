@@ -1,0 +1,138 @@
+/*esto es el contenedor general de toda la app*/
+.contenedorCap7V4General{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #cee4ce;
+  position: fixed;
+  overflow: auto;
+}
+
+/*esto es el contenedor que muestra los colores*/
+.contenedorCap7V4General__showColors{
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  width: 85%;
+  gap: 25px;
+}
+
+
+
+
+
+/*Esto es el contenedore para mostrar los colores*/
+.contenedorColoresJsCap7V4ShowColor{
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 1000px;
+}
+.contenedorColoresJsCap7V4ShowColor:hover{
+  box-shadow: 0 0 15px 10px #fff;
+}
+
+/*esto el el texto que se muestra*/
+.contenedorColoresJsCap7V4ShowColor p{
+  color: #fff;
+  font-size: 1.5em;
+}
+
+
+
+/*estos son los estilos de los botones*/
+.btn__copiarCap7JsV4 {
+  position: relative;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  width: 65%;
+ }
+ 
+ .btn__copiarCap7JsV4:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn__copiarCap7JsV4:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn__copiarCap7JsV4::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .btn__copiarCap7JsV4::after {
+  background-color: #fff;
+ }
+ 
+ .btn__copiarCap7JsV4:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }
+
+
+
+ /*estos son los estilos del input*/
+.contenedorCap7V4General__input{
+  background-color: #000;
+  border: none;
+  outline: none;
+  width: 85px;
+  height: 85px;
+  border-radius: 1000px;
+  overflow: hidden;
+  padding: 15px;
+}
+.contenedorCap7V4General__input:hover{
+  box-shadow: 0 0 15px 15px #fff;
+}
+
+
+@media (min-width: 750px){
+
+  /*esto es el contenedor general de toda la app*/
+  .contenedorCap7V4General{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  /*esto es el contenedor que muestra los colores*/
+  .contenedorCap7V4General__showColors{
+    width: auto;
+  }
+  /*esto el el texto que se muestra*/
+  .contenedorColoresJsCap7V4ShowColor p{
+    font-size: 2em;
+  }
+  /*Esto es el contenedore para mostrar los colores*/
+  .contenedorColoresJsCap7V4ShowColor{
+    width: 350px;
+  }
+}

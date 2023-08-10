@@ -5,7 +5,9 @@ import "./lenguajes.css"
 import hljs from 'highlight.js';
 
 // solo se cambia esto
-import 'highlight.js/styles/xt256.css';
+import 'highlight.js/styles/github-dark.css';
+
+
 
 
 export default function Html({ codigo }) {

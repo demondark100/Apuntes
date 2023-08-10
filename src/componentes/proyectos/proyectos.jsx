@@ -118,20 +118,6 @@ function Proyectos({sendshowProyects}) {
                     }
                   
                   </div>
-
-                  
-                  <div>
-                    
-                    <p onClick={()=>setCap6Js(!cap6Js)}>capitulo 6</p>
-                    {
-                      cap6Js && <div className='temas'>
-
-
-                      </div>
-                    }
-                  
-                  </div>
-
                   
                   <div>
                     
@@ -141,6 +127,7 @@ function Proyectos({sendshowProyects}) {
                         <Link to={"javaScript/cap7ProyV1"}>contador</Link>
                         <Link to={"javaScript/cap7ProyV2"}>calculadora</Link>
                         <Link to={"javaScript/cap7ProyV3"}>generador de contraseñas</Link>
+                        <Link to={"javaScript/cap7ProyV4"}>colores css.</Link>
 
                       </div>
                     }

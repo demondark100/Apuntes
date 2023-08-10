@@ -284,11 +284,10 @@ import Cap4ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/form
 import Cap5ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/genCajitas/cap5';
 import Cap5ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/operacionesGraf/cap5';
 import Cap5ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/galeria/cap5';
-
-
 import Cap7ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/contador/cap7';
 import Cap7ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/calculadora/cap7';
 import Cap7ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/contrasña/cap7';
+import Cap7ProyJsV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/colores/cap7';
 
 
 // pendejadas
@@ -370,7 +369,8 @@ function App() {
               <Route path='javaScript/cap7ProyV1' element={<Cap7ProyJsV1 />} />
               <Route path='javaScript/cap7ProyV2' element={<Cap7ProyJsV2 />} />
               <Route path='javaScript/cap7ProyV3' element={<Cap7ProyJsV3 />} />
-            
+              <Route path='javaScript/cap7ProyV4' element={<Cap7ProyJsV4 />} />
+
             
           
 
