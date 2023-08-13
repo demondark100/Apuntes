@@ -28,17 +28,12 @@ function Home({active}) {
 
   return (
     <>
-      <MensajeModal texto={`wonder egg en order :v.
-espisodios   verdadero
-        2      -         6
-        3      -         7
-        4      -         8
-        5      -         9
-        6      -        10
-        7      -        11
-        8      -        12
-        9      -        13
-       10      -        `}/>
+      <MensajeModal texto={`Animes pendientes
+
+Reborn As A Vending Machine, Now I Wander The Dungeon
+jujutsu kaisen temporada 2
+soul eater
+mushoku tensei temporada 2 o 3 no recuerdo`}/>
       <main>
         <article className='contenedorHome'>
           <section ref={contenedor1} className='contenedorHome__contenido'>

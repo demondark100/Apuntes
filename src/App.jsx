@@ -14,6 +14,21 @@ import NotFound from './Paginas/notFound/NotFound';
 
 
 
+// pendejadas
+import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
+
+
+// componente menu
+import Menu from './componentes/menus/Menu';
+
+
+// importando icono de dia y noche
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import Barrita from './componentes/opciones/opciones';
+
+
+
 // logica
 import TipoDeDatos from './Paginas/apuntes/logica/capitulo_1/tipoDeDato/tipoDeDato';
 import OperadoresLogica from './Paginas/apuntes/logica/capitulo_1/operaciones/Operaciones';
@@ -279,7 +294,6 @@ import Cap3ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/asis
 import Cap3ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/fiesta/fiesta';
 import Cap3ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_2/tienda/tienda';
 import Cap4ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/matematicas/cap4';
-import Cap4ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/preguntar/cap4';
 import Cap4ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_4/formulario/cap4';
 import Cap5ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/genCajitas/cap5';
 import Cap5ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_5/operacionesGraf/cap5';
@@ -288,20 +302,11 @@ import Cap7ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/cont
 import Cap7ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/calculadora/cap7';
 import Cap7ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/contrasña/cap7';
 import Cap7ProyJsV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/colores/cap7';
+import Cap7ProyJsV5 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/preguntar/cap7';
+import Cap8ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/adivina/cap8';
 
 
-// pendejadas
-import Calculadora from './Paginas/apuntes/pendejadas/calculadora';
 
-
-// componente menu
-import Menu from './componentes/menus/Menu';
-
-
-// importando icono de dia y noche
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
-import Barrita from './componentes/opciones/opciones';
 
 
 function App() {
@@ -358,20 +363,20 @@ function App() {
               <Route path='javaScript/cap3ProyV3' element={<Cap3ProyJsV3 />} />
             {/* capitulo 4 */}
               <Route path='javaScript/cap4ProyV1' element={<Cap4ProyJsV1 />} />
-              <Route path='javaScript/cap4ProyV2' element={<Cap4ProyJsV2 />} />
               <Route path='javaScript/cap4ProyV3' element={<Cap4ProyJsV3 />} />
             {/* capitulos 5 */}
               <Route path='javaScript/cap5ProyV1' element={<Cap5ProyJsV1 />} />
               <Route path='javaScript/cap5ProyV2' element={<Cap5ProyJsV2 />} />
               <Route path='javaScript/cap5ProyV3' element={<Cap5ProyJsV3 />} />
-
             {/* capitulo 7 */}
               <Route path='javaScript/cap7ProyV1' element={<Cap7ProyJsV1 />} />
               <Route path='javaScript/cap7ProyV2' element={<Cap7ProyJsV2 />} />
               <Route path='javaScript/cap7ProyV3' element={<Cap7ProyJsV3 />} />
               <Route path='javaScript/cap7ProyV4' element={<Cap7ProyJsV4 />} />
+              <Route path='javaScript/cap7ProyV5' element={<Cap7ProyJsV5 />} />
+            {/* capitulo 8 */}
+              <Route path='javaScript/cap8ProyV1' element={<Cap8ProyJsV1 />} />
 
-            
           
 
 

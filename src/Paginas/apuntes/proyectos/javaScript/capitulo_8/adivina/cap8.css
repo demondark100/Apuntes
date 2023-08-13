@@ -1,0 +1,242 @@
+/*esto es el contenedor de la primera presentacion*/
+.presentacionCap8JsV1{
+  width: 100%;
+  height: 100%;
+  background-color: #2c2b2b;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  left: 0;
+  transition-duration: .5s;
+}
+.presentacionCap8JsV1Hide{
+  left: -100%;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.presentacionCap8JsV1 h4{
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 2em;
+  text-shadow: 0 0 15px #fff;
+}
+
+/*esto es el icono de loading*/
+.presentacionCap8JsV1__loading {
+  position: relative;
+  /* transform: translate(-50%,-50%); */
+  width: 110px;
+  height: 110px;
+  background: transparent;
+  border: px solid #3c3c3c;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 111px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #fff000;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #fff000;
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.presentacionCap8JsV1__loading:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 5px solid #fff000;
+  border-right: 5px solid #fff000;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+/*est es el contenedor de la dificultad*/
+.contenedorDificultadCap8JsV1{
+  width: 100%;
+  height: 100%;
+  background-color: #1f1d1d;
+  color: #fff !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  left: 100%;
+  transition-duration: .5s;
+  overflow: auto;
+}
+.contenedorDificultadCap8JsV1Show{
+  left: 0;
+  transition-duration: .5s;
+}
+.contenedorDificultadCap8JsV1Hide{
+  left: -100%;
+  transition-duration: .5s;
+}
+.contenedorDificultadCap8JsV1 h4{
+  font-size: 2em;
+  text-shadow: 0 0 15px #fff;
+  margin-bottom: 15px;
+  margin-top: 45px;
+}
+/*estos son los botones para elejir la dificultad*/
+.contenedorDificultadCap8JsV1__contentBtn{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contenedorDificultadCap8JsV1__boton{
+  background-color: transparent;
+  text-shadow: 0 0 15px #fff;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.contenedorDificultadCap8JsV1__boton:hover{
+  background: linear-gradient(90deg,transparent,#fff,transparent);
+  color: #000;
+  text-shadow: 0 0 15px #000;
+}
+
+
+/*esto es el contenedor principal donde se hacen las pruebas*/
+.contenedorPrincipalCap8JsV1{
+  position: absolute;
+  background-color: #252424;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorPrincipalCap8JsV1 h4{
+  margin-bottom: 15px;
+  text-shadow: 0 0 15px #fff;
+  font-size: 1.8em;
+  color: #fff !important;
+  text-align: center;
+}
+.contenedorPrincipalCap8JsV1 input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  text-shadow: 0 0 15px #fff;
+  border-bottom: 2px solid #fff;
+  font-size: 1.5em;
+}
+.contenedorPrincipalCap8JsV1__comprobar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.contenedorPrincipalCap8JsV1__comprobar button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-shadow: 0 0 15px #fff;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.contenedorPrincipalCap8JsV1__comprobar p{
+  color: #ff0000 !important;
+  text-shadow: 0 0 15px #f00;
+  font-size: 1.5em;
+}
+
+.contenedorCap8JsV1ganarPerder{ /*esto es el contenedor del mensaje de ganaste o perdiste*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  color: #fff !important;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.showGanaste{ /*aqui mostramos el componente de ganaste*/
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.showPerdiste{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+
+
+.contenedorCap8JsV1ganarPerder h4{
+  color: #fff !important;
+  font-size: 1.8em;
+  text-align: center;
+  text-shadow: 0 0 15px #fff !important;
+}
+.contenedorCap8JsV1ganarPerder p{
+  color: #fff !important;
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 0 0 15px #fff !important;
+}
+.contenedorCap8JsV1ganarPerder button{
+  padding: 0;
+  background-color: #131212;
+  border: none;
+  outline: none;
+  color: #fff !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 1000px;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.contenedorCap8JsV1ganarPerder button:hover{
+  box-shadow: 0 0 15px 4px #191a1b;
+  transition-duration: .5s;
+}
+
+
+@media(min-width:750px){
+  .contenedorPrincipalCap8JsV1__comprobar{ /*esto es el contenedor del boton de comprobar*/
+    flex-direction: row;
+  }
+}

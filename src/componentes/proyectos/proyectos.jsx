@@ -18,6 +18,7 @@ function Proyectos({sendshowProyects}) {
   const [cap5Js, setCap5Js] = useState(false);
   const [cap6Js, setCap6Js] = useState(false);
   const [cap7Js, setCap7Js] = useState(false);
+  const [cap8Js, setCap8Js] = useState(false);
 
 
   useEffect(()=>{
@@ -96,7 +97,6 @@ function Proyectos({sendshowProyects}) {
                     {
                       cap4Js && <div className='temas'>
                         <Link to={"javaScript/cap4ProyV1"}>matematica para niños</Link>
-                        <Link to={"javaScript/cap4ProyV2"}>pregunta</Link>
                         <Link to={"javaScript/cap4ProyV3"}>formulario</Link>
 
                       </div>
@@ -128,12 +128,25 @@ function Proyectos({sendshowProyects}) {
                         <Link to={"javaScript/cap7ProyV2"}>calculadora</Link>
                         <Link to={"javaScript/cap7ProyV3"}>generador de contraseñas</Link>
                         <Link to={"javaScript/cap7ProyV4"}>colores css.</Link>
+                        <Link to={"javaScript/cap7ProyV5"}>pregunta</Link>
 
                       </div>
                     }
                   
                   </div>
 
+
+                  <div>
+                    
+                    <p onClick={()=>setCap8Js(!cap8Js)}>capitulo 8</p>
+                    {
+                      cap8Js && <div className='temas'>
+                        <Link to={"javaScript/cap8ProyV1"}>adivina el numero</Link>
+
+                      </div>
+                    }
+                  
+                  </div>
 
                   <div>
                     
