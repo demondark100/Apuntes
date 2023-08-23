@@ -142,6 +142,7 @@ function Proyectos({sendshowProyects}) {
                     {
                       cap8Js && <div className='temas'>
                         <Link to={"javaScript/cap8ProyV1"}>adivina el numero</Link>
+                        <Link to={"javaScript/cap8ProyV2"}>examen de programacion</Link>
 
                       </div>
                     }

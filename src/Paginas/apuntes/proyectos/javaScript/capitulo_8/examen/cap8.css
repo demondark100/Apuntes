@@ -1,0 +1,220 @@
+.contenedorTitleCap8JsV2{  /*esto es el contenedor de la presentacion*/
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  transition-duration: .3s;
+  z-index: 2;
+}
+.contenedorTitleCap8JsV2Hide{
+  left: -100%;
+  transition-duration: .3s;
+}
+.contenedorTitleCap8JsV2ContenedorTitle{ /*contenedor del titulo que hace el efecto de maquina de escribir*/
+  color: #ecf9fc;
+  text-shadow: 0 0 15px #ecf9fc;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 262px;
+  animation-name: MaquinaEscribirAnimacion;
+  animation-duration: 4s;
+  margin: 0;
+}
+.contenedorTitleCap8JsV2ContenedorTitle h4{
+  border-right: 2px solid #ecf9fc;
+  animation-name: barritaIzquierdaEscritura;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  font-size: 1.5em;
+}
+@keyframes MaquinaEscribirAnimacion{
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 262px;
+  }
+}
+@keyframes barritaIzquierdaEscritura {
+  0%{
+    border-right: 2px solid #ecf9fc;
+  }
+  100%{
+    border-right: 2px solid transparent;
+  }
+}
+
+
+
+.contenedorPreguntasCap8JsV2Background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #050f68;
+  transition-duration: .5s;
+  top: 0%;
+}
+.contenedorPreguntasCap8JsV2BackgroundHide{
+  transition-duration: .5s;
+  top: -100%;
+}
+.contenedorPreguntasCap8JsV2{ /*esto es el contenedor principalm  de las preguntas*/
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background: radial-gradient(transparent,#00102c,#00102c,#00102c);
+  overflow: auto;
+}
+.contenedorPreguntasCap8JsV2 p{ /*esto es el estilo de las preguntas*/
+  color: #9ff2f5 !important;
+  text-align: center;
+  margin-top: 35px;
+  white-space: pre-wrap;
+}
+.contenedorPreguntasCap8JsV2__botones{ /*esto es el contenedor de los botones*/
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  gap: 25px;
+}
+.contenedorPreguntasCap8JsV2__botones button{ /*esto es el estilo de las opciones osea los botones*/
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #9ff2f5 !important;
+  border: 2px solid #3c70ff;
+  border-radius: 1000px;
+  transition-duration: .5s;
+}
+.contenedorPreguntasCap8JsV2__botones button:hover{
+  background-color: #2559a7;
+  border: none;
+  box-shadow: 0 0 15px 8px #3c70ff;
+  transition-duration: .5s;
+}
+
+
+
+.contenedorResultadosCap8JsV2{ /*esto es el contenedor de los resultados*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #01042b;
+  top: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 45px;
+  overflow: auto;
+}
+.contenedorResultadosCap8JsV2Show{
+  top: 0;
+  transition-duration: .3s;
+}
+.contenedorResultadosCap8JsV2__estadisticas{ /*esto es el contenedor de las estadisticas*/
+  width: 200px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  box-shadow: 0 0 12px 2px #020ebd;
+}
+.contenedorResultadosCap8JsV2__estadisticas p{ /*esto es el estilos de los p */
+  color: #9ff2f5 !important;
+}
+.contenedorResultadosCap8JsV2__estadisticas button{ /*estos son los estilos del boton*/
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #f00;
+  text-shadow: 0 0 8px #f00;
+  cursor: pointer;
+  transition-duration: .5s;
+  padding: 0;
+}
+.contenedorResultadosCap8JsV2__estadisticas button:hover{
+  text-shadow: 0 0 15px #f00;
+  transition-duration: .5s;
+}
+
+
+
+.contenedorResultadosCap8JsV2__detalles{ /*esto es el contenedor de los detalles*/
+  background-color: transparent;
+  transform: rotateX(90deg);
+  transition-duration: .5s;
+  display: flex;
+  text-align: center;
+  color: #9ff2f5 !important;
+  box-shadow: 0 0 15px 8px #01037a;
+  padding: 15px;
+  margin-bottom: 55px;
+}
+.contenedorResultadosCap8JsV2__detallesShow{
+  transform: rotateX(0deg);
+  transition-duration: .5s;
+}
+.contenedorResultadosCap8JsV2__detalles p{
+  color: #ff0728 !important;
+  text-align: start;
+  padding: 2px;
+  border: 2px solid #ff0728;
+  margin-top: 15px;
+}
+.contenedorResultadosCap8JsV2__detalles h4{
+  margin-top: 15px;
+}
+
+@media(min-width:750px){
+  .contenedorTitleCap8JsV2ContenedorTitle{ /*contenedor del titulo que hace el efecto de maquina de escribir*/
+    white-space: nowrap;
+    width: 720px;
+    animation-name: MaquinaEscribirAnimacion;
+    animation-duration: 4s;
+  }
+  .contenedorTitleCap8JsV2ContenedorTitle h4{
+    font-size: 4em;
+    animation-name: barritaIzquierdaEscritura;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes MaquinaEscribirAnimacion{
+    0%{
+      width: 0;
+    }
+    100%{
+      width: 720px;
+    }
+  }
+
+
+  .contenedorPreguntasCap8JsV2 p{ /*esto es el estilo de las preguntas*/
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .contenedorPreguntasCap8JsV2__botones button{ /*esto es el estilo de las opciones osea los botones*/
+    font-size: 1.8em;
+  }
+
+  .contenedorResultadosCap8JsV2__estadisticas{ /*esto es el contenedor de las estadisticas*/
+    font-size: 2em;
+    width: 350px;
+    height: 150px;
+  }
+
+}
+
+

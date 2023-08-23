@@ -304,6 +304,7 @@ import Cap7ProyJsV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/cont
 import Cap7ProyJsV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/colores/cap7';
 import Cap7ProyJsV5 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/preguntar/cap7';
 import Cap8ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/adivina/cap8';
+import Cap8ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/examen/cap8';
 
 
 
@@ -376,6 +377,7 @@ function App() {
               <Route path='javaScript/cap7ProyV5' element={<Cap7ProyJsV5 />} />
             {/* capitulo 8 */}
               <Route path='javaScript/cap8ProyV1' element={<Cap8ProyJsV1 />} />
+              <Route path='javaScript/cap8ProyV2' element={<Cap8ProyJsV2 />} />
 
           
 

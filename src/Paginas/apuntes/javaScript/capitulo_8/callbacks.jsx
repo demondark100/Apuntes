@@ -30,6 +30,50 @@ music_2(llamar_2)`}/>
     nombre("hasta que pase el temblor");
 }
 music(nombre=>console.log(nombre))`}/>
+
+        <Conseptos texto={`Para ver un poco mas su funcionalidad haremos un pequeño programa usando callbacks y cuando entiendas el codigo te daras cuenta lo utiles y lo flexible que se vuelve el codigo usando callbacks.`}/>
+        <JavaScropt codigo={`function operacionMatematica(a, b, operacion) {
+  return operacion(a, b);
+}
+
+function suma(x, y) {
+  return x + y;
+}
+
+function resta(x, y) {
+  return x - y;
+}
+
+function multiplicacion(x, y) {
+  return x * y;
+}
+
+function division(x, y) {
+  if (y !== 0) {
+    return x / y;
+  } else {
+    return "No se puede dividir por cero";
+  }
+}
+
+function mostrarResultado(operacion, a, b, callback) {
+  const resultado = operacionMatematica(a, b, operacion);
+  callback(resultado);
+}
+
+function mostrarEnConsola(resultado) {
+  console.log("El resultado es:", resultado);
+}
+
+function mostrarEnAlerta(resultado) {
+  alert("El resultado es: " + resultado);
+}
+
+mostrarResultado(suma, 5, 3, mostrarEnConsola);
+mostrarResultado(resta, 5, 3, mostrarEnAlerta);
+mostrarResultado(multiplicacion, 4, 6, mostrarEnConsola);
+mostrarResultado(division, 10, 2, mostrarEnAlerta);
+`}/>
         
       </main>
       <Footer/>
