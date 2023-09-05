@@ -1,0 +1,290 @@
+/* estilos del backgound y contenedor principal */
+.contenedorPageCap9V1Pokemon{ /*contenedor principal*/
+  background-image: url("https://i.pinimg.com/originals/bf/db/c6/bfdbc62c455d6e4b5456aae89ab64493.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow: auto;
+}
+
+
+
+/* estilos del buscador */
+
+.contenedorPokemonOpcionesJsCap9{ /*esto es el contenedor de las opciones que tiene el usuario*/
+  width: 100%;
+  height: 350px;
+  background-color: #f00;
+  display: flex;
+  align-items: center !important;
+  flex-direction: column;
+}
+
+.contenedorPokemonOpcionesJsCap9__input{ /*esto es el contenedor del input*/
+  background-color: #ff5151;
+  border-radius: 1000px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  height: 45px;
+  margin-top: 10px;
+  width: 85%;
+  position: absolute;
+  border: 2px solid #000;
+}
+.contenedorPokemonOpcionesJsCap9__input input{ /*esto es el input*/
+  height: 108%;
+  width: 80%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 2em;
+  display: flex;
+  background-color: #fff;
+  margin-left: -15px;
+  padding-left: 15px;
+}
+.contenedorPokemonOpcionesJsCap9__input p{ /*esto es para limpiar el input*/
+  background-color: #fff;
+  font-size: 2em;
+  height: 100%;
+  padding: 4px;
+  cursor: pointer;
+}
+.contenedorPokemonOpcionesJsCap9__input button{ /*esto es el boton de busqueda*/
+  padding: 0;
+  width: 25%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  cursor: pointer;
+}
+
+.sugerencias{ /*estas son las sugerencias de las busquedas*/
+  position: absolute;
+  top: 66px;
+  left: 45px;
+  width: 64.5%;
+  max-height: 50%;
+  background-color: #fff;
+  z-index: 4;
+  overflow: auto;
+}
+.sugerencias::-webkit-scrollbar{
+  background-color: #f00;
+  width: 2px;
+}
+.sugerencias::-webkit-scrollbar-thumb{
+  background-color: #fff;
+}
+.sugerencias p{
+  padding: 15px;
+  cursor: pointer;
+}
+.sugerencias p:hover{
+  background-color: #bd1f1f;
+  color: #fff;
+}
+
+
+@media(min-width: 750px){
+  .contenedorPageCap9V1Pokemon{ /*contenedor principal*/
+    flex-direction: row;
+    overflow: hidden;
+  }
+  .contenedorPokemonOpcionesJsCap9__input{ /*esto es el contenedor del input*/
+    position: relative;
+    margin-top: 0;
+  }
+  .contenedorPokemonOpcionesJsCap9{ /*esto es el contenedor de las opciones que tiene el usuario*/
+    width: 350px;
+    height: 100%;
+    background-color: #ff0909;
+    align-items: start;
+    max-width: 550px;
+  }
+  .contenedorPokemonOpcionesJsCap9__input{ /*esto es el contenedor del input*/
+    height: 45px;
+    margin-top: 25px;
+  }
+  .sugerencias{ /*estas son las sugerencias de las busquedas*/
+    width: 220px;
+    top: 81px;
+    left: 25px;
+  }  
+  .contenedorPokemonOpcionesJsCap9__icono{ /*esto es el icono de menu*/
+    display: none;
+  }
+}
+
+
+
+
+/*estilos de la consola de botones*/
+
+
+.contenedorPokemonOpcionesJsCap9__botones{ /*estos son los botones para manejar los eventos*/
+  margin-top: 85px;
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+  gap: 35px;
+}
+.contenedorBotonesPokemonCap9Js{ /*este es el contenedor del boton de la consola*/
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorBotonesPokemonCap9Js div{ /*este es el icono del boton*/
+  background-color: #3e04dd;
+  border-radius: 1000px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  font-size: 1em;
+  color: #fff !important;
+  padding: 2px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition-duration: .8s;
+  box-shadow: 0px 2px 0 2px #3507b4;
+}
+.contenedorBotonesPokemonCap9Js p{ /*esto es el texto indicativo del boton*/
+  text-align: center;
+  margin-top: 4px;
+  color: #fff !important;
+  font-size: 1em;
+}
+.contenedorBotonesPokemonCap9Js div:active{
+  background-color: #02297c;
+  transition-duration: .8s;
+  box-shadow: 0px 0px 0 0px #3507b4;
+}
+
+.contenedorPokemonOpcionesJsCap9__botones__despazamiento{/*estos son los botnones de desplazamiento*/
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contenedorPokemonOpcionesJsCap9__botones__despazamiento__izDer{
+  display: flex;
+  gap: 45px;
+}
+.contenedorPokemonOpcionesJsCap9__botones__opciones{ /*estos son los botones de las opciones*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+
+
+@media(min-width:750px){
+  .contenedorPokemonOpcionesJsCap9__botones{ /*estos son los botones para manejar los eventos*/
+    position: absolute;
+    margin-top: 110px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .contenedorBotonesPokemonCap9Js div{ /*este es el icono del boton*/
+    width: 45px;
+    height: 45px;
+    font-size: 1.5em;
+    padding: 4px;
+  }
+  .contenedorBotonesPokemonCap9Js p{ /*esto es el texto indicativo del boton*/
+    font-size: 1.3em;
+  }
+
+  .contenedorPokemonOpcionesJsCap9__botones__opciones{ /*estos son los botones de las opciones*/
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 15px;
+  }
+}
+
+
+
+
+/*estilos de los pokemones que se renderizaran*/
+
+.contenedorPageCap9V1Pokemon__pokemones{ /*esto es el contenedor principal de los pokemones renderizados*/
+  border: 23px solid #f00;
+  height: 100%;
+  background-color: #0000001e;
+  overflow: auto;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr); /* Dos filas fijas */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 35px;
+  padding: 25px;
+  overflow: auto;
+}
+.contenedorPageCap9V1Pokemon__pokemones::-webkit-scrollbar{
+  display: none;
+}
+
+.pageCap9V1Pokemon__content{ /*contenedor de los pokemones renderizadors*/
+  display: flex;
+  width: 100px;
+  height: 140px;
+  align-items: center;
+}
+.pageCap9V1Pokemon__content__img{ /*esto es la imagen*/
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  box-shadow: 0 -12px 0px 2px #f00;
+  border-bottom: 25px solid #fff;
+  transition-duration: .5s;
+  cursor: pointer;
+  background: #740404;
+}
+.pageCap9V1Pokemon__content__img:hover{
+  background: #000000af;
+  box-shadow: 0 -8px 0px .5px #f00;
+  transition-duration: .5s;
+}
+.pageCap9V1Pokemon__content__info{ /*esto es la informacion*/
+  background-color: #0000007e;
+  backdrop-filter: blur(4px);
+  padding: 15px;
+  font-size: 1.5em;
+  min-width: 150px;
+}
+.pageCap9V1Pokemon__content__info p{
+  color: #fff !important;
+}
+.pageCap9V1Pokemon__content__infoHide{
+  display: none;
+}
+
+@media(min-width: 750px){
+  .contenedorPageCap9V1Pokemon__pokemones{ /*esto es el contenedor principal de los pokemones renderizados*/
+    flex-grow: 2;
+    height: auto;
+  }
+  .pageCap9V1Pokemon__content{ /*contenedor de los pokemones renderizadors*/
+  
+  }
+  .pageCap9V1Pokemon__content__img{ /*esto es la imagen*/
+
+  }
+  
+}

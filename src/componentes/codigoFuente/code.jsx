@@ -30,19 +30,15 @@ function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4}) {
       <div className="contenedorCodigoFuente__boton">
         <FontAwesomeIcon onMouseEnter={mostrarMen} onMouseOut={quitarMen} onClick={manejarCode} icon={faCode} title="codigo sin interfaz"/>
         {
-          mostrarMensaje && <p>codigo sin interfaz</p>
+          mostrarMensaje && <p>codigo</p>
         }
       </div>
       { mostrarCode && <div ref={contenedor} className="contenedorCodigoFuente__codigo">
           <p onClick={quitCode} style={{backgroundColor: "transparent"}}>x</p>
-            {codigo}
-            {codigo2}
-            {codigo3}
-            {codigo4}
-            <br />
-            <br />
-            <br />
-            <br />
+            <div className="contenedorDelCodigoDiv">{codigo}</div>
+            <div className="contenedorDelCodigoDiv">{codigo2}</div>
+            <div className="contenedorDelCodigoDiv">{codigo3}</div>
+            <div className="contenedorDelCodigoDiv">{codigo4}</div>
         </div>
       }
     </div>

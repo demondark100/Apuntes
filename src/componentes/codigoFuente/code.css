@@ -36,6 +36,12 @@
   border-radius: 100%;
   pointer-events: stroke;
   order: 2;
+  opacity: .3;
+  transition-duration: .2s;
+}
+.contenedorCodigoFuente svg:hover{
+  opacity: 1;
+  transition-duration: .2s;
 }
 
 
@@ -48,9 +54,16 @@
   top: 0;
   pointer-events: stroke;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding-top: 85px;
-  background-color: #545a5465;
+  justify-content: center;
+  background-color: #0000009c;
+  gap: 25px;
+  backdrop-filter: blur(15px);
+}
+.contenedorDelCodigoDiv{
+  width: 95%;
+  margin-bottom: 100px;
 }
 .mostrarCodigoFuente{
   opacity: 1;
@@ -75,4 +88,10 @@
 }
 .contenedorCodigoFuente__codigo p:hover{
   background-color: #2c2f2e !important;
+}
+
+@media(min-width:750px){
+  .contenedorDelCodigoDiv{
+    width: 650px;
+  }
 }

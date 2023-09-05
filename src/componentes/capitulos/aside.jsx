@@ -1,6 +1,6 @@
 import "./aside.css";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
 function Capitulos({sendshowAside,sendaside , active}) {
@@ -33,6 +33,7 @@ function Capitulos({sendshowAside,sendaside , active}) {
   })
   
   // capitulos
+  const [matematicas, setMatematicas] = useState(false);
   const [logica, setLogica] = useState(false);
   const [html, setHtml] = useState(false);
   const [css, setCss] = useState(false);
@@ -42,6 +43,9 @@ function Capitulos({sendshowAside,sendaside , active}) {
   const [python, setPython] = useState(false);
 
 
+  // matematicas
+  // capitulos
+  const [cap1Matematicas, setCap1Matematicas] = useState(false);
 
   // logica
   // capitulos
@@ -99,16 +103,33 @@ function Capitulos({sendshowAside,sendaside , active}) {
   const [cap2Python, setCap2Python] = useState(false);
   const [cap3Python, setCap3Python] = useState(false);
 
-  // pendejadas
-  // capitulos
-  const [cap1Pendejadas, setCap1Pendejadas] = useState(false);
 
   return (  
     <>
       <aside>
         <nav>
           <ul>
-            
+
+            {/* estas son las matematicas usadas en programacion */}
+            <li className="curso">
+              <p onClick={()=>setMatematicas(!matematicas)}>Matematicas</p>
+              {
+                matematicas && <div className="capitulos">
+                  
+                  <div>
+                    <p onClick={()=>setCap1Matematicas(!cap1Matematicas)}>aritmetica</p>
+                    {
+                      cap1Matematicas && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"matematica/basico"}>basico</NavLink>
+                      </div>
+                    }
+                  </div>
+
+                </div>
+              }
+            </li>
+
+
             {/* esto es el curso de logica de programacion */}
             <li className="curso">
               <p onClick={()=>setLogica(!logica)}>logica</p>

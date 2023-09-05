@@ -307,6 +307,10 @@ import Cap8ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/adiv
 import Cap8ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/examen/cap8';
 
 
+// matematicas
+import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
+import Cap9ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_9/pokemon/cap9';
+
 
 
 
@@ -378,10 +382,14 @@ function App() {
             {/* capitulo 8 */}
               <Route path='javaScript/cap8ProyV1' element={<Cap8ProyJsV1 />} />
               <Route path='javaScript/cap8ProyV2' element={<Cap8ProyJsV2 />} />
+            {/* capitulo 9 */}
+              <Route path='javaScript/cap9ProyV1' element={<Cap9ProyJsV1 />} />
 
           
-
-
+        
+        {/* matematicas */}
+          {/* capitulo 1 */}
+            <Route path='/matematica/basico' element={<Cap1MatV1 />}/>
         {/* logica */}
           {/* capitulo 1 */}
             <Route path='/logica/comenzar' element={<ImportanteLogica />} />

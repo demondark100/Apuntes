@@ -7,6 +7,12 @@
   display: flex;
   justify-content: end;
   align-items: end;
+  opacity: .3;
+  transition-duration: .2s;
+}
+.contenedor__volver:hover{
+  opacity: 1;
+  transition-duration: .2s;
 }
 .volver{
   display: flex;

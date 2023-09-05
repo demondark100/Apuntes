@@ -19,7 +19,7 @@ function Proyectos({sendshowProyects}) {
   const [cap6Js, setCap6Js] = useState(false);
   const [cap7Js, setCap7Js] = useState(false);
   const [cap8Js, setCap8Js] = useState(false);
-
+  const [cap9Js, setCap9Js] = useState(false);
 
   useEffect(()=>{
     const links = document.querySelectorAll(".temas a")
@@ -137,12 +137,25 @@ function Proyectos({sendshowProyects}) {
 
 
                   <div>
+                  
                     
                     <p onClick={()=>setCap8Js(!cap8Js)}>capitulo 8</p>
                     {
                       cap8Js && <div className='temas'>
                         <Link to={"javaScript/cap8ProyV1"}>adivina el numero</Link>
                         <Link to={"javaScript/cap8ProyV2"}>examen de programacion</Link>
+
+                      </div>
+                    }
+                  
+                  </div>
+
+                  <div>
+                    
+                    <p onClick={()=>setCap9Js(!cap9Js)}>capitulo 9</p>
+                    {
+                      cap9Js && <div className='temas'>
+                        <Link to={"javaScript/cap9ProyV1"}>API pokemon.</Link>
 
                       </div>
                     }
