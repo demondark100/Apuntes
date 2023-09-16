@@ -185,7 +185,6 @@ function Cap9ProyJsV1() {
     setPokeRender([])
     setLimitePokemon(limitePokemon + 3);
     const enlaceActualizar = `https://pokeapi.co/api/v2/pokemon/?limit=${limitePokemon}`;
-    console.log(enlaceActualizar)
   
     fetch(enlaceActualizar)
       .then((response) => response.json())
@@ -210,7 +209,7 @@ function Cap9ProyJsV1() {
         });
       });
   };
-  
+
   
   // esta funcion se encarga de mostrar los pokemones buscados
   const mostrarBuscados=()=>{
@@ -738,7 +737,7 @@ function colorChanges(rojo,blanco) {
       />
       <MensajeModal texto={`¡Proyecto! capitulo 9:
 
-Consumir una api de lo que sea.
+Hacer una puchadex , que diga una pokedex moderna.
 
 Recuerda que aprendimos:
 1. JSON.
@@ -883,6 +882,7 @@ Recuerda que aprendimos:
                 <p onClick={()=>setFondoInput("")}>x</p>
                 <button onClick={()=>{
                   screen.current.style.backgroundImage = `url("${fondoInput}")`
+                  setShowChangeBack(false)
                 }}>usar</button>
               </div>
             }

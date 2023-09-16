@@ -1,0 +1,281 @@
+/*estilos del contenedor principal*/
+
+.contenedorCap9JsV2{ /*contenedor principal*/
+  background-image: url(https://th.bing.com/th/id/R.5d2eb7037bdda85849907f51e13abb51?rik=jeS9Gy3VjQeFsw&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/*estos son los estilos del contenedor de configuracion*/
+
+.contenedorCap9JsV2Config{ /*contenedor principa*/
+  width: 150px;
+  padding: 8px;
+  border-radius: 1000px;
+  top: 25px;
+  background-color: #00000098;
+  backdrop-filter: blur(3px);
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.5em;
+  position: absolute;
+}
+
+
+.contenedorCap9JsV2ConfigOp{ /*contenedor de las opciones de configuracion*/
+  display: flex;
+  justify-content: center;
+}
+.contenedorCap9JsV2ConfigOp svg{
+  cursor: pointer;
+}
+.contenedorCap9JsV2ConfigOp p{
+  color: #fff !important;
+}
+.contenedorCap9JsV2ConfigOpParr{
+  background-color: #000;
+  position: absolute;
+  top: 45px;
+  width: 200px;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .3s;
+}
+.contenedorCap9JsV2ConfigOpParrHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .3s;
+}
+
+
+.contenedorCap9JsV2btnShowCon{ /*esto es el contenedor del boton para mostrar la configuracion*/
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+}
+
+
+
+
+/*estilos del contgenedor del chiste*/
+
+.contenedorCap9JsV2Chiste{ /*contenedor del chiste*/
+  background-color: #2d302d3d;
+  backdrop-filter: blur(4px);
+  width: 65%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.contenedorCap9JsV2Chiste p{
+  color: #fff !important;
+}
+.contenedorCap9JsV2Chiste button{
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  background-color: #00000038;
+  padding: 8px;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+@media(min-width:750px){
+  .contenedorCap9JsV2Chiste{ /*contenedor del chiste*/
+    width: 250px;
+  }
+  .contenedorCap9JsV2Chiste p{
+    font-size: 1.5em;
+  }
+  .contenedorCap9JsV2Chiste button{
+    font-size: 1.5em;
+  }
+}
+
+
+/*estos los estilos de las configuraciones como tal*/
+
+.contenedorCap9JsV2Configuracion{ /*estilos del contenedor principal*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.contenedorCap9JsV2ConfiguracionContent{ /*estilos del div centrado*/
+  background-color: #1b1b1ba9;
+  backdrop-filter: blur(5px);
+  width: 85%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: stroke;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+.contenedorCap9JsV2ConfiguracionContent::-webkit-scrollbar{
+  background-color: #000000;
+  width: 2px;
+  border-radius: 1000px;
+}
+.contenedorCap9JsV2ConfiguracionContent::-webkit-scrollbar-thumb{
+  background-color: #615c5c;
+  border-radius: 1000px;
+}
+.contenedorCap9JsV2ConfiguracionContent p{
+  font-size: 1.3em;
+  color: #817979 !important;
+  background-color: #00000071;
+  width: 75%;
+  text-align: center;
+  padding: 15px;
+  margin-top: 15px;
+}
+.contenedorCap9JsV2ConfiguracionContent h4{
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: #817979 !important;
+}
+.contenedorCap9JsV2ConfiguracionContent button{
+  width: 85%;
+  background-color: #312a2aa4;
+  padding: 15px;
+  color: #817979 !important;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.contenedorCap9JsV2ConfiguracionContent button:hover{
+  background-color: #222222a4;
+}
+
+.contenedorCap9JsV2Idioma{ /*estilos del contenedor de la configuracionde idioma*/
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.contenedorCap9JsV2IdiomaHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.contenedorCap9JsV2Tipo{ /*estiklos del contenedor del tipo de chiste*/
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.contenedorCap9JsV2TipoHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+
+@media(min-width:750px){
+  .contenedorCap9JsV2ConfiguracionContent{ /*estilos del div centrado*/
+    width: 300px;
+  }
+}
+
+
+
+/*estilos del mensaje de advertencia*/
+.contenedorCap9JsV2Advertencia{ /*contenedor principal*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000096;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.contenedorCap9JsV2AdvertenciaHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+
+.contenedorCap9JsV2AdvertenciaContent{ /*esto es el contenedor del mensaje de advertencia , contenedor secundario*/
+  background-color: #3435342f;
+  backdrop-filter: blur(4px);
+  width: 75%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contenedorCap9JsV2AdvertenciaContentMensaje{ /*esto es el div del mensaje*/
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.contenedorCap9JsV2AdvertenciaContentMensaje p{
+  color: #f80404 !important;
+}
+.contenedorCap9JsV2AdvertenciaContentMensaje svg{ /*estilos del icono*/
+  color: #d0ff00;
+  font-size: 1;
+  animation-name: animacionIcomnoAdvertenciaCap9Css;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes animacionIcomnoAdvertenciaCap9Css {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.contenedorCap9JsV2AdvertenciaContentBotones{ /*estilos de los botones*/
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+.contenedorCap9JsV2AdvertenciaContentBotones button{
+  width: 65px;
+  background-color: #00000062;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+@media(min-width:750px){
+  .contenedorCap9JsV2AdvertenciaContent{ /*esto es el contenedor del mensaje de advertencia , contenedor secundario*/
+    width: 300px;
+    font-size: 1.5em;
+  }
+  .contenedorCap9JsV2AdvertenciaContentMensaje svg{
+    font-size: 1em;
+  }
+}

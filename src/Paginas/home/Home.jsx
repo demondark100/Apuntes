@@ -28,12 +28,9 @@ function Home({active}) {
 
   return (
     <>
-      <MensajeModal texto={`Animes pendientes
+      <MensajeModal texto={`Para acceder a los chistes debes de ir:
 
-Reborn As A Vending Machine, Now I Wander The Dungeon
-jujutsu kaisen temporada 2
-soul eater
-mushoku tensei temporada 2 o 3 no recuerdo`}/>
+proyectos/capitulo 9/generador de chistes`}/>
       <main>
         <article className='contenedorHome'>
           <section ref={contenedor1} className='contenedorHome__contenido'>

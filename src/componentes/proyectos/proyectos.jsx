@@ -155,11 +155,11 @@ function Proyectos({sendshowProyects}) {
                     <p onClick={()=>setCap9Js(!cap9Js)}>capitulo 9</p>
                     {
                       cap9Js && <div className='temas'>
-                        <Link to={"javaScript/cap9ProyV1"}>API pokemon.</Link>
-
+                        <Link to={"javaScript/cap9ProyV1"}>puchadex(pokedex :v)</Link>
+                        <Link to={"javaScript/cap9ProyV2"}>generador de chistes</Link>
                       </div>
                     }
-                  
+                   
                   </div>
 
                   <div>

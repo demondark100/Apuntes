@@ -305,11 +305,12 @@ import Cap7ProyJsV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/colo
 import Cap7ProyJsV5 from './Paginas/apuntes/proyectos/javaScript/capitulo_7/preguntar/cap7';
 import Cap8ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/adivina/cap8';
 import Cap8ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/examen/cap8';
-
+import Cap9ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_9/pokemon/cap9';
+import Cap9ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_9/chistes/cap9';
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
-import Cap9ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_9/pokemon/cap9';
+
 
 
 
@@ -384,6 +385,7 @@ function App() {
               <Route path='javaScript/cap8ProyV2' element={<Cap8ProyJsV2 />} />
             {/* capitulo 9 */}
               <Route path='javaScript/cap9ProyV1' element={<Cap9ProyJsV1 />} />
+              <Route path='javaScript/cap9ProyV2' element={<Cap9ProyJsV2 />} />
 
           
         
