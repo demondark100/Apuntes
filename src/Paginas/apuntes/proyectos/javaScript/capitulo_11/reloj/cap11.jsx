@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import "./cap7.css";
+import "./cap11.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faUndo } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,7 +11,7 @@ import Css from "../../../../../../componentes/lenguajes/Css";
 import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
 
 
-function Indefinido(){
+function Cap11ProyV1(){
 
   useEffect(()=>{
     //estos son los botones para cambiar de reloj a cronometro u biseversa.
@@ -193,52 +193,58 @@ function Indefinido(){
 
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 5
+      <MensajeModal texto={`¡Proyecto! capitulo 11
 
-Hacer un reloj y tambien un cronometro.`}/>
+Hacer un reloj y tambien un cronometro.
+
+Recuerda que aprendimos:
+
+1. objeto Date
+2. LocalStorage y SessionStorage
+3. Drag y Drop
+4. Geolocalization
+5. History API
+6. FileReader
+7. IndexedDB`}/>
       <CodigoSinIn codigo={<Html codigo={`<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Generador de Contraseñas</title>
     <link rel="stylesheet" href="reloj.css">
     <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
 
-</head>
-<body>
+    <div class="contenedor">
+      <div class="contenedor__elejir--btn">
+      <button id="btn-reloj">Reloj</button>
+      <button id="btn-cronometro">cronometro</button>
+    </div>
 
-	<div class="contenedor">
-		<div class="contenedor__elejir--btn">
-			<button id="btn-reloj">Reloj</button>
-			<button id="btn-cronometro">cronometro</button>
-		</div>
+    <div class="contenedorHora" id="box">
+      <div class="contenedorHora-front">
+        <p class="hora">12:00</p>
+      </div>
+      <div class="contenedor-left"></div>
+      <div class="contenedor-right"></div>
+      <div class="contenedor-top"></div>
+      <div class="contenedor-bottom"></div>
 
-  		<div class="contenedorHora" id="box">
-    		<div class="contenedorHora-front">
-      			<p class="hora">12:00</p>
-    		</div>
-    		<div class="contenedor-left"></div>
-    		<div class="contenedor-right"></div>
-    		<div class="contenedor-top"></div>
-			<div class="contenedor-bottom"></div>
+      <div class="contenedorHora-behind">
+        <div class="contenedorCronometro">
+          <p class="cronometro"></p>
+          <div class="contenedorCronometro__botones">
+            <button id="iniciar"><i class="fas fa-play"></i></button>
+            <button id="pausar"><i class="fas fa-pause"></i></button>
+            <button id="reiniciar"><i class="fas fa-undo"></i></button>
+          </div>
 
-    		<div class="contenedorHora-behind">
-    			<div class="contenedorCronometro">
-					<p class="cronometro"></p>
-					<div class="contenedorCronometro__botones">
-						<button id="iniciar"><i class="fas fa-play"></i></button>
-						<button id="pausar"><i class="fas fa-pause"></i></button>
-						<button id="reiniciar"><i class="fas fa-undo"></i></button>
-					</div>
-
-				</div>
-    		</div>
-  		</div>
-
-	</div>
-
+        </div>
+      </div>
+    </div>
 
     <script src="reloj.js"></script>
-</body>
+  </body>
 </html>`}/>}
       codigo2={<Css codigo={`body{
   padding: 0;
@@ -399,21 +405,20 @@ const botonReiniciar = document.getElementById("reiniciar")
 
 
 class Reloj {
-	constructor(){
-		this.hora = new Date().getHours();
-		this.minutes = new Date().getMinutes();
-		this.seconds = new Date().getSeconds();
-	}
-	horaActual(){
-		hora.textContent = \`${"${this.hora}"} : ${"${this.minutes}"} : ${"${this.seconds}"}\`
-		setInterval(()=>{
-			this.hora = new Date().getHours();
-			this.minutes = new Date().getMinutes();
-			this.seconds = new Date().getSeconds();
-			hora.textContent = \`${"${this.hora}"} : ${"${this.minutes}"} : ${"${this.seconds}"}\`
-		},1000)
-	}
-
+  constructor(){
+    this.hora = new Date().getHours();
+    this.minutes = new Date().getMinutes();
+    this.seconds = new Date().getSeconds();
+  }
+  horaActual(){
+    hora.textContent = \`${"${this.hora}"} : ${"${this.minutes}"} : ${"${this.seconds}"}\`
+    setInterval(()=>{
+      this.hora = new Date().getHours();
+      this.minutes = new Date().getMinutes();
+      this.seconds = new Date().getSeconds();
+      hora.textContent = \`${"${this.hora}"} : ${"${this.minutes}"} : ${"${this.seconds}"}\`
+    },1000)
+  }
 }
 
 const reloj = new Reloj();
@@ -434,49 +439,48 @@ let intervaloSegundos = null;
 let intervaloMinutos = null;
 let intervaloHoras = null;
 function iniciar() {
-	intervaloSegundos = setInterval(()=>{
-		segundosCronometro += 1;
-		actualizar()
-		if (segundosCronometro > 58) {segundosCronometro = 0}
-	},1000)
-	intervaloMinutos = setInterval(()=>{
-		minutosCronometro += 1;
-		if (minutosCronometro > 58) {segundosCronometro = 0}
-	},60000)
-	intervaloHoras = setInterval(()=>{
-		horasCronometro += 1;
-		if (horasCronometro > 58) {segundosCronometro = 0}
-	},60 * 60 * 1000)
-	botonPausar.style.visibility = "visible"
-	botonPausar.style.position = "relative"
-	botonIniciar.style.visibility = "hidden"
-	botonIniciar.style.position = "absolute"
+  intervaloSegundos = setInterval(()=>{
+    segundosCronometro += 1;
+    actualizar()
+    if (segundosCronometro > 58) {segundosCronometro = 0}
+  },1000)
+  intervaloMinutos = setInterval(()=>{
+    minutosCronometro += 1;
+    if (minutosCronometro > 58) {segundosCronometro = 0}
+  },60000)
+  intervaloHoras = setInterval(()=>{
+    horasCronometro += 1;
+    if (horasCronometro > 58) {segundosCronometro = 0}
+  },60 * 60 * 1000)
+  botonPausar.style.visibility = "visible"
+  botonPausar.style.position = "relative"
+  botonIniciar.style.visibility = "hidden"
+  botonIniciar.style.position = "absolute"
 }
 function pausar() {
-	clearInterval(intervaloSegundos);
-	clearInterval(intervaloMinutos);
-	clearInterval(intervaloHoras);
-	botonIniciar.style.visibility = "visible"
-	botonIniciar.style.position = "relative"
-	botonPausar.style.visibility = "hidden"
-	botonPausar.style.position = "absolute"
-
+  clearInterval(intervaloSegundos);
+  clearInterval(intervaloMinutos);
+  clearInterval(intervaloHoras);
+  botonIniciar.style.visibility = "visible"
+  botonIniciar.style.position = "relative"
+  botonPausar.style.visibility = "hidden"
+  botonPausar.style.position = "absolute"
 }
 function reiniciar() {
-	clearInterval(intervaloSegundos);
-	clearInterval(intervaloMinutos);
-	clearInterval(intervaloHoras);
-	segundosCronometro = 0;
-	minutosCronometro = 0;
-	horasCronometro = 0;
-	actualizar();
+  clearInterval(intervaloSegundos);
+  clearInterval(intervaloMinutos);
+  clearInterval(intervaloHoras);
+  segundosCronometro = 0;
+  minutosCronometro = 0;
+  horasCronometro = 0;
+  actualizar();
 
-	botonIniciar.style.visibility = "visible";
-	botonPausar.style.visibility = "hidden";
+  botonIniciar.style.visibility = "visible";
+  botonPausar.style.visibility = "hidden";
 }
 
 function actualizar() {
-	cronometro.textContent = \`${"${\"0\"}"} : ${"${minutosCronometro}}"} : ${"${segundosCronometro}"}\`
+  cronometro.textContent = \`${"${\"0\"}"} : ${"${minutosCronometro}}"} : ${"${segundosCronometro}"}\`
 }
 
 
@@ -595,4 +599,4 @@ btnCronometro.addEventListener("click", () => {
   );
 };
 
-export default Indefinido;
+export default Cap11ProyV1;

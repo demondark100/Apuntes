@@ -1,0 +1,320 @@
+.contentCap11V3Js{ /*esto es el contenedor principal.*/
+  width: 100%;
+  height: 100%;
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+}
+
+
+/*estilos de input*/
+
+.contentCap11V3JsContentInput{ /*contenedor principal*/
+  padding: 8px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  min-width: 250px;
+  margin-top: 15px;
+}
+
+
+/*estilos de los inputs osea titulo y textarea*/
+
+.contentCap11V3JsContentInputCont{ /*contenedor del input y textarea*/
+  display: flex;
+  flex-direction: column;
+}
+.contentCap11V3JsContentInputCont input,textarea{ /*titulo y textarea general*/
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 4px;
+  transition-duration: .2s;
+}
+.contentCap11V3JsContentInputCont input{ /*titulo*/
+  text-align: center;
+  color: #f00;
+}
+.contentCap11V3JsContentInputCont p{
+  color: #f00 !important;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  font-size: .8em;
+}
+.contentCap11V3JsContentInputCont input::placeholder{ /*titulo*/
+  color: #a0120d;
+}
+.contentCap11V3JsContentInputCont input:focus{ /*titulo*/
+  box-shadow: 0 2px 5px -1px #f00;
+}
+.contentCap11V3JsContentInputCont input:hover{ /*titulo*/
+  box-shadow: 0 2px 5px -1px #f00;
+}
+.contentCap11V3JsContentInputCont textarea{ /*notas*/
+  color: #646262;
+  max-height: 75vh;
+  overflow: auto !important;
+}
+.contentCap11V3JsContentInputCont textarea::-webkit-scrollbar{ /*notas*/
+  width: 4px;
+  height: 4px;
+  background-color: #252525;
+}
+.contentCap11V3JsContentInputCont textarea::-webkit-scrollbar-thumb{ /*notas*/
+  background-color: #444444;
+}
+.contentCap11V3JsContentInputCont textarea::placeholder{ /*notas*/
+  color: #444343;
+}
+.contentCap11V3JsContentInputCont textarea:focus{ /*notas*/
+  box-shadow: 0 0 8px -1px #212221;
+}
+.contentCap11V3JsContentInputCont textarea:hover{ /*notas*/
+  box-shadow: 0 0 8px -1px #212221;
+}
+
+
+/*estilos de los botones*/
+
+.contentCap11V3JsContentInputBtn{ /*contenedor de los botones del input*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.contentCap11V3JsContentInputBtn button{ /*contenedor de los botones del input*/
+  background-color: transparent;
+  color: #4b4949;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.contentCap11V3JsContentInputBtn button:hover{ /*contenedor de los botones del input*/
+  color: #b3a9a9;
+  transition-duration: .5s;
+}
+
+@media (min-width: 750px){
+  .contentCap11V3JsContentInput{ /*contenedor principal*/
+    width: 250px;
+    padding: 20px;
+  }
+}
+
+
+
+/* estilos de las tareas que se renderizaran */
+
+.contentCap11V3JsTreas{ /*conternedor principal*/
+  margin-top: 15px;
+  padding: 8px;
+  display: flex;
+  width: 250px;
+  background-color: #111111;
+  transition-duration: .5s;
+}
+.contentCap11V3JsTreas:hover{
+  transition-duration: .5s;
+  background-color: #0f0f0f;
+}
+/*estilos de la informacion osea titulo y parrafo*/
+.contentCap11V3JsTreasInfo{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contentCap11V3JsTreasInfo h4{
+  color: #f00;
+}
+.contentCap11V3JsTreasInfo p{
+  color: #9b8e8e !important;
+}
+/*estilos de los botones de las tareas*/
+.contentCap11V3JsTreasBtn{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.contentCap11V3JsTreasBtn button{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  color: #737573 !important;
+}
+
+
+
+
+/*estilos para borrar todo*/
+.contentCap11V3JsDelete{ /*contenedor principal*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(43, 44, 43, 0.445);
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .2s;
+}
+.contentCap11V3JsDeleteHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .2s;
+}
+.contentCap11V3JsDeleteContent{ /*segundo contenedor centrado*/
+  padding: 8px;
+  background-color: #0b0c0b;
+  text-align: center;
+}
+.contentCap11V3JsDeleteContent p{
+  color: #f00 !important;
+}
+.contentCap11V3JsDeleteContentBtn{ /*estilos del contenedor de los botones*/
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.contentCap11V3JsDeleteContentBtn button{ /*botones*/
+  padding: 2px 12px 2px 12px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.contentCap11V3JsDeleteContentBtn button:nth-child(1){ /*botones*/
+  background-color: #f00;
+  color: #fff;
+}
+.contentCap11V3JsDeleteContentBtn button:nth-child(2){ /*botones*/
+  background-color: #079c07;
+  color: #fff;
+}
+
+@media(min-width:750px){
+  .contentCap11V3JsDeleteContent{ /*segundo contenedor centrado*/
+    width: 200px;
+  }
+}
+
+
+
+/*estilos de los apuntes completos*/
+.contentCap11V3JsApuntes{ /*contenedor principal*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000bd;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+.contentCap11V3JsApuntesHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}
+.contentCap11V3JsApuntesBtn{ /*boton para cerrar*/
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 1000px;
+  cursor: pointer;
+  left: 15px;
+  top: 15px;
+  background-color: #1213125b;
+  color: #ffffff36;
+}
+.contentCap11V3JsApuntesBtn:hover{ /*boton para cerrar*/
+  color: #fff;
+}
+.contentCap11V3JsApuntesBtnEdit{ /*esto es para editar*/
+  top: 80px;
+}
+.contentCap11V3JsApuntesCont{ /*segundo contenedor principal*/
+  background-color: #161515;
+  padding: 8px;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contentCap11V3JsApuntesCont h4{ /*titulo del segundo contenedor*/
+  text-align: center;
+  color: #f00;
+  font-size: 1.5em;
+  max-width: 400px;
+  min-width: 25px;
+  padding: 8px;
+  max-height: 18vh;
+  overflow: auto;
+  outline: none;
+  max-width: 90%;
+}
+.contentCap11V3JsApuntesCont h4::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  background-color: #252725;
+  border-radius: 1000px;
+}
+.contentCap11V3JsApuntesCont h4::-webkit-scrollbar-thumb{
+  background-color: #565856;
+  border-radius: 1000px;
+}
+
+
+
+.contentCap11V3JsApuntesContParrafo{ /*parrafo que mostrara la info*/
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-height: 58vh;
+  overflow: auto;
+  max-width: 90%;
+  min-width: 25px;
+  width: 100%;
+}
+.contentCap11V3JsApuntesContParrafo::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  background-color: #252725;
+  border-radius: 1000px;
+}
+.contentCap11V3JsApuntesContParrafo::-webkit-scrollbar-thumb{
+  background-color: #565856;
+  border-radius: 1000px;
+}
+.contentCap11V3JsApuntesContParrafo p{
+  color: #9b8e8e !important;
+  white-space: pre-wrap;
+  padding: 8px;
+}
+
+.contentCap11V3JsApuntesContBtn{ /*esto es el boton que confirma la edicion*/
+  background-color: #212221;
+  width: 40px;
+  height: 40px;
+  border-radius: 1000px;
+  color: #46eb1d;
+  cursor: pointer;
+}
+
+@media(min-width:750px){
+  .contentCap11V3JsApuntesCont{ /*segundo contenedor principal*/
+    width: 450px;
+  }
+}

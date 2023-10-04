@@ -113,6 +113,12 @@ function Cap9ProyJsV2() {
   const [showAdvertencia, setShowAdvertencia] = useState(false); // esto es para mostrar o quitar el contenedor de advertencia.
   const [mensajeAdvertencia, setMensajeAdvertencia] = useState(""); // esto es el mensaje de advertencia para el usuario
 
+
+  // errores de api.
+  const [showError, setShowError] = useState(false); // esto es para mostrar el mensaje de error.
+  const [mensajesError, setMensajesError] = useState(""); // esto es para dar el mensaje de error que queremos.
+
+
   const idiomas = [
     ["español","es"],
     ["english","en"],
@@ -233,12 +239,14 @@ function Cap9ProyJsV2() {
         }
       })
       .catch(error => {
-        console.error("no hay error");
+        setShowError(true);
+        setMensajesError("No se pudo hacer la traduccion esto porque estoy consumiendo una api de traduccion y las peticiones son limitadas te recomiendo usar la traduccion de google.")
       });
   
     })
     .catch((error) => {
-      console.error("Hubo un error al obtener los chistes:", error);
+      setShowError(true);
+      setMensajesError("No se pudo obtener el chiste esto puede ser por fallas en la conexion a internet.")
     });
   }
 
@@ -258,6 +266,9 @@ function Cap9ProyJsV2() {
     setLanguage("es")
   }
 
+  const quitarError =()=>{
+    setShowError(false)
+  }
 
   
   return (
@@ -480,6 +491,15 @@ btnGenerar.click()`}
             rechazar={rechazar}
           />
 
+          <div className={`contenedorCap9JsV2Error ${showError ?
+            "":
+            "contenedorCap9JsV2ErrorHide"
+          }`}>
+            <div>
+              <p>{mensajesError}</p>
+              <button onClick={quitarError}>Entendido</button>
+            </div>
+          </div>
 
         </div>
 

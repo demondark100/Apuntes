@@ -20,6 +20,8 @@ function Proyectos({sendshowProyects}) {
   const [cap7Js, setCap7Js] = useState(false);
   const [cap8Js, setCap8Js] = useState(false);
   const [cap9Js, setCap9Js] = useState(false);
+  const [cap10Js, setCap10Js] = useState(false);
+  const [cap11Js, setCap11Js] = useState(false);
 
   useEffect(()=>{
     const links = document.querySelectorAll(".temas a")
@@ -162,6 +164,37 @@ function Proyectos({sendshowProyects}) {
                    
                   </div>
 
+
+                  <div>
+                    
+                    <p onClick={()=>setCap10Js(!cap10Js)}>capitulo 10</p>
+                    {
+                      cap10Js && <div className='temas'>
+                        <Link to={"javaScript/cap10ProyV1"}>factorizar</Link>
+
+                      </div>
+                    }
+                  
+                  </div>
+
+
+                  <div>
+                    
+                    <p onClick={()=>setCap11Js(!cap11Js)}>capitulo 11</p>
+                    {
+                      cap11Js && <div className='temas'>
+                        <Link to={"javaScript/cap11ProyV1"}>reloj y cronometro</Link>
+                        <Link to={"javaScript/cap11ProyV2"}>claro/oscuro local</Link>
+                        <Link to={"javaScript/cap11ProyV3"}>Notas</Link>
+                      </div>
+                    }
+                  
+                  </div>
+
+
+
+
+{/* 
                   <div>
                     
                     <p onClick={()=>setCap6Js(!cap6Js)}>capitulo 8</p>
@@ -172,7 +205,7 @@ function Proyectos({sendshowProyects}) {
                       </div>
                     }
                   
-                  </div>
+                  </div> */}
 
 
 

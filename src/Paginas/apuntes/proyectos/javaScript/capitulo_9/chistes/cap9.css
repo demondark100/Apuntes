@@ -279,3 +279,44 @@
     font-size: 1em;
   }
 }
+
+
+
+
+/*estilos del mensaje de error de las apis*/
+
+.contenedorCap9JsV2Error{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.562);
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .5s;
+}
+.contenedorCap9JsV2Error div{
+  background-color: #000000;
+  padding: 15px;
+  max-width: 350px;
+}
+.contenedorCap9JsV2Error div button{
+  background-color: #393b39;
+  color: #fff !important;
+  padding: 8px;
+  border-radius: 1000px;
+  cursor: pointer;
+}
+.contenedorCap9JsV2Error div p{
+  color: #f00;
+  text-align: center;
+}
+.contenedorCap9JsV2ErrorHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}

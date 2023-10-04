@@ -1,0 +1,107 @@
+/*estilos del contenedor principal*/
+
+.contProyJs10{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contProyJs10 h4{
+  font-size: 2em;
+  color: #ddffc4;
+}
+
+
+/*estilos del input para recibir los datos*/
+
+.contProyJs10Input{
+  display: flex;
+  border-radius: 1000px;
+  overflow: hidden;
+  height: 30px;
+  width: 80%;
+  margin-top: 15px;
+  box-shadow: 0 0 15px 4px #fff;
+}
+.contProyJs10Input input{
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  font-size: 1.5em;
+  width: 100%;
+}
+.contProyJs10Input button{
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media(min-width: 750px){
+  .contProyJs10Input{
+    width: auto;
+  }
+}
+
+
+
+/*estos son los estilos del contenedor principal*/
+.contProyJs10ResContent{
+  display: flex;
+  background-color: #373837;
+  margin-top: 25px;
+  align-items: center;
+  width: 80%;
+}
+@media(min-width:750px){
+  .contProyJs10ResContent{
+    width: 350px;
+  }
+}
+
+
+/*estos son los estilos del ejemplo*/
+
+.contProyJs10Ejemplo{
+  padding: 8px;
+  font-size: 1.5em;
+  background-color: #484d48;
+  color: #fff;
+  width: 70%;
+  overflow: auto;
+}
+.contProyJs10Ejemplo b{
+  white-space: nowrap;
+
+}
+.contProyJs10Ejemplo::-webkit-scrollbar{
+  height: 6px;
+  background-color: #272323;
+  cursor: pointer;
+}
+.contProyJs10Ejemplo::-webkit-scrollbar-thumb{
+  background-color: #828b82;
+}
+
+/*estilos del mresultado final de la factorizacion*/
+.contProyJs10ResContent p{
+  font-size: 1.5em;
+  color: #fff !important;
+  overflow: auto;
+  padding: 8px;
+  white-space: nowrap;
+}
+.contProyJs10ResContent p::-webkit-scrollbar{
+  height: 6px;
+  background-color: #474040;
+  cursor: pointer;
+}
+.contProyJs10ResContent p::-webkit-scrollbar-thumb{
+  background-color: #607260;
+}

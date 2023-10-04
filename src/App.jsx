@@ -307,9 +307,16 @@ import Cap8ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/adiv
 import Cap8ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_8/examen/cap8';
 import Cap9ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_9/pokemon/cap9';
 import Cap9ProyJsV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_9/chistes/cap9';
+import Cap10ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_10/cap10';
+import Cap11ProyV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/reloj/cap11';
+import Cap11ProyV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/diaNoche/cap11';
+import Cap11ProyV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/tareas/cap11';
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
+
+
+
 
 
 
@@ -386,9 +393,15 @@ function App() {
             {/* capitulo 9 */}
               <Route path='javaScript/cap9ProyV1' element={<Cap9ProyJsV1 />} />
               <Route path='javaScript/cap9ProyV2' element={<Cap9ProyJsV2 />} />
+            {/* capitulo 10 */}
+              <Route path='javaScript/cap10ProyV1' element={<Cap10ProyJsV1 />} />
+            {/* capitulo 11 */}
+              <Route path='javaScript/cap11ProyV1' element={<Cap11ProyV1 />} />
+              <Route path='javaScript/cap11ProyV2' element={<Cap11ProyV2 />} />
+              <Route path='javaScript/cap11ProyV3' element={<Cap11ProyV3 />} />
 
-          
-        
+
+
         {/* matematicas */}
           {/* capitulo 1 */}
             <Route path='/matematica/basico' element={<Cap1MatV1 />}/>
