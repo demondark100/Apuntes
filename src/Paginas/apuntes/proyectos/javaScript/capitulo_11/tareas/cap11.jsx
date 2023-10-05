@@ -263,6 +263,243 @@ function Cap11ProyV3() {
 
   return (  
     <>
+      <MensajeModal texto={`¡Proyecto! capitulo 11
+
+Hacer un blog de notas que se pueda editar , eliminar , cada cosa creada se debe guardar en una base de datos local , los datos no se deben de perder cuando la pagina se actualice o cuando se salgan.`}/>
+      <CodigoFuenteSinInt 
+        codigo={<Html codigo={`<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="notas.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+    <div class="contenedor">
+
+      <div class="contenedorSend">
+        <div class="contenedorSendContent">
+          <form class="contenedorSendForm">
+            <input 
+              type="text"
+              placeholder="Titulo" 
+              class="titleInput" 
+            >
+            <p id="err1">debes poner el titulo a tus apuntes.</p>
+            <textarea 
+              placeholder="Tarea"
+              class="tareaInput" 
+            ></textarea>
+            <p id="err2">debes poner algo en los apuntes.</p>
+          </form>
+          <button class="btnEnviar"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+
+      <div class="contenedorTares">
+
+<!-- 
+        la estructura que se creara con el DOM en javaScript segun sea la longitud del arreglo.
+-->
+ 
+ <!-- 				
+        <div class="contenedorTaresTarea">
+          <div>
+            <p>el titulo</p>
+            <p>la tarea para realizar</p>
+          </div>
+          <button><i class="fa-solid fa-trash"></i></button>
+        </div> 
+-->
+
+      </div>
+    </div>
+
+
+
+    <script src="notas.js"></script>
+  </body>
+</html>`}/>}
+        codigo2={<Css codigo={`body{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(0deg,#baeffd,#61e3e5);
+  background-repeat: no-repeat;
+}
+
+.contenedor{
+  margin-top: 15px;
+  width: 250px;
+  max-height: 500px;
+  background-color: #0fb7e6;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+
+.contenedorSend{
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.contenedorSendContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #80d9ff;
+  width: 85%;
+  gap:5px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.contenedorSendForm{
+  display: flex;
+  flex-direction: column;
+}
+.contenedorSendForm input{
+  border-radius: 100px;
+  padding-left: 8px;
+}
+.contenedorSendForm textarea{
+  margin-top: 8px;
+  border-radius: 8px;
+  height: 100px;
+}
+input,button,textarea{
+  border: none;
+  outline: none;
+}
+.btnEnviar{
+  width: 100%;
+  cursor: pointer;
+}
+
+.contenedorTares{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.contenedorTaresTarea{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.contenedorTaresTarea button{
+  padding: 8px;
+  height: 50%;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.contenedorTaresTarea div{
+  max-height: 500px;
+  overflow: auto;
+  background-color: #fff;
+  width: 100%;
+  padding: 0;
+}
+.contenedorTaresTarea div p{
+  padding: 8px;
+  white-space: pre-wrap;
+  margin: 0;
+}
+.contenedorTaresTarea div p:nth-child(1){
+  color: #f00;
+  text-align: center;
+  border-bottom: 2px solid #f00;
+}
+
+#err1 , #err2{
+  color: #f00;
+  margin: 0;
+  font-size: .8em;
+  display: none;
+}`}/>}
+        codigo3={<JavaScropt codigo={`const btnEnviar = document.querySelector(".btnEnviar");  // esto es el boton para enviar los datos y guardarlos.
+const titleInput = document.querySelector(".titleInput");  // esto es el titulo del nuestro input.
+const tareaInput = document.querySelector(".tareaInput");  // esto es la tarea de un textarea.
+
+const contenedorTares = document.querySelector(".contenedorTares"); // esto es el contenedor de las tareas que se guardaran.
+// estas dos variables son para mostrar los posibles errores.
+  const err1 = document.getElementById("err1");
+  const err2 = document.getElementById("err2");
+
+let borrarBtn = []; // esto es el boton para borrar algun elemento.
+
+
+
+let datos = JSON.parse(localStorage.getItem("lista")) || [];
+
+
+function crearDatosDom(data) {
+  contenedorTares.innerHTML = \`\`;
+  borrarBtn = [];
+
+  data.forEach((i) => {
+    const fragment = document.createDocumentFragment();
+    const contenedorTaresTarea = document.createElement("div");
+    contenedorTaresTarea.classList.add("contenedorTaresTarea");
+    const div = document.createElement("div");
+    const title = document.createElement("p");
+    const homework = document.createElement("p");
+    const borrar = document.createElement("button");
+    borrar.classList.add("borrar");
+    borrarBtn.push(borrar);
+
+    title.textContent = i.titulo;
+    homework.textContent = i.tarea;
+    borrar.innerHTML = \`<i class="fa-solid fa-trash"></i>\`;
+
+    div.appendChild(title);
+    div.appendChild(homework);
+    contenedorTaresTarea.appendChild(div);
+    contenedorTaresTarea.appendChild(borrar);
+    fragment.appendChild(contenedorTaresTarea);
+    contenedorTares.appendChild(fragment);
+  });
+
+  asignarEventosBorrar();
+};
+
+function asignarEventosBorrar() {
+  borrarBtn.forEach((i, index) => {
+    i.addEventListener("click", () => {
+      datos.splice(index,1);
+      localStorage.setItem("lista",JSON.stringify(datos));
+      crearDatosDom(datos);
+    });
+  });
+};
+
+btnEnviar.addEventListener("click", () => {
+  if (titleInput.value == \`\`) {
+    err1.style.display = "block";
+    setTimeout(()=>err1.style.display = "none",4000)
+  } else if (tareaInput.value == \`\`){
+    err2.style.display = "block";
+    setTimeout(()=>err2.style.display = "none",4000)
+  } else {
+    let datosObjeto = {
+      titulo: titleInput.value,
+      tarea: tareaInput.value,
+    };
+    datos.push(datosObjeto);
+    localStorage.setItem("lista", JSON.stringify(datos));
+    crearDatosDom(datos);
+    titleInput.value = \`\`;
+    tareaInput.value = \`\`;
+  }
+});
+
+crearDatosDom(datos);`}/>}
+      />
       <Volver link={"../"}/>
       <div className="Page">
 
