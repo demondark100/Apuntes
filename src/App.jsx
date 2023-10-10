@@ -311,9 +311,14 @@ import Cap10ProyJsV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_10/ca
 import Cap11ProyV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/reloj/cap11';
 import Cap11ProyV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/diaNoche/cap11';
 import Cap11ProyV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/tareas/cap11';
+import Cap11ProyV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/fondo/cap11';
+
+
+
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
+
 
 
 
@@ -399,6 +404,11 @@ function App() {
               <Route path='javaScript/cap11ProyV1' element={<Cap11ProyV1 />} />
               <Route path='javaScript/cap11ProyV2' element={<Cap11ProyV2 />} />
               <Route path='javaScript/cap11ProyV3' element={<Cap11ProyV3 />} />
+              <Route path='javaScript/cap11ProyV4' element={<Cap11ProyV4 />} />
+
+
+
+
 
 
 

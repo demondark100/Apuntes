@@ -186,6 +186,7 @@ function Proyectos({sendshowProyects}) {
                         <Link to={"javaScript/cap11ProyV1"}>reloj y cronometro</Link>
                         <Link to={"javaScript/cap11ProyV2"}>claro/oscuro local</Link>
                         <Link to={"javaScript/cap11ProyV3"}>Notas</Link>
+                        <Link to={"javaScript/cap11ProyV4"}>cambiar fondo</Link>
                       </div>
                     }
                   
