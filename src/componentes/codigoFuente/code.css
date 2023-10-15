@@ -8,12 +8,13 @@
   pointer-events: none;
   display: flex;
   justify-content: flex-end;
+  align-items: end;
 }
 .contenedorCodigoFuente__boton{
   display: flex;
   pointer-events: none;
-  margin-right: 30px;
-  margin-top: 25px;
+  margin-right: 25px;
+  margin-bottom: 85px;
 }
 
 .contenedorCodigoFuente p{
@@ -54,16 +55,29 @@
   top: 0;
   pointer-events: stroke;
   display: flex;
-  flex-wrap: wrap;
   padding-top: 85px;
-  justify-content: center;
   background-color: #0000009c;
   gap: 25px;
   backdrop-filter: blur(15px);
+  z-index: 5;
 }
 .contenedorDelCodigoDiv{
-  width: 95%;
+  display: flex;
+  width: 95vw !important;
+  max-height: 90vh;
   margin-bottom: 100px;
+  overflow: auto;
+  gap: 15px;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contenedorDelCodigoDiv::-webkit-scrollbar{
+  background-color: #000;
+}
+.contenedorDelCodigoDiv::-webkit-scrollbar-thumb{
+  background-color: #252525;
 }
 .mostrarCodigoFuente{
   opacity: 1;
@@ -75,16 +89,22 @@
   opacity: 0;
   transition-duration: .5s;
 }
-.contenedorCodigoFuente__codigo p{
-  background-color: #000 !important;
+.contenedorCodigoFuente__Cerrar{
   position: fixed;
   top: 0;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: end;
+}
+.contenedorCodigoFuente__Cerrar p{
+  background-color: #000 !important;
   height: 65px !important;
   width: 65px;
   border-radius: 100%;
   font-size: 2em;
   cursor: pointer;
-  z-index: 5;
+  margin-right: 25px;
 }
 .contenedorCodigoFuente__codigo p:hover{
   background-color: #2c2f2e !important;

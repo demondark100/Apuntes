@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import "./proyectos.css";
 
 
 
@@ -29,12 +29,16 @@ function Proyectos({sendshowProyects}) {
         i.addEventListener("click",()=>{
           sendshowProyects(false)
         })
+        i.addEventListener("mouseover",()=>{
+          console.log(i)
+        })
       });
     })
 
 
 
   return (
+    <>
     <aside>
       <nav>
         <ul>
@@ -219,6 +223,7 @@ function Proyectos({sendshowProyects}) {
         </ul>
       </nav>
     </aside>
+    </>
   );
 }
 

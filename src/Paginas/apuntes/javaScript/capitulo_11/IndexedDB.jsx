@@ -1,5 +1,7 @@
+import { faAlgolia } from "@fortawesome/free-brands-svg-icons";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
 
 function IndexedDB() {
@@ -17,177 +19,58 @@ U: update
 D: delete
 
 "crud" son las 4 operaciones basicas que debe tener toda base de datos.`}/>
-        <h2>metodo open</h2>
-        <Conseptos texto={`Con "open" abriremos una base de datos si ya esta creada pero si no esta creada creara una base de datos.
+        <h2>Crear base de datos.</h2>
+        <Conseptos texto={`Para crear una base de datos con esta api es necesario usar el metodo "open".
 
-Eecomendacion siempre crear la variable con ek nombre "IDBRequest" para evitar ptoblemas o evitar usar window.indexedDB.`}/>
-        <JavaScropt codigo={`const IDBRequest = indexedDB.open("nombres");
+Debes guardar esa base de datos en una variable porque necesitamos que se ejecuten 3 eventos de escucha que son obligatorios que se ejecuten.`}/>
+        <Sintaxis codigo={`variable = indexedDB.open("nombre de tu base de datos.")`}/>
+        <JavaScropt codigo={`let db; // esta variable la usaremos despues.
+const baseDeDatos = indexedDB.open("primer base de datos.");`}/>
+        <Conseptos texto={`Con el metodo open tambien podemos abrir una base de datos que ya fue creada , "open()" detectara de forma automatica si la base se esta creando o si la base ya esta creada.`}/>
+        <h2>Eventos de escucha.</h2>
+        <Conseptos texto={`Como mencione antes debemos de usar 3 eventos de escucha para la base creada.
+error: Este evento se ejecutara cuando se desencadene un error en nuestra base de datos o en nuestro codigo.
 
-//en el parametro debemos el nombre que queramos en este caso sera nombres.`}/>
-        <h2>upgradeneeded</h2>
-        <Conseptos texto={`Esto comprobara si esta creado si no lo esta lo creara.
+success: Esto se ejecuta cuando se abre o se crea de forma exitosa nuestra base de datos.
 
-No copees este codigo porque solo es para saber para que sirve.`}/>
-        <JavaScropt codigo={`IDBRequest.addEventListener("upgradeneeded",()=>{
-    console.log("se creo correctamente");
-})`}/>
-        <h2>crear almacen</h2>
-        <JavaScropt codigo={`IDBRequest.addEventListener("upgradeneeded",()=>{
-    const db = IDBRequest.result;
+upgradeneeded: Esto se ejecuta cuando se intenta abrir una base de datos no existente.`}/>
+        <Sintaxis codigo={`const baseDeDatos = indexedDB.open("primer base de datos.");
 
-    // aqui solo estamos solicitando abrir la base de datos.
-    // la varible db hace referencia a base de datos.
-    db.createObjectStore("mi base de datos 😎😎😎",{
-        autoIncrement: true
+baseDeDatos.addEventListener("error",funcion);
+baseDeDatos.addEventListener("success",funcion);
+baseDeDatos.addEventListener("upgradeneeded",funcion);`}/>
+        <JavaScropt codigo={`let db; // variable que se usara mas adelante.
+const baseDeDatos = indexedDB.open("primer base de datos.");
 
-        // con "autoIncrement" decimos que se incremente automaticamente la tabla y que se ponha en un registro unico como si fuese un id por ejemplo si ponemos un nombre se guardara en un numero unico y asi se ira incementando los numeros de forma automatica.
-    })
+baseDeDatos.addEventListener("error",error);
+baseDeDatos.addEventListener("success",iniciar);
+baseDeDatos.addEventListener("upgradeneeded",crearBase);
 
-    // aqui estamos creando el almacenamiento.
-    // parametro 1 ponemos como se llamara el almacenamiento en este caso "nombres"
-    // parametro 2 ponemos la configuracion del almaacenamiento.
+function error() {console.log("hubo un error en la base de datos");}
+function iniciar() {console.log("la base de datos se abrio/creo exitosamente.");}
+function crearBase() {console.log("la base de datos se abrio/creo exitosamente.");}`}/>
 
-})`}/>
-        <Conseptos texto={`Aparte de "autoIncrement" tenemos a "keyPath" el cual asocia por nombres.`}/>
-        <h2>success</h2>
-        <Conseptos texto={`Esto metodo nos dira si todo salio correctamente.`}/>
-        <JavaScropt codigo={`IDBRequest.addEventListener("success",()=>{
-    console.log("todo salio correctamente");
-})
+        <JavaScropt codigo={`let db; // variable que se usara mas adelante.
+const baseDeDatos = indexedDB.open("primer base de datos.");
 
-// este metodo se ejecutara a travez de un evento.`}/>
-        <h2>metodo error</h2>
-        <Conseptos texto={`Esto se ejecutara cuando no se pueda abrir la base de datos.`}/>
-        <JavaScropt codigo={`IDBRequest.addEventListener("error",()=>{
-    console.log("hubo un error al abrir la base de datos.")
-})
+baseDeDatos.addEventListener("error",error);
+baseDeDatos.addEventListener("success",iniciar);
+baseDeDatos.addEventListener("upgradeneeded",crearBase);
 
-// este metodo tambien se ejecuta a travez de eventos.`}/>
-        <h2>funcion crear objetos</h2>
-        <Conseptos texto={`Ahora con esto trabajaremos con el c.r.u.d.`}/>
-        <JavaScropt codigo={`const addObjetos = objetos =>{
-    const db = IDBRequest.result
-    const IDBtransaction = db.transaction("nombres","readwrite")
-        
-    // aqui abriremos una operacion para que nos deje hacer lo que queramos.
-    // parametro 1 donde queremos abrir? en este caso en nombres.
-    // parametro 2 que queremos hacer? readwrite(leer o escribir) o readonly(solo leer)
-        
-    const objectStore = IDBtransaction.objectStore("nombres");
-        
-    // aqui le decimos que se ejecutara en el objectStore nombres.
-        
-    objectStore.add(objetos)
-        
-    // y aqui solo estamos agregando los nombres en la base de datos.
-        
-    IDBtransaction.addEventListener("complete",()=>{
-        console.log("se agrego correctamente")
-
-        // este mensaje se mostrara cuando seya terminado de agregar.
-    })
-}`}/>
-        <Conseptos texto={`Ahora para leer el objeto.`}/>
-        <JavaScropt codigo={`const leerObjeto = objeto =>{
-    const db = IDBRequest.result;
-    const IDBtransaction = db.transaction("nombres","readonly");
-    const objectStore = IDBtransaction.objectStore("nombres");
-    const cursor = objectStore.openCursor();
-    cursor.addEventListener("success",()=>{
-        if (cursor.result) {
-            console.log(cursor.result.value);
-            cursor.result.openCursor()
-        }
-    })
-}`}/>
-        <Conseptos texto={`Modificacion de objetos.`}/>
-        <JavaScropt codigo={`const modificarObjetos = (key,objeto) =>{
-    const db = IDBRequest.result
-    const IDBtransaction = db.transaction("nombres","readwrite")
-    const objectStore = IDBtransaction.objectStore("nombres");
-    objectStore.put(objeto,key)
-
-    // aqui cambiamos al "add" por put y ponemos los dos parametros lo demas es igual
-
-    IDBtransaction.addEventListener("complete",()=>{
-        console.log("objeto modificado correctamente");
-    })
+function error(e) {
+  console.log("hubo un error en la base de datos");
+  console.log(e.code,e.message);
 }
-modificarObjetos(2,{nombre:"otro name"})`}/>
-        <Conseptos texto={`Eliminar objetos.`}/>
-        <JavaScropt codigo={`const eliminarObjetos = key =>{
-    const db = IDBRequest.result
-    const IDBtransaction = db.transaction("nombres","readwrite")
-    const objectStore = IDBtransaction.objectStore("nombres");
-    objectStore.delete(key)
-
-        // aqui ya no ponemos "add" ni "put" ponemos "delete" y el parametro key.
-
-    IDBtransaction.addEventListener("complete",()=>{
-        console.log("objeto eliminado correctamente");
-    })
+function iniciar(e) {
+  // "e.target.result" es para poder guardar el objeto del indexedDB en la variable que queramos.
+  console.log("la base de datos se abrio/creo exitosamente.");
+  db = e.target.result;
+  console.log(db);
+}
+function crearBase() {
+  console.log("la base de datos se abrio/creo exitosamente.")
 }`}/>
-        <Conseptos texto={`Ahora todo el codigo.`}/>
-        <JavaScropt codigo={`const IDBRequest = indexedDB.open("nombres");
 
-IDBRequest.addEventListener("upgradeneeded",()=>{
-    const db = IDBRequest.result;
-    db.createObjectStore("mi base de datos 😎😎😎",{
-        autoIncrement: true
-    })
-})
-
-IDBRequest.addEventListener("success",()=>{
-    console.log("todo salio correctamente");
-})
-
-IDBRequest.addEventListener("error",()=>{
-    console.log("hubo un error al abrir la base de datos.")
-})
-
-const addObjetos = objetos =>{
-    const db = IDBRequest.result
-    const IDBtransaction = db.transaction("nombres","readwrite")
-    const objectStore = IDBtransaction.objectStore("nombres");
-    objectStore.add(objetos)
-    IDBtransaction.addEventListener("complete",()=>{
-        console.log("se agrego correctamente")
-    })
-}
-
-const leerObjeto = () =>{
-    const db = IDBRequest.result;
-    const IDBtransaction = db.transaction("nombres","readonly");
-    const objectStore = IDBtransaction.objectStore("nombres");
-    const cursor = objectStore.openCursor();
-    cursor.addEventListener("success",()=>{
-        if (cursor.result) {
-            console.log(cursor.result.value);
-            cursor.result.openCursor()
-        }
-    })
-}
-
-const modificarObjetos = (key,objeto) =>{
-    const db = IDBRequest.result
-    const IDBtransaction = db.transaction("nombres","readwrite")
-    const objectStore = IDBtransaction.objectStore("nombres");
-    objectStore.put(objeto,key)
-    IDBtransaction.addEventListener("complete",()=>{
-        console.log("objeto modificado correctamente");
-    })
-}
-modificarObjetos(2,{nombre:"otro name"})
-
-const eliminarObjetos = key =>{
-    const db = IDBRequest.result
-    const IDBtransaction = db.transaction("nombres","readwrite")
-    const objectStore = IDBtransaction.objectStore("nombres");
-    objectStore.delete(key)
-    IDBtransaction.addEventListener("complete",()=>{
-        console.log("objeto eliminado correctamente");
-    })
-}`}/>
       </main>
       <Footer/>
     </>

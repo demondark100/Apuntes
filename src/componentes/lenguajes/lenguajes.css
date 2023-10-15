@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 95% !important;
+  width: 85% !important;
+  height: auto !important;
   max-height: 1800px;
   max-width: 1800px;
   margin-top: 25px;
   margin-bottom: 25px;
-  background-color: #000;
-  border: 2px solid #6e6060;
+  background-color: #141414;
+  border: 2px solid #383434;
 }
 
 code {
@@ -18,7 +19,7 @@ code {
   margin: 0 !important;
   margin-bottom: 0 !important;
   font-size: 1em;
-  padding: 0;
+  padding: 4px;
   text-align: center;
   color: #3c7f6c;
 }
@@ -29,7 +30,6 @@ code {
   width: 100%;
   font-size: .8em;
   overflow: auto;
-  max-height: 35vh;
   max-width: 1800px;
 }
 
@@ -39,14 +39,14 @@ code {
 
 
 .scroll::-webkit-scrollbar {
-  height: .5vh;
-  width: .5vw;
-  background-color: #0b20bf;
+  height: 4px;
+  width: 4px;
+  background-color: #4c4d50;
   border: 15%;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background-color: #5680ea; 
+  background-color: #000000; 
   border-radius: 15vh; 
 }
 
@@ -76,6 +76,7 @@ code {
   background-color: transparent;
   border: none;
   cursor: pointer !important;
+  padding: 8px;
 }
 .copiarCodigo:hover{
   color: #9efaff;

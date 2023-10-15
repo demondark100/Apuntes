@@ -328,36 +328,15 @@ import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
 
 
 function App() {
-  const swicth = useRef(null); // esto es el boton.
-  const [active, setActive] = useState(false);
-
-  const activado =()=>{
-    setActive(!active)
-  }
-  useEffect(()=>{
-    if(active){
-      swicth.current.classList.add("activeSwitch")
-      document.body.classList.add("bodyDark")
-    } else{
-      swicth.current.classList.remove("activeSwitch")
-      document.body.classList.remove("bodyDark")
-    }
-  })
 
   return (
     <Router>
-      <Menu active={active}/>
-      <Barrita active={active}/>
-      <div className="contentSwitch">
-        <button ref={swicth} onClick={activado} className='switch' id='switch'>
-          <span><FontAwesomeIcon icon={faSun}/></span>
-          <span><FontAwesomeIcon icon={faMoon}/></span>
-        </button>
-      </div>
+      <Menu />
+      <Barrita />
       <ScrollToTop />
       
       <Routes>
-        <Route path='/' element={<Home active={active}/>} />
+        <Route path='/' element={<Home />} />
 
         {/* proyectos */}
           {/* html */}

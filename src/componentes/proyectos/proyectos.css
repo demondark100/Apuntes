@@ -1,0 +1,11 @@
+.contentShowProy{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #000;
+  color: #baffbe;
+  width: 150x;
+  height: 150px;
+  left: 100%;
+  pointer-events: none;
+}

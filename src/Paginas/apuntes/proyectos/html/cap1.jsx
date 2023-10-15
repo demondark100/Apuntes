@@ -1,9 +1,9 @@
 import MensajeModal from "../../../../componentes/MensajeModal/mensajeModal";
 import Volver from "../../../../componentes/volver/volver";
-
 function Cap1ProyectoHtml() {
   return (
     <>
+      {/* <Volver link={"../"}/> */}
       <MensajeModal texto={`¡Proyecto! capitulo 2
 Hacer un sitio web que tenga la estructura basica de html.
 

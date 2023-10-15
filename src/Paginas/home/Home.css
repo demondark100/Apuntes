@@ -9,7 +9,6 @@
 
 /* estos son los dos contenedores */
 .contenedorHome__contenido{
-  background-color: #f3fdf3;
   padding: 25px;
   height: 75%;
   width: 25%;
@@ -18,18 +17,8 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  box-shadow: 0 0 15px 1px #cabbbb;
-  color: #000 !important;
+  color: #e3fadb !important;
   text-align: center;
-  transition-duration: .5s;
-}
-
-
-.contenedorHomeDark{
-  background-color: #0e0e0e !important;
-  color: #fff !important;
-  box-shadow: 0 0 15px 1px #181717;
-  transition-duration: .5s;
 }
 
 @media(min-width: 750px){
@@ -45,7 +34,7 @@
   
   /* estos son los dos contenedores */
   .contenedorHome__contenido{
-    background-color: #f3fdf3;
+    background-color: #3c413c;
     height: 75%;
     width: 25%;
     min-width: 200px;

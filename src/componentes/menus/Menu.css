@@ -6,26 +6,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #fff;
+  background-color: #000;  
   min-width: 55px;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   z-index: 2;
-  color: #000;
   transition-duration: .5s;
-  border-bottom: 1px solid #e9dbdb;
-}
-.headerDark{
-  background-color: #000;
-  transition-duration: .5s;
-  color: #fff !important;
-  border-bottom: 1px solid #252222;
-
 }
 
 /* esto es la imagen del logo */
 .imgPcLogo{
   width: 8%;
+  z-index: 4;
 }
 
 
@@ -34,6 +26,7 @@
 .iconoMenu{
   cursor: pointer;
   font-size: 1.5em;
+  color: #e3fadb;
 }
 
 
@@ -42,19 +35,16 @@
 
 .contenedorLinksMenu{
   position: absolute;
-  top: 68px;
+  background: linear-gradient(90deg,#000000f8,#000000f8,#000000f8,#000000f8,#000000f8,#000000f8,#000000f8,transparent);
+  top: 80px;
   left: -100%;
-  background-color: #fff;
-  width: 100%;
+  width: 65%;
   height: 100vh;
   transition-duration: .5s;
   overflow: auto;
   overflow-x: hidden;
-}
-.contenedorLinksMenuDark{
-  background-color: #000;
-  z-index: 5;
-  transition-duration: .5s;
+  color: #e3fadb !important;
+  padding-top: 15px;
 }
 .contenedorLinksMenu::-webkit-scrollbar{
   display: none;
@@ -79,29 +69,18 @@
 }
 .links li a{
   text-decoration: none;
-  color: #000;
+  color: #e3fadb;
   transition-duration: .5s;
 }
-.linksDark{
-  color: #fff !important;
-}
-.links li a:hover{
-  border-bottom: 2px solid #000;
-  transition-duration: .5s;
-}
-.linksDark:hover{
-  border-bottom: 2px solid #fff !important;
-  transition-duration: .5s;
-}
+
+
 
 /* estos son los links de redes osea el ul li etc */
 .linkMovil{
   list-style: none;
-  color: #fff;
+  color: #e3fadb;
 }
-.linkMovilDark{
-  color: #000;
-}
+
 .linkPc{
   display: none;
 }
@@ -152,8 +131,9 @@
 
   .headerMenu{
     height: 60px;
+    background: linear-gradient(0deg,transparent,#000,#000,#000,#000);
     z-index: 4;
-    color: #000;
+    color: #e3fadb;
     transition-duration: .5s;
   }
 
@@ -181,9 +161,11 @@
   /* esto es el nav del menu */
 
   .contenedorLinksMenu{
+    background: linear-gradient(0deg,transparent,transparent,#000,#000);
     position: relative;
+    justify-content: center;
     top: 0;
-    left: 0;
+    left: 0px;
     margin-left: -43%;
     height: 100%;
     transition-duration: .5s;
@@ -197,9 +179,8 @@
   .links{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin-top: 0;
-    top: 0;
+    align-items: start;
+    margin-top: -4px;
     height: 100%;
   }
 
@@ -211,32 +192,17 @@
   .linkPc{
     display: block;
     list-style: none;
-    width: 15%;
-    background-color: #fff;
+    width: 120px;
+    background-color: #00000077;
     text-align: center;
     z-index: -2;
-  }
-  .linkPcCDark{
-    background-color: #000;
   }
   .linkPc li{
     padding: 10px;
   }
   .linkPc li a{
     text-decoration: none;
-    color: #000;
-    transition-duration: .5s;
-  }
-  .linkPcDark{
-    color: #fff !important;
-    transition-duration: .5s;
-  }
-  .linkPc li a:hover{
-    border-bottom: 2px solid #000;
-    transition-duration: .5s;
-  }
-  .linkPcDark:hover{
-    border-bottom: 2px solid #fff !important;
+    color: #e3fadb;
     transition-duration: .5s;
   }
 
@@ -253,7 +219,7 @@
   }
   .show{
     position: absolute;
-    transform: translate(20vw,100px);
+    transform: translate(20vw,86px);
     transition-duration: .5s;
   }
   .hide{

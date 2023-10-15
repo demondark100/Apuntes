@@ -34,11 +34,16 @@ function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4}) {
         }
       </div>
       { mostrarCode && <div ref={contenedor} className="contenedorCodigoFuente__codigo">
-          <p onClick={quitCode} style={{backgroundColor: "transparent"}}>x</p>
-            <div className="contenedorDelCodigoDiv">{codigo}</div>
-            <div className="contenedorDelCodigoDiv">{codigo2}</div>
-            <div className="contenedorDelCodigoDiv">{codigo3}</div>
-            <div className="contenedorDelCodigoDiv">{codigo4}</div>
+          <div className="contenedorCodigoFuente__Cerrar">
+            <p onClick={quitCode} style={{backgroundColor: "transparent"}}>x</p>
+          </div>
+
+            <div className="contenedorDelCodigoDiv">
+            {codigo}
+            {codigo2}
+            {codigo3}
+            {codigo4}
+            </div>
         </div>
       }
     </div>
