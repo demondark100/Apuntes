@@ -263,9 +263,7 @@ Instrucciones:
               
             }}
           >
-            {
 
-            }
             <p className="contenedorAreaCap5JsV3__inputs__areas__input__texto">{`Imagen n${parseInt(i.key) + 1}`}</p>
             <label>columnas</label>
             <div className="contenedorAreaCap5JsV3__inputs__areas__input">
