@@ -1,9 +1,5 @@
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./cap7.css"
 
 import React, { useState, useRef } from 'react';
@@ -40,11 +36,9 @@ function Cap7ProyJsV5() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 4
-
-Hacer una pregunta al usuario pero que no pueda decir que no.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title>pregunta</title>
@@ -66,8 +60,8 @@ Hacer una pregunta al usuario pero que no pueda decir que no.`}/>
 
     <script src="pregunta.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`body{
+</html>`}
+        css={`body{
   padding: 0;
   box-sizing: border-box;
   display: flex;
@@ -157,8 +151,8 @@ body::before{
 .mensajeNegativo{
   background-color: #f00;
   display: none;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const botonSi = document.getElementById('botonSi');
+}`}
+        javaScript={`const botonSi = document.getElementById('botonSi');
 const botonNo = document.getElementById('botonNo');
 const mensajePositivo = document.querySelector(".mensajePositivo");
 const mensajeNegativo = document.querySelector(".mensajeNegativo");
@@ -184,8 +178,11 @@ botonNo.addEventListener("mouseover",()=>{
   botonNo.style.position = \`absolute\`;
   botonNo.style.top = \`${"${numero1}"}%\`;
   botonNo.style.left = \`${"${numero2}"}%\`;
-})`}/>}/>
-      <Volver link={"../"}/>
+})`}
+      />
+      <MensajeModal texto={`¡Proyecto! capitulo 4
+
+Hacer una pregunta al usuario pero que no pueda decir que no.`}/>
       <div className="Page">
 
         <div className="contenedorCap4ProyV2Js">

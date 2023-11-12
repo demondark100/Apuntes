@@ -1,8 +1,6 @@
 import { useEffect, useRef,useState } from "react";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./tienda.css";
 
 // este componente es la pantalla que muestra los helados
@@ -174,11 +172,19 @@ function Cap3ProyJsV3() {
 
   return (  
     <>
-      <MensajeModal texto={`¡proyecto! capitulo 3:
-
-Hacer una tienda de helados.`}/>
-      <Volver link={"../"}/>
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`// Necesitamos el dinero del usuario.
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tienda de helados</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`// Necesitamos el dinero del usuario.
 // necesitamos el precio de los helados.
 // necesitamos ver cuanto dinero le queda al usuario.
 
@@ -219,7 +225,11 @@ cantidad de helados: helado n${"${i + 1}"}.
 
 // este sistema es muy dinamico porque puedes 
 // agregar mas helados y se detectara automaticamente 
-// si hay mas helados para vender y todo xd.`}/>}/>
+// si hay mas helados para vender y todo xd.`}
+      />
+      <MensajeModal texto={`¡proyecto! capitulo 3:
+
+Hacer una tienda de helados.`}/>
     
       <div className="Page">
         <div className="tiendaDeHeladosProyJsContenedorPrincipal">

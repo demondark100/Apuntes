@@ -25,14 +25,11 @@ function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4}) {
     contenedor.current.classList.add("quitarCodigoFuente")
   }
 
-  return (  
+  return (
+    <>
+      <FontAwesomeIcon className="codigoSvgFuente" onMouseEnter={mostrarMen} onMouseOut={quitarMen} onClick={manejarCode} icon={faCode} title="codigo sin interfaz"/>
     <div className="contenedorCodigoFuente">
-      <div className="contenedorCodigoFuente__boton">
-        <FontAwesomeIcon onMouseEnter={mostrarMen} onMouseOut={quitarMen} onClick={manejarCode} icon={faCode} title="codigo sin interfaz"/>
-        {
-          mostrarMensaje && <p>codigo</p>
-        }
-      </div>
+
       { mostrarCode && <div ref={contenedor} className="contenedorCodigoFuente__codigo">
           <div className="contenedorCodigoFuente__Cerrar">
             <p onClick={quitCode} style={{backgroundColor: "transparent"}}>x</p>
@@ -47,6 +44,7 @@ function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4}) {
         </div>
       }
     </div>
+    </>
   );
 }
 

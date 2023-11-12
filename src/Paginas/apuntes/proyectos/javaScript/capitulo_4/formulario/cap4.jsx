@@ -1,7 +1,5 @@
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import React, { useState } from 'react';
 
 import "./cap4.css";
@@ -183,11 +181,19 @@ function Cap4ProyJsV3() {
 
   return (
     <>
-    <MensajeModal texto={`¡Proyecto! capitulo 4
-
-Hacer un formulario que valide las entradas que de el usuario.`}/>
-
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`alert("Bienvenido/a al registro para esta red social por favor rellene los campos para continuar.")
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>formulario</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`alert("Bienvenido/a al registro para esta red social por favor rellene los campos para continuar.")
 class Formulario {
   constructor() {
     this.nombre = "";
@@ -269,8 +275,12 @@ class Formulario {
 }
 
 const formulario = new Formulario();
-formulario.mostrar();`}/>}/>
-      <Volver link={"../"}/>
+formulario.mostrar();`}
+      />
+      <MensajeModal texto={`¡Proyecto! capitulo 4
+
+Hacer un formulario que valide las entradas que de el usuario.`}/>
+
     <div className="Page">
       <Mensaje
         setShowMensaje={setShowMensaje}

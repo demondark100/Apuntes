@@ -3,11 +3,7 @@ import { useState,useEffect,useRef } from "react";
 
 // componentes generales
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../../componentes/volver/volver";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 
 
@@ -169,11 +165,9 @@ function Cap5ProyJsV2() {
   
   return(
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 5
-
-Hacer operaciones basicas y mostrar con manzanitas que esta sucediendo.`}/>
-      <Volver link={`../`}/>
-      <CodigoFuenteSinInt codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
       <title>operaciones con manzanitas</title>
@@ -192,8 +186,8 @@ Hacer operaciones basicas y mostrar con manzanitas que esta sucediendo.`}/>
 
       <script src="manzanitas.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`body{
+</html>`}
+        css={`body{
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -221,8 +215,8 @@ Hacer operaciones basicas y mostrar con manzanitas que esta sucediendo.`}/>
 }
 .simbolo,.igual {
   font-size: 2em;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const contenedor1 = document.querySelector(".contenedor1");
+}`}
+        javaScript={`const contenedor1 = document.querySelector(".contenedor1");
 const contenedor2 = document.querySelector(".contenedor2");
 const contenedor3 = document.querySelector(".contenedor3");
 const simbolo = document.querySelector(".simbolo");
@@ -264,8 +258,11 @@ function generarCajas(cantidad,contenedor) {
 }
 generarCajas(numero1,contenedor1);
 generarCajas(numero2,contenedor2);
-generarCajas(resultado,contenedor3);`}/>}
+generarCajas(resultado,contenedor3);`}
       />
+      <MensajeModal texto={`¡Proyecto! capitulo 5
+
+Hacer operaciones basicas y mostrar con manzanitas que esta sucediendo.`}/>
 
       <div className="Page">
         <div className="contenedorOperacionesCap5Dom">

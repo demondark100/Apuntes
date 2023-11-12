@@ -1,10 +1,6 @@
 import "./cap7.css";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Volver from "../../../../../../componentes/volver/volver";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -90,12 +86,9 @@ function Cap7ProyJsV4() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 7
-
-Hacer un selector de colores para los que trabajan en sublime text y no tienen la extencion de colores :v.    `}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html 
-          codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title>colores css</title>
@@ -125,9 +118,7 @@ Hacer un selector de colores para los que trabajan en sublime text y no tienen l
     <script src="colores.js"></script>
   </body>
 </html>`}
-        />}
-        codigo2={<Css 
-          codigo={`.contenedor{
+        css={`.contenedor{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -177,9 +168,7 @@ Hacer un selector de colores para los que trabajan en sublime text y no tienen l
 .copiadoAviso{
   background-color: #a3c039;
 }`}
-        />}
-        codigo3={<JavaScropt 
-          codigo={`const hexadecimal = document.getElementById("hexadecimal");
+        javaScript={`const hexadecimal = document.getElementById("hexadecimal");
 const rgb = document.getElementById("rgb");
 
 const copiar1 = document.getElementById("copiar1");
@@ -254,9 +243,10 @@ function avisoCopiado(variable){
     variable.textContent = "copiar";
   },3000)
 }`}
-        />}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 7
+
+Hacer un selector de colores para los que trabajan en sublime text y no tienen la extencion de colores :v.`}/>
       <div className="Page">
         <div className="contenedorCap7V4General">
           <div className="contenedorCap7V4General__showColors">

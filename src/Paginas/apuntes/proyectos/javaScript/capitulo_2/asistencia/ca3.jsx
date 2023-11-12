@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./cap3.css";
-import Volver from "../../../../../../componentes/volver/volver";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 
 function Cap3ProyJsV1() {
@@ -53,7 +51,19 @@ function Cap3ProyJsV1() {
 
   return (
     <>
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`function obtenerPresentes() {
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Asistencia de alumnos</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`function obtenerPresentes() {
   const nombres = [];
   const presentes = [];
   const faltan = [];
@@ -106,7 +116,9 @@ function Cap3ProyJsV1() {
   console.log("Alumnos ausentes:", faltan);
 }
 
-obtenerPresentes();`}/>}/>
+obtenerPresentes();`}
+      />
+      
       <MensajeModal texto={`¡Proyecto! capitulo 3:
 
 Hacer un programa que tome asistencia de alumnos y mostrar los alumnos presentes y los que no estan presentes.
@@ -121,7 +133,6 @@ Recuerda que aprendimos:
 
 ¡Aclaracion!
 El codigo se puede escribir con prompts y alert yo solo le estoy dando una interfaz grafica.`}/>
-      <Volver link={"../"}/>
       <div className="Page">
         <div className="cap3-container">
           <div className="cap3-form">

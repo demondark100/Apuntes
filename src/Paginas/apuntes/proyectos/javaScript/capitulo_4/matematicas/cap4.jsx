@@ -1,7 +1,5 @@
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import React, { useState, useEffect , useRef } from 'react';
 import "./cap4.css"
 
@@ -494,18 +492,19 @@ function Cap4ProyJsV1() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 4
-
-hacer ejercicios matematicos basicos para que el usuario los resuelva.
-
-Recuerda que aprendimos:
-
-1. Programacion orientada a objetos.
-2. Metodos de cadenas.
-3. Metodos de arreglos.
-4. Object Math.`}/>
-
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`alert(\`Hola bienvenido/a a los ejercicios matematicos basicos para aprender aritmetica , la dinamica sera esta:
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>matematica para niños</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`alert(\`Hola bienvenido/a a los ejercicios matematicos basicos para aprender aritmetica , la dinamica sera esta:
 
 1. resuelve el ejercicio y le das a aseptar.
 2. tu podras elegir cuantos ejercicios quieres resolver para practicar.
@@ -591,8 +590,18 @@ ${"${this.nun2}"}\`)
   }
 }
 const aritmetica = new Aritmetica(); 
-aritmetica.comprobar()`}/>}/>
-      <Volver link={"../"}/>
+aritmetica.comprobar()`}
+      />
+      <MensajeModal texto={`¡Proyecto! capitulo 4
+
+hacer ejercicios matematicos basicos para que el usuario los resuelva.
+
+Recuerda que aprendimos:
+
+1. Programacion orientada a objetos.
+2. Metodos de cadenas.
+3. Metodos de arreglos.
+4. Object Math.`}/>
 
 
       <div className="Page">

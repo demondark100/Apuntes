@@ -61,7 +61,7 @@
   border: none;
   font-family: inherit;
   font-weight: 500;
-  color: black;
+  color: black !important;
   background-color: white;
   width: 65%;
  }

@@ -1,10 +1,6 @@
 import "./cap8.css";
-import Volver from "../../../../../../componentes/volver/volver";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import React, { useEffect, useRef, useState } from 'react';
 
 function Cap8ProyJsV2() {
@@ -197,11 +193,9 @@ function Cap8ProyJsV2() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 8
-
-Hacer un examen al usuario usando tryCatch.`}/>
-      <CodigoFuenteSinInt codigo={<Html 
-        codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -231,8 +225,7 @@ Hacer un examen al usuario usando tryCatch.`}/>
     <script src="examen.js"></script>
   </body>
 </html>`}
-      />}
-        codigo2={<Css codigo={`*{
+        css={`*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -303,8 +296,8 @@ body{
   flex-direction: column;
   gap: 25px;
   position: fixed;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const pregunta = document.getElementById("pregunta"); // aqui iran las preguntas
+}`}
+        javaScript={`const pregunta = document.getElementById("pregunta"); // aqui iran las preguntas
 const numeroPregunta = document.getElementById("numeroPregunta"); // esto es para indicar al usuario en que pregunta esta
 
 
@@ -420,10 +413,11 @@ opciones.forEach((botones,index)=>{
       }
     },500)
   })
-})`}/>}
+})`}
       />
-      
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 8
+
+Hacer un examen al usuario usando tryCatch.`}/>
 
       <div className="Page">
         <div className={`contenedorTitleCap8JsV2 ${hidePresent ? "contenedorTitleCap8JsV2Hide":""}`}>

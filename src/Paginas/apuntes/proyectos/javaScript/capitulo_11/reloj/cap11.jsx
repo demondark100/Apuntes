@@ -4,11 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faUndo } from '@fortawesome/free-solid-svg-icons';
 
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../../componentes/volver/volver";
-import CodigoSinIn from "../../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 
 function Cap11ProyV1(){
@@ -193,23 +189,12 @@ function Cap11ProyV1(){
 
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 11
-
-Hacer un reloj y tambien un cronometro.
-
-Recuerda que aprendimos:
-
-1. objeto Date
-2. LocalStorage y SessionStorage
-3. Drag y Drop
-4. Geolocalization
-5. History API
-6. FileReader
-7. IndexedDB`}/>
-      <CodigoSinIn codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
-    <title>Generador de Contraseñas</title>
+    <title>Reloj</title>
     <link rel="stylesheet" href="reloj.css">
     <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
   </head>
@@ -245,8 +230,8 @@ Recuerda que aprendimos:
 
     <script src="reloj.js"></script>
   </body>
-</html>`}/>}
-      codigo2={<Css codigo={`body{
+</html>`}
+        css={`body{
   padding: 0;
   margin: 0;
   width: 100%;
@@ -387,8 +372,8 @@ Recuerda que aprendimos:
 #pausar{
   visibility: hidden;
   position: absolute;
-}`}/>}
-        codigo3={<JavaScropt codigo={`//estos son los botones para cambiar de reloj a cronometro u biseversa.
+}`}
+        javaScript={`//estos son los botones para cambiar de reloj a cronometro u biseversa.
 
 const btnReloj = document.getElementById("btn-reloj")
 const btnCronometro = document.getElementById("btn-cronometro");
@@ -558,11 +543,21 @@ btnCronometro.addEventListener("click", () => {
   btnReloj.style.borderBottom = "none";
   box.style.transform = "rotateY(180deg)";
   followFront = false; // Deshabilitar el seguimiento del mouse en la cara "front"
-});
-`}/>}
-      
+});`}
       />
-      <Volver link={`../`}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 11
+
+Hacer un reloj y tambien un cronometro.
+
+Recuerda que aprendimos:
+
+1. objeto Date
+2. LocalStorage y SessionStorage
+3. Drag y Drop
+4. Geolocalization
+5. History API
+6. FileReader
+7. IndexedDB`}/>
       
       <div className='Page'>
         <div className="contenedorRelojProyJs">

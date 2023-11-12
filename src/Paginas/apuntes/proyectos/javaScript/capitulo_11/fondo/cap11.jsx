@@ -1,10 +1,6 @@
 import "./cap11.css";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../../componentes/volver/volver";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 import React, { useState, useEffect,useRef, useDebugValue } from 'react';
 
@@ -156,11 +152,9 @@ function Cap11ProyV4(){
 
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 11
-
-Hacer un editor de fondos de pantalla , el usuario debe arrastrar para establecer un fondo o para eliminar una imagen , las imagenes que el usuario agregue se deben de guardar.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -189,8 +183,8 @@ Hacer un editor de fondos de pantalla , el usuario debe arrastrar para establece
 
     <script src="fondos.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`*{
+</html>`}
+        css={`*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -222,8 +216,8 @@ Hacer un editor de fondos de pantalla , el usuario debe arrastrar para establece
     background-image: url("https://th.bing.com/th/id/OIP.Eu8wXUJxcX0tCTehGwdPugHaE5?w=248&h=180&c=7&r=0&o=5&pid=1.7");
     background-size: cover;
     background-position: center;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const contenedor = document.querySelector(".contenedor");
+}`}
+        javaScript={`const contenedor = document.querySelector(".contenedor");
 const imagenes = document.querySelectorAll(".imagen");
 const cambiar = document.querySelector(".cambiar");
 let link = "";
@@ -238,9 +232,11 @@ cambiar.addEventListener("dragenter",()=>{
   cambiar.style.backgroundImage = \`url("${"${link}"}")\`;
   contenedor.style.backgroundImage = \`url("${"${link}"}")\`
   console.log("pepa")
-});`}/>}
+});`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 11
+
+Hacer un editor de fondos de pantalla , el usuario debe arrastrar para establecer un fondo o para eliminar una imagen , las imagenes que el usuario agregue se deben de guardar.`}/>
       
       <div className="Page">
         

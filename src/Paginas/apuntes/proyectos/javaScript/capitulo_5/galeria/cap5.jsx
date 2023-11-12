@@ -1,9 +1,5 @@
-import Volver from "../../../../../../componentes/volver/volver";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 import "./cap5.css";
 
@@ -461,11 +457,9 @@ function Cap5ProyJsV3() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 5
-
-Hacer un editor de galeria , que tambien funciones como editor de grid.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title>editor de grid</title>
@@ -480,8 +474,8 @@ Hacer un editor de galeria , que tambien funciones como editor de grid.`}/>
         
     <script src="editorGrid.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`.galeria_contenedor{
+</html>`}
+        css={`.galeria_contenedor{
   display: grid;
   border: 2px solid #000;
   width: 550px;
@@ -499,9 +493,8 @@ Hacer un editor de galeria , que tambien funciones como editor de grid.`}/>
   object-fit: cover;
   width: 100%;
   height: 100%;
-}`}/>}
-        codigo3={<JavaScropt codigo={`
-alert("¡Programa una galeria desde 0!")
+}`}
+        javaScript={`alert("¡Programa una galeria desde 0!")
 let columnas = prompt("¿Cuantas columnas tendra tu galeria?");
 let filas = prompt("¿Cuantas filas tendra tu galeria?");
 let medidaColumnas = prompt(\`¿Cuanto medira cada columna?
@@ -517,11 +510,11 @@ Puedes poner la medida que gustes.\`);
 
 
 while(isNaN(columnas)){
-	columnas = prompt("¿Cuantas columnas tendra tu galeria?");
+  columnas = prompt("¿Cuantas columnas tendra tu galeria?");
 }
 
 while(isNaN(filas)){
-	filas = prompt("¿Cuantas filas tendra tu galeria?");
+  filas = prompt("¿Cuantas filas tendra tu galeria?");
 }
 
 function contieneNumero(cadena) {
@@ -529,22 +522,22 @@ function contieneNumero(cadena) {
 }
 
 function medidaDefault(variable){
-	let medidaActualizada = variable;
-	const medidas = ["fr","px","rem","em","cm","pt"];
-	for(let i in medidas){
-		if(variable.includes(medidas[i])){
-			medidaActualizada = variable
-	 		return medidaActualizada
-		}
-	}
-	if (contieneNumero(variable) === false) {
-    	alert("Como no pusiste un valor válido, la medida será de 1fr");
-    	medidaActualizada = "1fr";
-  	} else {
-    	alert("Como no pusiste un valor válido, la medida será de 1fr");
-    	medidaActualizada = "1fr";
-  	}
-	return medidaActualizada;
+  let medidaActualizada = variable;
+  const medidas = ["fr","px","rem","em","cm","pt"];
+  for(let i in medidas){
+    if(variable.includes(medidas[i])){
+      medidaActualizada = variable
+      return medidaActualizada
+    }
+  }
+  if (contieneNumero(variable) === false) {
+    alert("Como no pusiste un valor válido, la medida será de 1fr");
+    medidaActualizada = "1fr";
+  } else {
+    alert("Como no pusiste un valor válido, la medida será de 1fr");
+    medidaActualizada = "1fr";
+  }
+  return medidaActualizada;
 }
 medidaColumnas = medidaDefault(medidaColumnas);
 medidaFilas = medidaDefault(medidaFilas);
@@ -572,40 +565,41 @@ function agregarSpan(palabra) {
 }
 
 for(let i = 0;i < cantidad; i++){
-	imagenes = prompt(\`Ingrese la URL de la imagen n${"${i + 1}"}\`);
-	espacioColumnas = prompt(\`¿Que espacio de ancho tendra la imagen n${"${i + 1}"}?:
+  imagenes = prompt(\`Ingrese la URL de la imagen n${"${i + 1}"}\`);
+  espacioColumnas = prompt(\`¿Que espacio de ancho tendra la imagen n${"${i + 1}"}?:
 instrucciones: aqui debes poner cuantos cuadrados de ancho quieres que ocupe la imagen.
 ejemplo: 1/2
 1: representa desde que cuadrado inicia.
 2: representa cuantos cuadrados ocupara.
 En resumen debes poner cuanto espacio quieres que ocupe.\`)
-	espacioFilas = prompt(\`¿Que espacio de alto tendra la imagen n${"${i + 1}"}?:
+  espacioFilas = prompt(\`¿Que espacio de alto tendra la imagen n${"${i + 1}"}?:
 instrucciones: aqui debes poner cuantos cuadrados de alto quieres que ocupe la imagen.
 ejemplo: 1/2
 1: representa desde que cuadrado inicia.
 2: representa cuantos cuadrados ocupara.
 En resumen debes poner cuanto espacio quieres que ocupe.\`);
-	agregarSpan(espacioColumnas);
-	agregarSpan(espacioFilas);
+  agregarSpan(espacioColumnas);
+  agregarSpan(espacioFilas);
 
-	const div = document.createElement("DIV");
-	const img = document.createElement("IMG");
-	div.classList.add(\`contenedorImage${"${i + 1}"}\`);
-	div.style.gridColumn = \` ${"${espacioColumnas}"}\`;
-	div.style.gridRow = \` ${"${espacioFilas}"}\`;
-	img.classList.add(\`imagenIMG\`);
-	img.setAttribute("src",imagenes)
-	img.setAttribute("alt","No proporcionaste esta imagen")
-	div.appendChild(img);
-	fragmento.appendChild(div);
-	galeria_contenedor.appendChild(fragmento)
+  const div = document.createElement("DIV");
+  const img = document.createElement("IMG");
+  div.classList.add(\`contenedorImage${"${i + 1}"}\`);
+  div.style.gridColumn = \` ${"${espacioColumnas}"}\`;
+  div.style.gridRow = \` ${"${espacioFilas}"}\`;
+  img.classList.add(\`imagenIMG\`);
+  img.setAttribute("src",imagenes)
+  img.setAttribute("alt","No proporcionaste esta imagen")
+  div.appendChild(img);
+  fragmento.appendChild(div);
+  galeria_contenedor.appendChild(fragmento)
 }
 
 // aqui el link de una imagen para que juegues al programar tu galeria
-// https://th.bing.com/th?id=OIP._SmMHO7XOBUr7AOYFbi0zgHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2
-`}/>}
+// https://th.bing.com/th?id=OIP._SmMHO7XOBUr7AOYFbi0zgHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 5
+
+Hacer un editor de galeria , que tambien funciones como editor de grid.`}/>
       <div className="Page">
 
       <div className={`contenedorGaleriaCap5Js__barraEditora ${showBarrita ? "":"contenedorGaleriaCap5Js__barraEditoraHide"}`}>

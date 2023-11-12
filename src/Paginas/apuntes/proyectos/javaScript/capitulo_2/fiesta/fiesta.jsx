@@ -1,7 +1,5 @@
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import React, { useState , useRef, useEffect } from 'react';
 import './fiesta.css';
 
@@ -57,7 +55,19 @@ function Cap3ProyJsV2() {
 
   return (  
     <>
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`function entradasFiesta(posision,hora) {
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>fiesta</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`function entradasFiesta(posision,hora) {
   let edad = prompt("Hola bienvenido o bienvenida Por favor brindeme su edad para que pueda ingresar a la fiesta")
   if (edad >= 18 && hora > 12) {
     alert("lo siento ya no puedes pasar a la fiesta es demasiado tarde.")
@@ -75,8 +85,8 @@ function Cap3ProyJsV2() {
 }
 entradasFiesta(1,5);
 entradasFiesta(2,6);
-entradasFiesta(8,15);`}/>}/>
-      <Volver link={"../"}/>
+entradasFiesta(8,15);`}
+      />
       <MensajeModal texto={`¡Proyecto! capitulo 3:
 
 Hacer un programa que simule la entrada a solo mayores de edad a una fiesta , si es la primera persona en llegar entra gratis , los demas deben pagar , la entrada finaliza a las 12am despues de esa hora no puede entrar mas gente a la fiesta.`}/>

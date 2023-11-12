@@ -1,9 +1,7 @@
 import { useRef , useState } from "react";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../componentes/volver/volver";
-import CodigoFuenteSinInt from "../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../componentes/lenguajes/JavaScript"
 import "./cap1.css";
+import ShowOptions from "../../../../../componentes/showOptions/show"
 
 
 function Cap1ProyJsV1() {
@@ -18,9 +16,23 @@ function Cap1ProyJsV1() {
 
   return (  
     <>
-      <CodigoFuenteSinInt codigo={<JavaScropt codigo={`let nombre = prompt("escribe tu nombre");
-console.log(\`¡Hola! ${"${nombre}"} desde ahora se aplicaran conseptos de programacion en todos los proyectos de javaScript.\`)`}/>}/>
-      <Volver link={"../"}/>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`let nombre = prompt("escribe tu nombre");
+console.log(\`¡Hola! ${"${nombre}"} desde ahora se aplicaran 
+conseptos de programacion en todos los proyectos
+de javaScript.\`)`}
+      />
       <MensajeModal texto={`¡Proyecto! capitulo 1:
 
 Pedir al usuario su nombre y concatenarlo para dar un aviso.

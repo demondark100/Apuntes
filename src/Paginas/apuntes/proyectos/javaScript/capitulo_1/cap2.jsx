@@ -1,9 +1,7 @@
-import { useEffect, useRef,useState } from "react";
+import {useRef,useState } from "react";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../componentes/volver/volver";
 import "./cap2.css";
-import CodigoFuernteSinInt from "../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../componentes/showOptions/show";
 
 
 function Cap1Vs2PryJs() {
@@ -97,7 +95,19 @@ function Cap1Vs2PryJs() {
 
   return (
     <>
-      <CodigoFuernteSinInt codigo={<JavaScropt codigo={`// suma
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Operaciones basicas</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`}
+        javaScript={`// suma
 let numeroSuma1 = parseInt(prompt("dime el primer numero para sumar"));
 let numeroSuma2 = parseInt(prompt("dime el segundo numero para sumar"));
 console.log(\`el resultado de la suma es: ${"${numeroSuma1 + numeroSuma2}"}\`);
@@ -120,11 +130,12 @@ console.log(\`el resultado de la multiplicacion es: ${"${numeroMultiplicar1 * nu
 // resto
 let numeroResto1 = parseInt(prompt("dime el primer numero para sacar el resto"));
 let numeroResto2 = parseInt(prompt("dime el segundo numero para sacar el resto"));
-console.log(\`el resultado del resto es: ${"${numeroResto1 % numeroResto2}"}\`);`}/>}/>
+console.log(\`el resultado del resto es: ${"${numeroResto1 % numeroResto2}"}\`);`}
+      />
+
       <MensajeModal texto={`¡Proyecto! capitulo 1:
 
 Hacer un programa que sume , reste , multiplique , divida , saque el resto.`}/>
-      <Volver link={"../"}/>
       <div className="Page">
 
         <div className="contenedorCap1JsV2">

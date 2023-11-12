@@ -1,10 +1,6 @@
 import "./cap11.css";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Volver from "../../../../../../componentes/volver/volver";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import React, { useState,useEffect, useRef } from 'react';
 
 // iconos
@@ -54,13 +50,9 @@ function Cap11ProyV2() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 11
-
-Hacer un boton de claro y oscuro , el dato se debe guardar cuando el usuario vuelva a la pagina.
-
-Api para usar localStorage.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -80,8 +72,8 @@ Api para usar localStorage.`}/>
 
     <script src="lightDark.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`body{
+</html>`}
+        css={`body{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -125,8 +117,8 @@ button span{
 }
 .moveBolita{
   margin-left: 21px;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const boton = document.getElementById("boton");
+}`}
+        javaScript={`const boton = document.getElementById("boton");
 const bolita = document.querySelector(".bolita");
 let cambiar = false;
 
@@ -151,9 +143,13 @@ window.addEventListener("load", () => {
       document.body.style.backgroundColor = "#000";
     }
   }
-});`}/>}
+});`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 11
+
+Hacer un boton de claro y oscuro , el dato se debe guardar cuando el usuario vuelva a la pagina.
+
+Api para usar localStorage.`}/>
       <div className="Page">
         
         <div className={`contentCap11PryJsV2 ${contentPrincipal ? 

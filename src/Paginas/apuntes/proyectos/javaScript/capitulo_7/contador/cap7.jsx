@@ -1,8 +1,4 @@
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./cap7.css";
 import React, { useEffect } from 'react';
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal"
@@ -52,19 +48,8 @@ function Cap7ProyJsV1() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 7
-
-Hacer un simple contador.
-
-Recuerda que aprendimos:
-
-1. Eventos de escucha.
-2. Flujo de eventos.
-3. Mouse Events.
-4. Eventos de teclado.
-5. Evebtos de interfaz.
-6. timers.`}/>
-      <CodigoFuenteSinInt codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        html={`<!DOCTYPE html>
 <html>
   <head>
       <title>contador</title>
@@ -87,8 +72,8 @@ Recuerda que aprendimos:
 
     <script src="plantilla.js"></script>
   </body>
-</html>`}/>}
-      codigo2={<Css codigo={`body{
+</html>`}
+        css={`body{
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -159,8 +144,8 @@ Recuerda que aprendimos:
   background-color: #0f0c0c;
   box-shadow: 0 15px 15px -5px #fefefe;
   transition-duration: .5s;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const btnIncrementar = document.querySelector(".btn-incrementarCap5Proy");
+}`}
+        javaScript={`const btnIncrementar = document.querySelector(".btn-incrementarCap5Proy");
 const btnDecrementar = document.querySelector(".btn-decrementarCap5Proy");
 const contenedor = document.querySelector(".contenedorCap5ProyJsV3__contenedor");
 const numero = document.querySelectorAll(".numeroCap5Proy");
@@ -196,10 +181,20 @@ function decrementar() {
       i.textContent = numeroActual;
     })
   },100)
-}
-`}/>}
+}`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 7
+
+Hacer un simple contador.
+
+Recuerda que aprendimos:
+
+1. Eventos de escucha.
+2. Flujo de eventos.
+3. Mouse Events.
+4. Eventos de teclado.
+5. Evebtos de interfaz.
+6. timers.`}/>
       
       <div className="Page">
         <div className="contenedorCap7ProyJsV3">

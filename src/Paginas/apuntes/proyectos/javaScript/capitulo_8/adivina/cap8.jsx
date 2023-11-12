@@ -1,11 +1,5 @@
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Volver from "../../../../../../componentes/volver/volver";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-
-
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./cap8.css";
 import { useEffect,useState } from "react";
 
@@ -69,20 +63,9 @@ function Cap8ProyJsV1() {
   }
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 8:
-
-Hacer un juego de adivina el numero usando callbacks.
-
-Recuerda que aprendimos:
-
-1. Control de flujo.
-2. switch.
-3. manejo de errores.
-4. callbacks.
-5. Promesas.
-6. await y async.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title>Adivina el juego</title>
@@ -120,8 +103,8 @@ Recuerda que aprendimos:
     </div>
     <script src="adivinar.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`*{
+</html>`}
+        css={`*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -277,8 +260,8 @@ body{
   opacity: 1 !important;
   visibility: visible !important;
   transition-duration: .5s;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const respuestaUsuario = document.getElementById("respuestaUsuario"); // esto es la respuesta del usuario
+}`}
+        javaScript={`const respuestaUsuario = document.getElementById("respuestaUsuario"); // esto es la respuesta del usuario
 const comprobar = document.getElementById("comprobar"); // esto es el voton pra comprobar la respuesta.
 const mensajes = document.getElementById("mensajes"); // aqui le indicaremos los mensajes del si esta cerca al numero correcto.
 const contenedor__dificultad = document.querySelector(".contenedor__dificultad"); // seleccionamos al contenedor
@@ -348,9 +331,20 @@ class Numeros{
 const numeros = new Numeros(respuestaUsuario,mensajes)
 comprobar.addEventListener("click",()=>numeros.comprobar());
 btnDificultad.forEach((botnes,indes)=>{numeros.elejirDificultad(botnes,indes)})
-reintentar.forEach(boton=>boton.addEventListener("click",()=>numeros.reintentar()))`}/>}
+reintentar.forEach(boton=>boton.addEventListener("click",()=>numeros.reintentar()))`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 8:
+
+Hacer un juego de adivina el numero usando callbacks.
+
+Recuerda que aprendimos:
+
+1. Control de flujo.
+2. switch.
+3. manejo de errores.
+4. callbacks.
+5. Promesas.
+6. await y async.`}/>
 
       <div className="Page">
         <div className={`presentacionCap8JsV1 ${showLoading ? "":"presentacionCap8JsV1Hide"}`}>

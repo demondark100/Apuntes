@@ -1,10 +1,6 @@
 import "./cap9.css";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Volver from "../../../../../../componentes/volver/volver";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import Html from "../../../../../../componentes/lenguajes/Html";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 
 // react
@@ -240,8 +236,8 @@ function Cap9ProyJsV1() {
     content1Element.style.overflow = "auto"
     content2Element.style.overflow = "auto"
     setTimeout(() => {
-      content1Element.style.overflow = "hidden"
-      content2Element.style.overflow = "hidden"
+      content1Element.style.overflow = "auto"
+      content2Element.style.overflow = "auto"
     }, 5);
   
     // Verifica si se llegó al final del scroll (scrollHeight - clientHeight)
@@ -283,9 +279,9 @@ function Cap9ProyJsV1() {
 
   return (  
     <>
-      <CodigoFuenteSinInt 
-        codigo={<Html 
-          codigo={`<!DOCTYPE html>
+      <ShowOptions
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -321,8 +317,7 @@ function Cap9ProyJsV1() {
     <script src="pokemon.js"></script>
   </body>
 </html>`}
-        />}
-        codigo2={<Css codigo={`*{
+        css={`*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -541,8 +536,7 @@ body{
   color: #00f;
   display: none;
 }`}
-        />}
-        codigo3={<JavaScropt codigo={`const buscar = document.getElementById("buscar"); // aqui el input
+        javaScript={`const buscar = document.getElementById("buscar"); // aqui el input
 const sugerencias = document.getElementById("sugerencias"); // Elemento donde mostrarás las sugerencias
 const btnBuscar = document.getElementById("btnBuscar"); // aqui para buscar al pokemon
 const eliminarInput = document.getElementById("eliminarInput"); // aqui para el boton de limpiar el input
@@ -733,7 +727,6 @@ function colorChanges(rojo,blanco) {
   rojo.style.backgroundColor = "#f00";
   blanco.style.backgroundColor = "#fff";
 }`}
-        />}
       />
       <MensajeModal texto={`¡Proyecto! capitulo 9:
 
@@ -744,7 +737,6 @@ Recuerda que aprendimos:
 2. AJAX.
 3. fetch.
 4. axios.`}/>
-      <Volver link={"../"}/>
       <div className="Page">
         
         <div className="contenedorPageCap9V1Pokemon">

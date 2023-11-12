@@ -1,14 +1,7 @@
 import "./cap7.css";
 import React, { useState,useEffect } from 'react';
-import Volver from "../../../../../../componentes/volver/volver"
-import CodigoFuenteSinIn from "../../../../../../componentes/codigoFuente/code"
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal"
-
-
-// lenguajes
-import Html from "../../../../../../componentes/lenguajes/Html"
-import Css from "../../../../../../componentes/lenguajes/Css"
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript"
+import ShowOptions from "../../../../../../componentes/showOptions/show"
 
 
 
@@ -94,12 +87,9 @@ function Cap7ProyJsV3() {
 
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 7
-
-Hacer un generador de contraseñas seguras.`}/>
-      <Volver link={"../"}/>
-      <CodigoFuenteSinIn 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title>Generador de Contraseñas</title>
@@ -129,8 +119,8 @@ Hacer un generador de contraseñas seguras.`}/>
         
     <script src="generador.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`body {
+</html>`}
+        css={`body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0A0A14;
     color: #FFFFFF;
@@ -235,8 +225,8 @@ button:hover {
     color: #fff !important;
     font-size: 1.5em;
     background-color: #4CAF50;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const palabraInput = document.getElementById("palabraInput");
+}`}
+        javaScript={`const palabraInput = document.getElementById("palabraInput");
 const botonGenerar = document.getElementById("botonGenerar");
 const botonCopiar = document.querySelector(".botonCopiar");
 const mensajeError = document.querySelector(".mensajeError");
@@ -247,85 +237,88 @@ const mensajeCopiado = document.querySelector(".mensajeCopiado");
 
 
 function validarPalabra() {
-    const palabra = palabraInput.value.trim();
-    if (palabra === "") {
-        mostrarError("Error: Debes ingresar una palabra.");
-        return false;
-    } else if (palabra.length < 6 || palabra.length > 12) {
-        mostrarError("Error: La palabra debe tener entre 6 y 12 caracteres.");
-        return false;
-    }
-    return true;
+  const palabra = palabraInput.value.trim();
+  if (palabra === "") {
+    mostrarError("Error: Debes ingresar una palabra.");
+    return false;
+  } else if (palabra.length < 6 || palabra.length > 12) {
+    mostrarError("Error: La palabra debe tener entre 6 y 12 caracteres.");
+    return false;
+  }
+  return true;
 }
 
 function mostrarError(mensaje) {
-    mensajeError.textContent = mensaje;
-    setTimeout(() => {
-        mensajeError.textContent = "";
-    }, 2000);
+  mensajeError.textContent = mensaje;
+  setTimeout(() => {
+    mensajeError.textContent = "";
+  }, 2000);
 }
 
 function generarCaracterAleatorio() {
-    const caracteresEspeciales = "!@#$%^&*()_+-=[]{}|;:,.<>?";
-    return caracteresEspeciales[Math.floor(Math.random() * caracteresEspeciales.length)];
+  const caracteresEspeciales = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+  return caracteresEspeciales[Math.floor(Math.random() * caracteresEspeciales.length)];
 }
 
 function generarContrasena(palabra) {
-    let contrasena = "";
-    for (let i = 0; i < palabra.length; i++) {
-        contrasena += palabra[i] + generarCaracterAleatorio();
-    }
-    return contrasena;
+  let contrasena = "";
+  for (let i = 0; i < palabra.length; i++) {
+    contrasena += palabra[i] + generarCaracterAleatorio();
+  }
+  return contrasena;
 }
 
 function mostrarContrasenaAnimada(contrasena) {
-    const velocidadEscritura = 50; // Velocidad en milisegundos entre cada carácter
-    let i = 0;
-    const intervalo = setInterval(() => {
-        if (i === contrasena.length) {
-            clearInterval(intervalo);
-        } else {
-            mostrarContrasena.textContent += contrasena[i];
-            i++;
-        }
-    }, velocidadEscritura);
+  const velocidadEscritura = 50; // Velocidad en milisegundos entre cada carácter
+  let i = 0;
+  const intervalo = setInterval(() => {
+    if (i === contrasena.length) {
+      clearInterval(intervalo);
+    } else {
+      mostrarContrasena.textContent += contrasena[i];
+      i++;
+    }
+  }, velocidadEscritura);
 }
 
 function copiarContrasena() {
-    const contrasenaGenerada = mostrarContrasena.textContent;
-    if (contrasenaGenerada !== "") {
-        const textArea = document.createElement("textarea");
-        textArea.value = contrasenaGenerada;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-        contenedorMensaje.classList.add("ShowContenedorMensaje");
-        mensajeCopiado.textContent = "password copiado al portapapeles";
-        setTimeout(()=>{
-        	contenedorMensaje.classList.remove("ShowContenedorMensaje");
-        },4000)
-    }
+  const contrasenaGenerada = mostrarContrasena.textContent;
+  if (contrasenaGenerada !== "") {
+    const textArea = document.createElement("textarea");
+    textArea.value = contrasenaGenerada;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    contenedorMensaje.classList.add("ShowContenedorMensaje");
+    mensajeCopiado.textContent = "password copiado al portapapeles";
+    setTimeout(()=>{
+      contenedorMensaje.classList.remove("ShowContenedorMensaje");
+    },4000)
+  }
 }
 
 botonGenerar.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (validarPalabra()) {
-        const palabra = palabraInput.value.trim();
-        const contrasenaGenerada = generarContrasena(palabra);
-        mostrarContrasena.textContent = ""; // Limpiamos el contenido previo
-        mostrarContrasenaAnimada(contrasenaGenerada); // Mostramos la contraseña con animación
-    }
+  e.preventDefault();
+  if (validarPalabra()) {
+    const palabra = palabraInput.value.trim();
+    const contrasenaGenerada = generarContrasena(palabra);
+    mostrarContrasena.textContent = ""; // Limpiamos el contenido previo
+    mostrarContrasenaAnimada(contrasenaGenerada); // Mostramos la contraseña con animación
+  }
 });
 
 botonCopiar.addEventListener("click", () => {
-    copiarContrasena();
+  copiarContrasena();
 });
 
 palabraInput.addEventListener("input", () => {
-    mostrarContrasena.textContent = "";
-});`}/>}
+  mostrarContrasena.textContent = "";
+});`}
       />
+      <MensajeModal texto={`¡Proyecto! capitulo 7
+
+Hacer un generador de contraseñas seguras.`}/>
       
 
       <div className="Page">

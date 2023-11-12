@@ -1,10 +1,6 @@
 import "./cap11.css";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../../componentes/volver/volver";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 
 import React, { useState, useEffect,useRef } from 'react';
@@ -263,11 +259,9 @@ function Cap11ProyV3() {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 11
-
-Hacer un blog de notas que se pueda editar , eliminar , cada cosa creada se debe guardar en una base de datos local , los datos no se deben de perder cuando la pagina se actualice o cuando se salgan.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -321,8 +315,8 @@ Hacer un blog de notas que se pueda editar , eliminar , cada cosa creada se debe
 
     <script src="notas.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`body{
+</html>`}
+        css={`body{
   width: 100vw;
   height: 100%;
   display: flex;
@@ -421,8 +415,8 @@ input,button,textarea{
   margin: 0;
   font-size: .8em;
   display: none;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const btnEnviar = document.querySelector(".btnEnviar");  // esto es el boton para enviar los datos y guardarlos.
+}`}
+        javaScript={`const btnEnviar = document.querySelector(".btnEnviar");  // esto es el boton para enviar los datos y guardarlos.
 const titleInput = document.querySelector(".titleInput");  // esto es el titulo del nuestro input.
 const tareaInput = document.querySelector(".tareaInput");  // esto es la tarea de un textarea.
 
@@ -498,9 +492,11 @@ btnEnviar.addEventListener("click", () => {
   }
 });
 
-crearDatosDom(datos);`}/>}
+crearDatosDom(datos);`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 11
+
+Hacer un blog de notas que se pueda editar , eliminar , cada cosa creada se debe guardar en una base de datos local , los datos no se deben de perder cuando la pagina se actualice o cuando se salgan.`}/>
       <div className="Page">
 
         <div className="contentCap11V3Js">

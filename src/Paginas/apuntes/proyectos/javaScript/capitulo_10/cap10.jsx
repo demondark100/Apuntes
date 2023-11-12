@@ -1,10 +1,6 @@
 import "./cap10.css";
-import Volver from "../../../../../componentes/volver/volver";
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../componentes/codigoFuente/code";
-import Html from "../../../../../componentes/lenguajes/Html";
-import Css from "../../../../../componentes/lenguajes/Css";
-import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import ShowOptions from "../../../../../componentes/showOptions/show";
 import React, { useState,useRef, useEffect } from 'react';
 
 function Cap10ProyJsV1() {
@@ -45,26 +41,9 @@ function Cap10ProyJsV1() {
 
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 10
-
-Hacer un programa que haga factorizaciones
-
-Recuerda que aprendimos:
-
-
-1. prototipos
-2. caracteristicas de prototipos
-3. Strict Mode
-4. funciones parte2 (la venganza :v)
-5. this contextual
-6. Recursividad
-7. clausulas
-8. parametros por defecto
-9. parametro rest
-10. operador ternario
-11. operador spread`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -79,8 +58,8 @@ Recuerda que aprendimos:
 
     <script src="facturar.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`*{
+</html>`}
+        css={`*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -110,8 +89,8 @@ p{
   text-align: center;
   margin-top: 25px;
   font-size: 1.5em;
-}`}/>}
-        codigo3={<JavaScropt codigo={`"use strict";
+}`}
+        javaScript={`"use strict";
 const dato = document.getElementById("dato");
 const resultado = document.getElementById("resultado");
 
@@ -125,9 +104,26 @@ function factorial(numero = 4){
   } else {
     return numero * factorial(numero - 1);
   }
-}`}/>}
+}`}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 10
+
+Hacer un programa que haga factorizaciones
+
+Recuerda que aprendimos:
+
+
+1. prototipos
+2. caracteristicas de prototipos
+3. Strict Mode
+4. funciones parte2 (la venganza :v)
+5. this contextual
+6. Recursividad
+7. clausulas
+8. parametros por defecto
+9. parametro rest
+10. operador ternario
+11. operador spread`}/>
 
       <div className="Page">
 

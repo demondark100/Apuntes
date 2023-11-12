@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
-import Html from "../../../../../../componentes/lenguajes/Html"
-import Css from "../../../../../../componentes/lenguajes/Css"
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./cap7.css";
 
 
@@ -124,35 +120,43 @@ botonBorrarTodo.addEventListener('click',() => {
 
   return (  
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 7
-
-Hacer una calculadora.`}/>
-      <Volver link={`../`}/>
-      <CodigoFuenteSinInt codigo={<Html codigo={`<div class="calculadora">
-  <div class="display">
-    <div class="valor-superior" data-valor-superior></div>
-    <div class="valor-inferior" data-valor-inferior></div>
-  </div> 
-  <button class="span2" data-borrar-todo>AC</button>
-  <button data-borrar>DEL</button>
-  <button data-operador>÷</button>
-  <button data-numero >1</button>
-  <button data-numero>2</button>
-  <button data-numero>3</button>
-  <button data-operador>*</button>
-  <button data-numero>4</button>
-  <button data-numero>5</button>
-  <button data-numero>6</button>
-  <button data-operador>+</button>
-  <button data-numero>7</button>
-  <button data-numero>8</button>
-  <button button data-numero>9</button>
-  <button data-operador>-</button>
-  <button data-numero>.</button>
-  <button data-numero>0</button>
-  <button data-igual >=</button>
-</div>`}/>}
-        codigo2={<Css codigo={`body {
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calculadora.css">
+  </head>
+  <body>
+    <div class="calculadora">
+      <div class="display">
+        <div class="valor-superior" data-valor-superior></div>
+        <div class="valor-inferior" data-valor-inferior></div>
+      </div> 
+      <button class="span2" data-borrar-todo>AC</button>
+      <button data-borrar>DEL</button>
+      <button data-operador>÷</button>
+      <button data-numero >1</button>
+      <button data-numero>2</button>
+      <button data-numero>3</button>
+      <button data-operador>*</button>
+      <button data-numero>4</button>
+      <button data-numero>5</button>
+      <button data-numero>6</button>
+      <button data-operador>+</button>
+      <button data-numero>7</button>
+      <button data-numero>8</button>
+      <button button data-numero>9</button>
+      <button data-operador>-</button>
+      <button data-numero>.</button>
+      <button data-numero>0</button>
+      <button data-igual >=</button>
+    </div>
+    <script src="calculadora.js"></script>
+  </body>
+</html>`}
+        css={`body {
   display: flex;
   justify-content: center;
   background-image: url("https://th.bing.com/th/id/OIP.pfx5_Yz0AM6cCz39FjERLAHaEK?w=313&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7");
@@ -217,8 +221,8 @@ Hacer una calculadora.`}/>
 .valor-inferior {
   color: #dce7bb;
   font-size: 2rem;
-}`}/>}
-        codigo3={<JavaScropt codigo={`const botonNumero = document.querySelectorAll('[data-numero]')
+}`}
+        javaScript={`const botonNumero = document.querySelectorAll('[data-numero]')
 const botonOperador = document.querySelectorAll('[data-operador]')
 const botonIgual = document.querySelector('[data-igual]')
 const botonBorrarTodo = document.querySelector('[data-borrar-todo]')
@@ -228,102 +232,101 @@ const textoValorInferior = document.querySelector('[data-valor-inferior]')
 
 
 class Calculadora {
-    constructor(textoValorInferior,textoValorSuperior){
-        this.textoValorInferior = textoValorInferior
-        this.textoValorSuperior = textoValorSuperior
-        this.valorInferior = ''
-        this.valorSuperior = ''
-        this.operador = undefined
-    }
+  constructor(textoValorInferior,textoValorSuperior){
+    this.textoValorInferior = textoValorInferior
+    this.textoValorSuperior = textoValorSuperior
+    this.valorInferior = ''
+    this.valorSuperior = ''
+    this.operador = undefined
+  }
 
-    agregarNumero(numero){
+  agregarNumero(numero){
     if(numero === '.' && this.valorInferior.includes('.')) return
     this.valorInferior = this.valorInferior + numero
+  }
+  imprimirDisplay() {
+    this.textoValorInferior.innerText = this.valorInferior
+    this.textoValorSuperior.innerText = this.valorSuperior
+  }
+  borrar (){
+    this.valorInferior = this.valorInferior.slice(0,-1)
+  }
+  elegirOperacion(operador) {
+    if(this.valorInferior == '') return
+    if(this.valorSuperior != '') {
+      this.realizarCalculo()
     }
-    imprimirDisplay() {
-        this.textoValorInferior.innerText = this.valorInferior
-        this.textoValorSuperior.innerText = this.valorSuperior
+    this.operador = operador
+    this.valorSuperior = this.valorInferior
+    this.valorInferior = ''
+  }
+  realizarCalculo() {
+    let resultado
+    let conversionValorSuperior = parseFloat(this.valorSuperior)
+    let conversionValorInferior = parseFloat (this.valorInferior)
+    if(isNaN(conversionValorSuperior) || isNaN(conversionValorInferior  return
+    switch (this.operador) {
+      case '+':
+        resultado = conversionValorSuperior + conversionValorInferior
+        break
+      case '-':
+        resultado = conversionValorSuperior - conversionValorInferior
+        break
+      case '*':
+        resultado = conversionValorSuperior * conversionValorInferior
+        break
+      case '÷':
+        resultado = conversionValorSuperior / conversionValorInferior
+        break
+      default: return
     }
-    borrar (){
-        this.valorInferior = this.valorInferior.slice(0,-1)
-    }
-    elegirOperacion(operador) {
-        if(this.valorInferior == '') return
-        if(this.valorSuperior != '') {
-            this.realizarCalculo()
-        }
-        this.operador = operador
-        this.valorSuperior = this.valorInferior
-        this.valorInferior = ''
-    }
-    realizarCalculo() {
-        let resultado
-        let conversionValorSuperior = parseFloat(this.valorSuperior)
-        let conversionValorInferior = parseFloat (this.valorInferior)
-        if(isNaN(conversionValorSuperior) || isNaN(conversionValorInferior)) return
-        switch (this.operador) {
-            case '+':
-            resultado = conversionValorSuperior + conversionValorInferior
-            break
-            case '-':
-            resultado = conversionValorSuperior - conversionValorInferior
-            break
-            case '*':
-            resultado = conversionValorSuperior * conversionValorInferior
-            break
-            case '÷':
-            resultado = conversionValorSuperior / conversionValorInferior
-            break
-            default: return
-        }
-        
-        this.valorInferior = resultado
-        this.operador = undefined
-        this.valorSuperior= ''
-    }
+          
+    this.valorInferior = resultado
+    this.operador = undefined
+    this.valorSuperior= ''
+  }
 
-    limpiarPantalla() {
-        this.valorInferior = ''
-        this.valorSuperior = ''
-        this.operador = undefined
+  limpiarPantalla() {
+    this.valorInferior = ''
+    this.valorSuperior = ''
+    this.operador = undefined
 
-    }
+  }
 }
-
-
 
 const calculadora = new Calculadora (textoValorInferior,textoValorSuperior)
 
-
-
 botonNumero.forEach(boton => {
-    boton.addEventListener('click', () => {
-        calculadora.agregarNumero(boton.innerText)
-        calculadora.imprimirDisplay() 
-    })
+  boton.addEventListener('click', () => {
+    calculadora.agregarNumero(boton.innerText)
+    calculadora.imprimirDisplay() 
+  })
 })
 
 botonBorrar.addEventListener('click',() => {
-    calculadora.borrar()
-    calculadora.imprimirDisplay()
+  calculadora.borrar()
+  calculadora.imprimirDisplay()
 })
 
 botonOperador.forEach(boton => {
-    boton.addEventListener('click', () => {
-        calculadora.elegirOperacion(boton.innerText)
-        calculadora.imprimirDisplay() 
-    })
+  boton.addEventListener('click', () => {
+    calculadora.elegirOperacion(boton.innerText)
+    calculadora.imprimirDisplay() 
+  })
 })
 botonIgual.addEventListener('click',() => {
-    calculadora.realizarCalculo()
-    calculadora.imprimirDisplay()
+  calculadora.realizarCalculo()
+  calculadora.imprimirDisplay()
 })
 
 botonBorrarTodo.addEventListener('click',() => {
-    calculadora.limpiarPantalla()
-    calculadora.imprimirDisplay()
-})`}/>}
+  calculadora.limpiarPantalla()
+  calculadora.imprimirDisplay()
+})`}
       />
+      <MensajeModal texto={`¡Proyecto! capitulo 7
+
+Hacer una calculadora.`}/>
 
       <div className="Page">
 

@@ -1,8 +1,4 @@
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Volver from "../../../../../../componentes/volver/volver";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./cap11.css";
 
 
@@ -65,18 +61,18 @@ function Cap11ProyV5() {
     base.addEventListener("error",()=>console.log("hubo un error"));
   
     const agregarObjetos=(objeto) =>{
-      const datos = getData("readwrite","objeto agregado");
+      const datos = getData("readwrite");
       datos.add(objeto);
     }
   
     const editarObjeto=(key,objeto) =>{
-      const datos = getData("readwrite","objeto editado");
+      const datos = getData("readwrite");
       datos.put(key,objeto);
     }
   
   
     const eliminarObjeto=(key) =>{
-      const datos = getData("readwrite","objeto eliminado");
+      const datos = getData("readwrite");
       datos.delete(key);
     }
   
@@ -84,9 +80,6 @@ function Cap11ProyV5() {
       const db = base.result;
       const transaccion = db.transaction("almacen",tipo);
       const almacen = transaccion.objectStore("almacen");
-      transaccion.addEventListener("complete",()=>{
-        console.log(msg);
-      })
       return almacen;
     }
   
@@ -150,7 +143,7 @@ function Cap11ProyV5() {
     setCorreo("");
     setEmpresa("");
     setEdad("");
-    setGenero("");
+    setGenero("seleccionar genero");
   }
   // agregar contacto.
   const agregarContacto=(e)=>{
@@ -196,6 +189,9 @@ function Cap11ProyV5() {
     leerObjeto()
     setContenedorActivo(null)
     setDetalles({})
+    limpiarInputs();
+    setBtnAgregarDom(true);
+    setBtnEditarDom(false);
   }
 
 
@@ -229,6 +225,7 @@ function Cap11ProyV5() {
       setConfirmEditar(false);
       setBtnAgregarDom(true)
       setBtnEditarDom(false)
+      setShowForm(false)
     } else {
       setMsgs("Es necesario rellenar aunque sea lo basico.")
     }
@@ -251,8 +248,9 @@ function Cap11ProyV5() {
 
   return (
     <>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -291,8 +289,8 @@ function Cap11ProyV5() {
 
     <script src="contactos.js"></script>
   </body>
-</html>`}/>}
-        codigo2={<Css codigo={`*{
+</html>`}
+        css={`*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -392,8 +390,8 @@ b{
   outline: none;
   padding: 4px;
   background-color: #161816;
-}`}/>}
-        codigo3={<JavaScropt codigo={`// inputs
+}`}
+        javaScript={`// inputs
 const nombre = document.getElementById("nombre"); // esto es el input que guarda el nombre.
 const apellido = document.getElementById("apellido"); // esto es el input que guarda el apellido.
 const numero = document.getElementById("numero"); // estgo es el input que guarda el numero.
@@ -547,10 +545,8 @@ const createHtml=(id,name,lastName,number)=>{
     eliminarObjeto(id);
     leerObjeto()
   })
-}`}/>}
+}`}
       />
-
-      <Volver link={"../"}/>
 
       <div className="Page">
 
@@ -601,7 +597,7 @@ const createHtml=(id,name,lastName,number)=>{
               onChange={(e)=>setEmpresa(e.target.value)}
               placeholder="Empresa"
             />
-            <select className="cap11Proy5JsV5FormSelect" onChange={(e)=>setGenero(e.target.value)}>
+            <select className="cap11Proy5JsV5FormSelect" onChange={(e)=>setGenero(e.target.value)} value={genero}>
               <option value="seleccionar genero">seleccionar genero</option>
               <option value="Hombre">Hombre</option>
               <option value="Mujer">Mujer</option>

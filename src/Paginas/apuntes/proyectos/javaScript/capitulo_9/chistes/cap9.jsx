@@ -1,9 +1,5 @@
-import JavaScropt from "../../../../../../componentes/lenguajes/JavaScript";
-import Css from "../../../../../../componentes/lenguajes/Css";
-import Html from "../../../../../../componentes/lenguajes/Html";
-import CodigoFuenteSinInt from "../../../../../../componentes/codigoFuente/code";
+import ShowOptions from "../../../../../../componentes//showOptions/show";
 import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
-import Volver from "../../../../../../componentes/volver/volver";
 import "./cap9.css";
 import React, { useState, useRef } from 'react';
 
@@ -273,12 +269,9 @@ function Cap9ProyJsV2() {
   
   return (
     <>
-      <MensajeModal texto={`¡Proyecto! capitulo 9
-
-Hacer un generador de chistes.`}/>
-      <CodigoFuenteSinInt 
-        codigo={<Html codigo={`
-<!DOCTYPE html>
+      <ShowOptions 
+        link={`../`}
+        html={`<!DOCTYPE html>
 <html>
   <head>
     <title></title>
@@ -298,10 +291,8 @@ Hacer un generador de chistes.`}/>
 
     <script src="chistes.js"></script>
   </body>
-</html>
-        `}/>}
-        codigo2={<Css 
-          codigo={`*{
+</html>`}
+        css={`*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -356,9 +347,7 @@ button{
   visibility: hidden;
   transition-duration: .5s;
 }`}
-        />}    
-        codigo3={<JavaScropt 
-          codigo={`const advertenciaContent = document.getElementById("advertenciaContent"); // este es el contenedor de advertencia
+        javaScript={`const advertenciaContent = document.getElementById("advertenciaContent"); // este es el contenedor de advertencia
 const btnAdvertencia = document.getElementById("btnAdvertencia");
 btnAdvertencia.addEventListener("click",()=>{
   advertenciaContent.classList.add("hideAdvertencia")
@@ -419,9 +408,10 @@ btnGenerar.addEventListener("click",()=>{
 })
 
 btnGenerar.click()`}
-        />}
       />
-      <Volver link={"../"}/>
+      <MensajeModal texto={`¡Proyecto! capitulo 9
+
+Hacer un generador de chistes.`}/>
       <div className="Page">
         
         <div className="contenedorCap9JsV2">
