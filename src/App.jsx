@@ -333,7 +333,7 @@ function App() {
   return (
     <Router>
       <Menu />
-      <Barrita />
+      {/* <Barrita /> */}
       <ScrollToTop />
       
       <Routes>

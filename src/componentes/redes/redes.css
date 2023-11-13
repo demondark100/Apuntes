@@ -1,0 +1,27 @@
+.RedesContent{   /*contenedor principal*/
+  background-color: #242924;
+  border-radius: 1000px;
+  padding: 4px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  pointer-events: stroke;
+}
+.RedesContentUl{  /*contenedor ul*/
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+.RedesContentUl li a{  /*links*/
+  color: #999595;
+  border-radius: 1000px;
+  padding: 2px;
+  transition-duration: .3s;
+}
+.RedesContentUl li a:hover{  /*links*/
+  color: #666161;
+  box-shadow: 0 0 5px 5px #666161;
+  transition-duration: .3s;
+}

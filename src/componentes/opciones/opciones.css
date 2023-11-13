@@ -1,283 +1,46 @@
-
-
-/* todos los estilos de aqui seran la barrita del costado */
-
-/* esto es el contenedor de la barrita */
-
-.barrita__content{
-  display: flex;
-  position: fixed;
-  padding: 8px;
-  padding-left: 8px;
-  top: 50px;
-  left: 0;
-  background: linear-gradient(0deg,transparent,#000,#000);
-  align-items: center;
-  justify-content: start;
-  width: 100vw;
-  height: 20px;
-  gap: 25px;
-  z-index: 3;
-  transition-duration: .5s;
-}
-
-/* esto es el link osea los iconos de la barrita */
-.iconno{
-  color: #eafdcb !important;
-  cursor: pointer;
-  transition-duration: .5s;
-}
-
-
-
-.contentHover{
+.contenedorBarrita{  /*contenedor principal*/
   position: absolute;
+  background-color: #242924;
+  padding: 4px;
+  border-radius: 1000px;
+  pointer-events: stroke;
   display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+}
+.contenedorBarrita__Opciones{ /*ul principal*/
+  display: flex;
+  flex-direction: column;
+  list-style: none;
   justify-content: center;
   align-items: center;
-  transform: translate(25px,0px);
-  background-color: #141414;
-  width: 60px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
-  transition-duration: .5s;
-}
-.contentHover{
-  color: #eafdcb;
-}
-.mostrar_opciones{
-  opacity: 1;
-  visibility: visible;
-  transition-duration: .5s;
+  gap: 20px;
 }
 
-/* este es el texto */
-.hoverInicio{
-  color: #eafdcb;
+.contenedorBarrita__Opciones li a{  /*link para ir al inicio*/
+  color: #999595 !important;
+  border-radius: 1000px;
+  padding: 2px;
+  transition-duration: .3s;
+  font-size: .8em;
+}
+.contenedorBarrita__Opciones li a:hover{
+  color: #666161;
+  box-shadow: 0 0 5px 5px #666161;
+  transition-duration: .3s;
 }
 
-/* estos son los mensajes que aparecen al pasar el mouse en un icono de la barrita izquierda */
-.cursos{
-  left: 48px;
+.contenedorBarrita__Opciones li button{  /*botones*/
+  background-color: transparent;
+  color: #999595 !important;
+  font-size: .8em;
+  border-radius: 1000px;
+  padding: 2px;
+  transition-duration: .3s;
 }
-.proyectos{
-  left: 88px;
-  width: 90px;
-}
-.codificar{
-  left: 135px;
-  width: 90px;
-}
-
-
-
-@media(min-width: 750px){
-
-
-  /* esto es el contenedor de la barrita */
-
-  .barrita__content{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: linear-gradient(90deg,#000000ee,#000000ee,#000000ee,#000000ee,transparent);
-    align-items: center;
-    width: 35px;
-    height: 100%;
-    gap: 0;
-    z-index: 5;
-    transition-duration: .5s;
-  }
-
-
-  /* esto es el link de inicio */
-  .iconno{
-    margin-top: 15px;
-    color: #000;
-  }
-
-  /* esto es el estilos del hover que aparece cuando se hace hover. */
-  
-  .contentHover{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(45px,16px);
-    background-color: #171817;
-    width: 60px;
-    height: 25px;
-    opacity: 0;
-    transition-duration: .5s;
-  }
-  .contentHover{
-    color: #fff;
-  }
-  .mostrar_opciones{
-    opacity: 1;
-    transition-duration: .5s;
-  }
-
-  /* este es el texto */
-  .hoverInicio{
-    color: #fff;
-  }
-  .cursos{
-    top: 38px;
-    left: -5px;
-  }
-  .proyectos{
-    top: 68px;
-    left: -5px;
-    width: 90px;
-  }
-  .codificar{
-    left: -5px;
-    top: 105px;
-    width: 90px;
-  }
-}
-
-
-
-
-
-
-
-
-/* esto es el aside osea los capitulos */
-.capitulosContent{
-  position: fixed;
-  top: 80px;
-  left: 0px;
-  background-color: #000000f1;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  transition-duration: .5s;
-  overflow: auto;
-  overflow-x: hidden;
-  padding-top: 15px;
-}
-.capitulosContent::-webkit-scrollbar{
-  display: none;
-}
-
-.hideAside{
-  height: 0;
-  padding: 0;
-  transition-duration: .5s;
-}
-
-
-@media(min-width:750px){
-
-  .capitulosContent{
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 50px;
-    width: 250px;
-    height: 100vh;
-    transition-duration: .5s;
-    box-shadow: 10px 0 15px #141414;
-    overflow: auto;
-    z-index: 4;
-  }
-  
-  .hideAside{
-    left: -100%;
-    transition-duration: .5s;
-  }
-}
-
-
-
-
-
-
-
-/* los estilos de aqui son de los proyectos de la barrita */
-.proyectosBarrita{
-  position: fixed;
-  background-color: #000000f1;
-  box-shadow: 10px 0 15px #141414;
-  width: 100%;
-  height: 0;
-  transition-duration: .5s;
-  overflow: auto;
-  overflow-x: hidden;
-  top: 80px;
-  z-index: 5;
-  padding-top: 0;
-}
-.mostrarProyectos{
-  top: 80px;
-  height: 100vh;
-  left: 0;
-  padding-top: 15px;
-  transition-duration: .5s;
-}
-
-
-/* esto es la version pero para pc */
-@media (min-width:750px){
-
-  .proyectosBarrita{
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80vw;
-    height: 100vh;
-    transition-duration: .5s;
-    overflow: auto;
-    overflow-x: hidden;
-    z-index: 4;
-  }
-  .proyectosBarrita::-webkit-scrollbar{
-    display: none;
-  }
-
-  .mostrarProyectos{
-    left: 50px;
-    width: 250px;
-    transition-duration: .5s;
-  }
-}
-
-
-
-
-/* esto es el contenedor de los lenguajes para codificar */
-.codificarBarrita{
-  position: fixed;
-  background-color: #000000f1;
-  box-shadow: 0 0 5px 5px #141414;
-  width: 32px;
-  top: 80px;
-  z-index: 4;
-  height: 100vh;
-  left: 0;
-  transition-duration: .5s;
-  padding-top: 15px;
-}
-.hideCodificar{
-  left: -150% !important;
-  transition-duration: .5s;
-  padding: 0;
-}
-
-@media (min-width: 750px){
-  .codificarBarrita{
-    top: 0px;
-    left: 50px;
-  }
-  .hideCodificar{
-    left: -100%;
-    transition-duration: .5s;
-  }
+.contenedorBarrita__Opciones li button:hover{
+  color: #666161 !important;
+  box-shadow: 0 0 5px 5px #666161;
+  transition-duration: .3s;
 }
