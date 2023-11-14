@@ -44,3 +44,69 @@
   box-shadow: 0 0 5px 5px #666161;
   transition-duration: .3s;
 }
+
+.contenedorBarrita__indicacion{
+  position: absolute;
+  margin-left: 4px;
+  margin-top: -4px;
+  background-color: #000;
+  color: #fff;
+  padding: 4px;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .3s;
+}
+.contenedorBarrita__indicacionHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .3s;
+}
+
+
+
+/* estulos de los cursos */
+.contenedorBarrita__cursos{ /*contenedor de los cursos*/
+  position: absolute !important;
+  left: 25px;
+  padding: 0;
+  transition-duration: .3s;
+  z-index: -1;
+}
+.contenedorBarrita__cursosHide{
+  left: -1500px;
+  transition-duration: .3s;
+}
+
+
+.contenedorBarrita__proyectos{ /*contenedor de los cursos*/
+  position: absolute !important;
+  left: 25px;
+  padding: 0;
+  transition-duration: .3s;
+  z-index: -1;
+}
+.contenedorBarrita__proyectosHide{
+  left: -1500px;
+  transition-duration: .3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*colorear iconos*/
+.contenedorBarrita__Opciones li:nth-child(1) svg{
+  color: #fc9228;
+}
+.contenedorBarrita__Opciones li:nth-child(2) svg{
+  color: #0077ff;
+}
+.contenedorBarrita__Opciones li:nth-child(3) svg{
+  color: #7bff0f;
+}

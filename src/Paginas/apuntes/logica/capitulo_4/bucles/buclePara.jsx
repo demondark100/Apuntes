@@ -90,17 +90,16 @@ mostrar(fibonacci);`}
         />
 
         <h2>explicacion</h2>
-
-        <Conseptos 
-          texto={`1. Creamos una variable llamada n con el valor 10 podemos poner cualquier numero y el algoritmo seguira funcionando.
-2. Creamos un arreglo vacio.
-3. Usamos un bucle para y dentro de su estructura creamos la variable i con el valor 0 , en la condicional decimos que el bucle se ejecutara mientras i sea menor a n osea que i < 10 , actualizamos la variable i con "++" para evitar un bucle infinito ademas de que es obligatorio ponerlo en la estructura del bucle para.
-4. Dentro del bucle hacemos una condicional donde evaluamos que i sea menor que 2 , si es asi a la variable fibonacci se le agrega i osea el valor que ira recorriendo "0 , 1".
-5. En el caso de que no se cumpla creamos una nueva variable llamada siguienteNumero que hara una operacion en este caso sumara fibonacci[i - 1] con fibonacci[i - 2].
-6. fibonacci[i - 1] restara i - 1 osea que si en el arreglo el numero es 3 se restara 1 y quedaria asi fibonacci[2].
-7. fibonacci[i - 2] es igual que el otro solo que lo resta entre 2 por ejemplo si el numero es 3 lo restara con 2 y el resultado seria fibonacci[1].
-8. Por ultimo a fibonacci le agregamos la variable de siguienteNumero en cada iteracion que se de.`}
-        />
+        <ol>
+          <li>Creamos una variable llamada n con el valor 10 podemos poner cualquier numero y el algoritmo seguira funcionando.</li>
+          <li>Creamos un arreglo vacio.</li>
+          <li>Usamos un bucle para y dentro de su estructura creamos la variable i con el valor 0 , en la condicional decimos que el bucle se ejecutara mientras i sea menor a n osea que {"i < 10"} , actualizamos la variable i con "++" para evitar un bucle infinito ademas de que es obligatorio ponerlo en la estructura del bucle para.</li>
+          <li>Dentro del bucle hacemos una condicional donde evaluamos que i sea menor que 2 , si es asi a la variable fibonacci se le agrega i osea el valor que ira recorriendo "0 , 1".</li>
+          <li>En el caso de que no se cumpla creamos una nueva variable llamada siguienteNumero que hara una operacion en este caso sumara fibonacci[i - 1] con fibonacci{"[i - 2]"}.</li>
+          <li>fibonacci[i - 1] restara i - 1 osea que si en el arreglo el numero es 3 se restara 1 y quedaria asi fibonacci[2].</li>
+          <li>fibonacci[i - 2] es igual que el otro solo que lo resta entre 2 por ejemplo si el numero es 3 lo restara con 2 y el resultado seria fibonacci[1].</li>
+          <li>Por ultimo a fibonacci le agregamos la variable de siguienteNumero en cada iteracion que se de.</li>
+        </ol>
 
         <h2>Para que sirve!</h2>
 

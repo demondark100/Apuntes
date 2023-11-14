@@ -48,7 +48,8 @@ x = -7`}/>
 x = -9;`}/>
       <h2>multiplicacion</h2>
       <Conseptos texto={`En operaciones matematicas siempre se resolvera la multiplicacion antes que las sumas y restas ejemplo.
-Aqui la multiplicacion la representaremos por " * " reemplazando a " x " , esto debido a que usaremos mucho " x " para representar el resultado , ademas " * " es el simbolo oficial de la programacion para representar multiplicacion.`}/>
+      
+      Aqui la multiplicacion la representaremos por " * " reemplazando a " x " , esto debido a que usaremos mucho " x " para representar el resultado , ademas " * " es el simbolo oficial de la programacion para representar multiplicacion.`}/>
       <Txt codigo={`5 - ( 2 * 5 ) = x;
 entonces es como decir: 5 - 10 = x;
 x = -5;`}/>
@@ -76,11 +77,12 @@ x = -3 + 5 * 10;
 x = -3 + 50;
 x = 47;`}/>
       <h2>Importante</h2>
-      <Conseptos texto={`En conslusion lo mas importante hasta ahora es que:
-1. si multiplicamos o dividimos 2 numeros negativos se convierten en positivos.
-2. si multiplicamos o dividimos 1 numero negativo por un numero positivo se quedara en negativo.
-3. si multiplicamos o dividimos 1 numero positivo por un numero negativo se vuelve en numero negativo.`}/>
-      
+      <Conseptos texto={`En conslusion lo mas importante hasta ahora es que:`}/>
+      <ol>
+        <li>si multiplicamos o dividimos 2 numeros negativos se convierten en positivos.</li>
+        <li>si multiplicamos o dividimos 1 numero negativo por un numero positivo se quedara en negativo.</li>
+        <li>si multiplicamos o dividimos 1 numero positivo por un numero negativo se vuelve en numero negativo.</li>
+      </ol>
     </main>
     <Footer />
     </>

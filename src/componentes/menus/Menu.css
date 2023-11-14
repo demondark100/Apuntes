@@ -31,9 +31,9 @@ header{  /*contenedor principal*/
   border-radius: 1000px;
   padding: 2px;
   transition-duration: .3s;
+  font-size: 1en;
 }
 .contenedor__menuLinks li a:hover{
-  color: #666161;
   box-shadow: 0 0 5px 5px #666161;
   transition-duration: .3s;
 }
@@ -43,9 +43,9 @@ header{  /*contenedor principal*/
   color: #999595 !important;
   background-color: transparent;
   transition-duration: .3s;
+  font-size: 1em !important;
 }
 .contenedor__menuLinks li button:hover{
-  color: #666161;
   box-shadow: 0 0 5px 5px #666161;
   transition-duration: .3s;
 }
@@ -77,11 +77,11 @@ header{  /*contenedor principal*/
   position: absolute;
   margin-top: -130px;
   margin-left: 15px;
-  transition-duration: .2s;
+  transition-duration: .3s;
 }
 .headerOptionsContentHide{
-  margin-left: -39px;
-  transition-duration: .2s;
+  margin-left: -1500px;
+  transition-duration: 1s;
 }
 
 
@@ -107,4 +107,24 @@ header{  /*contenedor principal*/
 .headerRedesRedHide{
   transform: translate(150px , 0);
   transition-duration: .2s;
+}
+
+
+
+
+
+
+/*colorizacion de iconos*/
+
+.contenedor__menuLinks li:nth-child(1) button svg{
+  color: #e9faad;
+}
+.contenedor__menuLinks li:nth-child(4) button svg{
+  color: #2f43fd;
+}
+.contenedor__menuLinks li:nth-child(2) a{
+  color: #0f0;
+}
+.contenedor__menuLinks li:nth-child(3) a{
+  color: #af8181;
 }

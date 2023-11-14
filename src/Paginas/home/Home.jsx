@@ -32,27 +32,7 @@ function Home({active}) {
 
 proyectos/capitulo 9/generador de chistes`}/>
       <main>
-        <article className='contenedorHome'>
-          <section ref={contenedor1} className='contenedorHome__contenido'>
-            <div className='title_consepto1'>
-              <h1>Apuntes programacion</h1>
-              <p>
-                Esta página contiene apuntes de todo lo que yo he ido aprendiendo a lo largo del tiempo como desarrollador. A medida que vaya avanzando, agregaré más apuntes a todo este sitio web, cosas como C#, Python u otros lenguajes aparte de JavaScript, etc.
-              </p>
-            </div>
-          </section>
-          <section ref={contenedor2} className='contenedorHome__contenido'>
-            <div className='editoresCodigoContent'>
-              <h1>¡Comenzar!</h1>
-                <p>
-                  Ahora para programar de forma sensilla necesitamos de un editor de codigo aqui te dejo algunos bien conocidos.
-                  <br /> <br />
-                  Visual Studio Code: <Link target='_blank' to={"https://code.visualstudio.com/"}>vscode</Link> <br />
-                  Sublime Text: <Link target='_blank' to={"https://www.sublimetext.com/3"}>sublime</Link>
-                </p>
-              </div>
-          </section>
-        </article>
+        <h1>Aqui se hara el porfolio mostrando el perfil y imagenes de proyectos.</h1>
       </main>
       <Footer />
     </>

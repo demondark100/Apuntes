@@ -1,66 +1,73 @@
 aside{
-  padding-bottom: 150px;
+  pointer-events: stroke;
+  height: 55vh;
+  max-height: 450px;
+  background-color: #000000f1;
+  padding: 8px;
+  border-radius: 10px;
+  min-height: 110px;
+  overflow: auto;
+  width: 80vw;
+}
+aside::-webkit-scrollbar{
+  display: none;
 }
 
-.curso{
+.NavAsideUl{
   display: flex;
-  flex-direction: column;
-  padding-left: 25px;
-  transition-duration: .5s;
-}
-.curso p{
+  list-style: none;
   cursor: pointer;
-  color: #eafdcb;
-  padding: 15px;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
 }
-
-.cursosDark p{
-  color: #eafdcb;
+.NavAsideUl li{
+  width: 80%;
+  background-color: #242924;
+  padding: 8px;
+  border-radius: 10px;
+  transition-duration: .5s;
+  text-align: center;
+  border: 2px solid #242924;
 }
-
-
 
 .capitulos{
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
-.capitulos div{  
-  margin-left: -15px;
-  padding-left: 35px;
+.capitulos p{
+  padding: 8px;
+  background-color: #1c1d1c;
+  border: 2px solid #3f443f;
+  border-radius: 10px;
+  text-align: start;
 }
-
-
 .temas{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
 }
 .temas a{
-  text-decoration: none;
-  color: #9e9e89;
-  text-shadow: 0 0 5px #9e9e89;
+  background-color: #000000;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 20px;
+  text-align: start;
+  color: #acfaac;
   padding: 8px;
-  padding-left: 50px;
-  margin-left: -20px;
-  transition-duration: .5s;
+  border: 2px solid #242924;
 }
-
-
-@media(min-width:750px){
-  aside{
-    padding-bottom: 150px;
-  }
-}
-
-
-
-
-
-/* estos estilos son del cuando se activan o desactivan los enlaces */
 
 .active{
-  background-color: #212222 !important;
-  color: #000 !important;
-  margin-left: -44px !important;
-  padding-left: 72px !important;
-  transition-duration: .5s;
+  background-color: #645e5e !important;
+  color: #f4ffee;
+}
+
+@media(min-width: 750px){
+  aside{
+    width: 250px;
+  }
 }

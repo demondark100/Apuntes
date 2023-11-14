@@ -181,17 +181,16 @@ dato 9`}
         />
 
         <h2>Explicacion</h2>
-
-        <Conseptos 
-          texto={`1. Creamos 2 variables una llamada i y la otra j , ambas inicializadas con 0.
-2. Creamos un arreglo bidimensional con 3 subArreglos osea que si ponemos arreglos.longitud nos daria como resultado 3.
-3. Hacemos un bucle mientras donde indicamos que el bucle se hara mientras que i osea 0 sea menor a arreglo.longitud osea que el bucle se ejecutara 3 veces.
-4. Dentro del bucle i ponemos que j sera 0 esto para reiniciar a j en cada iteracion.
-5. Creamos otro bucle dentro del bucle i esto se le conoce como bucle anidado.
-6. Este bucle anidado se ejecutara mientras que j sea menor que arreglo[i].longitud osea que se ejecutara tres veces debido a que en cada sub arreglo hay 3 datos.
-7. Despues mostramos el contenido del arreglo bidimensional con arreglo[i][j] [i] recorre las filas y [j] recorre las columnas del arreglo bidimensional.
-8. Por ultimo decimos que i , j aumenten de uno en uno para evitar hacer un bucle infinito.`}
-        />
+        <ol>
+          <li>Creamos 2 variables una llamada i y la otra j , ambas inicializadas con 0.</li>
+          <li>Creamos un arreglo bidimensional con 3 subArreglos osea que si ponemos arreglos.longitud nos daria como resultado 3.</li>
+          <li>Hacemos un bucle mientras donde indicamos que el bucle se hara mientras que i osea 0 sea menor a arreglo.longitud osea que el bucle se ejecutara 3 veces.</li>
+          <li>Dentro del bucle i ponemos que j sera 0 esto para reiniciar a j en cada iteracion.</li>
+          <li>Creamos otro bucle dentro del bucle i esto se le conoce como bucle anidado.</li>
+          <li>Este bucle anidado se ejecutara mientras que j sea menor que arreglo[i].longitud osea que se ejecutara tres veces debido a que en cada sub arreglo hay 3 datos.</li>
+          <li>Despues mostramos el contenido del arreglo bidimensional con arreglo[i][j] [i] recorre las filas y [j] recorre las columnas del arreglo bidimensional.</li>
+          <li>Por ultimo decimos que i , j aumenten de uno en uno para evitar hacer un bucle infinito.</li>
+        </ol>
       
         <h2>do while(hacer mientras)</h2>
 
@@ -226,11 +225,11 @@ mientras(variable < 8)`}
         />
 
         <h2>Explicacion</h2>
-        <Conseptos 
-          texto={`1. Creamos una variable con el valor 0.
-2. Usamos hacer para que la variable se incremente de 1 en 1 y despues mostrar en consola el nuevo valor de la variable.
-3. Luego ponemos el bucle mientras con la condicional que se ejecute mientras variable sea menor a 8.`}
-        />
+        <ol>
+          <li>Creamos una variable con el valor 0.</li>
+          <li>Usamos hacer para que la variable se incremente de 1 en 1 y despues mostrar en consola el nuevo valor de la variable.</li>
+          <li>Luego ponemos el bucle mientras con la condicional que se ejecute mientras variable sea menor a 8.</li>
+        </ol>
         
         <div className="siguiente__parte">
           <Link to={"buclePara"}>bucle para</Link>

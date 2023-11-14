@@ -10,7 +10,7 @@
   height: 100vh;
 }
 body{
-  background-color: #0c0c0c;
+  background-color: #181717;
   color: #eafdcb;
   transition-duration: .5s;
   overflow-x: hidden;
@@ -24,6 +24,20 @@ main{
   width: 100vw;
   margin: auto;
   margin-top: 60px !important;
+}
+ol{
+  padding: 4px;
+  background-color: #111311;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  padding-left: 25px;
+}
+ol li{
+  white-space: pre-line !important;
 }
 
 /* estos son los estilos de los resultados de las paginas */
@@ -71,12 +85,18 @@ h1{
   text-align: center;
 }
 h2{
+  text-align: center;
   margin-top: 15px;
   margin-left: 8px;
   margin-bottom: 15px;
+  color: #c7ce68;
 }
 h3{
-  margin-top: 20px;
+  color: #90963e;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 8px;
+  margin-bottom: 15px;
   font-size: 1.5em;
 }
 
@@ -123,10 +143,10 @@ a:hover{
 }
 .Page a{
   text-decoration: underline;
-  color: #00f;
+  color: #00f !important;
 }
 .Page p{
-  color: #000;
+  color: #000 !important;
 }
 
 
@@ -140,14 +160,13 @@ a:hover{
     margin: auto;
     display: block;
     margin: auto;
-    left: 15px;
-    width: 90%;
+    width: 98%;
     max-width: 1200px;
   }
   h2{
-    margin-left: 100px;
+    text-align: center;
   }
   h3{
-    margin-left: 100px;
+    text-align: center;
   }
 }

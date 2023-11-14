@@ -35,17 +35,16 @@ function InpuLogica() {
       <main>
         <h1>inputs y outputs</h1>
 
-        <Conseptos 
-          texto={`La programacion se basa en
-1. pedir un dato al usuario (input)
-2. procesar el dato  (procesar)
-3. dar una respuesta al usuario   (output)
-
-Un ejemplo de la vida cotidiana hablas con una persona.
-tu: preguntas la hora.
-otra persona: recibe la pregunta y la procesa en su cerebro.
-otra persona: te da la hora.`}
-        />
+        <Conseptos texto={`La programacion se basa en`}/>
+        <ol>
+          <li>pedir un dato al usuario (input)</li>
+          <li>procesar el dato  (procesar)</li>
+          <li>dar una respuesta al usuario   (output)</li>
+        </ol>
+        <Conseptos texto={`Un ejemplo de la vida cotidiana hablas con una persona.
+        tu: preguntas la hora.
+        otra persona: recibe la pregunta y la procesa en su cerebro.
+        otra persona: te da la hora.`}/>
 
         <h2>input</h2>
 
@@ -111,15 +110,16 @@ otra persona: te da la hora.`}
         <Conseptos 
           texto={`Como te das cuenta te pedi un dato luego programe algo que lo procese y te di un mensaje del si era lo que queria o no en este caso te dije escribe Megumin o copialo.
 
-si lo escribiste mal te di un mensaje.
-si lo escribiste bien te di otro mensaje.
-y si no esciribiste nada no te di ningun mensaje.`}
+          si lo escribiste mal te di un mensaje.
+          si lo escribiste bien te di otro mensaje.
+          y si no esciribiste nada no te di ningun mensaje.`}
         />
 
         <h2>Curiosidad</h2>
         <Conseptos 
           texto={`Un input siempre sera una string por mas que le pases numeros de todos modos sera una string por ejemplo.
-Antes de iniciar usaremos la funcion "tipoDe()" que sirve para indicarnos que tipo de dato es una variable.`}
+          
+          Antes de iniciar usaremos la funcion "tipoDe()" que sirve para indicarnos que tipo de dato es una variable.`}
         />
 
         <Sintaxis 

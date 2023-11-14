@@ -1,7 +1,6 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 
 function ConcatenarLogica() {
@@ -79,16 +78,18 @@ mostrar(resultado);`}
         <Conseptos 
           texto={`El resultado es "la musica Come a Little Closer es un temazo."
 
-Esto es debido a que: 
-1. Creamos una variable llamada musica con el valor "Come a Little Closer".
-2. Creamos una variable llamada resultado.
-3. En la variable resultado nos encargamos de concatenar distintas strings.
-  string 1: "la musica ".
-  string 2: "Come a Little Closer".
-  string 3: " es un temazo."
-Recuerda la variable musica tiene el valor "Come a Little Closer" por eso sale esa cadena texto.
-En conclucion es como si estuvieramos haciendo esto.`}
+          Esto es debido a que: `}
         />
+        <ol>
+          <li>Creamos una variable llamada musica con el valor "Come a Little Closer".</li>
+          <li>Creamos una variable llamada resultado.</li>
+          <li>{`En la variable resultado nos encargamos de concatenar distintas strings.
+          string 1: "la musica ".
+          string 2: "Come a Little Closer".
+          string 3: " es un temazo."`}</li>
+        </ol>
+        <Conseptos texto={`Recuerda la variable musica tiene el valor "Come a Little Closer" por eso sale esa cadena texto.
+        En conclucion es como si estuvieramos haciendo esto.`}/>
 
         <Sintaxis 
           codigo={`"la musica " + "Come a Little Closer" + " es un temazo."
@@ -101,23 +102,25 @@ En conclucion es como si estuvieramos haciendo esto.`}
         <Conseptos 
           texto={`La concatenacion nos sirve para muchas cosas por ejemplo.
 
-desarrollamos una IA
-el usuario dice su nombre
-la IA lo procesa y saluda al usuario con el nombre que el usuario le proporicono.
-ejemplo:
-usuarui: hola soy Martis.
-IA: saludar = "hola " + UserName = " mucho gusto".
-el usuario veria algo asi.
-"hola Martis mucho gusto"`}
+          desarrollamos una IA
+          el usuario dice su nombre
+          la IA lo procesa y saluda al usuario con el nombre que el usuario le proporicono.
+          ejemplo:
+          usuarui: hola soy Martis.
+          IA: saludar = "hola " + UserName = " mucho gusto".
+          el usuario veria algo asi.
+          "hola Martis mucho gusto"`}
         />
 
         <h2>¡ejercicio!</h2>
 
         <Conseptos 
-          texto={`Hacer un programa que salude al usuario.
-1. Una variable debe guardar el nombre del usuario.
-2. Otra variable debe hacer la oracion donde se saluda al usuario.`}
+          texto={`Hacer un programa que salude al usuario.`}
         />
+        <ol>
+          <li>Una variable debe guardar el nombre del usuario.</li>
+          <li>Otra variable debe hacer la oracion donde se saluda al usuario.</li>
+        </ol>
 
         <Ejercicios 
           texto1={`Esta dificil pendejo >:v`}

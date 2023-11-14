@@ -1,6 +1,8 @@
 #waifuName{
+  display: block;
+  margin: auto;
   margin-top: 4%;
-  background: linear-gradient(0deg,#903333,transparent);
+  background: #000;
   color: #fff;
   border: none;
   outline: none;
@@ -10,15 +12,15 @@
   color: #fff;
 }
 #waifuName:focus{
-  background: linear-gradient(0deg,transparent,transparent);
-  background-color: #000;
   border-bottom: .5vh solid #f00;
   color: #f00;
 }
 
 .mensajeInputMegumin{
   font-size: 1.2em;
-  margin-top: 2vh;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 .verde{
   color: #0f0;

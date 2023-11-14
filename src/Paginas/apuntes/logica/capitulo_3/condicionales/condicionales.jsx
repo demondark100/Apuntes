@@ -1,4 +1,3 @@
-import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
@@ -36,7 +35,7 @@ sino:
         <Conseptos 
           texto={`Tambien podemos hacer mas de una condicional por si tenemos mas opciones.
 
-Ahora un pequeño ejemplo grafico para entender mejor.`}
+          Ahora un pequeño ejemplo grafico para entender mejor.`}
         />
 
         <p 
@@ -108,15 +107,14 @@ el resultado de 10 + 10 si es distinto a 8.
       />
 
       <h2>resultados</h2>
-
-      <Conseptos 
-        texto={`1. se cumple porque 15 si es igual a 15
-2. Si se cumple porque la string "hola" es igual a "hola"
-3. No se cumple porque 5 + 5 no es igual a 15
-4. Si se cumple porque 5 * 5 si es 25 por mas que en la otra condicion no se cumpla recuerda estamos usando o asi que no es necesario que se cumplan ambos.
-5. No se cumple porque 3 + 3 no es igual a 1 recuerda ambos deben cumplirse para que la condicion se cumpla asi que no importa que 8 - 8 si sea iagual a 0 no se cumplen ambos.
-6. Si se cumple porque la suma de 10 + 10 es distinto de 8`}
-        />
+        <ol>
+          <li>se cumple porque 15 si es igual a 15</li>
+          <li>Si se cumple porque la string "hola" es igual a "hola"</li>
+          <li>No se cumple porque 5 + 5 no es igual a 15</li>
+          <li>Si se cumple porque 5 * 5 si es 25 por mas que en la otra condicion no se cumpla recuerda estamos usando o asi que no es necesario que se cumplan ambos.</li>
+          <li>No se cumple porque 3 + 3 no es igual a 1 recuerda ambos deben cumplirse para que la condicion se cumpla asi que no importa que 8 - 8 si sea iagual a 0 no se cumplen ambos.</li>
+          <li>Si se cumple porque la suma de 10 + 10 es distinto de 8</li>
+        </ol>
 
         <h2>¡Para que sirve!</h2>
         

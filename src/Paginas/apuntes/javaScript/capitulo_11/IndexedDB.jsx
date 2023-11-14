@@ -38,7 +38,8 @@ D: delete
         <Conseptos texto={`Usar la variable donde se guarda el metodo "open()" para que se apliquen los eventos.`}/>
         <h3>upgradeneeded</h3>
         <Conseptos texto={`Si la base de datos no existe se ejecutara este evento.
-Tambien se ejecutara "success".`}/>
+
+        Tambien se ejecutara "success".`}/>
         <h3>success</h3>
         <Conseptos texto={`Si la base de datos se abrio correctamente se ejecutara este evemto.`}/>
         <h3>error</h3>
@@ -49,13 +50,15 @@ base.addEventListener("success",()=>console.log("base abierta con exito."));
 base.addEventListener("error",()=>console.log("hubo un error"));`}/>
         <h2>Como usar los eventos.</h2>
         <h3>upgradeneeded {"(crear almacen)"}</h3>
-        <Conseptos texto={`Aqui crear las tablas para la base de datos`}/>
-        <br />
-        <Conseptos texto={`Recursos:
-result: obtener resultado de la base.
-createObjectStore: Esto es para crear nuestro almacen.
-autoIncrement: Esto es para agregar un id a cada valor que se agregue.
-`}/>
+        <Conseptos texto={`Aqui crear las tablas para la base de datos.
+        
+        Recursos:`}/>
+        <ol>
+          <li>result: obtener resultado de la base.</li>
+          <li>createObjectStore: Esto es para crear nuestro almacen.</li>
+          <li>autoIncrement: Esto es para agregar un id a cada valor que se agregue.</li>
+        </ol>
+
         <JavaScropt codigo={`base.addEventListener("upgradeneeded",()=>{
   const db = base.result;
   db.createObjectStore("almacen",{

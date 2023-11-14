@@ -37,8 +37,8 @@ function Proyectos({sendshowProyects}) {
   return (
     <>
     <aside>
-      <nav>
-        <ul>
+      <nav className='NavAside'>
+        <ul className='NavAsideUl'>
           
           <li className="curso">
               <p onClick={()=>setHtml(!html)}>html</p>

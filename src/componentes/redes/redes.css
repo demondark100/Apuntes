@@ -21,7 +21,25 @@
   transition-duration: .3s;
 }
 .RedesContentUl li a:hover{  /*links*/
-  color: #666161;
   box-shadow: 0 0 5px 5px #666161;
   transition-duration: .3s;
+}
+
+
+
+
+
+/*colorizacion de iconos*/
+
+.RedesContentUl li:nth-child(1) a{
+  color: #0004ff;
+}
+.RedesContentUl li:nth-child(2) a{
+  color: #f00;
+}
+.RedesContentUl li:nth-child(3) a{
+  color: #fff;
+}
+.RedesContentUl li:nth-child(4) a{
+  color: #1d70be;
 }

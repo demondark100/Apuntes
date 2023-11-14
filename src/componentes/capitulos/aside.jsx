@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
-function Capitulos({sendshowAside,sendaside , active}) {
+function Capitulos({sendshowAside}) {
 
   // esto es el aside
 
@@ -11,7 +11,6 @@ function Capitulos({sendshowAside,sendaside , active}) {
     const links = document.querySelectorAll(".temas a")
     links.forEach(i => {
       i.addEventListener("click",()=>{
-        sendaside.current.classList.add("hideAside")
         sendshowAside(false)
       })
     });
@@ -19,18 +18,6 @@ function Capitulos({sendshowAside,sendaside , active}) {
   
 
 
-  // estos son los estilos de claro y oscuro de los capitulos
-  useEffect(()=>{
-    if (active == true) {
-      document.querySelector("aside").classList.add("asideDark");
-      document.querySelectorAll(".curso").forEach(i=>i.classList.add("cursosDark"))
-      document.querySelectorAll(".activeParrafo").forEach(i=>i.classList.add("activeParrafoDark"))
-    } else if (active == false){
-      document.querySelector("aside").classList.remove("asideDark");
-      document.querySelectorAll(".curso").forEach(i=>i.classList.remove("cursosDark"))
-      document.querySelectorAll(".activeParrafo").forEach(i=>i.classList.remove("activeParrafoDark"))
-    }
-  })
   
   // capitulos
   const [matematicas, setMatematicas] = useState(false);
@@ -107,8 +94,8 @@ function Capitulos({sendshowAside,sendaside , active}) {
   return (  
     <>
       <aside>
-        <nav>
-          <ul>
+        <nav className="NavAside">
+          <ul className="NavAsideUl">
 
             {/* estas son las matematicas usadas en programacion */}
             <li className="curso">
@@ -660,6 +647,9 @@ function Capitulos({sendshowAside,sendaside , active}) {
           </ul>
         </nav>
       </aside>
+      <div>
+        pepa
+      </div>
     </>
   );
 }

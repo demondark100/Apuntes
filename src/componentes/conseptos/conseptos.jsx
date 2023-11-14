@@ -27,7 +27,7 @@ function Conseptos({ texto, enlaces, targetBlank }) {
 
   return (
     <div className="contenedor-conseptos">
-      <p style={{ whiteSpace: "pre-wrap" }}>{textoConEnlaces}</p>
+      <p style={{ whiteSpace: "pre-line" }}>{textoConEnlaces}</p>
     </div>
   );
 }

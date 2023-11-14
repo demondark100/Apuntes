@@ -7,15 +7,15 @@ function TipoDeDatos() {
     <>
       <main>
         <h1>tipos de datos</h1>
-        <Conseptos texto={`En la programacion tenemos 3 tipos de datos.
-
-1: strings: Estas son las cadenas de texto en la programacion una cadena de texto siempre va dentro de ("") comillas.
-
-2: numericos: Aqui en los datos numericos tenemos dos tipos de numeros:
-  Enteros: Como su nombre lo dice son numeros enteros.
-  Flotantes: Estos son numeros decimales.
-
-3: Booleanos: Los Booleanos son solo verdadero o falso pero en la programacion se representan como (true / false).`}/>
+        <Conseptos texto={`En la programacion tenemos 3 tipos de datos.`}/>
+        <ol>
+          <li>strings: Estas son las cadenas de texto en la programacion una cadena de texto siempre va dentro de ("") comillas.</li>
+          <li>{`numericos: Aqui en los datos numericos tenemos dos tipos de numeros:
+            
+          Enteros: Como su nombre lo dice son numeros enteros.
+          Flotantes: Estos son numeros decimales.`}</li>
+          <li>Booleanos: Los Booleanos son solo verdadero o falso pero en la programacion se representan como (true / false).</li>
+        </ol>
         <h2>mostrar()</h2>
         <Conseptos 
           texto={`Antes de iniciar usaremos la funcion "mostrar()" esto sera para mostrar nuesto codigo en la consola,`}
@@ -99,10 +99,11 @@ se convierte en flotante        257.0`}
 
         <Conseptos 
           texto={`Los booleanos tampoco necesitan de comillas.
-Estos indican verdadero o falso.
-true = verdadero.
-false = falso.
-En este caso si usaremos true y false . esto porque se aplican para todos los lenguajes de programacion.`}
+          Estos indican verdadero o falso.
+          true = verdadero.
+          false = falso.
+          
+          En este caso si usaremos true y false . esto porque se aplican para todos los lenguajes de programacion.`}
         />
 
         <Sintaxis 
@@ -137,16 +138,21 @@ false`}
 
         <h2>¿Y para que sirve?</h2>
         <Conseptos texto={`bueno estamos desarrollando un juego:
-numeros enteros:
-100 sera la vida del jugador
-numeros flotantes:
-los zombies comunes haran un daño de 2.5 de daño al jugador.
-booleanos:
-si el jugador esta cerca de un spawn de zombies spawn se pone en "true" y aparecen zombies.
-si el jugador se aleja del spawn el spawn se pone en false y no aparecen zombies.
-strings:
-si el jugador gana dar el mensaje "ganaste"
-si el jugador pierder dar el mensaje "perdiste"`}/>
+          
+          numeros enteros:
+          100 sera la vida del jugador
+
+          numeros flotantes:
+          los zombies comunes haran un daño de 2.5 de daño al jugador.
+          
+          booleanos:
+          si el jugador esta cerca de un spawn de zombies spawn se pone en "true" y aparecen zombies.
+          si el jugador se aleja del spawn el spawn se pone en false y no aparecen zombies.
+          
+          strings:
+          si el jugador gana dar el mensaje "ganaste"
+          si el jugador pierder dar el mensaje "perdiste"`
+        }/>
 
       </main>
       <Footer />

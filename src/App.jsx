@@ -321,13 +321,6 @@ import Cap11ProyV5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/cont
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
 
 
-
-
-
-
-
-
-
 function App() {
 
   return (
