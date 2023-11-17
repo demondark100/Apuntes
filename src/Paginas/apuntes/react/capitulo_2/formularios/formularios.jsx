@@ -432,11 +432,12 @@ function FormulariosReacr(){
       <main>
         <h1>Formularios</h1>
         <Conseptos texto={`React nos da unas herramientas para poder trabajar con los formularios.
-Tenemos dos estrategias para trabajar con los formularios:
-
-1. controlados: estos estan gestionados por los estados (recomendado).
-2. no controlados: son las que usan las referencias de react (no recomendado).
-Muy importante si usamos la etiqueta "label" como sabemos estos tienen como atributo "for" pero en react se cambia por "htmlFor" , es de buena practica pornerle el atributo name.`}/>
+Tenemos dos estrategias para trabajar con los formularios:`}/>
+        <ol>
+          <li>controlados: estos estan gestionados por los estados (recomendado).</li>
+          <li>no controlados: son las que usan las referencias de react (no recomendado).</li>
+        </ol>
+        <Conseptos texto={`Muy importante si usamos la etiqueta "label" como sabemos estos tienen como atributo "for" pero en react se cambia por "htmlFor" , es de buena practica pornerle el atributo name.`}/>
         <Sintaxis codigo={`<label htmlFor="nombre">pon tu nombre de usuario aqui</label>
 <input type="text" id="nombre" name="nombre">`}/>
         <Conseptos texto={`Para trabajar con los inputs react nos recomienda trabajar con las variables de estado , ahora tenemos un problema y esque no podemos usar value por defecto par que nos traera una advertencia por lo cual es lo correcto sera trabajar con el evento onChange pero si queremos ponerle un value por defecto podemos usar la propiedad "defaultValue".`}/>
@@ -958,14 +959,15 @@ export default function App(){
         <h2>obtimizar todo!!</h2>
         <Conseptos texto={`En el caso de que queramos hacer un formulario mas complejo seria muy tedioso crear una variable de estado para cada dato con lo cual podemos crear funciones que obtimicen esto y en vwz de andar poniendo todo en una variable para cada uno podemos crear solo una variable de estado con un solo objeto vacio.`}/>
         <ReactCode codigo={`const [valores,setValores] = useState({})`}/>
-        <Conseptos texto={`Luego creamos dos funciones que nos permitan trabajar con el atributo name y rellenar ese objeto vacio con los datos del usuario.
-
-1. creamos dos funciones una para los inputs en general y otra para los checkebox.
-2. en ambas les damos el event "e".
-3. accedemos al estado.
-4. usamos un parametro rest para poder crear el objeto y se actualice.
-5. destructuramos la propiedad name.
-6. accedemos al valor "value" pero en el de check cambiamos a "checked" para comprobar si es verdadero o falso.`}/>
+        <Conseptos texto={`Luego creamos dos funciones que nos permitan trabajar con el atributo name y rellenar ese objeto vacio con los datos del usuario.`}/>
+        <ol>
+          <li>creamos dos funciones una para los inputs en general y otra para los checkebox.</li>
+          <li>en ambas les damos el event "e".</li>
+          <li>accedemos al estado.</li>
+          <li>usamos un parametro rest para poder crear el objeto y se actualice.</li>
+          <li>destructuramos la propiedad name.</li>
+          <li>accedemos al valor "value" pero en el de check cambiamos a "checked" para comprobar si es verdadero o falso.</li>
+        </ol>
         <ReactCode codigo={`const manejarCambio=(e)=>{
   setForm({
     ...form,

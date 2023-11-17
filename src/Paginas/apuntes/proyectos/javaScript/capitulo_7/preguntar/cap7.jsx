@@ -2,10 +2,21 @@ import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModa
 import ShowOptions from "../../../../../../componentes/showOptions/show";
 import "./cap7.css"
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
+// iconos
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 function Cap7ProyJsV5() {
+  const [showEditor, setShowEditor] = useState(false);
+  const [fondo, setFondo] = useState("");
+  const [pregunta, setPregunta] = useState("¿programar es lo mejor?");
+  const [msgResolve, setMsgResolve] = useState("de acuerdo contigo.");
+  const [msgReject, setMsgReject] = useState("esta bien no :c");
+
+  const fondoContent = useRef(null);
 
   const moverBoton = useRef(null);
   const mover=()=>{
@@ -14,6 +25,7 @@ function Cap7ProyJsV5() {
     moverBoton.current.style.position = "absolute";
     moverBoton.current.style.top = `${numeroTtd}%`
     moverBoton.current.style.left = `${numeroLtr}%`
+    moverBoton.current.style.transitionDuration = 0
   }
 
   const [siONo, setSiONo] = useState(false);
@@ -33,6 +45,10 @@ function Cap7ProyJsV5() {
       setMostrarMensaje(false)
     }, 10000);
   }
+  useEffect(()=>{
+    fondoContent.current.style.backgroundImage = `url(${fondo})`
+  })
+
 
   return (  
     <>
@@ -185,22 +201,51 @@ botonNo.addEventListener("mouseover",()=>{
 Hacer una pregunta al usuario pero que no pueda decir que no.`}/>
       <div className="Page">
 
-        <div className="contenedorCap4ProyV2Js">
+        <div ref={fondoContent} className="contenedorCap4ProyV2Js">
           <div className="contenedorCap4ProyV2JsPegunta">
-            <h4>¿programar es lo mejor?</h4>
+            <h4>{pregunta}</h4>
             <div>
               <button onClick={simon}>si</button>
-              <button onClick={nomes} ref={moverBoton} onMouseEnter={mover}>no</button>
+              <button onClick={nomes} ref={moverBoton} onMouseOver={mover}>no</button>
             </div>
           </div>
           <div className={mostrarMensaje ? "contenedorMensajeProuJsCap4V2":"contenedorMensajeProuJsCap4V2Hide"}>
             {
               siONo ?
-                <p className="siCap4ProyJsV2">de acuerdo contigo.</p>
+                <p className="siCap4ProyJsV2">{msgResolve}</p>
                 :
-                <p className="noCap4ProyJsV2">esta bien no :c</p>
+                <p className="noCap4ProyJsV2">{msgReject}</p>
             }
           </div>
+        
+
+          <div className="contenedorCap4ProyV2JsBtnEditar">
+            <button onClick={()=>setShowEditor(!showEditor)}>{showEditor ? <FontAwesomeIcon icon={faCheck} /> : <FontAwesomeIcon icon={faEdit}/>}</button>
+          </div>
+
+          <div className={`contenedorCap4ProyV2JsEditar ${showEditor ? "":"contenedorCap4ProyV2JsEditarHide"}`}> 
+            <input 
+              type="text" 
+              placeholder="link de imagen para el fondo"
+              onChange={(e)=>setFondo(e.target.value)}
+            />
+            <input 
+              type="text" 
+              placeholder="pregunta"
+              onChange={(e)=>setPregunta(e.target.value)}
+            />
+            <input 
+              type="text" 
+              placeholder="mensaje si"
+              onChange={(e)=>setMsgResolve(e.target.value)}
+            />
+            <input 
+              type="text" 
+              placeholder="mensaje no"
+              onChange={(e)=>setMsgReject(e.target.value)}
+            />
+          </div>
+
         </div>
 
       </div>

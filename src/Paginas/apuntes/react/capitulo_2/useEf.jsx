@@ -130,11 +130,12 @@ function UseEfReact() {
         <h2>tiempo de vida en los compinentes</h2>
         <Conseptos texto={`Nacemos, crecemos y luego morimos. Casi todo sigue este ciclo en su vida, y los componentes de React también lo hacen. Los componentes se crean (se montan en el DOM), crecen mediante la actualización y luego mueren (se desmontan en el DOM). Esto se conoce como ciclo de vida de un componente.
 
-Con useEdffect podremos representar el tiempo de vida de los componentes en clase , en simples palabras podremos simular las 3 fases.
-
-1. componentDidMount: el montaje es el proceso por medio del cual el componente es construido y renderizado en pantalla por primera vez, por lo tanto, se considera montado solo cuando el componente ya es visible en pantalla y ya es parte del Document Object Model (DOM).
-2. componentDidUpdate: la actualización es el proceso por medio del cual un componte ya montado es actualizado, ya sea por cambiar el state o las props.
-3. componentWillUnmount: el desmontaje es el proceso por medio del cual un componte es destruido y finalmente removido del Document Object Model (DOM), lo que implica que no sea visible en pantalla.`}/>
+Con useEdffect podremos representar el tiempo de vida de los componentes en clase , en simples palabras podremos simular las 3 fases.`}/>
+        <ol>
+          <li>componentDidMount: el montaje es el proceso por medio del cual el componente es construido y renderizado en pantalla por primera vez, por lo tanto, se considera montado solo cuando el componente ya es visible en pantalla y ya es parte del Document Object Model (DOM).</li>
+          <li>componentDidUpdate: la actualización es el proceso por medio del cual un componte ya montado es actualizado, ya sea por cambiar el state o las props.</li>
+          <li>componentWillUnmount: el desmontaje es el proceso por medio del cual un componte es destruido y finalmente removido del Document Object Model (DOM), lo que implica que no sea visible en pantalla.</li>
+        </ol>
         <Sintaxis codigo={`useEffect(()=>{
   
   // fase de actualizacion / componentDidUpdate:

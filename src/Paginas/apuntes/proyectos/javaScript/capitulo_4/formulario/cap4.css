@@ -74,6 +74,9 @@
   box-shadow: 0px 2px 15px -2px #fff;
   transition-duration: .5s;
   border-radius: 1000px;
+  padding: 4px !important;
+  width: 60%;
+  margin-top: 15px;
 }
 .ContenedorProyJsCap4V3General input::placeholder{
   color: #fff !important;
@@ -103,8 +106,9 @@
   outline: none;
   border-radius: 1000px;
   box-shadow: 0px 2px 15px -2px #fff;
-  color: #c0a3a3 !important;
+  color: #e2dada !important;
   transition-duration: .5s;
+  padding: 8px;
 }
 .ContenedorProyJsCap4V3General button:hover{
   background-color: #00000021;

@@ -28,11 +28,9 @@ function Home({active}) {
 
   return (
     <>
-      <MensajeModal texto={`Para acceder a los chistes debes de ir:
-
-proyectos/capitulo 9/generador de chistes`}/>
+      <MensajeModal texto={`ㅤㅤㅤㅤㅤㅤㅤ`}/>
       <main>
-        <h1>Aqui se hara el porfolio mostrando el perfil y imagenes de proyectos.</h1>
+        
       </main>
       <Footer />
     </>

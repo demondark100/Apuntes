@@ -1,6 +1,11 @@
 .boton{
+  display: block;
+  margin: auto;
   background-color: #40f2b9;
   border: none;
-  width: 30%;
+  padding: 8px;
+  color: #000 !important;
   cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

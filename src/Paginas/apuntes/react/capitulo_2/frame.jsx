@@ -19,25 +19,27 @@ En este caso usaremos el framework fron end Bootstrap pero esto se aplica para t
 enlaces={{Bootstrap:{text:"Bootstrap",url:"https://getbootstrap.com/"}}}
 targetBlank={true}/>
         <h2>implementar framework</h2>
-        <Conseptos texto={`Para poder implemetar un framework necesitamos hacer lo siguiente.
-
-1. ingresar a la carpeta public
-2. ingresar a index.html
-3. y en la parte de head se ponen los links de estilo necesarios del framework
-4. en la parte de body poner los scrips que necesita el framework.`}/>
+        <Conseptos texto={`Para poder implemetar un framework necesitamos hacer lo siguiente.`}/>
+        <ol>
+          <li>ingresar a la carpeta public</li>
+          <li>ingresar a index.html</li>
+          <li>y en la parte de head se ponen los links de estilo necesarios del framework</li>
+          <li>en la parte de body poner los scrips que necesita el framework.</li>
+        </ol>
         <h2>como usar Bootstrap?</h2>
-        <Conseptos texto={`Aqui implementaremos un menu de navegacion de Bootstrap.
-
-1. a la hora de ingresar al sitio de Bootstrap ingresamos a Docs
-2. despues buscar CDN links en la parte de introduction
-3. alli aparecera dos links uno css y otro js.
-4. el link css lo ponemos con la etiqueta link en head
-5. el link js lo ponemos en el body con la etiqueta script
-6. en la barra de navegacion de introduction bajamos hasta donde diga "Components" y entramos ahi.
-7. alli tenemos muchas plantillas en este caso usaremos NavBar.
-8. bajando un poco encontraras un codigo html eso lo copiamos en un componente que crearemos en react.
-9. una vez alli cambiamos los class por className , los input los cerramos con />< al igual que los ht para evitar errores ya que estamos en codigo jsx no html.
-10. una vez hecho eso ya deberia aparecer nuestro menu.`}/>
+        <Conseptos texto={`Aqui implementaremos un menu de navegacion de Bootstrap.`}/>
+        <ol>
+          <li>a la hora de ingresar al sitio de Bootstrap ingresamos a Docs</li>
+          <li>despues buscar CDN links en la parte de introduction</li>
+          <li>alli aparecera dos links uno css y otro js.</li>
+          <li>el link css lo ponemos con la etiqueta link en head</li>
+          <li>el link js lo ponemos en el body con la etiqueta script</li>
+          <li>en la barra de navegacion de introduction bajamos hasta donde diga "Components" y entramos ahi.</li>
+          <li>alli tenemos muchas plantillas en este caso usaremos NavBar.</li>
+          <li>bajando un poco encontraras un codigo html eso lo copiamos en un componente que crearemos en react.</li>
+          <li>{`una vez alli cambiamos los class por className , los input los cerramos con />< al igual que los ht para evitar errores ya que estamos en codigo jsx no html.`}</li>
+          <li>una vez hecho eso ya deberia aparecer nuestro menu.</li>
+        </ol>
         <h2>codigo index.html</h2>
         <Html codigo={`<!DOCTYPE html>
 <html lang="en">

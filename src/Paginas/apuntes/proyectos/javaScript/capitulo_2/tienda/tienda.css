@@ -205,6 +205,7 @@
 .comprarHelados{
   display: block;
   background-color: #deff39;
+  color: #000 !important;
   margin: auto;
   margin-top: 35px;
   user-select: none;

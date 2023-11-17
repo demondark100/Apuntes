@@ -31,23 +31,22 @@ ahora observa esto.`}/>
         <h2>normalize</h2>
         <Conseptos texto={`normalize se encargara de reiniciar todos los estilos que vienen por defecto del navegador para que nostros podamos estilizar de la forma que queramos.
 
-{normalize} para descargar/usar normalize.css.
-
-1. click donde dice download.
-2. click derecho.
-3. click en guardar como.
-4. enlazar el archivo normalize en el sitio web se enlaza de la misma forma que css.
-
-luego debemos entrar a "normalize.css" y cambiar algunas propiedades.
-
-1. en la parte de arriba poner un selector universal "*" y poner "box-sizing: border-box;" esto es para que las cajas tengan el tamaño exacto que nosotros le digamos osea que le quitamos el estilos por defecto del navegador.
-
-2. buscar la propiedad img y poner "max.width: 100%;" esto es para que en los mobiles las imagenes aparezcan al 100%.`} 
-enlaces={{
-  normalize: {text: "click aqui",url: "https://necolas.github.io/normalize.css/"}
-}}
-targetBlank={true} />
-        
+        {normalize} para descargar/usar normalize.css.`} 
+        enlaces={{
+          normalize: {text: "click aqui",url: "https://necolas.github.io/normalize.css/"}
+        }}
+        targetBlank={true} />
+        <ol>
+          <li>click donde dice download.</li>
+          <li>click derecho.</li>
+          <li>click en guardar como.</li>
+          <li>enlazar el archivo normalize en el sitio web se enlaza de la misma forma que css.</li>
+        </ol>
+        <Conseptos texto={`luego debemos entrar a "normalize.css" y cambiar algunas propiedades.`}/>
+        <ol>
+          <li>en la parte de arriba poner un selector universal "*" y poner "box-sizing: border-box;" esto es para que las cajas tengan el tamaño exacto que nosotros le digamos osea que le quitamos el estilos por defecto del navegador.</li>
+          <li>buscar la propiedad img y poner "max.width: 100%;" esto es para que en los mobiles las imagenes aparezcan al 100%.</li>
+        </ol>
         <Css codigo={`*{
   box-sizing: border-box;
   padding: 0;

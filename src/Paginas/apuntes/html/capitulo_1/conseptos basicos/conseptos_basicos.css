@@ -16,7 +16,9 @@
   padding: 2vh;
   font-size: 1.6vh;
 }
-
+.Content_Cbasicos{
+  color: #000 !important;
+}
 
 /* margin */
 .Content_conseptosBasicos{

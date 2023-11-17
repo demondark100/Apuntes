@@ -62,19 +62,21 @@ Recuerda que aprendimos:
       />
 
       <div className="Page">
-        <h1 className="pageElement titleCap1CssProyecto">Consejos de css.</h1>
-        
-        <div className="consejosProyecto1Css">
-          <h2 className="pageElement consejosProyecto1Css__title">¡Practicar!</h2>
-          <p>Para entender bien css no memorices nada solo practica con las propiedades y veras que escribiras codigo de forma automatica sin necesidad de decir ¿para que era esto?</p>
-        </div>
-        <div className="consejosProyecto1Css">
-          <h2 className="pageElement consejosProyecto1Css__title">¡Jugar!</h2>
-          <p>Otra forma para no frustrarse es jugar con las propiedades de css los fondos , las unidades , etc.</p>
-        </div>
-        <div className="consejosProyecto1Css">
-          <h2 className="pageElement consejosProyecto1Css__title">Proyectos!</h2>
-          <p>Haz pequeños proyectos como este para poder practicar con el codigo esto ayudara de una form uff no te imaginas ayuda demasiado.</p>
+        <div className="cap1ContentCss">
+          <h1 className="pageElement titleCap1CssProyecto">Consejos de css.</h1>
+          
+          <div className="consejosProyecto1Css">
+            <h2 className="pageElement consejosProyecto1Css__title">¡Practicar!</h2>
+            <p>Para entender bien css no memorices nada solo practica con las propiedades y veras que escribiras codigo de forma automatica sin necesidad de decir ¿para que era esto?</p>
+          </div>
+          <div className="consejosProyecto1Css">
+            <h2 className="pageElement consejosProyecto1Css__title">¡Jugar!</h2>
+            <p>Otra forma para no frustrarse es jugar con las propiedades de css los fondos , las unidades , etc.</p>
+          </div>
+          <div className="consejosProyecto1Css">
+            <h2 className="pageElement consejosProyecto1Css__title">Proyectos!</h2>
+            <p>Haz pequeños proyectos como este para poder practicar con el codigo esto ayudara de una form uff no te imaginas ayuda demasiado.</p>
+          </div>
         </div>
       </div>
     </>

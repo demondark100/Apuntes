@@ -30,7 +30,7 @@ function Selectores() {
         <h1>selectores</h1>
         <Conseptos texto={`Los selectores nos sirven para poder seleccionar a las cagitas / elementos de html.
 
-para empezar veremos la propiedad color esto nos sirve para cambiar de color las letras de nuestros elementos.`}/>
+        para empezar veremos la propiedad color esto nos sirve para cambiar de color las letras de nuestros elementos.`}/>
 
         <h2>color</h2>
         <Html codigo={`<p>
@@ -48,29 +48,25 @@ para empezar veremos la propiedad color esto nos sirve para cambiar de color las
         </div>
 
         <h2>tipos de selectores</h2>
-        <Conseptos texto={`1: universal
-este selector selecciona a todos los elemtos.
-
-2: de tipo.
-los de tipo seleccionan directamente a los elementos html como por ejemplo los "p","button","input",etc.
-
-3: clases
-para esta forma debemos usar el atributo class="nombre" con class ponemos nombre a un elento html y para seleccionarlo con css debemos poner ".".
-
-4: ID
-estos son similares a las clases con la diferencia que un id solo se puede usar para nombrar una sola vez a un elemento no se puede repetir un id con el mismo nombre en html se debe poner como atributo id="" y para llamarlo "#".
-
-5: por atributo
-ya sabemos como son los atributos bueno de esta manera podemos crear atributos a un elmento para crear ejemplo="ejemplo" para seleccionar [ejemplo="ejemplo"].
-
-6: descendiente.
-con la forma descendiente estamos seleccionando a un elemento que esta dentro de otro esto es por si no quieres usar clases ni nada. ejemplo 
-div p {
-  estilo
-}.
-
-7: pseudo clases
-esto es como una clase secundaria bueno para entender mejor daremos un ejemplo con la pseudoclase "hover".`}/>
+        <ol>
+          <li>{`universal
+          este selector selecciona a todos los elemtos.`}</li>
+          <li>{`de tipo.
+          los de tipo seleccionan directamente a los elementos html como por ejemplo los "p","button","input",etc.`}</li>
+          <li>{`clases
+          para esta forma debemos usar el atributo class="nombre" con class ponemos nombre a un elento html y para seleccionarlo con css debemos poner ".".`}</li>
+          <li>{`ID
+          estos son similares a las clases con la diferencia que un id solo se puede usar para nombrar una sola vez a un elemento no se puede repetir un id con el mismo nombre en html se debe poner como atributo id="" y para llamarlo "#".`}</li>
+          <li>{`por atributo
+          ya sabemos como son los atributos bueno de esta manera podemos crear atributos a un elmento para crear ejemplo="ejemplo" para seleccionar [ejemplo="ejemplo"].`}</li>
+          <li>{`descendiente.
+          con la forma descendiente estamos seleccionando a un elemento que esta dentro de otro esto es por si no quieres usar clases ni nada. ejemplo 
+          div p {
+          ㅤestilo
+          }.`}</li>
+          <li>{`pseudo clases
+          esto es como una clase secundaria bueno para entender mejor daremos un ejemplo con la pseudoclase "hover".`}</li>
+        </ol>
 
         <h2>universas " * "</h2>
         <Html codigo={`<h3>esta es una pagina con css</h3>

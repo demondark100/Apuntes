@@ -1,4 +1,5 @@
 .volverLink{
+  position: absolute;
   z-index: 9;
   background-color: #000;
   display: flex;

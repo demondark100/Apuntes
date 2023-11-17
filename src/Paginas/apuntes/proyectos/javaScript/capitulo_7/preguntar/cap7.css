@@ -7,6 +7,8 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+  background-size: cover;
+  background-position: center;
 }
 .contenedorCap4ProyV2Js::before{
   content: "";
@@ -27,6 +29,8 @@
   width: 65%;
   height: 180px;
   flex-direction: column;
+  background-color: #000000b7;
+  border-radius: 8px;
 
 }
 .contenedorCap4ProyV2JsPegunta h4{
@@ -107,5 +111,97 @@
   }
   .contenedorMensajeProuJsCap4V2 p{
     font-size: 1.5em;
+  }
+}
+
+
+
+
+
+/*contenedor para el boton para editar*/
+.contenedorCap4ProyV2JsBtnEditar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.contenedorCap4ProyV2JsBtnEditar button {
+  pointer-events: auto;
+  background-color: #000;
+  width: 25px;
+  height: 25px;
+  border-radius: 1000px;
+  margin-top: 8px;
+  margin-left: 8px;
+  animation-name: btnEditarProy7SV5;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes btnEditarProy7SV5 {
+  0% {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 0 2px 2px #bbb4b4;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 8px 8px #bbb4b4;
+  }
+}
+
+
+
+
+/*editor*/
+.contenedorCap4ProyV2JsEditar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000a9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .2s;
+  z-index: 2;
+}
+.contenedorCap4ProyV2JsEditarHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .2s;
+}
+.contenedorCap4ProyV2JsEditar input{
+  background-color: transparent;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  width: 85%;
+  background-color: #000000bb;
+  border: 2px solid #e2f3b2;
+  color: #e2f3b2;
+}
+.contenedorCap4ProyV2JsEditar input::placeholder{
+  color: #b2c482;
+}
+
+
+@media(min-width:750px){
+  .contenedorCap4ProyV2JsEditar input{
+    width: 250px;
   }
 }

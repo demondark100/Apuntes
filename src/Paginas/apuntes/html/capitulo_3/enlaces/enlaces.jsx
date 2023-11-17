@@ -9,12 +9,12 @@ function EnlacesHtml() {
         <h1>Enlaces</h1>
         <Conseptos texto={`Esta etiqueta nos servira para redirigir al usuario hacia otra parte de nuestra pagina web o a otros lugares por ejemplo facebook , youtube , hentaiLA lo que sea.
 
-Esta etiqueta se representa por "<a>" la cual tiene un atributo "href" en ese atributo debemos poner el enlace que nosotros deseemos por ejemplo una seccion de nuestra pagina o tambien un enlace externo de nuestra pagina.`}/>
+        Esta etiqueta se representa por "<a>" la cual tiene un atributo "href" en ese atributo debemos poner el enlace que nosotros deseemos por ejemplo una seccion de nuestra pagina o tambien un enlace externo de nuestra pagina.`}/>
         <Html codigo={`<a href="cualquier enlace">mensaje que queremos poner</a>`}/>
         
         <Conseptos texto={`Ahora dare un ejemplo real de como usar "<a href="">".
 
-Redirigir al usuario a una imagen cualquiera.`}/>
+        Redirigir al usuario a una imagen cualquiera.`}/>
 
         <Html codigo={`<a href="https://www.bing.com/images/search?view=detailV2&ccid=gmTtk%2fbJ&id=CA2A1F058F35F12D65AF10F11796CBD6A2420959&thid=OIP.gmTtk_bJXV97qZzhc7_hGgHaEK&mediaurl=https%3a%2f%2fsm.ign.com%2ft%2fign_latam%2fscreenshot%2fdefault%2fhola-soy-goku_vzxh.1200.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8264ed93f6c95d5f7ba99ce173bfe11a%3frik%3dWQlCotbLlhfxEA%26pid%3dImgRaw%26r%3d0&exph=675&expw=1200&q=hola+soy+goku&simid=608024012174743578&FORM=IRPRST&ck=E32972141ECBBA421BE9490A23D4800A&selectedIndex=3">Hola soy Goku</a>
 <!-- pruebalo en tu codigo -->`}/>
@@ -26,7 +26,7 @@ Redirigir al usuario a una imagen cualquiera.`}/>
         <h2>target</h2>
         <Conseptos texto={`este atributo nos sirve para poder redireccionar al usuario pero se abrira en otra ventana del navegador esto nos sirve por si queremos redireccionar al usuario pero no queremos que el usuario salga ne nuestra pagina.
 
-Para esto debemos poner el valor "_blank" a target.`}/>
+        Para esto debemos poner el valor "_blank" a target.`}/>
 
         <Html codigo={`<a href="enlace" target="_blank">contenido</a>
 <!-- pruebalo en tu codigo -->
@@ -41,12 +41,12 @@ Para esto debemos poner el valor "_blank" a target.`}/>
 <!-- si queremos retroceder de nuestra posision se usa "../" -->`}/>
 
         <h2>ejercicio 1</h2>
-        <Conseptos texto={`Ahora haremos un pequeño ejercicio donde mandaremos al usuario a otras partes de nuestro sitio web esto lo haremos desde cero.
-
-1: crear una carpeta llamada "paginas".
-2: vrear un archivo llamado "pagina1.html" dentro de la carpeta "paginas" y luego abrirla.
-3: crear un archivo llamado "pagina2.html" dentro de la carpeta "paginas"`}/>
-        
+        <Conseptos texto={`Ahora haremos un pequeño ejercicio donde mandaremos al usuario a otras partes de nuestro sitio web esto lo haremos desde cero.`}/>
+        <ol>
+          <li>crear una carpeta llamada "paginas".</li>
+          <li>vrear un archivo llamado "pagina1.html" dentro de la carpeta "paginas" y luego abrirla.</li>
+          <li>crear un archivo llamado "pagina2.html" dentro de la carpeta "paginas"</li>
+        </ol>
         <h2>pagina 1</h2>
         <Html codigo={`<!-- copiar todo este codigo -->
 <!DOCTYPE html>
@@ -84,11 +84,12 @@ Para esto debemos poner el valor "_blank" a target.`}/>
 `}/>
 
         <h2>ejercicio 2</h2>
-        <Conseptos texto={`1: crear una carpeta llamada "paginas carpeta".
-2: crear un archivo llamado "pagina1.html" dentro de "paginas carpeta" y luego abrirla.
-3: dentro de la carpeta "paginas carpeta" crear una carpeta llamada "carpeta 2".
-4: crear un archivo llamado "pagina2.html" dentro de la carpeta "carpeta 2"`} />
-
+        <ol>
+          <li>crear una carpeta llamada "paginas carpeta".</li>
+          <li>crear un archivo llamado "pagina1.html" dentro de "paginas carpeta" y luego abrirla.</li>
+          <li>dentro de la carpeta "paginas carpeta" crear una carpeta llamada "carpeta 2".</li>
+          <li>crear un archivo llamado "pagina2.html" dentro de la carpeta "carpeta 2"</li>
+        </ol>
         <h2>pagina 1</h2>
         <Html codigo={`<!-- copiar todo este codigo -->
 <!DOCTYPE html>

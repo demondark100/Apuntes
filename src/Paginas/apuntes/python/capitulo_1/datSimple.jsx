@@ -9,11 +9,13 @@ function DatSimplePy() {
     <>
       <main>
         <h1>Datos simples</h1>
-        <Conseptos texto={`python al igual que los conseptos basicos de progranacion tiene tipos de datos por ejemplo:
-1. caracter
-2. cadena de caracteres
-3. numericos
-4. flotantes`}/>
+        <Conseptos texto={`python al igual que los conseptos basicos de progranacion tiene tipos de datos por ejemplo:`}/>
+        <ol>
+          <li>caracter</li>
+          <li>cadena de caracteres</li>
+          <li>numericos</li>
+          <li>flotantes</li>
+        </ol>
         <h2>print</h2>
         <Conseptos texto={`Antes de continuar debemos saber usar la funcion print , esta funcion nos sirve para mostrar nuestros resultados en la consola y para actualizar la consola debemos apretar f5 en el caso de que estemos en vscode , si estamos en la terminal de python se mostrara el resultado de forma automatica.`}/>
         <Sintaxis codigo={`print( que queremos mostrar en consola )`}/>

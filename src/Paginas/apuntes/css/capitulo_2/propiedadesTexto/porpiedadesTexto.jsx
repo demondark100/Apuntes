@@ -11,14 +11,14 @@ function PropiedadesTexto() {
         <h1>propiedades de texto</h1>
         <Conseptos texto={`Aqui veremos las propiedades de las letras empecemos con:
 
-{fontSize}
-esta propiedad ya la vimos en la parte de unidades pero por si no lo recuerdas era para cambiar el tamaño de una letra.`} 
-enlaces={
-  {
-    fontSize: {text: "font-size", url: "../css/capitulo 1/unidades"}
-  }
-} 
-  targetBlank={true} />
+        {fontSize}
+        esta propiedad ya la vimos en la parte de unidades pero por si no lo recuerdas era para cambiar el tamaño de una letra.`} 
+        enlaces={
+          {
+            fontSize: {text: "font-size", url: "../css/capitulo 1/unidades"}
+          }
+        } 
+        targetBlank={true} />
 
         <h2>font-family</h2>
         <Conseptos texto={`esta pripiedad es la tipografia de las letras.`}/>
@@ -73,17 +73,7 @@ enlaces={
 
 
         <h2>importar tipografias de google</h2>
-        <Conseptos texto={`{tipografia} para ir a las tipografias de google.
-
-1. buscar una tipografia que te guste.
-
-2. hacer click en la tipografia.
-
-3. una vez dentro de la tipografia hacer click en el ultimo icono de la parte de arriba a la derecha su le pasas el mouse por encima debe decir "viwe selected families".
-
-4. copiar donde dice "use on the web" eso se debe pegar en el "head" del sitio web.
-
-5. copiar la parte de abajo donde dice "CSS rules to specify families" ese sera para darle la tipografia a las letras.`}
+        <Conseptos texto={`{tipografia} para ir a las tipografias de google.`}
 enlaces={
   {
     tipografia: {text: "click aqui", url: "https://fonts.google.com/"}
@@ -91,7 +81,13 @@ enlaces={
 } 
   targetBlank={true}
 />
-        
+        <ol>
+          <li>buscar una tipografia que te guste.</li>
+          <li>hacer click en la tipografia.</li>
+          <li>una vez dentro de la tipografia hacer click en el ultimo icono de la parte de arriba a la derecha su le pasas el mouse por encima debe decir "viwe selected families".</li>
+          <li>copiar donde dice "use on the web" eso se debe pegar en el "head" del sitio web.</li>
+          <li>copiar la parte de abajo donde dice "CSS rules to specify families" ese sera para darle la tipografia a las letras.</li>
+        </ol>      
         <Html codigo={`<head>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet">
 </head>

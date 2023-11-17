@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import Volver from "../../../../../../componentes/volver/volver";
 
 function Wrap1() {
-  return (  
-    <div className="Page">
+  return (
+    <>
       <Volver link={"../css/flexbox/flexDirection/flexWrap"}/>
-
+    <div className="Page">
       <div className="sinWrapContent">
         <div className="sinWrapContent__caja">
           caja 1
@@ -27,6 +26,7 @@ function Wrap1() {
         Como te das cuenta a medida que pongas la resolucion mas pequeña las cajas se iran haciendo mas pequeñas perdiendo la medida original que nosotros dimos.
       </p>
     </div>
+    </>
   );
 }
 

@@ -21,7 +21,7 @@ body{
 
 /* estos estilos son de main */
 main{
-  width: 100vw;
+  width: 90vw;
   margin: auto;
   margin-top: 60px !important;
 }
@@ -58,14 +58,19 @@ ol li{
 }
 .website h1{
   text-align: start;
+  color: #000 !important;
 }
 .website h2{
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 0;
+  color: #000 !important;
+  text-align: start;
 }
 .website h3{
   margin-top: 0;
+  color: #000 !important;
+  text-align: start;
   font-size: 1em;
 }
 .website a{
@@ -122,31 +127,38 @@ a:hover{
   margin: 0;
   height: 100%;
   overflow: auto;
-  position: sticky;
+  position: fixed;
   overflow: auto;
+  pointer-events: stroke;
+  color: #000 !important;
 }
 
 .Page h1{
   text-align: start;
   margin-top: 0;
-  color: #000 !important;
+  color: #000;
 }
 .Page h2{
+  text-align: start;
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 0;
-  color: #000 !important;
+  color: #000;
 }
 .Page h3{
+  text-align: start;
   font-size: 1em;
-  color: #000 !important;
+  color: #000;
 }
 .Page a{
   text-decoration: underline;
-  color: #00f !important;
+  color: #00f;
 }
 .Page p{
-  color: #000 !important;
+  color: #000;
+}
+.Page li{
+  color: #000;
 }
 
 
@@ -157,10 +169,10 @@ a:hover{
   /* estos son los estilos del main */
   main{
     position: relative;
-    margin: auto;
     display: block;
     margin: auto;
     width: 98%;
+    margin-top: 38px !important;
     max-width: 1200px;
   }
   h2{

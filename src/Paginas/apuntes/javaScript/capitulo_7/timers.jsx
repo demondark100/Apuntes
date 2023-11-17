@@ -15,10 +15,10 @@ function TimersJs() {
         <h1>timers</h1>
         <Conseptos texto={`Los timers nos sirve para ejecutar una funcion en un tiempo determinado , Nosotros podemos decidir en que mmomento se ejecutara la funcion.
 
-Los timers funcionan con milisegundos ejemplo:
-1 segundo seria 1000.
-2 segundos seria 2000.
-Y asi sucesivamente.`}/>
+        Los timers funcionan con milisegundos ejemplo:
+        1 segundo seria 1000.
+        2 segundos seria 2000.
+        Y asi sucesivamente.`}/>
         <h2>funcion rapida</h2>
         <Conseptos texto={`Podemos crear un timer y escribir la funcion alli mismo.`}/>
         <Sintaxis codigo={`establecerTiempo(()=>{ 

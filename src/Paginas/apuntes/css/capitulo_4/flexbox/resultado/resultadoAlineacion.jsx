@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import Volver from "../../../../../../componentes/volver/volver";
 
 function ResultadoAlineacionFlex() {
-  return (  
+  return (
     <>
+      <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
     <div className="Page">
-        <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex"}/>
         <div style={{backgroundColor: "#000"}}>
           <h2 style={{color: "#fff"}}>center</h2>
             <div class="center">

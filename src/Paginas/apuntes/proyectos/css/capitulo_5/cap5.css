@@ -24,6 +24,9 @@
   height: 6%;
   max-height: 25px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000 !important;
 }
 .contenedorCap5CssProyInput{
   height: 100%;
@@ -45,6 +48,7 @@
   left: 75%;
   padding: 0;
   width: 25%;
+  color: #000 !important;
 
 }
 

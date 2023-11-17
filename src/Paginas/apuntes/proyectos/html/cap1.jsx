@@ -38,7 +38,7 @@ function Cap1ProyectoHtml() {
     </main>
   </body>
 <html/>`}
-      />      
+      />
       <MensajeModal texto={`¡Proyecto! capitulo 2
 Hacer un sitio web que tenga la estructura basica de html.
 

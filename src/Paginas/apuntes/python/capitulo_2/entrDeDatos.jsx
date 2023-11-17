@@ -17,10 +17,11 @@ print(nombre);`}/>
         <Consola codigo={`dime tu nombre:`}/>
         <h2>convertir datos</h2>
         <Conseptos texto={`Y que pasa si intentamos hacer operaciones?
-recuerda que cuando nosotros pasamos datos a un input siempre nos devolvera una string por ejemplo si le pasamos como dato 15 el input nos devolvera "15" por lo cual no podremos hacer operaciones.
-
-1. int(): esto nos servira para convertir los datos a datos numericos
-2. float(): esto convertira los datos a datos flotantes`}/>
+recuerda que cuando nosotros pasamos datos a un input siempre nos devolvera una string por ejemplo si le pasamos como dato 15 el input nos devolvera "15" por lo cual no podremos hacer operaciones.`}/>
+        <ol>
+          <li>int(): esto nos servira para convertir los datos a datos numericos</li>
+          <li>float(): esto convertira los datos a datos flotantes</li>
+        </ol>
         <Sintaxis codigo={`int(variable o dato);
 float(variable o dato);`}/>
         <h3>con int y float</h3>

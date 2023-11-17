@@ -15,11 +15,12 @@ Aqui vamos a validar si un navegador es compatible o no con esta API.`}/>
 } else{
     alert("las notificaciones si estan disponibles.")
 }`}/>
-        <Conseptos texto={`Con esto estamos preguntando si el usuario desea recibir notificaciones o no notificaciones.
-        
-1- granted: el usuario permitio el uso de las notificacione.
-2- denied: el usuario rechazo el uso de las notificaciones.
-3- default: el ususario no selecciono/ignoro las notificaciones por lo tanto el navegador lo tomara como denied.`}/>
+        <Conseptos texto={`Con esto estamos preguntando si el usuario desea recibir notificaciones o no notificaciones.`}/>
+        <ol>
+          <li>granted: el usuario permitio el uso de las notificacione.</li>
+          <li>denied: el usuario rechazo el uso de las notificaciones.</li>
+          <li>default: el ususario no selecciono/ignoro las notificaciones por lo tanto el navegador lo tomara como denied.</li>
+        </ol>
         <JavaScropt codigo={`Notification.requestPermission(()=>{
     if (Notification.permission == "granted") {
         console.log("se ha otorhado el permiso.")

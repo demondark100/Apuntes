@@ -23,14 +23,16 @@ let fragmento = document.createDocumentFragment();
 parrafo.textContent = "hola mundo";
 fragmento.appendChild(parrafo);
 contenedor.appendChild(fragmento);`}/>
-        <Conseptos texto={`appendChild() hace que un elemento creado en javaScript sea puesto como hijo a un elemento HTML ya creado.
-1. en este caso creamos un div padre llamado "contenedor".
-2. seleccionamos al elemento padre.
-3. creamos un elemento parrafo en javaScript.
-4. creamos un fragmento.
-5. al elemento parrafo le ponemos el contenido "hola mundo" con textContent.
-6. usando appendChild agregamos el parrafo al fragmento para obtimizar el codigo.
-9. por ultimo ponemos el fragmento que guarda al parrafo en el contenedor div.`}/>
+        <Conseptos texto={`appendChild() hace que un elemento creado en javaScript sea puesto como hijo a un elemento HTML ya creado.`}/>
+        <ol>
+          <li>en este caso creamos un div padre llamado "contenedor".</li>
+          <li>seleccionamos al elemento padre</li>
+          <li>creamos un elemento parrafo en javaScript.</li>
+          <li>creamos un fragmento.</li>
+          <li>al elemento parrafo le ponemos el contenido "hola mundo" con textContent.</li>
+          <li>usando appendChild agregamos el parrafo al fragmento para obtimizar el codigo.</li>
+          <li>por ultimo ponemos el fragmento que guarda al parrafo en el contenedor div.</li>
+        </ol>
         <h2>firstElementChild y lastElementChild</h2>
         
         <Html codigo={`<div class="a_content"> 

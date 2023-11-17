@@ -9,8 +9,10 @@ function HooksPerReact() {
         <h1>Hooks personalizador</h1>
         <Conseptos texto={`Esto nos sirve para poder crear una funcion que usaremos muchas veces en nuestra aplicacion de react.`}/>
         <h2>pasos par usar los hooks personalizados</h2>
-        <Conseptos texto={`1. crear una nueva carpeta.
-2. al archivo que creemos siempre su nombre debe iniciar con use ejemplo "useFunction" o "useComponent" puede ser cualquier nombre solo asegurate que lleve use para que react detecte que es un hooks personalizado.`}/>
+        <ol>
+          <li>crear una nueva carpeta.</li>
+          <li>al archivo que creemos siempre su nombre debe iniciar con use ejemplo "useFunction" o "useComponent" puede ser cualquier nombre solo asegurate que lleve use para que react detecte que es un hooks personalizado.</li>
+        </ol>
         <h2>ejercicio</h2>
         <Conseptos texto={`Hacer una funcion que haga una peticion con fetch , recuerda que ya hicimos esa funcion podemos reusarla pero quitaremos la logica de ingresar las imagenes , el nombre y la funcion solo llamara a la API y controlaremos los posibles errores.`}/>
         <h2>hook personalizado</h2>

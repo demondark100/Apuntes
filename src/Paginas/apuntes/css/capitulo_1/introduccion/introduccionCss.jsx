@@ -10,7 +10,7 @@ function IntroduccionCss() {
         <h1>introduccion a css</h1>
         <Conseptos texto={`css es una tecnologia / lenguaje que nos sirve para dar estilos a las cagitas que creamos con html.
 
-ahora veremos como es la estructura de css para poder entender mejor a este lenguaje y poder usarlo con facilidad.`}/>
+        ahora veremos como es la estructura de css para poder entender mejor a este lenguaje y poder usarlo con facilidad.`}/>
 
         <h2>pseudocodigo</h2>
 
@@ -29,24 +29,27 @@ de lo contrario el lenguaje no reconocera lo que escribimos.`}/>
 
         <Conseptos texto={`para crear un archivo css simepre debemos terminar con ".css"; de esta manera estamos indicando que crearemos un archivo css.
 
-ejemplo:
+        ejemplo:
 
-crear archivo css
-archivo.css`}/>
+        crear archivo css
+        archivo.css`}/>
 
         <h2>enlazar html y css</h2>
-        <Conseptos texto={`la etiqueta "link" es para poder enlazar nuestros estilos css este lleva como atributo:
-1: "rel" que es para indicarle que daremos estilo css.
-2: "href" para indicarle la ruta de nuestro archivo css recuerdan los enlaces de los protocolos local y https donde si teniamos el archivo en una capeta teniamos que poner "/" bueno para enlazar css es igual.`} />
+        <Conseptos texto={`la etiqueta "link" es para poder enlazar nuestros estilos css este lleva como atributo:`} />
+        <ol>
+          <li>"rel" que es para indicarle que daremos estilo css.</li>
+          <li>"href" para indicarle la ruta de nuestro archivo css recuerdan los enlaces de los protocolos local y https donde si teniamos el archivo en una capeta teniamos que poner "/" bueno para enlazar css es igual.</li>
+        </ol>
         <Html codigo={`<!-- poner en el head de nuestro html -->
 <link rel="stylesheet" href="archivo.css">`}/>
 
         <h2>crear archivo</h2>
-        <Conseptos texto={`Aqui vamos a crear un html y lo enlazaremos.
-  1: crear una carpeta llamada "primer proyecto css".
-  2: crear un archivo llamado "estilos.html".
-  3: crear un archivo llamado "style.css".`}/>
-
+        <Conseptos texto={`Aqui vamos a crear un html y lo enlazaremos.`}/>
+        <ol>
+          <li>crear una carpeta llamada "primer proyecto css".</li>
+          <li>crear un archivo llamado "estilos.html".</li>
+          <li>crear un archivo llamado "style.css".</li>
+        </ol>
         <Html codigo={`<head>
   <link rel="stylesheet" href="style.css">
 </head>`}/>

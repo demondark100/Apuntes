@@ -8,8 +8,8 @@ function Metadatos() {
       <main>
         <h1>Metadatos</h1>
         <Conseptos texto={`Los metadatos describen recursos tomemos como ejemplo un video.
-un video es informacion es un recurso puede considerarse un objeto que a su vez viene acompañado de un titulo y descripcion de etiquetas.
-posdata los meta datos se trabajan solamente en el head del sitio web.`}/>
+        un video es informacion es un recurso puede considerarse un objeto que a su vez viene acompañado de un titulo y descripcion de etiquetas.
+        posdata los meta datos se trabajan solamente en el head del sitio web.`}/>
 
         <h1>ejemplo</h1>
         <Conseptos texto={`los metadatos se trabajan con la etiqueta meta.`}/>
@@ -24,16 +24,13 @@ posdata los meta datos se trabajan solamente en el head del sitio web.`}/>
         <Html codigo={`<head>
   <meta nombre="nombre de meta" contenido="poner el contenido">
 </head>`}/>
-
-        <Conseptos texto={`1: keywords es para poner palabras clave del sitio web por ejemplo si en la pagina hablamos de comida podriamos poner imgredientes como "arina" , "azucas", "sal" , etc.
-
-2: description es para describir el sitio web solo se permiten hasta 70 caracteres para poder poner en la descripcion.
-
-3: autor con esto estamos indicando quien es el autor del sitio web.
-
-4: copyright esto se usa en caso de que el sitio tenga derechos de una empresa aqui debemos poner el nombre de la empresa.
-
-5: robots esto es para indicar que pagina sera indexada osea si la pagina es el indice si esta indexada debemos poner "index" si no lo esta "noindex".`}/>
+        <ol>
+          <li>keywords es para poner palabras clave del sitio web por ejemplo si en la pagina hablamos de comida podriamos poner imgredientes como "arina" , "azucas", "sal" , etc.</li>
+          <li>description es para describir el sitio web solo se permiten hasta 70 caracteres para poder poner en la descripcion.</li>
+          <li>autor con esto estamos indicando quien es el autor del sitio web.</li>
+          <li>copyright esto se usa en caso de que el sitio tenga derechos de una empresa aqui debemos poner el nombre de la empresa.</li>
+          <li>robots esto es para indicar que pagina sera indexada osea si la pagina es el indice si esta indexada debemos poner "index" si no lo esta "noindex".</li>
+        </ol>
         <Html codigo={`<head>
   <meta charset="UTF-8">
   <meta name="keywords" content="programacion,desarrollo web,aprendizaje">

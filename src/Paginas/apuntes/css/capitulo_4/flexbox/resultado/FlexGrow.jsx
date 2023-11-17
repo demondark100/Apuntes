@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import Volver from "../../../../../../componentes/volver/volver";
 
 function FlexGrowResultado() {
-  return (  
+  return (
     <>
-      <div className="Page">
       <Volver link={"../css/flexbox/flexDirection/flexWrap/alineacionFlex/flex-grow"}/>
+      <div className="Page">
         <div>
         <h4 style={{color: "#fff"}}>sin grow</h4>
         <div className="sin_grow">

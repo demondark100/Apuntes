@@ -7,9 +7,13 @@ function ConcatenacionJavaScript() {
     <>
       <main>
         <h1>Concatenacion</h1>
-        <Conseptos texto={`En javaScript tenemos dos formas de concatenar las cadenas.
-1. Usando el simbolo de "+" osea el tradicional.
-2. Usando \`backticks\` y usando este simbolo ${"${}."}`}/>
+        <Conseptos texto={`En javaScript tenemos dos formas de concatenar las cadenas.`}/>
+        <ol>
+          <ol>
+            <li>Usando el simbolo de "+" osea el tradicional.</li>
+            <li>Usando `backticks` y usando este simbolo {"${}."}</li>
+          </ol>
+        </ol>
         <h2>tradicional</h2>
         <Conseptos texto={`La forma tradicional es usar + para concatenar las cadenas com las "" comillas normales.`}/>
         <JavaScropt codigo={`let nombre = prompt("Dime tu nombre.");

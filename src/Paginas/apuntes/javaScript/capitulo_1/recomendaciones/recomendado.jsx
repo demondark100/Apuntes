@@ -15,12 +15,11 @@ enlaces={{
 }}
 targetBlank={true}/>
         <h2>Consejos</h2>
-        <Conseptos texto={`1. Saber html y css antes de aprender este lenguaje o por lo menos solo html para empezar , solo es necesario html y css a la hora de manejar el DOM pero como tal si puedes aprender el lenguaje hasta sierta parte yo te indicare cuando sera necesario usar html y css con javaScript.
-
-2. Saber logica de programacion esto ya lo enseñe solo te enseñare conseptos del lenguaje mas no la logica de programacion.
-
-3. este curso no tendra mucha teoria a excepcion de algunos temas.`}/>
-
+        <ol>
+          <li>Saber html y css antes de aprender este lenguaje o por lo menos solo html para empezar , solo es necesario html y css a la hora de manejar el DOM pero como tal si puedes aprender el lenguaje hasta sierta parte yo te indicare cuando sera necesario usar html y css con javaScript.</li>
+          <li>Saber logica de programacion esto ya lo enseñe solo te enseñare conseptos del lenguaje mas no la logica de programacion.</li>
+          <li>este curso no tendra mucha teoria a excepcion de algunos temas.</li>
+        </ol>
       </main>
       <Footer />
     </>

@@ -72,12 +72,14 @@ export default App`}/>
           <p>{contador}</p>
         </div>
         <h2>explicacion</h2>
-        <Conseptos texto={`1. importamos el componente de react.
-2. luego creamos y exportamos la clase Estado
-3. creamos un constructor con props para modificarlo mas adelante y eso tambien lo eredaremos con super
-4. creamos una variable llamada state que sera un objeto que almacenara un contador que inicia desde 0
-5. usamos la funcion "setInterval" y dentro de esta usaremos "setState" el cual agarrara la variable contador para poder sacarle la copia y mostrarla ya modificada
-6. por ultimo la mostramos en el componente`}/>
+        <ol>
+          <li>importamos el componente de react.</li>
+          <li>luego creamos y exportamos la clase Estado</li>
+          <li>creamos un constructor con props para modificarlo mas adelante y eso tambien lo eredaremos con super</li>
+          <li>creamos una variable llamada state que sera un objeto que almacenara un contador que inicia desde 0</li>
+          <li>usamos la funcion "setInterval" y dentro de esta usaremos "setState" el cual agarrara la variable contador para poder sacarle la copia y mostrarla ya modificada</li>
+          <li>por ultimo la mostramos en el componente</li>
+        </ol>
         <h2>un ejemplo mas</h2>
         <ReactCode codigo={`import { Component } from "react";
 

@@ -647,9 +647,6 @@ function Capitulos({sendshowAside}) {
           </ul>
         </nav>
       </aside>
-      <div>
-        pepa
-      </div>
     </>
   );
 }

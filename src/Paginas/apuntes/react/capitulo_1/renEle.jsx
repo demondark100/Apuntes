@@ -44,7 +44,7 @@ export default function App(){
   return <RenderizarE />
 }`}/>
         <Conseptos texto={`Si a este codigo le quitamos el "key" veras que hay una advertencia en la consola indicando que para renderizar de mejor manera se necesita un key pero usar el indice como "key" no es muy recomendable pero por ahora esta bien mas adelante usaremos una libreria para poner una key unica para cada elemento.`}/>
-        <div className="websute">
+        <div className="website">
           <h6>seasons</h6>
           <ul>
             <li>spring</li>
@@ -54,9 +54,11 @@ export default function App(){
           </ul>
         </div>
         <h2>explicando codigo</h2>
-        <Conseptos texto={`1. creamos un objeto con una variable llamada "seasion"("estaciones").
-2. luego usamos el metodo map para recorrer el arreglo de forma dinamica.
-3. usamos una key para poder renderizar los elementos.`}/>
+        <ol>
+          <li>creamos un objeto con una variable llamada "seasion"("estaciones").</li>
+          <li>luego usamos el metodo map para recorrer el arreglo de forma dinamica.</li>
+          <li>usamos una key para poder renderizar los elementos.</li>
+        </ol>
         <h2>simulacion API</h2>
         <Conseptos texto={`Ahora vamos a renderizar un objeto json para simular una API.`}/>
         <Conseptos texto={`Crearemos un archivo jsoon con eel nombre "data".`}/>
@@ -137,11 +139,13 @@ export default function App(){
         </div>
 
         <h2>explicando codigo</h2>
-        <Conseptos texto={`1. importamos el archivo json-
-2. creamos una funcion que agregye los enlaces del json de forma dinamica
-3. ponelos un ul para recorrer de forma dinamica con map al archivo json
-4. llamamos a la funcion/componente para darle el key las id que pusimos en nuestro archivo json
-5. luego le ponemos el un atributo que sera el elemento-`}/>
+        <ol>
+          <li>importamos el archivo json-</li>
+          <li>creamos una funcion que agregye los enlaces del json de forma dinamica</li>
+          <li>ponelos un ul para recorrer de forma dinamica con map al archivo json</li>
+          <li>llamamos a la funcion/componente para darle el key las id que pusimos en nuestro archivo json</li>
+          <li>luego le ponemos el un atributo que sera el elemento</li>
+        </ol>
       </main>
       <Footer/>
     </>

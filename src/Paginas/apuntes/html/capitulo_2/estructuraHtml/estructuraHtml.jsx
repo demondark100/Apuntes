@@ -54,9 +54,11 @@ function EstructuraHtml() {
   </body>
 </html>`}/>
 
-        <Conseptos texto={`probablemente digas mucho texto pero los editores de codigo te brindan atajos para que la estructura se cree de forma rapida.
-  1: En visual studio code escribe "!" y presiona TAB. 
-  2: En sublime text escribe "html" y preciona TAB.`} />
+        <Conseptos texto={`probablemente digas mucho texto pero los editores de codigo te brindan atajos para que la estructura se cree de forma rapida.`} />
+        <ol>
+          <li>En visual studio code escribe "!" y presiona TAB.</li>
+          <li>En sublime text escribe "html" y preciona TAB.</li>
+        </ol>
 
       </main>
       <Footer />
