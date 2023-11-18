@@ -80,7 +80,7 @@ function Proyectos({sendshowProyects}) {
     })
 
     const [imagen, setImagen] = useState("");
-    const [showContent, setShowContent] = useState(true);
+    const [showContent, setShowContent] = useState(false);
     const showImg=(imagen)=>{
       setImagen(imagen);
       setShowContent(true);

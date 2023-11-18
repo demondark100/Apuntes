@@ -1,46 +1,169 @@
-.contenedorHome{
+/*estilos de la primera presentacion*/
+
+
+.presentacionHome{ /*contenedor principal*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  align-items: center;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+  transition-duration: .5s;
+  font-size: 1.5em;
+  text-align: center;
+  color: #0f0;
 }
 
-/* estos son los dos contenedores */
-.contenedorHome__contenido{
-  padding: 25px;
-  height: 75%;
-  width: 25%;
-  min-width: 200px;
-  max-height: 450px;
+
+.presentacionHomeTecnologias{ /*contenedor de las imagenes*/
   display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.presentacionHomeTecnologias img{ /*imagenes*/
+  width: 80px;
+  object-fit: cover;
+  opacity: 0;
+  transition-duration: .5s;
+  position: absolute;
+}
+.presentacionHomeImgs{ /*Mostrar imagenes*/
+  position: relative !important;
+  opacity: 1 !important;
+  transition-duration: .5s;
+}
+
+
+.presentacionHomeComenzar{ /*estilos del boton para comenzar a usar la web*/
+  margin-top: 35px;
+  position: absolute;
+  padding: 8px;
+  font-size: 1.2em;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #0f0 !important;
+  background: linear-gradient(90deg,#0b920b,transparent,transparent);
+  box-shadow: 0 0 15px 4px #0f0;
+  opacity: 0;
+  transition-duration: .5s;
+}
+.presentacionHomeComenzarShow{
+  position: relative !important;
+  opacity: 1 !important;
+  transition-duration: .5s;
+}
+
+
+@media(min-width:750px){
+  .presentacionHome{ /*contenedor principal*/
+    font-size: 2em;
+  }
+}
+
+
+
+
+
+
+/*estilos del porfolio*/
+.HomePorfolio{ /*contenedor principal*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 4;
+  background-color: #181717;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/*primera parte presentacion*/
+.HomePorfolioPresent{  /*contenedor principal*/
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 25px;
-  color: #e3fadb !important;
+  min-height: 350px;
+  max-height: 500px;
+  padding: 15px;
+  box-shadow: 0px 35px 85px 0px #0f0;
+  z-index: 25;
+}
+.HomePorfolioPresentTexto{ /*parrafo de la izquierda*/
   text-align: center;
+  width: 50%;
+  font-size: 1.2em;
+  color: #0f0;
+}
+.HomePorfolioPresentTexto h2{
+  font-size: 1.8em;
+  color: #0f0;
+}
+.HomePorfolioPresentImg{ /*contenedor de la imagen*/
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  overflow: hidden;
+}
+.HomePorfolioPresentImg img{ /*imagen*/
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 @media(min-width: 750px){
-  .contenedorHome{
-    margin-top: 0;
-    display: flex;
-    flex-direction: row;
-    height: 85vh;
-    /* gap: 150px; */
-    align-items: center;
-    justify-content: center;
+  .HomePorfolioPresent{  /*contenedor principal*/
+    height: 60vh;
   }
-  
-  /* estos son los dos contenedores */
-  .contenedorHome__contenido{
-    background-color: #3c413c;
-    height: 75%;
-    width: 25%;
-    min-width: 200px;
-    max-height: 450px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  .HomePorfolioPresentTexto{ /*parrafo de la izquierda*/
+    font-size: 2.5em;
   }
+  .HomePorfolioPresentImg{ /*contenedor de la imagen*/
+    width: 350px;
+    height: 350px;
+  }
+}
+
+
+
+
+/*segunda parte tecnologias*/
+.HomePorfolioTecnologias{
+  position: relative;
+  background-color: #161a16;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/*boton para mostrar menu*/
+.HomePorfolioBtnIniciar{
+  position: fixed;
+  top: 25%;
+  left: 8px;
+  z-index: 25;
+  padding: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 1000px;
+  background-color: transparent;
+  box-shadow: 0 0 15px 4px #0f0;
+  background-color: #000;
 }
