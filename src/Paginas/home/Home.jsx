@@ -14,6 +14,7 @@ import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 // iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import ScrollToTop from '../../ScrollToTop';
 
 
 
@@ -27,20 +28,8 @@ const Parpadeo=()=>{
 
 
 
-function Home({active}) {
+function Home() {
 
-  const contenedor1 = useRef();
-  const contenedor2 = useRef();
-
-  useEffect(()=>{
-    if(active == true){
-      contenedor1.current.classList.add("contenedorHomeDark")
-      contenedor2.current.classList.add("contenedorHomeDark")
-    } else if(active == false){
-      contenedor1.current.classList.remove("contenedorHomeDark")
-      contenedor2.current.classList.remove("contenedorHomeDark")
-    }
-  })
 
 
   // maquina de escribir
@@ -81,6 +70,7 @@ function Home({active}) {
         setPalito(false);
       }
     }, 150);
+    window.scroll(0,0)
   };
 
   // aqui mostramos el h1 y sus imagenes en la primera presentacion de la web.
@@ -104,25 +94,31 @@ function Home({active}) {
   }, [showContent]);
 
 
+
+
+
+  // parte 2 slider de presentacion.
+
   // estos son las imagenes del slider.
+
   const imagenes = [
     {
-      imagen: "https://th.bing.com/th/id/OIP.QauTE01jxxSjf1xabFYPqgAAAA?pid=ImgDet&w=182&h=182&c=7",
+      imagen: "https://th.bing.com/th/id/OIP.IFVqzNgscDUy47NwgHwxpgAAAA?pid=ImgDet&w=182&h=182&c=7",
       nombre: "javaScript",
       id: 1
     },
     {
-      imagen: "https://th.bing.com/th/id/OIP.K-4RqDC6zFrpAG31ayDDOgHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7",
+      imagen: "https://wallpaperbat.com/img/641219-react-js-wallpaper-top-free-react-js-background.jpg",
       nombre: "react",
       id: 2
     },
     {
-      imagen: "https://th.bing.com/th/id/R.7494e83354e2662240d06630cc31f08d?rik=9tIRLZpYS9oTfQ&pid=ImgRaw&r=0",
+      imagen: "https://wallpapercave.com/wp/wp8661113.jpg",
       nombre: "python",
       id: 3
     },
     {
-      imagen: "https://th.bing.com/th/id/OIP.rf2cCLNd0hv9z-J31V39EAHaER?w=500&h=288&rs=1&pid=ImgDetMain",
+      imagen: "https://sun9-21.userapi.com/c850632/v850632215/18f42a/zb1OZezJYsk.jpg",
       nombre: "git",
       id: 4
     }
@@ -154,10 +150,12 @@ function Home({active}) {
         setCurrentIndex(currentIndex + 1);
       }
     }
-  }
-
+  } 
+  
+  
   return (
     <>
+      
       <MensajeModal texto={`ㅤㅤㅤㅤㅤㅤㅤ`}/>
       <main>
           

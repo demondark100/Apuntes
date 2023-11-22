@@ -263,7 +263,6 @@
 .SliderHomeContentImgs ul li img{  /*imagenes de la lista*/
   width: 100vw;
   height: 100vh;
-  object-fit: contain;
-  background-color: #111010000;
+  object-fit: cover;
   object-position: center;
 }
