@@ -1,5 +1,6 @@
 .RedesContent{   /*contenedor principal*/
-  background-color: #242924;
+  background-color: #2429249f;
+  backdrop-filter: blur(8px);
   border-radius: 1000px;
   padding: 4px;
   padding-bottom: 15px;

@@ -1,19 +1,20 @@
 aside{
   pointer-events: stroke;
-  height: 55vh;
-  max-height: 450px;
-  background-color: #000000f1;
+  height: 88vh !important;
+  background-color: #00000065;
+  backdrop-filter: blur(8px);
   padding: 8px;
   border-radius: 10px;
   min-height: 110px;
   overflow: auto;
-  width: 80vw;
+  width: 70vw;
 }
 aside::-webkit-scrollbar{
   display: none;
 }
 
 .NavAsideUl{
+  margin-top: 35px;
   display: flex;
   list-style: none;
   cursor: pointer;

@@ -14,8 +14,7 @@ import MensajeModal from '../../componentes/MensajeModal/mensajeModal';
 // iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import ScrollToTop from '../../ScrollToTop';
-
+import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -50,13 +49,13 @@ function Home() {
 
   // mostrar paginas
     const [showContent, setShowContent] = useState(true); // contenedor de presentacion
-    const [menuHome, setMenuHome] = useState(false);
 
 
 
   // Esto es para hacer el efecto maquina de escribir.
 
-  const escribir = (variable,str) => {
+  const escribir = (variable,str,tiempo) => {
+    variable("")
     let i = 0;
     let newString = "";
     let arr = str.split("");
@@ -69,13 +68,12 @@ function Home() {
         clearInterval(show);
         setPalito(false);
       }
-    }, 150);
-    window.scroll(0,0)
+    }, tiempo);
   };
 
   // aqui mostramos el h1 y sus imagenes en la primera presentacion de la web.
   useEffect(() => {
-    escribir(setTextoPresentacion,"¡Hello world! I'm a dev.");
+    escribir(setTextoPresentacion,"¡Hello world! I'm a dev.",80);
     setTimeout(() => setJsImgShow(true), 2000);
     setTimeout(() => setReactImgShow(true), 2500);
     setTimeout(() => setPythonImgShow(true), 3000);
@@ -88,8 +86,10 @@ function Home() {
     let cambio = localStorage.getItem("ShowContent");
     if (cambio === "false") {
       setShowContent(false);
-      escribir(setTextoTitlePresent,"¡Bienvenido!")
-      setTimeout(() => escribir(setTextoParrafoPresent,"¡Hola! soy Daniel , desarrollador web actualmente front-end en aprendizaje de back-end"), 1800)
+      escribir(setTextoTitlePresent,"¡Bienvenido!",100)
+      setTimeout(() => escribir(setTextoParrafoPresent,"¡Hola! soy Daniel , desarrollador web actualmente front-end en aprendizaje de back-end",50),2000);
+      main.current.style.zIndex = 0
+
     }
   }, [showContent]);
 
@@ -103,23 +103,27 @@ function Home() {
 
   const imagenes = [
     {
-      imagen: "https://th.bing.com/th/id/OIP.IFVqzNgscDUy47NwgHwxpgAAAA?pid=ImgDet&w=182&h=182&c=7",
+      imagen: "https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-custom-events.png?w=730",
       nombre: "javaScript",
+      info: "Este lenguaje lo uso para darle dinamismo a los proyectos front-end.",
       id: 1
     },
     {
       imagen: "https://wallpaperbat.com/img/641219-react-js-wallpaper-top-free-react-js-background.jpg",
       nombre: "react",
+      info: "Este es mi framework principal para trabajar con el front-end.",
       id: 2
     },
     {
       imagen: "https://wallpapercave.com/wp/wp8661113.jpg",
       nombre: "python",
+      info: "Este lenguaje lo uso para el back-end y otras cosas.",
       id: 3
     },
     {
       imagen: "https://sun9-21.userapi.com/c850632/v850632215/18f42a/zb1OZezJYsk.jpg",
       nombre: "git",
+      info: "Esto lo uso para el control de versiones de un proyecto para guardarlo despues en github.",
       id: 4
     }
   ]
@@ -128,6 +132,7 @@ function Home() {
   const btn2 = useRef();  // boton 2 para scroollear.
   const [currentIndex, setCurrentIndex] = useState(0); // imagen que se mostrar.
 
+  // hacer animacion al slider
   useEffect(()=>{
     const listNode = listRef.current;
     const imgs = listNode.querySelectorAll("li > img")[currentIndex]
@@ -136,28 +141,52 @@ function Home() {
         behavior: "smooth"
       });
     }
+
+
+    
+
   },[currentIndex])
 
-  const scrollSlider = move =>{
+
+
+  // botones del scroll.
+  const [indexNombre, setIndexNombre] = useState(0); // posision del nombre.
+  const [nombres, setNombres] = useState(imagenes[0].nombre); // esto guarda el nombre del lenguaje
+  const [informacion, setInformacion] = useState(imagenes[0].info);
+  const scrollSlider = (move) =>{
     if (move == "prev") {
       setCurrentIndex(current=>{
         const primero = currentIndex === 0;
-        return primero ? 0 : current - 1
+        return primero ? 0 : current - 1;
+      });
+      setIndexNombre(current=>{
+        const primero = currentIndex === 0;
+        return primero ? 0 : current - 1;
       });
     } else{
       const final = currentIndex === imagenes.length - 1;
       if (!final) {
         setCurrentIndex(currentIndex + 1);
+        setIndexNombre(indexNombre + 1)
       }
     }
   } 
-  
-  
+  // mostrar los datos al usuario.
+  useEffect(()=>{
+    escribir(setNombres,imagenes[indexNombre].nombre,80)
+    escribir(setInformacion,imagenes[indexNombre].info,5)
+  },[indexNombre])
+
+  // poner el scroll hacia arriba.
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[])
+  const main = useRef(null);
   return (
     <>
       
       <MensajeModal texto={`ㅤㅤㅤㅤㅤㅤㅤ`}/>
-      <main>
+      <main ref={main} className='mainHome'>
           
 
         {/* presentacion principal de la web */}
@@ -184,20 +213,6 @@ function Home() {
           </div>
         }
 
-        {/* boton del menu de home */}
-          <button onClick={()=>setMenuHome(!menuHome)} className='HomePorfolioBtnMenu'>
-            {
-              menuHome ? <p>X</p>:<FontAwesomeIcon icon={faBars}/>
-            }
-          </button>
-
-
-        {/* contenedor del tutorial */}
-          <div className={`HomeMenu ${menuHome ? "":"HomeMenuHide"}`}>
-            <button>Tutorial</button>
-          </div>
-
-
 
 
 
@@ -219,21 +234,34 @@ function Home() {
 
           {/* segunda parte tecnologias */}
           <div className='HomeTecnologias'>
-            <div className='SliderHomeContent'>
-              <button ref={btn1} onClick={()=>scrollSlider("prev")} className='leftArrow'>{"<<"}</button>
-              <button ref={btn2} onClick={()=>scrollSlider("next")} className='rigthArrow'>{">>"}</button>
+
+            <div className='HomeTecnologiasBtn'>
+              <button ref={btn1} onClick={()=>scrollSlider("prev")}><FontAwesomeIcon icon={faChevronLeft} /></button>
+              <button ref={btn2} onClick={()=>scrollSlider("next")}><FontAwesomeIcon icon={faChevronRight} /></button>
+            </div>
+
+            <div className='SliderHomeContentInfo'>
+              <div className='SliderHomeContentInfoContent'>
+                <h2>{nombres}</h2>
+                <p>{informacion}</p>
+              </div>
+            </div>
+
               <div className='SliderHomeContentImgs'>
                 <ul ref={listRef}>
                   {
-                    imagenes.map(i=>(
+                    imagenes.map((i)=>(
                       <li key={i.id}>
+                        
+                        <div className='sliderImgLiHome'></div>
+
                         <img src={i.imagen} alt={i.nombre} />
                       </li>
                     ))
                   }
                 </ul>
               </div>
-            </div>
+
           </div>
           
 

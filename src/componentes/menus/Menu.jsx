@@ -23,6 +23,33 @@ import Redes from "../redes/redes";
 function Menu() {
   const [showOpciones, setShowOpciones] = useState(false);
   const [showRedes, setShowRedes] = useState(false);
+  const destello = useRef(null); // destello que indica al usuario que menu eligio.
+
+  // esta funcion es para mostrar los cursos.
+  const mostrarOpciones=()=>{
+    setShowOpciones(!showOpciones)
+    
+    if (!showOpciones) {  
+      destello.current.style.left = "-100%"
+      destello.current.style.opacity = "1"
+      setTimeout(() => destello.current.style.opacity = "0", 500);
+    } else {
+      destello.current.style.opacity = "0"
+    }
+  }
+
+  // esta funcion es para mostrar los proyectos
+  const mostrarProyectos=()=>{
+    setShowRedes(!showRedes)
+
+    if (!showRedes) {  
+      destello.current.style.left = "100%"
+      destello.current.style.opacity = "1"
+      setTimeout(() => destello.current.style.opacity = "0", 500);
+    } else {
+      destello.current.style.opacity = "0"
+    }
+  }
 
   return (
     <div>
@@ -30,7 +57,7 @@ function Menu() {
         <nav className="contenedor__menu">
           <ul className="contenedor__menuLinks">
             <li>
-              <button onClick={()=>setShowOpciones(!showOpciones)}>
+              <button onClick={mostrarOpciones}>
                 {
                   showOpciones ?
                   <p>X</p>:
@@ -49,7 +76,7 @@ function Menu() {
               </Link>
             </li>
             <li>
-              <button onClick={()=>setShowRedes(!showRedes)}>
+              <button onClick={mostrarProyectos}>
                 {
                   showRedes ?
                   <p>X</p>:
@@ -60,10 +87,11 @@ function Menu() {
           </ul>
         </nav>
       </header>
-      <div className="headerOptions">
-        <div className={`headerOptionsContent ${showOpciones ? "":"headerOptionsContentHide"}`}>
-          <Barrita />
-        </div>
+
+      <div className="destelloContent"><div ref={destello}></div></div>
+
+      <div style={{"pointerEvents": "none"}} className={`headerOptionsContent ${showOpciones ? "":"headerOptionsContentHide"}`}>
+        <Barrita />
       </div>
       <div className="headerRedes">
         <div className={`headerRedesRed ${showRedes ? "":"headerRedesRedHide"}`}>
