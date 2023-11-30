@@ -3,199 +3,155 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
+import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./inObser.css";
 import { useRef,useEffect } from "react";
 
 function InObserJs() {
-  const caja3 = useRef(null);
 
-  const verificarVisibilidad = (entradas) => {
-    const entry = entradas[0];
-    console.log(entry.isIntersecting);
-  };
-  
-
-  useEffect(()=>{
-    const observer = new IntersectionObserver(verificarVisibilidad);
-    observer.observe(caja3.current);
-  })
-
-  useEffect(()=>{
-    const cajas = document.querySelectorAll(".caja1")
-    const verificarVisibilidad = (entradas) =>{
-        for(let entry of entradas){
-            if (entry.isIntersecting) {
-                console.log(`se esta viendo la caja ${entry.target.textContent}`)
-            }
-        }
-    }
-    const observer = new IntersectionObserver(verificarVisibilidad);
-    for(let caja of cajas){
-        observer.observe(caja)
-    }
-  })
-
-  const caja3_2 = useRef(null);
-
-  useEffect(()=>{
-    const callback = (entradas) =>{
-        const entry = entradas[0];
-        console.log(entry.isIntersecting)
-    }
-    let option = { 
-            rootMargin: '50px',
-            threshold: 1.0
-    }
-    const observer = new IntersectionObserver(callback,option);
-    observer.observe(caja3_2.current)
-  })
 
 
   return (  
     <>
       <main>
         <h1>Interseccion observer</h1>
-        <Conseptos texto={`Esta API nos ayudara de mejor manera a manejar nuestro sitio web por detras pronto entenderemos a lo que me refiero.`}/>
-        <Html codigo={`<div class="caja caja_1"><span>caja 1</span></div>
-<div class="caja caja_2"><span>caja 2</span></div>
-<div class="caja caja_3"><span>caja 3</span></div>
-<div class="caja caja_4"><span>caja 4</span></div>`}/>
-        <Css codigo={`.caja {
-    height: 200px;
-    width: 200px;
-    display: flex;
-    background-color: #23b6cf;
-    margin: 20px auto;
-    color: #f1ffb3;
-    font-size: 35px;
-    border: solid 4px #363636;
-}
-.caja span{
-    margin: auto;
-}
-.caja_2 {
-    background-color: #153692;
-    border: solid #000 4px;
-}
-.caja_3 {
-    background-color: #99c719;
-    border: solid #000 4px;
-}
-.caja_4 {
-    background-color: #d6a92d;
-    border: solid #000 4px;
-}`}/>
-        <h2>parte 1 parametros</h2>
-        <JavaScropt codigo={`const observer = new IntersectionObserver(callback,parametros);
-// esto tiene dos parametros
-// parametro 1 callback
-// parametro 2 options`}/>
-        <h2>parte 2 funcion</h2>
-        <JavaScropt codigo={`// esto se debe poner antes de declarar a la variable
-// observer para poder ponerlo como parametro.
+        <Conseptos texto={`Esta api es para saber cuando esque una caja se esta viendo en pantalla , esto nos puede servir para muchas cosas como:`}/>
+        <ol>
+          <li>Agregar animaciones: Cuando el usuario haga scroll podemos agregar una pequeña animacion para que se vayan mostrando el contenido de una forma mas elegante.</li>
+          <li>Lazy loading: Esta tecnica obtimiza el tiempo de carga ya que carga los datos de forma progresiva y obtimiza mucho la web.</li>
+        </ol>
+        <h2>observer</h2>
+        <Conseptos texto={`Esta api necesita de algunos parametros para trabajar con ella.`}/>
 
-const caja3 = document.querySelector(".caja_3")
+        <h2>llamado de api</h2>
+        <Sintaxis codigo={`const observer = new IntersectionObserver(funcion para observar);`}/>
+        <Conseptos texto={`new IntersectionObserver debe recibir una funcion para que mas adelante pueda ser observada.`}/>
+        <JavaScropt codigo={`const observer = new IntersectionObserver(observar);`}/>
 
-
-const verificarVisibilidad = (entradas) =>{
-  // esta funcion nos devolvera entradas.
-    
-  const entry = entradas[0];
-  // el parametro que recibira siempre sera un arreglo.
-    
-  console.log(entry)
-  // con esto nostraremos lo que hay en el elemento.
-}
-const observer = new IntersectionObserver(verificarVisibilidad,Option);`}/>
-        <h2>parte 3 observe</h2>
-        <JavaScropt codigo={`observer.observe(caja3)
-// observe es un metodo que sirve para
-// observar el elemento que le digamos.`}/>
-        <h2>parte 4 isIntersecting</h2>
-        <Conseptos texto={`Esto sera para verificar si la caja 3 aparece en el viewport si aparece dira true si no aparece dira false.
-
-En la funcion en vez de solo poner entry agregaremos .isIntersecting ejemplo.`}/>
-        <JavaScropt codigo={`const verificarVisibilidad = (entradas) =>{
-    const entry = entradas[0];
-    console.log(entry.isIntersecting)
-}`}/>
-        <h2>sin comentarios</h2>
-        <Conseptos texto={`codigo 1 completo sin comentarios:
-
-este codigo nos mostrara si una caja esta en el viewport o no.`}/>
-        <JavaScropt codigo={`const caja3 = document.querySelector(".caja_3")
-const verificarVisibilidad = (entradas) =>{
-    const entry = entradas[0];
-    console.log(entry.isIntersecting)
-}
-const observer = new IntersectionObserver(verificarVisibilidad);
-observer.observe(caja3)`}/>
-        <h2>resultados</h2>
-        <Conseptos texto={`Para ver los resultados precionar F12.`}/>
-        <div class="caja caja_1"><span>caja 1</span></div>
-        <div class="caja caja_2"><span>caja 2</span></div>
-        <div class="caja caja_3" ref={caja3}><span>caja 3</span></div>
-        <div class="caja caja_4"><span>caja 4</span></div>
-
-        <h2>ejercicio</h2>
-        <JavaScropt codigo={`const cajas = document.querySelectorAll(".caja")
-const verificarVisibilidad = (entradas) =>{
-    for(let entry of entradas){
-        if (entry.isIntersecting) {
-            console.log(\`
-                se esta viendo la caja ${"${entry.target.textContent}"}
-            \`)
-        }
-    }
-}
-const observer = new IntersectionObserver(verificarVisibilidad);
-for(let caja of cajas){
-    observer.observe(caja)
-}`}/>
-        <h2>resultado</h2>
-        <Conseptos texto={`Para ver los resultados precionar F12.`}/>
-        <div className="website websiteObserver">
-          <div class="caja1 caja_1"><span>caja 1</span></div>
-          <div class="caja1 caja_2"><span>caja 2</span></div>
-          <div class="caja1 caja_3"><span>caja 3</span></div>
-          <div class="caja1 caja_4"><span>caja 4</span></div>
-        </div>
-
-        <h2>option</h2>
-        <Conseptos texto={`Esto tambien se pone antes de declarar la variable observer.`}/>
-        <JavaScropt codigo={`let options = {
-    // root: 
-        // esto toma un elemento como referencia por defecto es voewport.
-    rootMargin: '30px',
-        // esto dira cuanto margen tiene.
-    threshold: 0.5
-        // esto nos dira con que altura de la caja queremos trabajar.
-}
-
-const observer = new IntersectionObserver(callback,options);`}/>
-        <h2>ejercicio</h2>
-        <JavaScropt codigo={`const caja3 = document.querySelector(".caja_3")
-
-const callback = (entradas) =>{
-    const entry = entradas[0];
-    console.log(entry.isIntersecting)
-}
-let option = { 
-        rootMargin: '50px',
-        threshold: 1.0
-}
-const observer = new IntersectionObserver(callback,option);
-observer_2.observe(caja3)`}/>
-        <h2>resultado</h2>
-        <Conseptos texto={`Para ver los resultados precionar F12.`}/>
-        <div className="website websiteObserver">
-          <div class="caja1 caja_1"><span>caja 1</span></div>
-          <div class="caja1 caja_2"><span>caja 2</span></div>
-          <div class="caja1 caja_3" ref={caja3_2}><span>caja 3</span></div>
-          <div class="caja1 caja_4"><span>caja 4</span></div>
-        </div>
+        <h2>una funcion</h2>
+        <Conseptos texto={`La funcion servira para saber si una caja esta en la pantalla o no , aqui podremos hacer lo que sea con el elemento que este siendo visto en pantalla.
         
+        Esta funcion recibira dos parametros:`}/>
+        <ol>
+          <li>entry: que elemento sera observado.</li>
+          <li>observer: Esto no lo pondremos explicitamente como parametro pero sera muy importante ponerlo en la funcion.</li>
+        </ol>
+        <Conseptos texto={`Cuando leamos las cajas que seran observadas usaremos tres cosas muy importantes para trabajar con observer.`}/>
+        <ol>
+          <li>
+            isIntersecting: Esto devolvera true o false segun si el elemento se esta viendo en la pantalla o no.
+          </li>
+          <li>
+            target: Con esto podremos modificar el elemento como si seleccionaramos con querySelector osea que podremos agregar clases o modificar su contenido del elemento que se esta viendo en pantalla.
+          </li>
+          <li>
+            unobserve: Esto es para que una vez un elemento fue observado ya no se vuelva a observar una y otra vez , en simples palabras si un elemento ya se mostro en pantalla no volvera a hacer el proceso de verificar si esta siendo observado ese elemento.
+          </li>
+        </ol>
+        <JavaScropt codigo={`const observar=(entry,observer)=>{
+  if(entry.isIntersecting){
+    entry.target.textContent = "hola mundo";
+    observer.unobserve(entry.target)
+  }
+}`}/>
+        <h2>observar</h2>
+        <Conseptos texto={`Por ultimo debemos observar el elemento que queramos.`}/>
+        <JavaScropt codigo={`observer.observe(que div o elemento html quieres que sea observado);`}/>
+
+        <h2>practica</h2>
+        <Conseptos texto={`Probablemente te mareaste un poco pero con la practica veremos que es muy facil de usar si no entiendes algo del codigo vuelve a leer , todo lo que usaremos ya esta explicado.`}/>
+        <Html codigo={`<div class="pruebas caja1">contenido cargado</div>
+<div class="pruebas caja2"></div>
+<div class="pruebas caja3">contenido cargado</div>`}/>
+        <Css codigo={`*{
+  margin: 0;
+  padding: 0;
+}
+.pruebas{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  border: 2px solid #0f0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja2{
+  transform: translate(-100%,0);
+}
+.load{
+  transform: translate(0,0);
+  transition-duration: .5s;
+}`}/>
+        <JavaScropt codigo={`const caja2 = document.querySelector(".caja2");
+
+const observar=(entry,observer)=>{
+  console.log(entry)
+  if (entry[0].isIntersecting) {
+    const caja = entry[0].target;
+    caja.textContent = "lazy load cargado";
+    caja.classList.add("load");
+    observer.unobserve(caja)
+  }
+}
+
+const observer = new IntersectionObserver(observar);
+observer.observe(caja2)`}/>
+        <Conseptos texto={`Aqui simplemente estamos observando el div que tiene la clase "caja2" , le agregamos un contenido para que la carga sea mas rapida y ademas le ponemos una animacion cuando el elemento esta siendo observado en simples palabras estamos aplicando lazy load.`}/>
+
+        <h2>observar varias cajas.</h2>
+        <Conseptos texto={`Tambien podemos observar varias cajas para darles una animacion o aplicar lazy load.`}/>
+        <Html codigo={`<div class="pruebas"></div>
+<div class="pruebas"></div>
+<div class="pruebas"></div>`}/>
+        <Css codigo={`*{
+  margin: 0;
+  padding: 0;
+}
+.pruebas{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  border: 2px solid #0f0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-100%,0);
+}
+
+.load{
+  transform: translate(0,0);
+  transition-duration: .5s;
+}`}/>
+        <JavaScropt codigo={`const pruebas = document.querySelectorAll(".pruebas");
+const nombres = ["Emilia", "Lanmis", "Sylvie"];
+let indiceNombres = 0;
+  
+const observar = (entry, observer) => {
+  entry.forEach((i) => {
+    if (i.isIntersecting) {
+      const cajas = i.target;
+  
+      if (nombres[indiceNombres] !== undefined) {
+        cajas.innerHTML = nombres[indiceNombres];
+        cajas.classList.add("load")
+        indiceNombres++;
+      }
+  
+      observer.unobserve(i.target);
+    }
+  });
+};
+  
+const observer = new IntersectionObserver(observar);
+pruebas.forEach((i) => {
+  observer.observe(i);
+});`}/>
+        <Conseptos texto={`Aqui hacemos lo mismo que el otro codigo solo que observamos todas las cajas y agregamos el contenido de un arreglo llamado nombres.`}/>
       </main>
       <Footer/>
     </>

@@ -69,6 +69,7 @@ function Proyectos({sendshowProyects}) {
   const [cap9Js, setCap9Js] = useState(false);
   const [cap10Js, setCap10Js] = useState(false);
   const [cap11Js, setCap11Js] = useState(false);
+  const [cap12Js, setCap12Js] = useState(false);
 
   useEffect(()=>{
     const links = document.querySelectorAll(".temas a")
@@ -270,6 +271,17 @@ function Proyectos({sendshowProyects}) {
                   </div>
 
 
+                  <div>
+                    
+                    <p onClick={()=>setCap12Js(!cap12Js)}>capitulo 12</p>
+                    {
+                      cap12Js && <div className='temas'>
+                        <Link onMouseMove={()=>showImg("imagen")} onMouseOut={()=>setShowContent(false)} to={"javaScript/cap12ProyV1"}>playList</Link>
+
+                      </div>
+                    }
+                  
+                  </div>
 
 
 {/* 
