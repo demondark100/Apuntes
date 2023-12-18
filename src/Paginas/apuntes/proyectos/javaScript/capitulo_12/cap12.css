@@ -1,0 +1,889 @@
+/*quitar scroll a page*/
+.cap12JsV1::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
+/*menu principal*/
+.contentCap12JsV1Menu{
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(0deg , transparent ,#000,#000,#000);
+  z-index: 4;
+  border-bottom: 1px solid #141414;
+}
+
+/*contenedor del boton*/
+.contentCap12JsV1MenuBtnMenu{
+  background-color: transparent;
+  font-size: 1em;
+  margin-left: 15px;
+  color: #b2dbff !important;
+}
+.contentCap12JsV1MenuBtnMenu p{
+  color: #b2dbff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*contenedor de las opciones*/
+.contentCap12JsV1MenuOptions{
+  position: absolute;
+  height: 100vh;
+  top: 50px;
+  left: 0;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition-property: left;
+  transition-duration: .5s;
+  padding: 0 !important;
+  width: 45%;
+  
+}
+.contentCap12JsV1MenuOptionsHide{
+  left: -100%;
+  transition-duration: .5s;
+}
+
+.contentCap12JsV1MenuOptions button{ /*estilos de los botones*/
+  background-color: transparent;
+  padding: 0 !important;
+}.contentCap12JsV1MenuOptions button span{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  font-size: 1.5em;
+  color: #b2dbff !important;
+  background-color: #000;
+  border-radius: 8px;
+  padding: 15px;
+  transition-duration: .2s;
+}
+.contentCap12JsV1MenuOptions button span p{
+  color: #b2dbff !important;
+}
+.contentCap12JsV1MenuOptions button span:hover{
+  background-color: #111111;
+  transition-duration: .2s;
+}
+
+
+
+
+/*estilos para la bisqueda de musicas*/
+.contentCap12JsV1MenuBuscarContent{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/*contenedor del input*/
+.contentCap12JsV1MenuBuscar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+  border-radius: 1000px;
+  width: 190px;
+  height: 60%;
+  border: 2px solid #0f0f0f;
+  color: #b2dbff !important;
+  transition-duration: .5s;
+  gap: 4px;
+}
+.contentCap12JsV1MenuBuscarHide{
+  width: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .5s;  
+}
+.contentCap12JsV1MenuBuscarIcon{ /*estilos del icono de busqueda*/
+  color: #b2dbff;
+  background-color: transparent !important;
+  font-size: 1em;
+  padding: 0;
+  cursor: pointer;
+}
+.contentCap12JsV1MenuBuscar input{ /*input de buscar*/
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  height: 100%;
+  color: #b2dbff !important;
+  width: 85%;
+}
+
+/*contenedoer de las sugerencias de busqueda*/
+.contentCap12JsV1MenuSugerencias{
+  position: absolute;
+  top: 45px;
+  background-color: #5550503a;
+  backdrop-filter: blur(2px);
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+}
+.contentCap12JsV1MenuSugerencias button{ /*elegir alguna sugerencia*/
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  text-align: start;
+  font-size: .9em;
+  color: #bea7a7 !important;
+}    .contentCap12JsV1MenuSugerencias button:hover{
+  background-color: #0c0a0a;
+}
+.contentCap12JsV1MenuBuscarBtnDelete{ /*boton para limpiar el input*/
+  padding: 0;
+  position: relative;
+  font-size: 1em;
+  background-color: transparent !important;
+}
+
+
+
+@media(min-width: 750px){
+  /*contenedor del boton*/
+  .contentCap12JsV1MenuBtnMenu{
+    display: none;
+  }
+  /*contenedor de las opciones*/
+  .contentCap12JsV1MenuOptions{
+    position: absolute;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    border-right: 2px solid #161616;
+    width: 200px;
+    padding-top: 35px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*estilos de las canciones*/
+
+
+/*estilos del contenedor principañ*/
+.contentCap12JsV1{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+}
+.contentCap12JsV1::-webkit-scrollbar{
+  display: none;
+}
+
+.contentCap12JsV1Musicas{ /*contenedor de las musicas*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 150px;
+  gap: 4px;
+}
+.contentCap12JsV1MusicasContent{ /*contenedor de cada musica*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  overflow: hidden;
+  opacity: 0;
+  width: 150px;
+  height: 200px;
+  cursor: pointer;
+  margin: auto;
+  justify-content: center;
+}
+.contentCap12JsV1MusicasContentLoad{ /*contenido cargado*/
+  opacity: 1;
+  transition-duration: .5s;
+}
+
+.contentCap12JsV1MusicasContentInfo{ /*contenedor de la informacion de la musica*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.contentCap12JsV1MusicasContentInfoImgs{ /*contenedor de las imagenes*/
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.contentCap12JsV1MusicasContentInfo img{ /*imagen de las canciones*/
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.contentCap12JsV1MusicasContentInfoImgsIConoImg{ /*ocultar iconos de imagen*/
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #00000075;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.contentCap12JsV1MusicasContentInfoImgsIConoImgShow{ /*mostrar icono de imagen iconos de imagen*/
+  opacity: 1;
+}
+.contentCap12JsV1MusicasContentInfoImgsIConoImg p{
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 40%;
+  left: 40%;
+  font-size: .5em;
+  color: #fff !important;
+}
+.contentCap12JsV1MusicasContentInfoImgsIConoImg svg{
+  position: absolute;
+  margin: 0 !important;
+  padding: 4px !important;
+  font-size: 5em;
+  left: 0;
+  top: 0;
+  
+}
+.contentCap12JsV1MusicasContentDatos{ /*contenedor de los datos de la musica.*/
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.contentCap12JsV1MusicasContentDatos h4{ /*nombre de la musica*/
+  color: #b2dbff;
+  font-size: .8em;
+}
+.contentCap12JsV1MusicasContentDatos p{ /*artista de la musica*/
+  color: #b2dbff !important;
+  font-size: .5em;
+}
+
+.contentCap12JsV1MusicasContentInfoIconOptio{ /*icono de opciones*/
+  cursor: pointer;
+  display: block;
+  color: #b2dbff;
+  position: absolute;
+  margin-left: 110px;
+  margin-top: 155px;
+}
+
+.contentCap12JsV1MusicasBtnAleatori{ /*boton de musicas aleatorias*/
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  bottom: 85px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.contentCap12JsV1MusicasBtnAleatori button{ /*boton*/
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 1000px;
+  color: #000 !important;
+  font-size: 1em;
+  pointer-events: auto;
+}
+.contentCap12JsV1MusicasBtnAleatoriAviso{
+  display: none;
+}
+
+
+@media(min-width: 750px){
+  .contentCap12JsV1Musicas{ /*contenedor de las musicas*/
+    position: absolute;
+    right: 0;
+    width: 75%;
+  }
+  .contentCap12JsV1MusicasContent{ /*contenedor de cada musica*/
+    width: 170px;
+    height: 200px;
+  }
+  .contentCap12JsV1MusicasBtnAleatori{ /*boton de musicas aleatorias*/
+    left: 100px;
+  }
+}
+
+
+
+
+
+
+
+/*estilos del reproductor de musica*/
+.contenedorPrimarioReproductor{ /*contenedor principal*/
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00000085;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: auto;
+  transition-property: top;
+  transition-duration: .5s;
+  z-index: 3;
+}   .contenedorPrimarioReproductorHide{
+  top: 100%;
+  transition-duration: .5s;
+}.contenedorPrimarioReproductor::-webkit-scrollbar{
+  display: none;
+}
+
+
+.contentCap12JsV1Reproductor{ /*mostrar contenido*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  overflow: auto;
+  padding-bottom: 50px;
+}.contentCap12JsV1Reproductor::-webkit-scrollbar{
+  display: none;
+}
+
+
+.contentCap12JsV1ReproductorImg{ /*contenedor de la imagen*/
+  width: 80%;
+  height: 250px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  max-width: 350px;
+  justify-content: center;
+  margin-top: 35px;
+  cursor: pointer;
+}
+.contentCap12JsV1ReproductorImg img{ /*imagen*/
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.contentCap12JsV1ReproductorTimers{ /*contenedor de la duracion de musica*/
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0;
+}.contentCap12JsV1ReproductorTimers p{ /*color de las letras*/
+  color: #b2dbff !important;
+}
+
+.contentCap12JsV1ReproductorInfo{ /*contenedor de la info del reproductor*/
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #b2dbff;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.contentCap12JsV1ReproductorControls{ /*contenedor de los controles*/
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*input del rango*/
+.contentCap12JsV1ReproductorTime{ /*input range*/
+  -webkit-appearance: none;
+  width: 85%;
+  background-color: #f00;
+  height: 4px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}.contentCap12JsV1ReproductorTime::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #f00;
+}
+
+
+.contentCap12JsV1ReproductorControlsButton{ /*contenedor de los botones*/
+  width: 85%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.contentCap12JsV1ReproductorControlsButton button{ /*botones para controlar*/
+  background-color: transparent;
+  font-size: 2.5em;
+}
+
+
+
+.contentCap12JsV1ReproductorControls2{ /*contenedor de los controles secundarios*/
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  border-top: 1px solid #141414;
+  z-index: 4;
+}
+
+.contentCap12JsV1ReproductorControls2 button{ /*botones de los otros controles*/
+  font-size: 1.2em;
+  padding: 0;
+  background-color: transparent;
+}
+
+
+
+.contentCap12JsV1ReproductorVol{ /*input del volumen*/
+  -webkit-appearance: none;
+  margin-left: 8px;
+  height: 4px;
+  background-color: #4e4141;
+  border-radius: 1000px;
+  cursor: pointer;
+  width: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+}    .contentCap12JsV1ReproductorVol::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #4e4141;
+  border-radius: 100px;
+}
+
+.contentCap12JsV1ReproductorControls2bTNhIDE{ /*boton para ocultar el reproductor*/
+  position: absolute;
+  right: 10px;
+}
+
+.contentCap12JsV1ReproductorControls2BtnVol{ /*contenedor del boton de volumen*/
+  position: relative;
+  background-color: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 35px;
+}
+
+
+.contentCap12JsV1ReproductorControls2Info{ /*contenedor de la info de controls 2*/
+  display: flex;
+  height: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  overflow: auto;
+  position: absolute;
+  left: 15px;
+  color: #84d7f6;
+  width: 100%;
+}  .contentCap12JsV1ReproductorControls2InfoImg{ /*contenedor de la imagen*/
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+
+}  .contentCap12JsV1ReproductorControls2Info img{ /*imagen*/
+  width: 100%;
+}
+
+@media(min-width:750px){
+  .contenedorPrimarioReproductor{ /*contenedor principal*/
+    align-items: end;
+  }
+  .contentCap12JsV1Reproductor{ /*mostrar contenido*/
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    right: 0;
+    top: 50px;
+    width: 75%;
+    height: 85% !important;
+    padding: 0;
+    gap: 0;
+  }
+  .contentCap12JsV1ReproductorImg{ /*contenedor de la imagen*/
+    width: 50%;
+    height: 150px;
+    margin-top: 35px;
+  }
+  .contentCap12JsV1ReproductorInfo{ /*contenedor de la info del reproductor*/
+    gap: 2px;
+  }
+  .contentCap12JsV1ReproductorTimers{ /*contenedor de la duracion de musica*/
+    width: 250px;
+    margin-bottom: 15px;
+  }
+  .contentCap12JsV1ReproductorTime{ /*input range*/
+    width: 250px;
+  }
+  .contentCap12JsV1ReproductorControlsButton{ /*contenedor de los botones*/
+    width: 450px;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+  }
+  .contentCap12JsV1ReproductorControlsButton button{ /*botones para controlar*/
+    font-size: 2em;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+/*estilos de los resultados de la busqueda*/
+.contentCap12JsV1ResultadosBusqueda{ /*contenedor principal*/
+  position: fixed;
+  top: 45px;
+  left: 0;
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentCap12JsV1ResultadosBusqueda h2{
+  color: #c40710 !important;
+  text-align: center !important;
+  display: block;
+  margin-top: 35px !important;
+  text-align: center;
+  width: 75%;
+}
+.contentCap12JsV1ResultadosBusquedaContent{ /*contenedor de cada musica*/
+  display: flex;
+  background-color: #000;
+  color: #84d7f6;
+  padding: 8px;
+  width: 85%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.contentCap12JsV1ResultadosBusquedaContentInfo{ /*contenedor de la informacion como la imagen y el titulo*/
+  display: flex;
+  gap: 8px;
+}
+.contentCap12JsV1ResultadosBusquedaContentInfoImgs{ /*contenedor de la umagen*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.contentCap12JsV1ResultadosBusquedaContentInfoImgs img{ /*imagen de la musica*/
+  width: 100%;
+  object-fit: cover;
+}
+.contentCap12JsV1ResultadosBusquedaContent button{
+  padding: 8px;
+  background-color: transparent !important;
+  font-size: 1em;
+}
+
+.contentCap12JsV1ResultadosBusquedaContentInfoOptions{ /*contenedor de las opciones de las musicas*/
+  width: 150px;
+  height: auto;
+  position: absolute;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.contentCap12JsV1ResultadosBusquedaContentInfoOptions button span{ /*botones de las opciones*/
+  display: flex;
+  background-color: #000;
+  color: #84d7f6 !important;
+}
+.contentCap12JsV1ResultadosBusquedaContentInfoOptions button span svg{
+  width: 25px;
+}
+.contentCap12JsV1ResultadosBusquedaContentInfoOptions button span b{
+  width: 25px;
+}
+.contentCap12JsV1ResultadosBusquedaContentInfoOptions button span p{
+  color: #84d7f6 !important;
+}
+
+@media(min-width:750px){
+  .contentCap12JsV1ResultadosBusqueda{ /*contenedor principal*/
+    align-items: end;
+  }
+  .contentCap12JsV1ResultadosBusquedaContent{ /*contenedor de cada musica*/
+    width: 70%;
+    position: relative;
+    right: 25px;
+  }
+}
+
+
+
+
+/*erstilos de las opciones de cada musica*/
+.contentCap12JsV1OpcionMusic{ /*contenedor principal*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0000007e;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+.contentCap12JsV1OpcionMusicHide{ /*ocultar contenedor principal*/
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity;
+  transition-duration: .5s;
+}
+.contentCap12JsV1OpcionMusicContentInfo{ /*contenedor de la info de la musica seleccionada*/
+  display: flex;
+  padding: 8px;
+  padding-left: 25px;
+  gap: 15px;
+}
+.contentCap12JsV1OpcionMusicContentInfo p{
+  color: #84d7f6 !important;
+}
+.contentCap12JsV1OpcionMusicContentInfoImg{ /*imagen*/
+  width: 45px;
+  height: 35px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentCap12JsV1OpcionMusicContentInfoImg img{
+  width: 100%;
+}
+
+
+
+.contentCap12JsV1OpcionMusicContent{ /*contendor de las opciones*/
+  position: relative;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  transition-duration: .2s;
+}
+.contentCap12JsV1OpcionMusicContentHide{ /*ocultar contenedor de las opciones*/
+  top: 100%;
+  transition-duration: .2s;
+}
+
+
+.contentCap12JsV1OpcionMusicContent button{ /*estilos de los botones de las opciones*/
+  color: #84d7f6 !important;
+  width: 100%;
+  text-align: start;
+  padding: 15px;
+  font-size: 1em;
+  background-color: transparent;
+  padding-left: 25px;
+} .contentCap12JsV1OpcionMusicContent button span{
+  display: flex;
+  gap: 8px;
+}.contentCap12JsV1OpcionMusicContent button span svg{
+  width: 15px;
+} .contentCap12JsV1OpcionMusicContent button span p{
+  color: #84d7f6;
+  width: 15px;
+}
+.contentCap12JsV1OpcionMusicContent button:hover{ /*estilos de los botones de las opciones al hace r hover*/
+  background-color: #0d0e0d;
+}
+
+@media(min-width: 750px){
+  .contentCap12JsV1OpcionMusicContent{ /*contendor de las opciones*/
+    width: 250px;
+  }
+}
+
+
+
+
+
+
+/*estilos de las musicas favoritas del usuario*/
+.contentCap12JsV1FavoritosContent{ /*contenedor principal*/
+  position: fixed;
+  right: 0;
+  top: 45px;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+.contentCap12JsV1FavoritosContentError{ /*mensaje de error osea no hay favoritos*/
+  color: #f00 !important;
+  text-align: center;
+  margin-top: 15px;
+}
+.contentCap12JsV1FavoritosContentMusic{ /*contenedor de cada musica*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+.contentCap12JsV1FavoritosContentMusicInfo{ /*contenedor de la informacion de las musicas*/
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0;
+}
+.contentCap12JsV1FavoritosContentMusicInfoImg{ /*contenedor de la imagen*/
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}.contentCap12JsV1FavoritosContentMusicInfoImg img{ /*imagen de la informacio*/
+  width: 100%;
+}
+.contentCap12JsV1FavoritosContentMusicInfo p{ /*informacion de la musica*/
+  color: #84d7f6 !important;
+}
+.contentCap12JsV1FavoritosContentMusicBtn{ /*boton de opciones*/
+  background-color: transparent !important;
+  padding: 8px;
+  color: #84d7f6;
+  font-size: 1em;
+}
+
+
+@media(min-width: 750px){
+  .contentCap12JsV1FavoritosContent{ /*contenedor principal*/
+    width: 75%;
+    height: 81%;
+  }
+}
+
+
+
+
+
+
+
+/*estilos del mensaje de las acciones del usuario*/
+.contentCap12JsV1Mensajes{
+  background-color: #322e2e;
+  position: fixed;
+  bottom: 85px;
+  z-index: 5;
+  left: 5px;
+  padding: 8px;
+  transition-property: bottom;
+  transition-duration: .5s;
+  width: 85%;
+}
+.contentCap12JsV1MensajesHide{
+  bottom: -100%;
+  transition-property: bottom;
+  transition-duration: .5s;
+}
+.contentCap12JsV1Mensajes p{
+  color: #ffff !important;
+  text-align: center;
+}
+@media(min-width:750px){
+  .contentCap12JsV1Mensajes{
+    left: 45px;
+    width: auto;
+  }
+}
