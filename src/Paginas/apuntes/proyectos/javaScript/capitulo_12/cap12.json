@@ -47,5 +47,70 @@
     "artista": "Elton John",
     "link": "/musicas/Im Still Standing.mp3",
     "id": 6
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/DFe8UcUEEz7hMSKo6gImjKZK7TO9UtwTkJRdGdDfRBreReAUkqclIcNGeTl9drb2PZwW99d2nS_n0MpH=w544-h544-l90-rj",
+    "titulo": "Louca Encubada",
+    "artista": "Dj Samir,Rodricci y Launch13",
+    "link": "/musicas/Louca Encubada.mp3",
+    "id": 7
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/-JAM3LPNOwPocYMvBXI-jqLAuX0xw4DvPREb20EyqRolNyVKnnl8iDcuHF2WN8KyDULASyUEzPVqaliC=w544-h544-l90-rj",
+    "titulo": "Bugambilia",
+    "artista": "Nasa Histoires",
+    "link": "/musicas/Bugambilia.mp3",
+    "id": 8
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/TiY8HvnQPbz1_AdXrx3T-qh98zaQoRQAu5kQPMtdTGv9-pqSpRq8G0qzRbDdpokKpTCpitsMim0Idi4s=w544-h544-l90-rj",
+    "titulo": "CRAZY FROG BRAZIL",
+    "artista": "ZODIVK y YXUNGXROTICA",
+    "link": "/musicas/CRAZY FROG BRAZIL.mp3",
+    "id": 9
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/bsP5E8RbNt4PxeNQ2bwzgu7MjQ8DC0LbbXbVyUHeterF6-1Zce4Pml245fved39iDVXrqHkN8S9VgG6VAg=w544-h544-l90-rj",
+    "titulo": "Run Away",
+    "artista": "Rakdos , WHYTYLXR y Arixch",
+    "link": "/musicas/Run Away.mp3",
+    "id": 10
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/dbodEfwMOHbKdu_izgmBHwclYmtEMxKCnNJ_6k2fagvyxRcg6BbXm7uKpeT0WGQEQMbOOVjaN4Yqn-w-=w544-h544-l90-rj",
+    "titulo": "Never Be Alone",
+    "artista": "TheFatRat",
+    "link": "/musicas/Never Be Alone.mp3",
+    "id": 11
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/dp1cp84d63F_Tkq9n1aUTFPdWgwZ9u5IsMU60kOR_VHoIUUFiLPi2_5wNBsYR0EKfWU6qlgcq0ebpf2LAg=w544-h544-l90-rj",
+    "titulo": "What You Know",
+    "artista": "Two Door Cinema Club",
+    "link": "/musicas/What You Know.mp3",
+    "id": 12
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/l9-bTPGdM_1vRDNWGiQ_HCUsyW6vjiz8hZ-j3vxyTYB3F513AstolXfifU7YVra8xuA_yqGw9zG9sjGIww=w544-h544-l90-rj",
+    "titulo": "This Ain't The End Of Me",
+    "artista": "MontageRock",
+    "link": "/musicas/This Ain't The End Of Me.mp3",
+    "id": 13
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/iqnE0X2tuoZnWUdEkBZ4jskKP_jUJLbcL5X6c5rFOhe_F4QnHNOvL-fAcPxKynHgi9qpwbDoYlYoYypU=w544-h544-l90-rj",
+    "titulo": "Skyfall",
+    "artista": "Adele",
+    "link": "/musicas/Skyfall.mp3",
+    "id": 14
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/UWkZaxW3vojNbI0hS2WtY5dFyKt3hy25CBcjCCTuRGPHepp9LpV0AvZj7Ab4ul1qDduNwfU3oAxQhJDK=w544-h544-l90-rj",
+    "titulo": "Sweetie Little Jean",
+    "artista": "Cage The Elephant",
+    "link": "/musicas/Sweetie Little Jean.mp3",
+    "id": 15
   }
+
 ]
+

@@ -15,7 +15,7 @@ const rutaReal = baseUrl.replace(/\/[^/]+$/, '');
 
 // iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV, faHeartMusicCameraBolt } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faAudioDescription, faEllipsisV, faEye, faHeartMusicCameraBolt, faList, faRandom, faTruckMonster } from "@fortawesome/free-solid-svg-icons";
 import {
   faPlay,
   faPause,
@@ -29,19 +29,19 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
-
+import { faListAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 import musica1 from "./musicas/come a little closer.mp3"
 
 
 function OptionsMusic({
-  cambiarEstado,estadoMostrar,imagen,titulo,artista,
-  funcion1,icono1
+  funcion1,estadoMostrar,imagen,titulo,artista,
+  funcion2,icono1,mensaje1,funcion3
 }) {
   return (
     <div
-      onClick={()=>cambiarEstado("hide")}
+      onClick={funcion1}
       className={`contentCap12JsV1OpcionMusic ${estadoMostrar ? "":"contentCap12JsV1OpcionMusicHide"}`}
     >
       <div 
@@ -59,14 +59,16 @@ function OptionsMusic({
         </div>
 
         <button
-          onClick={funcion1}
+          onClick={funcion2}
         >
           <span>
             <FontAwesomeIcon icon={icono1}/>
-            <b>quitar de favoritos</b>
+            <b>{mensaje1}</b>
           </span>
         </button>
-        <button>
+        <button
+          onClick={funcion3}
+        >
           <span>
             <p>+</p>
             <b>agregar a playlist</b>
@@ -96,6 +98,9 @@ function Cap12ProyV1() {
     setShowOptionsMenu(!showOptionsMenu)
   }
 
+
+  // funciones para buscar una musica.
+
   // buscar musica
   const [inputBuscar, setInputBuscar] = useState(""); // esto es el inpit para buscar la musica.
   const [sugerenciasTitle, setSugerenciasTitle] = useState([]); // aqui las sugerencias osea los titulos.
@@ -115,6 +120,7 @@ function Cap12ProyV1() {
       setShowDeleteInput(false);
       setSearchResult([])
       setShowResultSearch(false)
+      setShowMusic(false)
     }
   };
   // limpiar input de busqueda.
@@ -186,6 +192,7 @@ function Cap12ProyV1() {
 
   
   // mostrar reproductor de musica.
+  const [esNormal, setEsNormal] = useState(false);
   const [showMusic, setShowMusic] = useState(false); // esto es para mostrar la musica.
   const inputTime = useRef(null) // input de la duracion de la musica.
   const [secondControls, setSecondControls] = useState(false); // mostrar los controles secundatios.
@@ -307,8 +314,14 @@ function Cap12ProyV1() {
   const [contadorMusic, setContadorMusic] = useState(0);
   const cambiar=(accion)=>{
     if (accion == "siguiente") {
-      
-      if (EsAleatorio) {
+      if (esNormal) {
+        let newId = identificar + 1;
+        if (newId < base.length){
+          setIdentificar(newId)
+          setTimeout(() =>audioMusic.current.play(),10);
+          setPausePlay(false)
+        }
+      } else if (EsAleatorio) {
         let newId = contadorMusic + 1;
         if (newId < base.length) {
           setContadorMusic(newId);
@@ -316,16 +329,20 @@ function Cap12ProyV1() {
           setTimeout(() =>audioMusic.current.play(),10);
           setPausePlay(false) 
         }
-      } else if (!EsAleatorio) {
-        let newId = identificar + 1;
-        if (newId < base.length){
+      } else if (esFavoritos){
+        
+      } else if (esPlayList){
+        
+      }
+    } else {
+      if (esNormal) {
+        let newId = identificar - 1;
+        if (identificar != 0) {
           setIdentificar(newId)
           setTimeout(() =>audioMusic.current.play(),10);
           setPausePlay(false)
-        }
-      }
-    } else {
-      if (EsAleatorio) {
+        } 
+      } else if (EsAleatorio) {
         let newId = contadorMusic - 1;
         if (newId >= 0) {
           setContadorMusic(newId);
@@ -333,13 +350,10 @@ function Cap12ProyV1() {
           setTimeout(() => audioMusic.current.play(),10);
           setPausePlay(false);
         }
-      } else if (!EsAleatorio) {
-        let newId = identificar - 1;
-        if (identificar != 0) {
-          setIdentificar(newId)
-          setTimeout(() =>audioMusic.current.play(),10);
-          setPausePlay(false)
-        } 
+      } else if (esFavoritos){
+
+      } else if (esPlayList){
+        
       }
     }
   }
@@ -349,8 +363,6 @@ function Cap12ProyV1() {
     setTitleReproductor(base[identificar].titulo);
     setArtistReproductor(base[identificar].artista);
     setMusicReproductor(rutaReal + base[identificar].link);
-
-
   },[identificar])
 
 
@@ -401,18 +413,52 @@ function Cap12ProyV1() {
       rotarIcono.current.style.transform = "rotate(180deg)";
     }, 10);
     setIdentificar(indicesTemp[0])
+    setAvisoAleatorio(true);
+
     setEsAleatorio(true);
-    setAvisoAleatorio(true)
+    setEsNormal(false);
+    setEsPlayList(false);
+    setEsFavoritos(false);
   }
   
 
+  
+
+  // iluminar en que opcion de la pagina estamos.
+  
+  // esta funcion ilumina en que seccion de la pagina esta el usuario.
+  const inicio = useRef(null); // opciion de inicio
+  const favoritos = useRef(null); // opcion de las musicas favoritas
+  const playList = useRef(null); // playList del usuario.
+  const posisionPagina=(accion)=>{
+    if (accion == "inicio") {
+      inicio.current.style.backgroundColor = "#363333"
+      favoritos.current.style.backgroundColor = "transparent"
+      playList.current.style.backgroundColor = "transparent"
+    } else if (accion == "favoritos") {
+      favoritos.current.style.backgroundColor = "#363333"
+      inicio.current.style.backgroundColor = "transparent"
+      playList.current.style.backgroundColor = "transparent"
+    } else if (accion == "playList"){
+      playList.current.style.backgroundColor = "#363333"
+      favoritos.current.style.backgroundColor = "transparent"
+      inicio.current.style.backgroundColor = "transparent"
+    }
+  }
+
+
+
+
+  // funciones de musicas favoritas.
+
+  const [esFavoritos, setEsFavoritos] = useState(false); // musicas de favoritos .
   // esta funcion es para agregar a favoritos las musicas.
   const [musicasFavoritas, setMusicasFavoritas] = useState([]);
   const [showFavoritas, setShowFavoritas] = useState(false);;
   const [msgAgregadoFav, setMsgAgregadoFav] = useState(false);
   const [msgAccionFav, setMsgAccionFav] = useState("");
   const agregarFavoritos=()=>{
-    if (musicasFavoritas.includes(base[posisionOptions])) {
+    if (JSON.stringify(musicasFavoritas).includes(JSON.stringify(base[posisionOptions]))) {
       setMsgAgregadoFav(true)
       setMsgAccionFav("Esta musica ya fue agregada a favoritas.");
       setTimeout(() => setMsgAgregadoFav(false),3000);
@@ -421,30 +467,284 @@ function Cap12ProyV1() {
       setMsgAgregadoFav(true)
       setMsgAccionFav("Musica agregada a favoritos.")
       setTimeout(() => setMsgAgregadoFav(false),3000);
+      agregarObjetos("favoritosMusic",base[posisionOptions])
+      leerObjeto("favoritosMusic",setMusicasFavoritas,setIdBaseFav);
     }
   }
 
-
-  // esta funcion ilumina en que seccion de la pagina esta el usuario.
-  const inicio = useRef(null); // opciion de inicio
-  const favoritos = useRef(null); // opcion de las musicas favoritas
-  const posisionPagina=(accion)=>{
-    if (accion == "inicio") {
-      inicio.current.style.backgroundColor = "#363333"
-      favoritos.current.style.backgroundColor = "transparent"
-    } else if (accion == "favoritos") {
-      favoritos.current.style.backgroundColor = "#363333"
-      inicio.current.style.backgroundColor = "transparent"
-    }
-  }
-
-
-  // esta funcion es para mostrar las opciones de las musicas que estan en vaoritos.
+  // esta funcion se encargara de quitar una musica de favoritos.
   const [showHidOptionsState, setShowHidOptionsState] = useState(false);
-  const showHideOptionsFav=(accion)=>{
-    accion == "show" ? setShowHidOptionsState(true):setShowHidOptionsState(false)
+  const [posisionFavoritos, setPosisionFavoritos] = useState(0);
+  const quitarFavoritos=()=>{
+    setShowHidOptionsState(true);
+    let newFavorites = [...musicasFavoritas];
+    newFavorites.splice(posisionFavoritos, 1);
+    setMusicasFavoritas(newFavorites);
+    setMsgAccionFav("Musica removida de favoritos.");
+    setMsgAgregadoFav(true)
+    setTimeout(() => setMsgAgregadoFav(false), 3000);
+    setShowHidOptionsState(false)
+    eliminarObjeto("favoritosMusic",idBaseFav[posisionFavoritos])
   }
   
+  // esta funcion se encarga de reproducir la musica de las musicas que estan en favoritas.
+  const playFavMusic=(index)=>{
+    setMusicReproductor(rutaReal + musicasFavoritas[index].link)
+    setTimeout(() =>pausarReproducir("reproducir"), 10);
+    setImgReproductor(musicasFavoritas[index].imagen);
+    setTitleReproductor(musicasFavoritas[index].titulo);
+    setArtistReproductor(musicasFavoritas[index].artista)
+    setSecondControls(true);
+    setShowMusic(true)
+    rotarIcono.current.style.transform = "rotate(0deg)";
+
+    setEsFavoritos(true);
+    setEsAleatorio(false);
+    setEsNormal(false);
+    setEsPlayList(false);
+  }
+
+
+
+  // base de datos que guarda la informacion de las musicas favoritas.
+  
+  const akmacen = indexedDB.open("reproductor de musica",1);
+
+  akmacen.addEventListener("upgradeneeded",()=>{
+    const db = akmacen.result;
+    db.createObjectStore("favoritosMusic",{
+      autoIncrement: true
+    });
+    db.createObjectStore("playListsMusic",{
+      autoIncrement: true
+    });
+    db.createObjectStore("playListsTitlesMusic",{
+      autoIncrement: true
+    });
+    db.createObjectStore("playListsDescriptionsMusic",{
+      autoIncrement: true
+    });
+  });
+  useEffect(()=>{
+    akmacen.addEventListener("success",()=>{
+      leerObjeto("favoritosMusic",setMusicasFavoritas,setIdBaseFav);
+      leerObjetoPlayList();
+    })
+  },[])
+  akmacen.addEventListener("error",()=>console.log("hubo un error"));
+
+  const agregarObjetos=(base,objeto) =>{
+    const datos = getData(base,"readwrite");
+    datos.add(objeto);
+  }
+
+
+  const eliminarObjeto=(base,key) =>{
+    const datos = getData(base,"readwrite");
+    datos.delete(key);
+  }
+
+  const getData=(base,tipo)=>{
+    const db = akmacen.result;
+    const transaccion = db.transaction(base,tipo);
+    const almacen = transaccion.objectStore(base);
+    return almacen;
+  }
+  
+  const [idBaseFav, setIdBaseFav] = useState([]);
+  function leerObjeto(base,estadoAgregar,estadoId){
+    const db = akmacen.result;
+    const transaccion = db.transaction(base,"readwrite")
+    const almacenData = transaccion.objectStore(base);
+    const cursor = almacenData.openCursor();
+    let agregar = [];
+    let agregarId = [];
+    cursor.addEventListener("success",()=>{
+      if (cursor.result) {
+        agregar.push(cursor.result.value)
+        agregarId.push(cursor.result.key)
+        cursor.result.continue();
+      }
+      estadoAgregar(agregar);
+      estadoId(agregarId);
+    })
+  }
+  const [agregarIdPlaylist, setAgregarIdPlaylist] = useState([]);
+  function leerObjetoPlayList(){
+    const db = akmacen.result;
+    const transaccion = db.transaction("playListsMusic","readwrite")
+    const almacenData = transaccion.objectStore("playListsMusic");
+    const cursor = almacenData.openCursor();
+    let agregar = [];
+    let agregarId = [];
+    cursor.addEventListener("success",()=>{
+      if (cursor.result) {
+        agregar.push(cursor.result.value)
+        agregarId.push(cursor.result.key)
+        cursor.result.continue();
+      }
+      setPlayLists(agregar)
+      setAgregarIdPlaylist(agregarId);
+    })
+  }
+
+
+
+
+
+  // funciones de las playList.
+  
+  const [esPlayList, setEsPlayList] = useState(true);
+  const [showPlayLists, setShowPlayLists] = useState(false); // esta funcion es para mostrar o ocultar el contenedor de las playList.
+  const [showAddPlayList, setShowAddPlayList] = useState(false); // crear una playList
+  const showHidePlaylists=(accion)=>{
+    if(accion == "show"){
+      setShowPlayLists(true)   
+    } else {
+      setTitlePlayList("")
+      setDescripcionPlayList("")
+      setShowPlayLists(false)
+      setShowErrTitlePlay(false)   
+    }
+  }
+  // crear playList
+  const [playLists, setPlayLists] = useState([]);
+  const [playArrTitle, setPlayArrTitle] = useState([]); // titulo de la playList
+  const [playArrDescripcion, setPlayArrDescripcion] = useState([]); // descripcion del playList.
+  const [titlePlayList, setTitlePlayList] = useState(""); // titulo de la playList
+  const [descripcionPlayList, setDescripcionPlayList] = useState(""); // descripcion de la playList
+  const [showErrTitlePlay, setShowErrTitlePlay] = useState(false);
+  const [titleCount, setTitleCount] = useState(0);
+  const crearPlayList=()=>{
+    if (titlePlayList != "") {
+      setPlayLists(current=>[...current,[base[posisionOptions]]]);
+      setPlayArrTitle(current=>[...current,titlePlayList]);
+      setPlayArrDescripcion(current=>[...current,descripcionPlayList]) 
+      setShowErrTitlePlay(false);
+      setTitlePlayList("")
+      setDescripcionPlayList("")
+      showHidePlaylists("hide")
+      setShowHidOptionsState(false)
+      setShowOptionsMusic(false)
+      setShowAddPlayList(false)
+      setMsgAccionFav("Se creo la PlayList " + titlePlayList);
+      setMsgAgregadoFav(true)
+      setTimeout(() =>setMsgAgregadoFav(false) , 4000);
+      agregarObjetos("playListsMusic",[base[posisionOptions]]) // agregar musica a la base de datos
+      agregarObjetos("playListsTitlesMusic",titlePlayList)
+      agregarObjetos("playListsDescriptionsMusic",descripcionPlayList)
+    } else {
+      setShowErrTitlePlay(true)
+    }
+  }
+  useEffect(()=>{
+    console.log(playArrTitle[playArrTitle.length - 1 < 0 ? 0:playArrTitle.length - 1])
+    
+    // agregarObjetos("playListsDescriptionsMusic",playArrDescripcion[playArrDescripcion.length - 1 < 0 ? 0:playArrDescripcion.length - 1])
+  },[playArrTitle])
+  
+
+  
+  
+  // esta funcion es para agregar mas musicas a una playList.
+  const addPlayListMusic=(index)=>{
+    if (JSON.stringify(playLists[index]).includes(JSON.stringify(base[posisionOptions]))) {
+      setMsgAgregadoFav(true)
+      setMsgAccionFav(`Esta musica ya fue agregada a la playList ${playArrTitle[index].slice()}`)
+      setTimeout(() => setMsgAgregadoFav(false), 4000);
+    } else {
+      setPlayLists((prevArr) => {
+        const newArr = [...prevArr];
+        newArr[index] = [...newArr[index], base[posisionOptions]];
+        return newArr;
+      });
+      showHidePlaylists("hide")
+      setShowHidOptionsState(false)
+      setShowOptionsMusic(false)
+      setMsgAgregadoFav(true)
+      setMsgAccionFav(`Musica agregada a la playList ${playArrTitle[index].slice()}`)
+      setTimeout(() => setMsgAgregadoFav(false), 4000);
+    }
+  }
+
+  const [showPlayList, setShowPlayList] = useState(false); // mostrar las playLists creadas.
+  const [showOptionsPlayLists, setShowOptionsPlayLists] = useState(false); // esto es para mostrar las opciones de las playLists
+  const [posisionPlaylistOptions, setPosisionPlaylistOptions] = useState(0);
+  const [playListOptions, setPlayListOptions] = useState([]);
+  // esta funcion es para mostrar las opciones de las playLists.
+  const mostrarOptionsPlaylists=(object,index)=>{
+    setPlayListOptions(object);
+    setShowOptionsPlayLists(true)
+    setPosisionPlaylistOptions(index)
+  }
+  // mostrar las musicas de una playList
+  const [showPlayListEspecifica, setShowPlayListEspecifica] = useState(false); // mostrar la playList en especifico
+  const [playListEspecifica, setPlayListEspecifica] = useState([]);
+  const mostrarPlayList=(object)=>{
+    setPlayListEspecifica(object)
+    setShowPlayListEspecifica(true)
+    setShowResultSearch(false);
+    setShowMusic(false)
+    setShowOptionsMenu(false)
+    setShowFavoritas(false)
+    setShowPlayList(false)
+    setTimeout(() => rotarIcono.current.style.transform = "rotate(180deg)", 10);
+    posisionPagina("playList")
+  }  
+  // esta funcion es para volver a la lista de playList.
+  const backListPlayList=()=>{
+    setShowPlayListEspecifica(false)
+    setShowResultSearch(false);
+    setShowMusic(false)
+    setShowOptionsMenu(false)
+    setShowFavoritas(false)
+    setShowPlayList(true)
+    setTimeout(() => rotarIcono.current.style.transform = "rotate(180deg)", 10);
+  }
+  // esta funcion es para eliminar una playList
+  const deletePlayList = () => {
+    let playList = [...playLists];
+    let title = [...playArrTitle];
+    let descripcion = [...playArrDescripcion];
+    playList.splice(posisionPlaylistOptions, 1);
+    title.splice(posisionPlaylistOptions, 1);
+    descripcion.splice(posisionPlaylistOptions, 1);
+    setPlayLists(playList);
+    setPlayArrTitle(title);
+    setPlayArrDescripcion(descripcion)
+    setShowOptionsPlayLists(false);
+    setMsgAccionFav(`La playList ${playArrTitle[posisionPlaylistOptions]} ha sido eliminada`)
+    setMsgAgregadoFav(true)
+    setTimeout(() =>setMsgAgregadoFav(false), 4000);
+  };
+  // Esta funcion es para reproducir las musicas de una playList en especifico.
+  const playMusicPlayList=()=>{
+    console.log(playListEspecifica)
+    
+    setEsPlayList(true);
+    setEsFavoritos(false);
+    setEsAleatorio(false);
+    setEsNormal(false);
+  }
+  // esta funcion es para reproducir una musica de la playList.
+  const [playListCount, setPlayListCount] = useState(0);
+  const reproducirPlayListMusic=(index)=>{
+    setPlayListCount(index);
+    setMusicReproductor(rutaReal + playListEspecifica[index].link)
+    setTimeout(() =>pausarReproducir("reproducir"), 10);
+    setImgReproductor(playListEspecifica[index].imagen);
+    setTitleReproductor(playListEspecifica[index].titulo);
+    setArtistReproductor(playListEspecifica[index].artista);
+
+    setEsPlayList(true);
+    setEsAleatorio(false);
+    setEsNormal(false);
+    setEsFavoritos(false);
+  };
+  
+
+
+  // ahora no se como mrd hacer que las musicas de las playList se reproduzcan desde el index donde se hizo la reproduccion de musica mi cerevro esta apagado xd.
 
     return (  
       <>
@@ -480,6 +780,8 @@ function Cap12ProyV1() {
                   setShowMusic(false)
                   setShowOptionsMenu(false)
                   setShowFavoritas(false)
+                  setShowPlayList(false)
+                  setShowPlayListEspecifica(false)
                   posisionPagina("inicio")
                 }}>
                   <span 
@@ -496,12 +798,32 @@ function Cap12ProyV1() {
                     setShowResultSearch(false);
                     setShowMusic(false)
                     setShowOptionsMenu(false)
+                    setShowPlayList(false)
+                    setShowPlayListEspecifica(false)
                     posisionPagina("favoritos")
+                    setTimeout(() => rotarIcono.current.style.transform = "rotate(180deg)", 10);
                   }}
                 >
                   <span ref={favoritos}>
                     <FontAwesomeIcon icon={faHeart}/>
                     <p>favoritos</p>
+                  </span>
+                </button>
+                <button
+                  onClick={()=>{
+                    setShowPlayList(true)
+                    setShowFavoritas(false)
+                    setShowResultSearch(false);
+                    setShowMusic(false)
+                    setShowOptionsMenu(false)
+                    posisionPagina("playList")
+                    setShowPlayListEspecifica(false)
+                    setTimeout(() => rotarIcono.current.style.transform = "rotate(180deg)", 10);
+                  }}
+                >
+                  <span ref={playList}>
+                    <FontAwesomeIcon icon={faListAlt}/>
+                    <p>playlist</p>
                   </span>
                 </button>
               </div>
@@ -514,7 +836,9 @@ function Cap12ProyV1() {
                     setShowInputSearch(!showInputSearch)
                     setInputBuscar("");
                     setSugerenciasTitle([]);
-                    setShowDeleteInput(false)
+                    setShowDeleteInput(false);
+                    setSearchResult([])
+                    setShowResultSearch(false)
                   }}
                   className="contentCap12JsV1MenuBuscarIcon"  
                 >
@@ -583,6 +907,11 @@ function Cap12ProyV1() {
                       base[index].artista,
                       index
                     );
+
+                    setEsNormal(true);
+                    setEsAleatorio(false);
+                    setEsFavoritos(false);
+                    setEsPlayList(false);
                   }}
                 >
                   {visibleCajas.includes(index) && (
@@ -722,8 +1051,9 @@ function Cap12ProyV1() {
                   searchResult.length == 0 ? 
                   <h2>No hay resultados y si estas buscando reggeton no encontraras nada :v</h2>
                   :
-                    searchResult.map((i)=>(
+                    searchResult.map((i,index)=>(
                       <div 
+                        key={index}
                         className="contentCap12JsV1ResultadosBusquedaContent"
                         onClick={()=>{
                           showReproductor(
@@ -760,13 +1090,15 @@ function Cap12ProyV1() {
 
             {/* opciones de las musicas */}
             <OptionsMusic 
-              cambiarEstado={optionsShowHide}
+              funcion1={()=>optionsShowHide("hide")}
               estadoMostrar={showOptionsMusic}
               imagen={imgOptions}
               titulo={titleOptions}
               artista={artistOptions}
-              funcion1={agregarFavoritos}
+              funcion2={agregarFavoritos}
               icono1={faHeart}
+              mensaje1={"Agregar a favoritos."}
+              funcion3={()=>showHidePlaylists("show")}
             />
             
             <MensajesAccion 
@@ -787,6 +1119,7 @@ function Cap12ProyV1() {
                       <div 
                         className="contentCap12JsV1FavoritosContentMusic"
                         key={index}
+                        onClick={()=>playFavMusic(index)}
                       >
                         <div className="contentCap12JsV1FavoritosContentMusicInfo">
                           <div className="contentCap12JsV1FavoritosContentMusicInfoImg">
@@ -799,28 +1132,295 @@ function Cap12ProyV1() {
                         </div>
                         <button
                           className="contentCap12JsV1FavoritosContentMusicBtn"
-                          onClick={()=>{
-                            optionsShowHide("show");
+                          onClick={(e)=>{
+                            e.stopPropagation()
+                            setShowHidOptionsState(true)
                             cargarInformacionMusic(i)
+                            setPosisionFavoritos(index)
                           }}
                         >
-                          <FontAwesomeIcon 
-                            icon={faEllipsisV}
-                            onClick={()=>showHideOptionsFav("show")}
-                          />
+                          <FontAwesomeIcon icon={faEllipsisV} />
                         </button>
                       </div>
                     ))
                 }
               </div>
             }
+            <OptionsMusic
+              funcion1={()=>setShowHidOptionsState(false)}
+              estadoMostrar={showHidOptionsState}
+              imagen={imgOptions}
+              titulo={titleOptions}
+              artista={artistOptions}
+              funcion2={quitarFavoritos}
+              icono1={faTrash}
+              mensaje1={"Quitar de favoritos"}
+              funcion3={()=>showHidePlaylists("show")}
+            />
 
-            
+
+            {/* estilos para agregar una playList */}
+            {
+              showPlayLists && <div
+                className="contentCap12JsV1AddPlay"
+                onClick={()=>showHidePlaylists("hide")}
+              >
+                <div 
+                  onClick={(e)=>e.stopPropagation()}
+                  className="contentCap12JsV1AddPlayContent">
+                  <div className="contentCap12JsV1AddPlayContentTitleDiv">
+                    <h2>guardar en una playList</h2>
+                    <button onClick={()=>showHidePlaylists("hide")}>X</button>
+                  </div>
+                  <div className="contentCap12JsV1AddPlayContentPlayList">
+                    {
+                      playLists.length == 0 ?
+                      <p>No tienes ningana playList</p>
+                      :
+                      playLists.map((i,index)=>(
+                        <div>
+                          <div
+                            className="contentCap12JsV1AddPlayContentPlayListContent"
+                            onClick={()=>addPlayListMusic(index)}
+                          >
+                            <div
+                              className="contentCap12JsV1AddPlayContentPlayListContentImgs"
+                            >
+                              <img src={i[0].imagen} />
+                              {i[1] != null ? <img src={i[1].imagen} />:null}
+                              {i[2] != null ? <img src={i[2].imagen} />:null}
+                              {i[3] != null ? <img src={i[3].imagen} />:null}
+                            </div>
+                            <div>
+                              <h5>
+                                {playArrTitle[index].slice(0,15)}
+                                {playArrTitle[index].length >= 15 ? "...":""}
+                              </h5>
+                              <b>
+                                {playLists[index].length} pistas
+                              </b>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <button 
+                    className="contentCap12JsV1AddPlayContentBtnAdd"
+                    onClick={()=>{
+                      setShowAddPlayList(true)
+                      showHidePlaylists("hide")
+                    }}
+                  >+  agregar playList</button>
+                </div>
+              </div>
+            }
+
+
+
+            {/* crear una nueva playList */}
+            {
+              showAddPlayList && <div 
+                onClick={()=>{
+                  showHidePlaylists("show")
+                  setShowAddPlayList(false)
+                }}
+                className="contentCap12JsV1CreateConttPlay"
+              >
+                <div 
+                  onClick={(e)=>e.stopPropagation()}
+                  className="contentCap12JsV1CreateConttPlayContent"
+                >
+                  <h2>Crear una playList</h2>
+                  <div className="contentCap12JsV1CreateConttPlayInpit">
+                    <input 
+                      type="text" 
+                      placeholder="titulo"
+                      onChange={(e)=>setTitlePlayList(e.target.value)}
+                      value={titlePlayList}
+                    />
+                    {showErrTitlePlay && <b>Ningun titulo</b>}
+                    <textarea 
+                      type="text" 
+                      placeholder="descripcion"
+                      onChange={(e)=>setDescripcionPlayList(e.target.value)}
+                      value={descripcionPlayList}
+                    />
+                  </div>
+                  <div className="contentCap12JsV1CreateConttPlayContentBtn">
+                    <button 
+                      onClick={()=>{
+                        showHidePlaylists("show");
+                        setShowAddPlayList(false)
+                      }}
+                    >cancelar</button>
+                    <button
+                      onClick={crearPlayList}
+                    >+ crear</button>
+                  </div>
+                </div>
+              </div>
+            }
+            {/* todas las playList */}
+            {
+              showPlayList && <div className="contentCap12JsV1PlayLists">
+                <div className="contentCap12JsV1PlayListsContent">
+                  {
+                    playLists.length == 0 ?
+                      <p>No hay playLists creadas</p>
+                    :
+                      playLists.map((i,index)=>(
+                        <div 
+                          className="contentCap12JsV1PlayListsContentCada1"
+                          onClick={(e)=>{
+                            e.stopPropagation();
+                            mostrarPlayList(i)
+                            setPosisionPlaylistOptions(index)
+                          }}
+                        >
+                          <div className="contentCap12JsV1PlayListsContentCada1Img">
+                            {i[0] != null ? <img src={i[0].imagen}/>:null}
+                            {i[1] != null ? <img src={i[1].imagen}/>:null}
+                            {i[2] != null ? <img src={i[2].imagen}/>:null}
+                            {i[3] != null ? <img src={i[3].imagen}/>:null}
+                          </div>
+                          <div className="contentCap12JsV1PlayListsContentCada1Info">
+                            <p>
+                              {playArrTitle[index].slice(0,15)}
+                              {playArrTitle[index].length >= 15 ? "...":""}
+                            </p>
+                            <p>{i.length} pistas</p>
+                          </div>
+                          <button
+                            onClick={(e)=>{
+                              e.stopPropagation();
+                              mostrarOptionsPlaylists(i,index)
+                            }}
+                          >
+                            <FontAwesomeIcon icon={faEllipsisV} />
+                          </button>
+                        </div>
+                      ))
+                  }
+                </div>
+              </div>
+            }
+
+            {/* opciones para las playLists */}
+            <div 
+              className={`contentCap12JsV1PlayListsOptions ${showOptionsPlayLists ? "":"contentCap12JsV1PlayListsOptionsHide"}`}
+              onClick={(e)=>{
+                e.stopPropagation();
+                setShowOptionsPlayLists(false)
+              }}
+            >
+              <div 
+                className={`contentCap12JsV1PlayListsOptionsContent ${showOptionsPlayLists ? "":"contentCap12JsV1PlayListsOptionsContentHide"}`}
+                onClick={(e)=>e.stopPropagation()}
+              >
+                <div className="contentCap12JsV1PlayListsOptionsContentInfo">
+                  <div className="contentCap12JsV1PlayListsOptionsContentInfoImgs">
+                    {playListOptions[0] != null ? <img src={playListOptions[0].imagen}/>:null}
+                    {playListOptions[1] != null ? <img src={playListOptions[1].imagen}/>:null}
+                    {playListOptions[2] != null ? <img src={playListOptions[2].imagen}/>:null}
+                    {playListOptions[3] != null ? <img src={playListOptions[3].imagen}/>:null}
+                  </div>
+                  <div>
+                    <h4>{playArrTitle[posisionPlaylistOptions]}</h4>
+                    <p>{playListOptions.length} pistas</p>
+                  </div>
+                </div>
+                <button onClick={()=>{
+                  mostrarPlayList(playLists[posisionPlaylistOptions])
+                  setShowOptionsPlayLists(false)
+                }}>
+                  <span>
+                    <FontAwesomeIcon icon={faEye}/>
+                    <p>ver playList</p>
+                  </span>
+                </button>
+                <button onClick={deletePlayList}>
+                  <span>
+                    <FontAwesomeIcon icon={faTrash} />
+                    <p>Eliminar playList</p>
+                  </span>
+                </button>
+              </div>
+            </div>
+            {/* musicas de una playList en especifico */}
+            {
+              showPlayListEspecifica && <div className="contentCap12JsV1PlayListsMusic">
+                <div className="contentCap12JsV1PlayListsMusicContent">
+                  <button 
+                    className="contentCap12JsV1PlayListsMusicContentAtras"
+                    onClick={backListPlayList}
+                  >
+                    <FontAwesomeIcon icon={faArrowLeft}/>
+                  </button>
+                  <div className="contentCap12JsV1PlayListsMusicContentImgs">
+                    {playListEspecifica[0] != null? <img src={playListEspecifica[0].imagen} alt="" />:null}
+                    {playListEspecifica[1] != null? <img src={playListEspecifica[1].imagen} alt="" />:null}
+                    {playListEspecifica[2] != null? <img src={playListEspecifica[2].imagen} alt="" />:null}
+                    {playListEspecifica[3] != null? <img src={playListEspecifica[3].imagen} alt="" />:null}
+                  </div>
+                  <div className="contentCap12JsV1PlayListsMusicContentDescipcion">
+                    <h4>{playArrTitle[posisionPlaylistOptions]}</h4>
+                    <p>{playArrDescripcion[posisionPlaylistOptions]}</p>
+                  </div>
+                  <div className="contentCap12JsV1PlayListsMusicContentBtns">
+                    <button 
+                      className="contentCap12JsV1PlayListsMusicContentBtns__btn1"
+                      onClick={playMusicPlayList}
+                    >
+                      <span>
+                        <FontAwesomeIcon icon={faPlay} />
+                        <b>reproducir</b>
+                      </span>
+                    </button>
+                    <button className="contentCap12JsV1PlayListsMusicContentBtns__btn2">
+                      <span>
+                        <FontAwesomeIcon icon={faRandom} />
+                        <b>aleatorio</b>
+                      </span>
+                    </button>
+                  </div>
+                  <div className="contentCap12JsV1PlayListsMusicContentMusic">
+                    {
+                      playListEspecifica.map((i,index)=>(
+                        <div 
+                          className="contentCap12JsV1PlayListsMusicContentMusicContent"
+                          onClick={()=>reproducirPlayListMusic(index)}
+                        >
+                          <div className="contentCap12JsV1PlayListsMusicContentMusicContentInfo">
+                            <div className="contentCap12JsV1PlayListsMusicContentMusicContentImgs">
+                              <img src={i.imagen} alt={i.titulo} />
+                            </div>
+                            <div className="contentCap12JsV1PlayListsMusicContentMusicContentInfoData">
+                              <h4>{i.titulo}</h4>
+                              <p>{i.artista}</p>
+                            </div>
+                          </div>
+                          <button>
+                            <FontAwesomeIcon icon={faEllipsisV}/>
+                          </button>
+
+                        </div>
+                      ))
+                    }
+                  </div>
+
+                </div>
+              </div>
+            } 
+
+
+
+
+
+
+
 
           </div>
-
-
-
 
 
         </div>

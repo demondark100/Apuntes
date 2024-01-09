@@ -14,8 +14,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(0deg , transparent ,#000,#000,#000);
-  z-index: 4;
+  background-color: #000;
+  z-index: 5;
   border-bottom: 1px solid #141414;
 }
 
@@ -44,7 +44,7 @@
 .contentCap12JsV1MenuOptions{
   position: absolute;
   height: 100vh;
-  top: 50px;
+  top: 40px;
   left: 0;
   background-color: #000;
   display: flex;
@@ -87,7 +87,11 @@
 
 
 
-/*estilos para la bisqueda de musicas*/
+
+
+
+
+/*estilos para la busqueda de musicas*/
 .contentCap12JsV1MenuBuscarContent{
   display: flex;
   align-items: center;
@@ -133,6 +137,8 @@
   width: 85%;
 }
 
+
+
 /*contenedoer de las sugerencias de busqueda*/
 .contentCap12JsV1MenuSugerencias{
   position: absolute;
@@ -171,7 +177,7 @@
   .contentCap12JsV1MenuOptions{
     position: absolute;
     height: 100vh;
-    top: 50px;
+    top: 45px;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -218,6 +224,7 @@
   gap: 4px;
 }
 .contentCap12JsV1MusicasContent{ /*contenedor de cada musica*/
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -311,8 +318,9 @@
   display: block;
   color: #b2dbff;
   position: absolute;
-  margin-left: 110px;
-  margin-top: 155px;
+  right: 4px;
+  bottom: 15px;
+  padding: 4px;
 }
 
 .contentCap12JsV1MusicasBtnAleatori{ /*boton de musicas aleatorias*/
@@ -360,6 +368,8 @@
 
 
 
+
+
 /*estilos del reproductor de musica*/
 .contenedorPrimarioReproductor{ /*contenedor principal*/
   position: fixed;
@@ -367,15 +377,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #00000085;
+  background-color: #000000c5;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100%;
   overflow: auto;
   transition-property: top;
-  transition-duration: .5s;
-  z-index: 3;
+  transition-duration: .6s;
+  z-index: 4;
 }   .contenedorPrimarioReproductorHide{
   top: 100%;
   transition-duration: .5s;
@@ -389,7 +399,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
   align-items: center;
   justify-content: space-between;
   gap: 25px;
@@ -446,6 +456,8 @@
 }
 
 
+
+
 /*input del rango*/
 .contentCap12JsV1ReproductorTime{ /*input range*/
   -webkit-appearance: none;
@@ -480,6 +492,11 @@
 
 
 
+
+
+
+/*estilos de los controles secundarios*/
+
 .contentCap12JsV1ReproductorControls2{ /*contenedor de los controles secundarios*/
   position: fixed;
   width: 100%;
@@ -490,7 +507,7 @@
   align-items: center;
   bottom: 0;
   border-top: 1px solid #141414;
-  z-index: 4;
+  z-index: 5;
 }
 
 .contentCap12JsV1ReproductorControls2 button{ /*botones de los otros controles*/
@@ -533,8 +550,6 @@
   position: absolute;
   right: 35px;
 }
-
-
 .contentCap12JsV1ReproductorControls2Info{ /*contenedor de la info de controls 2*/
   display: flex;
   height: 100%;
@@ -576,7 +591,7 @@
     gap: 0;
   }
   .contentCap12JsV1ReproductorImg{ /*contenedor de la imagen*/
-    width: 50%;
+    width: 200px;
     height: 150px;
     margin-top: 35px;
   }
@@ -615,12 +630,18 @@
   left: 0;
   pointer-events: auto;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   background-color: #000;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 4;
+  padding-bottom: 45px;
+  border: 1px solid #191919;
+}
+.contentCap12JsV1ResultadosBusqueda::-webkit-scrollbar{ /*quitar estilos de scrool*/
+  display: none;
 }
 .contentCap12JsV1ResultadosBusqueda h2{
   color: #c40710 !important;
@@ -689,6 +710,7 @@
 @media(min-width:750px){
   .contentCap12JsV1ResultadosBusqueda{ /*contenedor principal*/
     align-items: end;
+    height: 80%;
   }
   .contentCap12JsV1ResultadosBusquedaContent{ /*contenedor de cada musica*/
     width: 70%;
@@ -696,6 +718,7 @@
     right: 25px;
   }
 }
+
 
 
 
@@ -807,6 +830,7 @@
   background-color: #000;
   display: flex;
   flex-direction: column;
+  align-items: center;
   z-index: 3;
 }
 .contentCap12JsV1FavoritosContentError{ /*mensaje de error osea no hay favoritos*/
@@ -819,6 +843,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px;
+  width: 85%;
+  cursor: pointer;
 }
 .contentCap12JsV1FavoritosContentMusicInfo{ /*contenedor de la informacion de las musicas*/
   display: flex;
@@ -850,7 +876,10 @@
 @media(min-width: 750px){
   .contentCap12JsV1FavoritosContent{ /*contenedor principal*/
     width: 75%;
-    height: 81%;
+    height: 100%;
+  }
+  .contentCap12JsV1FavoritosContentMusic{ /*contenedor de cada musica*/
+    width: 450px;
   }
 }
 
@@ -865,12 +894,12 @@
   background-color: #322e2e;
   position: fixed;
   bottom: 85px;
-  z-index: 5;
+  z-index: 10;
+  pointer-events: none;
   left: 5px;
   padding: 8px;
   transition-property: bottom;
   transition-duration: .5s;
-  width: 85%;
 }
 .contentCap12JsV1MensajesHide{
   bottom: -100%;
@@ -878,12 +907,477 @@
   transition-duration: .5s;
 }
 .contentCap12JsV1Mensajes p{
-  color: #ffff !important;
+  color: #84d7f6 !important;
   text-align: center;
 }
 @media(min-width:750px){
   .contentCap12JsV1Mensajes{
     left: 45px;
     width: auto;
+  }
+}
+
+
+
+
+
+
+
+/*estilos para agregar una playList*/
+.contentCap12JsV1AddPlay{ /*contenedor principal*/
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000079;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.contentCap12JsV1AddPlayContent{ /*contenedor para agregar a playList*/
+  width: 60%;
+  min-height: 150px;
+  max-height: 80%;
+  overflow: auto;
+  padding: 8px;
+  background-color: #1c1d1c;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 35px;
+}
+.contentCap12JsV1AddPlayContentTitleDiv{ /*contenedor del titulo y la X para el cierre de las playList*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  border-bottom: 1px solid #423e3e;
+  padding-bottom: 6px;
+}
+.contentCap12JsV1AddPlayContentTitleDiv h2{ /*titulo indicativo*/
+  color: #84d7f6 !important;
+  padding: 0;
+  font-size: 1em;
+}
+.contentCap12JsV1AddPlayContentTitleDiv button{ /*boton para cerrar las playList*/
+  background-color: transparent !important;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5em;
+}
+.contentCap12JsV1AddPlayContentBtnAdd{ /*boton para agregar playList*/
+  background-color: #fff !important;
+  color: #000 !important;
+  font-size: 1em;
+  padding: 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+
+/*estilos para crear una playList*/
+.contentCap12JsV1CreateConttPlay{ /*contenedor principal*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000079;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentCap12JsV1CreateConttPlayContent{ /*contenedor para crear una playList*/
+  width: 60%;
+  padding: 8px;
+  background-color: #1c1d1c;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 8px;
+}
+.contentCap12JsV1CreateConttPlayContent h2{ /*titulo indicativo*/
+  color: #84d7f6 !important;
+  border-bottom: 1px solid #423e3e;
+  font-size: 1em;
+  padding-bottom: 8px;
+}
+.contentCap12JsV1CreateConttPlayContent b{
+  color: #f00 !important;
+  font-size: 1em;
+  margin: 4px 0 4px 0;
+}
+.contentCap12JsV1CreateConttPlayInpit{ /*contenedor de los inputs*/
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contentCap12JsV1CreateConttPlayInpit input,textarea{ /*inputs*/
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #423e3e;
+  color: #84d7f6;
+}
+.contentCap12JsV1CreateConttPlayContentBtn{ /*contenedor de los borones*/
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+.contentCap12JsV1CreateConttPlayContentBtn button{ /*botones*/
+  background-color: transparent;
+  color: #84d7f6;
+  border-radius: 50px;
+  padding: 6px;
+  font-size: 1em;
+}
+.contentCap12JsV1CreateConttPlayContentBtn button:nth-child(2){
+  background-color: #fff;
+  color: #000 !important;
+  width: 85px;
+}
+
+
+/*estilos de las playList*/
+.contentCap12JsV1AddPlayContentPlayList{ /*contenedor principal*/
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 1px solid #3a3838;
+  max-height: 80%;
+  overflow: auto;
+  gap: 2px;
+}
+.contentCap12JsV1AddPlayContentPlayList::-webkit-scrollbar{ /*quitar estilos de scroll*/
+  display: none;
+}
+.contentCap12JsV1AddPlayContentPlayList p{ /*mensaje de 0 playList*/
+  color: #f00 !important;
+}
+.contentCap12JsV1AddPlayContentPlayListContent{ /*contenedor de cada playList*/
+  height: 50px !important;
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #84d7f6;
+  padding: 4px;
+}
+.contentCap12JsV1AddPlayContentPlayListContentImgs{ /*contenedor de las imagenes de cada playList*/
+  background: linear-gradient(0deg,#2a2a2a,#120f0f);
+  width: 45px;
+  height: 45px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  align-items: center;
+  gap: 2px;
+}.contentCap12JsV1AddPlayContentPlayListContentImgs img{ /*imagenes*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*estilos del contenedor de las playLists*/
+.contentCap12JsV1PlayLists{ /*contenedor principal de las playLists*/
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: end;
+  background-color: #000;
+}
+.contentCap12JsV1PlayListsContent{ /*contenedor de todas las playlist*/
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 8px;
+  overflow: auto;
+}
+.contentCap12JsV1PlayListsContent p{ /*mensaje de ninguna playList*/
+  color: #f00 !important;
+  font-size: 1em;
+  margin-top: 15px;
+}
+.contentCap12JsV1PlayListsContentCada1{ /*contenedor principal de cada playList*/
+  width: 150px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.contentCap12JsV1PlayListsContentCada1Img{ /*contenedor de las imagenes*/
+  width: 140px;
+  height: 140px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  overflow: hidden;
+  background: linear-gradient(0deg,#2a2a2a,#120f0f);
+}   .contentCap12JsV1PlayListsContentCada1Img img{ /*imagenes*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentCap12JsV1PlayListsContentCada1Info{ /*contenedor de la informacion de playList*/
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 4px;
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+} .contentCap12JsV1PlayListsContentCada1Info p{
+  margin: 0;
+  color: #84d7f6 !important;
+  width: 100%;
+}
+.contentCap12JsV1PlayListsContentCada1 button{ /*iocuibes de kas okayKusts*/
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  padding: 4px;
+  background-color: transparent;
+  color: #84d7f6;
+  font-size: 1em;
+}
+
+
+/*estukis de las opciones de las playLists*/
+.contentCap12JsV1PlayListsOptions{ /*contenedor principal*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: #0000007e;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .3s;
+}
+.contentCap12JsV1PlayListsOptionsHide{ /*ocultar las opciones*/
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .3s;
+}
+.contentCap12JsV1PlayListsOptionsContent{ /*estilpos de cada opcion de las musicas*/
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #161616;
+  top: 20%;
+  height: 80%;
+  width: 100%;
+  transition-property: top;
+  transition-duration: .2s;
+}  .contentCap12JsV1PlayListsOptionsContentHide{ /*ocultar opciones*/
+  top: 100%;
+  transition-property: top;
+  transition-duration: .2s;
+}
+.contentCap12JsV1PlayListsOptionsContentInfo{ /*contenedor de la informacion de kla playList*/
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px;
+  gap: 10px;
+  align-items: center;
+  padding-left: 15px;
+  color: #84d7f6 !important;
+  font-size: 1em;
+}  .contentCap12JsV1PlayListsOptionsContentInfo p{
+  color: #84d7f6 !important;
+  font-size: .8em;
+}
+.contentCap12JsV1PlayListsOptionsContentInfoImgs{ /*contenedor de las imagenes*/
+  width: 45px;
+  height: 45px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  background: linear-gradient(0deg,#2a2a2a,#120f0f);
+}  .contentCap12JsV1PlayListsOptionsContentInfoImgs img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentCap12JsV1PlayListsOptions button{ /*estilos de los botones*/
+  background-color: transparent;
+  padding: 15px;
+  font-size: 1em;
+}  .contentCap12JsV1PlayListsOptions span{
+  display: flex;
+  gap: 15px;
+  color: #84d7f6 !important;
+} .contentCap12JsV1PlayListsOptions h4,p{
+  color: #84d7f6 !important;
+}
+
+
+/*estilos de las musicas de una playList*/
+.contentCap12JsV1PlayListsMusic{ /*contenedor principal*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000e8;
+  z-index: 3;
+  display: flex;
+  justify-content: end;
+  overflow: auto;
+} .contentCap12JsV1PlayListsMusic::-webkit-scrollbar{ /*qiotar estilos de scroll*/
+  display: none;
+}
+.contentCap12JsV1PlayListsMusicContent{ /*contenedor de las playList*/
+  position: relative;
+  top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentCap12JsV1PlayListsMusicContentAtras{ /*boton para regresar atras*/
+  padding: 4px;
+  background-color: transparent;
+  color: #84d7f6;
+  font-size: 1.5em;
+  position: fixed;
+  left: 8px;
+}
+.contentCap12JsV1PlayListsMusicContentImgs{ /*contenedor de las 4 imagenes de las playLIST*/
+  margin-top: 45px;
+  width: 150px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  background: linear-gradient(0deg,#2a2a2a,#120f0f);
+}  .contentCap12JsV1PlayListsMusicContentImgs img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentCap12JsV1PlayListsMusicContentDescipcion{ /*contenedor del titulo y descripcion*/
+  color: #84d7f6 !important;
+  width: 80%;
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+.contentCap12JsV1PlayListsMusicContentBtns{ /*contenedir de kis bitibes de iocuibes de ka okaList*/
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  align-items: center;
+}   .contentCap12JsV1PlayListsMusicContentBtns button span{ /*informacion de los botones*/
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}   .contentCap12JsV1PlayListsMusicContentBtns button b{ /*letras indicativas*/
+  font-size: .8em;
+}
+.contentCap12JsV1PlayListsMusicContentBtns__btn1{ /*boton de play de la playList*/
+  color: #84d7f6 !important;
+  font-size: 1.2em;
+  background-color: transparent;
+}
+.contentCap12JsV1PlayListsMusicContentBtns__btn2{ /*boton de opciones de la playList*/
+  color: #84d7f6;
+  font-size: 1.2em;
+  background-color: transparent;
+}
+
+
+/*estilos del contenedor de las musicas de la playList*/
+.contentCap12JsV1PlayListsMusicContentMusic{ /*contenedor principal*/
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+}
+.contentCap12JsV1PlayListsMusicContentMusicContent{ /*contenedor de cada musica*/
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentCap12JsV1PlayListsMusicContentMusicContentInfo{ /*contenedor de la informacio*/
+  display: flex;
+  gap: 5px;
+}
+.contentCap12JsV1PlayListsMusicContentMusicContentImgs{ /*contenedor de las imagenes*/
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} .contentCap12JsV1PlayListsMusicContentMusicContentImgs img{
+  width: 100%;
+}
+.contentCap12JsV1PlayListsMusicContentMusicContentInfoData{ /*contenedor de los datos*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #84d7f6 !important;
+}
+.contentCap12JsV1PlayListsMusicContentMusicContent button{ /*boton de las opciones de las musicas*/
+  padding: 4px;
+  background-color: transparent;
+  font-size: 1em;
+}
+
+@media(min-width:750px){
+  .contentCap12JsV1AddPlayContent{ /*contenedor para agregar a playList*/
+    width: 300px;
+  }
+  .contentCap12JsV1CreateConttPlayContent{ /*contenedor para crear una playList*/
+    width: 350px;
+    height: 200px;
+  }
+  .contentCap12JsV1PlayListsContent{ /*contenedor de todas las playlist*/
+    width: 75%;
+  }
+
+  /*estukis de las opciones de las playLists*/
+  .contentCap12JsV1PlayListsOptionsContent{ /*estilpos de cada opcion de las musicas*/
+    width: 250px;
+  }
+
+  /*estilos de las musicas de una playList*/
+  .contentCap12JsV1PlayListsMusicContent{ /*contenedor de las playList*/
+    width: 80%;
+  }
+  .contentCap12JsV1PlayListsMusicContentAtras{ /*boton para regresar atras*/
+    left: 220px;
   }
 }
