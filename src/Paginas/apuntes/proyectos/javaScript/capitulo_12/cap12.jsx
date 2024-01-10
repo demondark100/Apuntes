@@ -332,7 +332,7 @@ function Cap12ProyV1() {
       } else if (esFavoritos){
         
       } else if (esPlayList){
-        
+        console.log()
       }
     } else {
       if (esNormal) {
@@ -351,7 +351,7 @@ function Cap12ProyV1() {
           setPausePlay(false);
         }
       } else if (esFavoritos){
-
+        
       } else if (esPlayList){
         
       }
@@ -527,9 +527,33 @@ function Cap12ProyV1() {
   });
   useEffect(()=>{
     akmacen.addEventListener("success",()=>{
-      leerObjeto("favoritosMusic",setMusicasFavoritas,setIdBaseFav);
-      leerObjetoPlayList();
+      leerObjeto("favoritosMusic",setMusicasFavoritas,setIdBaseFav); // leer musicas favoritas
+
+      leerObjeto("playListsMusic",setPlayLists,setAgregarIdPlaylist); // leer playLists
+      leerObjeto("playListsTitlesMusic",setPlayArrTitle,setAgregarTitleId); // leer titulos de playLists
+      leerObjeto("playListsDescriptionsMusic",setPlayArrDescripcion,setAgregarDesciptionId); // leer descripciones de playList
+
+
+      // parametro de leerObjetos
+        // 1. Que base de datos se leeara.
+        // 2. cual sera la variable de estado donde se guardara la base de datos.
+        // 3. Guardar las id de cada base de datos para trabajar con  ellas.
     })
+    return ()=>{
+      akmacen.addEventListener("success",()=>{
+        leerObjeto("favoritosMusic",setMusicasFavoritas,setIdBaseFav); // leer musicas favoritas
+  
+        leerObjeto("playListsMusic",setPlayLists,setAgregarIdPlaylist); // leer playLists
+        leerObjeto("playListsTitlesMusic",setPlayArrTitle,setAgregarTitleId); // leer titulos de playLists
+        leerObjeto("playListsDescriptionsMusic",setPlayArrDescripcion,setAgregarDesciptionId); // leer descripciones de playList
+  
+  
+        // parametro de leerObjetos
+          // 1. Que base de datos se leeara.
+          // 2. cual sera la variable de estado donde se guardara la base de datos.
+          // 3. Guardar las id de cada base de datos para trabajar con  ellas.
+      })
+    }
   },[])
   akmacen.addEventListener("error",()=>console.log("hubo un error"));
 
@@ -543,6 +567,10 @@ function Cap12ProyV1() {
     const datos = getData(base,"readwrite");
     datos.delete(key);
   }
+  const editarObjeto=(base,objeto,key)=>{
+    const datos = getData(base,"readwrite");
+    datos.put(objeto,key);
+  }
 
   const getData=(base,tipo)=>{
     const db = akmacen.result;
@@ -550,8 +578,13 @@ function Cap12ProyV1() {
     const almacen = transaccion.objectStore(base);
     return almacen;
   }
-  
-  const [idBaseFav, setIdBaseFav] = useState([]);
+
+  // favoritos
+  const [idBaseFav, setIdBaseFav] = useState([]); // obtener id de las musicas favoritas.
+  // playLists
+  const [agregarIdPlaylist, setAgregarIdPlaylist] = useState([]); // obtener id de las playLists.
+  const [agregarTitleId, setAgregarTitleId] = useState([]); // agregar id a los titulos de las playList
+  const [agregarDesciptionId, setAgregarDesciptionId] = useState([]); // agregar id a las descripciones de las playLists.
   function leerObjeto(base,estadoAgregar,estadoId){
     const db = akmacen.result;
     const transaccion = db.transaction(base,"readwrite")
@@ -567,24 +600,6 @@ function Cap12ProyV1() {
       }
       estadoAgregar(agregar);
       estadoId(agregarId);
-    })
-  }
-  const [agregarIdPlaylist, setAgregarIdPlaylist] = useState([]);
-  function leerObjetoPlayList(){
-    const db = akmacen.result;
-    const transaccion = db.transaction("playListsMusic","readwrite")
-    const almacenData = transaccion.objectStore("playListsMusic");
-    const cursor = almacenData.openCursor();
-    let agregar = [];
-    let agregarId = [];
-    cursor.addEventListener("success",()=>{
-      if (cursor.result) {
-        agregar.push(cursor.result.value)
-        agregarId.push(cursor.result.key)
-        cursor.result.continue();
-      }
-      setPlayLists(agregar)
-      setAgregarIdPlaylist(agregarId);
     })
   }
 
@@ -633,18 +648,13 @@ function Cap12ProyV1() {
       agregarObjetos("playListsMusic",[base[posisionOptions]]) // agregar musica a la base de datos
       agregarObjetos("playListsTitlesMusic",titlePlayList)
       agregarObjetos("playListsDescriptionsMusic",descripcionPlayList)
+      leerObjeto("playListsMusic",setPlayLists,setAgregarIdPlaylist); // leer playLists
+      leerObjeto("playListsTitlesMusic",setPlayArrTitle,setAgregarTitleId); // leer titulos de playLists
+      leerObjeto("playListsDescriptionsMusic",setPlayArrDescripcion,setAgregarDesciptionId); // leer descripciones de playList
     } else {
       setShowErrTitlePlay(true)
     }
   }
-  useEffect(()=>{
-    console.log(playArrTitle[playArrTitle.length - 1 < 0 ? 0:playArrTitle.length - 1])
-    
-    // agregarObjetos("playListsDescriptionsMusic",playArrDescripcion[playArrDescripcion.length - 1 < 0 ? 0:playArrDescripcion.length - 1])
-  },[playArrTitle])
-  
-
-  
   
   // esta funcion es para agregar mas musicas a una playList.
   const addPlayListMusic=(index)=>{
@@ -656,6 +666,7 @@ function Cap12ProyV1() {
       setPlayLists((prevArr) => {
         const newArr = [...prevArr];
         newArr[index] = [...newArr[index], base[posisionOptions]];
+        editarObjeto("playListsMusic",newArr[index],agregarIdPlaylist[index])
         return newArr;
       });
       showHidePlaylists("hide")
@@ -716,11 +727,15 @@ function Cap12ProyV1() {
     setMsgAccionFav(`La playList ${playArrTitle[posisionPlaylistOptions]} ha sido eliminada`)
     setMsgAgregadoFav(true)
     setTimeout(() =>setMsgAgregadoFav(false), 4000);
+    eliminarObjeto("playListsDescriptionsMusic",agregarDesciptionId[posisionPlaylistOptions]);
+    eliminarObjeto("playListsTitlesMusic",agregarTitleId[posisionPlaylistOptions]);
+    eliminarObjeto("playListsMusic",agregarIdPlaylist[posisionPlaylistOptions]);
+    leerObjeto("playListsMusic",setPlayLists,setAgregarIdPlaylist); // leer playLists
+    leerObjeto("playListsTitlesMusic",setPlayArrTitle,setAgregarTitleId); // leer titulos de playLists
+    leerObjeto("playListsDescriptionsMusic",setPlayArrDescripcion,setAgregarDesciptionId); // leer descripciones de playList
   };
   // Esta funcion es para reproducir las musicas de una playList en especifico.
   const playMusicPlayList=()=>{
-    console.log(playListEspecifica)
-    
     setEsPlayList(true);
     setEsFavoritos(false);
     setEsAleatorio(false);
@@ -735,18 +750,14 @@ function Cap12ProyV1() {
     setImgReproductor(playListEspecifica[index].imagen);
     setTitleReproductor(playListEspecifica[index].titulo);
     setArtistReproductor(playListEspecifica[index].artista);
-
+    setSecondControls(true)
     setEsPlayList(true);
     setEsAleatorio(false);
     setEsNormal(false);
     setEsFavoritos(false);
   };
-  
 
-
-  // ahora no se como mrd hacer que las musicas de las playList se reproduzcan desde el index donde se hizo la reproduccion de musica mi cerevro esta apagado xd.
-
-    return (  
+    return (
       <>
         <ShowOptions 
           link={"../"}
