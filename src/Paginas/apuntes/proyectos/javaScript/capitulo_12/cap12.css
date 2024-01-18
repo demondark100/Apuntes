@@ -143,8 +143,8 @@
 .contentCap12JsV1MenuSugerencias{
   position: absolute;
   top: 45px;
-  background-color: #5550503a;
-  backdrop-filter: blur(2px);
+  background-color: #161515a1;
+  backdrop-filter: blur(4px);
   width: 208px;
   display: flex;
   flex-direction: column;
@@ -823,7 +823,7 @@
 .contentCap12JsV1FavoritosContent{ /*contenedor principal*/
   position: fixed;
   right: 0;
-  top: 45px;
+  top: 0;
   overflow: auto;
   width: 100%;
   height: 100%;
@@ -832,6 +832,7 @@
   flex-direction: column;
   align-items: center;
   z-index: 3;
+  padding-top: 45px;
 }
 .contentCap12JsV1FavoritosContentError{ /*mensaje de error osea no hay favoritos*/
   color: #f00 !important;
@@ -870,6 +871,16 @@
   padding: 8px;
   color: #84d7f6;
   font-size: 1em;
+}
+/*boton de reproduccion aleatoria de musicas favoritas*/
+.contentCap12JsV1FavoritosContentBtn{
+  position: absolute;
+  bottom: 15%;
+  background-color: #fff !important;
+  border-radius: 1000px;
+  color: #000 !important;
+  font-size: 1.2em;
+  padding: 8px;
 }
 
 
@@ -1320,13 +1331,16 @@
 .contentCap12JsV1PlayListsMusicContentMusic{ /*contenedor principal*/
   display: flex;
   flex-direction: column;
+  gap: 12px;
   margin-top: 35px;
+  padding-bottom: 150px;
+  align-items: center;
 }
 .contentCap12JsV1PlayListsMusicContentMusicContent{ /*contenedor de cada musica*/
   padding: 10px;
   cursor: pointer;
+  width: 95%;
   display: flex;
-  width: 85%;
   justify-content: space-between;
   align-items: center;
 }
@@ -1356,6 +1370,88 @@
   font-size: 1em;
 }
 
+
+
+
+/*estilos de las opciones de las playLists*/
+.contentCap12JsV1PlayListsMusicOptions{ /*contenedor principal*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0000007e;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+.contentCap12JsV1PlayListsMusicOptionsHide{ /*ocultar opciones*/
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .3s;
+}
+.cwidontentCap12JsV1PlayListsOptionsMusicContent{ /*contenedor de las opciones*/
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #161616;
+  top: 20%;
+  height: 80%;
+  width: 100%;
+  transition-duration: .1s;
+  cursor: auto;
+}
+.cwidontentCap12JsV1PlayListsOptionsMusicContentHide{ /*ocultar opciones*/
+  top: 100%;
+  transition-duration: .1s;
+}
+
+.cwidontentCap12JsV1PlayListsOptionsMusicContentInfo{ /*esto es el contenedor principal de la informacion*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  padding-top: 15px;
+}
+.cwidontentCap12JsV1PlayListsOptionsMusicContentInfoImg{ /*contenedor de la imagen*/
+  background-color: #000;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cwidontentCap12JsV1PlayListsOptionsMusicContentInfoImg img{ /*imagen*/
+  width: 100%;
+  object-fit: cover;
+}
+.cwidontentCap12JsV1PlayListsOptionsMusicContentInfoInfo{ /*contenedor de la informacion*/
+  display: flex;
+  flex-direction: column;
+}  .cwidontentCap12JsV1PlayListsOptionsMusicContentInfoInfo h4{
+  font-size: 1em;
+  color: #84d7f6 !important;
+}  .cwidontentCap12JsV1PlayListsOptionsMusicContentInfoInfo p{
+  font-size: .8em;
+}
+/*estilos de los botones*/
+.cwidontentCap12JsV1PlayListsOptionsMusicContentBtn{ /*boton*/
+  background-color: transparent !important;
+  padding: 15px;
+}
+.cwidontentCap12JsV1PlayListsOptionsMusicContentBtn span{ /*texto de los iconos*/
+  display: flex;
+  justify-content: start;
+  gap: 8px;
+  align-items: center;
+  font-size: 2em;
+}
+
+
 @media(min-width:750px){
   .contentCap12JsV1AddPlayContent{ /*contenedor para agregar a playList*/
     width: 300px;
@@ -1379,5 +1475,19 @@
   }
   .contentCap12JsV1PlayListsMusicContentAtras{ /*boton para regresar atras*/
     left: 220px;
+  }
+
+  
+/*estilos del contenedor de las musicas de la playList*/
+  .contentCap12JsV1PlayListsMusicContentMusic{ /*contenedor principal*/
+    width: 500px;
+  }
+
+  /*estilos de las opciones de las playLists*/
+  .cwidontentCap12JsV1PlayListsOptionsMusicContent{ /*contenedor de las opciones*/
+    width: 250px;
+  }
+  .cwidontentCap12JsV1PlayListsOptionsMusicContentBtn span{ /*texto de los iconos*/
+    font-size: 1.2em;
   }
 }

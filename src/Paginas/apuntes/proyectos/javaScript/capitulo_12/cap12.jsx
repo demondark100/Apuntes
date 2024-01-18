@@ -92,6 +92,7 @@ function MensajesAccion({estado,mensaje}) {
 
 function Cap12ProyV1() {
 
+
   // menu de la aplicacion.
   const [showOptionsMenu, setShowOptionsMenu] = useState(false); // mostrar el menu 
   const manejarMenu=()=>{
@@ -330,9 +331,48 @@ function Cap12ProyV1() {
           setPausePlay(false) 
         }
       } else if (esFavoritos){
-        
+        if (esfavoritasAleatorias) {
+          let newId = musicFavCount + 1;
+          if (newId < musicasFavoritas.length) {
+            setMusicFavCount(newId);
+            setMusicReproductor(rutaReal + musicasFavoritas[aleatoriasFav[newId]].link)
+            setImgReproductor(musicasFavoritas[aleatoriasFav[newId]].imagen);
+            setTitleReproductor(musicasFavoritas[aleatoriasFav[newId]].titulo);
+            setArtistReproductor(musicasFavoritas[aleatoriasFav[newId]].artista)
+            setTimeout(() =>pausarReproducir("reproducir"), 10);
+          }
+        } else{
+          let newId = musicFavCount + 1;
+          if (newId < musicasFavoritas.length) {
+            setMusicFavCount(newId)
+            setMusicReproductor(rutaReal + musicasFavoritas[newId].link)
+            setImgReproductor(musicasFavoritas[newId].imagen);
+            setTitleReproductor(musicasFavoritas[newId].titulo);
+            setArtistReproductor(musicasFavoritas[newId].artista);
+            setTimeout(() =>pausarReproducir("reproducir"), 10);
+          }
+        }
       } else if (esPlayList){
-        console.log()
+        if (esPlayListAleatoria) {
+          let newId = playListCount + 1;
+          if (newId < playListEspecifica.length) {
+            setPlayListCount(newId);
+            setMusicReproductor(rutaReal + playListEspecifica[playListAleatoria[newId]].link)
+            setImgReproductor(playListEspecifica[playListAleatoria[newId]].imagen);
+            setTitleReproductor(playListEspecifica[playListAleatoria[newId]].titulo);
+            setArtistReproductor(playListEspecifica[playListAleatoria[newId]].artista);
+            setTimeout(() => audioMusic.current.play(), 10);
+            setPausePlay(false);
+          }
+        } else {
+          let newId = playListCount + 1;
+          if (newId < playListEspecifica.length) {
+            setPlayListCount(newId);
+            setTimeout(() =>audioMusic.current.play(),10);
+            setIdentificar(playListEspecifica[newId].id)
+            setPausePlay(false)
+          }
+        }
       }
     } else {
       if (esNormal) {
@@ -351,12 +391,54 @@ function Cap12ProyV1() {
           setPausePlay(false);
         }
       } else if (esFavoritos){
-        
+        if (esfavoritasAleatorias) {
+          let newId = musicFavCount - 1;
+          if (newId >= 0) {
+            setMusicFavCount(newId);
+            setMusicReproductor(rutaReal + musicasFavoritas[aleatoriasFav[newId]].link)
+            setImgReproductor(musicasFavoritas[aleatoriasFav[newId]].imagen);
+            setTitleReproductor(musicasFavoritas[aleatoriasFav[newId]].titulo);
+            setArtistReproductor(musicasFavoritas[aleatoriasFav[newId]].artista)
+            setTimeout(() =>pausarReproducir("reproducir"), 10);
+          }
+        } else{
+          let newId = musicFavCount - 1;
+          if (newId >= 0) {
+            setMusicFavCount(newId)
+            setMusicReproductor(rutaReal + musicasFavoritas[newId].link)
+            setImgReproductor(musicasFavoritas[newId].imagen);
+            setTitleReproductor(musicasFavoritas[newId].titulo);
+            setArtistReproductor(musicasFavoritas[newId].artista);
+            setTimeout(() =>pausarReproducir("reproducir"), 10);
+          }
+        }
       } else if (esPlayList){
-        
+        if (esPlayListAleatoria) {
+          let newId = playListCount - 1;
+          if (newId >= 0) {
+            setPlayListCount(newId);
+            setMusicReproductor(rutaReal + playListEspecifica[playListAleatoria[newId]].link)
+            setImgReproductor(playListEspecifica[playListAleatoria[newId]].imagen);
+            setTitleReproductor(playListEspecifica[playListAleatoria[newId]].titulo);
+            setArtistReproductor(playListEspecifica[playListAleatoria[newId]].artista);
+            setTimeout(() => audioMusic.current.play(), 10);
+            setPausePlay(false);
+          }
+        } else {
+          let newId = playListCount - 1;
+          if (newId >= 0) {
+            setPlayListCount(newId);
+            setTimeout(() =>audioMusic.current.play(),10);
+            setIdentificar(playListEspecifica[newId].id)
+            setPausePlay(false)
+          }
+        }
       }
     }
   }
+
+  
+  
   //actualizar musicas
   useEffect(()=>{
     setImgReproductor(base[identificar].imagen);
@@ -364,7 +446,6 @@ function Cap12ProyV1() {
     setArtistReproductor(base[identificar].artista);
     setMusicReproductor(rutaReal + base[identificar].link);
   },[identificar])
-
 
 
   // opciones de las musicas
@@ -452,6 +533,7 @@ function Cap12ProyV1() {
   // funciones de musicas favoritas.
 
   const [esFavoritos, setEsFavoritos] = useState(false); // musicas de favoritos .
+  const [esfavoritasAleatorias, setEsfavoritasAleatorias] = useState(false); // musicas de favoritas pero aleatorias.
   // esta funcion es para agregar a favoritos las musicas.
   const [musicasFavoritas, setMusicasFavoritas] = useState([]);
   const [showFavoritas, setShowFavoritas] = useState(false);;
@@ -488,22 +570,51 @@ function Cap12ProyV1() {
   }
   
   // esta funcion se encarga de reproducir la musica de las musicas que estan en favoritas.
+  const [musicFavCount, setMusicFavCount] = useState(0);
   const playFavMusic=(index)=>{
     setMusicReproductor(rutaReal + musicasFavoritas[index].link)
-    setTimeout(() =>pausarReproducir("reproducir"), 10);
     setImgReproductor(musicasFavoritas[index].imagen);
     setTitleReproductor(musicasFavoritas[index].titulo);
     setArtistReproductor(musicasFavoritas[index].artista)
+    setTimeout(() =>pausarReproducir("reproducir"), 10);
     setSecondControls(true);
     setShowMusic(true)
     rotarIcono.current.style.transform = "rotate(0deg)";
+    setMusicFavCount(index)
 
+    
     setEsFavoritos(true);
+    setEsfavoritasAleatorias(false);
+    setEsPlayListAleatoria(false);
     setEsAleatorio(false);
     setEsNormal(false);
     setEsPlayList(false);
   }
-
+  const [aleatoriasFav, setAleatoriasFav] = useState([]);
+  const reproduccionAleatoriaFav=()=>{
+    setMusicFavCount(0);
+    let indicesTemp = [];
+    for (let i = 0; i < musicasFavoritas.length; i++) {
+      let indiceAleatorio;
+      do {
+        indiceAleatorio = Math.floor(Math.random() * musicasFavoritas.length);
+      } while (indicesTemp.includes(indiceAleatorio));
+      indicesTemp.push(indiceAleatorio);
+    }
+    setAleatoriasFav(indicesTemp)
+    setMusicReproductor(rutaReal + musicasFavoritas[indicesTemp[0]].link)
+    setImgReproductor(musicasFavoritas[indicesTemp[0]].imagen);
+    setTitleReproductor(musicasFavoritas[indicesTemp[0]].titulo);
+    setArtistReproductor(musicasFavoritas[indicesTemp[0]].artista)
+    setTimeout(() =>pausarReproducir("reproducir"), 10);
+    setEsFavoritos(true);
+    setEsfavoritasAleatorias(true);
+    setEsPlayListAleatoria(false)
+    setEsAleatorio(false);
+    setEsNormal(false);
+    setEsPlayList(false);
+    setSecondControls(true)
+  }
 
 
   // base de datos que guarda la informacion de las musicas favoritas.
@@ -736,33 +847,304 @@ function Cap12ProyV1() {
   };
   // Esta funcion es para reproducir las musicas de una playList en especifico.
   const playMusicPlayList=()=>{
+    setPlayListCount(0)
+    setMusicReproductor(rutaReal + playListEspecifica[0].link)
+    setTimeout(() => {
+      audioMusic.current.play()
+      rotarIcono.current.style.transform = "rotate(180deg)";
+    }, 10);
+    setSecondControls(true);
+    setPausePlay(false)
+    setImgReproductor(playListEspecifica[0].imagen);
+    setTitleReproductor(playListEspecifica[0].titulo);
+    setArtistReproductor(playListEspecifica[0].artista);
+
     setEsPlayList(true);
     setEsFavoritos(false);
     setEsAleatorio(false);
     setEsNormal(false);
+    setEsPlayListAleatoria(false)
   }
   // esta funcion es para reproducir una musica de la playList.
   const [playListCount, setPlayListCount] = useState(0);
   const reproducirPlayListMusic=(index)=>{
     setPlayListCount(index);
     setMusicReproductor(rutaReal + playListEspecifica[index].link)
-    setTimeout(() =>pausarReproducir("reproducir"), 10);
+    setTimeout(() => {
+      audioMusic.current.play()
+      rotarIcono.current.style.transform = "rotate(180deg)";
+    }, 10);
+    setPausePlay(false)
     setImgReproductor(playListEspecifica[index].imagen);
     setTitleReproductor(playListEspecifica[index].titulo);
     setArtistReproductor(playListEspecifica[index].artista);
     setSecondControls(true)
+
     setEsPlayList(true);
+    setEsPlayListAleatoria(false)
+    setEsfavoritasAleatorias(false)
     setEsAleatorio(false);
     setEsNormal(false);
     setEsFavoritos(false);
+    setEsPlayListAleatoria(false)
   };
+  // esta funcion es para reproducir una musica aleatoria de la playList especifica.
+  const [playListAleatoria, setPlayListAleatoria] = useState([]);
+  const [esPlayListAleatoria, setEsPlayListAleatoria] = useState(false);
+  const playMusicRandomPlayList=()=>{
+    setPlayListCount(0);
+    let indicesTemp = [];
+    for (let i = 0; i < playListEspecifica.length; i++) {
+      let indiceAleatorio;
+      do {
+        indiceAleatorio = Math.floor(Math.random() * playListEspecifica.length);
+      } while (indicesTemp.includes(indiceAleatorio));
+      indicesTemp.push(indiceAleatorio);
+    }
+    setPlayListAleatoria(indicesTemp)
+
+    setMusicReproductor(rutaReal + playListEspecifica[indicesTemp[0]].link)
+    setImgReproductor(playListEspecifica[indicesTemp[0]].imagen);
+    setTitleReproductor(playListEspecifica[indicesTemp[0]].titulo);
+    setArtistReproductor(playListEspecifica[indicesTemp[0]].artista);
+    
+    setTimeout(() => {
+      audioMusic.current.play()
+      rotarIcono.current.style.transform = "rotate(180deg)";
+    }, 10);
+
+    setPausePlay(false)
+    setSecondControls(true)
+
+    setEsPlayList(true);
+    setEsPlayListAleatoria(true)
+    setEsfavoritasAleatorias(false)
+    setEsAleatorio(false);
+    setEsNormal(false);
+    setEsFavoritos(false);
+  }
+  // funciones de las opciones de las musicas de las playLists.
+  const [showOptionsPlayListMusic, setShowOptionsPlayListMusic] = useState(false); // estado para mostrar las opciones de las musicas de una playList.
+  const [objectPlayListMusic, setObjectPlayListMusic] = useState({}); // esto guarda la musica especifica.
+  const [posisionMusicPlaylist, setPosisionMusicPlaylist] = useState(0);
+  const deletePlayListMusic=()=>{
+    let newObject = [...playLists];
+    newObject[posisionPlaylistOptions].splice(posisionMusicPlaylist,1)
+    setPlayLists(newObject)
+    setShowOptionsPlayListMusic(false)
+    setMsgAgregadoFav(true)
+    setMsgAccionFav("Musica eliminada de la playList")
+    setTimeout(() =>setMsgAgregadoFav(false), 4000);
+    editarObjeto("playListsMusic",newObject[posisionPlaylistOptions],agregarIdPlaylist[posisionPlaylistOptions])
+  }
+
 
     return (
       <>
         <ShowOptions 
           link={"../"}
+          html={`<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="plantilla.css">
+    <script src="https://kit.fontawesome.com/7e204a84d0.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+
+  </head>
+  <body>
+
+    <div class="content"></div>
+
+    <script src="plantilla.js"></script>
+  </body>
+</html>`}
+          css={`*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content{
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  display: grid;
+  padding-top: 15px;
+  top: 0;
+  left: 0;
+  grid-template-columns: repeat(2,400px);
+  justify-content: center;
+  gap: 15px;
+}
+.contenedor{
+  border: 2px solid rgb(35, 37, 35);
+  background-color: #0f0f0f;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+}
+.load{
+  opacity: 1;
+  visibility: visible;
+  transition-duration: .8s;
+}
+.contenedor img{
+  width: 80%;
+  object-fit: cover;
+}
+.contenedor h4{
+  color: #a2fffd;
+  font-size: 1.5em;
+  margin-top: 15px;
+  text-align: center;
+}
+.contenedor a{
+  background-color: #222422;
+  border-radius: 50px;
+  padding: 8px;
+  color: #91d3d2;
+  text-decoration: none;
+  margin-top: 15px;
+  width: 85%;
+  text-align: center;
+}
+.contenedor p{
+  color: #7cb3b2;
+  margin-top: 15px;
+  text-align: center;
+}`}
+          javaScript={`const content = document.querySelector(".content");
+let datos = [];
+
+
+fetch("base.json")
+  .then(res => res.json())
+
+
+
+  .then(res=>{
+
+
+    res.forEach((i)=>{
+      const contenedorDiv = document.createElement("div");
+      contenedorDiv.classList.add("contenedor")
+      content.appendChild(contenedorDiv)
+      datos.push(i)
+    })
+
+  
+    let arr = [];
+    arr.push(content.children)
+    let indexDatos = 0;
+
+    const observar = (entradas,observer) => {
+      entradas.forEach(i=>{
+        if (i.isIntersecting) {
+          const entry = i.target;
+          entry.classList.add("load")
+          entry.innerHTML = \`<img src="${"${datos[indexDatos].imagen}"}" alt="${"${datos[indexDatos].titulo}"}"/>
+            <h4>${"${datos[indexDatos].titulo}"}</h4>
+            <a href="${"${datos[indexDatos].link}"}" target="_blank">musica aqui</a>
+            <p>${"${datos[indexDatos].artista}"}</p>
+          \`
+          observer.unobserve(entry)
+          indexDatos++;
+        }
+      })
+          
+
+    };
+    
+    const observer = new IntersectionObserver(observar);
+    for (let i = 0; i < arr[0].length; i++) {
+      observer.observe(arr[0][i]);
+    }
+  })`}
+          txt={`[
+  {
+    "imagen":  "https://i.ytimg.com/vi/a47Y1lCRHlM/hqdefault.jpg?sqp=-oaymwEWCMACELQBIAQqCghQEJADGFogjgJIWg&rs=AMzJL3lkePc_gYJ-BfoiDqPHN0jXCEzYbg",
+    "titulo": "We are the peopple",
+    "link": "https://music.youtube.com/watch?v=r02mYOlfcCw&si=cdT-aSjAEH04hT7q",
+    "artista": "Empire Of The Sun"
+  },
+  {
+    "imagen":  "https://lh3.googleusercontent.com/utbUSUljsrlFEGo848hyZQHabMaK1ljAqA_o1dJ3YTp1UDlnk_qpd0fE0ZZMpcwQo-sg5F1B2PlUPysl=w544-h544-l90-rj",
+    "titulo": "Drop The Game",
+    "link": "https://music.youtube.com/watch?v=GnUXVkDIWcM&si=3Didwyf2zp26kV3Y",
+    "artista": "Flume y Chet Faker"
+  },
+  {
+    "imagen":  "https://lh3.googleusercontent.com/svA0RofXwjoyM-LOgNE5dK4QXUcC8Z45V1V4tDofclesEs5gvZYG805B7zYI1yqM9yd4P42BrI3w31hHQw=w544-h544-l90-rj",
+    "titulo": "Beds Are Burning",
+    "link": "https://music.youtube.com/watch?v=9t5OWixuUI8&si=WCZ4-W8fHd5_UrP9",
+    "artista": "Midnight Oil • Diesel And Dust • 1987"
+  },
+  {
+    "imagen":  "https://lh3.googleusercontent.com/UcsBl7TYuywWNNqoZV6bu6jFaOnA1pqeAs9UwJymob_18C5J31oelDiG52Suv-580vNGcQ0eHYwu2os4=w544-h544-l90-rj",
+    "titulo": "Goth",
+    "link": "https://music.youtube.com/watch?v=yMiIrAxQhFA&si=q-l6IBpCULX9q1EO",
+    "artista": "Sidewalks and Skeletons"
+  },
+  {
+    "imagen":  "https://lh3.googleusercontent.com/dp1cp84d63F_Tkq9n1aUTFPdWgwZ9u5IsMU60kOR_VHoIUUFiLPi2_5wNBsYR0EKfWU6qlgcq0ebpf2LAg=w544-h544-l90-rj",
+    "titulo": "What You Know",
+    "link": "https://music.youtube.com/watch?v=VsOR4Z87dNw&si=v7CH8FrUzUvfdWW2",
+    "artista": "Two Door Cinema Club"
+  },
+  {
+    "imagen":  "https://lh3.googleusercontent.com/d7bJNoH_IybM9ZOI9Q7uQrT-5rBpNwxXFb-DHysqjLzjlwr9NRCmOmwE3Hv61INMN9At6KCYBWVTxKD_=w544-h544-l90-rj",
+    "titulo": "We Are Young",
+    "link": "https://music.youtube.com/watch?v=f_K_0SNaRk0&si=wkQJKXFWitLqZ1mR",
+    "artista": "fun.• Some Nights • 2012"
+  },
+  {
+    "imagen":  "https://lh3.googleusercontent.com/z5Va1dqCiSWIQSKNSDB6YoPswuHxkJbl3Sb_XagFmkX4oZTQYm7DCCSHoA3N9vabN8uiIQw4ITcBmmFB=w544-h544-l90-rj",
+    "titulo": "DILATAÇÃO HIPNÓTICA 6.0",
+    "link": "https://music.youtube.com/watch?v=XCXtS-yK-48&si=3O9U6yC8ZK__VH1H",
+    "artista": "DJ FLG • DILATAÇÃO HIPNÓTICA 6.0"
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/TiY8HvnQPbz1_AdXrx3T-qh98zaQoRQAu5kQPMtdTGv9-pqSpRq8G0qzRbDdpokKpTCpitsMim0Idi4s=w544-h544-l90-rj",
+    "titu": "CRAZY FROG BRAZIL",
+    "link": "https://music.youtube.com/watch?v=plMaRBPev70&si=ZBiVA-BngazquVql",
+    "artista": "ZODIVK y YXUNGXROTICA • CRAZY FROG BRAZIL • 2023"
+  }
+]`}
         />
-        {/* <MensajeModal /> */}
+        <MensajeModal texto={`Por alguna razon las rutas solo funcionan en el entorno de desarrollo pero no en el entorno de la web publica`}/>
+        <MensajeModal texto={`¡Proyecto! capitulo 12
+
+Hacer un reproductor de musica , debes usar Lazy Load para mostrar el contenido de forma mas obtimizada.
+
+Recuerda que aprendimos:
+
+1. MatchMedia
+2. Intersection Observer
+3. Lazy Load
+4. Notifications
+5. Web Worker
+6. Same Origin Politic
+7. Objeto Navigator
+8. Memoization
+9. Caché
+10. Service Workers
+11. Cachear sitio web y mostrarlo offline
+12. Cookies
+13. Crear aviso de uso de cookies
+14. Objeto Screen
+15. Objeto Canvas`}/>
+
 
         <div className="Page cap12JsV1">
 
@@ -1154,7 +1536,12 @@ function Cap12ProyV1() {
                         </button>
                       </div>
                     ))
+
                 }
+                <button 
+                  className="contentCap12JsV1FavoritosContentBtn"
+                  onClick={reproduccionAleatoriaFav}
+                >Reproduccion aleatoria</button>
               </div>
             }
             <OptionsMusic
@@ -1197,7 +1584,7 @@ function Cap12ProyV1() {
                             <div
                               className="contentCap12JsV1AddPlayContentPlayListContentImgs"
                             >
-                              <img src={i[0].imagen} />
+                              {i[0] != null ? <img src={i[0].imagen} />:null}
                               {i[1] != null ? <img src={i[1].imagen} />:null}
                               {i[2] != null ? <img src={i[2].imagen} />:null}
                               {i[3] != null ? <img src={i[3].imagen} />:null}
@@ -1388,7 +1775,10 @@ function Cap12ProyV1() {
                         <b>reproducir</b>
                       </span>
                     </button>
-                    <button className="contentCap12JsV1PlayListsMusicContentBtns__btn2">
+                    <button 
+                      className="contentCap12JsV1PlayListsMusicContentBtns__btn2"
+                      onClick={playMusicRandomPlayList}
+                    >
                       <span>
                         <FontAwesomeIcon icon={faRandom} />
                         <b>aleatorio</b>
@@ -1411,7 +1801,15 @@ function Cap12ProyV1() {
                               <p>{i.artista}</p>
                             </div>
                           </div>
-                          <button>
+                          <button
+                            onClick={(e)=>{
+                              e.stopPropagation();
+                              setShowOptionsPlayListMusic(true)
+                              setObjectPlayListMusic(i)
+                              setPosisionOptions(i.id)
+                              setPosisionMusicPlaylist(index)
+                            }}
+                          >
                             <FontAwesomeIcon icon={faEllipsisV}/>
                           </button>
 
@@ -1419,10 +1817,50 @@ function Cap12ProyV1() {
                       ))
                     }
                   </div>
-
                 </div>
               </div>
             } 
+            {/* opciones de las musicas de las playlists */}
+            <div 
+              className={`contentCap12JsV1PlayListsMusicOptions ${showOptionsPlayListMusic ? "":"contentCap12JsV1PlayListsMusicOptionsHide"}`}
+              onClick={(e)=>{
+                e.stopPropagation();
+                setShowOptionsPlayListMusic(false);
+              }}
+            >
+              <div 
+                className={`cwidontentCap12JsV1PlayListsOptionsMusicContent ${showOptionsPlayListMusic ? "":"cwidontentCap12JsV1PlayListsOptionsMusicContent"}`}
+                onClick={(e)=>e.stopPropagation()}
+              >
+                <div className="cwidontentCap12JsV1PlayListsOptionsMusicContentInfo">
+                  <div className="cwidontentCap12JsV1PlayListsOptionsMusicContentInfoImg">
+                    <img src={objectPlayListMusic.imagen} alt={objectPlayListMusic.titulo} />
+                  </div>
+                  <div className="cwidontentCap12JsV1PlayListsOptionsMusicContentInfoInfo">
+                    <h4>{objectPlayListMusic.titulo}</h4>
+                    <p>{objectPlayListMusic.artista}</p>
+                  </div>
+                </div>
+                <button 
+                  className="cwidontentCap12JsV1PlayListsOptionsMusicContentBtn"
+                  onClick={agregarFavoritos}
+                >
+                  <span>
+                    <p>+</p>
+                    <b>agregar a favoritos</b>
+                  </span>
+                </button>
+                <button 
+                  className="cwidontentCap12JsV1PlayListsOptionsMusicContentBtn"
+                  onClick={deletePlayListMusic}
+                >
+                  <span>
+                    <FontAwesomeIcon icon={faTrash}/>
+                    <b>eliminar de la playList</b>
+                  </span>
+                </button>
+              </div>
+            </div>
 
 
 
