@@ -1,261 +1,456 @@
 .mainHome{
-  background-color: #0f0;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   max-width: 100vw;
   margin: 0 !important;
+  background-color: #fff;
   z-index: 4;
 }
 
 
 
-/*estilos de la primera presentacion*/
 
+/* componentes */
 
-
-.presentacionHome{ /*contenedor principal*/
-  position: fixed;
+/* boton de siguiente */
+.HomePresentBtnContent{ /*contenedor del boton*/
   width: 100%;
-  height: 100%;
-  background-color: #000;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: end;
+}
+.HomePresentBtn{ /*boton*/
+  padding: 0;
+  margin: 0;
+  font-size: 1.4em;
+  background-color: transparent;
+  color: #32e24f !important;
+  padding-right: 15px;
+  text-shadow: 0px 0px 15px #32e24f;
+  display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
-  z-index: 500;
-  opacity: 1;
-  transition-duration: .5s;
-  font-size: 1.5em;
-  text-align: center;
-  color: #0f0;
+  pointer-events: auto;
 }
-
-
-.presentacionHomeTecnologias{ /*contenedor de las imagenes*/
-  display: flex;
-  width: 80%;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+.HomePresentBtn svg{
+  color: #32e24f !important;
 }
-.presentacionHomeTecnologias img{ /*imagenes*/
-  width: 80px;
-  object-fit: cover;
-  opacity: 0;
-  transition-duration: .5s;
-  position: absolute;
+.HomePresentBtnGray{
+  color: #645252 !important;
+  pointer-events: none;
+  text-shadow: none;
 }
-.presentacionHomeImgs{ /*Mostrar imagenes*/
-  position: relative !important;
-  opacity: 1 !important;
-  transition-duration: .5s;
+.HomePresentBtnGray svg{
+  color: #645252 !important;
 }
-
-
-.presentacionHomeComenzar{ /*estilos del boton para comenzar a usar la web*/
-  margin-top: 35px;
-  position: absolute;
-  padding: 8px;
-  font-size: 1.2em;
-  border-radius: 50px;
-  cursor: pointer;
-  color: #0f0 !important;
-  background: linear-gradient(90deg,#0b920b,transparent,transparent);
-  box-shadow: 0 0 15px 4px #0f0;
-  opacity: 0;
-  transition-duration: .5s;
-}
-.presentacionHomeComenzarShow{
-  position: relative !important;
-  opacity: 1 !important;
-  transition-duration: .5s;
-}
-
-
-@media(min-width:750px){
-  .presentacionHome{ /*contenedor principal*/
+@media(min-width: 750px){
+  .HomePresentBtnContent{ /*contenedor del boton*/
+    padding-right: 150px;
+  }
+  .HomePresentBtn{ /*boton*/
     font-size: 2em;
   }
 }
 
 
 
-
-
-
-/*estilos del parpadeo de la maquina de escribir*/
-.parpadeoHome{
-  animation-name: parpadeoMaquinaEscribir;
-  animation-duration: .5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@keyframes parpadeoMaquinaEscribir {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-/*estilos del porfolio*/
-.HomePorfolio{ /*contenedor principal*/
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #181717;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 150;
-}
-.HomePorfolio::-webkit-scrollbar{
-  display: none;
-}
-
-/*primera parte presentacion*/
-.HomePorfolioPresent{  /*contenedor principal*/
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
+/*incicaciones del tutorial*/
+.HomePresentIndicaciones{ /*contnedor de la imagen*/
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 350px;
-  gap: 85px;
   flex-direction: column;
-}
-.HomePorfolioPresentTexto{ /*parrafo de la izquierda*/
-  text-align: center;
-  width: 100%;
-  font-size: 1.2em;
-  color: #0f0;
-}
-.HomePorfolioPresentTexto h2{
-  position: relative;
-  font-size: 1.6em;
-  color: #0f0;
-}
-.HomePorfolioPresentImg{ /*contenedor de la imagen*/
-  width: 250px;
-  height: 250px;
-  border-radius: 1000px;
-  overflow: hidden;
-}
-.HomePorfolioPresentImg img{ /*imagen*/
-  width: 100%;
-  height: 100%;
-}
-
-@media(min-width:750px){
-  .HomePorfolioPresent{  /*contenedor principal*/
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .HomePorfolioPresentTexto{ /*parrafo de la izquierda*/
-    width: 50%;
-    font-size: 1.5em;
-  }
-}
-
-
-
-/*segunda parte tecnologias*/
-.HomeTecnologias{ /*comtemedor principal*/
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background-color: #101110;
-  padding: 0;
-  pointer-events: none;
-}
-.HomeTecnologiasBtn{ /*contenedor de los botones*/
-  position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 4;
-
+  gap: 15px;
 }
-.HomeTecnologiasBtn button{ /*botones para mover las imagenes*/
-  background-color: #000000b9;
-  pointer-events: auto;
-  color: #71ecb3;
-  border-radius: 1000px;
-  font-size: 1.2em;
-  margin: 15px;
-  padding: 8px;
-}
-.SliderHomeContentImgs ul{ /*contenedor principal de las imagenes*/
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-.SliderHomeContentImgs ul li img{ /*imagenes*/
-  width: 100vw;
-  height: 105vh;
-  object-fit: cover;
-  object-position: center;
-}
-.sliderImgLiHome{ /*ocurecer un poco las imagenes*/
-  position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  background-color: #00000050;
-  z-index: 0;
-}
-
-
-/*informacion sobre las tecnologias*/
-.SliderHomeContentInfo{  /*contenedor principal*/
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-.SliderHomeContentInfoContent{ /*contenedor centrado*/
-  background-color: #0202022c;
-  border-radius: 15px;
-  backdrop-filter: blur(4px);
+.HomePresentIndicaciones__3Img img{ /*imagen*/
   width: 75%;
-  padding: 15px;
-  text-align: center;
+}
+.HomePresentIndicaciones__3ImgIcons{ /*contenedor de los iconos*/
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  color: #83ecff;
-  text-shadow: 0px 0 25px rgb(239, 247, 239);
-  font-size: 1.2em;
+  gap: 15px;
 }
-.SliderHomeContentInfoContent h2{
-  color: #83ecff;
-  margin: 0;
-  padding: 0;
+.HomePresentIndicaciones__3ImgIcons svg{ /*icono del tutorial*/
+  padding: 10px;
+  border-radius: 1000px;
+  font-size: 1.5em;
 }
-@media(min-width:750px){
-  .SliderHomeContentInfoContent{ /*contenedor centrado*/
+.HomePresentIndicaciones__3ImgIconsGreen svg:nth-child(1){
+  background-color: #54cf54;
+  box-shadow: 0px 0px 12px 12px #3c993c;
+  color: #5c5656;
+}
+.HomePresentIndicaciones__3ImgIconsGreen svg:nth-child(2){
+  background-color: #b41010;
+  color: #000;
+}
+.HomePresentIndicaciones__3ImgIconsRed svg:nth-child(1){
+  background-color: #b41010;
+  color: #000;
+}
+.HomePresentIndicaciones__3ImgIconsRed svg:nth-child(2){
+  background-color: #54cf54;
+  box-shadow: 0px 0px 12px 12px #3c993c;
+  color: #5c5656;
+}
+
+
+@media(min-width: 750px){
+  .HomePresentIndicaciones__3Img img{ /*imagen*/
     width: 250px;
   }
+}
+
+
+
+
+
+
+/*presentacion y tutorial*/
+.HomePresent{  /*contenedor principal*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition-duration: .3s;
+  z-index: 2;
+}
+.HomePresent::-webkit-scrollbar{display: none;}
+.HomePresentHide{
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .3s;
+}
+.HomePresent::-webkit-scrollbar{
+  display: none;
+}
+@media(min-width: 750px){
+  .HomePresent{  /*contenedor principal*/
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+/*presentacion contenedor principal*/
+.HomePresent__1{ /*contenedor principal*/
+  position: absolute;
+  width: 100vw;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 35px;
+  max-height: 1200px;
+  max-width: 1300px;
+  transition-duration: .3s;
+}
+.HomePresent__1 h1{ /*titulo*/
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  color: #32e24f;
+}
+.HomePresent__1Indo{ /*contenedor de la informacion*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.HomePresent__1Indo p{ /*parrafo*/
+  font-size: 1.5em;
+  width: 80%;
+  color: #32e24f !important;
+}
+.HomePresent__1IndoImg{ /*contenedor de la imagen*/
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  border: 2px solid #138526;
+  position: relative;
+  overflow: hidden;
+}
+.HomePresent__1IndoImg img{ /*imagen */
+  position: relative;
+  border: 2px solid #f00;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media(min-width:750px){
+  .HomePresent__1{ /*contenedor principal*/
+    align-items: center;
+    justify-content: space-around;
+    gap: 0;
+    /* max-height: 500px; */
+  }
+  .HomePresent__1 h1{
+    font-size: 3em;
+  }
+  .HomePresent__1Indo{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .HomePresent__1Indo p{ /*parrafo*/
+    width: 50%;
+    font-size: 2em;
+  }
+  .HomePresent__1IndoImg{ /*contenedor de la imagen*/
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+
+
+/*segunda parte de la presentacion*/
+.HomePresent__2{ /*contenedor principal*/
+  position: absolute;
+  top: 0;
+  left: 150%;
+  width: 100%;
+  height: 100%;
+  transition-duration: .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  overflow-x: hidden;
+  gap: 35px;
+}
+.HomePresent__2 h2{ /*titulo del tutorial*/
+  color: #32e24f;
+  padding: 0;
+  font-size: 2em;
+}
+
+.HomePresent__2Info{ /*contenedor de la informacion*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.HomePresent__2Info p{ /*letras del tutorial del menu*/
+  color: #32e24f !important;
+  font-size: 1.5em;
+}
+.HomePresent__2Info img{ /*imagen del tutorial del menu*/
+  width: 65%;
+}
+
+
+.HomePresent__2InfoBtns{ /*contenedor principal de la informacion de cada boton*/
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 35px;
+}
+
+.HomePresent__2InfoBtns__content{ /*contenedor de cada nota*/
+  background-color: #1f1b1b;
+  padding: 8px;
+  width: 90%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.HomePresent__2InfoBtns__content div{ /*informacion*/
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* colorear iconos */
+.HomePresent__2InfoBtns_1{
+  color: #e9faad;
+}
+.HomePresent__2InfoBtns_2{
+  color: #0f0;
+}
+.HomePresent__2InfoBtns_3{
+  color: #af8181;
+}
+.HomePresent__2InfoBtns_4{
+  color: #2f43fd;
+}
+
+.HomePresent__2InfoBtns__content h3{
+  color: #def3e2;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+}
+.HomePresent__2InfoBtns__content p{
+  color: #b8c5ba !important;
+  font-size: 1em;
+}
+
+@media(min-width: 750px){
+  .HomePresent__2Info img{ /*imagen del tutorial del menu*/
+    width: 200px;
+  }
+  .HomePresent__2 h2{ /*titulo del tutorial*/
+    font-size: 3em;
+  }
+  .HomePresent__2Info p{ /*letras del tutorial del menu*/
+    font-size: 2em;
+  }
+  .HomePresent__2Info{ /*contenedor de la informacion*/
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .HomePresent__2InfoBtns__content{ /*contenedor de cada nota*/
+    width: 350px;
+  }
+
+}
+
+
+
+/*tercepar parte uso de herramientas*/
+.HomePresent__3{ /*contenedor principal*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 150%;
+  transition-duration: .3s;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  overflow: auto;
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+.HomePresent__3 h2{ /*titulo principal*/
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+.HomePresent__3Info{ /*contenedor de la informacion*/
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: #141414;
+  padding: 10px;
+  border-radius: 14px;
+}
+.HomePresent__3Info p{ /*color del texto de la informacion*/
+  color: #32e24f !important;
+  font-size: 1em;
+}
+
+.HomePresent__3Btn{ /*boton para comenzar a usar la aplicacion*/
+  border-radius: 1000px;
+  background-color: transparent;
+  border: 2px solid #138526;
+  padding: 8px;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+  position: relative;
+  color: #32e24f !important;
+  transition-duration: .3s;
+  pointer-events: auto;
+}
+.HomePresent__3Btn:hover{
+  background-color: #1e201e;
+  box-shadow: 0 0 15px 8px #32e24f;
+  transition-duration: .3s;
+}
+.HomePresent__3BtnHray{
+  border: 2px solid #272525;
+  color: #272525 !important;
+  pointer-events: none;
+}
+
+@media(min-width: 750px){
+  .HomePresent__3 h2{ /*titulo principal*/
+    font-size: 3em;
+  }
+  .HomePresent__3Info{ /*contenedor de la informacion*/
+    width: 350px;
+  }
+  .HomePresent__3Info p{ /*color del texto de la informacion*/
+    font-size: 1.5em;
+  }
+  .HomePresent__3Btn{ /*boton para comenzar a usar la aplicacion*/
+    font-size: 2em;
+    padding: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*pagina de home*/
+.Home{
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 100vw;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.Home::-webkit-scrollbar{display: none;}
+.homeLazy{
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition-duration: .3s;
+}
+.homeLazyShow{
+  opacity: 1;
+  transition-duration: .3s;
+}
+
+
+/* seccion de tecnologias */
+.HomeTecnologias{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e201e;
+}
+.HomeTecnologias h2{
+  color: #33d6dc;
+}
+
+
+
+/* seccion de certificados */
+.HomeSertificados{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00f;
 }

@@ -47,8 +47,7 @@ import js22 from "./imagenes/javaScript/js22.png"
 import js23 from "./imagenes/javaScript/js23.png"
 import js24 from "./imagenes/javaScript/js24.png"
 import js25 from "./imagenes/javaScript/js25.png"
-
-
+import js26 from "./imagenes/javaScript/js26.png"
 
 
 function Proyectos({sendshowProyects}) {
@@ -276,7 +275,7 @@ function Proyectos({sendshowProyects}) {
                     <p onClick={()=>setCap12Js(!cap12Js)}>capitulo 12</p>
                     {
                       cap12Js && <div className='temas'>
-                        <Link onMouseMove={()=>showImg("imagen")} onMouseOut={()=>setShowContent(false)} to={"javaScript/cap12ProyV1"}>playList</Link>
+                        <Link onMouseMove={()=>showImg(js26)} onMouseOut={()=>setShowContent(false)} to={"javaScript/cap12ProyV1"}>Reproductor de musica</Link>
 
                       </div>
                     }
