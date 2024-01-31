@@ -435,16 +435,78 @@
 
 
 /* seccion de tecnologias */
-.HomeTecnologias{
+.HomeTecnologias{ /*contenedor pricipal*/
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #1e201e;
+  background-color: #121312;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 650px;
 }
-.HomeTecnologias h2{
+.HomeTecnologias h2{ /*titulos*/
   color: #33d6dc;
 }
+.HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: #272c27;
+  border-radius: 25px;
+  padding: 8px;
+  gap: 15px;
+  max-height: 450px;
+  overflow: auto;
+} .HomeTecnologiasLanguage::-webkit-scrollbar{display: none;}
 
+.HomeTecnologiasLanguageImg{ /*contenedor de las imagenes de los lenguages*/
+  width: 70px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.HomeTecnologiasLanguageImg img{ /*imagen de los lenguages de programacion*/
+  width: 100%;
+  cursor: pointer;
+}
+.HomeTecnologiasLanguageImgContent{ /*contenedor de la informacion*/
+  display: none;
+  position: fixed;
+  background-color: #000;
+  width: 180px;
+  z-index: 2;
+} .HomeTecnologiasLanguageImgContent h3{ /*titulo*/
+  color: #1ec6dc;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #262b2c;
+  text-align: start;
+  padding: 4px 0 8px 15px;
+} .HomeTecnologiasLanguageImgContent p{
+  color: #1ec6dc;
+  padding: 15px;
+}
+@media(min-width: 750px){
+  .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
+    width: 420px;
+  }
+  .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
+    width: 450px;
+    gap: 45px;
+    padding: 40px;
+  }
+  .HomeTecnologiasLanguageImg{ /*imagenes de los lenguages*/
+    width: 120px;
+  }
+  .HomeTecnologiasLanguageImgContent{ /*contenedor de la informacion*/
+    width: 350px;
+  }
+}
 
 
 /* seccion de certificados */

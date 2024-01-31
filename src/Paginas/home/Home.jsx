@@ -233,6 +233,35 @@ function Home() {
   },[]);
 
 
+  // funcion para mostrar informacion de las tecnologias aprendidas.
+  const infoHome1 = useRef(null); // contenedor de la informacion
+  const [tituloHomeImg, setTituloHomeImg] = useState(""); // titulo
+  const [textoHomeImg, setTextoHomeImg] = useState(""); // texto
+  const showInfoImg=(event,posision)=>{
+
+    const { clientX, clientY } = event;
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
+    const offsetX = 20;
+    const offsetY = 10;
+
+    let left = clientX + offsetX;
+    let top = clientY + offsetY;
+
+    // Ajusta la posición si se sale del ancho de la ventana
+    if (left + infoHome1.current.offsetWidth > windowWidth) {
+      left = clientX - offsetX - infoHome1.current.offsetWidth;
+    }
+
+    // Ajusta la posición si se sale de la altura de la ventana
+    if (top + infoHome1.current.offsetHeight > windowHeight) {
+      top = windowHeight - infoHome1.current.offsetHeight;
+    }
+
+    infoHome1.current.style.left = `${left}px`;
+    infoHome1.current.style.top = `${top}px`;
+  }
 
 
 
@@ -350,15 +379,36 @@ function Home() {
           {/* tecnologias */}
           <div className='HomeTecnologias homeLazy'>
             <h2>Tecnologias</h2>
-            <div>
+            <div className='HomeTecnologiasLanguage'>
               {
-                baseTecnologias.map(i=>(
-                  <div>
-                    <h3>{i.titulo}</h3>
-                    <img src={i.imagen} alt="imagen" />
+                baseTecnologias.map((i,index)=>(
+                  <div key={index}>
+                    <div className='HomeTecnologiasLanguageImg'>
+                      <img
+                        src={i.imagen} alt={i.titulo} 
+                        onMouseMove={(e)=>{
+                          showInfoImg(e,index);
+                          setTituloHomeImg(i.titulo);
+                          setTextoHomeImg(i.texto)
+                        }}
+                        onMouseEnter={()=>{
+                          infoHome1.current.style.display = "block"
+                        }}
+                        onMouseLeave={()=>{
+                          infoHome1.current.style.display = "none"
+                        }}
+                      />
+                    </div>
                   </div>
                 ))
               }
+              <div 
+                className='HomeTecnologiasLanguageImgContent'
+                ref={infoHome1}
+              >
+                <h3>{tituloHomeImg}</h3>
+                <p>{textoHomeImg}</p>
+              </div>
             </div>
           </div>
 
