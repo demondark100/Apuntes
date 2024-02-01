@@ -313,8 +313,7 @@ import Cap11ProyV2 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/diaN
 import Cap11ProyV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/tareas/cap11';
 import Cap11ProyV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/fondo/cap11';
 import Cap11ProyV5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/contactos/cap11';
-import Cap12ProyV1 from './Paginas/apuntes/proyectos/javaScript/capitulo_12/cap12';
-
+import Cap12ProyV1 from "./Paginas/apuntes/proyectos/javaScript/capitulo_12/reproductor/cap12";
 
 
 

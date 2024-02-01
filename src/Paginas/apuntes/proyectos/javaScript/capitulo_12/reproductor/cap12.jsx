@@ -1,17 +1,11 @@
 import "./cap12.css";
 
 // componentes principales
-import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
-import ShowOptions from "../../../../../componentes/showOptions/show";
-
+import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
+import ShowOptions from "../../../../../../componentes/showOptions/show";
 
 // componentes de react
 import React, { useState , useRef , useEffect } from 'react';
-
-// base de datos
-import base from "./cap12.json";
-const baseUrl = new URL(import.meta.url).pathname;
-const rutaReal = baseUrl.replace(/\/[^/]+$/, '');
 
 // iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,8 +26,142 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faListAlt } from '@fortawesome/free-solid-svg-icons';
 
 
-import musica1 from "./musicas/come a little closer.mp3"
 
+// musicas
+import ComeALitleCloser from "./musicas/come a little closer.mp3";
+import TalkingInYourSleep from "./musicas/Talking In Your Sleep.mp3";
+import BedsAreBurning from "./musicas/Beds Are Burning.mp3";
+import WeAreThePeople from "./musicas/We Are The People.mp3";
+import WarIsOver from "./musicas/War Is Over.mp3";
+import WeAreYoung from "./musicas/We Are Young.mp3";
+import ImStillStanding from "./musicas/Im Still Standing.mp3";
+import LoucaEncubada from "./musicas/Louca Encubada.mp3";
+import Bugambilia from "./musicas/Bugambilia.mp3";
+import CrazyFrogBrazil from "./musicas/CRAZY FROG BRAZIL.mp3";
+import RunAway from "./musicas/Run Away.mp3";
+import NeverBeAlone from "./musicas/Never Be Alone.mp3";
+import WhatYouKnow from "./musicas/What You Know.mp3";
+import ThisAintTheEndOfMe from "./musicas/This Ain't The End Of Me.mp3";
+import Skyfall from "./musicas/Skyfall.mp3";
+import SweetieLittleJean from "./musicas/Sweetie Little Jean.mp3";
+
+
+
+// base de datos
+const base = [
+  {
+    "imagen": "https://i.ytimg.com/vi/KVYup3Qwh8Q/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3mP2Llhs1XqKTo5AcyxJXhOM_cg6A",
+    "titulo": "Come A Little Closer",
+    "artista": "Cage The Elephant",
+    "link": ComeALitleCloser,
+    "id": 0
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/rprnmGAKCxMfQbeMPb1iJ3RMWLQDQFKtTTVhIe-OoXOFxKa8Zyk4x3jKf5XqgVuyKBQw0wPgzB9M9jo=w544-h544-l90-rj",
+    "titulo": "Talking In Your Sleep",
+    "artista": "The Romantics • In Heat • 1983",
+    "link": TalkingInYourSleep,
+    "id": 1
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/svA0RofXwjoyM-LOgNE5dK4QXUcC8Z45V1V4tDofclesEs5gvZYG805B7zYI1yqM9yd4P42BrI3w31hHQw=w544-h544-l90-rj",
+    "titulo": "Beds Are Burning",
+    "artista": "Midnight Oil • Diesel And Dust • 1987",
+    "link": BedsAreBurning,
+    "id": 2
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/HsEwUQH8tH10S_G33c9a-iv7iUJ7Ksbfbdpemb2B_uNqjYvf-hB4AMGHNf6gDurP4g4ZTa-3GnMGGwIa=w544-h544-l90-rj",
+    "titulo": "We Are The People",
+    "artista": "Empire Of The Sun",
+    "link": BedsAreBurning,
+    "id": 3
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/9UF-1DgEH--L86T0KQoBLCojKziEA-zAYXuU37fArvEZuQ9XcQm5tLcWpxp8GScxvop42BxNAtm8fY-q=w544-h544-l90-rj",
+    "titulo": "War Is Over",
+    "artista": "John Lennon • Imagine",
+    "link": WarIsOver,
+    "id": 4
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/d7bJNoH_IybM9ZOI9Q7uQrT-5rBpNwxXFb-DHysqjLzjlwr9NRCmOmwE3Hv61INMN9At6KCYBWVTxKD_=w544-h544-l90-rj",
+    "titulo": "We Are Young",
+    "artista": "fun. • Some Nights",
+    "link": WeAreYoung,
+    "id": 5
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/De2qH8Uwg4XEgI0l3mWJlQJ1Vh3Gq1LX4baJJE1Bws9OsUG83tC7h392Uc1TE4-rVajykiTJ6bulSbwrJg=w544-h544-s-l90-rj",
+    "titulo": "I'm Still Standing",
+    "artista": "Elton John",
+    "link": ImStillStanding,
+    "id": 6
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/DFe8UcUEEz7hMSKo6gImjKZK7TO9UtwTkJRdGdDfRBreReAUkqclIcNGeTl9drb2PZwW99d2nS_n0MpH=w544-h544-l90-rj",
+    "titulo": "Louca Encubada",
+    "artista": "Dj Samir,Rodricci y Launch13",
+    "link": LoucaEncubada,
+    "id": 7
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/-JAM3LPNOwPocYMvBXI-jqLAuX0xw4DvPREb20EyqRolNyVKnnl8iDcuHF2WN8KyDULASyUEzPVqaliC=w544-h544-l90-rj",
+    "titulo": "Bugambilia",
+    "artista": "Nasa Histoires",
+    "link": Bugambilia,
+    "id": 8
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/TiY8HvnQPbz1_AdXrx3T-qh98zaQoRQAu5kQPMtdTGv9-pqSpRq8G0qzRbDdpokKpTCpitsMim0Idi4s=w544-h544-l90-rj",
+    "titulo": "CRAZY FROG BRAZIL",
+    "artista": "ZODIVK y YXUNGXROTICA",
+    "link": CrazyFrogBrazil,
+    "id": 9
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/bsP5E8RbNt4PxeNQ2bwzgu7MjQ8DC0LbbXbVyUHeterF6-1Zce4Pml245fved39iDVXrqHkN8S9VgG6VAg=w544-h544-l90-rj",
+    "titulo": "Run Away",
+    "artista": "Rakdos , WHYTYLXR y Arixch",
+    "link": RunAway,
+    "id": 10
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/dbodEfwMOHbKdu_izgmBHwclYmtEMxKCnNJ_6k2fagvyxRcg6BbXm7uKpeT0WGQEQMbOOVjaN4Yqn-w-=w544-h544-l90-rj",
+    "titulo": "Never Be Alone",
+    "artista": "TheFatRat",
+    "link": NeverBeAlone,
+    "id": 11
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/dp1cp84d63F_Tkq9n1aUTFPdWgwZ9u5IsMU60kOR_VHoIUUFiLPi2_5wNBsYR0EKfWU6qlgcq0ebpf2LAg=w544-h544-l90-rj",
+    "titulo": "What You Know",
+    "artista": "Two Door Cinema Club",
+    "link": WhatYouKnow,
+    "id": 12
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/l9-bTPGdM_1vRDNWGiQ_HCUsyW6vjiz8hZ-j3vxyTYB3F513AstolXfifU7YVra8xuA_yqGw9zG9sjGIww=w544-h544-l90-rj",
+    "titulo": "This Ain't The End Of Me",
+    "artista": "MontageRock",
+    "link": ThisAintTheEndOfMe,
+    "id": 13
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/iqnE0X2tuoZnWUdEkBZ4jskKP_jUJLbcL5X6c5rFOhe_F4QnHNOvL-fAcPxKynHgi9qpwbDoYlYoYypU=w544-h544-l90-rj",
+    "titulo": "Skyfall",
+    "artista": "Adele",
+    "link": Skyfall,
+    "id": 14
+  },
+  {
+    "imagen": "https://lh3.googleusercontent.com/UWkZaxW3vojNbI0hS2WtY5dFyKt3hy25CBcjCCTuRGPHepp9LpV0AvZj7Ab4ul1qDduNwfU3oAxQhJDK=w544-h544-l90-rj",
+    "titulo": "Sweetie Little Jean",
+    "artista": "Cage The Elephant",
+    "link": SweetieLittleJean,
+    "id": 15
+  }
+]
 
 function OptionsMusic({
   funcion1,estadoMostrar,imagen,titulo,artista,
@@ -206,7 +334,7 @@ function Cap12ProyV1() {
     setShowMusic(true);
     setEsAleatorio(false);
     setMusic(musica)
-    setMusicReproductor(rutaReal + musica)
+    setMusicReproductor(musica)
     setImgReproductor(imagen);
     setTitleReproductor(titulo);
     setArtistReproductor(artista);
@@ -335,7 +463,7 @@ function Cap12ProyV1() {
           let newId = musicFavCount + 1;
           if (newId < musicasFavoritas.length) {
             setMusicFavCount(newId);
-            setMusicReproductor(rutaReal + musicasFavoritas[aleatoriasFav[newId]].link)
+            setMusicReproductor(musicasFavoritas[aleatoriasFav[newId]].link)
             setImgReproductor(musicasFavoritas[aleatoriasFav[newId]].imagen);
             setTitleReproductor(musicasFavoritas[aleatoriasFav[newId]].titulo);
             setArtistReproductor(musicasFavoritas[aleatoriasFav[newId]].artista)
@@ -345,7 +473,7 @@ function Cap12ProyV1() {
           let newId = musicFavCount + 1;
           if (newId < musicasFavoritas.length) {
             setMusicFavCount(newId)
-            setMusicReproductor(rutaReal + musicasFavoritas[newId].link)
+            setMusicReproductor(musicasFavoritas[newId].link)
             setImgReproductor(musicasFavoritas[newId].imagen);
             setTitleReproductor(musicasFavoritas[newId].titulo);
             setArtistReproductor(musicasFavoritas[newId].artista);
@@ -357,7 +485,7 @@ function Cap12ProyV1() {
           let newId = playListCount + 1;
           if (newId < playListEspecifica.length) {
             setPlayListCount(newId);
-            setMusicReproductor(rutaReal + playListEspecifica[playListAleatoria[newId]].link)
+            setMusicReproductor(playListEspecifica[playListAleatoria[newId]].link)
             setImgReproductor(playListEspecifica[playListAleatoria[newId]].imagen);
             setTitleReproductor(playListEspecifica[playListAleatoria[newId]].titulo);
             setArtistReproductor(playListEspecifica[playListAleatoria[newId]].artista);
@@ -395,7 +523,7 @@ function Cap12ProyV1() {
           let newId = musicFavCount - 1;
           if (newId >= 0) {
             setMusicFavCount(newId);
-            setMusicReproductor(rutaReal + musicasFavoritas[aleatoriasFav[newId]].link)
+            setMusicReproductor(musicasFavoritas[aleatoriasFav[newId]].link)
             setImgReproductor(musicasFavoritas[aleatoriasFav[newId]].imagen);
             setTitleReproductor(musicasFavoritas[aleatoriasFav[newId]].titulo);
             setArtistReproductor(musicasFavoritas[aleatoriasFav[newId]].artista)
@@ -405,7 +533,7 @@ function Cap12ProyV1() {
           let newId = musicFavCount - 1;
           if (newId >= 0) {
             setMusicFavCount(newId)
-            setMusicReproductor(rutaReal + musicasFavoritas[newId].link)
+            setMusicReproductor(musicasFavoritas[newId].link)
             setImgReproductor(musicasFavoritas[newId].imagen);
             setTitleReproductor(musicasFavoritas[newId].titulo);
             setArtistReproductor(musicasFavoritas[newId].artista);
@@ -417,7 +545,7 @@ function Cap12ProyV1() {
           let newId = playListCount - 1;
           if (newId >= 0) {
             setPlayListCount(newId);
-            setMusicReproductor(rutaReal + playListEspecifica[playListAleatoria[newId]].link)
+            setMusicReproductor(playListEspecifica[playListAleatoria[newId]].link)
             setImgReproductor(playListEspecifica[playListAleatoria[newId]].imagen);
             setTitleReproductor(playListEspecifica[playListAleatoria[newId]].titulo);
             setArtistReproductor(playListEspecifica[playListAleatoria[newId]].artista);
@@ -444,7 +572,7 @@ function Cap12ProyV1() {
     setImgReproductor(base[identificar].imagen);
     setTitleReproductor(base[identificar].titulo);
     setArtistReproductor(base[identificar].artista);
-    setMusicReproductor(rutaReal + base[identificar].link);
+    setMusicReproductor(base[identificar].link);
   },[identificar])
 
 
@@ -486,7 +614,7 @@ function Cap12ProyV1() {
     }
     setIndicesSeleccionados(indicesTemp);
     setContadorMusic(0)
-    setMusicReproductor(rutaReal + base[indicesTemp[0]].link)
+    setMusicReproductor(base[indicesTemp[0]].link)
     setSecondControls(true)
     setTimeout(() => {
       pausarReproducir("reproducir")
@@ -572,7 +700,7 @@ function Cap12ProyV1() {
   // esta funcion se encarga de reproducir la musica de las musicas que estan en favoritas.
   const [musicFavCount, setMusicFavCount] = useState(0);
   const playFavMusic=(index)=>{
-    setMusicReproductor(rutaReal + musicasFavoritas[index].link)
+    setMusicReproductor(musicasFavoritas[index].link)
     setImgReproductor(musicasFavoritas[index].imagen);
     setTitleReproductor(musicasFavoritas[index].titulo);
     setArtistReproductor(musicasFavoritas[index].artista)
@@ -602,7 +730,7 @@ function Cap12ProyV1() {
       indicesTemp.push(indiceAleatorio);
     }
     setAleatoriasFav(indicesTemp)
-    setMusicReproductor(rutaReal + musicasFavoritas[indicesTemp[0]].link)
+    setMusicReproductor(musicasFavoritas[indicesTemp[0]].link)
     setImgReproductor(musicasFavoritas[indicesTemp[0]].imagen);
     setTitleReproductor(musicasFavoritas[indicesTemp[0]].titulo);
     setArtistReproductor(musicasFavoritas[indicesTemp[0]].artista)
@@ -848,7 +976,7 @@ function Cap12ProyV1() {
   // Esta funcion es para reproducir las musicas de una playList en especifico.
   const playMusicPlayList=()=>{
     setPlayListCount(0)
-    setMusicReproductor(rutaReal + playListEspecifica[0].link)
+    setMusicReproductor(playListEspecifica[0].link)
     setTimeout(() => {
       audioMusic.current.play()
       rotarIcono.current.style.transform = "rotate(180deg)";
@@ -869,7 +997,7 @@ function Cap12ProyV1() {
   const [playListCount, setPlayListCount] = useState(0);
   const reproducirPlayListMusic=(index)=>{
     setPlayListCount(index);
-    setMusicReproductor(rutaReal + playListEspecifica[index].link)
+    setMusicReproductor(playListEspecifica[index].link)
     setTimeout(() => {
       audioMusic.current.play()
       rotarIcono.current.style.transform = "rotate(180deg)";
@@ -903,7 +1031,7 @@ function Cap12ProyV1() {
     }
     setPlayListAleatoria(indicesTemp)
 
-    setMusicReproductor(rutaReal + playListEspecifica[indicesTemp[0]].link)
+    setMusicReproductor(playListEspecifica[indicesTemp[0]].link)
     setImgReproductor(playListEspecifica[indicesTemp[0]].imagen);
     setTitleReproductor(playListEspecifica[indicesTemp[0]].titulo);
     setArtistReproductor(playListEspecifica[indicesTemp[0]].artista);
