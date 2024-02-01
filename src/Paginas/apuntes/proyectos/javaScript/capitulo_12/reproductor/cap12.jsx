@@ -1250,7 +1250,6 @@ fetch("base.json")
   }
 ]`}
         />
-        <MensajeModal texto={`Por alguna razon las rutas solo funcionan en el entorno de desarrollo pero no en el entorno de la web publica`}/>
         <MensajeModal texto={`¡Proyecto! capitulo 12
 
 Hacer un reproductor de musica , debes usar Lazy Load para mostrar el contenido de forma mas obtimizada.
