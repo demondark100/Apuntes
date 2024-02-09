@@ -443,21 +443,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  min-height: 650px;
+  gap: 25px;
+  transition-property: left;
+  overflow: auto;
+  min-height: 450px;
+  padding-bottom: 15px;
 }
 .HomeTecnologias h2{ /*titulos*/
-  color: #33d6dc;
+  color: #32e24f;
+  margin-top: 80px;
+  font-size: 2.5em;
+}
+.HomeTecnologias p{ /*texto*/
+  width: 85%;
+  text-align: center;
+  font-size: 1.5em;
+  color: #32e24f !important;
 }
 .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 80%;
-  background-color: #272c27;
+  background-color: #141714;
   border-radius: 25px;
-  padding: 8px;
+  padding: 45px 8px 45px 8px;
   gap: 15px;
   max-height: 450px;
   overflow: auto;
@@ -465,14 +477,24 @@
 
 .HomeTecnologiasLanguageImg{ /*contenedor de las imagenes de los lenguages*/
   width: 70px;
-  object-fit: contain;
+  height: 105px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 15px 0 15px 0;
+  border-radius: 25px;
+  transition-duration: .3s;
+}
+.HomeTecnologiasLanguageImg:hover{
+  background-color: #202220;
+  box-shadow: 0 0 15px 15px #353835;
+  transition-duration: .3s;
 }
 .HomeTecnologiasLanguageImg img{ /*imagen de los lenguages de programacion*/
   width: 100%;
   cursor: pointer;
+  object-fit: contain;
+  height: 100%;
 }
 .HomeTecnologiasLanguageImgContent{ /*contenedor de la informacion*/
   display: none;
@@ -481,15 +503,18 @@
   width: 180px;
   z-index: 2;
 } .HomeTecnologiasLanguageImgContent h3{ /*titulo*/
-  color: #1ec6dc;
+  color: #32e24f;
   padding: 0;
   margin: 0;
   border-bottom: 2px solid #262b2c;
   text-align: start;
   padding: 4px 0 8px 15px;
-} .HomeTecnologiasLanguageImgContent p{
-  color: #1ec6dc;
+  font-size: 1.3em !important;
+} .HomeTecnologiasLanguageImgContent p{ /*texto de la informacion*/
+  color: #32e24f !important;
   padding: 15px;
+  text-align: start;
+  font-size: 1em !important;
 }
 @media(min-width: 750px){
   .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/

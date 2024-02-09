@@ -1,6 +1,6 @@
 .consola{
   padding: 15px;
-  background-color: #000;
+  background-color: hsl(0, 0%, 0%);
   color: rgb(82, 243, 19);
   width: 93%;
   max-height: 45vh;
@@ -31,5 +31,11 @@
   }
   from{
     opacity: 0;
+  }
+}
+
+@media(min-width: 750px){
+  .consola{
+    width: 450px;
   }
 }

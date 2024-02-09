@@ -262,6 +262,11 @@ import PortalesReact from './Paginas/apuntes/react/capitulo_3/portales';
 import ReactRouterDom from './Paginas/apuntes/react/capitulo_3/reactRouter';
 
 
+// node.js
+import IntroduccionNode from './Paginas/apuntes/node/capitulo 1/intoduccion/introduccion';
+import ModulosNode from './Paginas/apuntes/node/capitulo 1/modulo/modulos';
+
+
 // python
 import ImportantePy from './Paginas/apuntes/python/capitulo_1/importante';
 import DatSimplePy from './Paginas/apuntes/python/capitulo_1/datSimple';
@@ -274,6 +279,11 @@ import MetListPy from './Paginas/apuntes/python/capitulo_2/metList';
 import MetDiccPy from './Paginas/apuntes/python/capitulo_2/metDicc';
 import EntrDatosPy from './Paginas/apuntes/python/capitulo_2/entrDeDatos';
 import Variables2Py from './Paginas/apuntes/python/capitulo_3/variables2';
+
+
+
+
+
 
 // proyectos
 // html
@@ -319,6 +329,10 @@ import Cap12ProyV1 from "./Paginas/apuntes/proyectos/javaScript/capitulo_12/repr
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
+import ProcessNode from './Paginas/apuntes/node/capitulo 1/process';
+import OsNode from './Paginas/apuntes/node/capitulo 1/os';
+import TimersNode from './Paginas/apuntes/node/capitulo 1/timers';
+
 
 
 function App() {
@@ -683,6 +697,15 @@ function App() {
               <Route path='react/reactRouter' element={<ReactRouterDom />}/>
 
           
+          {/* node.js */}
+            {/* capitulo 1 */}
+              <Route path='node/introduccion/introduccion' element={<IntroduccionNode />}/>
+              <Route path='node/modulos' element={<ModulosNode />} />
+              <Route path='node/process' element={<ProcessNode />} />
+              <Route path='node/os' element={<OsNode />} />
+              <Route path='node/timers' element={<TimersNode />} />
+
+
           {/* python */}
             {/* capitulo 1*/}
               <Route path='python/importante' element={<ImportantePy />}/>

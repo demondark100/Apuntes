@@ -237,7 +237,7 @@ function Home() {
   const infoHome1 = useRef(null); // contenedor de la informacion
   const [tituloHomeImg, setTituloHomeImg] = useState(""); // titulo
   const [textoHomeImg, setTextoHomeImg] = useState(""); // texto
-  const showInfoImg=(event,posision)=>{
+  const showInfoImg=(event)=>{
 
     const { clientX, clientY } = event;
     const windowWidth = window.innerWidth;
@@ -379,6 +379,9 @@ function Home() {
           {/* tecnologias */}
           <div className='HomeTecnologias homeLazy'>
             <h2>Tecnologias</h2>
+            <p>
+              Estas son las tecnologias que he dominado para poder trabajar en proyectos.
+            </p>
             <div className='HomeTecnologiasLanguage'>
               {
                 baseTecnologias.map((i,index)=>(
@@ -387,16 +390,12 @@ function Home() {
                       <img
                         src={i.imagen} alt={i.titulo} 
                         onMouseMove={(e)=>{
-                          showInfoImg(e,index);
+                          showInfoImg(e);
                           setTituloHomeImg(i.titulo);
-                          setTextoHomeImg(i.texto)
+                          setTextoHomeImg(i.texto);
                         }}
-                        onMouseEnter={()=>{
-                          infoHome1.current.style.display = "block"
-                        }}
-                        onMouseLeave={()=>{
-                          infoHome1.current.style.display = "none"
-                        }}
+                        onMouseEnter={()=>infoHome1.current.style.display = "block"}
+                        onMouseLeave={()=>infoHome1.current.style.display = "none"}
                       />
                     </div>
                   </div>
@@ -426,38 +425,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

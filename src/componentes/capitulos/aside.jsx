@@ -28,7 +28,7 @@ function Capitulos({sendshowAside}) {
   const [git, setGit] = useState(false);
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
-
+  const [node, setNode] = useState(false);
 
   // matematicas
   // capitulos
@@ -83,6 +83,9 @@ function Capitulos({sendshowAside}) {
   const [cap2React, setCap2React] = useState(false);
   const [cap3React, setCap3React] = useState(false);
 
+
+  // node.js
+  const [cap1Node, setCap1Node] = useState(false);
 
   // python
   // capitulos
@@ -586,6 +589,30 @@ function Capitulos({sendshowAside}) {
                         </div>
                       }
                     </div>
+
+                </div>
+              }
+            </li>
+
+            {/* esto es node.js */}
+            <li className="curso">
+              <p onClick={()=>setNode(!node)}>Node.js</p>
+              {
+                node && <div className="capitulos">
+
+                  <dir>
+                    <p onClick={()=>setCap1Node(!cap1Node)}>capitulo 1</p>
+                    {
+                      cap1Node && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/introduccion/introduccion"}>Introduccion</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/modulos"}>Modulos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/process"}>process</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/os"}>os</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/timers"}>timers</NavLink>
+                      </div>
+                    }
+                  </dir>
+
 
                 </div>
               }

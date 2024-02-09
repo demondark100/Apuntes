@@ -10,9 +10,12 @@
   border-radius: 5px;
   font-size: 1em;
 }
+.contenedor-conseptos p{
+  color: #eafdcb !important;
+}
 @media(min-width:750px){
   .contenedor-conseptos{
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding: 15px;
     width: 80%;
   }

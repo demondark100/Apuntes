@@ -1,0 +1,41 @@
+.imagenLinkContent{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.imagenLinkContentCont{
+    width: 85%;
+}
+
+.imagenLinkContentCont img{
+    width: 100%;
+    transition-duration: .3s;
+}
+
+.imagenLinkContentContHover{
+    animation-name: imagenLink;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.imagenLinkContentContHover:hover{
+    filter: brightness(.8);
+    transition-duration: .3s;
+}
+
+@keyframes imagenLink {
+    0%{
+        box-shadow: 0 0 15px 8px #c7bbbb;
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+
+@media(min-width: 750px){
+    .imagenLinkContentCont{
+        width: 450px;
+    }
+}
