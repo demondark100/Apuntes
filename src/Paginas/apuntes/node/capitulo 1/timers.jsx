@@ -31,7 +31,7 @@ setTimeout(saludo,2000,"mundo")`}/>
         <Consola codigo={`node app.js`}/>
         <h2>setImmediate</h2>
         <Conseptos texto={`Este temporizador hara que el codigo se ejecute cuando se acaben de ejecutar las funciones asincronas.
-Antes de continuar debemos saber que "console.log()" es una funcion asincrona.`}/>
+Antes de continuar debemos saber que "console.log()" es una funcion sincrona.`}/>
         <Sintaxis codigo={`setImmediate(funcion,argumentos de la funcion)`}/>
         <JavaScropt codigo={`function saludo(name){
   console.log(\`Hola ${"${name}"}\`);
@@ -45,9 +45,24 @@ Hola mundo`}/>
         <h2>setInterval</h2>
         <Conseptos texto={`Esta funcion ejecutara un codigo de forma repetida cada sierto tiempo , tambien podemos indicar cuando queremos que se deje de ejecutar ese bloque de codigo.
 
-A diferencia de las otras de timers necesitan guardarse en una variable para que podamos cortar cuando la ejecucion del codigo cuando queramos.
+A diferencia de las otras de timers necesitan guardarse en una variable para que podamos cortar la ejecucion del codigo cuando queramos.
 
-Ahora veremos un ejemplo.`}/>
+Ahora veremos como funciona setInterval , este tiene dos partes.`}/>
+        <ol>
+          <li>setInterval(): Es la funcion que crea el intervalo de ejecucion.</li>
+          <li>clearInterval(): Es la funcion que detiene el intervalo de ejecucion.</li>
+        </ol>
+        <Sintaxis codigo={`const intervalo = setInterval(()=>{
+
+  codigo a ejecutar.
+
+  clearIntervar(
+    nombre de la variable la cual
+    se asigno a setInterval
+    en este caso intervalo
+  );
+}, tiempo en milisegundos)`}/>
+        <h3>ejemplo de uso</h3>
         <JavaScropt codigo={`let contador = 0;
 const contar = setInterval(() => {
   contador++;

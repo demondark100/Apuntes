@@ -332,6 +332,7 @@ import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
 import ProcessNode from './Paginas/apuntes/node/capitulo 1/process';
 import OsNode from './Paginas/apuntes/node/capitulo 1/os';
 import TimersNode from './Paginas/apuntes/node/capitulo 1/timers';
+import FsNode from './Paginas/apuntes/node/capitulo 1/fs';
 
 
 
@@ -704,6 +705,7 @@ function App() {
               <Route path='node/process' element={<ProcessNode />} />
               <Route path='node/os' element={<OsNode />} />
               <Route path='node/timers' element={<TimersNode />} />
+              <Route path='node/fs' element={<FsNode />} />
 
 
           {/* python */}

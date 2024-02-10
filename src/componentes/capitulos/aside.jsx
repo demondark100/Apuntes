@@ -609,6 +609,7 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/process"}>process</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/os"}>os</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/timers"}>timers</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/fs"}>fs</NavLink>
                       </div>
                     }
                   </dir>
