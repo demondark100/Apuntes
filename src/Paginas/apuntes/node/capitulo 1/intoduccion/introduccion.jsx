@@ -39,25 +39,19 @@ saludar("mundo")`}/>
         <Conseptos texto={`Ahora que comprobamos que node no necesita de un navegador para ejecutar codigo js es obvio que no escribiras archivos complejos en la terminal y aqui entra VsCode.`}/>
         <ol>
           <li>
-            <p>
-              Primero crearemos una carpeta y dentro un archivo js. 
-            </p>
+            <Conseptos texto={`Primero crearemos una carpeta y dentro un archivo js.`}/>
             <ImagenLink tipo={"imagen"} imagen={carpeta} titulo={"archivo"}/>
           </li>
           <li>
-            <p>
-              Presiona F12 y asegurate de que la terminal de vsCode te marque la ruta del archivo.
-            </p>
+            <Conseptos texto={`Presiona F12 y asegurate de que la terminal de vsCode te marque la ruta del archivo.`}/>
             <ImagenLink tipo={"imagen"} imagen={terminalImg} titulo={"terminal"}/>
           </li>
           <li>
-            <p>
-              Ahora programa algo lindo en tu archivo js cualquier cosa en mi caso sera un "hola mundo".
-            </p>
+            <Conseptos texto={`Ahora programa algo lindo en tu archivo js cualquier cosa en mi caso sera un "hola mundo".`}/>
             <JavaScropt codigo={`console.log("hola mundo");`}/>
           </li>
           <li>
-            <p>Ahora puedes escribir en tu terminal de vscode "node nombre de tu archivo" en mi caso es app.js.</p>
+            <Conseptos texto={`Ahora puedes escribir en tu terminal de vscode "node nombre de tu archivo" en mi caso es app.js.`}/>
             <Consola codigo={`> node app.js
 undefined
 hola mundo`}/>

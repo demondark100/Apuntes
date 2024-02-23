@@ -86,6 +86,8 @@ function Capitulos({sendshowAside}) {
 
   // node.js
   const [cap1Node, setCap1Node] = useState(false);
+  const [cap2Node, setCap2Node] = useState(false);
+  const [cap3Node, setCap3Node] = useState(false);
 
   // python
   // capitulos
@@ -610,6 +612,38 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/os"}>os</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/timers"}>timers</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/fs"}>fs</NavLink>
+                      </div>
+                    }
+                  </dir>
+
+                  
+                  <dir>
+                    <p onClick={()=>setCap2Node(!cap2Node)}>capitulo 2</p>
+                    {
+                      cap2Node && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/npm"}>npm</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/json"}>json</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/installUninstall"}>instalar y desinstalar paquetes.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/eventsNode"}>Modulo de eventos.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/promesas"}>Promesas.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/asyncAwait"}>async y await.</NavLink>
+                      </div>
+                    }
+                  </dir>
+
+
+                  <dir>
+                    <p onClick={()=>setCap3Node(!cap3Node)}>capitulo 3</p>
+                    {
+                      cap3Node && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/http"}>http</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/moduloHttp"}>modulo http</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/metodosReq"}>metodos req</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/metodosRes"}>metodos res</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/urlNode"}>Url</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/moduloUrl"}>modulo url</NavLink>
+
+
                       </div>
                     }
                   </dir>

@@ -333,6 +333,18 @@ import ProcessNode from './Paginas/apuntes/node/capitulo 1/process';
 import OsNode from './Paginas/apuntes/node/capitulo 1/os';
 import TimersNode from './Paginas/apuntes/node/capitulo 1/timers';
 import FsNode from './Paginas/apuntes/node/capitulo 1/fs';
+import NpmNode from './Paginas/apuntes/node/capitulo 2/npm';
+import JsonNode from './Paginas/apuntes/node/capitulo 2/json';
+import InstallUninstallNode from './Paginas/apuntes/node/capitulo 2/installUninstaal';
+import EventsNode from './Paginas/apuntes/node/capitulo 2/events';
+import PromesasNode from './Paginas/apuntes/node/capitulo 2/promesas';
+import AsyncAwaitNode from './Paginas/apuntes/node/capitulo 2/asyncAwait';
+import HttpNode from './Paginas/apuntes/node/capitulo 3/http';
+import ModuloHttpNode from './Paginas/apuntes/node/capitulo 3/moduloHttp';
+import MetodosReqNode from './Paginas/apuntes/node/capitulo 3/metodosReq';
+import MetodosResNode from './Paginas/apuntes/node/capitulo 3/metodosRes';
+import UrlNode from './Paginas/apuntes/node/capitulo 3/url';
+import ModuloUrlNode from './Paginas/apuntes/node/capitulo 3/moduloUrl';
 
 
 
@@ -696,6 +708,7 @@ function App() {
               <Route path='react/propsChild' element={<PropsChildReact />}/>
               <Route path='react/Portales' element={<PortalesReact />}/>
               <Route path='react/reactRouter' element={<ReactRouterDom />}/>
+              
 
           
           {/* node.js */}
@@ -706,7 +719,22 @@ function App() {
               <Route path='node/os' element={<OsNode />} />
               <Route path='node/timers' element={<TimersNode />} />
               <Route path='node/fs' element={<FsNode />} />
+            {/* capitulo 2 */}
+              <Route path='node/npm' element={<NpmNode />} />
+              <Route path='node/json' element={<JsonNode />} />
+              <Route path='node/installUninstall' element={<InstallUninstallNode />} />
+              <Route path='node/eventsNode' element={<EventsNode />} />
+              <Route path='node/promesas' element={<PromesasNode />} />
+              <Route path='node/asyncAwait' element={<AsyncAwaitNode />} />
+            {/* capitlo 3 */}
+              <Route path='node/http' element={<HttpNode />} />
+              <Route path='node/moduloHttp' element={<ModuloHttpNode />} />
+              <Route path='node/metodosReq' element={<MetodosReqNode />} />
+              <Route path='node/metodosRes' element={<MetodosResNode />}/>
+              <Route path='node/urlNode' element={<UrlNode />}/>
+              <Route path='node/moduloUrl' element={<ModuloUrlNode />}/>
 
+              
 
           {/* python */}
             {/* capitulo 1*/}

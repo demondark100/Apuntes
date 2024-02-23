@@ -25,11 +25,11 @@ Antes de iniciar entendamos que es "module.exports".`}/>
         <Conseptos texto={`Por eso tenemos dos formas de exportar nuestros mosdulos ya que son objetos.`}/>
         <ol>
           <li>
-            <p>Comnotacion de puntos</p>
+            <h3>Comnotacion de puntos</h3>
             <Sintaxis codigo={`module.exports.identificador = nombre de la funcion`}/>
           </li>
           <li>
-            <p>modificar el objeto</p>
+            <h3>modificar el objeto</h3>
             <Sintaxis codigo={`module.exports = {
   identificador: nombre de la funcion
 }`}/>
@@ -45,13 +45,13 @@ Antes de iniciar entendamos que es "module.exports".`}/>
         <Conseptos texto={`Ahora veremos como usar lo aprendido y como se usa de forma cotidiana.`}/>
         <ol>
           <li>
-            <p>creamos una carpeta llamada "node"</p>
+            <Conseptos texto={`creamos una carpeta llamada "node"`}/>
           </li>
           <li>
-            <p>creamos un archivo.js llamado app.js , este sera nuestro archivo principal</p>
+            <Conseptos texto={`creamos un archivo.js llamado app.js , este sera nuestro archivo principal`}/>
           </li>
           <li>
-            <p>creamos un archivo llamado modulos , este sera el modulo al cual llamaremos en nuestro archivo principal.</p>
+            <Conseptos texto={`creamos un archivo llamado modulos , este sera el modulo al cual llamaremos en nuestro archivo principal.`}/>
           </li>
         </ol>
         <Conseptos texto={`Debe quedar asi.`}/>
