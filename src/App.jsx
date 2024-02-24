@@ -345,6 +345,7 @@ import MetodosReqNode from './Paginas/apuntes/node/capitulo 3/metodosReq';
 import MetodosResNode from './Paginas/apuntes/node/capitulo 3/metodosRes';
 import UrlNode from './Paginas/apuntes/node/capitulo 3/url';
 import ModuloUrlNode from './Paginas/apuntes/node/capitulo 3/moduloUrl';
+import RoutingNode from './Paginas/apuntes/node/capitulo 4/routing';
 
 
 
@@ -733,6 +734,8 @@ function App() {
               <Route path='node/metodosRes' element={<MetodosResNode />}/>
               <Route path='node/urlNode' element={<UrlNode />}/>
               <Route path='node/moduloUrl' element={<ModuloUrlNode />}/>
+            {/* capitulo 4 */}
+              <Route path='node/routing' element={<RoutingNode />}/>
 
               
 

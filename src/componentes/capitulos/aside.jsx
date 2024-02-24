@@ -88,6 +88,7 @@ function Capitulos({sendshowAside}) {
   const [cap1Node, setCap1Node] = useState(false);
   const [cap2Node, setCap2Node] = useState(false);
   const [cap3Node, setCap3Node] = useState(false);
+  const [cap4Node, setCap4Node] = useState(false);
 
   // python
   // capitulos
@@ -642,12 +643,19 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/metodosRes"}>metodos res</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/urlNode"}>Url</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/moduloUrl"}>modulo url</NavLink>
-
-
                       </div>
                     }
                   </dir>
 
+
+                  <dir>
+                    <p onClick={()=>setCap4Node(!cap4Node)}>capitulo 4</p>
+                    {
+                      cap4Node && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/routing"}>routing node.js</NavLink>
+                      </div>
+                    }
+                  </dir>
 
                 </div>
               }
