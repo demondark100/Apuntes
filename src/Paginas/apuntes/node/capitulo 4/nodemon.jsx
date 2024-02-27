@@ -29,7 +29,7 @@ function NodeMon() {
             <Conseptos texto={`abrimos la terminal con (ctr + ñ) o (ctr + \`).`}/>
           </li>
         </ol>
-        <<Consola codigo={`> npm install -g nodemon`}/>
+        <Consola codigo={`> npm install -g nodemon`}/>
         <Conseptos texto={`Ahora que esta instalado no es necesario andar cerrando y abriendo el servidor para ver los cambios.`}/>
         <Conseptos texto={`Ahora vamos a crear nuestro servidor basico.`}/>
         <JavaScropt codigo={`const http = require("http");
@@ -49,11 +49,11 @@ Pero ahora veremos que hay un pequeño problema.`}/>
         <ol>
           <li>
             <Conseptos texto={`Creamos una terminal nueva pero no hay que darle en "+" sino que en la opcion que esta al lado.`}/>
-            <ImagenLink tipo={"imagen"} link={solucion1} titulo={"solucion parte 1"}/>
+            <ImagenLink tipo={"imagen"} imagen={solucion1} titulo={"solucion parte 1"}/>
           </li>
           <li>
             <Conseptos texto={`Seleccionamos la opcion "command prompt".`}/>
-            <ImagenLink tipo={"imagen"} link={solucion2} titulo={"solucion parte 2"}/>
+            <ImagenLink tipo={"imagen"} imagen={solucion2} titulo={"solucion parte 2"}/>
           </li>
           <li>
             <Conseptos texto={`Ahora recien podemos ejecutar "nodemon archivo.js".`}/>
