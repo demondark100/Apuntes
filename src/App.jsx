@@ -347,6 +347,7 @@ import UrlNode from './Paginas/apuntes/node/capitulo 3/url';
 import ModuloUrlNode from './Paginas/apuntes/node/capitulo 3/moduloUrl';
 import RoutingNode from './Paginas/apuntes/node/capitulo 4/routing';
 import NodeMon from './Paginas/apuntes/node/capitulo 4/nodemon';
+import ExpressNode from './Paginas/apuntes/node/capitulo 4/express';
 
 
 
@@ -738,6 +739,7 @@ function App() {
             {/* capitulo 4 */}
               <Route path='node/routing' element={<RoutingNode />}/>
               <Route path='node/nodemon' element={<NodeMon />}/>
+              <Route path='node/express' element={<ExpressNode />}/>
 
               
 
