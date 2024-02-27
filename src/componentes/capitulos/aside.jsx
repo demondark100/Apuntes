@@ -653,6 +653,7 @@ function Capitulos({sendshowAside}) {
                     {
                       cap4Node && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/routing"}>routing node.js</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/nodemon"}>nodemon</NavLink>
                       </div>
                     }
                   </dir>
