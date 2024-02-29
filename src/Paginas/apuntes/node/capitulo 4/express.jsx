@@ -1,4 +1,6 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
+import Consola from "../../../../componentes/consola/consola";
+import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 
 function ExpressNode() {
@@ -20,6 +22,17 @@ function ExpressNode() {
           <li><Conseptos texto={`U: update(actualizar) = PUT`}/></li>
           <li><Conseptos texto={`D: delete(eliminar) = DELETE`}/></li>
         </ol>
+        <h2>Api</h2>
+        <Conseptos texto={`API(Application pProgramming Interface) o (interfaz de programacion de aplicacion). Una api es una interfaz de softwere que permite que dos programas se comunicquen entre si.`}/>
+        <h2>importar express</h2>
+        <Conseptos texto={`Primero debemos inciciar instalando express a nuestro proyecto.`}/>
+        <Consola codigo={`> npm init --yes`}/>
+        <Consola codigo={`npm install express`}/>
+        <Conseptos texto={`Ahora debemos crear nuestro archivo "js" y alli debemos importar express.`}/>
+        <JavaScropt codigo={`const express = require("express");
+const app = express();
+console.log(app);`}/>
+        <Conseptos texto={`Listo ahora sabemos como importar express para su futuro uso.`}/>
       </main>
       <Footer />
     </>

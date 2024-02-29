@@ -643,18 +643,20 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/metodosRes"}>metodos res</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/urlNode"}>Url</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/moduloUrl"}>modulo url</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/routing"}>routing node.js</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/nodemon"}>nodemon</NavLink>
                       </div>
                     }
                   </dir>
 
 
                   <dir>
-                    <p onClick={()=>setCap4Node(!cap4Node)}>capitulo 4</p>
+                    <p onClick={()=>setCap4Node(!cap4Node)}>Express (capitulo 4)</p>
                     {
                       cap4Node && <div className="temas">
-                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/routing"}>routing node.js</NavLink>
-                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/nodemon"}>nodemon</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/express"}>express</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/routingExpress"}>routing con express</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/parametrosUrl"}>paramtros url</NavLink>
                       </div>
                     }
                   </dir>

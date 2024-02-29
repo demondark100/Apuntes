@@ -345,9 +345,11 @@ import MetodosReqNode from './Paginas/apuntes/node/capitulo 3/metodosReq';
 import MetodosResNode from './Paginas/apuntes/node/capitulo 3/metodosRes';
 import UrlNode from './Paginas/apuntes/node/capitulo 3/url';
 import ModuloUrlNode from './Paginas/apuntes/node/capitulo 3/moduloUrl';
-import RoutingNode from './Paginas/apuntes/node/capitulo 4/routing';
-import NodeMon from './Paginas/apuntes/node/capitulo 4/nodemon';
+import RoutingNode from './Paginas/apuntes/node/capitulo 3/routing';
+import NodeMon from './Paginas/apuntes/node/capitulo 3/nodemon';
 import ExpressNode from './Paginas/apuntes/node/capitulo 4/express';
+import RoutingExpressNode from './Paginas/apuntes/node/capitulo 4/routingEx';
+import ParametrosExNode from './Paginas/apuntes/node/capitulo 4/parametros';
 
 
 
@@ -736,11 +738,14 @@ function App() {
               <Route path='node/metodosRes' element={<MetodosResNode />}/>
               <Route path='node/urlNode' element={<UrlNode />}/>
               <Route path='node/moduloUrl' element={<ModuloUrlNode />}/>
-            {/* capitulo 4 */}
               <Route path='node/routing' element={<RoutingNode />}/>
               <Route path='node/nodemon' element={<NodeMon />}/>
+            {/* capitulo 4 */}
               <Route path='node/express' element={<ExpressNode />}/>
+              <Route path='node/routingExpress' element={<RoutingExpressNode />}/>
+              <Route path='node/parametrosUrl' element={<ParametrosExNode />}/>
 
+              
               
 
           {/* python */}
