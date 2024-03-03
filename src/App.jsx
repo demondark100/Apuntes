@@ -350,6 +350,7 @@ import NodeMon from './Paginas/apuntes/node/capitulo 3/nodemon';
 import ExpressNode from './Paginas/apuntes/node/capitulo 4/express';
 import RoutingExpressNode from './Paginas/apuntes/node/capitulo 4/routingEx';
 import ParametrosExNode from './Paginas/apuntes/node/capitulo 4/parametros';
+import ParametrosQueryNode from './Paginas/apuntes/node/capitulo 4/paramQuery';
 
 
 
@@ -744,6 +745,8 @@ function App() {
               <Route path='node/express' element={<ExpressNode />}/>
               <Route path='node/routingExpress' element={<RoutingExpressNode />}/>
               <Route path='node/parametrosUrl' element={<ParametrosExNode />}/>
+              <Route path='node/parametrosQuerty' element={<ParametrosQueryNode />}/>
+
 
               
               
