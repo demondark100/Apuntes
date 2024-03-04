@@ -351,6 +351,7 @@ import ExpressNode from './Paginas/apuntes/node/capitulo 4/express';
 import RoutingExpressNode from './Paginas/apuntes/node/capitulo 4/routingEx';
 import ParametrosExNode from './Paginas/apuntes/node/capitulo 4/parametros';
 import ParametrosQueryNode from './Paginas/apuntes/node/capitulo 4/paramQuery';
+import RoutersNode from './Paginas/apuntes/node/capitulo 4/routers';
 
 
 
@@ -746,6 +747,7 @@ function App() {
               <Route path='node/routingExpress' element={<RoutingExpressNode />}/>
               <Route path='node/parametrosUrl' element={<ParametrosExNode />}/>
               <Route path='node/parametrosQuerty' element={<ParametrosQueryNode />}/>
+              <Route path='node/routers' element={<RoutersNode />}/>
 
 
               
