@@ -1,10 +1,22 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Metadatos() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Describen recursos en nuestra web , esto solo se usa dentro de la etiqueta <head> `,
+        lenguage: `Html`,
+        codigo: `<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="programacion,desarrollo web,aprendizaje"> <!-- palabras clave de la web -->
+  <meta name="descripcion" content="aqui aprenderas desarrollo web front-end y backend tambien otras cosas extras como linux"> <!-- descripcion de la web -->
+  <meta name="autor" content="@el_tio_dan"> <!-- poner quien es el autor -->
+  <meta name="copyright" content="empresa @el_tio_dan"> <!-- derechos de autor -->
+  <meta name="robots content="index"> <!-- indexacion de para el motor de busqueda -->
+</head>`}]}/>
       <main>
         <h1>Metadatos</h1>
         <Conseptos texto={`Los metadatos describen recursos tomemos como ejemplo un video.

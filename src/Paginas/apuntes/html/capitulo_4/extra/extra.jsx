@@ -1,10 +1,31 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ExtraHtml() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Las imagenes tienen otros atributos "title" y "alt" , "title" es para poner un titulo a la imagen y "alt" un mensaje en caso que no cargue una imagen.`,
+        lenguage: "Html",
+        codigo: `<img title="imagen de javaScript" alt="esta imagen no esta disponible."  src="https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo.png">`
+      },
+      {
+        mensaje: "<center> es una etiqueta para poner el contenido en el centro , no es recomendable usarlo para eso es css.",
+        lenguage: "Html",
+        codigo: `<center>contenido</center>`
+      },
+      {
+        mensaje: "icono es para poner una imagen como icono a la pagina , solo se fdebe poner dentro de <head>",
+        lenguage: "Html",
+        codigo: `<link rel="icono" href="imagen.ico">`
+      },
+      {
+        mensaje: `El "id" es para identificar a un elemento , un id no se puede repetir en varios elementos.`,
+        lenguage: "Html",
+        codigo: `<p if="parrafo">contenido</p>`
+      }]}/>
       <main>
         <h1>cosas extra de html</h1>
         <Conseptos texto={`Primero empecemos con un atributo extra de img.`}/>

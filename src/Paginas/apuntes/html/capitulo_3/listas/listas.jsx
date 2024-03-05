@@ -1,10 +1,26 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
+
 
 function Listas() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Hay dos tipos de listas , ambos deben llevar de forma obligatoria la etiqueta <li> adentro , <ol> es para listas emnumeradas , <ul> es para listas desordenadas osea no se van a emnumerar.`,
+        lenguage: `Html`,
+        codigo: `<!-- Ordenadas -->
+<ol>
+  <li>contenido</li>
+  <li>podemos poner cuantos "li" queramos</li>
+</ol>
+<!-- Desordenadas -->
+<ul>
+  <li>contenido</li>
+  <li>podemos poner cuantos "li" queramos</li>
+<ul>`
+      }]}/>
       <main>
         <h1>Listas</h1>
         <Conseptos texto={`Existen dos tipos de listas las ordenada y las desordenadas.

@@ -1,10 +1,25 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function SectionArticle() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estructura de mejor forma nuestra web.`,
+        lenguage: "Html",
+        codigo: `<article>
+  <section>
+    <h4>esta es la seccion numero 1</h4>
+    <p>aqui pondremos lo que sea no se me ocurre nada para escribir.</p>
+  </section>
+
+  <section>
+    <h4>esta es la seccion numero 2</h4>
+    <p>podemos poner secciones infinitas la cosa es que la pagina este bien estructurada.</p>
+  </section>
+</article>`}]}/>
       <main>
         <h1>section y article</h1>
         <Conseptos texto={`Con section y article estructuramos de mejor forma nuestro sitio web..`}/>

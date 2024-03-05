@@ -1,10 +1,23 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
+
 
 function Multimedia() {
   return (  
     <>
+    <Resumenes contenido={[{
+      mensaje: `Tenemos etiquetas para poner videos , imagenes , audio`,
+      lenguage: "Html",
+      codigo: `<!-- poner imagen -->
+<img src="enlace de imagen" alt="texto por si acaso se borra">
+<!-- usar algun video de youtube -->
+<iframe  src="https://www.youtube.com/embed/TX_YDR_6_yo"></iframe>
+<!-- usar algun video de forma local -->
+<video src="carpeta/video.mp4" controls></video>
+<!-- usar algun audio de forma local -->
+<audio src="carpeta/video.mp3" controls></audio>`}]}/>
     <main>
       <h1>Multimedia</h1>
       <Conseptos texto={`Aqui pondremos videos , audios , imagenes osea se viene lo bueno lo ricolino.`}/>

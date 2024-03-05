@@ -2,9 +2,38 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
+
 function HtmlSemantico() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Para los titulos solo se puede usar desde el h1 al h6.
+
+Los parrafos se escriben con la etiqueta <p>.
+
+Ahora veremos las etiquetas mas utiles.`,
+        lenguage: "Html",
+        codigo: `<body>
+  <!-- titulos. -->
+  <h1></h1>
+  <h2></h2>
+  <h3></h3>
+  <h4></h4>
+  <h5></h5>
+  <h6></h6>
+  <!-- parrafo. -->
+  <p>aqui va el parrafo</p>
+  <!-- etiquetas utiles y mas usadas. -->
+  <b>texto en negrita</b>
+  <i>texto en italico</i>
+  <strike>texto tachado</strike>
+  <small>letra pequeña</small>
+
+  <!-- hay muchas mas etiquetas pero esas son las mas usadas. -->
+</body>
+`
+      }]}/>
       <main>
         <h1>html semantico</h1>
         <Conseptos texto={`Aqui veremos algunas etiquetas de html para empezar con unos cuantos proyectos.`}/>

@@ -1,10 +1,17 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Divs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es para separa la informacion es varios bloques.`,
+        lenguage: "Html",
+        codigo: `<div><p>contenido</p></div>
+<div><p>contenido</p></div>
+<div><p>contenido</p></div>`}]}/>
       <main>
         <h1>divs</h1>
         <Conseptos texto={`Los divs nos sirven para agrupar los contenidos en distintas cajas es como decir una caja que guarda otras cajas esto es muy importante en especial a la hora de trabajar con css y javaScript`}/>

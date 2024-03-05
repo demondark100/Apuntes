@@ -1,10 +1,16 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Aside() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensje: `Aqui ponemos informacion secundaria.`,
+        lenguage: `Html`,
+        codigo: `<aside>contenido</aside>`
+      }]}/>
       <main>
         <h1>aside</h1>
         <Conseptos texto={`Aside es como algo secundario que debe de ir a un costadito de la pagina.`}/>

@@ -11,7 +11,8 @@ import Css from "../lenguajes/Css";
 import JavaScropt from "../lenguajes/JavaScript";
 import Txt from "../lenguajes/Txt";
 import ReactCode from "../lenguajes/React";
-import Python from "../lenguajes/Python"
+import Python from "../lenguajes/Python";
+import Sintaxis from "../lenguajes/Sintaxis";
 
 
 function Resumenes({
@@ -26,7 +27,8 @@ function Resumenes({
     JavaScropt: JavaScropt,
     Txt: Txt,
     ReactCode: ReactCode,
-    Python: Python
+    Python: Python,
+    Sintaxis: Sintaxis
   }
 
   return (  
@@ -53,7 +55,9 @@ function Resumenes({
           {
             contenido.map((i,index)=>(
               <div className='contentResumen__infoContent--info'>
-                <Conseptos texto={i.mensaje}/>
+                {
+                  i.mensaje != undefined ? <Conseptos texto={i.mensaje}/> : null
+                }
                 {i.lenguage && lenguages[i.lenguage] && (
                   React.createElement(lenguages[i.lenguage], { codigo: i.codigo })
                 )}

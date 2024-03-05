@@ -1,6 +1,8 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
+
 
 import "./Etiquetas.css";
 
@@ -8,6 +10,11 @@ import "./Etiquetas.css";
 function Etiquetas() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Las etiquetas solo son cajas y se estructura de esta forma:",
+        lenguage: "Html",
+        codigo: `<etiqueta>contenido</etiqueta>`
+      }]}/>
       <main>
         <h1>Etiquetas</h1>
         

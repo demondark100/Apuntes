@@ -1,10 +1,28 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Formularios() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es para recoger datos del usuario`,
+        lenguage: "Html",
+        codigo: `<form>
+  <input type="text">  <!-- texto -->
+  <input type="password">   <!-- contraseña -->
+  <input type="number">   <!-- numero -->
+  <input type="email">    <!-- correo electronico -->
+  <input type="color">    <!-- colores -->
+  <input type="range" min="2" max="25">   <!-- rangos -->
+  <input type="date">   <!-- fecha -->
+  <input type="time">   <!-- hora -->
+  <input type="button" value="boton">   <!-- boton personalizado -->
+  <input type="submit">   <!-- boton para enviar informacion -->
+</form>
+`
+      }]}/>
       <main>
         <h1>formularios</h1>
         <Conseptos texto={`Formularios en HTML: permiten enviar información al servidor. Se crean con <form> y tienen campos de entrada. Al hacer clic en enviar, la información se envía al servidor para ser procesada.

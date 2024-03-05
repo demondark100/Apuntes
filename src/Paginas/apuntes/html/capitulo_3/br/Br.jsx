@@ -1,10 +1,21 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Br() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `<br> sirve para dejar un espacio en linea.`,
+        lenguage: `Html`,
+        codigo: `<p>
+  esto tambien sera una <br>
+  oracon demasiado larga pero tendra saltos <br>
+  de linea pero esta vez tambien <br>
+  estoy haciendo los saltos en linea en <br>
+  el editor de codigo para que sea mas legible.
+</p> `}]}/>
       <main>
         <h1>br</h1>
         <Conseptos texto={`Esta etiqueta sirve para dar saltos en linea por ejemplo al escribir algo largo , esta etiqueta no necesita una etiqueta de cierre como las otras etiquetas.

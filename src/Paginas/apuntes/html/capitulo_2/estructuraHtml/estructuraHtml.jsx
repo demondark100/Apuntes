@@ -1,10 +1,33 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
+
 
 function EstructuraHtml() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Para Evitar escribir la estructura de forma manual "vsCode" y "sublime" text tienen formas de hacer eso rapido.
+
+En vsCode: escribe "!" y luego preciona "TAB".
+
+En sublime: escribe "html" y luego preciona "TAB".`
+      },
+      {
+        mensaje: `En ambos casos se creara esta estructura basica de html.`,
+        lenguage: "Html",
+        codigo: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+  </head>
+  <body>
+    Contenido de la página
+  </body>
+</html>`
+      }]}/>
       <main>
         <h1>Estructura de html</h1>
         <Conseptos texto={`Html tiene una estructura basica aqui las explicaremos de forma detallada para que es cada cosa no te asustes :v.`}/>
