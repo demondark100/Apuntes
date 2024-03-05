@@ -379,34 +379,36 @@ function Home() {
           {/* tecnologias */}
           <div className='HomeTecnologias homeLazy'>
             <h2>Tecnologias</h2>
-            <p>
-              Estas son las tecnologias que he dominado para poder trabajar en proyectos.
-            </p>
-            <div className='HomeTecnologiasLanguage'>
-              {
-                baseTecnologias.map((i,index)=>(
-                  <div key={index}>
-                    <div className='HomeTecnologiasLanguageImg'>
-                      <img
-                        src={i.imagen} alt={i.titulo} 
-                        onMouseMove={(e)=>{
-                          showInfoImg(e);
-                          setTituloHomeImg(i.titulo);
-                          setTextoHomeImg(i.texto);
-                        }}
-                        onMouseEnter={()=>infoHome1.current.style.display = "block"}
-                        onMouseLeave={()=>infoHome1.current.style.display = "none"}
-                      />
+            <div className='HomeTecnologiasCpmtemt'>
+              <p>
+                Estas son las tecnologias que he dominado para poder trabajar en proyectos.
+              </p>
+              <div className='HomeTecnologiasLanguage'>
+                {
+                  baseTecnologias.map((i,index)=>(
+                    <div key={index}>
+                      <div className='HomeTecnologiasLanguageImg'>
+                        <img
+                          src={i.imagen} alt={i.titulo} 
+                          onMouseMove={(e)=>{
+                            showInfoImg(e);
+                            setTituloHomeImg(i.titulo);
+                            setTextoHomeImg(i.texto);
+                          }}
+                          onMouseEnter={()=>infoHome1.current.style.display = "block"}
+                          onMouseLeave={()=>infoHome1.current.style.display = "none"}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))
-              }
-              <div 
-                className='HomeTecnologiasLanguageImgContent'
-                ref={infoHome1}
-              >
-                <h3>{tituloHomeImg}</h3>
-                <p>{textoHomeImg}</p>
+                  ))
+                }
+                <div 
+                  className='HomeTecnologiasLanguageImgContent'
+                  ref={infoHome1}
+                >
+                  <h3>{tituloHomeImg}</h3>
+                  <p>{textoHomeImg}</p>
+                </div>
               </div>
             </div>
           </div>

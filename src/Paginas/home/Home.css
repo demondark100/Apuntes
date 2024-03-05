@@ -359,6 +359,7 @@
 .HomePresent__3Info p{ /*color del texto de la informacion*/
   color: #32e24f !important;
   font-size: 1em;
+  text-shadow: 0 0 #fff !important;
 }
 
 .HomePresent__3Btn{ /*boton para comenzar a usar la aplicacion*/
@@ -439,15 +440,25 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #121312;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
   transition-property: left;
   overflow: auto;
-  min-height: 450px;
+  min-height: 560px;
   padding-bottom: 15px;
+} .HomeTecnologias::-webkit-scrollbar{
+  display: none;
+}
+
+.HomeTecnologiasCpmtemt{ /*contenedor del contenido osea texto y tecnologias*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  flex-direction: column;
 }
 .HomeTecnologias h2{ /*titulos*/
   color: #32e24f;
@@ -467,11 +478,11 @@
   justify-content: center;
   align-items: center;
   width: 80%;
-  background-color: #141714;
+  height: 30vh;
+  background-color: #0e0d0d;
   border-radius: 25px;
   padding: 45px 8px 45px 8px;
   gap: 15px;
-  max-height: 450px;
   overflow: auto;
 } .HomeTecnologiasLanguage::-webkit-scrollbar{display: none;}
 
@@ -517,19 +528,40 @@
   font-size: 1em !important;
 }
 @media(min-width: 750px){
-  .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
-    width: 420px;
+  .HomeTecnologias{ /*contenedor pricipal*/
+    justify-content: center;
+  }
+  .HomeTecnologias h2{ /*titulos*/
+    margin-top: 0;
+  }
+  .HomeTecnologias p{ /*texto indicativo*/
+    width: 45%;
+  }
+  .HomeTecnologias p{ /*texto*/
+    font-size: 2em;
   }
   .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
-    width: 450px;
+    width: 330px !important;
+    height: 55vh;
+    max-height: 480px;
+  }
+
+  .HomeTecnologiasLanguage{ /*contenedor de los lenguages*/
+    width: 200px;
     gap: 45px;
     padding: 40px;
+  }
+  .HomeTecnologiasCpmtemt{ /*contenedor del contenido osea texto y tecnologias*/
+    flex-direction: row;
   }
   .HomeTecnologiasLanguageImg{ /*imagenes de los lenguages*/
     width: 120px;
   }
   .HomeTecnologiasLanguageImgContent{ /*contenedor de la informacion*/
     width: 350px;
+  }
+  .HomeTecnologiasLanguageImgContent p{
+    width: 90%;
   }
 }
 

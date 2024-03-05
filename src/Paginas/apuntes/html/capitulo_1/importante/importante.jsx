@@ -3,6 +3,9 @@ import { useRef } from "react";
 
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
+
+
 
 
 function Importante() {
@@ -23,6 +26,11 @@ function Importante() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Presiona f12 o click derecho en inspeccionar.`,
+        lenguage: "Txt",
+        codigo: `F12`
+      }]}/>
       <main>
         <h1>importante</h1>
         <Conseptos texto={`Para empezar para crear un archivo html debmos crear un archivo con la extencion .html por ejemplo.

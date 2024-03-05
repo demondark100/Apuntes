@@ -1,0 +1,81 @@
+.contentResumen{ /*contenedor de los reumenes*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 8;
+    pointer-events: none;
+}
+
+
+.contentResumen__infoContent--title{ /*titulo*/
+    color: #fbffbe;
+    font-size: 2em;
+}
+
+.contentResumen__iconContent{ /*contenedor del icono y el texto*/
+    margin-top: 18px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    min-width: 98px;
+}
+
+.contentResumen__iconContent--icono{ /*icono*/
+    background-color: #1f1d1dcc;
+    padding: 8px;
+    border-radius: 1000px;
+    backdrop-filter: blur(4px);
+    pointer-events: auto !important;
+    cursor: pointer;
+    font-size: 1em;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentResumen__iconContent--parrafo{ /*parrafo indicativo*/
+    background-color: #1f1d1da4;
+    backdrop-filter: blur(4px);
+    padding: 2px;
+    color: #caffb5 !important;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    user-select: none;
+}
+
+
+@media (min-width: 750px){
+    .contentResumen__iconContent{ /*contenedor del icono y el texto*/
+        flex-direction: row;
+        justify-content: start;
+    }
+}
+
+
+/*Estilos de la informacio*/
+.contentResumen__infoContent{
+    top: 0;
+    left: 0;
+    background-color: #000000dc;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+}
+.contentResumen__infoContent--info{ /*informacion*/
+    width: 100%;
+    max-width: 1800px;   
+}
