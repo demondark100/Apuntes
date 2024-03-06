@@ -4,7 +4,7 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./metodologia.css";
 import { useRef } from "react";
-
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 
 function Metodologia() {
@@ -31,6 +31,16 @@ function Metodologia() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Esto nos ayuda en la especificidad al nombrar elementos.",
+        lenguage: "Html",
+        codigo: `<div class="content">
+  <p class="content__p">
+    <b class="content__p--b">contenido</b>
+  </p>
+</div>
+`
+      }]}/>
       <main>
         <h1>metodologia BEM</h1>
         <Conseptos texto={`La metodologia BEM nos permite solucionar conflictos con la seleccion de multiples clases de una forma tal que nos permite saber que elemento estamos seleccionando.

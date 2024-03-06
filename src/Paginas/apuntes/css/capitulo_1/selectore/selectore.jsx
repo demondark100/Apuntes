@@ -3,6 +3,7 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import "./selectore.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 
 import { useState , useRef } from "react";
@@ -26,6 +27,41 @@ function Selectores() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Css tiene varias formas de seleccionar los elementos html.`,
+        lenguage: "Html",
+        codigo: `<!-- seleccion de tipo -->
+<p>de tipo</p>
+<!-- seleccion por clase -->
+<p class="clase">clase</p>
+<!-- seleccion por id -->
+<p id="id">identificacion unica</p>
+<!-- seleccion por atributo -->
+<p atributo="parrafo">atributo</p>
+<!-- seleccion descendencia -->
+<div><p>parrafo</p></div>`
+      },
+      {
+        lenguage: "Css",
+        codigo: `*{  /*seleccion universal*/
+  propiedad: valor;
+}
+p{ /*seleccion de tipo*/
+  propiedad: valor;
+}
+.clase{ /*seleccion por clase*/
+  propiedad: valor;
+}
+#id{ /*seleccion por id*/
+  propiedad: valor;
+}
+[atributo="parrafo"]{ /*seleccion por atributo*/
+  propiedad: valor;
+}
+div p{ /*seleccion por descendencia*/
+  propiedad: valor;
+}`
+      }]}/>
       <main>
         <h1>selectores</h1>
         <Conseptos texto={`Los selectores nos sirven para poder seleccionar a las cagitas / elementos de html.

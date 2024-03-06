@@ -2,10 +2,35 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Unidades2() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Hay dos medidas las relativas(cambian segun sea) fijas(no cambian).",
+        lenguage: "Txt",
+        codigo: `medidas fijas: px,em,cm,ml,pt
+medidas relativas: vw,vh,%`
+      },
+      {
+        lenguage: "Css",
+        codigo: `/*medidas fila*/
+p{font-size: 2em;}
+p{font-size: 8px;}
+p{font-size: 1cm;}
+p{font-size: 1pt;}
+p{font-size: 4ml;}
+/*medidas relativas*/
+div{
+  width: 100%;
+  height: 100%;
+}
+div{
+  width: 100vw;
+  height: 100vh;
+}`
+      }]}/>
       <main>
         <h1>unidades parte 2 <b>(la venganza :v)</b></h1>
         <Conseptos texto={`Ahora vamos a ver mas medidas relativas pero esta vez para las cagitas posdata todas las propiedades nuevas que veremos son medidas relativas no fijas.

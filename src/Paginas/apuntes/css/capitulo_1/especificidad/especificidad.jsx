@@ -3,10 +3,49 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./especificidad.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Especificidad() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Css tiene gerarquias donde una es mas importante que otras , por ejemplo si estilizas algo y despues le das otro estilo con un selector de mayor gerarquia ejecutara los estilos del selector con gerarquia mas alta.`,
+        lenguage: "Txt",
+        codigo: `!important                           *         mas importante
+estilos en linea                    * *        segundo mas importante
+id                                 * * *       tercero mas importante
+clases atributos y pseudoclases   * * * *      cuarto mas importante
+slementos y pseudoelementos      * * * * *     menos importante
+selector universal              * * * * * *    menos importante`
+      },
+      {
+        mensaje: `Esta es la gerarquia de css`,
+        lenguage: "Css",
+        codigo: `/*cascada*/
+p{color: pink;}
+p{color: blue;} /*este es mas importante por la cascada*/
+/*las clases y atributos som mas imortantes que los elementos*/
+.clase{color: black;}
+p{color: yellow;}
+/*los id son mas importantes que las clases y atributos*/
+#id{color: black;}
+[atributo="elemento"]{color: red;}
+.clase{color: green;}`
+      },
+      {
+        lenguage: "Html",
+        codigo: `<!-- los estilos en linea son mas importantes que los id y los demas selectores -->
+<h6 style="color: red;">subtitulo.</h6>`
+      },
+      {
+        lenguage: "Css",
+        codigo: `/*!important es el mas importante de todos*/
+p{
+  color: black !important;
+}
+p{color: red;}
+p{color: yellow;}`
+      }]}/>
       <main>
         <h1>Especificidad</h1>
         <Conseptos texto={`la especificidad es como rangos para evitar conflictos con los estilos de css ahora una igamen para poder entender mejor la especificidad.`}/>

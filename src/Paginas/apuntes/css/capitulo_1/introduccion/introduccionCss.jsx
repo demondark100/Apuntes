@@ -2,10 +2,26 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function IntroduccionCss() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Css es para estilizar nuestros elementos html y se estructuran como un objeto.`,
+        lenguage: `Css`,
+        codigo: `.nombre_elemento{
+  propiedad: valor;
+  propiedad: valor;
+}`
+        },
+        {
+          mensaje: "Para entrelazar css y html se usa <link>",
+          lenguage: "Html",
+          codigo: `<head>
+  <link rel="stylesheet" href="style.css">
+</head>`
+        }]}/>
       <main>
         <h1>introduccion a css</h1>
         <Conseptos texto={`css es una tecnologia / lenguaje que nos sirve para dar estilos a las cagitas que creamos con html.

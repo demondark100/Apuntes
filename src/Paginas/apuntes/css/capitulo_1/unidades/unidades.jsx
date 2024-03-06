@@ -6,6 +6,7 @@ import Footer from "../../../../../componentes/menus/Footer";
 import { useState , useRef } from "react";
 import "./unidades.css";
 import Rem from "./rem";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Unidades() {
   const [showRem, setShowRem] = useState(false);
@@ -23,6 +24,30 @@ function Unidades() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Hay dos medidas las relativas(cambian segun sea) fijas(no cambian).",
+        lenguage: "Txt",
+        codigo: `medidas fijas: px,em,cm,ml,pt
+medidas relativas: vw,vh,%`
+      },
+      {
+        lenguage: "Css",
+        codigo: `/*medidas fila*/
+p{font-size: 2em;}
+p{font-size: 8px;}
+p{font-size: 1cm;}
+p{font-size: 1pt;}
+p{font-size: 4ml;}
+/*medidas relativas*/
+div{
+  width: 100%;
+  height: 100%;
+}
+div{
+  width: 100vw;
+  height: 100vh;
+}`
+      }]}/>
       <main>
         <h1>unidades</h1>
         <Conseptos texto={`Tenemos dos tipos de medidas.
@@ -35,7 +60,7 @@ Para continuar debemos entender que es la propìedad "font-size".`} />
 
         <h2>font-size</h2>
         <Conseptos texto={`"font-size" nos sirve para cambiar el tamaño de los textos.
-en las medidas fijas tenemos:
+em las medidas fijas tenemos:
 px: Estos son medidas fijas que trabajan con pixeles.
 cm: estas medidas son cm a escala real.
 ml: esto tambien se manejan a milimetros reales.
