@@ -3,10 +3,23 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./padding.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Padding() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `El padding es el espacio interior de un elemento html.`,
+        lenguage: "Css",
+        codigo: `padding-top: 8px; /*espacio exterio hacia arriba*/
+padding-left: 8px; /*espacio exterior de la izquierda*/
+padding-right: 8px; /*espacio exterior de la derecha*/
+padding-bottom: 8px; /*espacio exterior de abajo*/
+/*resumir todo*/
+padding: 8px 8px 8px 8px;
+/*arriba*/  /*derecha*/  /*abajo*/  /*izquierda*/
+`
+      }]}/>
       <main>
         <h1>padding</h1>
         <Conseptos texto={`Padding en HTML es un espacio interno añadido alrededor del contenido de un elemento, separándolo de su borde.`}/>

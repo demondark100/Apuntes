@@ -3,11 +3,58 @@ import Footer from "../../../../../componentes/menus/Footer";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import "./cajas.css";
-
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function Cajas() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los cajas/elementos de html son elementod de bloque o en linea.
+Bloque: Estos ocupan todo el ancho de su contenedor.
+Linea: Estos se ajustan al ancho de su contenido.`,
+        lenguage: "Html",
+        codigo: `<!-- elemento de bloque -->
+<div>
+<p>
+<h1> - <h6>
+<ul>
+<ol>
+<li>
+<table>
+<form>
+<blockquote>
+<pre>
+<hr>
+<address>
+
+<!-- elementos en linea -->
+<a>
+<span>
+<strong>
+<em>
+<img>
+<input>
+<button>
+<label>
+<select>
+<textarea>
+<code>
+<br>
+<i>`
+      },
+      {
+        mensaje: "Podemos cambiar un elemento de bloque a linea y visebersa , tambien podemos mesclar que se comporte como en linea pero que reciba propiedades de un elemento en bloque con css.",
+        lenguage: "Css",
+        codigo: `p{
+  display: inline;
+}
+b{
+  display: block;
+}
+b{
+  display: inline-block;
+}`
+      }]}/>
       <main>
         <h1>cajas</h1>
         <Conseptos texto={`En html tenemos dos tipos de caja las que son en linea y las que son en bloque.`}/>

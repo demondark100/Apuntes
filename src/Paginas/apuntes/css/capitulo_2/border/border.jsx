@@ -3,10 +3,24 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./border.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Border() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Esta propiedad maneja los bordes en los elementos html",
+        lenguage: "Css",
+        codigo: `border: 2px solid blue; /*poner un borde a una caja*/
+border: none; /*quitar el borde a una caja*/
+border-radius: 15px; /*redondear el borde de una caja*/
+/*poner borde en solo un lado*/
+border-top: 2px solid red; /*poner borde arriba*/
+border-right: 2px solid red; /*poner borde a la derecha*/
+border-bottom: 2px solid red; /*poner borde abajo*/
+border-left: 2px solid red; /*poner borde a la izquierda*/
+`
+      }]}/>
       <main> 
         <h1>border</h1>
         <Conseptos texto={`Esta propiedad se encarga de darle el borde a las cajas.`}/>

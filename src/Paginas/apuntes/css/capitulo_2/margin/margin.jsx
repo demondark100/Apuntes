@@ -3,10 +3,20 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./margin.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Margin() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `El margin es el espacio exterior de una caja/elemento hhtml.`,
+        lenguage: "Css",
+        codigo: `margin: aunto; /*dejar espacios arriba abajo derecha e izquierda segun el contenedor*/
+margin-top: 15px; /*dejar espacio hacia arriba*/
+margin-left: 15px;  /*dejar espacio hacia la izquierda*/
+margin-right: 15px; /*dejar espacio hacia la derecha*/
+margin-bottom: 15px; /*dejar espacio hacia abajo*/`
+      }]}/>
       <main>
         <h1>margin</h1>
         <Conseptos texto={`Margin en HTML es un espacio externo añadido alrededor del borde de un elemento, separándolo de otros elementos.`}/>

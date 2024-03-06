@@ -3,10 +3,34 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./background.css"
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function Background() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es para dar fondo a un elemento por ejemplo poner un fondo de color o imagen de fondo , etc.`,
+        lenguage: "Css",
+        codigo: `background-color: red; /*poner un color de fondo*/
+background-image: url("link de la imagen");
+/*ajustar imagenes*/
+background-size: contain; /*ajusta la imagen a su escala real*/
+background-size: cover: /*ajusta la imagen a su contenedor*/
+/*repeticion de imagen*/
+background-repeat: repat; /*esto es para que una imagen se repita varias veces en su escala original*/
+background-repeat: norepeat; /*hace que la imagen no se repita en su escala original*/
+/*ajustar para mostrar*/
+background-clip: border-box; /*mostrar desde el borde*/
+background-clip: padding-box; /*la imagen se ajustara al padding*/
+background-clip: content-box; /*la imagen se ajusta al contenido*/
+/*posisionar imagen*/
+background-position: center center; /*posisiona la imagen donde desees*/
+/*ajuste de imagen*/
+background-attachment: fixed; /*esto hace que un fondo se fije en una posision , da un buen efecto*/
+background-attachment: scroll; /*hace que la imagen se mueva con el contenido*/
+
+`
+      }]}/>
       <main>
         <h1>background</h1>
         <Conseptos texto={`Esta propiedad nos permite dar fondos a las cajas este tiene muchas proiedades que veremos a continuacion.`}/>

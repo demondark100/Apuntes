@@ -3,10 +3,16 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./outline.css";
+import Resumenes from "../../../..//../componentes/resumenes/resumenes";
 
 function Outline() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `El outline es similar que border pero este no ocupa escio como tal.`,
+        lenguage: `Css`,
+        codigo: `outline: 10px solid orange; /*es identico a border*/`
+      }]}/>
       <main>
         <h1>outline</h1>
         <Conseptos texto={`El outline es un borde que no afecta al espacio de las cajas como si pasa con los bordes en simples palabras el outline no ocupara espacio real en el sitio web.`}/>

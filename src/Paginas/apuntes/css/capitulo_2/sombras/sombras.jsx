@@ -3,16 +3,30 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./sombras.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Sombras() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con css podemos poner sombras a las cajas y los textos.`,
+        lenguage: "Css",
+        codigo: `/*bordes en las cajas*/
+box-shadow:  2px    |  2px  |    8px    |  3px | green;
+                    |       |           |      |
+          ixquierda | ariiba| desenfoque| borde| color
+          derecha   | abajo |           |      |
+
+/*bordes en los textos*/
+text-shadow:   -2px  |   2px    |    15px    |  green;
+            izquierda| arriba   | desenfoque |  color
+            derecha  | abajo    |            |
+
+`
+      }]}/>
       <main>
         <h1>sombras</h1>
-        <Conseptos texto={`Esta propiedad es similar a {border} pero en vez de darle bordes a las cajas les damos una sombra. ejemplo.`}
-        enlaces={{
-          border: {text: "border", url: `../css/capitulo 2/border`}
-        }}/>
+        <Conseptos texto={`Esta propiedad es similar a border pero en vez de darle bordes a las cajas les damos una sombra. ejemplo.`}/>
         <div className="website sombrita__content">
           <div className="cajita__feliz">
             cajita feliz :D
