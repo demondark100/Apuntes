@@ -4,19 +4,28 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./position.css";
+import Resumenes from "../../../..//../componentes/resumenes/resumenes";
+
 
 function PositionAbsolute() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto no ocupa espacio en la web.`,
+        lenguage: `Css`,
+        codigo: `position: absolute; /*posisionar caja como absolute*/
+/*movimiento de la caja*/
+top: 15px;  /*mover desde arriba*/
+right: 15px;  /*mever desde la derecha*/
+bottom: 15px; /*mover desde abajo*/
+left: 15px; /*mover desde la izquierda*/
+`
+      }]}/>
       <main>
         <h1>position-absolute</h1>
-        <Conseptos texto={`Esta propiedad a diferencia de {positioRelative} no ocupa espacio real en el sitio web , tambien obtiene las mismas propiedades de position relative como:
+        <Conseptos texto={`Esta propiedad a diferencia de "positio-relative" no ocupa espacio real en el sitio web , tambien obtiene las mismas propiedades de position relative como:
 
-top , right , bottom , left , z-index.`}
-enlaces={{
-  positioRelative: {text: "position relative",url: `../css/capitulo 3/position`}
-}}
-targetBlank={true}/>
+top , right , bottom , left , z-index.`}/>
 
         
         <Html codigo={`<div class="position_1">

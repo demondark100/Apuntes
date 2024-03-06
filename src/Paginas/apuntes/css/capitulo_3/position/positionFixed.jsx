@@ -4,10 +4,16 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./position.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function PositionFixed() {
   return (  
     <>
+      <Resumenes contenido={[{
+          mensaje: `Esto es similar a "position-absolute" soolo que la caja se queda fija en la parte de la pantalla y seguira al contenido un ejemplo el boton para abrir el resumen.`,
+          lenguage: `Css`,
+          codigo: `position: fixed; /*posisionar en fixed*/`
+      }]}/>
       <main>
         <h1>position-fixed</h1>
         <Conseptos texto={`Esto es similar a position absolute osea que no ocupa un espacio como tal en el sitio web la diferencia esque el elemento se queda en un lugar fijo del sitio web esto se suele usar para menus o publicidades estaticas un ejemplo si sigues bajando notaras como es que el menu esta bajando contigo.`} />

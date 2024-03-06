@@ -4,10 +4,18 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./position.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function Zindex() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es para posisionar una caja encima de otra un ejemplo para ver los resumenes esta caja se posisiona encima de todo el contenido.`,
+        lenguage: `Css`,
+        codigo: `z-index: 2; /*posisionar una caja ensima de dos cajas*/
+/*Miesntras mas alto sea el valor la caja se posisonara mas arriba*/
+        `
+      }]}/>
       <main>
         <h1>z-index</h1>
         <Conseptos texto={`z-index es para controlar las capas si te diste cuenta en position absolute y position relative habian cajas que se sobreponian en sima de otras pero eso podemos controlarlo con z-index.

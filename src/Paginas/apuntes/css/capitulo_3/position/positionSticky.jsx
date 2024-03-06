@@ -4,10 +4,16 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./position.css"
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function PositionSticky() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es similar a "position-relative" pero se queda fija en un lugar al igual que fixed.`,
+        lenguage: "Css",
+        codigo: `position: sticky; /*posisionar en sticky*/`
+      }]}/>
       <main>
         <h1>position-sticky</h1>
         <Conseptos texto={`Esto es igual a Position Fixed pero la diferencia esque se asimila mas a position relative asi como Fixed se parecia a position absolute en simples palabras sticky ocupa un espacio real en el sitio web.`}/>

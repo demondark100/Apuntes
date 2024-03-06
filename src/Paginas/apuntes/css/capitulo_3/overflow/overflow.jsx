@@ -6,6 +6,7 @@ import Confirmar from "./confirmar";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Overflow() {
   const contenedor_overflow = useRef(null);
@@ -34,6 +35,14 @@ function Overflow() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Esto es para que el contenido no se salga de su contenedor osea para que no se deborde.",
+        lenguage: "Css",
+        codigo: `overflow: auto; /*no permite que el contenido se desborde y permite hacer scroll*/
+overflow: scroll; /*la barra de scroll se pondra de forma obligatoria*/
+overflow: hidden; /*no permite que el contenido se desborde pero no se podra hacer scroll*/
+        `
+      }]}/>
       <main>
         <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink></h2>
         <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>

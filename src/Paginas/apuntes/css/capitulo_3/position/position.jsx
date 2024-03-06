@@ -4,10 +4,22 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./position.css";
+import Resumenes from "../../../..//../componentes/resumenes/resumenes";
 
 function Position() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Al posisionar una caja en "relative" hace que la caja conseve su espacio en la web.`,
+        lenguage: `Css`,
+        codigo: `position: relative; /*posisionar una caja en "relative"*/
+/*cambiar de lugar*/
+top: 15px;  /*posisonar una caja hacia arriba*/
+right: 15px;  /*posisionar una caja hacia la derecha*/
+bottom: 15px;  /*posisionar una caja hacia abajo*/
+left: 15px;  /*posisionar una caja hacia la izquierda*/
+`
+      }]}/>
       <main>
         <h1>position-relative</h1>
         <Conseptos texto={`Esta propiedad nos permite posisionar elementos , al usar la propiedad position un elemento adquiere nuevas propiedades como:

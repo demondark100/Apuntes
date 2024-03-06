@@ -3,10 +3,21 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./float.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function Float() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Cambia los contenedores de posision de derecha a izquierda y vuseberza , flex es la tecnologia que lo reemplazo pero bueno.",
+        lenguage: "Css",
+        codigo: `.contenedor1{
+  float: left;
+}
+.contenedor2{
+  float: right;
+}`
+      }]}/>
       <main>
         <h1>float</h1>
         <Conseptos texto={`Esta propiedad nos sirve para cambiar a los contenedores de posision de derecha a izquierda y visebersa.`}/>

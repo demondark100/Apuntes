@@ -3,10 +3,44 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./pseudoclases.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Pseudoclases() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensjae: `Estiliza un elemento de forma dinamica segun la interaccion del usuario.`,
+        lenguage: "Css",
+        codigo: `.hover_e:hover{ /*se estiliza cuando el usuario pase el mouse sobre el elemento*/
+  color: wheat;
+  background-color: black;
+}
+/*link*/
+#click{
+  background-color: black;
+  color: wheat;
+}
+#click:link{ /*se estiliza cuando el usuario hace click en un link*/
+  background-color: green;
+}
+/*active*/
+#btn_1{
+  background-color: black;
+  color: wheat;
+  display: block;
+  margin: auto;
+}
+#btn_1:active{ /*se estiliza cuando se mantiene clickeado un elemento*/
+  background-color: orange;
+  color: black;
+}
+/*focus*/
+#inputFeliz:focus{ /*se estiliza cuando se hace click a un elemento*/
+  background-color: black;
+  color: orange;
+}
+`
+      }]}/>
       <main>
         <h1>pseudoclases</h1>
         <Conseptos texto={`Las pseudoclases de CSS son usadas para seleccionar y aplicar estilos a elementos según su estado o posición en el documento. En resumen, se utilizan para aplicar estilos de forma dinámica a elementos según su interacción con el usuario o posición en la página.`}/>

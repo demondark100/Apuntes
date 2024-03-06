@@ -3,10 +3,17 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./display.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Display() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `display tiene otras propiedades a parte de "inline","inline-block".`,
+        lenguage: "Css",
+        codigo: `display: flex; /*la caja se comportara de forma flexible*/
+display: grid; /*la caja crean celdas*/`
+      }]}/>
       <main>
         <h1>display</h1>
         <Conseptos texto={`Bueno veremos las otras propiedades de display pero no profundizaremos.

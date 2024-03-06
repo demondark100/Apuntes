@@ -3,10 +3,39 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./pseudoelementos.css"
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function Pseudoelementos() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Es un elemento virtual donde no es necesario agregar un elemento en el documento HTML.`,
+        lenguage: "Css",
+        codigo: `.primer_linea::first-line{ /*Estilizizar solo la primera linea*/
+  color: blue;
+  font-size: 1.5em;
+}
+.primerLetra::first-letter{ /*Estilizar solo la primer letra*/
+  font-size: 1.5em;
+  color: blueviolet;
+}
+#modificarInput::placeholder{ /*solo se usa en inputs , estiliza el texto indicativo*/
+  color: wheat;
+  background-color: black;
+}
+.texto_seleccion::selection{ /*estiliza la barra de seleccion*/
+  background-color: black;
+  color: wheat;
+}
+/*hijos que no son del DOM sino que son elementos virtuales*/
+.oracion__parrafo::before{
+  content: "antes";
+}
+.oracion__parrafo::after{
+  content: " despues";
+}
+`
+      }]}/>
       <main>
         <h1>pseudoelementos</h1>
         <Conseptos texto={`Un pseudoelemento en CSS es un elemento virtual que se utiliza para agregar contenido o estilo a un elemento en el documento, sin tener que agregar elementos adicionales al código HTML. Es una forma de crear elementos visuales adicionales en un documento web sin necesidad de agregar más HTML.`}/>
