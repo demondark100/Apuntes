@@ -4,6 +4,7 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import "./colorizacion.css"
 import { useState , useRef } from "react";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Colorizacion() {
 
@@ -16,6 +17,21 @@ function Colorizacion() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Css tiene distintas formas de colorizar.`,
+        lenguage: "Css",
+        codigo: `/*rgb*/
+color: rgb(150,256,38); /*solo se pueden poner desde el 0 al 255, 0 nada de color 255 color al maximo*/
+/*rgba*/
+background-color: rgba(0,255,12,0.5); /*esto es para colorizar con opacidad , estos van desde el 0 al 1 , la opacidad se pone como ultimo parametro*/
+/*hexadecimal*/
+/*estos es una mescla entre numero y alfabeto*/
+/*desde el 1 al 9 y a hasta la f*/
+color: #0f0; /*solo de 3 se usa cuando se quiere lograr un color fijo*/ 
+color: #a7e476; /*de 6 digitos es para mesclar colores*/
+background-color: #a7e4763d; /*con 8 digitos elegimos la opacidad del color*/
+        `
+      }]}/>
       <main>
         <h1>colorizacion</h1>
         <Conseptos texto={`Tenemos distintas formas de usar los colores por ejemplo la forma que hemos estado usando hasta ahora.

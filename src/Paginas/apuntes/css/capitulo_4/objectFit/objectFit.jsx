@@ -4,6 +4,7 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import "./objectFit.css";
 import { useEffect } from "react";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 
 
@@ -97,6 +98,32 @@ function ObjetFit() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estilizar las imagenes`,
+        lenguage: "Css",
+        codigo: `/*contain*/
+.contain img{ /*imagen en escala real*/
+  width: 100%;
+  object-fit: contain;
+}
+/*cover*/
+.cover img{ /*ajusta la imagen al tamaño de su contenedor*/
+  width: 100%;
+  object-fit: cover;
+}
+/*none*/
+.none img{  /*ajusta la imagen a su escala real*/
+  width: 100%;
+  object-fit: none;
+}
+/*object-position*/
+.position img{  /*posisiona una imagen donde deseemos*/
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+`
+      }]}/>
       <main>
         <h1>object fit</h1>
         <Conseptos texto={`Esta propiedade nos permitira controlar los estilos de las imagenes para centrarlas , ajustarlas bien , etc.`}/>

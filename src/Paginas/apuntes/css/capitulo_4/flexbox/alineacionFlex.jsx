@@ -3,10 +3,36 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import { Link } from "react-router-dom";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function AlineacionFlex() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto alinearemos el contenido de algun contenedor con la propiedad flex.`,
+        lenguage: "Css",
+        codigo: `/*Todas las propiedades se comportaran segun direccion "row" o  "column"*/
+/*justify-content*/
+justify-content: center; /*centra elementos.*/
+justify-content: start; /*elinea las cajas al inicio del contenedor*/
+justify-content: end; /*alinea las cajas al final del contenedor*/
+justify-content: space-around; /*Las cajas tienen el mayor espacio posible*/
+justify-content: space-between; /*Da un margin auto a todas las cajas*/
+justify-content: space-evenly; /*Las cajas tienen un mismo margin*/
+
+/*align-items*/
+align-items: center; /*centra elementos*/
+align-items: start; /*posisiona al inicio las cajas*/
+align-items: end; /*posisiona al final las cajas*/
+
+/*align-self*/ /*esto alinea solo a un elemento hijo y no a todos en general*/
+align-self: start; /*alinea una caja al inicio del contenedor*/
+align-self: center; /*centra una caja*/
+align-self: end; /*alinea una caja al final del contenedor*/
+
+/*en vez de usar start,end puedes usar flex-start y flex-end*/
+        `
+      }]}/>
       <main>
         <h1>alineacion flex</h1>
         <h2>alineamiento horizontal(hechado _ )</h2>

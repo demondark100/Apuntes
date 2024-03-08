@@ -4,10 +4,30 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./flexbox.css"
 import { Link } from "react-router-dom";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function FlexDirection() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto hace que las cajas dentro de un contenedor se pongan como filas o columnas.`,
+        lenguage: "Css",
+        codigo: `flex-direction: column; /*posisiona las cajas en columnas*/
+flex-direction: row; /*posisiona las cajas en filas*/`
+      },
+      {
+        mensaje: `"nth-child" es para modificar algun elemento hijo de un contenedor.`,
+        lenguage: "Css",
+        codigo: `#contenedor div:nth-child(2){
+  /*estilos para el elemento hijo 2*/
+}`
+      },
+      {
+        mensaje: `"reverse" es igual que column y row solo que las cajas se posisionan en reversa.`,
+        lenguage: "Css",
+        codigo: `flex-direction: row-reverse;
+flex-direction: column-revese;`
+      }]}/>
       <main>
         <h1>flex direction</h1>
         <Conseptos texto={`Recuerdan que dije que flex es de (arriba a abajo) y de (derecha a izquierda)

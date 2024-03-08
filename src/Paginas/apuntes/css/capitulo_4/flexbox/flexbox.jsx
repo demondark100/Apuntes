@@ -4,10 +4,16 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./flexbox.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Flexbox() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es otra propiedad de "display" que vuelve las cajas flexibles, las cajas aal ser flexibles reciben muchas propiedades nuevas.`,
+        lenguage: "Css",
+        codigo: `display: flex; /*pone un elemento en "flex"*/`
+      }]}/>
       <main>
         <h1>flexbox</h1>
         <Conseptos texto={`Anteriormente se solia trabajar con tablas , float para crear los sitios web pero ahora se usa flexbox debido a que es mas facil y mas optimo.

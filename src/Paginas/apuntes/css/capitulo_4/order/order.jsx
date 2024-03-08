@@ -3,10 +3,21 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./order.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Order() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Ordena las cajas flexibles como queramos, mejor mira los apuntes completos si eres nuevo.`,
+        kenguage: "Css",
+        codigo: `#hijp1{
+  order: 2;
+}
+#caja2{
+  order: 1;
+}`
+      }]}/>
       <main>
         <h1>order</h1>
         <Conseptos texto={`Esto nos servira para ordenar las caja flexibles como nosotros queramos un ejemplo de uso seria a la hora de trabajar con responsive podemos ordenar una caja como queramos.

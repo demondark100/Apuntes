@@ -3,10 +3,19 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function FlexWrap() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: "Wrap hace que las cajas no se encojan sino que mantengan su escala definida por nosotros.",
+        lenguage: "Css",
+        codigo: `flex-wrap: wrap; /*las cajas mantienen su escala*/
+flex-wrap: nowrap; /*las cajas puedes cambiar su escala*/
+flex-wrap: wrap-reverse; /*las cajas matienen su escala y se posisonaran en reversa.*/
+        ` 
+      }]}/>
       <main>
         <h1>flex wrap</h1>
         <Conseptos texto={`Esta propiedad nos permite que las cajas conserven el ancho exacto que nosotros indicamos ahora veras a lo que me refiero.`}/>

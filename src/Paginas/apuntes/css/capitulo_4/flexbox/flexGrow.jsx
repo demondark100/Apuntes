@@ -3,10 +3,23 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import Css from "../../../../../componentes/lenguajes/Css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function FlexGrow() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `"flex-grow" ajusta las al espacio que sobra en el contenedor , esto solo se usa en las cajas hijas.`,
+        lenguage: "Css",
+        codigo: `flex-grow: 1;`
+      },
+      {
+        mensaje: `"text-align" alinea los textos`,
+        lenguage: "Css",
+        codigo: `text-align: start; /*alinea el texto al inicio de su contenedor*/
+text-align: center; /*centra el texto en su contenedor*/
+text-align: end; /*pone el texto al final de su contenedor*/`
+      }]}/>
       <main>
         <h1>flex-grow</h1>
         <Conseptos texto={`Esta propiedad hace que las cajas se ajusten al espacio que sobra , "flex-grow" se debe aplicar en los elementos hijos no en los contnedores.`}/>
