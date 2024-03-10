@@ -3,10 +3,25 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function AsignacionEspacios() {
-  return (  
+  return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto asignaremos espacios a un elemento dentro del contenedor.`,
+        lenguage: "Css",
+        codigo: `grid-column: 1/3; /*asignar espacios a las columnas |*/
+grid-row: 1/3; /*asignar espacios a las filas -*/
+        `
+      },
+      {
+        mensaje: `"span" facilita mas la asignacion ya que no debemos contar cada linea sino que se asignara el espacio de forma literal.`,
+        lenguage: "Css",
+        codigo: `grid-column: 1 / span 2; /*Asignar espacios a las columnas |*/
+grid-row: 1 / span 2; /*Asignar espacios a las filas -*/
+        `
+      }]}/>
       <main>
         <h1>asignacion de espacios</h1>
         <Conseptos texto={`Nosotros podemos asignar cuanto queremos que ocupe cada celda/grisha.

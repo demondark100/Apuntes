@@ -3,10 +3,34 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function GridDinamico() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto manejamos el minimo y maximo las celdas,`,
+        lenguage: "Css",
+        codigo: `grid-template-columns: repeat(3,max-content); /*las celdas ocupan el espacio de todo el contenedor*/
+grid-template-columns: repeat(3,min-content); /*las celdas se acoplan al espacio de su contenido*/`
+      },
+      {
+        mensaje: `Con "minmax" asignaremos cuanto sera la medida minima de una celda y cuanto sera la medida maxima de una celda.`,
+        lenguage: "Css",
+        codigo: `grid-template-columns: repeat(3,minmax(80px,200px)); 
+/*papametro 1: medida minima*/
+/*parametro 2: medida maxima*/`
+      },
+      {
+        mensaje: `"auto-fill" hace que las celdas se acomoden de forma dinamica sin necsidad de indicar cuantas celdas queremos en columnas o filas.`,
+        lenguage: "Css",
+        codigo: `grid-template-columns: repeat(auto-fill,minmax(80px,1fr)); /*las celdas se acomodaran de forma dinamica segun la resolucin*/`
+      },
+      {
+        mensaje: `"auto-fit" Es similar a "auto-fill" solo que hace que las celdas se agranden y se ajusten al tamaño de su contenedor osea que es dinamico como "auto-fill".`,
+        lenguage: "Css",
+        codigo: `grid-template-columns: repeat(auto-fit,minmax(80px,1fr)); /*las celdas se ajustan al ancho de su contenedor y se posisionan automaticamente*/`
+      }]}/>
       <main>
         <h1>grid dinamico</h1>
         <Conseptos texto={`Con esto podemos posiscionar de mejor forma los elementos , manejar su comportamento a los elementos/grishas.`}/>

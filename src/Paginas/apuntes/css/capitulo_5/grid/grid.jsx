@@ -4,10 +4,16 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./grid.css";
 import Html from "../../../../../componentes/lenguajes/Html";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Grid() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es similar a flex pero esto crea varias filas y columnas.`,
+        lenguage: "Css",
+        codigo: `display: grid; /*poner un contenedor en grid*/`
+      }]}/>
       <main>
         <h1>grid</h1>
         <Conseptos texto={`grid es muy similar a flex con la diferencia que se pueden crear filas , columnas como nosotros queramos.`}/>

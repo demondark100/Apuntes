@@ -3,10 +3,23 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function GridTemplate() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto asignamos filas y columnas.`,
+        lenguage: "Css",
+        codigo: `grid-template-rows: 150px 150px 150px; /*asignar filas -*/
+grid-template-columns: 150px 150px 150px; /*asignar columnas |*/
+        `
+      },{
+        mensaje: `Con "fr" creamos filas y columnas pero estos ocuparan todo el espacio de su contenedor.`,
+        lenguage: "Css",
+        codigo: `grid-template-rows: 1fr 1fr 1fr; /*asignar filas -*/
+grid-template-columns: 1fr 1fr 1fr; /*asignar columnas |*/`
+      }]}/>
       <main>
         <h1>grid-template</h1>
         <Conseptos texto={`Con esto podremos definir cuantas filas y columnas queremos , estos se aplican a los grid container.`}/>

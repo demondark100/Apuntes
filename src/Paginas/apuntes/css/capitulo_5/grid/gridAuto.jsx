@@ -3,10 +3,24 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function GridAuto() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `"grid-auto" se encarga de crear las filas y columnas de forma automatica cuando hay elementos de mas.`,
+        lenguage: "Css",
+        codigo: `grid-auto-rows: 128px; /*crear filas automaticas*/
+grid-auto-columns: 128px; /*crear columnas automaticas*/`
+      },
+      {
+        mensaje: `"grid-auto-flow" se encarga de manejar el comportamiento en las celdas que se crean de forma automatica.`,
+        lenguage: "Css",
+        codigo: `gird-auto-flow: column; /*las celdas se craran automaticamente en las columnas*/
+gird-auto-flow: row; /*las celdas se crearan automaticamente en las filas*/
+gird-auto-flow:: dense; /*las celdas se crearan automaticamente en los espacios que quedan cuando se asignan espacio y sobran espacios*/`
+      }]}/>
       <main>
         <h1>grid auto</h1>
         <Conseptos texto={`Con estas propiedades vamos a programar el {gridImplicito} , si te fijaste bien en los ejemplos del grid implicito se creaban filas de forma automatica.`}

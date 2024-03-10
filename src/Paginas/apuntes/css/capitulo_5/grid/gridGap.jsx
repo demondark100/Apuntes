@@ -3,10 +3,19 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function GridGap() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Hace que los elementos hijos tengan un espacio entre si.`,
+        lenguage: "Css",
+        codigo: `grid-column-gap: 10px; /*dejar espacio en las columnas |*/
+grid-row-gap: 10px; /*dejar espacio en las filas -*/
+grid-gap: 10px; /*dejar espacio en filas - y columnas |*/
+        `
+      }]}/>
       <main>
         <h1>grid-gap</h1>
         <Conseptos texto={`Esto es como un margin pero se aplican para todas las celdas/grishas y estos se separan entre las celdas mas no del contenedor.`}/>

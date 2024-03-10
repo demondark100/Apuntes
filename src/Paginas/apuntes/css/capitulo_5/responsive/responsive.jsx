@@ -4,10 +4,27 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./responsive.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ResponsiveDesing() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto adaptamos nuestra web a distintas resoluciones.`,
+        lenguage: "Css",
+        codigo: `@media screen and (min-width: 820px){ /*estilos para telefonos primero*/
+  /*estilos*/
+}
+@media screen and (min-width: 700px) and (max-width: 900px){ /*esilos para una resolucion mayor*/
+  /*estilos*/
+}
+@media screen and (min-width: 900px) and (max-width: 1100px){ /*esilos para una resolucion mayor*/
+  /*estilos*/
+}
+@media screen and (min-width: 1100px){ /*esilos para una resolucion mayor*/
+  /*estilos*/
+}`
+      }]}/>
       <main>
         <h1>responsive design</h1>
         <Conseptos texto={`Responsive Design es para poder adaptar nuestro sitio web para todas las resoluciones que queramos.
@@ -16,10 +33,10 @@ Ahora comprenderemos como funcionan los media query.
 los media query son condicionales por asi decirlo por ejemplo si una ventana llega a este alto y ancho ejecutar tal estilo.`}/>
         <h2>pseudocodigo</h2>
         <Css codigo={`@media(si el ancho es mayor o igual a 120px){
-    ejecutar estos estilos.
+  ejecutar estos estilos.
 }
 @media(si el ancho es mayor o igual a 1200px){
-    ejecutar estos estilos.
+  ejecutar estos estilos.
 }`}/>
         <h2>mobile first (recomendado)</h2>
         <Conseptos texto={`Tenemos una metodologia muy buena para poder trabajar con Responsive Design el cual es mobile first la cual consiste en dar primero los estilos a los telefonos y despues a las tabletas , laptos , PC , tv , etc.`}/>
@@ -43,14 +60,14 @@ estilos.
 </div>`}/>
         
         <Css codigo={`.responsive_content{
-    background-color: rgb(8, 163, 54);
+  background-color: rgb(8, 163, 54);
 }
 
 @media screen and (min-width: 820px){
-    .responsive_content{
-        background-color: rgb(27, 61, 37);
-        color: #fff;
-    }
+  .responsive_content{
+    background-color: rgb(27, 61, 37);
+    color: #fff;
+  }
 }`}/>
         <div className="siguiente__parte">
           <Link to={"responRes1"}>resultado</Link>
@@ -60,48 +77,48 @@ estilos.
         <Conseptos texto={`Para poder trabajar con vairas resoluciones necesitaremos de la condicional and que traducido al español es (y).`}/>
         <h2>pseudocodigo</h2>
         <Css codigo={`@media screen and (minima resolucion) and (maxima resolucion){
-    se ejecutara un estilo para la resolucion que dijimos.
+  se ejecutara un estilo para la resolucion que dijimos.
 }
 @media screen and (min-width: 120px) and (max-width: 200px){
-    body{
-        background-color: #000;
-    }
+  body{
+    background-color: #000;
+  }
 }`}/>
         
         <Html codigo={`<div class="content_media">
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus saepe qui, corporis ea inventore dolor natus vel obcaecati et non doloribus perferendis perspiciatis officiis molestias quibusdam earum harum voluptates hic.
-    </p>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus saepe qui, corporis ea inventore dolor natus vel obcaecati et non doloribus perferendis perspiciatis officiis molestias quibusdam earum harum voluptates hic.
+  </p>
 </div>`}/>
         
         <Css codigo={`.content_media{
-    background-color: #000;
-    color: #ffff;
+  background-color: #000;
+  color: #ffff;
 }
 
 @media screen and (min-width: 400px) and (max-width: 700px){
-    .content_media{
-        background-color: #ffdede;
-        color: #000;
-    }
+  .content_media{
+    background-color: #ffdede;
+    color: #000;
+  }
 }
 @media screen and (min-width: 700px) and (max-width: 900px){
-    .content_media{
-        background-color: #fffb06;
-        color: #000;
-    }
+  .content_media{
+    background-color: #fffb06;
+    color: #000;
+  }
 }
 @media screen and (min-width: 900px) and (max-width: 1100px){
-    .content_media{
-        background-color: #ff2424;
-        color: #ffffff;
-    }
+  .content_media{
+    background-color: #ff2424;
+    color: #ffffff;
+  }
 }
 @media screen and (min-width: 1100px){
-    .content_media{
-        background-color: #00f;
-        color: #fff;
-    }
+  .content_media{
+    background-color: #00f;
+    color: #fff;
+  }
 }`}/>
         <div className="siguiente__parte">
           <Link to={"responRes2"}>resultado</Link>

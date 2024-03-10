@@ -3,10 +3,54 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./animation.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Animation() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `"@keyframes" sirve para hacer animaciones en elementos html sin necesidad que el usuario interactue con esos elementos.`,
+        lenguage: "Css",
+        codigo: `.elemento{
+  animation-name: animacion; /*nombre de la animacion*/
+  animation-duration: 1s; /*cuanto tiempo durara la animacion*/
+  animation-iteration-count: 3; /*cuantas veces se repetira la animacion*/
+  animation-iteration-count: infinite; /*la animacion se repetira de forma infinita*/
+  animation-direction: normal; /*la animacion se comporta de forma normal*/
+  animation-direction: reverse; /*la animacion se hace en reversa*/
+  animation-direction: alternate; /*la animacion va y viene osea es normal y reverse*/
+  animation-direction: alternate-reverse; /*la animacion se comporta como alternate pero en reversa*/
+  animation-fill-mode: none; /*la animacion vuelve a la normalidad*/
+  animation-fill-mode: forwards; /*la animacion se queda como finaliza*/
+  animation-fill-mode: both; /*inicia la animacion con las propiedades del inicio*/
+}
+@keyframes animacion{ /*"animacion" es el nombre de la animacion*/
+  from{
+    /*animacion*/
+  }
+  to{
+    /*animacion*/
+  }
+}`
+      },
+      {
+        mensaje: "tambien podemos manejar en que queremos que haga en tal tiempo de la animacion.",
+        lenguage: "Css",
+        codigo: `@keyframes animacion{ /*"animacion" es el nombre de la animacion*/
+  0%{
+    /*animacion*/
+  }
+  50%{
+    /*animacion*/
+  }
+  75%{
+    /*animacion*/
+  }
+  100%{
+    /*animacion*/
+  }
+}`
+      }]}/>
       <main>
         <h1>Animation</h1>
         <Conseptos texto={`Esto es similar a transition pero lleva otras reglas.

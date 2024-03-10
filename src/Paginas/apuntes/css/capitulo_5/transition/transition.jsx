@@ -3,10 +3,37 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./transition.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Transition() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto daremos una transision a cualquier cambio de estilos por ejemplo en ":hover".`,
+        lenguage: "Css",
+        codigo: `transition-duration: 1s; /*duracion de una transision*/
+transition-property: background; /*que propiedad recibira la transision*/
+transition-delay: 1s; /*la transision se ejecutara despues de un tiempo que indiquemos*/
+background-color: inherit; /*inherit hace que algun contenedor erede el color de su contenedor*/
+
+/*curva de tiempo en una animacion/transision*/
+.timing_content div:nth-child(1){
+  transition-timing-function: linear;
+}
+.timing_content div:nth-child(2){
+  transition-timing-function: ease;
+  /* "ease" es la propiedad que viene por defecto. */
+}
+.timing_content div:nth-child(3){
+  transition-timing-function: ease-in;
+}
+.timing_content div:nth-child(4){
+  transition-timing-function: ease-out;
+}
+.timing_content div:nth-child(5){
+  transition-timing-function: ease-in-out;
+}`
+      }]}/>
       <main>
         <h1>transition</h1>
         <Conseptos texto={`Esto es para hacer trnasisiones en distintas cosas es como dar una animacion por ejemplo a los hover.

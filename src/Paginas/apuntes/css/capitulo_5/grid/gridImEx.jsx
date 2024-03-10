@@ -3,10 +3,14 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function GridImEx() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Crea una fila o columna de forma implicita cuando hay un elemento de mas.`
+      }]}/>
       <main>
         <h1>grid implicito</h1>
         <Conseptos texto={`Nosotros al crear un elemento de mas se creara una celda mas a eso se le llama grid implicito.

@@ -3,10 +3,17 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function RepeatCss() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `"repeat()" simplifica mucho la creacion de filas - y columnas |.`,
+        lenguage: "Css",
+        codigo: `grid-template-columns: repeat(3,1fr); /*asignar espacios a las columnas |*/
+grid-template-rows: repeat(3,1fr); /*asignar espacios a las filas -*/    `
+      }]}/>
       <main>
         <h1>repeat</h1>
         <Conseptos texto={`Esta propiedad nos ayudara a resumir el codigo para definir cuabtas filas y columnas queremos en nuestra grisha.`}/>
@@ -157,7 +164,7 @@ function RepeatCss() {
         </div>
 
         <div className="siguiente__parte">
-          <Link to={"gridImEx"}>grid implicito y grid explicito</Link>
+          <Link to={"gridImEx"}>grid implicito</Link>
         </div>
 
       </main>
