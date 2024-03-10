@@ -4,10 +4,37 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./extraCss.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ExtraCss() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `rtl y ltr posisionan el texto de derecha a izquierda y visebersa.`,
+        lenguage: "Css",
+        codigo: `direction: rtl; /*el texto se posisiona de derecha a izquierda*/
+direction: ltr; /*el texto se posisiona de izquierda a derecha*/`
+      },
+      {
+        mensaje: `"letter-spacing" separa cada uno de los caracteres.`,
+        lenguage: "Css",
+        codigo: `letter-spacing: 10px; /*las letras se separan 10px*/`
+      },
+      {
+        mensjae: `"scroll-behavior" hace que el scroll entre secciones de nuestra pagina tenga una pequeña animacion.`,
+        lenguage: "Css",
+        codigo: `*{
+    /* es recomendable ponerlo para todos los elementos para que se haga una transision en el scroll. */
+
+
+    scroll-behavior: smooth;
+}`
+      },
+      {
+        mensaje: `"user-select" + "none" evitamos que el usuario eleccione texto.`,
+        lenguage: "Css",
+        codigo: `user-select: none;`
+      }]}/>
       <main>
         <h1>cosas extrea de css</h1>
         <h2>direction</h2>

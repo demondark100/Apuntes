@@ -4,10 +4,21 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./transform.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Transform() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto transforma un elemento.`,
+        lenguage: "Css",
+        codigo: `/*translate(de izquierda a derecha , de arriba a abajo);*/
+transform: translate(110px,80px); /*esto traslada de lugar a un elemento*/
+/*scale(escala de la altura , escala del ancho);*/
+transform: scale(2 , .4); /*El elemento duplica su tamaño*/
+transform: skew(45deg,15deg); /*el elemento se inclina hacia la izquierda*/
+clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); /*el elemento forma un rombo*/`
+      }]}/>
       <main>
         <h1>Transform</h1>
         <Conseptos texto={`Esta propiedad transforma al elemento de distintas formas que mas adelante veremos como , con mas adelante me refiero a ahora.`}/>
@@ -132,7 +143,7 @@ scale(2 , .4);`}/>
         </div>
       </div>
 
-      <Link className="clipPath" target="_blank" to={"https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"}>Clip Path</Link>
+      <h3><Link className="clipPath" target="_blank" to={"https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path"}>Clip Path</Link></h3>
       <Conseptos texto={`Clip Path es un una propiedad que nos servira para dar formas a los elementos. hay un sitio web que nos facilitara su uso click en el titulo que dice Clip Path.`}/>
 
       

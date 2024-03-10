@@ -3,10 +3,19 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./CubicBezier.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function CubicBezier() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto manejamos la curva de las animacion osea en las transisiones.`,
+        lenguage: "Css",
+        codigo: `transition-timing-function: cubic-bezier(0.4,0.23,0.36,0.1);`
+      },
+      {
+        mensaje: `Al final de los apuntes hay una herramienta para generar curbas.`
+      }]}/>
       <main>
         <h1>Cubic Bezier</h1>
         <Conseptos texto={`Esta es una propiedad que se trabaja en el "transition-timing-function" y el "animation-timing-function" esto nos sirve para cambiar la velociadad de las animaciones y transisiones que tiene el elemento a travez de curvas.

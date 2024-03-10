@@ -4,6 +4,7 @@ import Footer from "../../../../../componentes/menus/Footer";
 import "./filter.css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Filter() {
 
@@ -65,6 +66,17 @@ function Filter() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Filter pone filtros a las imagenes.`,
+        lenguage: "Css",
+        codigo: `filter: blur(5px); /*la imagen se desenfoca*/
+filter: brightness(2); /*ajusta el brollo de la imagen*/
+filter: contrast(1); /*ajusta el contraste de la imagen*/
+filter: drop-shadow(2px 5px 15px #000); /*da sombra a imagenes transparentes*/
+filter: grayscale(1); /*ajusta cuanto gris tendra la imagen*/
+filter: invert(50%); /*invierte los colores de una imagen*/
+filter: saturate(.5); /*la imagen se saturara sus colores*/`
+      }]}/>
       <main>
         <h1>filter</h1>
         <Conseptos texto={`Como bien dice el nombre esta propiedad nos permitira dar filtros a nuestros elementos html mayormente se notas mas en imagenes.

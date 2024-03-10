@@ -3,10 +3,21 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./variables.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function VariablesCss() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `las variables guardan estilos css para que los re usemos cuando queramos.`,
+        lenguage: "Css",
+        codigo: `:root{
+    --un-rojo: #f00; /*se crea una variable que guarda un color.*/
+}
+.elemento{
+    background-color: var(--un-rojo); /*el fondo se pone de color rojo*/
+}`
+      }]}/>
       <main>
         <h1>variables</h1>
         <Conseptos texto={`Las variables nos sirve para guardas estilos en css.`}/>

@@ -3,10 +3,16 @@ import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./linear.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Linear() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con "linear" hacemos gradientes a los elementos html.`,
+        lenguage: "Css",
+        codigo: `background: linear-gradient(0deg,#fff,#000);`
+      }]}/>
       <main>
         <h1>linear</h1>
         <Conseptos texto={`Esta propiedad nos permite dar gradientes a nuestros fondos por ejemplo arriba que sea azul y abajo que sea rojo.`}/>
