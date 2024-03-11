@@ -1,10 +1,25 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function EnlazarJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Para que javaScropt funcione se debe enlazar con html.`,
+        lenguage: "Html",
+        codigo: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>pagina con javaScript</title>
+  </head>
+  <body>
+    <script src="codigo.js"></script>
+  </body>
+</html>`
+      }]}/>
       <main>
         <h1>enlazar javaScript</h1>
         <Conseptos texto={`Para poder usar javaScript es necesario enlazar javaScript a html.

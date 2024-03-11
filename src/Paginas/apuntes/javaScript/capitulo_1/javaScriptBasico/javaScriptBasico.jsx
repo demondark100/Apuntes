@@ -1,10 +1,18 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function JavaScriptBasico() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estas funciones se usaran siempre para ver el resultado de nuestro codigo.`,
+        lenguage: "JavaScropt",
+        codigo: `// comentamos lineas con "//" , esto ignorara esa linea de codigo
+alert("hola mundo"); // mostrar algo en una ventana del navegador.
+console.log("hola mundo"); // mostrar algo en la consola del navegador.`
+      }]}/>
       <main>
         <h1>javaScript basico</h1>
         <h2>comentar codigo</h2>
