@@ -2,10 +2,18 @@ import { Link } from "react-router-dom";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function VariablesJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Las variables guardan cualquier tipo de datos para ser reusados cuando queramos.`,
+        lenguage: "JavaScropt",
+        codigo: `var saludo1 = "hola mundo"; // variable global que no respeta los bloques de codigo.
+let saludo2 = "hola mundo"; // variable que respeta los bloques de codigo
+const saludo3 = "hola mundo"; // variable que no puede cambiar su valor y respeta los bloques de codigo`
+      }]}/>
       <main>
         <h1>variables</h1>
         <Conseptos texto={`Aqui tenemos distintas formas de declarar variables no es solo poner.`}/>

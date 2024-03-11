@@ -1,10 +1,19 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ConcatenacionJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `La concatenacion une dos cadenas de texto , javaScript tiene dos formas de concatenar.`,
+        lenguage: "JavaScropt",
+        codigo: `let palabra = "mundo";
+// forma 1
+console.log("hola " + palabra); // hola mundo
+console.log(\`hola ${"${palabra}"}\`); // hola mundo`
+      }]}/>
       <main>
         <h1>Concatenacion</h1>
         <Conseptos texto={`En javaScript tenemos dos formas de concatenar las cadenas.`}/>

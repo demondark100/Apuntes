@@ -2,10 +2,25 @@ import Footer from "../../../../../componentes/menus/Footer";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function JavaScriptFun() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estas funciones nos facilitan muchas cosas al programar.`,
+        lenguage: "JavaScropt",
+        codigo: `console.log(typeof "string"); // muestra que tipo de dato es algun elemento
+console.log(typeof("string")); // muestra que tipo de dato es algun elemento
+console.log(parseInt("25")); // convierte una string que tiene numero a un numero entero
+console.log(isNaN("asd")); // comprueba si algun dato no es un numero
+console.log(isFinite("578")); // comprueba si algun dato es finito o no 
+
+// eval
+let exprecion = "*"
+let numero = eval(5 + exprecion + 5); // ejecuta una cadena de texto como si fuese codigo javaScript
+console.log(numero);`
+      }]}/>
       <main>
         <h1>funciones de javaScript</h1>
         <Conseptos texto={`Estas funciones son solo de javaScript que nos facilitaran mucho las cosas a la hora de trabajar con este lenguaje por ejemplo hay una funcion que nos sirve para saber si un dato es string , numero , etc y asi , Son muy utiles al momento de trabajar con el lenguaje. `}/>
@@ -15,7 +30,7 @@ function JavaScriptFun() {
 si es cadnena de texto es: "string".
 si es dato numerico es: "number".
 si es booleano es: "boolean"`}/>
-        <Sintaxis codigo={`tupode(valor/variable que queramos saber que tipo de dato es)`}/>
+        <Sintaxis codigo={`tipode(valor/variable que queramos saber que tipo de dato es)`}/>
         <JavaScropt codigo={`console.log(typeof("hola"));
 console.log(typeof(15));
 console.log(typeof(false));

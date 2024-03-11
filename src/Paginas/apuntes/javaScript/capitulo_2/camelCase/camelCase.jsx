@@ -1,10 +1,17 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function CamelCaseJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `"camelCase" es una forma muy comun de crear variables , esto sirve para poder nombrar y leer de forma mas sensilla a una variable.`,
+        lenguage: "JavaScropt",
+        codigo: `let camelCase;
+let unaPalabra;`
+      }]}/>
       <main>
         <h1>camelCase</h1>
         <Conseptos texto={`Para usar camelCase debemos empezar escribiendo con minuscula y se debe de reemplazar los espacios por mayusculas.`}/>

@@ -1,10 +1,28 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function OperadoresJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `JavaScript tiene varios operadores para que podamos programar.`,
+        lenguage: "JavaScropt",
+        codigo: `5 + 5 // sumar
+5 - 5 // restar
+5 * 5 // multiplicar
+5 / 5 // dividir
+5 % 5 // saca el resto
+5 == "5" // compara si un dato es igual a otro
+5 === 5 // compara si un dato es estrictamente igual a otro
+5 > 2 // compara si un dato es mayor a otro
+8 < 18 // compara si un dato es menor a otro
+8 >= 8 // compara si un dato es mayor o igual a otro
+8 <= 12 // compara si un dato es menor o igual a otro
+15 != "18" // compara si un dato es distinto a otro
+18 !== "18" // compara si un dato es estrictamente a otro`
+      }]}/>
       <main>
         <h1>Operadores</h1>
         <Conseptos texto={`Aqui tenemos los operadores matematicos de toda la vida.

@@ -1,10 +1,21 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function BloqueCJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Es una caja con un conjunto de instrucciones.`,
+        lenguage: "JavaScropt",
+        codigo: `// bloque principal
+let nombre = "Jorge";
+{
+  // bloque de codigo
+  let nombre = "Ricardo";
+}`
+      }]}/>
       <main>
         <h1>bloques de codigo</h1>
         <Conseptos texto={`Un bloque de código es un conjunto de instrucciones que se agrupan juntas. Puedes pensar en ellos como una caja o contenedor que contiene una serie de acciones relacionadas. En JavaScript, los bloques de código se definen mediante llaves "{}".`}/>

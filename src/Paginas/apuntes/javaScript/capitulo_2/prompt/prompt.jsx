@@ -2,10 +2,18 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function PromptLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto pedimos un dato al usuatio.`,
+        lenguage: "JavaScropt",
+        codigo: `let numero = prompt("dime un numero cualquiera."); // pedir dato al usuario
+// y guardar ese dato en una variable.
+console.log(numero);`
+      }]}/>
       <main>
         <h1>prompt</h1>
         <Conseptos texto={`Prompt es para pedir datos al usuario.`}/>
