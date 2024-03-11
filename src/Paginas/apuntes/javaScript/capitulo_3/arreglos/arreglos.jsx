@@ -1,10 +1,23 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ArreglosJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los arreglos pueden guardar varios datos cosa que una variable no puede.`,
+        lenguage: "JavaScropt",
+        codigo: `let frutas = ["manzana","sandia","pera","durazno","naranja","telefono"];
+console.log(frutas[0]) // manzana
+console.log(frutas[1]) // sandia
+console.log(frutas[2]) // pera
+console.log(frutas[3]) // durazno
+console.log(frutas[4]) // naranja
+frutas[4] = "granadilla";
+console.log(frutas[4]) // granadilla`
+      }]}/>
       <main>
         <h1>arreglos</h1>
         <Conseptos texto={`La sintaxis de los arreglos en este lenguaje no cambian en absolutamente nada a comparacion de la sintaxis de la logica , Lo unico diferente seria como declaramos la variable que guardara el arreglo.`}/>

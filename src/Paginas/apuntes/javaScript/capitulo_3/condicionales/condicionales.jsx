@@ -3,11 +3,25 @@ import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 
 function CondicionalesJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Una condicional sirve para tomar un camino u otro.`,
+        lenguage: "JavaScropt",
+        codigo: `let lenguaje = prompt("digita un lenguaje de programacion");
+lenguaje = lenguaje.toLowerCase();
+if(lenguaje === "javascript"){
+  alert("lenguaje usado mayormente en el desarrollo web.");
+} else if(lenguaje === "python"){
+  alert("lenguaje usado mayormente en el desarrollo backend o hacking.");
+} else {
+  alert("Este lenguaje no se encontro en nuestra base de datos");
+}`
+      }]}/>
       <main>
         <h1>Condicionales</h1>
         <Conseptos texto={`Las condicionales en este lenguaje tienen la siguiente sintaxis:

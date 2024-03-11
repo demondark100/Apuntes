@@ -3,10 +3,22 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function FuncionesJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Las funciones sirven para reutilizan un bloque de codigo cuantas veces queramos.`,
+        lenguage: "JavaScropt",
+        codigo: `function operaciones(operacion,n1,n2){
+  return eval(n1 + operacion + n2);
+}
+console.log(operaciones("+",5,5)); // 10
+console.log(operaciones("-",10,5)) // 5
+console.log(operaciones("*",10,5)) // 50
+console.log(operaciones("/",10,5)) // 2`
+      }]}/>
       <main>
         <h1>funciones</h1>
         <Conseptos texto={`En este lenguaje la sintaxis de las funciones cambian en:

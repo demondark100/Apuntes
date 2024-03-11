@@ -2,10 +2,26 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ArreglosAsJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los arreglos asociativos realmente son objetos en javaScript y tambien guarda varios datos pero son mas faciles de identificar.`,
+        lenguage: "JavaScropt",
+        codigo: `let anime = {
+  nombre: "black clover",
+  proyagonsta: "Asta",
+  meta: "ser el rey mago",
+  waifu: "Noelle Silva"
+};
+
+console.log(anime.nombre) // black clover
+console.log(anime["proyagonsta"]) // Asta
+anime.waifu = "Nero";
+console.log(anime.waifu); // Nero`
+      }]}/>
       <main>
         <h1>Arreglos asociativos</h1>
         <Conseptos texto={` Los "arreglos asociativos" en JavaScript se conocen como objetos. A diferencia de los arreglos normales, los objetos no tienen un orden específico osea que no es necesario "[0][1]" , En lugar de utilizar índices numéricos, utilizan claves/identificadores para acceder a los valores asociados. Aquí tienes un ejemplo en pseudocódigo y JavaScript para ilustrar cómo trabajar con objetos:`}/>

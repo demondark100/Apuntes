@@ -3,10 +3,47 @@ import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function BuclesJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los bucles sirven para hacer tareas repetitivas o recorrer arreglos , hay dos tipos de bucles.
+1. bucle para: Sabemos cuando terminara el bucle
+2. bucle mientras: No sabemos cuando terminara el bucle`,
+        lenguage: "JavaScropt",
+        codigo: `// bucle para
+for(let i = 0;i < 4;i++){
+  console.log(i); // 0 1 2 3
+};
+
+// bucle mientras
+let pregunta = prompt("¿Quien es el jefe del custacio cascaruto??");
+while(pregunta != "don cangrejo"){
+  alert("respuesta incorrecta");
+}
+
+let i = 0;
+while(i < 5){
+  i++;
+  console.log(i) // 1 2 3 4 5 
+};
+
+let nombres = [
+  "Emilia",
+  "Charlie",
+  "Lucy",
+  "Adam",
+  "Jorge"
+]
+for(let i in numbers){ // recorre automaticamente las posisiones de un arrego
+  console.log(i) // 0 1 2 3 4 
+}
+for(let i of numbers){ // recorre automaticamente el contenido de un arrego
+  console.log(i) // Emilia Charlie Lucy Adam Jorge
+}`
+      }]}/>
       <main>
         <h1>bucles</h1>
         <Conseptos texto={`En este lenguaje se cambia la sintaxis para poder usar los bucles.`}/>

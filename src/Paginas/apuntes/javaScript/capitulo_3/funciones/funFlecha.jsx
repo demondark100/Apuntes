@@ -3,10 +3,22 @@ import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function FunFlecha() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es otra forma de hacer funciones, se usa mucho.`,
+        lenguage: "JavaScropt",
+        codigo: `const operaciones=(operacion,n1,n2)=>{
+  return eval(n1 + operacion + n2)
+}
+console.log(operaciones("+",5,5)); // 10
+console.log(operaciones("-",10,5)) // 5
+console.log(operaciones("*",10,5)) // 50
+console.log(operaciones("/",10,5)) // 2`
+      }]}/>
       <main>
         <h1>funcion flecha</h1>
         <Conseptos texto={`La funcion flecha es para poder escribir codigo mas simple dentro de la funcion a parte de que su sintaxis no necesita de ninguna palabra clave como "function"`}/>
