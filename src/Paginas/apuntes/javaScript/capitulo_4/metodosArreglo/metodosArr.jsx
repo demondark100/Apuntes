@@ -1,10 +1,29 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function MetodosArrJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los metodos de arreglo nos ayudan el dia a dia en nuestro codigo.`,
+        lenguage: "JavaScropt",
+        codigo: `let num = [4,8,2,9];
+
+num.pop()  // [4,8,2] | quita el ultimo elemento de un arreglo.
+num.shift()  // [8,2,9] | quita el primer elemento de un arreglo.
+num.push(1); // [4,8,2,9,1] | agrega un elemento al final del arreglo.
+num.unshift(7); // [7,4,8,2,9] | agrega un elemento al inicio del arreglo.
+num.reverse(); // [9,2,8,4] | pone en reversa los elementos de un arreglo.
+num.splice(1,2,"new number") // [4,"new number",9] | elimina y reemplaza uno o varios elementos de un arreglo.
+num.sort(); // [2,4,8,9] | ordena los numeros de menor a mayor o las strings de a a la z.
+let num2 = num.slice(1,3); // [8,2] | crea un subarreglo.
+num.join(" - "); // "4 - 8 - 2 - 9" | convierte un arreglo en string y reemplaza las "," por la string que pasemos como parametro.
+num.forEach(i=>console.log(i)) // 4 8 2 9 | Recorre de forma automatica un arreglo.
+num.map(i=>{return i.toString()}) // ["4","8","2","9"] | mapea y da la posibilidad de modificar todos los elementos de un arreglo.`
+
+      }]}/>
       <main>
         <h1>Metodos de arreglos</h1>
         <Conseptos texto={`Al igual que los metodos de cadena los arreglos tambien tienen metodos que nos facilitaras muchas cosas.`}/>

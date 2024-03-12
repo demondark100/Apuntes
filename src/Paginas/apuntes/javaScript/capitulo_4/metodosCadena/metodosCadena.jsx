@@ -2,11 +2,32 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
-
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function MetodosCadenaJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Las cadenas de texto tienen metodos que nos serviran mucho para resolver distintos tipos de problemas.`,
+        lenguage: "JavaScropt",
+        codigo: `let cadena = "Hola mundo";
+cadena.startsWith("H"); // true | verifica si una cadena inicia con algun caracter o caracteres.
+cadena.endsWith("o"); // true | verifica si una cadena finaliza con algun caracter o caracteres. 
+cadena.includes("Hola"); // true | verifica si una cadena incluye algun caracter o caracteres. 
+cadena.indexOf("a"); // 3 | busca la posision de algun caracter o caracteres, el conteo inicia desde 0. 
+cadena.lastIndexOf("n"); // 7 | busca la ultima posision de algun caracter o caracteres , el conteo inicia desde 0. 
+cadena.padStart(12,"<<"); // <<Hola mundo | rellena texto al inicio.
+cadena.padEnd(12,">>"); // Hola mundo>> | rellena texto al final. 
+cadena.repeat(2); // Hola mundo Hola mundo | repite una cadena de texto. 
+cadena.split(" ") // ["Hola","mundo"] | separa una cadena de texto y la convierte en arreglo. 
+cadena.substring(5,10); // mundo | crea una subcadena. 
+cadena.toLowerCase(); // hola mundo | convierte todas las cadenas en minusculas.
+cadena.toUpperCase(); // HOLA MUNDO | convierte todas las cadenas en mayusculas.
+let number = 123;
+number.toString(); // "123" | convierte distintos tipos de dato en una cadena de texto.
+let espacios2 = " music ";
+espacios2.trim(); // "music" | quita los espacios del contado de una cadena de texto.`
+      }]}/>>
     <main>
       <h1>Metodos de cadena</h1>
       <Conseptos texto={`JavaScript cuenta con metodos de cadena para poder facilitar muchas tareas que podrian ser demasiado complicadas.`}/>

@@ -3,10 +3,49 @@ import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function PODJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es un paradicma de programacion.`,
+        lenguage: "JavaScropt",
+        codigo: `class Animal{
+  constructor(animal,color){
+    this.animal = animal;
+    this.color = color;
+  }
+}
+
+class Ave extends Animal{
+  constructor(animal,color,patas,sonido){
+    super(animal,color);
+    this.patas = patas;
+    this.sonido = sonido;
+  }
+  descripcionDetallada(){
+    console.log(\`El ave es ${"${this.animal}"}
+es de color ${"${this.color}"}
+tiene ${"${this.patas}"} patas
+y hace ${"${this.sonido}"}\`)
+  }
+  static descripcionGenera(){
+    console.log("Las aves tienen plumas y picos , la mayoria puede volar sin embargo otras al no poder volar pueden planear.")
+  }
+  set cambio(color){
+    this.color = color
+  }
+  get accederColor(){
+    return this.color
+  }
+}
+
+const ave = new Ave("Pato","blanco","2","cuac");
+Ave.descripcionGenera()
+ave.color = "negro"
+ave.descripcionDetallada()`
+      }]}/>
       <main>
         <h1>programacion orientada a objetos(POD)</h1>
         <Conseptos texto={`En este lenguaje la sintaxis de POD cambia en esto:
