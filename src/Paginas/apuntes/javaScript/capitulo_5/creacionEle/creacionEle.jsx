@@ -2,10 +2,17 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function CreacionEleJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto crearemos elementos html desde javaScript.`,
+        lenguage: "JavaScropt",
+        codigo: `const parrafo = document.createElement("P"); // crea un elemento html.
+const fragmento = document.createDocumentFragment(); // crea un fragmento y evita que la pagina se renderice desde 0 varias veces.`
+      }]}/>
       <main>
         <h1>creacion de elementos</h1>
         <Conseptos texto={`Nosotros podemos crear elementos html desde javaScript aqui veremos como se hace.`}/>

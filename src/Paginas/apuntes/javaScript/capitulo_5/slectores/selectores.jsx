@@ -2,10 +2,20 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function SelectoresDOMJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto seleccionaremos los elementos html para trabjar con ellos de forma dinamica.`,
+        lenguage: `JavaScropt`,
+        codigo: `const id1 = document.getElementById("id1"); // seleccionar por id.
+const parrafos = document.getElementsByTagName("p"); // selecciona varios elementos de un tipo en este caso todos los <p>
+const idQuery = document.querySelector("#idQuery"); // selecciona un elemento por clase o id
+const claseQuery = document.querySelector(".claseQuery"); // selecciona un elemento por clase o id
+const parrafos = document.querySelectorAll(".parrafos"); // selecciona varios elementos por clase, y se crea un arreglo.`
+      }]}/>
       <main>
         <h1>selectores de elementos</h1>
         <Conseptos texto={`Los selectores nos permitira seleccionar cualquier elemento o grupo de elementos de HTML con elementos me refiero a las cajitas.`}/>

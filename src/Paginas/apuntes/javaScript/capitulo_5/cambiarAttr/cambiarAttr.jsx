@@ -2,10 +2,19 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function CambiarAttrJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los atributos nos permiten modificar elementos html, la mayoria se usan en <input />.`,
+        lenguage: "JavaScropt",
+        codigo: `const input = document.getElementById("input");
+input.setAttribute("type","color"); // cambia el atributo de algun elemento.
+input.getAttribute("type"); // true | verifica si un atributo existe en algun elemento html.
+input.removeAttribute("type"); // remueve/elimina el atributo de algun elemento html.`
+      }]}/>
       <main>
         <h1>atributos</h1>
         <Conseptos texto={`Esto nos servira mas que nada en los inputs ya que estos llevan mas atributos pero como bien dije se pueden cambiar todo tipo de atributos por ejemplos los de imagenes , audio , parrafos , etc..`}/>

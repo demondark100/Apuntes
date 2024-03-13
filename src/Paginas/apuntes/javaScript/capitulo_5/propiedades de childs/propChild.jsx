@@ -3,11 +3,19 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 
 function PropChildJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estas propiedades modifican los elementos hijos de algun elemento html.`,
+        lenguage: "JavaScropt",
+        codigo: `content.replaceChild(new_element,old_element); // reemplaza un elemento hijo de un contenedor.
+content.removeChild(element); // quita el elemento hijo de algun contenedor.
+content.hasChildNodes(); // comprueba si un contenedor tiene elementos hijos.`
+      }]}/>
       <main>
         <h1>propiedades de childs</h1>
         <h2>replaceChild</h2>

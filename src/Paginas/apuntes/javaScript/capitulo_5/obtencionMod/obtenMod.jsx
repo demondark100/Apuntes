@@ -2,10 +2,21 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ObtenModJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Aqui podemos modificar el contenido de algun elemento html.`,
+        lenguage: "JavaScropt",
+        codigo: `const content = document.querySelector(".content");
+content.textContent; // obtiene el contenido de un elemento html.
+content.textContent = "hola"; // modifica el contenido de un elemento html.
+content.innerHTML; // hola <b>mundo</b> | muestra el contenido y las etiquetas que estan dentro de un contenedor.
+content.innerHTML = \`hola <i>mundo</i>\`; // modifica el contenido y los elementos html dentro de un contenedor.
+content.outerHTML; // muestra el contenedor y todo su contenido.`
+      }]}/>
       <main>
         <h1>obtencion y modificacion de contenido</h1>
         <Conseptos texto={`Con esto podremos modificar y ver el contenido de los elementos html.`}/>
@@ -44,7 +55,7 @@ htmlin.innerHTML;
 </p> `}/>
         
         <JavaScropt codigo={`const todo = document.querySelector(".todo"); 
-xd.outerHTML; 
+todo.outerHTML; 
 //resultado: "<p class="todo"> hola <b> mundo </b> /p>"`}/>
         <Conseptos texto={`outerHTML nos mostrara todo el elemento html.`}/>
       </main>

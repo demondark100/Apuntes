@@ -2,13 +2,23 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function AtributosGlobalesJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estos atributos van en todos los elementos html o en casi todos y se pueden editar como queramos.`,
+        lenguage: "JavaScropt",
+        codigo: `editarContenido.setAttribute("contentEditable","true"); // El usuario podra modificar un elemento HTML.
+dir_1.setAttribute("dir","rtl"); // poner el texto de derecha a izquierda.
+dir_2.setAttribute("dir","ltr"); // poner el texto de izquierda a derecha.
+mostrar.removeAttribute("hidden"); // remueve el atributo "hidden" el cual se encarga de ocultar un elemento html.
+titulo.setAttribute("title","hola mundo"); // cambia el titulo de un elemento html al pasar el cursor sobre ese elemento.`
+      }]}/>
       <main>
         <h1>atributos globales</h1>
-        <Conseptos texto={`Estos atributos se pueden poner en cualquier HTML esto debi de enseñarlo en html pero me dio flokera tenemos.`}/>
+        <Conseptos texto={`Estos atributos se pueden poner en cualquier elemento HTML.`}/>
         <h2>atributos globales.</h2>
         <Html codigo={`<p contentEditable="true">esto se puede cambiar</p>
 

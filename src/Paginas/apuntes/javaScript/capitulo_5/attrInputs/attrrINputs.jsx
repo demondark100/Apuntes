@@ -3,6 +3,7 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import { useRef } from "react";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function AtributosInputsJs() {
   const colorStyle = useRef();
@@ -18,6 +19,19 @@ function AtributosInputsJs() {
   }
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estos atributos solo se aplican para los inputs.`,
+        lenguage: "JavaScropt",
+        codigo: `const input = document.getElementById("input");
+input.placeholder = "nombre"; // modifica el placeholder de un input.
+input.type = "password"; // modifica el tipo de dato que recibira el input.
+input.value = "Music"; // modifica o asigna un valor por defecto al input.
+
+// este es un atributo global, se puede usar en todos los elementos html.
+
+input.style.backgroundColor = "#000"; // asigna un fondo negro a un input.
+input.style.color = "#fff"; // asigna un color al input`
+      }]}/>
       <main>
         <h1>atributos de inputs</h1>
         <Conseptos texto={`Los atributos de los inputs a diferencia de los atrbutos por elementos estos no necesitan de:`}/>

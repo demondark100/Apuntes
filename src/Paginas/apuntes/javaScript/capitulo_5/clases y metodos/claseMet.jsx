@@ -2,10 +2,22 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ClasesMetJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto podremos trabajar con las clases de los elementos, es muy usado en conjunto con css para dar estilos dinamicos con javaScrip.`,
+        lenguage: "JavaScropt",
+        codigo: `const div = document.quierySelector(".div");
+div.classList.add("content"); // agregar una clase.
+div.classList.remove("content"); // elimina una clase.
+div.classList.item(0); // devuelve el indice de alguna clase , es como llamar la posision de un array.
+div.classList.contains("div"); // verifica si incluye una clase o no.
+div.classList.replace("div","content"); // reemplaza una clase por otra.
+div.classList.toggle("div"); // si tiene la clase que indicamos la elimina pero si no la tiene la agrega.`
+      }]}/>
       <main>
         <h1>clases y metodos</h1>
         <Conseptos texto={`Todo esto nos servira segun el contexto en el que estemos en nuestro codigo.`}/>

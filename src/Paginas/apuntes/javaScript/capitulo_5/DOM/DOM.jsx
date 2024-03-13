@@ -1,10 +1,14 @@
 import MensajeModal from "../../../../../componentes/MensajeModal/mensajeModal";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function DOMJavaScript() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con el DOM vamos a interactuar con los elementos html y hacer paginas web dinamicas con varias funcionalidades.`
+      }]}/>
       <MensajeModal texto={`Para trabajar con (Document Object Model/DOM) se necesita de forma obligatoria html y css.`}/>
       <main>
         <h1>DOM</h1>

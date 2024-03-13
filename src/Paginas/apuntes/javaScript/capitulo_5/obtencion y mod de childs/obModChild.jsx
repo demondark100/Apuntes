@@ -3,10 +3,35 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function ObModChildJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto podremos modificar , agregar elementos hijos al contenedor`,
+        lenguage: "JavaScropt",
+        codigo: `content.appendChild(elemento); // agrega un elemento hijo a un contenedor.
+content.firstElementChild; // obtiene el primer elemento hijo de un contenedor.
+content.lastElementChild; // obtiene el ultimo elemento hijo de un contenedor.
+content.children[1] // devuelve el elemento hijo que indiquemos, es como un arrey.`
+      },
+      {
+        mensaje: `Ahora veremos su utilidad, ya que con esto podemos agregar elementos de forma dinamica.`
+      },
+      {
+        lenguage: "Html",
+        codigo: `<div class="contenedor"></div>`
+      },
+      {
+        lenguage: `JavaScropt`,
+        codigo: `const content = document.querySelector(".contenedor");
+const fragmento = document.createDocumentFragment();
+const parrafo = document.creatElement("P");
+parrafo.textContent = "hola mundo";
+fragmento.appendChild(parrafo);
+content.appendChild(fragmento);`
+      }]}/>
       <main>
         <h1>obtencion de childs</h1>
         <h2>appendChild</h2>
