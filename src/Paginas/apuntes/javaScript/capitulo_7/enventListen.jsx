@@ -4,6 +4,7 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import { useState } from "react";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 
@@ -21,6 +22,25 @@ function EventListenJs() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto el usuario interactuara con los elementos html.`,
+        lenguage: "JavaScropt",
+        codigo: `const boton = document.querySelector(".boton");
+boton.addEventListener("click",()=>{
+  alert("hola");
+})`
+      },
+      {
+        mensaje: `Tambien hay otra forma de usar los eventos.`,
+        lenguage: "JavaScropt",
+        codigo: `const boton = document.querySelector(".boton"); 
+boton.addEventListener("click",saludo);
+
+function saludo(){ 
+  alert("hola");
+  boton.removeEventListener("click",saludo) // quitar el evento cuando se ejecute una vez
+}`
+      }]}/>
       <main>
         <h1>eventos de escucha</h1>
         <Conseptos texto={`Los eventos de escucha sirven para poder interactuar con los elementos html con esto me refiero a darles funcionalidad ejemplo.`}/>

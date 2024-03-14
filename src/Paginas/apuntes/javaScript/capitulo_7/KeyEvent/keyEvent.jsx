@@ -3,10 +3,21 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./keyEvent.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function KeyEventJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estos eventos se ejecutaran con el teclado.`,
+        lenguage: "JavaScropt",
+        codigo: `const input = document.getElementById("input");
+input.addEventListener("keydown",saludo); // cuando se aprete una tecla se ejecutara una funcion.
+input.addEventListener("keypress",saludo); // cuando se precione y se suelte una tecla se ejecutara una funcion.
+input.addEventListener("keyup",saludo); // cuando se suelte una tecla se ejecutara una funcion.
+
+function saludo(){console.log("hola")};`
+      }]}/>
       <main>
         <h1>eventos de teclado</h1>
         <h2>keydown</h2>

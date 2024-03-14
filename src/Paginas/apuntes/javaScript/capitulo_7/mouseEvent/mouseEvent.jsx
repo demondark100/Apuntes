@@ -3,10 +3,26 @@ import Html from "../../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./mouseEvent.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function MouseEventJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con eventos de mouse ejecutaran funciones segun las acciones que haga el usuario con el mouse.`,
+        lenguage: "JavaScropt",
+        codigo: `const boton = document.getElementById("boton");
+boton.addEventListener("click",saludo); // cuando se haga click se ejecutara una funcion.
+boton.addEventListener("dblclick",saludo); // cuando se haga doble click se ejecutara una funcion.
+boton.addEventListener("mouseover",saludo); // cuando el mouse pase sobre el elemento html se ejecutara una funcion.
+boton.addEventListener("mouseout",saludo); // cuando el mouse salga de un elemento html se ejecutara una funcion.
+boton.addEventListener("contextmenu",saludo); // cuando se haga click derecho se ejecutara una funcion.
+boton.addEventListener("mouseup",saludo); // cuando se haga click y se suelte el click dento del elemento html se ejecutara una funcion.
+boton.addEventListener("mousemove",saludo); // cuando se mueva el mouse dentro del elemento html se ejecutara una funcion.
+
+
+function saludo(){console.log("hola")};`
+      }]}/>
       <main>
         <h1>mouse events</h1>
         <h2>sintaxis</h2>

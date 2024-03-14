@@ -2,6 +2,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function TimersJs() {
   const mostrar=()=>{
@@ -11,6 +12,19 @@ function TimersJs() {
   }
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Cuando pase sierto tiempo alguna funcion se ejecutara.`,
+        lenguage: "JavaScropt",
+        codigo: `setTimeout(saludo,2000,"Juan"); // la funcion se ejecutara dentro de 2 segundos.
+setTimeout(()=>console.log("hola"),3000); // la funcion se ejecutara dentro de 2 segundos.
+clearTimeout(saludar); // detiene un eventos antes que se ejecute.
+let intervalo = setInterval(saludar,2000,Melisa"); // se ejecutara una funcion de forma infinata cada 2 segundos.
+clearInterval(intervalo); // detiene la ejecucion de setInterval.
+
+function saludar(name){
+  console.log(\`hola ${"${name}"}\`);
+}`
+      }]}/>
       <main>
         <h1>timers</h1>
         <Conseptos texto={`Los timers nos sirve para ejecutar una funcion en un tiempo determinado , Nosotros podemos decidir en que mmomento se ejecutara la funcion.

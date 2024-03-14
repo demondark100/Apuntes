@@ -3,6 +3,7 @@ import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import { useRef } from "react";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function InterEventJs() {
 
@@ -17,6 +18,25 @@ function InterEventJs() {
   }
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Estos eventos se usan para la interfaz.`,
+        lenguage: "JavaScropt",
+        codigo: `const interfazElement = document.getElementById("interfaz");
+interfazElement.addEventListener("error",interfaz); // se ejecuta cuando surja un error, por ejemplo fallo en carga de imagen.
+window.addEventListener("load",interfaz); // cuando la web cargue por completo se ejecutara una funcion.
+addEventListener("resize",interfaz); // cuando la resolcuon cambie se ejecutara una funcion.
+interfazElement.addEventListener("scroll",interfaz); // cuando se haga scroll en algun elemento html.
+
+function interfaz(){console.log("eventos de la interfaz")};`
+      },
+      {
+        mensaje: `"select" es para ver que selecciono el usuario, en este caso sera en un input.`,
+        lenguage: "JavaScropt",
+        codigo: `seleccion.addEventListener("select",(e)=>{
+  console.log(e.target.selectionStart); // ver el inicio de seleccion del usuario.
+  console.log(e.target.selectionEnd); // ver el final de seleccion del usuario.
+})`
+      }]}/>
       <main>
         <h1>eventos de la interfaz</h1>
         <h2>error</h2>
