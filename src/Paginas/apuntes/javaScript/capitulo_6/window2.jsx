@@ -2,11 +2,24 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 function Window2Js() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Ahora manejaremos la pantalla con window.`,
+        lenguage: "JavaScropt",
+        codigo: `window.screen; // ver las propiedades de la pantalla.
+window.screenLeft; // da la distancia entre el monitor y la web desde la izquierda.
+window.screenTop; // da la distancia entre el monitor y la web desde arriba.
+window.scrollY; // cuanta distancia nos desplazamos desde arriba a abajo.
+window.scrollX; // ver cuanto nos desplazamos de derecha a izquierda.
+window.scroll(50,10); // desplazar la pantalla.
+window.innerWidth; // ver ancho de la pantalla.
+window,innerHeight; // ver alto de la pantalla.`
+      }]}/>
       <main>
         <h1>window 2</h1>
         <h2>sintaxis</h2>

@@ -2,11 +2,20 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
-
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function Window1Js() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `En esta seccion aprenderemos a manejar los links con window.`,
+        lenguage: "JavaScropt",
+        codigo: `window.open("https://youtube.com"); // abre un link a otra pagina.
+window.close("https://youtube.com"); // cierra la pagina web antes que cargue.
+window.closed("https://youtube.com"); // verifica si la ventana que cerramos se cerro o no.
+window.stop("https://youtube.com"); // detiene la carga de alguna pagina web.
+`
+      }]}/>
       <main>
         <h1>window 1</h1>
         
