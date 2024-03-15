@@ -2,10 +2,24 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function PromesasJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto manejaremos funciones asincronas y errores.`,
+        lenguage: "JavaScropt",
+        codigo: `let music = prompt("introduce una musica");
+const promesa = new Promise((resolve,reject)=>{
+  if(music == "Make you mine"){ 
+    resolve("esta musica es muy buena"); // resuelve la promesa, es obligatorio poner resolve.
+  } else{
+    reject("no conozco esta musica lo siento"); // rechaza la promesa.
+  }
+}).then(mostrar=>{console.log(mostrar); // muestra la promesa resuelta.
+}).catch(error=>{console.log(error)}); // muestra la promesa rechazada.`
+      }]}/>
       <main>
         <h1>promesas</h1>
         <Conseptos texto={`Las promesas nos sirven para manejar errores de forma mas sensillas y tambien para manejar tareas asincronas que veremos mas adelante.

@@ -1,10 +1,23 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function CallbacksJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Llaman a una funcion dentro de otra.`,
+        lenguage: "JavaScropt",
+        codigo: `function music(cb) {
+  cb("Devil eyes");
+}
+       
+function llamar(nombre){
+  console.log(nombre)
+}
+music(llamar)`
+      }]}/>
       <main>
         <h1>callbacks</h1>
         <Conseptos texto={`Los callbacks sirven para llamar a otra funcion dentro de una funcion.`}/>

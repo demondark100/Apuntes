@@ -2,12 +2,23 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function AwaitAsyncJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto volveremos asincrona una funcion sincrona.`,
+        lenguage: "JavaScropt",
+        codigo: `async function mostrar_1(){
+  await obtenerResultado();
+}
+const mostrar_2=async()=>{
+  await obtenerResultado();
+}`
+      }]}/>
       <main>
-        <h1>await y async</h1>
+        <h1>async await</h1>
         <Conseptos texto={`Un poco de contexto:
 No siempre recibimos una respuesta rapida de los servidores por eso es que llegaron await y async para solucionar esto ejemplo del problema que trae no usar await y async.
 

@@ -2,10 +2,23 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ManErrJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Ahora manejaremos errores que nosotros esperamos que puedan pasar manejarlos.`,
+        lenguage: "JavaScropt",
+        codigo: `try{
+  alert(saludo); // la variable saludo no existe.
+  throw "error en la aplicacion." // ejecuta un error por defecto.
+} catch(error){
+  console.log(error); // muestra el error.
+} finally {
+  console.log("manejp"); // siempre me ejecutare haya o no errores.
+}`
+      }]}/>
       <main>
         <h1>Manejo de errores</h1>
         <h2>try catch</h2>
