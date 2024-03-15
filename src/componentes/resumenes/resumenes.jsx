@@ -13,7 +13,7 @@ import Txt from "../lenguajes/Txt";
 import ReactCode from "../lenguajes/React";
 import Python from "../lenguajes/Python";
 import Sintaxis from "../lenguajes/Sintaxis";
-
+import Json from "../lenguajes/Json";
 
 function Resumenes({
   contenido
@@ -28,7 +28,8 @@ function Resumenes({
     Txt: Txt,
     ReactCode: ReactCode,
     Python: Python,
-    Sintaxis: Sintaxis
+    Sintaxis: Sintaxis,
+    Json: Json
   }
 
   return (  
