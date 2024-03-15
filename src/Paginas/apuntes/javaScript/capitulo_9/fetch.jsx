@@ -3,10 +3,31 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/txt";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function FetchJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `De esta manera podemos hacer peticiones con menos codigo.`,
+        lenguage: "JavaScropt",
+        codigo: `// leer datos de una api
+fetch("https://reqres.in/api/users/2") 
+  .then(res=>res.json())
+  .then(res=>console.log(res))
+
+// Enviar datos a una api
+fetch("https://reqres.in/api/users/2",{ 
+  method: "POST",
+    body: JSON.stringify({ 
+    musica": "molinos de viento",
+    "genero": "rock"
+  }), 
+  headers: {"Content-type" : "application/json"} 
+})
+.then(res=>res.json())
+.then(res=>console.log(res))`
+      }]}/>
       <main>
         <h1>fetch</h1>
         <Conseptos texto={`Con "fetch" podemos trabajar de forma mas sensilla y con menos codigo que "ajax".

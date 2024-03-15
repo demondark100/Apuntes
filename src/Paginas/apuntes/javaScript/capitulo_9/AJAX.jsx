@@ -3,10 +3,31 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/txt";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function AjaxJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto haremos peticiones a servidores, aunque usar "AJAX" es demasiado codigo para hacer una peticion y hay mejores opciones.`,
+        lenguage: "JavaScropt",
+        codigo: `let peticion = new XMLHttpRequest 
+peticion.addEventListener("load",()=>{ 
+  let trabajar;
+  if(peticion.status == 200 ||
+    peticion.status == 201) trabajar = peticion.response
+  else trabajar = "no se encontro la peticion"
+  console.log(JSON.parse(trabajar))
+}) 
+peticion.open("POST","https://reqres.in/api/users") 
+peticion.setRequestHeader("Content-type","application/json;charset=UTF8") 
+
+
+peticion.send(JSON.stringify({ 
+  "name": "no se",
+  "lastname": "tampoco se"
+}))`
+      }]}/>
       <main>
         <h1>AJAX</h1>
         <Conseptos texto={`Para esto abriremos un archivo ".txt" y un servidor local usando: {xampp} o ("Live Server" extencion de vscode) esto para poder enviar y recibir peticiones y ademas porque es compatible con una gran cantidad de sistemas operativos.`}

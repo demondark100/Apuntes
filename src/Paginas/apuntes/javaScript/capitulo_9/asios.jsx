@@ -2,10 +2,36 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function AxiosJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `"Axios" es una libreria que facilita aun mas el codigo.`,
+        lenguage: "Html",
+        codigo: `<head>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>`
+      },
+      {
+        lenguage: `JavaScropt`,
+        codigo: `// leer datos de una api
+axios("https://reqres.in/api/users/2")
+  .then(res=>console.log(res))
+
+
+// Enviar datos a una api
+axios("https://reqres.in/api/users/2",{ 
+  method: "post",
+  data: {
+    "music": "A Sky Full of Stars",
+    "artista": "Coldplay"
+  }
+}) 
+  .then(res=>console.log(res))
+`
+      }]}/>
       <main>
         <h1>Axios</h1>
         <Conseptos texto={`Axios es una libreria que nos facilita mas el uso de "ajax" y "fetch".
