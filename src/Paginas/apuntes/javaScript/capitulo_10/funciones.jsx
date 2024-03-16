@@ -2,10 +2,34 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function FuncionesPart2Js() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Ahora caracteristicas extra de las funciones.`,
+        lenguage: `JavaScropt`,
+        codigo: `// retornar valor
+const funcion1=()=>{"valor"} // para retornar solo un valor no es necesario el cuerpo "{}".
+const funcion2=()=>"valor" // solo se retornara un valor sin necesidad del cuerpo.
+console.log(funcion1,funcion2); // undefined , "valor"
+
+// no uses funciones flecha como algun metodo de objeto.
+const objeto=()=>{
+  nombre: "Michael",
+  mostrar: ()=>{
+    console.log(\`el nombre es ${"${this.nombre}"}\`); // el nombre es undefined  
+  }
+}
+// si deseas usar una funcion como algun metodo usa "function".
+const objeto=()=>{
+  nombre: "Michael",
+  mostrar: function()=>{
+    console.log(\`el nombre es ${"${this.nombre}"}\`); // el nombre es Michael  
+  }
+  }`
+      }]}/>
       <main>
         <h1>funciones parte 2 (la venganza :v)</h1>
         <h2>funcion flecha</h2>

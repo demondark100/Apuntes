@@ -2,10 +2,22 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ParamRestJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con los "parametros rest" podemos recibir varios parametros.`,
+        lenguage: "JavaScropt",
+        codigo: `const multiplicar=(multiplo,...arr)=>{
+  for(let i in arr){
+    console.log(multiplo * arr[i])
+  }
+}
+
+multiplicar(5,5,13,58,47,5)`
+      }]}/>
       <main>
         <h1>parametro rest</h1>
         <Conseptos texto={`Los parametros rest son parametros que son indefinidos los cuales se convertiran en arreglos.`}/>

@@ -1,10 +1,20 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function OpeTernaJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto resumiremos una validacion muy sencilla, es muy usada con react.`,
+        lenguage: "JavaScropt",
+        codigo: `let fruta = "naranja";
+fruta == "naranja" ?
+  console.log("es una naranja");
+  : 
+  console.log("no es una rananja");`
+      }]}/>
       <main>
         <h1>Operador ternario</h1>
         <Conseptos texto={`El operador ternario mejora el if y obtimiza el codigo , es recomendable usarlo solo cuando se hara un "si" y "sino" aqui no existe "sino si".`}/>
@@ -17,8 +27,8 @@ else console.log("no es una naranja")
         <JavaScropt codigo={`let fruta = "naranja";
 (fruta == "naranja")
     ?
-      console.log("es una naranja")
-    : console.log("no es una rananja`}/>
+      console.log("es una naranja");
+    : console.log("no es una rananja");`}/>
         <Conseptos texto={`Si queremos hacer mas de una cosa o afirmacion se debe poner entre parentesis.`}/>
         <h2>ejemplo</h2>
         <JavaScropt codigo={`let fruta = "naranja";

@@ -1,10 +1,19 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function OpeSpread() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto desestructura un arreglo.`,
+        lenguage: "JavaScropt",
+        codigo: `let arr1 = ["manzana","pera","naranja"];
+let arr2 = ["sandia","melon","fresa"];
+let arr3 = [...arr1,...arr2]
+console.log(arr3)`
+      }]}/>
       <main>
         <h1>Operador spread</h1>
         <h2>sin operador spread</h2>

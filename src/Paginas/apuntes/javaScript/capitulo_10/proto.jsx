@@ -2,10 +2,17 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ProtoJs() {
-  return (  
+  return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Todo en javaScript son prototipos por ejempllo una variable que contiene una string o cualquier otro tipo de dato.`,
+        lenguage: "JavaScropt",
+        codigo: `let string = "cadena";
+console.log(string.__proto__); // muestra los metodos de cadena ya que ese es su prototipo y asi con todos los tipos de datos.`
+      }]}/>
       <main>
         <h1>protopipos</h1>
         <Conseptos texto={`Todo en javaScript es un objeto por ejemplo una cadena de texto o nunmero.`}/>

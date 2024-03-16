@@ -2,10 +2,17 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function StrictModJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto evita que se use la sintaxis de Em 5 abajo y solo permite la sintaxis moderna.`,
+        lenguage: "JavaScropt",
+        codigo: `"use strict";
+// todo el codigo con sintaxis moderna.`
+      }]}/>
       <main>
         <h1>Strict Mode</h1>
         <h2>teorico</h2>
