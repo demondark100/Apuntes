@@ -1,10 +1,17 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function GeolocalizationJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto trabajaremos con la ubicacion del usuario.`,
+        lenguage: "JavaScropt",
+        codigo: `const geolocatio = navigator.geolocation; // variable que guarda las funciones de la api.
+// En este caso es mejor leer todo el contenido ya que no ayudara nada un resumen.`
+      }]}/>
       <main>
         <h1>Geolocalization</h1>
         <Conseptos texto={`Con esta api podremos trabajar con la ubicacion del usuario para poder hacer aplicaciones que necesiten de la ubicacion del usuario.`}/>

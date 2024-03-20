@@ -1,10 +1,24 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ObjDateJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto vamos obtener datos como la fecha y hora actuales, es una api nativa de javaScript.`,
+        lenguage: "JavaScropt",
+        codigo: `let fecha = new Date(); // acceder al uso de la api.
+fecha.getDate(); // Esto nos dara el dia del mes en el que etamos.
+fecha.getDay(); // dira el dia de la semana inicia desde el domingo.
+fecha.getMonth(); // Esto devuelve el mes en el que estamos.
+fecha.getYear(); // Devuelve el año en el que estamos pero restado por 1900 algo raro. 
+fecha.getFullYear(); // Devuelve el año preciso en el que estamos.
+fecha.getHours(); // Esto nos devuelve la hora en la que estamos.
+fecha.getMinutes(); // Nos devuelve el minuto en el que estamos.
+fecha.getSeconds(); // nos devuelve el segundo en el que estamos.`
+      }]}/>
       <main>
         <h1>objeto Date</h1>
         <Conseptos texto={`Esto es una api de javaScript para mostrar la hora y fecha.`}/>

@@ -2,10 +2,38 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function CookiesJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Guarda la informacion del usuario en el navegador.`,
+        lenguage: "JavaScropt",
+        codigo: `const newFechaUTC = dias =>{
+  let fecha = new Date();
+  fecha.setTime(fecha.getTime() + dias*1000*60*60*24);
+  return fecha.toUTCString();
+}
+const crearCookie = (nombre,dias) =>{
+  let expires = newFechaUTC(dias);
+  document.cookie = \`${"${nombre}"};expires=${"${expires}"}\`;
+}
+
+crearCookie("user_cookie",4)
+
+const obtenerCokkie = cookiesName =>{
+  let cookies = document.cookie;
+  cookies = cookies.split(";");
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i].trim();
+    if (cookie.startsWith(cookiesName)) {
+      return cookie.split("=")[0]
+    }
+  }
+  return "no hay cookies";
+}`
+      }]}/>
       <main>
         <h1>Cookies</h1>
         <Conseptos texto={`Las "Cookies" se encargan de guardar informacion del ususario en el navegador.`}/>

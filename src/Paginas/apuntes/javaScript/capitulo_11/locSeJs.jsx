@@ -1,10 +1,29 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function LocSeJs() {
-  return (  
+  return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Pepasaurio`,
+        lenguage: "JavaScropt",
+        codigo: ``
+      }]}/>
+      <Resumenes contenido={[{
+        mensaje: `Con esta api guardaremos datos de forma local.`,
+        lenguage: "JavaScropt",
+        codigo: `localStorage.setItem("valor1","local"); // crear una variable local.
+let local = localStorage.getItem("valor1"); // accede y guarda el dato que se guardo de forma local.
+localStorage.removeItem("valor1"); // Eliminar una variable local.
+localStorage.clear(); // Elimina todos los datos de forma local.
+
+// sessionStorage
+sessionStorage.setItem("valor2","local"); // crear una variable que no se guarda de forma local.
+let valor2 = sessionStorage.getItem("valor2"); // accede a la valor de sessionStorage
+sessionStorage.removeItem("valor2"); // Eliminar una variable de sessionStorage`
+      }]}/>
       <main>
         <h1>LocalStorage y SessionStorage</h1>
         <Conseptos texto={`Esta api se encarga de guardar la informacion de la pagina web.`}/>

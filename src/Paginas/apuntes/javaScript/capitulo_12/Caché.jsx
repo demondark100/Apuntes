@@ -1,16 +1,42 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
+
 
 function CacheJs() {
+  caches.open("estatico").then(cache=>{
+    cache.add("cache.html")
+    console.log(cache)
+  })
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto almacena informa informacion que ya ha sido solicitada con anterioridad.`,
+        lenguage: "JavaScropt",
+        codigo: `caches.open("estatico").then(cache=>{
+  // cache.add("archivo1.html"); // agregar solo un archivo.
+  cache.addAll(["archivo1.html","archivo2.css"]); // agregar varios archivos. 
+  cache.match("archivo1.html").then(res=>{ // devuelve una promesa.
+    console.log(res);
+  })
+  fetch("archivo1.html").then(res =>{
+    cache.put("archivo1.html",res); // envia una solicitud
+    // parametro 1: la url
+    // parameto 2: res 
+  })
+  cache.keys().then(res=>{
+    console.log(res) // nos devuelve una promesa de todos los archivos que se agregaron al cache.
+  })
+  cache.delete("archivo1.html"); // elimina un archivo del cache
+})`
+      }]}/>
       <main>
         <h1>Caché</h1>
-        <Conseptos texto={`El cache almacena informacion que ya solicitamos de forma cotidiana/normalmente lo ciañ hace que el usuario tenga que esperar menos por entrar al sitio web.`}/>
+        <Conseptos texto={`El cache almacena informacion que ya solicitamos de forma cotidiana/normalmente lo cual hace que el usuario tenga que esperar menos por entrar al sitio web.`}/>
         <h2>open</h2>
         <Conseptos texto={`Se acuerdan de indexedDB bueno el Caché es similar con el metodo open ya que abrira el archivo si ya es existente y si no existe lo creara en este caso crearemos un archivo llamado "archivo estatico".`}/>
-        <JavaScropt codigo={`    // el cache se trabaja con promesas asi esque tenemos que usar then de esta manera.
+        <JavaScropt codigo={`// el cache se trabaja con promesas asi esque tenemos que usar then de esta manera.
 caches.open("archivo estatico").then(Cache=>{
     console.log(Cache)
 })`}/>

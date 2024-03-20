@@ -4,7 +4,7 @@ import Footer from "../../../../componentes/menus/Footer";
 import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function OpeSpread() {
-  return (  
+  return (
     <>
       <Resumenes contenido={[{
         mensaje: `Esto desestructura un arreglo.`,

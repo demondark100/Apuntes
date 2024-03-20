@@ -1,10 +1,22 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function HistoryAPIJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esta api manejaremos el historial de navegacion.`,
+        lenguage: "JavaScropt",
+        codigo: `history.back(); // ir a una pagina atras.
+history.forward(); // ir a una pagina mas adelante.
+history.length(); // ver el tamaño del historial.
+history.go(); // recargar una pagina.
+history.go(-1); // recargar una pagina anterior.
+history.go(1); // recargar una pagina despues.
+`
+      }]}/>
       <main>
         <h1>History API</h1>
         <Conseptos texto={`Con el objeto "History" trabajaremos con el historial una api muy util.`}/>

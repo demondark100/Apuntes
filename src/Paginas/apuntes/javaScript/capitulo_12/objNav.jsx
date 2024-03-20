@@ -1,10 +1,16 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ObjNavJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: ``,
+        lenguage: "JavaScropt",
+        codigo: ``
+      }]}/>
       <main>
         <h1>Objeto Navigator</h1>
         <Conseptos texto={`Veamos lo estandar osea lo mas utilizado de navigator.`}/>

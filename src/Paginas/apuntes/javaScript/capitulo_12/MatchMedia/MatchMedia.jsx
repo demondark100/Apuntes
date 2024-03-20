@@ -5,6 +5,7 @@ import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./MatchMedia.css";
 import { useRef,useEffect } from "react";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function MatchMediaJs() {
   const caja = useRef(null);
@@ -20,6 +21,18 @@ function MatchMediaJs() {
   })
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto trabaja con responsive desing osea con las resoluciones.`,
+        lenguage: "JavaScropt",
+        codigo: `let mq = matchMedia("(max-width:750px)"); // poner la resolucion con la que se haran cambios.
+mq.addEventListener("change",()=>{
+  if (mq.matches) {
+    // si la resolucion es <= 750px
+  } else{
+    // si la resolucion no es <= 750px
+  }
+})`
+      }]}/>
       <main>
         <h1>MatchMedia</h1>
         <Conseptos texto={`Esta API nos permite trabajar con responsive desing.`}/>

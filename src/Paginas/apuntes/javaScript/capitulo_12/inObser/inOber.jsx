@@ -7,13 +7,28 @@ import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./inObser.css";
 import { useRef,useEffect } from "react";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function InObserJs() {
-
-
-
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto verificamos si algun elemento esta siendo mostrado en la pantalla.`,
+        lenguage: "JavaScropt",
+        codigo: `const observar = (entry, observer) => {
+  entry.forEach((i) => {
+    if (i.isIntersecting) {
+      const cajas = i.target;
+      observer.unobserve(i.target);
+    }
+  });
+};
+  
+const observer = new IntersectionObserver(observar);
+pruebas.forEach((i) => {
+  observer.observe(i); // mandar algun elemento o elementos html para observar.
+});`
+      }]}/>
       <main>
         <h1>Interseccion observer</h1>
         <Conseptos texto={`Esta api es para saber cuando esque una caja se esta viendo en pantalla , esto nos puede servir para muchas cosas como:`}/>

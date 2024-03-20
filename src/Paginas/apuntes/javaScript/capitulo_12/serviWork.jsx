@@ -1,10 +1,33 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ServiWorkJs() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Es un intermediario entre la web y el navegador.`,
+        lenguage: "JavaScropt",
+        codigo: `navigator.serviceWorker.register("archivo.js"); // registrar nuestro archivo js
+self.addEventListener("install",e=>{ // instalar service worker.
+  console.log("instalando service worker.")
+});
+self.addEventListener("activavate",()=>{ // verificar si se instalo service worker.
+  console.log("el service worker esta activo.")
+});
+self.addEventListener("error",()=>{ // verifica si hay algun error
+  console.log("el hubo un error.")
+});
+self.addEventListener("fetch",e=>{ // verifica si se esta enviando uns solicitud a service worker.
+  console.log("se esta interseptando la peticion.")
+});
+navigator.serviceWorker.ready // verifica que web worker este en la web
+  .then((res)=>{
+    console.log(res.active);
+    res.active.postMessage("se enviara un mensaje al service worker."); // enviar mensaje a service worker.
+  });`
+      }]}/>
       <main>
         <h1>Service Workers</h1>
         <Conseptos texto={`Aqui una forma grafica del como es Service Workers.`}/>

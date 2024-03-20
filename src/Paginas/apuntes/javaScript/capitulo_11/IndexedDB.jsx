@@ -6,11 +6,68 @@ import Footer from "../../../../componentes/menus/Footer";
 import Consola from "../../../../componentes/consola/consola";
 import Html from "../../../../componentes/lenguajes/Html";
 import MensajeModal from "../../../../componentes/MensajeModal/mensajeModal";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 function IndexedDB() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esto es para crear una base de datos local, esto usa el consepto de crud que es muy usado en el ambito backend.`,
+        lenguage: "JavaScropt",
+        codigo: `const base = indexedDB.open("base",1);
+
+base.addEventListener("upgradeneeded",()=>{
+  const db = base.result;
+  db.createObjectStore("almacen",{
+    autoIncrement: true
+  });
+});
+base.addEventListener("success",()=>{
+  // aqui una funcion que siempre se ejecutara cada 
+  // que la base de datos este abierta correctamente
+})
+base.addEventListener("error",()=>console.log("hubo un error"));
+
+const agregarObjetos=(objeto) =>{
+  const datos = getData("readwrite","objeto agregado");
+  datos.add(objeto);
+}
+
+const editarObjeto=(objeto,key) =>{
+  const datos = getData("readwrite","objeto editado");
+  datos.put(objeto,key);
+}
+
+
+const eliminarObjeto=(key) =>{
+  const datos = getData("readwrite","objeto eliminado");
+  datos.delete(key);
+}
+
+const getData=(tipo,msg)=>{
+  const db = base.result;
+  const transaccion = db.transaction("almacen",tipo);
+  const almacen = transaccion.objectStore("almacen");
+  transaccion.addEventListener("complete",()=>{
+    console.log(msg);
+  })
+  return almacen;
+}
+
+const leerObjeto=objeto=>{
+  const db = base.result;
+  const transaccion = db.transaction("almacen","readwrite")
+  const almacen = transaccion.objectStore("almacen");
+  const cursor = almacen.openCursor();
+  cursor.addEventListener("success",()=>{
+    if (cursor.result) {
+      console.log(cursor.result.value)
+      cursor.result.continue();
+    }
+  })
+}`
+      }]}/>
       <MensajeModal texto={`Importante:
 
 

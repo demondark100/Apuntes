@@ -4,6 +4,7 @@ import "./dragDrop.css";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function DragDropJs() {
   const deagOver =(e)=>{
@@ -17,6 +18,17 @@ function DragDropJs() {
   }
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Esta api sirve para arrastrar y soltar un elemento html y a mediada que hacemos eso que se ejecute alguna funcion.`,
+        lenguage: "JavaScropt",
+        codigo: `addEventListener("dragstart",()=>console.log(1)) // inicio del arrastre
+addEventListener("drag",()=>console.log(2)) // arrastre
+addEventListener("dragend",()=>console.log(3)) // final del arrastre
+addEventListener("dragenter",()=>console.log(2)) // verifica que un elemento arrastrado esta siendo arrastrado a otro elemento.
+addEventListener("dragover",()=>console.log(2)) // verifica que el elemento arrastrado se muesva dentro del elemento donde se ejecutara "dragend".
+addEventListener("drop",()=>console.log(2)) // verifica que se suelte un elemento.
+addEventListener("dragleave",()=>console.log(2)) // se ejecuta cuando el elemento que se esta arrastrando se sale del elemento donde se recibira el arrastre.`
+      }]}/>
       <main>
         <h1>Drag y Drop</h1>
         <Conseptos texto={`Drag y Drop es el arrastre y desplazamiento de los elementos , todos los objetos tienen drag osea que si arrastras cualquier objeto el ebjeto sentira el drag a la hora de desplazarlo.`}/>

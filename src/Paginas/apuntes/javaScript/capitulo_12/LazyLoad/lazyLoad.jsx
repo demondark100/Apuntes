@@ -7,6 +7,7 @@ import Json from '../../../../../componentes/lenguajes/Json';
 import Footer from '../../../../../componentes/menus/Footer';
 import texto from './lazyLoad.json';
 import './lazyLoad.css';
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 const Publication = ({ name, content }) => (
   <div className="publicacion">
@@ -75,6 +76,9 @@ const LazyLoadJs = () => {
 
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esta tecnica haremos que los recursos de una web se carguen a medida que el usuario lo solicite, esto bemeficia en el rendimiento.`
+      }]}/>
       <main>
         <h1>Lazy Load</h1>
 <Conseptos texto={`Esto nos servira para ir cargando contenido de poco a poco ahora un ejemeplo.`}/>

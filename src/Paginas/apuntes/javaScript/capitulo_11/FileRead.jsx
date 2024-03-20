@@ -3,6 +3,7 @@ import Html from "../../../../componentes/lenguajes/Html";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import { useRef } from "react";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function FileReadJs() {
   const archivo = useRef(null);
@@ -47,6 +48,23 @@ function FileReadJs() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto vamos a leer archivos locales de nuestra pc.`,
+        lenguage: "JavaScropt",
+        codigo: `archivo.addEventListener("change",(e)=>{ // cuando se detecte un cambio en el input.
+  leerArchivo(archivo.files)
+})
+const leerArchivo = ar => {
+  for(let i=0;i < ar.length;i++){
+    const reader = new FileReader();
+    reader.readAsText(ar[i]); // leer el contenido de un archivo.
+    // reader.readAsDataURL(ar[i]); ver la ruta del archivo. 
+    reader.addEventListener("load",(e)=>{
+      console.log(e.currentTarget.result);
+    })
+  }
+}`
+      }]}/>
       <main>
         <h1>FileReader</h1>
         <Conseptos texto={`A FileReader lo usamos cuando trabajamos con eventos por ejemplo si llamamos a "FileReader" nos mostrara todo null.`}/>
@@ -56,7 +74,7 @@ console.log(reader__);
 //estamos creando un nuevo objeto.`}/>
         <Conseptos texto={`entes de continuar explicaremos la diferencia entre "fetch" y "FileReader".
 fetch:
-Esto leera archivos qye ya estan predefinidos en un servidor.
+Esto leera archivos que ya estan predefinidos en un servidor.
 FileReader:
 Esto leera archivos que el usuario escoja osea archivos que no estan predefinidos.
 
@@ -74,24 +92,24 @@ archivo.addEventListener("change",(e)=>{
         <Html codigo={`<input type="file" id="archivo">`}/>
         <JavaScropt codigo={`const archivo = document.getElementById("archivo")
 archivo.addEventListener("change",(e)=>{
-    leerArchivo(archivo.files[0])
+  leerArchivo(archivo.files[0])
 }) 
 const leerArchivo = archivo =>{
-    const reader = new FileReader;
-    reader.readAsText(archivo);
-    reader.addEventListener("load",(e)=>console.log(e));
+  const reader = new FileReader;
+  reader.readAsText(archivo);
+  reader.addEventListener("load",(e)=>console.log(e));
 }
 //con esto veremos el prototipo del archivo que el usuario selecciono.`}/>
         <JavaScropt codigo={`const archivo = document.getElementById("archivo")
 archivo.addEventListener("change",(e)=>{
-    leerArchivo(archivo.files[0])
+  leerArchivo(archivo.files[0])
 })
 const leerArchivo = archivo =>{
-    const reader = new FileReader;
-    reader.readAsText(archivo);
-    reader.addEventListener("load",(e)=>{
-        console.log(e.currentTarget.result)
-    });
+  const reader = new FileReader;
+  reader.readAsText(archivo);
+  reader.addEventListener("load",(e)=>{
+    console.log(e.currentTarget.result)
+  });
 }`}/>
         <Conseptos texto={`Con esto veremos el resultado de un archivo que tenga texto.`}/>
         <div className="website">
@@ -101,18 +119,18 @@ const leerArchivo = archivo =>{
 
 Consejo para seleccionar multiples archivos debemos apretar ctrl.`}/>
         <Html codigo={`<input type="file" id="archivo" multiple>`}/>
-        <JavaScropt codigo={`const archivo = document.getElementById("archivo")
+        <JavaScropt codigo={`const archivo = document.getElementById("archivo");
 archivo.addEventListener("change",(e)=>{
-    leerArchivo(archivo.files[0])
+  leerArchivo(archivo.files)
 })
-const leerArchivo = archivo =>{
-    for(let i in archivo){
-        const reader = new FileReader;
-        reader.readAsText(archivo[i]);
-        reader.addEventListener("load",(e)=>{
-            console.log(e.currentTarget.result)
-        });
-    }
+const leerArchivo = ar => {
+  for(let i=0;i < ar.length;i++){
+    const reader = new FileReader();
+    reader.readAsText(ar[i]);
+    reader.addEventListener("load",(e)=>{
+      console.log(e.currentTarget.result);
+    })
+  }
 }`}/>
         <Conseptos texto={`Con esto estamos leendo multiples archivos que selecciono el usuario.`}/>
         <div className="website">
@@ -124,16 +142,16 @@ const leerArchivo = archivo =>{
         <Html codigo={`<input type="file" id="archivo" multiple>`}/>
         <JavaScropt codigo={`const archivo = document.getElementById("archivo");
 archivo.addEventListener("change",(e)=>{
-    leerArchivo(archivo.file[0])
+  leerArchivo(archivo.files)
 })
-const leerArchivo = archivo => {
-    for(let i in archivo){
-        const reader = new FileReader();
-        reader.readAsDataURL(archivo[i]);
-        reader.addEventListener("load",(E)=>{
-            console.log(e.currentTarget.result);
-        })
-    }
+const leerArchivo = ar => {
+  for(let i=0;i < ar.length;i++){
+    const reader = new FileReader();
+    reader.readAsDataURL(ar[i]);
+    reader.addEventListener("load",(e)=>{
+      console.log(e.currentTarget.result);
+    })
+  }
 }`}/>
         <div className="website">
           <input type="file"  ref={multimedia} multiple onChange={leer3} />

@@ -4,6 +4,7 @@ import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./webWork.css";
 import { useRef } from "react";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function WebWorkerJs() {
     const ejecutarBucle = () =>{
@@ -21,6 +22,38 @@ function WebWorkerJs() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto haremos que javaScript haga mas de una accion al mismo tiempo.
+
+Archivo principal.`,
+        lenguage: "JavaScropt",
+        codigo: `const worker = new Worker("worker.js");
+
+const button = document.querySelector(".button")
+button.addEventListener("click",()=>{
+    worker.postMessage(true)
+})
+worker.addEventListener("message",e=>{
+    console.log(e.data);
+    worker.terminate();
+})`
+      },
+      {
+        mensaje: `Archivo Worker.`,
+        lenguage: "JavaScropt",
+        codigo: `const ejecutarBucle_1 = () =>{
+    let i = 0;
+    while(i < 5000){
+        i++;
+        console.log(1);
+    }
+}
+addEventListener("message", e =>{
+    console.log(e.data);
+    ejecutarBucle_1()
+    postMessage("worker")
+})`
+      }]}/>
       <main>
         <h1>Web Worker</h1>
         <Conseptos texto={`Esto nos ayudara a poder hacer de una mejor forma mas de una accion aqui una forma grafica del como funciona.`}/>
