@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Html from "../../../../../componentes/lenguajes/Html";
@@ -21,7 +21,6 @@ function CanvasJs() {
 
 
 
-    
   const canvas_1 = document.getElementById("canvas_1");
   const ctx_1 = canvas_1.getContext("2d");
 
@@ -54,6 +53,48 @@ function CanvasJs() {
   ctx_1.arc(100,85,45,0,10);
   ctx_1.stroke();
   })
+
+  const dibujo = useRef();
+  const colores = useRef();
+  const ancho = useRef();
+  let dif;
+  let context; 
+  setTimeout(() => {
+    dif = dibujo.current.getBoundingClientRect();
+    context = dibujo.current.getContext("2d");
+  }, 500);
+  const [painting, setPainting] = useState();
+  const [color, setColor] = useState();
+  const [difX, setDifX] = useState();
+  const [difY, setDifY] = useState();
+  const [lineWidth, setLineWidth] = useState();
+  const dibujar1=(e)=>{
+    setDifX(e.clientX - dif.left)
+    setDifY(e.clientY - dif.top)
+    setPainting(true);
+    setColor(colores.current.value)
+    setLineWidth(ancho.current.value);
+    context.beginPath();
+  }
+  const dibujoMove=(e)=>{
+    if (painting) {
+      dibujar(difX,difY,e.clientX - dif.left,e.clientY - dif.top);
+      setDifX(e.clientX - difX.left)
+      setDifY(e.clientY - difY.top)
+    }
+  }
+  const dibujar2=(e)=>{
+    context.closePath();
+    setPainting(false);
+  }
+  const dibujar = (x1,y1,x2,y2) =>{
+    context.strokeStyle = color;
+    context.lineWidth = lineWidth;
+    context.moveTo(x1,y1);
+    context.lineTo(x2,y2);
+    context.stroke();
+  }
+
 
   return (  
     <>
@@ -245,10 +286,18 @@ const dibujar = (x1,y1,x2,y2) =>{
     </p>
     <div className="contenedor">
         <h3 className="dibujo_title">dibuja!</h3>
-        <canvas id="dibujo" width="500%" height="450%"></canvas>
+        <canvas 
+          id="dibujo" 
+          width="500%" 
+          height="450%"
+          onMouseDown={(e)=>dibujar1(e)}
+          onMouseMove={(e)=>dibujoMove(e)}
+          onMouseUp={(e)=>dibujar2(e)}
+          ref={dibujo}
+        ></canvas>
         <div className="button_content">
-            <input type="color" className="colorizacion" />
-            <input type="range" className="ancho_line" min="1" max="20" />
+            <input type="color" className="colorizacion" ref={colores}/>
+            <input type="range" className="ancho_line" min="1" max="20" ref={ancho}/>
         </div>
     </div>
       </main>
