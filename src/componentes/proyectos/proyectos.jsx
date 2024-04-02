@@ -46,9 +46,9 @@ import js21 from "./imagenes/javaScript/js21.png"
 import js22 from "./imagenes/javaScript/js22.png"
 import js23 from "./imagenes/javaScript/js23.png"
 import js24 from "./imagenes/javaScript/js24.png"
+import js24_5 from "./imagenes/javaScript/js24_5.png"
 import js25 from "./imagenes/javaScript/js25.png"
 import js26 from "./imagenes/javaScript/js26.png"
-
 
 function Proyectos({sendshowProyects}) {
   
@@ -263,6 +263,8 @@ function Proyectos({sendshowProyects}) {
                         
                         <Link onMouseMove={()=>showImg(js24)} onMouseOut={()=>setShowContent(false)} to={"javaScript/cap11ProyV4"}>cambiar fondo</Link>
                         
+                        <Link onMouseMove={()=>showImg(js24_5)} onMouseOut={()=>setShowContent(false)} to={"javaScript/cap11ProyV4_5"}>Galeria</Link>
+
                         <Link onMouseMove={()=>showImg(js25)} onMouseOut={()=>setShowContent(false)} to={"javaScript/cap11ProyV5"}>Contactos</Link>
                       </div>
                     }

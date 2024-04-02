@@ -10,6 +10,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { faEdit, faTrashAlt, faEye } from "@fortawesome/free-solid-svg-icons";
+import MensajeModal from "../../../../../../componentes/MensajeModal/mensajeModal";
 
 
 //este componente sirve para confirmar acciones que haga la perra del usuario
@@ -248,6 +249,9 @@ function Cap11ProyV5() {
 
   return (
     <>
+      <MensajeModal texto={`¡Proyecto! capitulo 11
+
+Hacer una aplicacion que almacene contactos, esta debe tener una base de datos local que recupere los datos, este debe mostrar detalles o se debe poder editar la informacion de los contactos.`}/>
       <ShowOptions 
         link={`../`}
         html={`<!DOCTYPE html>

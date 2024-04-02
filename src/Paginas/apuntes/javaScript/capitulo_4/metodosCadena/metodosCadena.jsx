@@ -27,7 +27,7 @@ let number = 123;
 number.toString(); // "123" | convierte distintos tipos de dato en una cadena de texto.
 let espacios2 = " music ";
 espacios2.trim(); // "music" | quita los espacios del contado de una cadena de texto.`
-      }]}/>>
+      }]}/>
     <main>
       <h1>Metodos de cadena</h1>
       <Conseptos texto={`JavaScript cuenta con metodos de cadena para poder facilitar muchas tareas que podrian ser demasiado complicadas.`}/>

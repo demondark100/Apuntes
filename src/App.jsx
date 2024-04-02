@@ -265,7 +265,29 @@ import ReactRouterDom from './Paginas/apuntes/react/capitulo_3/reactRouter';
 // node.js
 import IntroduccionNode from './Paginas/apuntes/node/capitulo 1/intoduccion/introduccion';
 import ModulosNode from './Paginas/apuntes/node/capitulo 1/modulo/modulos';
-
+import ProcessNode from './Paginas/apuntes/node/capitulo 1/process';
+import OsNode from './Paginas/apuntes/node/capitulo 1/os';
+import TimersNode from './Paginas/apuntes/node/capitulo 1/timers';
+import FsNode from './Paginas/apuntes/node/capitulo 1/fs';
+import NpmNode from './Paginas/apuntes/node/capitulo 2/npm';
+import JsonNode from './Paginas/apuntes/node/capitulo 2/json';
+import InstallUninstallNode from './Paginas/apuntes/node/capitulo 2/installUninstaal';
+import EventsNode from './Paginas/apuntes/node/capitulo 2/events';
+import PromesasNode from './Paginas/apuntes/node/capitulo 2/promesas';
+import AsyncAwaitNode from './Paginas/apuntes/node/capitulo 2/asyncAwait';
+import HttpNode from './Paginas/apuntes/node/capitulo 3/http';
+import ModuloHttpNode from './Paginas/apuntes/node/capitulo 3/moduloHttp';
+import MetodosReqNode from './Paginas/apuntes/node/capitulo 3/metodosReq';
+import MetodosResNode from './Paginas/apuntes/node/capitulo 3/metodosRes';
+import UrlNode from './Paginas/apuntes/node/capitulo 3/url';
+import ModuloUrlNode from './Paginas/apuntes/node/capitulo 3/moduloUrl';
+import RoutingNode from './Paginas/apuntes/node/capitulo 3/routing';
+import NodeMon from './Paginas/apuntes/node/capitulo 3/nodemon';
+import ExpressNode from './Paginas/apuntes/node/capitulo 4/express';
+import RoutingExpressNode from './Paginas/apuntes/node/capitulo 4/routingEx';
+import ParametrosExNode from './Paginas/apuntes/node/capitulo 4/parametros';
+import ParametrosQueryNode from './Paginas/apuntes/node/capitulo 4/paramQuery';
+import RoutersNode from './Paginas/apuntes/node/capitulo 4/routers';
 
 // python
 import ImportantePy from './Paginas/apuntes/python/capitulo_1/importante';
@@ -324,34 +346,13 @@ import Cap11ProyV3 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/tare
 import Cap11ProyV4 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/fondo/cap11';
 import Cap11ProyV5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/contactos/cap11';
 import Cap12ProyV1 from "./Paginas/apuntes/proyectos/javaScript/capitulo_12/reproductor/cap12";
+import Cap11ProyV4_5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/galeria/cap11';
 
 
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
-import ProcessNode from './Paginas/apuntes/node/capitulo 1/process';
-import OsNode from './Paginas/apuntes/node/capitulo 1/os';
-import TimersNode from './Paginas/apuntes/node/capitulo 1/timers';
-import FsNode from './Paginas/apuntes/node/capitulo 1/fs';
-import NpmNode from './Paginas/apuntes/node/capitulo 2/npm';
-import JsonNode from './Paginas/apuntes/node/capitulo 2/json';
-import InstallUninstallNode from './Paginas/apuntes/node/capitulo 2/installUninstaal';
-import EventsNode from './Paginas/apuntes/node/capitulo 2/events';
-import PromesasNode from './Paginas/apuntes/node/capitulo 2/promesas';
-import AsyncAwaitNode from './Paginas/apuntes/node/capitulo 2/asyncAwait';
-import HttpNode from './Paginas/apuntes/node/capitulo 3/http';
-import ModuloHttpNode from './Paginas/apuntes/node/capitulo 3/moduloHttp';
-import MetodosReqNode from './Paginas/apuntes/node/capitulo 3/metodosReq';
-import MetodosResNode from './Paginas/apuntes/node/capitulo 3/metodosRes';
-import UrlNode from './Paginas/apuntes/node/capitulo 3/url';
-import ModuloUrlNode from './Paginas/apuntes/node/capitulo 3/moduloUrl';
-import RoutingNode from './Paginas/apuntes/node/capitulo 3/routing';
-import NodeMon from './Paginas/apuntes/node/capitulo 3/nodemon';
-import ExpressNode from './Paginas/apuntes/node/capitulo 4/express';
-import RoutingExpressNode from './Paginas/apuntes/node/capitulo 4/routingEx';
-import ParametrosExNode from './Paginas/apuntes/node/capitulo 4/parametros';
-import ParametrosQueryNode from './Paginas/apuntes/node/capitulo 4/paramQuery';
-import RoutersNode from './Paginas/apuntes/node/capitulo 4/routers';
+
 
 
 
@@ -413,6 +414,7 @@ function App() {
               <Route path='javaScript/cap11ProyV3' element={<Cap11ProyV3 />} />
               <Route path='javaScript/cap11ProyV4' element={<Cap11ProyV4 />} />
               <Route path='javaScript/cap11ProyV5' element={<Cap11ProyV5 />} />
+              <Route path='javaScript/cap11ProyV4_5' element={<Cap11ProyV4_5 />} />
 
             {/* capitulo 12 */}
               <Route path='javaScript/cap12ProyV1' element={<Cap12ProyV1 />} />

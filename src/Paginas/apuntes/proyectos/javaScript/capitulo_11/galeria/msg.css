@@ -1,0 +1,54 @@
+.cap11GaleriaProy__msgContent{ /*contenedor principal*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.cap11GaleriaProy__msg--parrafo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 85px;
+    background-color: #242624;
+    font-size: 1.5em;
+    text-align: center;
+    color: #d5ffbd !important;
+    padding: 8px;
+    transform: translate(0,15px);
+    box-shadow: 0 0 15px 2px #565a56;
+    transition-duration: .4s;
+}
+.cap11GaleriaProy__imgs--msg{ /*mensaje indicativo de ninguno*/
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+.cap11GaleriaProy__imgs--msg p{
+    margin: 0;
+    font-size: 1em;
+    background-color: #aa0808 !important;
+    color: #fff !important;
+    padding: 10px;
+}
+.cap11GaleriaProy__msg--parrafoHide{
+    transform: translate(0,-110%);
+    transition-duration: .4s;
+}
+@media(min-width: 750px){
+    .cap11GaleriaProy__msg--parrafo{
+        width: 250px;
+    }
+}

@@ -125,10 +125,8 @@ a:hover{
   background-color: #fff;
   padding: 0;
   margin: 0;
-  height: 100%;
-  overflow: auto;
-  position: fixed;
-  overflow: auto;
+  height: 100vh;
+  position: absolute;
   pointer-events: stroke;
   color: #000 !important;
 }
@@ -158,7 +156,7 @@ a:hover{
   color: #000;
 }
 .Page li{
-  color: #000;
+  color: #000 !important;
 }
 
 
