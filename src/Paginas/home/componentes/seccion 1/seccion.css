@@ -1,0 +1,100 @@
+.HomeSeccion1{ /*contenedor principal*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    overflow: hidden;
+}
+
+.HomeSeccion1__info1{ /*informacion*/
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding: 0;
+}
+.HomeSeccion1__info1 h1{ /*titulo*/
+    font-size: 2em;
+    color: #bde5ff;
+    text-align: center;
+    margin: 0;
+}
+.HomeSeccion1__info1 p{ /*parrafo*/
+    font-size: 1.2em;
+    text-align: center;
+    color: #acdaf8 !important;
+}
+
+.HomeSeccion1__info1 button {
+    /*boton de contacto*/
+    background-color: transparent;
+    padding: 15px;
+    color: #94bfdb !important;
+    font-size: 1em;
+    border: 2px solid #94bfdb;
+    position: relative;
+    z-index: 2;
+}
+
+.HomeSeccion1__info1 button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition-duration: .5s;
+    background: linear-gradient(90deg,#66f5ff36,transparent);
+    opacity: 0;
+}
+
+.HomeSeccion1__info1 button:hover::after { /*boton de contacto*/
+    transition-duration: .5s;
+    opacity: 1;
+    box-shadow: 0 0 200px 15px #60c8f8;
+}
+
+.HomeSeccion1__Img{ /*imagen*/
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.HomeSeccion1__Img img{
+    width: 250px;
+}
+
+@media(min-width: 750px){
+    .HomeSeccion1{ /*contenedor principal*/
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .HomeSeccion1__info1{ /*informacion*/
+        align-items: start;
+        padding: 0;
+        padding-left: 35px;
+    }
+    .HomeSeccion1__info1 h1{ /*titulo*/
+        font-size: 3em;
+        width: 100%;
+        text-align: start;
+    }
+    .HomeSeccion1__info1 p{ /*parrafo*/
+        font-size: 1.5em;
+        text-align: start;
+        left: 0;
+        width: 80%;
+    }
+    .HomeSeccion1__info1 button{ /*boton de contacto*/
+        font-size: 1.3em;
+    }
+    .HomeSeccion1__Img{ /*imagen*/
+        width: auto;
+    }
+}

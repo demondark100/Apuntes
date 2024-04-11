@@ -124,7 +124,7 @@ code {
   
 }
 .HideConsolaCodigoEjecutado{
-  position: absolute;
+  display: none;
   margin: auto;
   opacity: 0;
   visibility: hidden;

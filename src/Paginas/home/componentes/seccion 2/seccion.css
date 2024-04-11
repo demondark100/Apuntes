@@ -1,0 +1,269 @@
+.HomeSeccion2{ /*contenedor principal*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+}
+.HomeSeccion2FondoContent{ /*contenedor */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+.HomeSeccion2Fondo{ /*fondo de decoracion 1*/
+    width: 150px;
+    height: 95px;
+    background-image: url("https://media.telemetro.com/p/b85b7c69f406ccee8a4c0c15c2eafc3a/adjuntos/311/imagenes/018/073/0018073643/855x0/smart/imagepng.png");
+    background-size: cover;
+    background-attachment: fixed;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    filter: brightness(.8);
+    box-shadow: 0 0 97px 15px #751818;
+}
+
+
+
+
+
+
+.HomeSeccion2Barra{ /*contenedor del selector de lenguages*/
+    width: 100vw !important;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 4;
+    padding: 0;
+}
+.HomeSeccion2Barra__content{ /*contenedor de la barra*/
+    width: 85px;
+    height: 100%;
+    position: relative;
+    border-radius: 8px;
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.HomeSeccion2Barra__contentImg{ /*imagen*/
+    width: 70%;
+    height: 70%;
+    transform: translate(0,0);
+    object-fit: contain;
+    transition-duration: .2s;
+    user-select: none;
+}
+.HomeSeccion2Barra__contentImgHide{
+    transition-duration: .2s;
+    transform: translate(0,-140%);
+}
+
+
+
+
+
+
+/*Barra para seleccionar todos los lenguages*/
+.HomeSeccion2BarraSelect{
+    background-color: transparent;
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+    padding-top: 40px;
+}
+.HomeSeccion2BarraSelect__barra{ /*contenedor de cada imagen*/
+    width: 40px;
+    height: 0;
+    border-radius: 1000px;
+    pointer-events: auto;
+    top: -15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #0000008c;
+    overflow: auto;
+    padding: 0;
+    transition-duration: .3s;
+    margin-top: 45px;
+}
+.HomeSeccion2BarraSelect__barra::-webkit-scrollbar{
+    display: none;
+}
+.HomeSeccion2BarraSelect__barra button{
+    width: 65%;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.HomeSeccion2BarraSelect__barra button img{
+    object-fit: contain;
+    width: 100%;
+    transition-duration: .5s;
+}
+.HomeSeccion2BarraSelect__barraShow{
+    padding-top: 25px;
+    height: 250px;
+    padding-bottom: 8px;
+    transition-duration: .3s;
+}
+.HomeSeccion2BarraSelect__barraImgSelected{
+    filter: brightness(1.5);
+    transform: scale(1.2);
+    border-radius: 5px;
+    transition-duration: .5s;
+    object-fit: contain;
+}
+
+
+
+
+
+.HomeSeccion2Barra__contentBtn{ /*contenedor de los botones*/
+    height: 100%;
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+.HomeSeccion2Barra__contentBtn-btn{ /*botones*/
+    background-color: transparent;
+    font-size: 1.5em;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.HomeSeccion2Barra__contentBtn-btnRotado{
+    transform: rotate(180deg);
+}
+.HomeSeccion2Barra__contentBtnHide{ /*ocultar botones*/
+    opacity: 0;
+    pointer-events: none;
+}
+.HomeSeccion2Barra__contentBtn__DOWN{ /*boton de abajo para mostrar la barra de todos los lenguages*/
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    margin-top: 150px;
+}
+
+@media(min-width: 750px){
+    .HomeSeccion2FondoContent{ /*contenedor */
+        height: 110px;
+    }
+    .HomeSeccion2Fondo{ /*fondo de decoracion 1*/
+        width: 160px;
+        height: 100%;
+    }
+    .HomeSeccion2Barra{ /*contenedor del selector de lenguages*/
+        height: 95px;
+    }
+    .HomeSeccion2Barra{ /*contenedor de la barra*/
+        width: 95px;
+    }
+    .HomeSeccion2Barra__contentBtn{ /*contenedor de los botones*/
+        width: 150px;
+    }
+    .HomeSeccion2BarraSelect__barra{ /*contenedor de cada imagen*/
+        margin-top: 57px;
+    }
+    .HomeSeccion2Barra__contentBtn__DOWN{ /*boton de abajo para mostrar la barra de todos los lenguages*/
+        bottom: -20px;
+    }
+}
+
+
+
+/*contenido de los lenguages*/
+.HomeSeccion2Text{ /*contenedor principal*/
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    margin-top: 15px;
+    display: flex;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+.HomeSeccion2TextHide{ /*ocultar informacion un momento*/
+    opacity: 0;
+    transform: translate(0,25px);
+    transition-duration: .3s;
+}
+
+.HomeSeccion2TextInfo{ /*contenedor de la informacion*/
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+.HomeSeccion2TextInfo h2{ /*titulo*/
+    color: #d1e3ff !important;
+    margin: 0;
+    padding: 0;
+}
+.HomeSeccion2TextInfo p{ /*informacion*/
+    font-size: 1.2em;
+    width: 90%;
+    color: #d1e3ff !important;
+    text-align: center;
+}
+.HomeSeccion2Text__code{ /*codigo*/
+    padding: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.HomeSeccion2Text img{ /*imagen*/
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+@media(min-width: 750px){
+    .HomeSeccion2Text{ /*contenedor principal*/
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .HomeSeccion2TextInfo{ /*contenedor de la informacion*/
+        align-items: start;
+        text-align: start;
+        width: 60%;
+    }
+    .HomeSeccion2TextInfo h2{ /*titulo*/
+        font-size: 2em;
+    }
+    .HomeSeccion2TextInfo p{ /*titulo*/
+        text-align: start;
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .HomeSeccion2Text__code{ /*codigo*/
+        width: 100%;
+        max-width: 850px;
+    }
+    .HomeSeccion2Text img{ /*imagen*/
+        width: 130px;
+        height: auto;
+    }
+}
