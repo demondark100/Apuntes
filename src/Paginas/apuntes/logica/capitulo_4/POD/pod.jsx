@@ -1,10 +1,23 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function PodLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Este es un paradicma de programacion que mantiene mas ordenado el codigo.",
+        "lenguage": "Sintaxis",
+        "codigo": `clase Objeto:
+  propiedad: valor
+  
+  mostrarObjeto():
+    mostrar(propiedad);
+
+const objeto1 = nuevo Objeto("un objeto");
+objeto1.mostrarObjeto();`
+      }]}/>
       <main>
         <h1>programacion orientada a objetos (POD)</h1>
 

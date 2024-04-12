@@ -2,11 +2,24 @@ import { Link } from "react-router-dom";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 
 function BuclesLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje":  "Con el bucle mientras ejecutaremos un bloque de codigo pero no sabemos cuando terminara el bucle..",
+        "lenguage": "Sintaxis",
+        "codigo": `i = 0;
+mientras i < 5 hacer:
+  i++;
+  mostrar("Esto es un bucle");
+
+hacer:
+  mostrar("hola mundo");
+mientras(condicional)`
+      }]}/>
       <main>
         <h1>bucles</h1>
 

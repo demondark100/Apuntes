@@ -1,10 +1,17 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function BucleParaLogica() {
-  return (  
+  return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto ejecutaremos un bucle pero sabremos cuando terminara el bucle.",
+        "lenguage": "Sintaxis",
+        "codigo": `para i = 0;i < arreglo.longitud;i++:
+  # ejecutar bloque de codigo`
+      }]}/>
       <main>
         <h1>bucle para</h1>
 

@@ -4,6 +4,7 @@ import Footer from "../../../../../componentes/menus/Footer";
 import CondicionalesDiagrama from "./diagrama";
 import { useRef, useState } from "react";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios"
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function CondicionalesLogica() {
   const [mostrarCondicional, setMostrarCondicional] = useState(false);
@@ -15,6 +16,16 @@ function CondicionalesLogica() {
   } 
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto evaluaremos y tomaremos deciciones en nuestros programas.",
+        "lenguage": "Sintaxis",
+        "codigo": `si condicion se cumple entonces:
+  # ejecutar codigo;
+sino si condicion se cumple entonces:
+  # ejecutar codigo;
+sino:
+  # ejecutar codigo;`
+      }]}/>
       <main>
         <h1>Condicionales</h1>
         

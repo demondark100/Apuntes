@@ -12,21 +12,17 @@ function Home() {
 
   // funcion de presentacion.
   // Aqui aseguramos que el tutorial solo aparezca una sola vez.
-    const [finishPrsent, setFinishPrsent] = useState(true);
     const [tutorial, setTutorial] = useState();
     const quitarTutorial=()=>{
       setTutorial(false);
-      setFinishPrsent(true);
       localStorage.setItem("tutorial",JSON.stringify(false));
     }
     useEffect(()=>{
       let cambio = JSON.parse(localStorage.getItem("tutorial"));
       if (cambio === false) {
         setTutorial(cambio);
-        setFinishPrsent(true)
       } else if(cambio === null){
         setTutorial(true)
-        setFinishPrsent(false)
       }
     },[tutorial])
 
@@ -38,15 +34,13 @@ function Home() {
   useEffect(()=>{
     const content = contentHome.current.querySelectorAll(".Home__seccion");
     // const info = contentHome.current.querySelectorAll(".HomeSeccion");
-    const observar = (entry) => {
+    const observar = (entry,observe) => {
       entry.forEach((i) => {
-        if (i.isIntersecting && finishPrsent === true) {
+        if (i.isIntersecting) {
           const cajas = i.target.querySelector(".HomeSeccion");
           cajas.classList.add("HomeSeccionShow");
-        } else {
-          const cajas = i.target.querySelector(".HomeSeccion");
-          cajas.classList.remove("HomeSeccionShow");
-        }
+          observe.unobserve(i.target)
+        } 
       });
     };
       

@@ -4,6 +4,7 @@ import "./input.css";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import { useState } from "react";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function InpuLogica() {
   const [inputValue, setInputValue] = useState('');
@@ -32,6 +33,12 @@ function InpuLogica() {
   }
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto podemos recibir datos del usuario , procesar esos datos y entregar un resultado al usuario.",
+        "lenguage": "Sintaxis",
+        "codigo": `nombre = pedirDato("¿Cual es tu nombre?");
+mostrar("hola " + nombre + " Bienvenido.")`
+      }]}/>
       <main>
         <h1>inputs y outputs</h1>
 

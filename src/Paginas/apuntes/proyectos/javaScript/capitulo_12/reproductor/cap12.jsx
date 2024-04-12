@@ -74,7 +74,7 @@ const base = [
     "imagen": "https://lh3.googleusercontent.com/HsEwUQH8tH10S_G33c9a-iv7iUJ7Ksbfbdpemb2B_uNqjYvf-hB4AMGHNf6gDurP4g4ZTa-3GnMGGwIa=w544-h544-l90-rj",
     "titulo": "We Are The People",
     "artista": "Empire Of The Sun",
-    "link": BedsAreBurning,
+    "link": WeAreThePeople,
     "id": 3
   },
   {

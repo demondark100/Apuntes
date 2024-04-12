@@ -1,10 +1,24 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function FuncionesLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto crearemos un bloque de codigo que se podra reutilizar las veces que queramos.",
+        "lenguage": "Sintaxis",
+        "codigo": `funcion verificarEdad(edad):
+  si edad >= 18:
+    mostrar("Eres mayor de edad");
+  sino:
+  mostrar("Eres menor de edad");
+
+verificarEdad(15);
+verificarEdad(29);
+verificarEdad(34);`
+      }]}/>
       <main>
         <h1>Funciones</h1>
 

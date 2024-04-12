@@ -1,10 +1,34 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis"
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function OperadoresLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Tenemos operaciones matematicas basicas y otros exclusivos que se usan en la programacion.",
+        "lenguage": "Sintaxis",
+        "codigo": `+,-,*,/  # operaciones matematicas 
+# multiplicar se representa con *
+# dividir se representa con /
+
+
+# operaciones de comparacion
+<,>,<=,>=,== # todo es igual a matematica basica
+# pero para representar si algo es igual a otra
+# cosa se reemplaza "=" por "==".
+
+
+# operadores logicos
+and,or,not.
+# and es si se cimplen dos cosas obligatorias.
+# or es si se cumple una cosa obligatoria.
+# !not es si algo es verdadero cambia a falso y biseversa 
+# es como decir distinto de`
+
+
+      }]}/>
       <main>
 
         <h1>operadores</h1>

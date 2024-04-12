@@ -28,7 +28,6 @@ function Menu() {
   // esta funcion es para mostrar los cursos.
   const mostrarOpciones=()=>{
     setShowOpciones(!showOpciones)
-    
     if (!showOpciones) {  
       destello.current.style.left = "-100%"
       destello.current.style.opacity = "1"

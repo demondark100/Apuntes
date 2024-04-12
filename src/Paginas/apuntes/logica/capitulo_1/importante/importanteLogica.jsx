@@ -2,10 +2,13 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Python from "../../../../../componentes/lenguajes/Python";
 import JavaScript from "../../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../../componentes/menus/Footer";
-
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 function ImportanteLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "La logica de programacion se aplica para todos los lenguages de programacion."
+      }]}/>
       <main>
         <h1>Bases</h1>
         <Conseptos texto={`Todo lo que aprenderas aqui se aplican para todos los lenguajes de programacion java,python,c#,javaScript,c++,etc.

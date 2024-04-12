@@ -1,5 +1,5 @@
 .contenedorBarrita{  /*contenedor principal*/
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   padding: 4px;
@@ -8,6 +8,7 @@
   padding-bottom: 15px;
   align-items: center;
   pointer-events: none;
+  overflow: auto;
 }
 .contenedorBarrita__Opciones{ /*ul principal*/
   display: flex;
@@ -72,9 +73,9 @@
 
 /* estulos de los cursos */
 .contenedorBarrita__cursos{ /*contenedor de los cursos*/
-  position: absolute !important;
-  top: 55px;
+  position: fixed !important;
   padding: 0;
+  top: 0;
   left: 40px;
   transition-duration: .3s;
   z-index: -1;
@@ -86,10 +87,10 @@
 
 
 .contenedorBarrita__proyectos{ /*contenedor de los proyectos*/
-  position: absolute !important;
-  top: 55px;
+  position: fixed !important;
   left: 40px;
   padding: 0;
+  top: 0;
   transition-duration: .3s;
   z-index: -1;
 }

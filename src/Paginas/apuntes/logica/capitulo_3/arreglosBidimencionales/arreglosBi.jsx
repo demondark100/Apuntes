@@ -1,10 +1,25 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function ArreglosBiLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con los bucles recorreremos arreglos normales o bidimencionales, tambien es util para ejecutar un bloque de codigo de forma repetida.`,
+        "lenguage": "Sintaxis",
+        "codigo": ``
+      }]}/>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto guardaremos arreglos dentro de un arreglo.",
+        "lenguage": "Sintaxis",
+        "codigo": `informacion = [
+  ["Pepito","Alcachofa"],
+  ["Emilia","Heartfilia"]
+];
+mostrar(informacion[1]);`
+      }]}/>
       <main>
         <h1>arreglos bidimencionales</h1>
 

@@ -2,10 +2,17 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function ConcatenarLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto podemos unir dos cadenas de caracteres, esto es muy util en varios tipos de aplicaciones.",
+        "lenguage": "Sintaxis",
+        "codigo": `nombre = "Arthur";
+mostrar("hola" + nombre + "bienvenido.");`
+      }]}/>
       <main>
 
         <h1>Concatenacion</h1>

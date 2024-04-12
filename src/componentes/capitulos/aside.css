@@ -1,7 +1,7 @@
 aside{
   pointer-events: stroke;
-  height: 88vh !important;
-  background-color: #00000065;
+  height: 100vh !important;
+  background-color: #00000033;
   backdrop-filter: blur(8px);
   padding: 8px;
   border-radius: 10px;
@@ -21,15 +21,19 @@ aside::-webkit-scrollbar{
   flex-direction: column;
   gap: 50px;
   align-items: center;
+  padding-bottom: 40px;
 }
 .NavAsideUl li{
   width: 80%;
-  background-color: #242924;
+  background-color: #00000091;
   padding: 8px;
   border-radius: 10px;
   transition-duration: .5s;
   text-align: center;
-  border: 2px solid #242924;
+  box-shadow: 0 0 15px 2px #a10404;
+}
+.NavAsideUl li p{
+  color: #ecffb7 !important;
 }
 
 .capitulos{
@@ -40,8 +44,8 @@ aside::-webkit-scrollbar{
 }
 .capitulos p{
   padding: 8px;
-  background-color: #1c1d1c;
-  border: 2px solid #3f443f;
+  background-color: #00000081;
+  box-shadow: 0 0 15px 2px #a83030;
   border-radius: 10px;
   text-align: start;
 }
@@ -52,18 +56,18 @@ aside::-webkit-scrollbar{
   padding-bottom: 15px;
 }
 .temas a{
-  background-color: #000000;
+  background-color: #00000056;
   border-radius: 10px;
   width: 80%;
   margin-top: 20px;
   text-align: start;
   color: #acfaac;
   padding: 8px;
-  border: 2px solid #242924;
+  box-shadow: 0 0 15px 2px #4d1010;
 }
 
 .active{
-  background-color: #645e5e !important;
+  background-color: #7063635d !important;
   color: #f4ffee;
 }
 

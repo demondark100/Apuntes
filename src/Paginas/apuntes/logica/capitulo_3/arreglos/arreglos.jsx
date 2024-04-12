@@ -3,10 +3,17 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function ArreglosLogica() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con los arreglos podemos guardar mas de un dato.",
+        "lenguage": "Sintaxis",
+        "codigo": `frutas = ["pera","naranja","sandia"];
+mostrar(frutas[0]);`
+      }]}/>
       <main>
         <h1>Arreglos</h1>
 

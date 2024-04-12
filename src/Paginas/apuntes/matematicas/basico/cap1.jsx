@@ -1,10 +1,22 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Txt from "../../../../componentes/lenguajes/txt";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes"
 
 function Cap1MatV1() {
   return (  
    <>
+    <Resumenes contenido={[{
+      "lenguage": "Txt",
+      "codigo": `+ x - , - x + es igual a -
++ x + , - x - es igaual a +
+
+al restar numeros positivos puedes salir numeros negativos
+5 - 15 = -10
+Si multiplicamos o hacemos operaciones con numeros negativos
+el resultado sera un numero negativo
+-15 x 2 = -30`
+    }]}/>
     <main>
       <h1>Basico</h1>
       <h2>suma</h2>

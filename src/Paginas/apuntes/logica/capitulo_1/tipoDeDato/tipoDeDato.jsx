@@ -1,10 +1,23 @@
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis.jsx"
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function TipoDeDatos() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Tenemos varios tipos de datos en la programacion",
+        "lenguage": "Sintaxis",
+        "codigo": `15     # numero entero
+15.0   # decimal o flotante
+"a"    # caracter,
+"hola" # cadena de caracteres o string
+true   # verdadero
+false  # falso
+undefined # dato sin definicion
+null   # dato que es nulo`
+      }]}/>
       <main>
         <h1>tipos de datos</h1>
         <Conseptos texto={`En la programacion tenemos 3 tipos de datos.`}/>

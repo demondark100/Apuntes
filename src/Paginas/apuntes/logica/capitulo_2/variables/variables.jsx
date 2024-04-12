@@ -2,11 +2,20 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import Ejercicios from "../../../../../componentes/ejercicios/ejercicios";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis"
+import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 function VariableLogica() {
   return (  
     <>
-
+      <Resumenes contenido={[{
+        "mensaje": "Una variable guarda cualquier dato para ser usado mas adelante, este puede cambiar su valor a medida que abanza el programa.",
+        "lenguage": "Sintaxis",
+        "codigo": `nombre = "Juanito Alcachofa";
+edad = 15;
+mayor = false;
+genero = "M";
+dinero = 34.05;`
+      }]}/>
       <main>
 
         <h1>variables</h1>
