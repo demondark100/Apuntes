@@ -1,10 +1,18 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
 import ReactCode from "../../../../componentes/lenguajes/React";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function SintaxisJsxReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con jsx evitamos usar DOM para seleccionar elemento por elemento y hacemos que los datos puedan cambiar de forma dinamica a medida que se actualizar los datos.",
+        "lenguage": "ReactCode",
+        "codigo": `{/*Una pequeña representacion de como funciona jsx*/}
+let nombre = "Chester";
+<p>{nombre}</p>`
+      }]}/>
       <main>
         <h1>Sintaxis jsx</h1>
         <Conseptos texto={`Eeact como tal es como poner html css y javaScript en un solo archivo por ejemplo si queremos mostrar un valor de una variable normalmente seleccionariamos a la variable para poder dibujarlo en el DOM pero con jsx de react se facilita de mejor forma esta tarea.`}/>

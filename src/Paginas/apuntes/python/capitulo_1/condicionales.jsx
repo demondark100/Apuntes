@@ -3,10 +3,22 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function CondicionalesPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con las condicionales se toman desisiones en un programa.`,
+        "lenguage": "Python",
+        "codigo": `age = 18
+if age == 18:
+  print("Eres mayor justo en 18")
+elif age < 18:
+  print("Eres menor de edad")
+else:
+  print("Eres mayor de edad")`
+      }]}/>
       <main>
         <h1>Condicionales</h1>
         <Conseptos texto={`Aqui las condicionales tienen una sintaxis demasiado facil.`}/>

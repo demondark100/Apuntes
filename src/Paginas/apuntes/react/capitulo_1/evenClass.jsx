@@ -2,6 +2,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
 import { useState } from "react";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function EventClassReact() {
 
@@ -9,6 +10,9 @@ function EventClassReact() {
 
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto daremos funcionalidad a una app con POO pero es recomendable leer todo para entender mejor, ademas con Hooks es mas facil."
+      }]}/>
       <main>
         <h1>eventos(ES6)</h1>
         <Conseptos texto={`Los eventos de clase nos sirve para darle funcionalidad a un boton , trabajar con este tipo de eventos nos traera problemas con "this" para eso esque esta bind que es para que se pueda detectar los cambion de las funciones.`}/>

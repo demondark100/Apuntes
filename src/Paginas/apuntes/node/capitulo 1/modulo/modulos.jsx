@@ -2,6 +2,7 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import JavaScropt from "../../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import archivosImg from "./imagenes/archivos.png";
@@ -12,6 +13,29 @@ import ImagenLink from "../../../../../componentes/ImagenLink/imagenLink";
 function ModulosNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con los modulos separaremos funciones en distintos archivos para tener el codigo mas ordenado y legible.
+
+Archivo de modulo`,
+        "lenguage": "JavaScropt",
+        "codigo": `function saludo(nombre){
+  return \`hola ${"${nombre}"}\`
+}
+function saludoFijo(){
+  return \`Hola\`
+}
+module.exports.saludo = saludo;
+module.exports = {
+  saludoFijo: saludoFijo
+}`
+      },
+      {
+        "mensaje": "Archivo principal.",
+        "lenguage": "JavaScropt",
+        "codigo": `const modulos = require("./modulo.js");
+console.log(modulos.saludo("Humano"))
+console.log(modulos.saludoFijo())`
+      }]}/>
       <main>
         <h1>Modulos</h1>
         <Conseptos texto={`Los modulos nos ayuda a exportar e importar funcionalidades a nuestro codigo principal , esto es util para evitar hacer codigo en un solo archivo lo cual hace que el codigo sea escalable y facil de mantener.

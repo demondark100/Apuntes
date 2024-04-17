@@ -2,10 +2,22 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function EventsNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Estos eventos escuchan si algo ocurrio en la aplicacion.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const EventsEmitter = require("events");
+const manejoEventos = new EventsEmitter();
+manejoEventos.on("saludo",(nombre)=>{
+  console.log(\`el uuario ${"${nombre}"} saludo.\`)
+})
+manejoEventos.emit("saludo","Martin");
+`
+      }]}/>
       <main>
         <h1>Modulo de eventos</h1>
         <Conseptos texto={`Los eventos en Node.js son señales que indican que algo ha ocurrido en tu programa. Puedes emitir eventos cuando sucede algo importante, y otros componentes de tu programa pueden estar atentos a estos eventos y reaccionar en consecuencia. Esto facilita la comunicación y la coordinación entre diferentes partes de tu aplicación de forma asincrónica.`}/>

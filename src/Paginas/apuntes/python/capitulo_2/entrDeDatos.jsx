@@ -3,10 +3,17 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function EntrDatosPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con esto pediremos datos al usuario.`,
+        "lenguage": "Python",
+        "codigo": `nombre = input("¿Cual es tu nombre?: ")
+print(f"hola {nombre} ¡Bienvenido!")`
+      }]}/>
       <main>
         <h1>Entrada de datos</h1>
         <Conseptos texto={`Con esto pediremos datos al usuario para procesarlos y mostrarles un resultado , los inputs siempre devolveran una string por eso es que existen unos metodos para poder cambiar esos datos a numeros pero bueno empecemos.`}/>

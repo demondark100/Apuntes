@@ -3,10 +3,26 @@ import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/txt";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function RoutingExpressNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con express sera mas facil trabajar con las rutas.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const express = require("express");
+const app = express();
+const base = require("./base.json");
+
+app.get("/",(req,res)=>{
+  res.send(JSON.stringify(base.nombres))
+})
+const puerto = process.env.PORT || 3000;
+app.listen(puerto,()=>{
+  console.log(\`El servidor esta escuchando en el puerto ${"${puerto}"}...\`);
+})`
+      }]}/>
       <main>
         <h1>Routing con express</h1>
         <Conseptos texto={`Con express es mucho mas facil facil manejar las rutas y los metodos , evitamos hacer muchas condicionales.`}/>

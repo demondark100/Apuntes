@@ -2,6 +2,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
 import { Component } from "react";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 class Reloj extends Component {

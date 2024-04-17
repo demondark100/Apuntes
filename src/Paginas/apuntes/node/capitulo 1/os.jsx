@@ -2,11 +2,21 @@ import Footer from "../../../../componentes/menus/Footer";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Consola from "../../../../componentes/consola/consola";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 function OsNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con "Os" vamos a trabajar y ver las caracteristicas de nuestro sistema operativo.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const os = require("os");
+os.type(); // ver nuestro sistema operativo.
+os.homedir(); // ver directorio principal.
+os.upTime(); // Cuanto tiempo paso desde que inicio el sistema operativo.
+os.userInfo(); // ver info del usuario.`
+      }]}/>
       <main>
         <h1>Os</h1>
         <Conseptos texto={`Con OS(operating system) vamos a trabajar con el sistema operativo.

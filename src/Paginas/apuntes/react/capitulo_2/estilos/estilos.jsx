@@ -4,6 +4,7 @@ import ReactCode from "../../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./estilos.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 import React , {useState} from "react";
 
@@ -66,6 +67,32 @@ function ModulosEstilos(){
 function EstilosReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Ahora para usar estilos en react debemos importar el archivo css para que se apliquen estilos en la interfaz
+
+archivo css:`,
+        "lenguage": "Css",
+        "codigo": `.contenedor{
+  background-color: #000;
+  color: #fff;
+}`
+      },
+      {
+        "mensaje": "Archivo react",
+        "lenguage": "ReactCode",
+        "codigo": `import React , {useState} from "react";
+import "./estilos.css";
+function Estilos(){
+  return(
+    <div className="contenedor">
+      <p>elemento</p>
+    </div>
+  )
+}
+
+
+export default Estilos;`
+      }]}/>
       <main>
         <h1>Estilos</h1>
         <Conseptos texto={`Para dar estilos a un componente tenemos distintas formas de hacerlo.`}/>

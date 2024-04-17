@@ -2,10 +2,44 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ProprsReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Los props nos sirven para pasar parametros a los componentes y asi sean dinamicos."
+      },
+      {
+        "mensaje": "Componente que recibe los props.",
+        "lenguage": "ReactCode",
+        "codigo": `function Componente(props){
+  return(
+    <div>
+      <h1>{props.titulo}</h1>
+      <p>{props.concepto}</p>
+    </div>
+  )
+}
+export default Componente;`
+      },{
+        "mensaje": "Componente principal que importa al componente.",
+        "lenguage": "ReactCode",
+        "codigo": `import React from 'react';
+import Componente from "./ruta";
+function App() {
+  return (
+    <div>
+      <Componente 
+        titulo={"Mi titulo"}
+        concepto={"Pasando parametros a componentes."}
+      />
+    </div>
+  );
+}
+
+export default App;`
+      }]}/>
       <main>
         <h1>propiedades props</h1>
         <Conseptos texto={`Con las propiedades podemos hacer que un componente sea dinamico para poder modificar como queramos estos reciben cualquier tipo de dato:

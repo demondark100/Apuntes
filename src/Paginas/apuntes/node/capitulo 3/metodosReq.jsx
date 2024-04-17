@@ -4,6 +4,7 @@ import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Txt from "../../../../componentes/lenguajes/Txt";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import imagenUrl1 from "./imagenes/url.png";
@@ -15,6 +16,21 @@ import enviarSolicitud from "./imagenes/enviarSolicitud.png";
 function MetodosReqNode() {
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con estos metodos vamos a manejar nuestros servidores.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const http = require("http");
+const servidor = http.createServer((req,res)=>{
+  console.log(req.url); // mostrar la url de la pagina.
+  console.log(req.method); // ver que peticion hace el cliente.
+  console.log(req.headers); // ver informacion de
+  res.end("metodos de req");
+});
+
+servidor.listen(3000,()=>{
+  console.log("abriendo servidor");
+})`
+      }]}/>
       <main>
         <h1>Metodos de req</h1>
         <Conseptos texto={`Aqui veremos los metodos mas importantes / mas usados en este modulo.`}/>

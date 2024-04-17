@@ -3,11 +3,41 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Json from "../../../../componentes/lenguajes/Json";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function RenEleReact() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto podemos renderizar el contenido de un arreglo y reflejar eso en la interfaz.",
+        "lenguage": "ReactCode",
+        "codigo": `import {Component} from "react";
+
+export class RenderizarE extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      frutas: ["manzana","pera","naranja","durazno"]
+    }
+  }
+
+  render(){
+    return(
+      <div>
+        <h3>frutas</h3>
+        <ol>
+          {
+            this.state.frutas.map((i,indice)=>(
+              <li key={indice}>{i}</li>
+            ))
+          }
+        </ol>
+      </div>
+    )
+  }
+}`
+      }]}/>
       <main>
         <h1>renderizado de elementos</h1>
         <Conseptos texto={`Nosotros podemos renderizar arreglos pero a la hora de ejecutar habra una pequeña advertencia de que necesita un "key" que seria un equivalente al "id" en html esto es para poder buscar de mejor forma en la virtual dom.`}/>

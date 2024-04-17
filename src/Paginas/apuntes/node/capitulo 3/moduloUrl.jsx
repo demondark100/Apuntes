@@ -2,10 +2,21 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ModuloUrlNode() {
-  return (  
+  return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Este modulo sirve para trabajar con las url.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const url = new URL("https://www.ejemplo.com/cursos?tema=programacion&lenguage=javascript");
+console.log(url); // ver todos los datos de la url
+console.log(url.hostname); // ver el hostName de la url
+console.log(url.pathname); // ver el pathname de la url
+console.log(url.searchParams); // ver los parametros de url
+console.log(url.searchParams.get("tema")); // acceder a un parametro de url`
+      }]}/>
       <main>
         <h1>Modulo url</h1>
         <Conseptos texto={`Con este modulo vamos a poder trabajar con las url en este caso crearemos una url imaginaria para poder trabajar con ella.`}/>

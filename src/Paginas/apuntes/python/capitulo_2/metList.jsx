@@ -3,10 +3,26 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function MetListPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Los arreglos tambien tienen metodos muy itules`,
+        "lenguage": "Python",
+        "codigo": `arr = ["a","b","c","d","e"]
+arr.__len__() # longitud del arreglo
+len(arr) # longitud del arreglo
+arr.append("f") # agregar mas elementos a un arreglo
+arr.insert(1,"ab") # agregar un elemento a un arreglo en una posision asicnada
+arr.extend(["f","g"]) # agregar mas de un elemento a un arreglo
+arr.pop(2) # eliminar un elemento del arreglo en la posision que indiquemos
+arr.remove("d") # elimina un elemento pero por su tipo de dato en este caso string "d"
+arr.clear() # eliminar todos los elementos de un arreglo
+arr.sort() # ordena un arreglo alphabeticamente o numericamente
+arr.reverse() # poner en reversa el orden de los elementos de un arreglo`
+      }]}/>
       <main>
         <h1>Metodos de listas</h1>
         <Conseptos texto={`Al igual que las cadenas los arreglos tambien tienen sus metodos propieos , estos tambien reciben la funcion dir(solo es un recordatorio).`}/>

@@ -3,10 +3,24 @@ import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function PromesasNode() {
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Una promesa sirve para manejar tareas asincronas.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const promesa = new Promise((resolve,reject)=>{
+  const estado = Math.random() < 0.5;
+  estado ?
+    resolve("promesa exitosa") :
+    reject("promesa rechazada")
+})
+const aceptado=(aceptado)=>console.log(aceptado)
+const rechazado=(rechazado)=>console.log(rechazado)
+promesa.then(aceptado,rechazado)`
+      }]}/>
       <main>
         <h1>Promesas</h1>
         <Conseptos texto={`Este consepto es de javaScript nativo sin embargo aremos un pequeño repazo.

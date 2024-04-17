@@ -3,10 +3,19 @@ import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function TimersNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con esto ejecutaremos un bloque de codigo en un tiempo determinado.`,
+        "lenguage": "JavaScropt",
+        "codigo": `setTimeout(()=>console.log("hola"),1000);
+let tiempo = setInterval(()=>{
+  true ? clearInterval(tiempo) : null;
+},1000)`
+      }]}/>
       <main>
         <h1>Modulo timers</h1>
         <Conseptos texto={`Esto ya lo vimos en javaScript pero un repaso no viene mal asi que volvamos a ver esta funcion que sirve para poner un temporizador para que se ejecute un codigo en determinado tiempo.

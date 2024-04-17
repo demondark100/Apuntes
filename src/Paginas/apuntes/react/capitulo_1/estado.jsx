@@ -4,6 +4,7 @@ import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
 import { useState } from "react";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 
@@ -19,6 +20,34 @@ function EstadoReact() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con los estados manejaremos las variables de forma dinamica y se vveran reflejados en la interfaz.",
+        "lenguage": "ReactCode",
+        "codigo": `import { Component } from "react";
+
+export class Estado extends Component {
+  constructor (props){
+    super(props)
+    this.state = {
+      contador: 0
+    }
+    setInterval(() => {
+      this.setState({
+        contador: this.state.contador + 1
+      })
+    }, 1000);
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>Estado</h1>
+        <p>{this.state.contador}</p>
+      </div>
+    )
+  }
+}`
+      }]}/>
       <main>
         <h1>Estado</h1>
         <Conseptos texto={`el estado es el conjunto de variables que intervienenen en el componente

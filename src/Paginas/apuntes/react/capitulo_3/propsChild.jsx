@@ -2,10 +2,41 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function PropsChildReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con esto usaremos un componente como si fuese un elemento html nativo.
+
+componente`,
+        "lenguage": "ReactCode",
+        "codigo": `export function Componente(children){
+  return(
+    <div>
+      <h5>hola este es el componente</h5>
+      <div>
+        {props.children}
+      </div>
+    </div>
+  )
+}`
+      },
+      {
+        "mensaje": "Componente principal",
+        "lenguage": "ReactCode",
+        "codigo": `import Componente from "./Componente";
+export default function App(){
+  return(
+    <div>
+      <Componente>
+        <p>Elementos</p>
+      </Componente>
+    </div>
+  )
+}`
+      }]}/>
       <main>
         <h1>props.children</h1>
         <Conseptos texto={`los props.children nos sirve para poder poner contenido en un componente pero no desde el componente mismo.

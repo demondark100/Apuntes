@@ -3,6 +3,7 @@ import ReactCode from "../../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./formularios.css";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 import React from "react";
 import { useState,useEffect } from  "react";
@@ -429,6 +430,61 @@ function FormulariosReacr(){
 
   return(
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con react los formularios son muy similares a html y js nativo pero en el caso de react se hacen con vatiables de estado para cambiar los datos de forma dinamica.",
+        "lenguage": "ReactCode",
+        "codigo": `import React , {useState} from "react";
+
+function EjercicioObtimizado(){
+
+  const [form,setForm] = useState({});
+  
+  const manejarCambio=(e)=>{
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    })
+  }
+  const manejarCheck=(e)=>{
+    setForm({
+      ...form,
+      [e.target.name]: e.target.checked
+    })
+  }
+
+  return(
+    <div>
+      <h1>encuesta de trabajo</h1>
+      <form onSubmit={avisar}>
+        <label htmlFor="nombres">nombres completos</label>
+        <input 
+          id="nombres"
+          type="text"
+          name="nombres"
+          placeholder="nombre completo"
+          onChange={manejarCambio}
+        />
+        <label htmlFor="apellidos">apellidos</label>
+        <input 
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          placeholder="apellidos"
+          onChange={manejarCambio}
+        />
+        <label htmlFor="condicion">aseptas no se que aseptaras pero lo aseptas?</label>
+        <input
+          id="condicion"
+          type="checkbox"
+          name="condicion"
+          onChange={manejarCheck}
+        />
+      </form>
+    </div>
+  )
+}
+export default EjercicioObtimizado;`
+      }]}/>
       <main>
         <h1>Formularios</h1>
         <Conseptos texto={`React nos da unas herramientas para poder trabajar con los formularios.

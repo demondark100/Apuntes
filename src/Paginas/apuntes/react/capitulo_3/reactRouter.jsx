@@ -2,10 +2,54 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Terminal from "../../../../componentes/lenguajes/Terminal";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ReactRouterDom() {
-  return (  
+  return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con esto haremos las rutas en react.
+
+Instalacion`,
+        "lenguage": "Terminal",
+        "codigo": `npm install react-router-dom`
+      },
+      {
+        "mensaje": "Crear las rutas.",
+        "lenguage": "ReactCode",
+        "codigo": `import { 
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path='/About' element={<div>otro</div>} />
+        <Route path='/' element={<div>principal</div>} />
+        <Route path='/Users' element={<div>usuarios</div>} />
+      </Routes>
+    </Router>
+  )
+}
+export default App;`
+      },
+      {
+        "mensaje": "Redireccionar a una ruta.",
+        "lenguage": "ReactCode",
+        "codigo": `import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+export default function Home(){
+  return(
+    <div>
+      <NavLink className={(data)=>data.isActive ? "active":"desactive"} to="About">otro</NavLink>
+      <Link to="Users">usuarios</Link>
+    </div>
+  )
+}`
+      }]}/>
       <main>
         <h1>React router dom</h1>
         <Conseptos texto={`react router dom nos sirve para enrutar a otras secciones de nuestra aplicacion porque en react ya no podemos andar creando otro html para ir a otra seccion de nuestra pagina.`}/>

@@ -2,10 +2,41 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function FsNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con fs (file system) trabajaremos con archivos.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const fs = require("fs");
+
+// leer archivo de texto
+fs.readFile("./app.html","utf-8",(error,contenido)=>{
+  if(error){throw error}
+})
+
+// cambiar el nombre a un archivo.
+fs.rename("./app.html","main.html",(error)=>{
+  if(error){throw error}
+})
+
+// agregar contenido al final de un archivo
+fs.appendFile("./app.js",\`contenido\`,(error)=>{
+  if(error){throw error}
+})")
+
+// crear o reemplazar un archivo y ponerle un contenido.
+fs.writeFile("app.js",\`contenido\`,(error)=>{
+  if(error){throw error}
+})
+
+// eliminar archivo.
+fs.unlink("./app.html",(error)=>{
+  if (error) {throw error}
+});`
+      }]}/>
       <main>
         <h1>fs (file system)</h1>
         <Conseptos texto={`Este modulo nos sirve para leer archivos del sistema , en este caso vamos a leer un archivo "html".`}/>

@@ -2,10 +2,22 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Footer from "../../../../componentes/menus/Footer";
 import Consola from "../../../../componentes/consola/consola";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ProcessNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con esto veremos informacion del sistema operativo, en este caso usaremos process para recibir parametros en nuestra aplicacion.
+
+process.argv es un arreglo que recibe argumentos y los guarda en un arreglo y para acceder a los argumentos se debe acceder desde la posision 2.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const argumentos = process.argv;
+function Suma(n1,n2){
+  return n1 * n2;
+}
+console.log(Suma(argumentos[2],argumentos[3]))`
+      }]}/>
       <main>
         <h1>process</h1>
         <Conseptos texto={`Este objeto es muy extenso y nos sirve para ver nuestro entorno de desarrollo.`}/>

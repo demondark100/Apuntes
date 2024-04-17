@@ -10,6 +10,7 @@
   height: 100vh;
 }
 body{
+  position: relative;
   background-color: #181717;
   color: #eafdcb;
   transition-duration: .5s;

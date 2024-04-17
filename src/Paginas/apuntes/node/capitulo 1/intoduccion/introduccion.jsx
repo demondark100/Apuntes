@@ -2,6 +2,7 @@ import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../../componentes/menus/Footer";
 import ImagenLink from "../../../../../componentes/ImagenLink/imagenLink";
 import Consola from "../../../../../componentes/consola/consola";
+import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import paginaNode from "./imagenes/paginaNode.png";
@@ -15,6 +16,13 @@ import JavaScropt from "../../../../../componentes/lenguajes/JavaScript"
 function IntroduccionNode() {
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Esto es un entorno de ejecucion para javaScript.",
+        "lenguage": "Terminal",
+        "codigo": `node --version  # ver la version de node.js instalada
+node            # escribir codigo js en la terminal de node.
+node app.js     # ejecutar un archivo completo de js.`
+      }]}/>
       <main>
         <h1>Introduccion a Node.js</h1>
         <Conseptos texto={`Node.js no es un lenguage de programacion , es un entorno de ejecucion de codigo javaScript osea que no necesitara del navegador para ser ejecutado.

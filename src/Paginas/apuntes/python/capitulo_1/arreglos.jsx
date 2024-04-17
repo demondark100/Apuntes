@@ -3,10 +3,23 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ArreglosPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con esto vamos a guardar varios datos en una variable, python tiene varias formas de guardar una lista.`,
+        "lenguage": "Python",
+        "codigo": `arreglo = ["user1","user2","user3"]
+tupla = ("user1","user2","user3")
+conjunto = {"user1","user2","user3"}
+diccionario = {
+  "name": "Jorge",
+  "lastName": "el curioso",
+  "age": 3
+}`
+      }]}/>
       <main>
         <h1>Datos Compuestos</h1>
         <Conseptos texto={`Estos son los arreglos solo que en este lenguaje hay distintos tipos de arreglos por asi decirlo.`}/>

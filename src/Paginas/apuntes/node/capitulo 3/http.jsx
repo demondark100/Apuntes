@@ -1,9 +1,19 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function HttpNode() {
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Http tiene varios protocolos de respuesta para indicar al cliente que paso con su peticion.`,
+        "lenguage": "Txt",
+        "codigo": `100-199 son respuestas informativas.
+200-299 Respuestas satisfactorias.
+300-399 Redirecciones.
+400-499 Errores de los clientes.
+500-599 Errores de los servidores.`
+      }]}/>
       <main>
         <h1>http</h1>
         <Conseptos texto={`Esto es la comunicacion entre el cliente y el servidor , en este caso el cliente es el navegador esto porque el navegador hace las solicitudes al servidor para trabajar con el.

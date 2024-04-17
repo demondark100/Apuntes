@@ -1,14 +1,44 @@
 import Footer from "../../../../componentes/menus/Footer";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
-import Txt from "../../../../componentes/lenguajes/Txt";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Json from "../../../../componentes/lenguajes/Json";
 import Consola from "../../../../componentes/consola/consola";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function JsonNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con json comunicaremos el backend con el front-end`,
+        "lenguage": "Json",
+        "codigo": `{
+  "materia": "matematica",
+  "alumnos": 25
+}`
+      },
+      {
+        "lenguage": "Json",
+        "codigo": `[
+  {
+    "materia": "matematica",
+    "alumnos": 25
+  },
+  {
+    "materia": "comunicación",
+    "alumnos": 30
+  }`
+},
+      {
+        "mensaje": `Ahora para descerializar y serializar se usa.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const datos = {
+  "materia": "matematica",
+  "alumnos": 25
+}
+const enviar = JSON.stringify(datos); // serializar
+const trabajar = JSON.parse(enviar); // descerializar`
+      }]}/>
       <main>
         <h1>Json</h1>
         <Conseptos texto={`Esto lo vimos en el curso de javaScript pero aqui tambien lo haremos , json es para poder trabajar con informacion , json no es un lenguage de programacion sin embargo su sintaxis es similar a un objeto de javaScript.

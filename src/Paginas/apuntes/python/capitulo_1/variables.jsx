@@ -2,10 +2,19 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function VariablesPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Una variable guarda todo tipo de datos para ser reutilizados despues.`,
+        "lenguage": "Python",
+        "codigo": `juego = "left 4 dead 2"
+desarrolladora = "Valve"
+jugadores = 25350
+servidoresActivo = true`
+      }]}/>
       <main>
         <h1>Variables</h1>
         <Conseptos texto={`Como ya sabemos las variables guardan datos como numeros , strings , etc,

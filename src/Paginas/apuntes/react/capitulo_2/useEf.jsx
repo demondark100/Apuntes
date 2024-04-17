@@ -2,6 +2,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 import {React,useState,useEffect} from "react"
 
@@ -125,6 +126,30 @@ function PokemonApi() {
 function UseEfReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con hooks es mucho mas sensillo hacer el manejo del ciclo de vida.",
+        "lenguage": "ReactCode",
+        "codigo": ` import {React,useState,useEffect} from "react"
+
+function Scroll(){
+  const [scrollY,setScrollY] = useState(0);
+  useEffect(()=>{
+    const mostrarScroll=()=> setScrollY(window.pageYOffset);
+    window.addEventListener("scroll",mostrarScroll)
+    return()=>{
+      window.removeEventListener("scroll",mostrarScroll)
+    }
+  } , [scrollY])
+
+  return(
+    <div>
+      <h1>scroll nav</h1>
+      <p>el scrolleo y es de: {scrollY}px</p>
+    </div>
+  )
+}
+export default Scroll;`
+      }]}/>
       <main>
         <h1>useEffect</h1>
         <h2>tiempo de vida en los compinentes</h2>

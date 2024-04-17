@@ -2,10 +2,51 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ComponentesReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Un componente es como una funcon osea se puede reurilizar cuantas veces queramos."
+      },{
+        "mensaje": "Exportar componentes tanto de clase como hook",
+        "lenguage": "ReactCode",
+        "codigo": `import { component } from "react";
+
+function Componente1(){
+  return <h1>importar esto xd</h1>
+}
+
+class Componente2 extends component{
+  render(){
+    return <h2>importa esto tambien</h2>
+  }
+}
+
+export default Componente1;
+export default Componente2;`
+      },{
+        "mensaje": "Importar un componente.",
+        "lenguage": "ReactCode",
+        "codigo": `import React from 'react';
+import Componente1 from "./ruta";
+import Componente2 from "./ruta";
+
+function App() {
+  return (
+    <div>
+      <h1>Hello, React!</h1>
+      
+      <Componente1 />
+      <Componente2 />
+
+    </div>
+  );
+}
+
+export default App;`
+      }]}/>
       <main>
         <h1>componentes</h1>
         <Conseptos texto={`Los componentes son muy utiles para poder usar un codigo que ya habiamos escrito anteriormente sin necesidad de volver a escribirlo.

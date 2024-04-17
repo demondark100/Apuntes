@@ -2,6 +2,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 import React from "react";
 import { useState } from "react";
@@ -29,6 +30,26 @@ function Hooks(){
 function HoksReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Esto es mas facil de usar en reat , los hooks tambien reducen mucho codigo y es mas legible y entendible que trabajar con componentes de clase.",
+        "lenguage": "ReactCode",
+        "codigo": `import React from "react";
+import { useState } from "react";
+function Hooks(){
+  const [number,setNumber] = useState(0);
+  const sumar=()=>setNumber(number + 1);
+
+  return(
+    <div>
+      <h5>incrementar</h5>
+      <p>{number}</p>
+      <button onClick={sumar}>+</button>
+    </div>
+  )
+}
+
+export default Hooks;`
+      }]}/>
       <main>
         <h1>hooks</h1>
         <Conseptos texto={`Los hooks son una version mejorada de los componentes de clase por asi decirlo ya que volvemos a las funciones , y es muy parecida a las bases de javaScript y ademas escribimos menos codigo ya que se reduce demasiado con las funciones.

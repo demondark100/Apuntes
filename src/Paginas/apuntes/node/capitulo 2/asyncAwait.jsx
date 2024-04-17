@@ -3,10 +3,30 @@ import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function AsyncAwaitNode() {
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Async Await hace que una funcion ser vuelva sincrona osea que ejecuta un bloque de codigo en orden por mas que el tiempo de respuesta varie.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const probando = ()=>{
+  return new Promise((resolve)=>{
+    setTimeout(()=>{
+      console.log("probando...")
+      resolve();
+    },2000)
+  })
+}
+const ejecucion=async()=>{
+  console.log("hola mundo");
+  await probando();
+  console.log("adios mundo");
+}
+
+ejecucion()`
+      }]}/>
       <main>
         <h1>async y await</h1>
         <Conseptos texto={`Este tema tambien lo vimos en javaScript nativo pero lo veremos aqui tambien.`}/>

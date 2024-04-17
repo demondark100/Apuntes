@@ -1,6 +1,7 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 import React from "react";
 import { useRef } from "react";
@@ -40,6 +41,25 @@ function MenuHook() {
 function RefReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con las referencias podemos seleccionar un elemento del dom es como usar querySelector de js nativo.",
+        "lenguage": "ReactCode",
+        "codigo": `import { React, useRef } from "react";
+function MenuReact() {
+  const fondo = useRef();
+  const cambio=(e)=>{
+    let color = prompt("¿Que color de fondo tendra el texto? usa hexadesimal.");
+    fondo.current.style.backgroundColor = color;
+  }
+  return (
+    <div>
+      <p ref={fondo}>fondo</p>
+      <button onClick={cambio}>cambiar color</button>
+    </div>
+  )
+}
+export default MenuReact;`
+      }]}/>
       <main>
         <h1>Referencias</h1>
         <Conseptos texto={`Las referencias nos sirve para manipular los objetos del DOM con esto es que nos recomienda react trabajar , las referencias no van a volver a renderizar los elementos como si lo haria un estado con lo cual es muy util por ejemplo para hacer un menu.
@@ -104,8 +124,7 @@ export default function App(){
         <Conseptos texto={`Antes de continuar debemos saber que con ref ya no se usa target se usa "current" para acceder a las propiedades.
 amtes: evento.target.propiedad;
 ahora: evento.current.propiedad;`}/>
-        <ReactCode codigo={`import React from "react";
-import { useRef } from "react";
+        <ReactCode codigo={`import { React, useRef } from "react";
 
 
 function MenuReact() {

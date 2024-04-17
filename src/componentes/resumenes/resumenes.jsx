@@ -14,6 +14,7 @@ import ReactCode from "../lenguajes/React";
 import Python from "../lenguajes/Python";
 import Sintaxis from "../lenguajes/Sintaxis";
 import Json from "../lenguajes/Json";
+import Terminal from "../lenguajes/Terminal";
 
 function Resumenes({
   contenido
@@ -29,7 +30,8 @@ function Resumenes({
     ReactCode: ReactCode,
     Python: Python,
     Sintaxis: Sintaxis,
-    Json: Json
+    Json: Json,
+    Terminal: Terminal
   }
 
   return (  

@@ -3,6 +3,7 @@ import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
 import { useState } from "react";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function EventEs7React() {
   
@@ -10,6 +11,35 @@ function EventEs7React() {
 
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Esto es una forma mas sensilla de programar con POO en react porque se evita hacer "bin" a cada variable de estado, pero con hooks sigue siendo mas facil.`,
+        "lenguage": "ReactCode",
+        "codigo": `import { Component } from "react";
+
+export default class Mejorar extends Component {
+  state = {
+    contador: 0
+  }
+
+  incrementar = () =>{
+    this.setState({
+      contador: this.state.contador + 1
+    })
+  }
+
+  render() {
+    return(
+      <div>
+        <h2>incremento</h2>
+        <p>{this.state.contador}</p>
+        <nav>
+          <button onClick={this.incrementar}>+</button>
+        </nav>
+      </div>
+    )
+  }
+}`
+      }]}/>
       <main>
         <h1>eventos(ES7)</h1>
         <Conseptos texto={`Con la llegadade ES7 ya no es necesario usar "constructor" para poder definir this ya que podemos hacerlo en menos codigo , para eso usaremos las funciones flecha que simplificaran el bindeo.`}/>

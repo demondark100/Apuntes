@@ -4,6 +4,7 @@ import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import urlImg from "./imagenes/url.png";
@@ -12,6 +13,17 @@ import resultado from "./imagenes/resultado.png";
 function ModuloHttpNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con este modulo abriremos nuestro primer servidor.",
+        "lenguage": "JavaScropt",
+        "codigo": `const http = require("http");
+const servidor = http.createServer((req,res)=>{
+  res.end("hola mundo"); // finalizar proceso y mandar respuesta al cliente.
+})
+servidor.listen(3000,()=>{
+  console.log("iniciando servidor...");
+})`
+      }]}/>
       <main>
         <h1>Modulo http</h1>
         <Conseptos texto={`Este modulo nos permitira crear un servidor que escuche las peticiones que hagamos con el cliente , para empezar:`}/>

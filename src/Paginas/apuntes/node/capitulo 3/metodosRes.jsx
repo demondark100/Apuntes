@@ -4,6 +4,7 @@ import Consola from "../../../../componentes/consola/consola";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import estadoPage from "./imagenes/estadoPage.png";
@@ -11,6 +12,23 @@ import estadoPage from "./imagenes/estadoPage.png";
 function MetodosResNode() {
   return (
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con estos metodos manejaremos las espuestas del `,
+        "lenguage": "JavaScropt",
+        "codigo": `const http = require("http");
+const servidor = http.createServer((req,res)=>{
+  console.log(res.statusCode);
+  res.statusCode = 404: // cambiar estado de respuesta a not found
+  console.log(res.statusCode); // ver el estado de respuesta
+  res.setHeader("content-type","application/json"); // configurar cabecera.
+  console.log(res.getHeaders()); // ver elementos de la cabecera
+  res.end("metodos de req");
+});
+
+servidor.listen(3000,()=>{
+  console.log("abriendo servidor");
+})`
+      }]}/>
       <main>
         <h1>Metodos de res</h1>
         <Conseptos texto={`Ahora veremos los metodos mas usados en la s repuestas del servidor.

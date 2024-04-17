@@ -1,10 +1,32 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function RenConReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto renderizaremos un componente o un elemento Segun cual sea la decicion que se tome, esto se vera reflejado en la interfaz.",
+        "lenguage": "ReactCode",
+        "codigo": `import {Component} from "react";
+export class Condicional extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      sesion: true
+    }
+  }
+  render(){
+    return(
+      (this.state.sesion) ? 
+        <p>Sesion iniciada</p> 
+        : 
+        <p>No se ha iniciado sesion</p>
+    )
+  }
+}`
+      }]}/>
       <main>
         <h1>Renderizado Condicional</h1>
         <Conseptos texto={`Con esto mostraremos un componente segun sea en la pantalla de hecho este tipo de estructura lo veras a menudo en proyectos react.

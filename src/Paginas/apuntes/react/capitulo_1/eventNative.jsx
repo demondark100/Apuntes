@@ -2,6 +2,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ReactCode from "../../../../componentes/lenguajes/React";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 
@@ -43,6 +44,33 @@ export class MostarE extends Component {
 function EventNativeReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Con esto mostraremos los eventos de react y los elementos nativos de javaScript.",
+        "lenguage": "ReactCode",
+        "codigo": `import {Component} from "react";
+export class MostrarE extends Component {
+  eventosReact=(e)=>{
+    console.log(e);  
+    console.log(e.target);
+  }
+  eventosNativos=(e)=>{
+    console.log(e.nativeEvent); 
+    console.log(e.nativeEvent.target);
+  }
+
+  render() {
+    return(
+      <div>
+        <h4>mostrar eventos de reat y nativos</h4>
+        <nav>
+          <button onClick={this.eventosReact}>eventos react</button>
+          <button onClick={this.eventosNativos}>eventos nativos javaScript</button>
+        </nav>
+      </div>
+    )
+  }
+}`
+      }]}/>
       <main>
         <h1>Eventos Nativos, Sintéticos & Personalizados</h1>
         <Conseptos texto={`Nosotros podemos acceder a los eventos que react obtimizo para los navegadores pero tambien podemos acceder a los eventos nativos de javaScript.`}/>

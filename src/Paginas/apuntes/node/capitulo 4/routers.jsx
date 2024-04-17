@@ -1,13 +1,37 @@
 import Footer from "../../../../componentes/menus/Footer";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
-import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/txt";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 function RoutersNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Esto evita que se repita una ruta varias veces.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const express = require("express");
+const app = express();
+const base = require("./base.js");
+
+const ruta = express.Router();
+app.use("/animes/api",ruta)
+
+ruta.get("/",(req,res)=>{
+  res.send("ruta principal");
+})
+ruta.get("/shonen",(req,res)=>{
+  return res.send(JSON.stringify(base.animes.shonen))
+})
+ruta.get("/isekai",(req,res)=>{
+  return res.send(JSON.stringify(base.animes.isekai))
+})
+const PUERTO = process.env.PORT || 8080;
+app.listen(PUERTO,()=>{
+    console.log(\`El servidor esta escuchando en el puerto ${"${PUERTO}"}...\`);
+})`
+      }]}/>
       <main>
         <h1>Routers</h1>
         <Conseptos texto={`Al momento de trabjar con las ruta hay veces que se repite mucho una ruta principal en la funcion lo cual puede hacer que el codigo sea poco legible por eso llego "Router" para solucionar ese problema.`}/>

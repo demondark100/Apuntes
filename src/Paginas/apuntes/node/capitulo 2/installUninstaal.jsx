@@ -4,6 +4,7 @@ import Consola from "../../../../componentes/consola/consola";
 import Json from "../../../../componentes/lenguajes/Json";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 import imagenCarpetas from "./imagenes/installNpmArchivos.png";
@@ -11,6 +12,13 @@ import imagenCarpetas from "./imagenes/installNpmArchivos.png";
 function InstallUninstallNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Para el desarrollo normalemente se suele instalar dependencias para nuestros proyectos para hcer mas legible nuestro codigo por ejemplo express para facilitar el uso del desarrollo de servidores.`,
+        "lenguage": "Terminal",
+        "codigo": `npm install express  # instalar una dependencia.
+npm install express@1.15.1   # instalar una version en especifico de una dependencia.
+npm uninstall express   # desinstalar una dependencia.`
+      }]}/>
       <main>
         <h1>instalar y desinstalar paquetes con node.js</h1>
         <Conseptos texto={`Nosotros al desarrollar una aplicacion normalmente usaremos muchos paquetes que nos facilitaran mucho las cosas en este ejemplo trabajaremos con express que nos ayuda a trabajar con servidores.`}/>

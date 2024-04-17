@@ -2,11 +2,48 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import JavaScropt from "../../../../componentes/lenguajes/JavaScript";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
-import JavaScriptBasico from "../../javaScript/capitulo_1/javaScriptBasico/javaScriptBasico";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ParametrosExNode() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Con los parametros evitaremos hacer demasiadas peticiones.`,
+        "lenguage": "JavaScropt",
+        "codigo": `const express = require("express");
+const app = express();
+// base de datos,
+const base = require("./base.js");
+
+app.get("/",(req,res)=>{
+  res.send(JSON.stringify(base.animes));
+})
+app.get("/api/animes",(req,res)=>{
+  res.send(JSON.stringify(base.animes))
+})
+app.get("/api/animes/shonen/:anime",(req,res)=>{
+  const anime = req.params.anime;
+  const entregar = base.animes.shonen.filter(animeData=>animeData.titulo == anime)
+  if (entregar.length === 0) {
+    return res.status(404).send(\`No se ha encontrado ${"${anime}"}.\`)
+  }
+  res.send(JSON.stringify(entregar));
+})
+app.get("/api/animes/isekai/:anime",(req,res)=>{
+  const anime = req.params.anime;
+  const entregar = base.animes.isekai.filter(animeData=>animeData.titulo == anime)
+  if (entregar.length === 0) {
+    return res.status(404).send(\`No se ha encontrado ${"${anime}"}.\`)
+  }
+  res.send(JSON.stringify(entregar));
+})
+
+
+const PUERTO = process.env.PORT || 8080;
+app.listen(PUERTO,()=>{
+    console.log(\`El servidor esta escuchando en el puerto ${"${PUERTO}"}...\`);
+})`
+      }]}/>
       <main>
         <h1>Parametros url</h1>
         <Conseptos texto={`Ahora si queremos obtener datos de algo en especifico seria muy tedioso crear una peticion para cada cosa , usaremos la base de datos anterior como ejemplo.`}/>

@@ -1,10 +1,29 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
 import Terminal from "../../../../componentes/lenguajes/Terminal";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function CreacionReact() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": "Crear una app de react con create-react-app.",
+        "lenguage": "Terminal",
+        "codigo": `#crear app de react
+npx create-react-app mi-app
+# iniciar servidor
+npm start`
+      },
+      {
+        "mensaje": "Crear una app de react con vite.",
+        "lenguage": "Terminal",
+        "codigo": `# crear aplicacion de react
+npm create vite@latest
+# instalar dependencias
+npm install
+# iniciar servidor
+npm run dev`
+      }]}/>
       <main>
         <h1>creacion de react</h1>
         <Conseptos texto={`Para poder crear una aplicacion de react necesitamos de {node} para poder usar esta libreria.
@@ -28,7 +47,6 @@ Una vez se creo el proyecto debes poner.`}/>
         <Conseptos texto={`Esto para que se instalen las dependencias de react.
 Luego para correr el servidor local debemos ejecutar el comando.`}/>
           <Terminal codigo={`npm run dev`}/>
-        <Conseptos />
       </main>
       <Footer/>
     </>

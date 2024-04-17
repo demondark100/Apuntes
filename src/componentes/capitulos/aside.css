@@ -1,13 +1,14 @@
 aside{
   pointer-events: stroke;
   height: 100vh !important;
-  background-color: #00000033;
-  backdrop-filter: blur(8px);
+  background-color: transparent;
+  backdrop-filter: blur(4px);
   padding: 8px;
   border-radius: 10px;
   min-height: 110px;
   overflow: auto;
   width: 70vw;
+  z-index: 5;
 }
 aside::-webkit-scrollbar{
   display: none;

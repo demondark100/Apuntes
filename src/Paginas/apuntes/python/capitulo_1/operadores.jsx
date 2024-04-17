@@ -3,10 +3,37 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function OperadoresPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Python maneja varias operaciones.`,
+        "lenguage": "Python",
+        "codigo": `# aritmeticas
+sumar = 5 + 5;
+restar = 15 - 5;
+dividir = 20 / 2;
+multiplicar = 5 * 5;
+resto = 45 % 2;
+
+# concatenar
+name1 = "Hinata";
+oracion = "hola " + name1 + " como va konoja?";
+name2 = "Azuna";
+oracion = f"hola {name2} como va la realidad virtual :v";
+
+# comparacion
+mayor = 15 > 8
+menor = 12 < 25
+igualdad = 25 == 25
+
+# logicos
+ambos = 25 < 35 and 87 > 12
+soloUno = 12 < 5 or 25 > 5
+distinto = !true`
+      }]}/>
       <main>
         <h1>Operadores</h1>
         <h2>operadores aritmeticos</h2>

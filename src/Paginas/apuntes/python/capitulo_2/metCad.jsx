@@ -3,10 +3,33 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function MetCadPy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Nos ayudan para trabajar con las cadenas de texto.`,
+        "lenguage": "Python",
+        "codigo": `cadena = "metodos";
+print(dir(cadena)); # ver todos los metodos de cadena.
+cadena.upper() # poner una string en mayusculas
+cadena.lower() # poner una string en minuscula
+cadena.capitalize() # poner el primer caracter en mayuscula
+cadena.find("to") # busca un caracter o caracteres, sino encuentra devuelve -1
+cadena.index("do") # busca un caracter o caracteres, sino encuentra detiene la ejecucion del programa
+numString = "25"
+numString.isnumeric() # detecta si una string tiene un numero
+cadena.isalpha() # detencata si una string es alphabetica, osea solo si hay desde la "a" a la "z"
+cadena.count("o") # ver cantas veces se repite un caracter o caracteres
+# saber longitud
+len(cadena)
+cadena.__len__()
+cadena.startswith("m") # saber si una cadena inicia con un caracter o caracteres.
+cadena.endsWith("os") # saber si una cadena finaliza con un caracter o caracteres.
+cadena.replace("metodos","method") # reemplazar una cadena por otra.
+cadena.split(" ") # serparar una cadena y convertirlo en un arreglo.`
+      }]}/>
       <main>
         <h1>Metodos de cadenas</h1>
         <Conseptos texto={`Los metodos de cadena nos sirven mucho porque nos permite modificar o comprobar muchas cosas de los caracteres.

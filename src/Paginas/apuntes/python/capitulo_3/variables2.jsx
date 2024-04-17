@@ -3,10 +3,18 @@ import Consola from "../../../../componentes/consola/consola";
 import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function Variables2Py() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Ahora veremos cosas extra de las variables.`,
+        "lenguage": "Python",
+        "codigo": `colores = ("negro","rojo","verde");
+color_1,color_2,color_3 = colores; # destructurar cada dato y guardar en variables distintas.
+nombres = "Maryn","Itsuki" # encapsular tuplas`
+      }]}/>
       <main>
         <h1>variables 2.0 (la venganza)</h1>
         <Conseptos texto={`Nosotros podemos desencapsular las variables por ejemplo tenemos un arreglo , tupla , conjunto ahora veremos como hacerlo.`}/>

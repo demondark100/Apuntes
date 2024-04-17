@@ -3,10 +3,21 @@ import Python from "../../../../componentes/lenguajes/Python";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
 import Consola from "../../../../componentes/consola/consola";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function DatSimplePy() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Python tiene una funcion para mostrar el resultado del codigo en pantalla, con esa funcion se mostraran los datos simples.`,
+        "lenguage": "Python",
+        "codigo": `print("a");
+print("hola mundo");
+print(15);
+print(20.8);
+print(false);
+print(true);`
+      }]}/>
       <main>
         <h1>Datos simples</h1>
         <Conseptos texto={`python al igual que los conseptos basicos de progranacion tiene tipos de datos por ejemplo:`}/>
