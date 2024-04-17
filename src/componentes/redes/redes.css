@@ -1,5 +1,6 @@
 .RedesContent{   /*contenedor principal*/
-  background-color: #2429249f;
+  background-color: #0000009c;
+  box-shadow: 0 0 15px 2px #ad0000;
   backdrop-filter: blur(8px);
   border-radius: 1000px;
   padding: 4px;
@@ -22,7 +23,7 @@
   transition-duration: .3s;
 }
 .RedesContentUl li a:hover{  /*links*/
-  box-shadow: 0 0 5px 5px #666161;
+  box-shadow: 0 0 5px 5px #6ddd03;
   transition-duration: .3s;
 }
 

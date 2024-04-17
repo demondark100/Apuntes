@@ -11,7 +11,8 @@ header{  /*contenedor principal*/
 .contenedor__menu{ /*contenedor principal del menu*/
   width: 60%;
   padding: 8px;
-  background-color: #2429249f;
+  background-color: #00000081;
+  box-shadow: 0 0 15px 2px #ad0000;
   backdrop-filter: blur(8px);
   border-radius: 1000px;
   display: flex;
@@ -36,7 +37,7 @@ header{  /*contenedor principal*/
   font-size: 1en;
 }
 .contenedor__menuLinks li a:hover{
-  box-shadow: 0 0 5px 5px #666161;
+  box-shadow: 0 0 5px 5px #6ddd03;
   transition-duration: .3s;
 }
 .contenedor__menuLinks li button{ /*boton para mostrar las redes*/
@@ -47,8 +48,11 @@ header{  /*contenedor principal*/
   transition-duration: .3s;
   font-size: 1em !important;
 }
+.contenedor__menuLinks li button p{ /*quitar opaciones*/
+  color: #f00 !important;
+}
 .contenedor__menuLinks li button:hover{
-  box-shadow: 0 0 5px 5px #666161;
+  box-shadow: 0 0 5px 5px #6ddd03;
   transition-duration: .3s;
 }
 
@@ -76,6 +80,7 @@ header{  /*contenedor principal*/
   pointer-events: auto;
 }
 .headerOptionsContentHide{
+  top: 0;
   left: -100%;
   transition-duration: 1s;
 }

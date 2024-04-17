@@ -9,6 +9,8 @@ aside{
   overflow: auto;
   width: 70vw;
   z-index: 5;
+  background-color: #0000001e;
+  position: relative;
 }
 aside::-webkit-scrollbar{
   display: none;
@@ -34,7 +36,7 @@ aside::-webkit-scrollbar{
   box-shadow: 0 0 15px 2px #a10404;
 }
 .NavAsideUl li p{
-  color: #ecffb7 !important;
+  color: #ec4705 !important
 }
 
 .capitulos{
@@ -62,13 +64,13 @@ aside::-webkit-scrollbar{
   width: 80%;
   margin-top: 20px;
   text-align: start;
-  color: #acfaac;
+  color: #0f0;
   padding: 8px;
   box-shadow: 0 0 15px 2px #4d1010;
 }
 
 .active{
-  background-color: #7063635d !important;
+  background-color: #0f0f0f !important;
   color: #f4ffee;
 }
 

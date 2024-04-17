@@ -8,8 +8,6 @@
   max-width: 1800px;
   margin-top: 25px;
   margin-bottom: 25px;
-  background-color: #141414;
-  border: 2px solid #383434;
 }
 
 code {
@@ -21,7 +19,7 @@ code {
   font-size: 1em;
   padding: 4px;
   text-align: center;
-  color: #3c7f6c;
+  color: #ff0000;
 }
 
 .lenguajes{
@@ -68,9 +66,9 @@ code {
   align-items: center;
   top: 0;
   font-size: 1em;
-  color: #3c7f6c;
+  color: #6ddd03 !important;
   gap: 15px;
-  text-shadow: 0 0 3vh #3c7f6c;
+  text-shadow: 0 0 3vh #6ddd03;
   transition-duration: .5s;
   text-align: center;
   background-color: transparent;
@@ -79,7 +77,7 @@ code {
   padding: 8px;
 }
 .copiarCodigo:hover{
-  color: #9efaff;
+  color: #39690b !important;
   text-shadow: 0 0 3vh #9efaff;
   transition-duration: .5s;
   opacity: 1;

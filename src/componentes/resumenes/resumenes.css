@@ -8,7 +8,7 @@
 
 
 .contentResumen__infoContent--title{ /*titulo*/
-    color: #fbffbe;
+    color: #f00;
     font-size: 2em;
 }
 
@@ -23,7 +23,6 @@
 }
 
 .contentResumen__iconContent--icono{ /*icono*/
-    background-color: #1f1d1dcc;
     padding: 8px;
     border-radius: 1000px;
     backdrop-filter: blur(4px);
@@ -36,12 +35,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fc7b02;
 }
 .contentResumen__iconContent--parrafo{ /*parrafo indicativo*/
-    background-color: #1f1d1da4;
+    background-color: #000;
     backdrop-filter: blur(4px);
     padding: 2px;
-    color: #caffb5 !important;
+    color: #f00 !important;
     width: 110px;
     display: flex;
     justify-content: center;

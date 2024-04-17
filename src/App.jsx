@@ -11,7 +11,7 @@ import {
 // componentes
 import Home from './Paginas/home/Home';
 import NotFound from './Paginas/notFound/NotFound';
-
+import DestelloAll from "../src/componentes/destello/destello"
 
 
 // pendejadas
@@ -361,7 +361,7 @@ function App() {
   return (
     <Router>
       <Menu />
-      {/* <Barrita /> */}
+      <DestelloAll />
       <ScrollToTop />
       
       <Routes>

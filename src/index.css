@@ -9,6 +9,9 @@
   flex-direction: column;
   height: 100vh;
 }
+html::-webkit-scrollbar{
+  display: none;
+}
 body{
   position: relative;
   background-color: #000;
