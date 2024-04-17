@@ -154,7 +154,7 @@ header{  /*contenedor principal*/
   position: relative;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 500px 55px #3fa9ff;
+  box-shadow: 0px 0px 500px 55px #b80000;
   transition-property: opacity;
   transition-duration: .5s;
 }
