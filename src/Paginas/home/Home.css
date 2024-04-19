@@ -46,15 +46,16 @@
 
 
 .Home__seccion1{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKZyV3_QfEtH6IEqfi7rrZg3wCa2gjr1XTl1CHvcROyZaf3d0aQc52QppMIkPwY8zNuho&usqp=CAU");
+  background-image: url("https://e1.pxfuel.com/desktop-wallpaper/571/619/desktop-wallpaper-red-landscape-red-anime-landscape.jpg");
   background-size: cover;
   background-position: center;
 }
 .Home__seccion2{
   z-index: 4;
   min-height: 650px;
-  background-image: url("https://media.telemetro.com/p/b85b7c69f406ccee8a4c0c15c2eafc3a/adjuntos/311/imagenes/018/073/0018073643/855x0/smart/imagepng.png");
+  background-image: url("https://img.freepik.com/fotos-premium/paisaje-rojo-hermosa-ilustracion-imagen-ai-generativa_146671-75175.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 

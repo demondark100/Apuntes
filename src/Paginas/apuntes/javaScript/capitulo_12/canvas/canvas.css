@@ -5,10 +5,10 @@ canvas{
 
 
 
-.contenedor{
+.contenedorCanvasJs{
   margin-left: 100%;
   overflow: hidden;
-  position: absolute;
+  display: none;
   top: -800px;
   user-select: none;
 }
@@ -25,7 +25,8 @@ canvas{
 }
 
 @media (min-width: 750px){
-  .contenedor{
+  .contenedorCanvasJs{
+      display: block;
       position: relative;
       top: 0;
       width: 85%;

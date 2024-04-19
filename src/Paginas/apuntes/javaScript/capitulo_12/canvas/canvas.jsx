@@ -284,22 +284,22 @@ const dibujar = (x1,y1,x2,y2) =>{
         <p className="advertencia">
         esto no funcionara para mobile debido a problemas de compatibilidad con los eventos.
     </p>
-    <div className="contenedor">
-        <h3 className="dibujo_title">dibuja!</h3>
-        <canvas 
-          id="dibujo" 
-          width="500%" 
-          height="450%"
-          onMouseDown={(e)=>dibujar1(e)}
-          onMouseMove={(e)=>dibujoMove(e)}
-          onMouseUp={(e)=>dibujar2(e)}
-          ref={dibujo}
-        ></canvas>
-        <div className="button_content">
+        <div className="contenedorCanvasJs">
+          <h3 className="dibujo_title">dibuja!</h3>
+          <canvas 
+            id="dibujo" 
+            width="500%" 
+            height="450%"
+            onMouseDown={(e)=>dibujar1(e)}
+            onMouseMove={(e)=>dibujoMove(e)}
+            onMouseUp={(e)=>dibujar2(e)}
+            ref={dibujo}
+          ></canvas>
+          <div className="button_content">
             <input type="color" className="colorizacion" ref={colores}/>
             <input type="range" className="ancho_line" min="1" max="20" ref={ancho}/>
+          </div>
         </div>
-    </div>
       </main>
       <Footer/>
     </>
