@@ -12,7 +12,7 @@ function RoutingExpressNode() {
         "mensaje": `Con express sera mas facil trabajar con las rutas.`,
         "lenguage": "JavaScropt",
         "codigo": `const express = require("express");
-const app = express(); asd
+const app = express();
 const {cursos} = require("./base.js");
 app.get("/",(req,res)=>{
   res.send("Informacion base");
