@@ -12,15 +12,23 @@ function RoutingExpressNode() {
         "mensaje": `Con express sera mas facil trabajar con las rutas.`,
         "lenguage": "JavaScropt",
         "codigo": `const express = require("express");
-const app = express();
-const base = require("./base.json");
-
+const app = express(); asd
+const {cursos} = require("./base.js");
 app.get("/",(req,res)=>{
-  res.send(JSON.stringify(base.nombres))
+  res.send("Informacion base");
 })
-const puerto = process.env.PORT || 3000;
-app.listen(puerto,()=>{
-  console.log(\`El servidor esta escuchando en el puerto ${"${puerto}"}...\`);
+app.get("/api/cursos",(req,res)=>{
+  res.send(JSON.stringify(cursos))
+})
+app.get("/api/cursos/programacion",(req,res)=>{
+  res.send(JSON.stringify(cursos.programacion))
+})
+app.get("/api/cursos/matematica",(req,res)=>{
+  res.send(JSON.stringify(cursos.matematica))
+})
+const PUERTO = process.env.PORT || 8080;
+app.listen(PUERTO,()=>{
+    console.log(\`El servidor esta escuchando en el puerto ${"${PUERTO}"}...\`);
 })`
       }]}/>
       <main>
@@ -58,47 +66,53 @@ app.listen(PUERTO,()=>{
 
         <h2>primera api</h2>
         <Conseptos texto={`Ahora vamos a crear nuestra primera api.`}/>
-        <JavaScropt codigo={`const animes = {
-  "shonen":[
+        <JavaScropt codigo={`const cursos = {
+  programacion: [
     {
-      "titulo": "dragon ball",
-      "id": 1,
-      "vistas": 380000
+      id: 1,
+      titulo: "aprende python",
+      lenguaje: "python",
+      vistas: 15789,
+      nivel: "basico"
     },
     {
-      "titulo": "Naruto",
-      "id": 2,
-      "vistas": 347914
+      id: 2,
+      titulo: "python intermedio",
+      lenguaje: "python",
+      vistas: 14789,
+      nivel: "medio"
     },
     {
-      "titulo": "one piece",
-      "id": 3,
-      "vistas": 347954
+      id: 3,
+      titulo: "aprende jabaScript",
+      lenguaje: "javaScript",
+      vistas: 16789,
+      nivel: "basico"
     }
   ],
-  "isekai":[
+  matematica: [
     {
-      "titulo": "re:zero",
-      "id": 1,
-      "vistas": 248751
+      id: 1,
+      titulo: "aprende calculo",
+      tema: "calculo",
+      vistas: 13487,
+      nivel: "basico"
     },
     {
-      "titulo": "mushoku tensei",
-      "id": 2,
-      "vistas": 257489
-    },    {
-      "titulo": "tate no yuusha",
-      "id": 3,
-      "vistas": 247687
+      id: 2,
+      titulo: "aprende algebra",
+      tema: "algebra",
+      vistas: 12487,
+      nivel: "intermedio"
     }
   ]
 }
 
-module.exports.animes = animes;`}/>
+module.exports.cursos = cursos;`}/>
         <JavaScropt codigo={`const express = require("express");
 const app = express();
 // base de datos,
-const base = require("./base.js");
+const {cursos} = require("./base.js");
 
 
 // res.send es similar a res.end() solo que send es para enviar la informacion
@@ -107,14 +121,14 @@ app.get("/",(req,res)=>{
 })
 
 // en las apis normalmente se suele poner /api/ruta
-app.get("/api/animes",(req,res)=>{
-  res.send(JSON.stringify(base.animes))
+app.get("/api/cursos",(req,res)=>{
+  res.send(JSON.stringify(cursos))
 })
-app.get("/api/animes/shonen",(req,res)=>{
-  res.send(JSON.stringify(base.animes.shonen))
+app.get("/api/cursos/programacion",(req,res)=>{
+  res.send(JSON.stringify(cursos.programacion))
 })
-app.get("/api/animes/isekai",(req,res)=>{
-  res.send(JSON.stringify(base.animes.isekai))
+app.get("/api/cursos/matematica",(req,res)=>{
+  res.send(JSON.stringify(cursos.matematica))
 })
 
 
@@ -127,13 +141,12 @@ app.listen(PUERTO,()=>{
 GET http://localhost:8080
 
 ###
-GET http://localhost:8080/api/animes
+GET http://localhost:8080/api/cursos
 
 ###
-GET http://localhost:8080/api/animes/shonen
+GET http://localhost:8080/api/cursos/programacion
 ###
-GET http://localhost:8080/api/animes/isekai`}/>
-        
+GET http://localhost:8080/api/cursos/matematica`}/>
       </main>
       <Footer />
     </>
