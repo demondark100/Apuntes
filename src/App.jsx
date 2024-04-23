@@ -352,6 +352,7 @@ import Cap11ProyV4_5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/ga
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
+import EstructurarExpress from './Paginas/apuntes/node/capitulo 4/estructurar';
 
 
 
@@ -750,6 +751,7 @@ function App() {
               <Route path='node/parametrosUrl' element={<ParametrosExNode />}/>
               <Route path='node/parametrosQuerty' element={<ParametrosQueryNode />}/>
               <Route path='node/routers' element={<RoutersNode />}/>
+              <Route path='node/estructura' element={<EstructurarExpress />}/>
 
 
               
