@@ -84,7 +84,7 @@ app.get("/",(req,res)=>{
   res.send(JSON.stringify("pagina principal."));
 })
 
-app.get("/api/cusos",(req,res)=>{
+app.get("/api/cursos",(req,res)=>{
   res.send(JSON.stringify(cursos))
 })
 app.get("/api/cursos/programacion/:lenguaje",(req,res)=>{

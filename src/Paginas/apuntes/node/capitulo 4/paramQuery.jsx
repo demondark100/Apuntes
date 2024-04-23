@@ -12,15 +12,13 @@ function ParametrosQueryNode() {
         "mensaje": `Con estos parametros de busqueda el cliente tiene mas formas de buscar algun contenido en especifico o hacer algo con la api.`,
         "lenguage": `JavaScropt`,
         "codigo": `app.get("/api/cursos/programacion",(req,res)=>{
-  if(req.query.ordenar === "vistas"){
-    return res.send(JSON.stringify(cursos.programacion.sort((a,b)=>a.vistas - b.vistas)))
-  }
+  return res.send(req.query.dato)
 })`
       },
       {
         "lenguage": "Txt",
         "codigo": `###
-http://localhost:8080/api/cursos/programacion?ordenar=vistas`
+http://localhost:8080/api/cursos/programacion?dato=unValorRandom`
       }]}/>
       <main>
         <h1>parametros query</h1>
