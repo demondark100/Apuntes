@@ -10,37 +10,13 @@ function ParametrosExNode() {
       <Resumenes contenido={[{
         "mensaje": `Con los parametros evitaremos hacer demasiadas peticiones.`,
         "lenguage": "JavaScropt",
-        "codigo": `const express = require("express");
-const app = express();
-const {cursos} = require("./cursos.js");
-app.get("/",(req,res)=>{
-  res.send(JSON.stringify("pagina principal."));
-})
-app.get("/api/cusos",(req,res)=>{
-  res.send(JSON.stringify(cursos))
-})
-app.get("/api/cursos/programacion/:lenguaje",(req,res)=>{
-  const lenguaje = req.params.lenguaje;
-  const entregar = cursos.programacion.filter(curso=>curso.lenguaje == lenguaje)
-  if (entregar.length === 0) {
-    return res.status(404).send(\`No se ha encontrado ${"${lenguaje}"}.\`)
-  }
-  res.send(JSON.stringify(entregar));
-})
-app.get("/api/cursos/matematica/:tema",(req,res)=>{
-  const tema = req.params.tema;
-  const entregar = cursos.matematica.filter(curso=>curso.tema == tema)
-  if (entregar.length === 0) {
-    return res.status(404).send(\`No se ha encontrado ${"${tema}"}.\`)
-  }
-  res.send(JSON.stringify(entregar));
-})
-
-
-const PUERTO = process.env.PORT || 8080;
-app.listen(PUERTO,()=>{
-    console.log(\`El servidor esta escuchando en el puerto ${"${PUERTO}"}...\`);
+        "codigo": `app.get("/api/cursos/programacion/:lenguaje",(req,res)=>{
+  return res.send(req.params.lenguaje)
 })`
+      },{
+        "lenguage": "Txt",
+        "codigo": `###
+http://localhost:8080/api/cursos/programacion/python`
       }]}/>
       <main>
         <h1>Parametros url</h1>
