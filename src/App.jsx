@@ -353,7 +353,8 @@ import Cap11ProyV4_5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/ga
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
 import EstructurarExpress from './Paginas/apuntes/node/capitulo 4/estructurar';
-import MetodosNode from "./Paginas/apuntes/node/capitulo 4/metodos"
+import MetodosNode from "./Paginas/apuntes/node/capitulo 4/metodos";
+import ExtraNode from './Paginas/apuntes/node/capitulo 4/extra';
 
 
 
@@ -754,6 +755,7 @@ function App() {
               <Route path='node/routers' element={<RoutersNode />}/>
               <Route path='node/estructura' element={<EstructurarExpress />}/>
               <Route path='node/metodos' element={<MetodosNode />}/>
+              <Route path='node/extra' element={<ExtraNode />}/>
 
 
               

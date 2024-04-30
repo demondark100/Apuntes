@@ -661,6 +661,8 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/routers"}>Routers</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/estructura"}>Estructurar rutas</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/metodos"}>otros metodos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../node/extra"}>Cosas extra</NavLink>
+
                       </div>
                     }
                   </dir>
