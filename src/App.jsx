@@ -288,6 +288,9 @@ import RoutingExpressNode from './Paginas/apuntes/node/capitulo 4/routingEx';
 import ParametrosExNode from './Paginas/apuntes/node/capitulo 4/parametros';
 import ParametrosQueryNode from './Paginas/apuntes/node/capitulo 4/paramQuery';
 import RoutersNode from './Paginas/apuntes/node/capitulo 4/routers';
+import EstructurarExpress from './Paginas/apuntes/node/capitulo 4/estructurar';
+import MetodosNode from "./Paginas/apuntes/node/capitulo 4/metodos";
+import ExtraNode from './Paginas/apuntes/node/capitulo 4/extra';
 
 // python
 import ImportantePy from './Paginas/apuntes/python/capitulo_1/importante';
@@ -352,12 +355,39 @@ import Cap11ProyV4_5 from './Paginas/apuntes/proyectos/javaScript/capitulo_11/ga
 
 // matematicas
 import Cap1MatV1 from './Paginas/apuntes/matematicas/basico/cap1';
-import EstructurarExpress from './Paginas/apuntes/node/capitulo 4/estructurar';
-import MetodosNode from "./Paginas/apuntes/node/capitulo 4/metodos";
-import ExtraNode from './Paginas/apuntes/node/capitulo 4/extra';
 
 
-
+// mySql
+import ChenMySql from "./Paginas/apuntes/mySql/capitulo_1/chen"
+import InstallMySql from './Paginas/apuntes/mySql/capitulo_1/instalacion';
+import InstallBrowserMySql from './Paginas/apuntes/mySql/capitulo_1/installBowser';
+import DarkMySql from './Paginas/apuntes/mySql/capitulo_2/darkMode';
+import CrearDbMySql from './Paginas/apuntes/mySql/capitulo_2/crear';
+import TablasMySql from './Paginas/apuntes/mySql/capitulo_2/tablas';
+import PrimerConsultaMySql from './Paginas/apuntes/mySql/capitulo_2/primerConsulta';
+import TablaCodeMySql from './Paginas/apuntes/mySql/capitulo_2/tablaCode';
+import InsertMySql from './Paginas/apuntes/mySql/capitulo_2/insertar';
+import ClausulaSelectMySql from './Paginas/apuntes/mySql/capitulo_2/clausula';
+import IdMyDql from './Paginas/apuntes/mySql/capitulo_3/identificadores';
+import ClavesMySql from './Paginas/apuntes/mySql/capitulo_3/claves';
+import Select2MySql from "./Paginas/apuntes/mySql/capitulo_3/select"
+import OrderByMySql from './Paginas/apuntes/mySql/capitulo_3/order';
+import WhereMySql from './Paginas/apuntes/mySql/capitulo_3/where';
+import LogicosMySql from './Paginas/apuntes/mySql/capitulo_3/logicos';
+import OperadorBetweenMySql from './Paginas/apuntes/mySql/capitulo_3/between';
+import OperadorLikeMySql from './Paginas/apuntes/mySql/capitulo_4/like';
+import NullMySql from './Paginas/apuntes/mySql/capitulo_4/null';
+import OperadorInMySql from './Paginas/apuntes/mySql/capitulo_4/in';
+import FuncionesAddMySql from './Paginas/apuntes/mySql/capitulo_4/funcionesAdd';
+import ComentariosMySql from './Paginas/apuntes/mySql/capitulo_4/comentarios';
+import GroupByMySql from './Paginas/apuntes/mySql/capitulo_5/groupBy';
+import SubConsultasMySql from './Paginas/apuntes/mySql/capitulo_5/subConsultas';
+import JoinMySql from './Paginas/apuntes/mySql/capitulo_5/joins';
+import UnionMySql from './Paginas/apuntes/mySql/capitulo_5/union';
+import CardinalidadMySql from './Paginas/apuntes/mySql/capitulo_6/Cardinalidad ';
+import IndicesMySql from "./Paginas/apuntes/mySql/capitulo_6/indices"
+import VistasMySql from './Paginas/apuntes/mySql/capitulo_6/vistas';
+import BloqTansaccMySql from './Paginas/apuntes/mySql/capitulo_6/bloqYTransac';
 
 function App() {
 
@@ -777,9 +807,50 @@ function App() {
               <Route path='python/enDeDatos' element={<EntrDatosPy />}/>              
 
             {/* capitulo 3 */}
-              <Route path='python/variable2' element={<Variables2Py />}/>              
+              <Route path='python/variable2' element={<Variables2Py />}/>        
 
 
+          {/* mysql */}
+            {/* capitulo 1 */}
+              <Route path='mySql/chen' element={<ChenMySql />}/>        
+              <Route path='mySql/install' element={<InstallMySql />}/>        
+              <Route path='mySql/installBrowser' element={<InstallBrowserMySql />}/>        
+              <Route path='mySql/dark' element={<DarkMySql />}/>       
+            {/* capitulo 2 */}
+              <Route path='mySql/crear' element={<CrearDbMySql />}/>        
+              <Route path='mySql/tablas' element={<TablasMySql />}/>
+              <Route path='mySql/primerCon' element={<PrimerConsultaMySql />}/>
+              <Route path='mySql/tablaCode' element={<TablaCodeMySql />}/>
+              <Route path='mySql/insert' element={<InsertMySql />}/>
+              <Route path='mySql/select' element={<ClausulaSelectMySql />}/>
+            {/* capitulo 3 */}
+              <Route path='mySql/id' element={<IdMyDql />}/>
+              <Route path='mySql/claves' element={<ClavesMySql />}/>
+              <Route path='mySql/select2' element={<Select2MySql />}/>
+              <Route path='mySql/order' element={<OrderByMySql />}/>
+              <Route path='mySql/where' element={<WhereMySql />}/>
+              <Route path='mySql/logicos' element={<LogicosMySql />}/>
+              <Route path='mySql/between' element={<OperadorBetweenMySql />}/>
+            {/* capitulo 4 */}
+              <Route path='mySql/like' element={<OperadorLikeMySql />}/>
+              <Route path='mySql/null' element={<NullMySql />}/>
+              <Route path='mySql/in' element={<OperadorInMySql />}/>
+              <Route path='mySql/funcAdd' element={<FuncionesAddMySql />}/>
+              <Route path='mySql/comentarios' element={<ComentariosMySql />}/>
+            {/* capitulo 5 */}
+              <Route path='mySql/groupBy' element={<GroupByMySql />}/>
+              <Route path='mySql/subConsultas' element={<SubConsultasMySql />}/>
+              <Route path='mySql/join' element={<JoinMySql />}/>
+              <Route path='mySql/union' element={<UnionMySql />}/>
+            {/* capitulo 6 */}
+              <Route path='mySql/cardinalidad' element={<CardinalidadMySql />}/>
+              <Route path='mySql/indices' element={<IndicesMySql />}/>
+              <Route path='mySql/vistas' element={<VistasMySql />}/>
+              <Route path='mySql/bloqTransacc' element={<BloqTansaccMySql />}/>
+
+
+
+              
           {/* pendejadas */}
             {/* cap1 */}
                 <Route path='pendejadas/calculadora' element={<Calculadora />}/>              

@@ -1,41 +1,136 @@
-.imagenLinkContent{
+.imagen{ /*contenedor principal*/
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 35px;
-    margin-bottom: 35px;
 }
 
-.imagenLinkContentCont{
+
+.imagen__content{ /*contenedor de la imagen*/
     width: 85%;
+    position: relative;
+}
+.imagen__content img{ /*imagenes*/
+    width: 100%;
 }
 
-.imagenLinkContentCont img{
+
+.imagen__contentBtn{ /*contenedor del boton para poner pantalla completa*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg,#000,transparent,transparent,transparent,#000);
     width: 100%;
+    height: 100%;
+    cursor: pointer;
+    user-select: none;   
+    opacity: 1;
+    transition-duration: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagen__contentBtnHide{ /*ocultar efecto de imagen completa*/
+    opacity: 0;
+    visibility: hidden;
     transition-duration: .3s;
 }
 
-.imagenLinkContentContHover{
-    animation-name: imagenLink;
-    animation-duration: .8s;
+.imagen__contentBtn button{ /*boton para poner pantalla completa*/
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+.imagen__contentBtnLink{ /*boton para redireccionar*/
+    position: absolute;
+    top: auto !important;
+    right: auto !important;
+    background-color: #55be55 !important;
+    padding: 8px !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    color: #000 !important;
+    transition-duration: .3s;
+}
+.imagen__contentBtnLink:hover{
+    background-color: #448a44 !important;
+    color: #fff !important;
+    transition-duration: .3s;
+}
+
+
+
+/*imagen completa*/
+.imagen__completa{ /*contenedor*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #181717;
+    z-index: 5;
+    cursor: pointer;
+}
+
+
+.imagen__completaImg{ /*contenedor del boton*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,#000,transparent,transparent,transparent,#000);
+    transition-duration: .3s;
+}
+.imagen__completaImgHide{
+    opacity: 0;
+    cursor: none;
+    transition-duration: .3s;
+}
+
+.imagen__completaImg button{ /*boton*/
+    font-size: 2em;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.imagen__completa img{ /*imagen*/
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    object-fit: contain;
+}
+
+
+@media(min-width: 750px){
+    .imagen__content{ /*contenedor de la imagen*/
+        width: 45%;
+    }
+}
+
+
+
+
+/*animacion indicativa de que la imagen el link*/
+.imagen__contentLink{
+    animation-name: animacionImgLink;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-.imagenLinkContentContHover:hover{
-    filter: brightness(.8);
-    transition-duration: .3s;
-}
 
-@keyframes imagenLink {
+
+
+@keyframes animacionImgLink {
     0%{
-        box-shadow: 0 0 15px 8px #c7bbbb;
+        box-shadow: 0 0 25px 0px #448a44;
     }
     100%{
-        box-shadow: none;
-    }
-}
-
-@media(min-width: 750px){
-    .imagenLinkContentCont{
-        width: 450px;
+        box-shadow: 0 0 25px 3px #00ff00;    
     }
 }

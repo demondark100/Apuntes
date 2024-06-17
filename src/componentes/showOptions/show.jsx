@@ -5,6 +5,7 @@ import Html from "../../componentes/lenguajes/Html";
 import Css from "../../componentes/lenguajes/Css";
 import JavaScropt from "../../componentes/lenguajes/JavaScript";
 import Txt from "../../componentes/lenguajes/Txt";
+import MySql from "../../componentes/lenguajes/MySql"
 // variable de estado
 import { useState } from "react";
 
@@ -13,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 function ShowOptions({
-  link,html,css,javaScript,txt
+  link,html,css,javaScript,txt,mySql
 }) {
   const [showOptions, setShowOptions] = useState(false); // esto es para rotar y mostrar las opciones
   const changeState=()=>{
@@ -48,6 +49,7 @@ function ShowOptions({
               codigo2={css != null ? <Css codigo={css}/>:null}
               codigo3={javaScript != null ? <JavaScropt codigo={javaScript}/>:null}
               codigo4={txt != null ? <Txt codigo={txt}/>:null}
+              codigo5={mySql != null ? <MySql codigo={mySql}/>:null}
             />
           </div>
         </div>

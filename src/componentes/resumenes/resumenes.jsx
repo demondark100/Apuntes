@@ -15,6 +15,7 @@ import Python from "../lenguajes/Python";
 import Sintaxis from "../lenguajes/Sintaxis";
 import Json from "../lenguajes/Json";
 import Terminal from "../lenguajes/Terminal";
+import MySql from '../lenguajes/MySql';
 
 function Resumenes({
   contenido
@@ -31,7 +32,8 @@ function Resumenes({
     Python: Python,
     Sintaxis: Sintaxis,
     Json: Json,
-    Terminal: Terminal
+    Terminal: Terminal,
+    MySql: MySql
   }
 
   return (  

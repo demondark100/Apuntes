@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { useState,useRef } from "react";
 
-function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4}) {
+function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4,codigo5}) {
 
   const contenedor = useRef(null);
 
@@ -40,6 +40,7 @@ function CodigoFuenteSinInt({codigo,codigo2,codigo3,codigo4}) {
             {codigo2}
             {codigo3}
             {codigo4}
+            {codigo5}
             </div>
         </div>
       }

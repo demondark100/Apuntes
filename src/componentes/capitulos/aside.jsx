@@ -29,6 +29,7 @@ function Capitulos({sendshowAside}) {
   const [react, setReact] = useState(false);
   const [python, setPython] = useState(false);
   const [node, setNode] = useState(false);
+  const [mySql, setMySql] = useState(false);
 
   // matematicas
   // capitulos
@@ -85,6 +86,7 @@ function Capitulos({sendshowAside}) {
 
 
   // node.js
+  // capitulos
   const [cap1Node, setCap1Node] = useState(false);
   const [cap2Node, setCap2Node] = useState(false);
   const [cap3Node, setCap3Node] = useState(false);
@@ -96,6 +98,15 @@ function Capitulos({sendshowAside}) {
   const [cap2Python, setCap2Python] = useState(false);
   const [cap3Python, setCap3Python] = useState(false);
 
+
+  // mySql
+  // capitulos
+  const [cap1MySql, setCap1MySql] = useState(false);
+  const [cap2MySql, setCap2MySql] = useState(false);
+  const [cap3MySql, setCap3MySql] = useState(false);
+  const [cap4MySql, setCap4MySql] = useState(false);
+  const [cap5MySql, setCap5MySql] = useState(false);
+  const [cap6MySql, setCap6MySql] = useState(false);
 
   return (  
     <>
@@ -709,6 +720,96 @@ function Capitulos({sendshowAside}) {
                     {
                       cap3Python && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/variable2"}>variables 2.0 (la venganza)</NavLink>
+                      </div>
+                    }
+                  </div>
+
+                </div>
+              }
+            </li>
+
+
+            {/* mySql */}
+           <li className="curso">
+              <p onClick={()=>setMySql(!mySql)}>mySql</p>
+              {
+                mySql && <div className="capitulos">
+                  <div>
+                    <p onClick={()=>setCap1MySql(!cap1MySql)}>capitulo 1</p>
+                    {
+                      cap1MySql && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/chen"}>notacion de chen</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/install"}>instalacion.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/installBrowser"}>instalacion db browser.</NavLink>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap2MySql(!cap2MySql)}>capitulo 2</p>
+                    {
+                      cap2MySql && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/dark"}>configuracion (modo oscuro)</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/crear"}>crear base de datos..</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/tablas"}>tablas</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/primerCon"}>Primer consulta</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/tablaCode"}>Tabla con codigo</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/insert"}>Insertar datos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/select"}>clausula select</NavLink>
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap3MySql(!cap3MySql)}>capitulo 3</p>
+                    {
+                      cap3MySql && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/id"}>identificadores</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/claves"}>claves primarias y foraneas</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/select2"}>cosas extra</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/order"}>Order By</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/where"}>clausula WHERE</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/logicos"}>Operadores logicos</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/between"}>Operador between</NavLink> 
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap4MySql(!cap4MySql)}>capitulo 4</p>
+                    {
+                      cap4MySql && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/like"}>Operador like</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/null"}>null</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/in"}>operador in</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/funcAdd"}>funciones de agregacion</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/comentarios"}>Comentarios</NavLink> 
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap5MySql(!cap5MySql)}>capitulo 5</p>
+                    {
+                      cap5MySql && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/groupBy"}>GROUP BY</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/subConsultas"}>sub consultas</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/join"}>join</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/union"}>UNION</NavLink>
+                      </div>
+                    }
+                  </div>
+                  
+                  <div>
+                    <p onClick={()=>setCap6MySql(!cap6MySql)}>capitulo 6</p>
+                    {
+                      cap6MySql && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/cardinalidad"}>cardinalidad</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/indices"}>Indices</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/vistas"}>vistas</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/bloqTransacc"}>bloque y transacciones</NavLink> 
+
+
                       </div>
                     }
                   </div>
