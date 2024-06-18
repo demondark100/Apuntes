@@ -1,9 +1,9 @@
 import ImagenLink from "../../../../componentes/ImagenLink/imagenLink";
-import CodigoFuenteSinInt from "../../../../componentes/codigoFuente/code";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img23 from "../capitulo_3/imgs/img23.png";
@@ -14,6 +14,12 @@ import img6 from "./imgs/img6.png";
 function NullMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto manejaroemos los datos "null(nulos)".`,
+        lenguage: "MySql",
+        codigo: `WHERE columna IS NULL    -- obtiene solo los datos NULL de una columna.
+WHERE columna IS NOT NULL   -- quita todos los datos null de la columna.`
+      }]}/>
       <ShowOptions mySql={`INSERT INTO estudiantes (nombres, apellidos, edad, pais, promedio, asistencias)
 VALUES
     ("Milim", "Midorikawa", 19, "Mexico", 18, 95),

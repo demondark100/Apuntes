@@ -1,11 +1,20 @@
-import ImagenLink from "../../../../componentes/ImagenLink/imagenLink";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 function ComentariosMySql() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Existen dos formas de comentar codigo, un codigo comentado no sera tomado en cuenta por sql y no sera compilado.`,
+        lenguage: `MySql`,
+        codigo: `-- comentario en linea
+/*
+  comentarios en mas
+  de una linea
+*/`
+      }]}/>
       <main>
         <h1>Comentarios</h1>
         <Conseptos texto={`Los comentarios son lineas de codigo para que el programador pueda leer , sin embargo SQL no va a poder leer y ejecutar las lineas de codigo que esten comentados.`}/>

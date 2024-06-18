@@ -3,6 +3,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import ShowOptions from "../../../../componentes/showOptions/show";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img23 from "../capitulo_3/imgs/img23.png";
@@ -16,6 +17,21 @@ import img13 from "./imgs/img13.png";
 function FuncionesAddMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con estas funciones podemos hacer distintas operaciones con nuestros datos.`,
+        lenguage: `MySql`,
+        codigo: `
+-- count() Ver cuantos datos tiene la tabla.
+SELECT count() FROM tabla
+SELECT count(columna) FROM tabla
+
+SELECT sum(numeros) FROM tabla    -- sumar todos los datos de una columna de una tabla.
+SELECT avg(numero) FROM tabla   -- sacar el promedio de la columna de una tabla.
+SELECT round(numero) FROM tabla   -- redondear los datos de una tabla en una columna.
+SELECT min(columna) FROM tabla    -- ver cual es el numero mas menor en una columna de una tabla.
+SELECT max(columna) FROM tabla    -- ver el numero mayor en una columna de una tabla.
+`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`INSERT INTO estudiantes (nombres, apellidos, edad, pais, promedio, asistencias)

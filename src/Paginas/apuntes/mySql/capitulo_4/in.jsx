@@ -3,6 +3,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img23 from "../capitulo_3/imgs/img23.png"
@@ -13,6 +14,12 @@ import img8 from "./imgs/img8.png"
 function OperadorInMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con este operador buscaremos de forma mas legible y sensilla elementos en especifico, sin este operador tendriamos que hacer muchas condicionales para buscar datos en especifico.`,
+        lenguage: "MySql",
+        codigo: `WHERE columna1 IN ('dato1','dato2','dato3')    -- busca estos datos en especifico.
+WHERE columna1 NOT IN ('dato9','dato4','dato8')   -- Quita de la tabla estos datos en especifico.`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`INSERT INTO estudiantes (nombres, apellidos, edad, pais, promedio, asistencias)
@@ -96,7 +103,6 @@ WHERE nombres IN ("Juan","Daniel","Milim","Hiro")`}/>
         <MySql codigo={`SELECT * FROM estudiantes
 WHERE nombres NOT IN ("Juan","Daniel","Milim","Hiro")`}/>
         <ImagenLink tipo={"imagen"} imagen={img8} titulo={"tabla excluyente"}/>
-
       </main>
       <Footer />
     </>

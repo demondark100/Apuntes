@@ -3,6 +3,8 @@ import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import ImagenLink from "../../../../componentes/ImagenLink/imagenLink"
 import ShowOptions from "../../../../componentes/showOptions/show"
+import Resumenes from "../../../../componentes/resumenes/resumenes";
+
 // imagenes
 import img23 from "../capitulo_3/imgs/img23.png";
 import img1 from "./imgs/img1.png";
@@ -13,6 +15,14 @@ import img4 from "./imgs/img4.png";
 function OperadorLikeMySql() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con este operador vamos a filtrar resultados mucho mas precisos.`,
+        lenguage: "MySql",
+        codigo: `WHERE nombre LIKE 'A%'   -- inicia con
+WHERE nombre LIKE '%A'    -- finaliza con
+WHERE nombre LIKE '___'   -- buscar por longitud
+WHERE nombre LIKE '_a___'   -- buscar por longitud y caracteres`
+      }]}/>
       <ShowOptions link={"../"} mySql={`INSERT INTO estudiantes (nombres, apellidos, edad, pais, promedio, asistencias)
 VALUES
     ("Milim", "Midorikawa", 19, "Mexico", 18, 95),
