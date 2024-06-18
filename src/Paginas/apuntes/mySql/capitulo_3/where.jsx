@@ -3,6 +3,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img15 from "./imgs/img15.png";
@@ -18,6 +19,13 @@ import img22 from "./imgs/img22.png";
 function WhereMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esta clausula podemos hacer condiciones con sql, con esto podremos indicar a travez de una condicion que datos deseamos que se muestren o tambien podemos indicar que dato deseamos eliminar o editar.`,
+        lenguage: `MySql`,
+        codigo: `WHERE numeros > 15   -- condicional
+DELETE FROM tabla WHERE id = 8    -- eliminar un dato en especifico
+UPDATE tabla SET columna1 = 35 WHERE id = 6   -- editar un dato en especifico`
+      }]}/>
       <main>
         <h1>clausula WHERE</h1>
         <Conseptos texto={`Con esta clausula vamos a hacer condicionales, antes que nada vamos a crear una nueva base de datos.`}/>

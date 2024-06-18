@@ -3,6 +3,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show"
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img23 from "./imgs/img23.png";
@@ -13,6 +14,11 @@ import img35 from "./imgs/img35.png";
 function OperadorBetweenMySql(){
   return(
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con este operador vamos a recortar mucho las condicionales al momento de hacer operadores logicos por ejemplo si queremos seleccionar usuarios con edad entre 18 y 25.`,
+        lenguage: "MySql",
+        codigo: `WHERE edad BETWEEN 18 AND 25;`
+      }]}/>
       <ShowOptions 
         link={`../`} 
         mySql={`INSERT INTO estudiantes (nombres, apellidos, edad, pais, promedio, asistencias)

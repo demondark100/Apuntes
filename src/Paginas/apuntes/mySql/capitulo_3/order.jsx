@@ -3,6 +3,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import Footer from "../../../../componentes/menus/Footer";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Txt from "../../../../componentes/lenguajes/Txt";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img9 from "./imgs/img9.png";
@@ -16,6 +17,16 @@ import img14 from "./imgs/img14.png";
 function OrderByMySql() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con la clausula "ORDER BY" podemos ordenar los datos de distintas formas.`,
+        lenguage: "MySql",
+        codigo: `ORDER BY tabla ASC;   -- ordenar de forma ascendente(de menor a mayor).
+ORDER BY tabla DESC;   -- ordenar de forma descendente(de mayor a menor).
+ORDER BY numeros DESC NULLS FIRST;   -- poner en los primeros lugares los datos null.
+ORDER BY numeros DESC NULLS LAST;  -- poner en ultimo lugar los datos null.
+ORDER BY RANDOM();   -- ordenar los datos de forma aleatoria.
+SELECT DISTINCT numeros FROM ordenar;    -- evitar que los datos se repitan`
+      }]}/>
       <main>
         <h1>Order By</h1>
         <Conseptos texto={`Esto es parecido a a "SELECT", solo que se encarga de ordenar los datos como nostros indiquemos.

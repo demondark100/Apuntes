@@ -4,6 +4,7 @@ import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import MensajeModal from "../../../../componentes/MensajeModal/mensajeModal"
 import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 
 
@@ -24,6 +25,15 @@ import CodigoFuenteSinInt from "../../../../componentes/codigoFuente/code";
 function LogicosMySql() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con los operadores logicos podemos hacer mas de una condicional y filtrar datos de forma mucho mas precisa.`,
+        lenguage: "MySql",
+        codigo: `WHERE n1 = 24 OR n2 = 25;   -- operador "o" si una de las 2 condiciones se cumple sera true.
+WHERE n1 = 2 AND n2 = 5;   -- operador "y" si las 2 condiciones se cumplen sera true.
+WHERE NOT n1 = 15;   -- operador "negracion" hace lo contrario por ejemplo si es true se vuelve false y biseversa.
+WHERE n1 != 25;    -- operador "distinto" si una cosa es distinta a otra sera true.
+LIMIT 4;   -- poner un limite de cuantos datos queremos mostrar.`
+      }]}/>
       <MensajeModal texto={`Desde ahora en adelante se mostrara en una imagen la estructura de la tabla con la que trabajaremos y los datos que se rellenaran en esa tabla estara en el apartado de opciones como lenguaje sql para copiar y pegar y tener los mismos datos.`}/>
       <ShowOptions
         link={"../"}
