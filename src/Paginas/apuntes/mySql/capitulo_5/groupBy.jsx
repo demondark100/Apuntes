@@ -4,6 +4,7 @@ import MySql from "../../../../componentes/lenguajes/MySql";
 import Txt from "../../../../componentes/lenguajes/Txt";
 import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img23 from "../capitulo_3/imgs/img23.png";
@@ -16,6 +17,12 @@ function GroupByMySql(){
 
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto agruparemos los datos que sean iguales para trabajar con ellos, por ejemplo si tenemos estudiantes que coinciden con el dato del pais por ejemplo "EEUU".`,
+        lenguage: "MySql",
+        codigo: `GROUP BY pais    -- agrupar todos los datos similares.
+HAVING dato1 > 18   -- hacer condicionales pero con datos agrupados.`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`INSERT INTO estudiantes (nombres, apellidos, edad, pais, promedio, asistencias)

@@ -5,6 +5,7 @@ import ImagenLink from "../../../../componentes/ImagenLink/imagenLink";
 import ShowOptions from "../../../../componentes/showOptions/show";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Txt from "../../../../componentes/lenguajes/Txt";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img4 from "./imgs/img4.png"
@@ -16,6 +17,25 @@ import img10 from "./imgs/img10.png"
 function JoinMySql() {
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esta sintaxis facilitaremos la legibilidad de las subconsultas, esto tambien es mas optimo para sql.`,
+        lenguage: "MySql",
+        codigo: `SELECT dato1,dato2 FROM tabla1 t1
+INNER JOIN tabla2 t2
+ON t1.refId = t2.id`
+      },{
+        mensaje: `Con esto tambien podemos relacionar todos los datos de una tabla tanto en la tabla1(derecha) y la tabla2(izquierda).`,
+        lenguage: `MySql`,
+        codigo: `-- LEFT JOIN
+SELECT dato1,dato2 FROM tabla1 t1
+LEFT JOIN tabla2 t2
+ON t1.refid = t2.id;
+
+-- RIGHT JOIN
+SELECT dato1,dato2 FROM tabla2 t2
+LEFT JOIN tabla1 t1
+ON t2.id = t1.refid;`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`-- departamentos

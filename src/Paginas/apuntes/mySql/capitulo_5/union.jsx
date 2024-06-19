@@ -3,6 +3,7 @@ import Conseptos from "../../../../componentes/conseptos/conseptos";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes 
 import img11 from "./imgs/img11.png"
@@ -12,6 +13,36 @@ import img13 from "./imgs/img13.png"
 function UnionMySql() {
   return (  
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto uniremos los datos de LEFT y RIGHT JOIN para que se mesclen todos los datos.`,
+        lenguage: "MySql",
+        codigo: `-- Unir sin datos repetidos
+-- left join
+SELECT nombres,recompenza FROM estudiantes e 
+LEFT JOIN recompenzas r
+on r.id_estudiante = e.id;
+
+UNION
+
+-- right join
+SELECT nombres,recompenza FROM recompenzas r
+LEFT JOIN estudiantes e
+on r.id_estudiante = e.id;
+
+
+-- unir con datos repetidos
+-- left join
+SELECT nombres,recompenza FROM estudiantes e 
+LEFT JOIN recompenzas r
+on r.id_estudiante = e.id;
+
+UNION ALL
+
+-- right join
+SELECT nombres,recompenza FROM recompenzas r
+LEFT JOIN estudiantes e
+on r.id_estudiante = e.id;`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`-- departamentos

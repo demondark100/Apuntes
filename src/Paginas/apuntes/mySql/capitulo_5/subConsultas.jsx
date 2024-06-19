@@ -4,6 +4,7 @@ import ImagenLink from "../../../../componentes/ImagenLink/imagenLink";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import ShowOptions from "../../../../componentes/showOptions/show";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img4 from "./imgs/img4.png";
@@ -14,6 +15,17 @@ import img7 from "./imgs/img7.png";
 function SubConsultasMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto relacionaremos las tablas que hacen referencia a otras.`,
+        lenguage: `MySql`,
+        codigo: `SELECT 
+  columna,
+  (
+    SELECT columna2 FROM tabla2
+    WHERE dato.ref_id = id
+  ) as ref
+FROM tabla1`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`-- departamentos
