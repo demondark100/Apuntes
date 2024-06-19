@@ -2,6 +2,7 @@ import Footer from "../../../../componentes/menus/Footer";
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ImagenLink from "../../../../componentes/ImagenLink/imagenLink";
 import MySql from "../../../../componentes/lenguajes/MySql";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img8 from "./imgs/img8.png";
@@ -9,6 +10,12 @@ import img8 from "./imgs/img8.png";
 function Select2MySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Aprendimos cosas como elminar todo el contenido a una tabla y tambien a asicnar un nombre temporal a consultas.`,
+        lenguage: "MySql",
+        codigo: `DELETE FROM tabla; -- eliminar todo el contenido de una tabla.
+SELECT datoTabla as dato FROM tabla -- asicnar nombre temporal a una consulta.`
+      }]}/>
       <main>
         <h1>Cosas extra</h1>
         <Conseptos texto={`Ahora aprenderemos mas cosas de "SELECT" por ejemplo a eliminar el contenido  de una tabla, cambiar el nombre de un registro de forma temporal. `}/>

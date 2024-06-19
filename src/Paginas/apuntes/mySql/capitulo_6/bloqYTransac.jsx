@@ -20,7 +20,7 @@ export default function BloqTansaccMySql(){
       <Resumenes contenido={[{
         mensaje: `Los bloqueos evitan problemas al momento de hacer cambios en las tablas, las transacciones son los cambios que se hacen en las tablas.`,
         lenguage: `MySql`,
-        coedigo: `BEGIN TRANSACTION;  -- iniciar transaccion
+        codigo: `BEGIN TRANSACTION;  -- iniciar transaccion
 UPDATE tabla SET columna1 = 'dato'
 WHERE id = 27
 COMMIT;  -- guardar los cambios
