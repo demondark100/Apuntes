@@ -5,6 +5,7 @@ import Footer from "../../../../componentes/menus/Footer";
 import MySql from "../../../../componentes/lenguajes/MySql";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Videos from "../../../../componentes/videos/video";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img4 from "../capitulo_5/imgs/img4.png";
@@ -18,6 +19,13 @@ import img5 from "./imgs/img4.mp4";
 export default function IndicesMySql(){
   return(
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con los indices guardaremos consultas que hacemos de forma repetida, estos ocupan espacio en el disco asi que no se debe abusar de los indices.`,
+        lenguage: "MySql",
+        codigo: `CREATE INDEX name ON tabla (columna);   -- crear indice en una columna con datos repetidos.
+CREATE UNIQUE INDEX name2 ON tabla (columna);    -- crear indice en una columna con datos no repetidos.
+DROP INDEX nombres;    -- eliminar un indice`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`-- departamentos

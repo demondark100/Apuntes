@@ -4,6 +4,7 @@ import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Video from "../../../../componentes/videos/video";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img4 from "../capitulo_5/imgs/img4.png";
@@ -16,6 +17,15 @@ import img7 from "./imgs/img7.mp4";
 export default function BloqTansaccMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Los bloqueos evitan problemas al momento de hacer cambios en las tablas, las transacciones son los cambios que se hacen en las tablas.`,
+        lenguage: `MySql`,
+        coedigo: `BEGIN TRANSACTION;  -- iniciar transaccion
+UPDATE tabla SET columna1 = 'dato'
+WHERE id = 27
+COMMIT;  -- guardar los cambios
+ROLLBACK;   -- volver a los cambios anteriores, no funcionara si ya se guardaron los cambios con "COOMIT"`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`-- departamentos

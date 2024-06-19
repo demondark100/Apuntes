@@ -1,6 +1,6 @@
 import Conseptos from "../../../../componentes/conseptos/conseptos";
 import ImagenLink from "../../../../componentes/ImagenLink/imagenLink"; 
-import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img4 from "../capitulo_5/imgs/img4.png";
@@ -8,6 +8,13 @@ import img4 from "../capitulo_5/imgs/img4.png";
 export default function CardinalidadMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `La cardinalidad es un tema teorico que explica las diferentes conecciones que tienen las tablas entre si.
+1. Uno a muchas.
+2. muchos a una.
+3. una a una.
+4. muchas a muchas.`
+      }]}/>
       <main>
         <h1>Cardinalidadd</h1>
         <Conseptos texto={`La cardinalidad sirve para saber como se relacionan las claves foraneas entre si, existen cuatro formas de cardinalidad.`}/>

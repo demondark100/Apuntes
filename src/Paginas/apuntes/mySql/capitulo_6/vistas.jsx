@@ -4,6 +4,7 @@ import MySql from "../../../../componentes/lenguajes/MySql";
 import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 import Footer from "../../../../componentes/menus/Footer";
 import ShowOptions from "../../../../componentes/showOptions/show";
+import Resumenes from "../../../../componentes/resumenes/resumenes";
 
 // imagenes
 import img4 from "../capitulo_5/imgs/img4.png";
@@ -13,6 +14,20 @@ import img2 from "./imgs/img5.png";
 export default function VistasMySql(){
   return (
     <>
+      <Resumenes contenido={[{
+        mensaje: `Con esto guardaremos una consulta para usarla cuantas veces queramos, al igual que los indices no es recomendable abusar de esta funcion.`,
+        lenguage: `MySql`,
+        codigo: `CREATE VIEW vista as   -- crear una vierw que guardara la consulta de abajo.
+SELECT dato1,dato2 FROM tabla
+WHERE promedio >= 18;
+
+-- usar una vista
+SELECT * FROM vista;
+
+-- eliminar una vista
+DROP VIEW mejores;    -- eliminar vista directamente 
+DROP VIEW IF EXISTS mejores   -- verificar una vista pero verificando si existe o no`
+      }]}/>
       <ShowOptions 
         link={"../"}
         mySql={`-- departamentos
