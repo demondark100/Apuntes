@@ -65,12 +65,10 @@ print(juegos);`}/>
         <Consola codigo={`Left 4 Dead
 ("Left 4 Dead","gta","half life","mobile legends","God of War") `}/>
         <h2>Conjunto</h2>
-        <Conseptos texto={`Un conjunto es un tipo de datos de colección desordenada que es iterable, mutable y no tiene elementos duplicados.`}/>
+        <Conseptos texto={`Un conjunto es un tipo de dato de colección desordenada que es iterable, mutable y no tiene elementos duplicados, a diferencia de las listas y tuplas a los conjuntos no se les puede llamar por indices "conjunto[0]".`}/>
         <Python codigo={`frutas = {"manzana","pera","durazno","naranja","uva"};
-print(frutas[3]);
 print(frutas);`}/>
-        <Consola codigo={`naranja
-{"manzana","pera","durazno","naranja","uva"}`}/>
+        <Consola codigo={`{"manzana","pera","durazno","naranja","uva"}`}/>
         <h2>Diccionario</h2>
         <Conseptos texto={`De esta manera podremos guardar datos de una forma mas dinamica ahora un ejemplo del como usar el diccionario.`}/>
         <h3>crear diccionario</h3>
