@@ -388,6 +388,12 @@ import CardinalidadMySql from './Paginas/apuntes/mySql/capitulo_6/Cardinalidad '
 import IndicesMySql from "./Paginas/apuntes/mySql/capitulo_6/indices"
 import VistasMySql from './Paginas/apuntes/mySql/capitulo_6/vistas';
 import BloqTansaccMySql from './Paginas/apuntes/mySql/capitulo_6/bloqYTransac';
+import Diccionarios2Python from './Paginas/apuntes/python/capitulo_3/diccionarios';
+import BuclesPython from './Paginas/apuntes/python/capitulo_3/bucles';
+import WhilePython from './Paginas/apuntes/python/capitulo_3/while';
+import FuncIntegradasPython from './Paginas/apuntes/python/capitulo_3/funcIntegradas';
+import FuncionesPython from './Paginas/apuntes/python/capitulo_3/funciones';
+import Lambda from './Paginas/apuntes/python/capitulo_3/lambda';
 
 function App() {
 
@@ -808,6 +814,14 @@ function App() {
 
             {/* capitulo 3 */}
               <Route path='python/variable2' element={<Variables2Py />}/>        
+              <Route path='python/diccionarios' element={<Diccionarios2Python />}/>        
+              <Route path='python/bucles' element={<BuclesPython />}/>        
+              <Route path='python/while' element={<WhilePython />}/>        
+              <Route path='python/funcIntegradas' element={<FuncIntegradasPython />}/>        
+              <Route path='python/funciones' element={<FuncionesPython />}/>        
+              <Route path='python/lambda' element={<Lambda />}/>        
+
+
 
 
           {/* mysql */}

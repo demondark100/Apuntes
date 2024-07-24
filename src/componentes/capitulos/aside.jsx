@@ -719,7 +719,16 @@ function Capitulos({sendshowAside}) {
                     <p onClick={()=>setCap3Python(!cap3Python)}>capitulo 3</p>
                     {
                       cap3Python && <div className="temas">
-                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/variable2"}>variables 2.0 (la venganza)</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/variable2"}>variables 2 (la venganza)</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/diccionarios"}>diccionarios 2 (la venganza)</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/bucles"}>bucle for</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/while"}>bucle while</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/funcIntegradas"}>funciones integradas</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/funciones"}>funciones</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/lambda"}>funciones lambda</NavLink>
+
+
+                      
                       </div>
                     }
                   </div>
