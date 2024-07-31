@@ -97,7 +97,7 @@ function Capitulos({sendshowAside}) {
   const [cap1Python, setCap1Python] = useState(false);
   const [cap2Python, setCap2Python] = useState(false);
   const [cap3Python, setCap3Python] = useState(false);
-
+  const [cap4Python, setCap4Python] = useState(false);
 
   // mySql
   // capitulos
@@ -710,6 +710,7 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/metList"}>metodos de listas</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/metDicc"}>Metodos de diccionario</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/enDeDatos"}>entrada de datos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/slicing"}>slicing</NavLink>
                       </div>
                     }
 
@@ -729,6 +730,21 @@ function Capitulos({sendshowAside}) {
 
 
                       
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap4Python(!cap4Python)}>capitulo 4</p>
+                    {
+                      cap4Python && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/modulos"}>Modulos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/enrruMod"}>Enrrutamiento de modulos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/paquetes"}>paquetes</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/txtFile"}>archivos TXT</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/csvFile"}>archivos csv</NavLink>
+
+
                       </div>
                     }
                   </div>

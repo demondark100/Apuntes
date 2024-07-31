@@ -303,6 +303,7 @@ import MetCadPy from './Paginas/apuntes/python/capitulo_2/metCad';
 import MetListPy from './Paginas/apuntes/python/capitulo_2/metList';
 import MetDiccPy from './Paginas/apuntes/python/capitulo_2/metDicc';
 import EntrDatosPy from './Paginas/apuntes/python/capitulo_2/entrDeDatos';
+import SlicingPy from './Paginas/apuntes/python/capitulo_2/slicing';
 import Variables2Py from './Paginas/apuntes/python/capitulo_3/variables2';
 
 
@@ -394,6 +395,11 @@ import WhilePython from './Paginas/apuntes/python/capitulo_3/while';
 import FuncIntegradasPython from './Paginas/apuntes/python/capitulo_3/funcIntegradas';
 import FuncionesPython from './Paginas/apuntes/python/capitulo_3/funciones';
 import Lambda from './Paginas/apuntes/python/capitulo_3/lambda';
+import ModulosPy from './Paginas/apuntes/python/capitulo_4/modulos';
+import EnrruModulePy from './Paginas/apuntes/python/capitulo_4/enrrutamiento';
+import PaquetesPy from './Paginas/apuntes/python/capitulo_4/paquetes';
+import TxtFilePy from './Paginas/apuntes/python/capitulo_4/txtFile';
+import CsvFilePy from './Paginas/apuntes/python/capitulo_4/csvFile';
 
 function App() {
 
@@ -810,7 +816,10 @@ function App() {
               <Route path='python/metCade' element={<MetCadPy />}/>
               <Route path='python/metList' element={<MetListPy />}/>
               <Route path='python/metDicc' element={<MetDiccPy />}/>              
+              <Route path='python/enDeDatos' element={<EntrDatosPy />}/>     
               <Route path='python/enDeDatos' element={<EntrDatosPy />}/>              
+              <Route path='python/slicing' element={<SlicingPy />}/>              
+         
 
             {/* capitulo 3 */}
               <Route path='python/variable2' element={<Variables2Py />}/>        
@@ -820,7 +829,13 @@ function App() {
               <Route path='python/funcIntegradas' element={<FuncIntegradasPython />}/>        
               <Route path='python/funciones' element={<FuncionesPython />}/>        
               <Route path='python/lambda' element={<Lambda />}/>        
-
+            
+            {/* capitulo 4 */}
+              <Route path='python/modulos' element={<ModulosPy />}/>        
+              <Route path='python/enrruMod' element={<EnrruModulePy />}/>        
+              <Route path='python/paquetes' element={<PaquetesPy />}/>        
+              <Route path='python/txtFile' element={<TxtFilePy />}/>        
+              <Route path='python/csvFile' element={<CsvFilePy />}/>        
 
 
 

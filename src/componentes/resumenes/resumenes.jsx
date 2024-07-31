@@ -16,6 +16,7 @@ import Sintaxis from "../lenguajes/Sintaxis";
 import Json from "../lenguajes/Json";
 import Terminal from "../lenguajes/Terminal";
 import MySql from '../lenguajes/MySql';
+import Csv from '../lenguajes/Csv';
 
 function Resumenes({
   contenido
@@ -33,7 +34,8 @@ function Resumenes({
     Sintaxis: Sintaxis,
     Json: Json,
     Terminal: Terminal,
-    MySql: MySql
+    MySql: MySql,
+    Csv: Csv
   }
 
   return (  

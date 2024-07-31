@@ -7,7 +7,8 @@ import Resumenes from "../../../../componentes/resumenes/resumenes";
 function ChenMySql(){
   return(
     <>
-      <Resumenes contenido={[{
+9      <Resumenes contenido={[
+      {
         "mensaje": "La notacion chen ayudara a entender de mejor forma lo mas complejo que vendra mas adelante."
       },
       {
@@ -31,7 +32,7 @@ function ChenMySql(){
       },
       {
         "mensaje": "atributos derivados: Estos son datos que se pueden obtener a travez de otro dato.",
-        "codigo": `Txt`,
+        "lenguage": `Txt`,
         "codigo": `(antiguedad) (fecha de creacion)`
       },
       {
