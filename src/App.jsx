@@ -400,6 +400,7 @@ import EnrruModulePy from './Paginas/apuntes/python/capitulo_4/enrrutamiento';
 import PaquetesPy from './Paginas/apuntes/python/capitulo_4/paquetes';
 import TxtFilePy from './Paginas/apuntes/python/capitulo_4/txtFile';
 import CsvFilePy from './Paginas/apuntes/python/capitulo_4/csvFile';
+import GraficosPy from './Paginas/apuntes/python/capitulo_5/graficos';
 
 function App() {
 
@@ -836,7 +837,9 @@ function App() {
               <Route path='python/paquetes' element={<PaquetesPy />}/>        
               <Route path='python/txtFile' element={<TxtFilePy />}/>        
               <Route path='python/csvFile' element={<CsvFilePy />}/>        
-
+            
+            {/* capitulo 5 */}
+              <Route path='python/graficos' element={<GraficosPy />}/>        
 
 
           {/* mysql */}

@@ -98,6 +98,8 @@ function Capitulos({sendshowAside}) {
   const [cap2Python, setCap2Python] = useState(false);
   const [cap3Python, setCap3Python] = useState(false);
   const [cap4Python, setCap4Python] = useState(false);
+  const [cap5Python, setCap5Python] = useState(false);
+
 
   // mySql
   // capitulos
@@ -744,6 +746,16 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/txtFile"}>archivos TXT</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/csvFile"}>archivos csv</NavLink>
 
+
+                      </div>
+                    }
+                  </div>
+
+                  <div>
+                    <p onClick={()=>setCap5Python(!cap5Python)}>capitulo 5</p>
+                    {
+                      cap5Python && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/graficos"}>graficos</NavLink>
 
                       </div>
                     }
