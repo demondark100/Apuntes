@@ -99,7 +99,7 @@ function Capitulos({sendshowAside}) {
   const [cap3Python, setCap3Python] = useState(false);
   const [cap4Python, setCap4Python] = useState(false);
   const [cap5Python, setCap5Python] = useState(false);
-
+  const [cap6Python, setCap6Python] = useState(false);
 
   // mySql
   // capitulos
@@ -109,6 +109,7 @@ function Capitulos({sendshowAside}) {
   const [cap4MySql, setCap4MySql] = useState(false);
   const [cap5MySql, setCap5MySql] = useState(false);
   const [cap6MySql, setCap6MySql] = useState(false);
+  
 
   return (  
     <>
@@ -760,8 +761,16 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/poo2"}>{"P.O.O (parte 2)"}</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/abstralClass"}>clases abstractas</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/especialMethod"}>metodos especiales</NavLink>
+                      </div>
+                    }
+                  </div>
 
-                        
+                  <div>
+                    <p onClick={()=>setCap6Python(!cap6Python)}>capitulo 6</p>
+                    {
+                      cap6Python && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/excepciones"}>Excepciones</NavLink>
+
                       </div>
                     }
                   </div>
