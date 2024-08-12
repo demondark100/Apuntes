@@ -756,7 +756,12 @@ function Capitulos({sendshowAside}) {
                     {
                       cap5Python && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/graficos"}>graficos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/poo1"}>{"P.O.O (parte 1)"}</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/poo2"}>{"P.O.O (parte 2)"}</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/abstralClass"}>clases abstractas</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/especialMethod"}>metodos especiales</NavLink>
 
+                        
                       </div>
                     }
                   </div>

@@ -401,6 +401,10 @@ import PaquetesPy from './Paginas/apuntes/python/capitulo_4/paquetes';
 import TxtFilePy from './Paginas/apuntes/python/capitulo_4/txtFile';
 import CsvFilePy from './Paginas/apuntes/python/capitulo_4/csvFile';
 import GraficosPy from './Paginas/apuntes/python/capitulo_5/graficos';
+import Poo1Py from './Paginas/apuntes/python/capitulo_5/poo';
+import Poo2Py from './Paginas/apuntes/python/capitulo_5/poo2';
+import AbstralClassPy from './Paginas/apuntes/python/capitulo_5/abstralClass';
+import EspecialMethodPy from './Paginas/apuntes/python/capitulo_5/especialMehod';
 
 function App() {
 
@@ -840,6 +844,10 @@ function App() {
             
             {/* capitulo 5 */}
               <Route path='python/graficos' element={<GraficosPy />}/>        
+              <Route path='python/poo1' element={<Poo1Py />}/>
+              <Route path='python/poo2' element={<Poo2Py />}/>        
+              <Route path='python/abstralClass' element={<AbstralClassPy />}/>        
+              <Route path='python/especialMethod' element={<EspecialMethodPy />}/>        
 
 
           {/* mysql */}
