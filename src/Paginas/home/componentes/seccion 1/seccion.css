@@ -21,23 +21,25 @@
 }
 .HomeSeccion1__info1 h1{ /*titulo*/
     font-size: 2em;
-    color: #bde5ff;
+    color: #03bb03;
     text-align: center;
     margin: 0;
+    text-shadow: 0 0 15px #0f0;
 }
 .HomeSeccion1__info1 p{ /*parrafo*/
     font-size: 1.2em;
     text-align: center;
-    color: #acdaf8 !important;
+    color: #03bb03 !important;
+    text-shadow: 0 0 15px #f00;
 }
 
 .HomeSeccion1__info1 button {
     /*boton de contacto*/
     background-color: transparent;
     padding: 15px;
-    color: #94bfdb !important;
+    color: #03bb03 !important;
     font-size: 1em;
-    border: 2px solid #94bfdb;
+    border: 2px solid #f00;
     position: relative;
     z-index: 2;
 }
@@ -51,14 +53,14 @@
     height: 100%;
     z-index: 1;
     transition-duration: .5s;
-    background: linear-gradient(90deg,#66f5ff36,transparent);
+    background: linear-gradient(90deg,#75000096,transparent);
     opacity: 0;
 }
 
 .HomeSeccion1__info1 button:hover::after { /*boton de contacto*/
     transition-duration: .5s;
     opacity: 1;
-    box-shadow: 0 0 200px 15px #60c8f8;
+    box-shadow: 0 0 200px 15px #ff0909a6;
 }
 
 .HomeSeccion1__Img{ /*imagen*/

@@ -1,37 +1,13 @@
 import { NavLink } from "react-router-dom";
 import Footer from "../../../../../componentes/menus/Footer";
 import "./overflow.css";
-import { useState , useRef  } from "react";
-import Confirmar from "./confirmar";
 import Conseptos from "../../../../../componentes/conseptos/conseptos";
 import Html from "../../../../../componentes/lenguajes/Html";
 import Css from "../../../../../componentes/lenguajes/Css";
 import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Overflow() {
-  const contenedor_overflow = useRef(null);
-  const [irAlLing, setIrAlLing] = useState(false);
 
-
-
-  const preguntar = (event) => {
-    event.preventDefault();
-    setIrAlLing(true);
-    contenedor_overflow.current.style.top = `${window.scrollY}px`;
-    contenedor_overflow.current.style.left = `${window.scrollX}px`;
-    document.body.classList.add("modal-open")
-  }
-  const confirmado = () => {
-    setIrAlLing(false);
-    window.open("https://hentaila.tv/ver/Overflow/", "_blank");
-    document.body.classList.remove("modal-open")
-  }
-  const cancelar = () => {
-    setIrAlLing(false);
-    document.body.classList.remove("modal-open")
-  }
-
-  
 
   return (  
     <>
@@ -44,24 +20,12 @@ overflow: hidden; /*no permite que el contenido se desborde pero no se podra hac
         `
       }]}/>
       <main>
-        <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink></h2>
-        <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
-          <Confirmar confirmado={confirmado} cancelar={cancelar} />
-        </div>
+        <h2>overflow</h2>
         <Conseptos texto={`Esta propiedad nos sirve para que el contenido no se sobrepase de su contenedor por ejmplo.`}/>
         <div className="overflow__texto">
-          <Conseptos texto={`como te das cuenta hay demasiado contenido pero el contendedor es demasiado pequeño pero puedes hacer scroll debido a que estamos usando la propiedad {emlaceOverflow} la cual nos permite controlar para que el contenido no se salga de su contenedor ahora veremos como usar esta propiedad.`}
-          enlaces={{
-            emlaceOverflow: {text: "Overflow guiño guiño",url: "https://hentaila.tv/ver/Overflow/"}
-          }}
-          targetBlank={true}/>
+          <Conseptos texto={`como te das cuenta hay demasiado contenido pero el contendedor es demasiado pequeño pero puedes hacer scroll debido a que estamos usando la propiedad Overflow la cual nos permite controlar para que el contenido no se salga de su contenedor ahora veremos como usar esta propiedad.`}/>
         </div>
-
-        <h2>sin <NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink></h2>
-        <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
-          <Confirmar confirmado={confirmado} cancelar={cancelar} />
-        </div>
-
+        <h2>overflow</h2>
         
         <Html codigo={`<div class="contenedor_o">
   <p>
@@ -92,10 +56,7 @@ scroll: esta propiedad pondra de forma obligatoria la barrita de scroll sea nece
 
 hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
 
-        <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink> scroll 1</h2>
-        <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
-          <Confirmar confirmado={confirmado} cancelar={cancelar} />
-        </div>
+        <h2>overflow scroll 1</h2>
         <div className="website">
           <div className="scroll1">
               <p>
@@ -104,11 +65,7 @@ hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
           </div>
         </div>
 
-        <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink> scroll 2</h2>
-        <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
-          <Confirmar confirmado={confirmado} cancelar={cancelar} />
-        </div>
-        
+        <h2>overflow scroll 2</h2>
         <Html codigo={`<div class="scroll2">
   <p>
       que viva 
@@ -133,11 +90,7 @@ hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
         </div>
         <Conseptos texto={`Como te das cuenta pone la barra de scroll sea necesario o no.`}/>
 
-        <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink> auto</h2>
-        <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
-          <Confirmar confirmado={confirmado} cancelar={cancelar} />
-        </div>
-        
+        <h2>overflow auto</h2>
         <Html codigo={`<div class="overflow_auto">
   <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione, quod asperiores, aut, nesciunt dolorem quasi ea itaque unde facilis tenetur veritatis. Quia, laboriosam voluptatibus velit id numquam deserunt! Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quia suscipit accusamus voluptates a? Error minus sed molestiae dicta laborum vitae rerum nostrum incidunt quasi officiis tempora, ullam quo blanditiis.
@@ -161,11 +114,7 @@ hidden: oculta un elemento que esta fuera del contenedor y no hace scroll.`}/>
         </div>
 
 
-        <h2><NavLink target="_blank" onClick={preguntar} className={`overflow__title`} >overflow</NavLink> hidden</h2>
-        <div ref={contenedor_overflow} className={`confirmar-container ${irAlLing ? "confirmar-appear" : ""}`}>
-          <Confirmar confirmado={confirmado} cancelar={cancelar} />
-        </div>
-        
+        <h2>overflow hidden</h2>
         <Html codigo={`<div class="overflowHideen">
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione, quod asperiores, aut, nesciunt dolorem quasi ea itaque unde facilis tenetur veritatis. Quia, laboriosam voluptatibus velit id numquam deserunt! Ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quia suscipit accusamus voluptates a? Error minus sed molestiae dicta laborum vitae rerum nostrum incidunt quasi officiis tempora, ullam quo blanditiis.

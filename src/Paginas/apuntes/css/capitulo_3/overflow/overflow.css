@@ -1,15 +1,6 @@
-.overflow__title{
-  color: #ffa113 !important;
-  text-shadow: 0 0 2vh #ffa113;
-  display: block;
-  text-align: center;
-  background-color: transparent !important;
-}
-
-
 .overflow__texto{
-  width: 65%;
-  height: 35vh;
+  width: 100%;
+  height: 45px;
   margin: auto;
   margin-top: 4%;
   overflow: auto;
@@ -54,73 +45,9 @@
 }
 
 
-.confirmar-container {
-  position: absolute;
-  background-color: #000000;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  height: 100vh;
-  width: 100vw;
-  z-index: -2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #ea36d5;
-  text-shadow: 0 0 2vh #e737d2;
-}
-
-.confirmar-appear {
-  opacity: 1;
-  z-index: 4;
-  transition-duration: .5s;
-}
-
-.overflow__fondo{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: auto;
-}
-.overflow__fondo::before{
-  content: "";
-  background-image: url("https://news.otakukart.com/wp-content/uploads/2020/02/Overflow-episode-5-768x430.png");
-  background-size: cover;
-  position: absolute;
-  filter: brightness(.5);
-  width: 55%;
-  height: 15%;
-  z-index: -8;
-}
-.overflow__fondo p{
-  margin-bottom: 5%;
-  overflow: hidden;
-}
-.overflow__fondo__botones button{
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  color: #fff;
-}
-.overflow__fondo__botones button:hover{
-  text-shadow: 0 0 2vh #000;
-  
-}
-.overflow__fondo__botones button:nth-child(1){
-  margin-right: 4vh;
-}
-.overflow__fondo__botones button:nth-child(2){
-  margin-left: 4vh;
-}
-
 @media (min-width: 750px){
-  .overflow__fondo::before{
-    width: 45%;
-    height: 45%;
-  }
   .overflow__texto{
-    width: 35%;
+    width: 350px;
+    height: 100px;
   }
 }

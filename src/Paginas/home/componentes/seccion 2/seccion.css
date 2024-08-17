@@ -218,15 +218,17 @@
     align-items: center;
 }
 .HomeSeccion2TextInfo h2{ /*titulo*/
-    color: #d1e3ff !important;
+    color: #03bb03 !important;
     margin: 0;
     padding: 0;
+    text-shadow: 0 0 15px #f00;
 }
 .HomeSeccion2TextInfo p{ /*informacion*/
     font-size: 1.2em;
     width: 90%;
-    color: #d1e3ff !important;
+    color: #03bb03 !important;
     text-align: center;
+    text-shadow: 0 0 15px #f00;
 }
 .HomeSeccion2Text__code{ /*codigo*/
     padding: 0;

@@ -9,7 +9,7 @@ function Seccion1Home() {
     <div className="HomeSeccion1 HomeSeccion">
       <div className="HomeSeccion1__info1">
         <h1>Hola soy desarrollador.</h1>
-        <p>Mi nombre es Persona y me especializo en el desarrollo web fron-end.</p>
+        <p>Mi nombre es Daniel y me especializo en el desarrollo web fron-end.</p>
         <button onClick={contacto}>Contactarse conmigo</button>
       </div>
       <div className="HomeSeccion1__Img">

@@ -8,62 +8,6 @@ import Resumenes from "../../../../../componentes/resumenes/resumenes";
 
 function Filter() {
 
-  useEffect(()=>{
-    const imagen1 = document.querySelector(".imagen1");
-    const imagen2 = document.querySelector(".imagen2");
-    const imagen3 = document.querySelector(".imagen3");
-    const mostrar_img = document.querySelectorAll(".mostrar_img");
-
-    let guardarImagenes = []
-    function seleccionarImagenes(imagen) {
-        for (let i = 0; i < mostrar_img.length; i++) {
-            guardarImagenes[i] = document.querySelector(`.${imagen}${i}`);
-        }
-    }
-    function ponerImagen(link,alt,title){
-        seleccionarImagenes("imagen__");
-        for (let i = 0; i < mostrar_img.length; i++) {
-            guardarImagenes[i].setAttribute("src",link);
-            guardarImagenes[i].setAttribute("alt",alt);
-            guardarImagenes[i].setAttribute("title",title);
-        }
-    }
-
-    imagen1.addEventListener("click",()=>{
-        ponerImagen("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTb5dXKmHsJK_w4mWAKzomMGQWaa0ea_A36A&usqp=CAU","Power","Power");
-    })
-    imagen2.addEventListener("click",()=>{
-        ponerImagen("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHeb6M77PujyrnY5_wMr-QBkqMFs_vggwzEw&usqp=CAU","Makima","Makima");
-    })
-    imagen3.addEventListener("click",()=>{
-        ponerImagen("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHtyqIG0S8mzwIgdNM8aO2DYlFrsl2wGAjDg&usqp=CAU","Kobeni","Kobeni");
-    })
-
-    const img_over1 = document.querySelector(".img_over1");
-    const img_over2 = document.querySelector(".img_over2");
-    const img_over3 = document.querySelector(".img_over3");
-
-    imagen1.addEventListener("mouseover",()=>{
-        img_over1.classList.add("mostrar_imgss");
-    })
-    imagen1.addEventListener("mouseout",()=>{
-        img_over1.classList.remove("mostrar_imgss");
-    })
-    imagen2.addEventListener("mouseover",()=>{
-        img_over2.classList.add("mostrar_imgss");
-    })
-    imagen2.addEventListener("mouseout",()=>{
-        img_over2.classList.remove("mostrar_imgss");
-    })
-    imagen3.addEventListener("mouseover",()=>{
-        img_over3.classList.add("mostrar_imgss");
-    })
-    imagen3.addEventListener("mouseout",()=>{
-        img_over3.classList.remove("mostrar_imgss");
-    })
-  })
-
-
   return (  
     <>
       <Resumenes contenido={[{
@@ -98,20 +42,6 @@ invert(0% o 100%): es para invertir los colores de una imagen.
 
 saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los colores vaya a sus colores mas fuertes 0 es que la imagen ira a colores grises y uno la saturacion este puede ir aumentando.`}/>
 
-        
-        <div className="content_imgs">
-          <div className="elegir_imagen elegir_imagenFilter">
-            <button className="btn_img imagen1">Power</button>
-            <button className="btn_img imagen2">Makima</button>
-            <button className="btn_img imagen3">Kobeni</button>
-          </div>
-          <div className="imageness">
-            <img className="img_over img_over1 imageFilter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTKpw7h7p-f8b_RJUog_FAyMKNo47bDsFhQ&usqp=CAU" alt="Power" title="Power" />
-            <img className="img_over img_over2 imageFilter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuBdtH-uahSIuHSsm7kC4V_CgGly0q_-WJ0A&usqp=CAU" alt="Makima" title="Makima" />
-            <img className="img_over img_over3 imageFilter" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLa1GxgMuHHD6zPuoCn0isJYZAZw-fs4xm_A&usqp=CAU" alt="Kobeni" title="Kobeni" />
-          </div>
-        </div>
-
         <h2>blur</h2>
         
         <Html codigo={`<div class="blur_content">
@@ -124,7 +54,7 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
 }`}/>
         <div className="w_body">
         <div className="blur_content">
-          <img alt="escoje una imagen" className="mostrar_img imagen__0" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__0" />
           </div>
         </div>
 
@@ -149,10 +79,10 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
 }`}/>
       <div className="w_body">
         <div className="brightness_content">
-          <img alt="escoje una imagen" className="mostrar_img imagen__1" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__1" />
         </div>
         <div className="brightness_content2">
-          <img alt="escoje una imagen" className="mostrar_img imagen__2" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__2" />
         </div>
       </div>
 
@@ -177,10 +107,10 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
 }`}/>
         <div className="w_body">
           <div class="contrast_content">
-            <img alt="escoje una imagen" class="mostrar_img imagen__3" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" class="mostrar_img imagen__3" />
           </div>
           <div class="contrast_content2">
-            <img alt="escoje una imagen" class="mostrar_img imagen__4" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" class="mostrar_img imagen__4" />
           </div>
         </div>
 
@@ -205,10 +135,10 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
 }`}/>
         <div className="w_body">
               <div className="grayscale_content1">
-                <img alt="escoje una imagen" className="mostrar_img imagen__5" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__5" />
               </div>
               <div className="grayscale_content2">
-                <img alt="escoje una imagen" className="mostrar_img imagen__6" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__6" />
               </div>
         </div>
 
@@ -233,10 +163,10 @@ saturate(0 o 1): esta propiedad hace que los colores se saturen osea que los col
 }`}/>
         <div className="webside w_body">
                 <div className="invert_content1">
-                    <img alt="escoje una imagen" className="mostrar_img imagen__7" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__7" />
                 </div>
                 <div className="invert_content2">
-                    <img alt="escoje una imagen" className="mostrar_img imagen__8" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__8" />
                 </div>
         </div>
 
@@ -272,13 +202,13 @@ i       <h2>saturate</h2>
       
         <div className="webside w_body">
                 <div className="saturate_content1">
-                    <img alt="escoje una imagen" className="mostrar_img imagen__9" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__9" />
                 </div>
                 <div className="saturate_content2">
-                    <img alt="escoje una imagen" className="mostrar_img imagen__10" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__10" />
                 </div>
                 <div className="saturate_content3">
-                    <img alt="escoje una imagen" className="mostrar_img imagen__11" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4vVQmOEYUC3sOv7yVNBohQcHIpL7XFbuuLg&s" alt="escoje una imagen" className="mostrar_img imagen__11" />
                 </div>
         </div>
 

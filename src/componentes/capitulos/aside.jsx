@@ -770,7 +770,9 @@ function Capitulos({sendshowAside}) {
                     {
                       cap6Python && <div className="temas">
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/excepciones"}>Excepciones</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../python/expRegular"}>Expreciones regulares</NavLink>
 
+                        
                       </div>
                     }
                   </div>

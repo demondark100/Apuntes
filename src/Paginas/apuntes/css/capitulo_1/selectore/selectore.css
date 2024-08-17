@@ -3,7 +3,7 @@
 }
 
 .website .pColor{
-  color: rgb(83, 143, 83);
+  color: rgb(83, 143, 83) !important;
 }
 .website h3{
   text-align: start;
@@ -12,112 +12,49 @@
   color: #00f !important;
 }
 .deTipo{
-  color: gray;
+  color: gray !important;
 }
 
 .parrafoClases{
-  color: blue;
+  color: blue !important;
 }
 .subtituloClases{
   color: red !important;
 }
 .elemento_clases{
-  color: gray;
-}
-.botonLeft{
-  font-size: 3.5vh;
-  cursor: pointer;
-  transition-duration: .5s;
-}
-.botonLeft:hover{
-  font-size: 4vh;
-  background-color: #000;
-  border: none;
-  color: #0f0;
-  text-align: center;
-  transition-duration: .5s;
+  color: gray !important;
 }
 
 #titulo{
-  color: green;
+  color: green !important;
 }
 #parrafo{
-  color: red;
+  color: red !important;
 }
 
 [boton="el_boton"]{
-  color: orange;
+  color: orange !important;
 }
 [parrafo="el_parrafo"]{
-  color: pink;
+  color: pink !important;
 }
 
 
 
 .website div p{
-  color: green;
+  color: green !important;
 }
 .website h6 p{
-  color: red;
+  color: red !important;
 }
 .website .subtitulo__h6 .un_parrafo{
-  color: gray;
+  color: gray !important;
 }
 
 #cambiar{
-  color: red;
+  color: red !important;
 }
 #cambiar:hover{
-  color: green;
+  color: green !important;
 }
 
-
-
-/* componente left4dead */
-.left4content{
-  position: absolute;
-  opacity: 0;
-  transition-duration: .5s;
-  background-color: #000000ee;
-  width: 100vw;
-  height: 100vh;
-  z-index: -2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.mostrar-modal{
-  opacity: 1;
-  z-index: 4;
-}
-
-.imageLeft4dead{
-  background-image: url("https://th.bing.com/th/id/R.61fc2d0d5125860cc2c8da97f8f1b291?rik=X45DmUSUmSsI6g&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fy4L5vl0.jpg&ehk=qpgTRut8dSOZPSAYJllR12%2bNdVLYtiiSbdsvmo%2f0zEw%3d&risl=&pid=ImgRaw&r=0");
-  background-position: center;
-  background-size: cover;
-  width: 75%;
-  height: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: .5vh solid #0f0;
-}
-.mensajeLeft1{
-  color: #f00;
-  text-shadow: 0 0 2vh #f00;
-}
-.mensajeLeft2{
-  text-align: center;
-  color: #25c44f;
-  text-shadow: 0 0 2vh #25c44f;
-}
-
-
-
-@media screen and (min-width: 750px){
-  .imageLeft4dead{
-    width: 45%;
-    height: 45%;
-  }
-}

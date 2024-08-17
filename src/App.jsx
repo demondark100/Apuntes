@@ -406,6 +406,7 @@ import Poo2Py from './Paginas/apuntes/python/capitulo_5/poo2';
 import AbstralClassPy from './Paginas/apuntes/python/capitulo_5/abstralClass';
 import EspecialMethodPy from './Paginas/apuntes/python/capitulo_5/especialMehod';
 import ExcepcionesPy from './Paginas/apuntes/python/capitulo_6/escepciones';
+import ExpRegularPy from './Paginas/apuntes/python/capitulo_6/expRegulares';
 
 function App() {
 
@@ -852,7 +853,7 @@ function App() {
             
             {/* capitulo 6 */}
               <Route path='python/excepciones' element={<ExcepcionesPy />}/>
-              <Route path='python/expRegular' element={<ExcepcionesPy />}/>
+              <Route path='python/expRegular' element={<ExpRegularPy />}/>
    
 
           {/* mysql */}

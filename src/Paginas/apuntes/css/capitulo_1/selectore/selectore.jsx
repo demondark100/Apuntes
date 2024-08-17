@@ -7,23 +7,9 @@ import Resumenes from "../../../../../componentes/resumenes/resumenes"
 
 
 import { useState , useRef } from "react";
-import LeftModal from "./Left4DeadComponent";
 
 function Selectores() {
 
-  const [showModal, setShowModal] = useState(false);
-  const contenedor__left = useRef();
-
-  const left4dead=()=>{
-    setShowModal(true)
-    document.body.classList.add("modal-open");
-    contenedor__left.current.style.top = `${window.scrollY}px`
-    contenedor__left.current.style.left = `${window.scrollX}px`
-    setTimeout(() => {
-      setShowModal(false)
-      document.body.classList.remove("modal-open")
-    }, 5000);
-  }
 
   return (  
     <>
@@ -205,24 +191,15 @@ button{
           <p>
             esto es para rellenar.
           </p>
-          <button onClick={left4dead} className="parrafoClases botonLeft">
+          <p>
             no hagas click.
-          </button>
+          </p>
           <h6 className="subtituloClases">
             este es un subtitulo.
           </h6>
           <p className="elemento_clases">
             tambien se pueden agregar mas clases a un solo elemento.
           </p>
-        </div>
-        
-
-
-
-
-
-        <div ref={contenedor__left} className={`left4content ${showModal ? "mostrar-modal": ""}`}>
-          <LeftModal />
         </div>
 
 
