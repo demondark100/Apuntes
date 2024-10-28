@@ -30,6 +30,8 @@ function Capitulos({sendshowAside}) {
   const [python, setPython] = useState(false);
   const [node, setNode] = useState(false);
   const [mySql, setMySql] = useState(false);
+  const [php, setPhp] = useState(false);
+  const [wpPlugin, setWpPlugin] = useState(false);
 
   // matematicas
   // capitulos
@@ -110,6 +112,15 @@ function Capitulos({sendshowAside}) {
   const [cap5MySql, setCap5MySql] = useState(false);
   const [cap6MySql, setCap6MySql] = useState(false);
   
+  // php
+  // capitulos
+  const [cap1Php, setCap1Php] = useState(false);
+  const [cap2Php, setCap2Php] = useState(false);
+  const [cap3Php, setCap3Php] = useState(false);
+  const [cap4Php, setCap4Php] = useState(false);
+
+  // wp plugins
+  const [cap1WpPlugin, setCap1WpPlugin] = useState(false);
 
   return (  
     <>
@@ -782,9 +793,9 @@ function Capitulos({sendshowAside}) {
             </li>
 
 
-            {/* mySql */}
+            {/* SQL */}
            <li className="curso">
-              <p onClick={()=>setMySql(!mySql)}>mySql</p>
+              <p onClick={()=>setMySql(!mySql)}>SQL{`(con sqlite3)`}</p>
               {
                 mySql && <div className="capitulos">
                   <div>
@@ -861,12 +872,94 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/indices"}>Indices</NavLink> 
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/vistas"}>vistas</NavLink> 
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/bloqTransacc"}>bloque y transacciones</NavLink> 
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../mySql/fdu"}>funciones definidas por el usuario</NavLink> 
 
 
                       </div>
                     }
                   </div>
 
+                </div>
+              }
+            </li>
+
+            
+            {/* php */}
+            <li className="curso">
+              <p onClick={()=>setPhp(!php)}>PHP</p>
+              {
+                php && <div className="capitulos">
+                  <div>
+                    <p onClick={()=>setCap1Php(!cap1Php)}>capitulo 1</p>
+                    {
+                      cap1Php && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/intro"}>Introduccion</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/primerosPasos"}>Primeros pasos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/tipoDatos"}>Tipo de datos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/variables"}>Variables</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/numeros"}>Numeros</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/arreglos"}>Arreglos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/concat"}>concatenacion</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/operaciones"}>operaciones</NavLink>
+                      </div>
+                    }
+                  </div>
+                  <div>
+                    <p onClick={()=>setCap2Php(!cap2Php)}>capitulo 2</p>
+                    {
+                      cap2Php && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/condicionales"}>Condicionales</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/bucles"}>bucles</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/inclReq"}>Include y Require</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/funciones"}>Funciones</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/metodosStr"}>Metodos de cadena</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/funcMat"}>Funciones matematicas</NavLink>
+                      </div>
+                    }
+                  </div>
+                  <div>
+                    <p onClick={()=>setCap3Php(!cap3Php)}>capitulo 3</p>
+                    {
+                      cap3Php && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/fechaHora"}>fecha y hora</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/hash"}>Encriptar contraseñas</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/sendForm"}>Enviar formularios</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/isset"}>funciones de verificacion</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/archivos"}>Archivos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/fetch"}>fetch</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/cookies"}>cookies</NavLink>
+                      </div>
+                    }
+                  </div>
+                  <div>
+                    <p onClick={()=>setCap4Php(!cap4Php)}>capitulo 4</p>
+                    {
+                      cap4Php && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../php/sesiones"}>Sesiones</NavLink>
+
+                      </div>
+                    }
+                  </div>
+                </div>
+              }
+            </li>
+
+            <li>
+              <p onClick={()=>setWpPlugin(!wpPlugin)}>plugins para wordpress</p>
+              {
+                wpPlugin && <div className="capitulos">
+                  <div>
+                    <p onClick={()=>setCap1WpPlugin(!cap1WpPlugin)}>capitulo 1</p>
+                    {
+                      cap1WpPlugin && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/install"}>Instalacion de wordpress</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/acdesbo"}>Activar desactivar y borrar un plugin</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/menuAdmin"}>Menu admin</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/submenu"}>Sub menu</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/crearTb"}>Crear tabla</NavLink>
+                      </div>
+                    }
+                  </div>
                 </div>
               }
             </li>

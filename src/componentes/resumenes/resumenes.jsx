@@ -17,6 +17,7 @@ import Json from "../lenguajes/Json";
 import Terminal from "../lenguajes/Terminal";
 import MySql from '../lenguajes/MySql';
 import Csv from '../lenguajes/Csv';
+import Php from '../lenguajes/Php';
 
 function Resumenes({
   contenido
@@ -35,7 +36,8 @@ function Resumenes({
     Json: Json,
     Terminal: Terminal,
     MySql: MySql,
-    Csv: Csv
+    Csv: Csv,
+    Php: Php
   }
 
   return (  

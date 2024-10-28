@@ -1,0 +1,43 @@
+.contentLinkPersonalizado {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .linkPersonalizadoBtn { /* Enlace que actúa como botón */
+    background-color: #000;
+    box-shadow: 0 0 4px 1px #f00;
+    padding: 15px;
+    min-width: 280px;
+    border-radius: 8px;
+    position: relative;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #f00;
+    display: inline-block;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .linkPersonalizadoBtn::after { /* Efecto del pseudo-elemento */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #0f0;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 4px 1px transparent;
+    z-index: -1;
+  }
+  
+  .linkPersonalizadoBtn:hover::after { /* Al hacer hover, se expande */
+    width: 100%;
+    box-shadow: 0 0 8px 4px #0f0;
+    transition-duration: .3s;
+  }
+  

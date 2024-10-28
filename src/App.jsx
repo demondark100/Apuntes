@@ -305,6 +305,24 @@ import MetDiccPy from './Paginas/apuntes/python/capitulo_2/metDicc';
 import EntrDatosPy from './Paginas/apuntes/python/capitulo_2/entrDeDatos';
 import SlicingPy from './Paginas/apuntes/python/capitulo_2/slicing';
 import Variables2Py from './Paginas/apuntes/python/capitulo_3/variables2';
+import Diccionarios2Python from './Paginas/apuntes/python/capitulo_3/diccionarios';
+import BuclesPython from './Paginas/apuntes/python/capitulo_3/bucles';
+import WhilePython from './Paginas/apuntes/python/capitulo_3/while';
+import FuncIntegradasPython from './Paginas/apuntes/python/capitulo_3/funcIntegradas';
+import FuncionesPython from './Paginas/apuntes/python/capitulo_3/funciones';
+import Lambda from './Paginas/apuntes/python/capitulo_3/lambda';
+import ModulosPy from './Paginas/apuntes/python/capitulo_4/modulos';
+import EnrruModulePy from './Paginas/apuntes/python/capitulo_4/enrrutamiento';
+import PaquetesPy from './Paginas/apuntes/python/capitulo_4/paquetes';
+import TxtFilePy from './Paginas/apuntes/python/capitulo_4/txtFile';
+import CsvFilePy from './Paginas/apuntes/python/capitulo_4/csvFile';
+import GraficosPy from './Paginas/apuntes/python/capitulo_5/graficos';
+import Poo1Py from './Paginas/apuntes/python/capitulo_5/poo';
+import Poo2Py from './Paginas/apuntes/python/capitulo_5/poo2';
+import AbstralClassPy from './Paginas/apuntes/python/capitulo_5/abstralClass';
+import EspecialMethodPy from './Paginas/apuntes/python/capitulo_5/especialMehod';
+import ExcepcionesPy from './Paginas/apuntes/python/capitulo_6/escepciones';
+import ExpRegularPy from './Paginas/apuntes/python/capitulo_6/expRegulares';
 
 
 
@@ -389,24 +407,41 @@ import CardinalidadMySql from './Paginas/apuntes/mySql/capitulo_6/Cardinalidad '
 import IndicesMySql from "./Paginas/apuntes/mySql/capitulo_6/indices"
 import VistasMySql from './Paginas/apuntes/mySql/capitulo_6/vistas';
 import BloqTansaccMySql from './Paginas/apuntes/mySql/capitulo_6/bloqYTransac';
-import Diccionarios2Python from './Paginas/apuntes/python/capitulo_3/diccionarios';
-import BuclesPython from './Paginas/apuntes/python/capitulo_3/bucles';
-import WhilePython from './Paginas/apuntes/python/capitulo_3/while';
-import FuncIntegradasPython from './Paginas/apuntes/python/capitulo_3/funcIntegradas';
-import FuncionesPython from './Paginas/apuntes/python/capitulo_3/funciones';
-import Lambda from './Paginas/apuntes/python/capitulo_3/lambda';
-import ModulosPy from './Paginas/apuntes/python/capitulo_4/modulos';
-import EnrruModulePy from './Paginas/apuntes/python/capitulo_4/enrrutamiento';
-import PaquetesPy from './Paginas/apuntes/python/capitulo_4/paquetes';
-import TxtFilePy from './Paginas/apuntes/python/capitulo_4/txtFile';
-import CsvFilePy from './Paginas/apuntes/python/capitulo_4/csvFile';
-import GraficosPy from './Paginas/apuntes/python/capitulo_5/graficos';
-import Poo1Py from './Paginas/apuntes/python/capitulo_5/poo';
-import Poo2Py from './Paginas/apuntes/python/capitulo_5/poo2';
-import AbstralClassPy from './Paginas/apuntes/python/capitulo_5/abstralClass';
-import EspecialMethodPy from './Paginas/apuntes/python/capitulo_5/especialMehod';
-import ExcepcionesPy from './Paginas/apuntes/python/capitulo_6/escepciones';
-import ExpRegularPy from './Paginas/apuntes/python/capitulo_6/expRegulares';
+import FduMySql from './Paginas/apuntes/mySql/capitulo_6/fdu';
+
+// php
+import IntroPhp from './Paginas/apuntes/php/capitulo_1/introduccion';
+import PrimerosPasosPhp from './Paginas/apuntes/php/capitulo_1/primersPasos';
+import TipoDatosPhp from './Paginas/apuntes/php/capitulo_1/tipoDatos';
+import VariablesPhp from './Paginas/apuntes/php/capitulo_1/variables';
+import NumerosPhp from './Paginas/apuntes/php/capitulo_1/numeros.jsx';
+import ArrPhp from './Paginas/apuntes/php/capitulo_1/arreglos';
+import ConcatenacionPhp from './Paginas/apuntes/php/capitulo_1/concatenacion';
+import OperacionesPhp from './Paginas/apuntes/php/capitulo_1/operaciones';
+import CondicionalesPhp from './Paginas/apuntes/php/capitulo_2/condicionales';
+import BuclesPhp from './Paginas/apuntes/php/capitulo_2/bucles';
+import InclRequPhp from './Paginas/apuntes/php/capitulo_2/inclRequ';
+import FuncionesPhp from './Paginas/apuntes/php/capitulo_2/funciones';
+import MetodosCadenaPhp from './Paginas/apuntes/php/capitulo_2/metodoStr';
+import FuncMatPhp from './Paginas/apuntes/php/capitulo_2/funcMat.jsx';
+import FechaHoraPhp from './Paginas/apuntes/php/capitulo_3/fechaHora.jsx';
+import HashearPswPhp from './Paginas/apuntes/php/capitulo_3/hash.jsx';
+import SendFormPhp from './Paginas/apuntes/php/capitulo_3/senfForm.jsx';
+import IssetPhp from './Paginas/apuntes/php/capitulo_3/isset.jsx';
+import ArchivosPhp from './Paginas/apuntes/php/capitulo_3/archivos.jsx';
+import FetchPhp from './Paginas/apuntes/php/capitulo_3/fetch.jsx';
+import CookiesPhp from './Paginas/apuntes/php/capitulo_3/cookies.jsx';
+import SesionesPhp from './Paginas/apuntes/php/capitulo_4/sesiones.jsx';
+import AdminWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/menuAdmin.jsx';
+import InstallWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/install.jsx';
+import AcDesBoWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/acdesbo.jsx';
+import SubmenuWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/submenu.jsx';
+import CrearTablasWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/crearTablas.jsx';
+
+
+
+// php
+
 
 function App() {
 
@@ -893,17 +928,47 @@ function App() {
               <Route path='mySql/indices' element={<IndicesMySql />}/>
               <Route path='mySql/vistas' element={<VistasMySql />}/>
               <Route path='mySql/bloqTransacc' element={<BloqTansaccMySql />}/>
+              <Route path='mySql/fdu' element={<FduMySql />}/>
 
 
 
-              
-          {/* pendejadas */}
-            {/* cap1 */}
-                <Route path='pendejadas/calculadora' element={<Calculadora />}/>              
-
+          {/* php*/}
+            {/* capitulo 1 */}
+              <Route path='php/intro' element={<IntroPhp />}/>
+              <Route path='php/primerosPasos' element={<PrimerosPasosPhp />}/>
+              <Route path='php/tipoDatos' element={<TipoDatosPhp />}/>
+              <Route path='php/variables' element={<VariablesPhp />}/>
+              <Route path='php/numeros' element={<NumerosPhp />}/>
+              <Route path='php/arreglos' element={<ArrPhp />}/>
+              <Route path='php/concat' element={<ConcatenacionPhp />}/>
+              <Route path='php/operaciones' element={<OperacionesPhp />}/>
+            {/* capitulo 2 */}
+              <Route path='php/condicionales' element={<CondicionalesPhp />}/>
+              <Route path='php/bucles' element={<BuclesPhp />}/>
+              <Route path='php/inclReq' element={<InclRequPhp />}/>
+              <Route path='php/funciones' element={<FuncionesPhp />}/>
+              <Route path='php/metodosStr' element={<MetodosCadenaPhp />}/>
+              <Route path='php/funcMat' element={<FuncMatPhp />}/>
+            {/* capitulo 3 */}
+              <Route path='php/fechaHora' element={<FechaHoraPhp />}/>
+              <Route path='php/hash' element={<HashearPswPhp />}/>
+              <Route path='php/sendForm' element={<SendFormPhp />}/>
+              <Route path='php/isset' element={<IssetPhp />}/>
+              <Route path='php/archivos' element={<ArchivosPhp />}/>
+              <Route path='php/fetch' element={<FetchPhp />}/>
+              <Route path='php/cookies' element={<CookiesPhp />}/>
+            {/* capitulo 4 */}
+              <Route path='php/sesiones' element={<SesionesPhp />}/>
             
-              
-              
+          {/* plugin wordpress */}
+            {/* capitulo */}
+              <Route path='wpPlugin/install' element={<InstallWpPlugin />}/>
+              <Route path='wpPlugin/acdesbo' element={<AcDesBoWpPlugin />}/>
+              <Route path='wpPlugin/menuAdmin' element={<AdminWpPlugin />}/>
+              <Route path='wpPlugin/submenu' element={<SubmenuWpPlugin />}/>
+              <Route path='wpPlugin/crearTb' element={<CrearTablasWpPlugin />}/>
+
+
               
               
               
