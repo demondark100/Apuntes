@@ -437,6 +437,7 @@ import InstallWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/install.jsx'
 import AcDesBoWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/acdesbo.jsx';
 import SubmenuWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/submenu.jsx';
 import CrearTablasWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/crearTablas.jsx';
+import PageAdminWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/pageAdm.jsx';
 
 
 
@@ -966,6 +967,7 @@ function App() {
               <Route path='wpPlugin/acdesbo' element={<AcDesBoWpPlugin />}/>
               <Route path='wpPlugin/menuAdmin' element={<AdminWpPlugin />}/>
               <Route path='wpPlugin/submenu' element={<SubmenuWpPlugin />}/>
+              <Route path='wpPlugin/admPage' element={<PageAdminWpPlugin />}/>
               <Route path='wpPlugin/crearTb' element={<CrearTablasWpPlugin />}/>
 
 

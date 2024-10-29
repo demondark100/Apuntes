@@ -956,6 +956,7 @@ function Capitulos({sendshowAside}) {
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/acdesbo"}>Activar desactivar y borrar un plugin</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/menuAdmin"}>Menu admin</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/submenu"}>Sub menu</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/admPage"}>Importar pagina admin</NavLink>
                         <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/crearTb"}>Crear tabla</NavLink>
                       </div>
                     }

@@ -12,6 +12,90 @@ import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 function CrearTablasWpPlugin() {
   return (  
     <>
+      <Resumenes contenido={[{
+        "mensaje": `Las bases de datos siempre se deben de crear al momento de activar el plugin, osea siempre debemos crear todas nuestras tablas en la funcion que usaremos para activar.`,
+        "lenguage": `Php`,
+        "codigo": `function activar(){
+  global $wpdb;
+  $crearTabla1 = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mi_tabla1(
+      \`id\` INT NOT NULL AUTO_INCREMENT,
+      \`nombre\` VARCHAR(100) NOT NULL,
+      \`precio\` DECIMAL(10, 2) NULL,
+      \`cantidad\` INT NULL,
+      \`descripcion\` TEXT NULL,
+      \`fecha_creacion\` DATETIME DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (\`id\`)
+  )";
+  $wpdb->query($crearTabla1);
+  // podemos crear muchas tablas, las que necesitemos
+}`
+      },{
+        "mensaje": `Ahora veremos como se ve la creacion de tablas en el codigo completo.`,
+        "lenguage": `Php`,
+        "codigo": `<?php
+/*
+Plugin Name: Curso plugins
+Plugin URI: https://apuntesdan.netlify.app
+Description: Con el plugin que vamos a crear aprenderemos el desarrollo de plugins para wordpress.
+Version: 0.0.1
+*/
+
+function activar(){
+  global $wpdb;
+  $crearTabla1 = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mi_tabla1(
+      \`id\` INT NOT NULL AUTO_INCREMENT,
+      \`nombre\` VARCHAR(100) NOT NULL,
+      \`precio\` DECIMAL(10, 2) NULL,
+      \`cantidad\` INT NULL,
+      \`descripcion\` TEXT NULL,
+      \`fecha_creacion\` DATETIME DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (\`id\`)
+  )";
+  $wpdb->query($crearTabla1);
+  // podemos crear muchas tablas, las que necesitemos
+}
+function desactivar(){
+    echo "logica";
+}
+function borrar(){
+    echo "logica";
+}
+
+register_activation_hook(__FILE__,"activar");
+register_deactivation_hook(__FILE__,"desactivar");
+register_uninstall_hook(__FILE__,"borrar");
+
+
+add_action("admin_menu","menuAdmin");
+
+function menuAdmin(){
+    add_menu_page(
+        "cursoPlugin",
+        "plugin curso",
+        "manage_options",
+        "sp_menu",
+        "paginaAdmin",
+        plugin_dir_url(__FILE__)."ruta/imagen.jpg",
+        "1"
+    );
+
+    add_submenu_page(
+        "sp_menu",
+        "titulo pagina",
+        "submenu 1",
+        "manage_options",
+        "sp_menu_submenu1",
+        "submenu1"
+    );
+}
+
+function paginaAdmin(){
+    echo "Pagina de administracion";
+}
+function submenu1(){
+    echo "Sub menu 1";
+}`
+      }]}/>
       <main>
         <h1>Crear tabla</h1>
         <Conseptos texto={`Ahora vamos a crear una base de datos relacional que lo usaremos para almacenar datos o lo que tengamos que hacer.`}/>
@@ -60,7 +144,7 @@ function menuAdmin(){
   )";
   $wpdb->query($crearTabla1);
 
-    $crearTabla2 = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mi_tabla2(
+  $crearTabla2 = "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mi_tabla2(
       \`id\` INT NOT NULL AUTO_INCREMENT,
       \`nombre\` VARCHAR(100) NOT NULL,
       \`precio\` DECIMAL(10, 2) NULL,
