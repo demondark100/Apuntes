@@ -438,6 +438,13 @@ import AcDesBoWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/acdesbo.jsx'
 import SubmenuWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/submenu.jsx';
 import CrearTablasWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/crearTablas.jsx';
 import PageAdminWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_1/pageAdm.jsx';
+import EncolarArchivoWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/encolar.jsx';
+import ServidoresWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/servidor.jsx';
+import InsertarDbWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/insertarDb.jsx';
+import GetDataWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/getData.jsx';
+import DeleteDbWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/delte.jsx';
+import EditWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/edit.jsx';
+import ShortCodeWpPlugin from './Paginas/apuntes/pluginsWp/capitulo_2/shortcode.jsx';
 
 
 
@@ -969,7 +976,14 @@ function App() {
               <Route path='wpPlugin/submenu' element={<SubmenuWpPlugin />}/>
               <Route path='wpPlugin/admPage' element={<PageAdminWpPlugin />}/>
               <Route path='wpPlugin/crearTb' element={<CrearTablasWpPlugin />}/>
-
+            {/* capitulo 2 */}
+              <Route path='wpPlugin/encolar' element={<EncolarArchivoWpPlugin />}/>
+              <Route path='wpPlugin/servidores' element={<ServidoresWpPlugin />}/>
+              <Route path='wpPlugin/insertDb' element={<InsertarDbWpPlugin />}/>
+              <Route path='wpPlugin/getData' element={<GetDataWpPlugin />}/>
+              <Route path='wpPlugin/del' element={<DeleteDbWpPlugin />}/>
+              <Route path='wpPlugin/edit' element={<EditWpPlugin />}/>
+              <Route path='wpPlugin/shortcode' element={<ShortCodeWpPlugin />}/>
 
               
               

@@ -121,7 +121,10 @@ function Capitulos({sendshowAside}) {
 
   // wp plugins
   const [cap1WpPlugin, setCap1WpPlugin] = useState(false);
+  const [cap2WpPlugin, setCap2WpPlugin] = useState(false);
 
+
+  // inicio
   return (  
     <>
       <aside>
@@ -961,10 +964,29 @@ function Capitulos({sendshowAside}) {
                       </div>
                     }
                   </div>
+
+                  <div>
+                    <p onClick={()=>setCap2WpPlugin(!cap2WpPlugin)}>capitulo 2</p>
+                    {
+                      cap2WpPlugin && <div className="temas">
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/encolar"}>Encolar archivos</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/servidores"}>Entorno servidores</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/insertDb"}>Insertar datos en la base de datos.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/getData"}>Obtener datos de la base de datos.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/del"}>Eliminar datos.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/edit"}>Editar datos.</NavLink>
+                        <NavLink className={(data)=>data.isActive ? "active":"desactive"} to={"../wpPlugin/shortcode"}>Shortcode.</NavLink>
+                      </div>
+                    }
+                  </div>
                 </div>
               }
             </li>
 
+            {/* final */}
+
+            {/* http://wpprueba.000.pe/wp-admin/ */}
+            {/* https://www.youtube.com/watch?v=DvsYmJwJwZU&list=PLIbWwxXce3Vopq7cfmNGZ340aJL3d4128&index=6 */}
 
 
             {/* <li className="curso">

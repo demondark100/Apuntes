@@ -4,7 +4,6 @@ import Terminal from "../../../../componentes/lenguajes/Terminal";
 import Footer from "../../../../componentes/menus/Footer";
 import Resumenes from "../../../../componentes/resumenes/resumenes";
 import Php from "../../../../componentes/lenguajes/Php"
-import Sintaxis from "../../../../componentes/lenguajes/Sintaxis";
 
 
 
